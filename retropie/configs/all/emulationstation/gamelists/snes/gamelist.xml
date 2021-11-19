@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<gameList>
+	<game>
+		<path>./Super Mario Kart (Europe).zip</path>
+		<name>Super Mario Kart</name>
+		<desc>The Super Mario GoKart Park is open for tons of racing fun!  Hit the track with Mario, Luigi, Yoshi and the Princess.  Get tough and lock fenders with Donkey Kong, Jr. and Bowser.  Even Toad and Koopa Troopa will mix it up in an all-out quest for the Gold Cup!  Race head-to-head with a friend or challenge the computer in great, split-screen, Mode 7 graphics.
+
+Feel like a bit less speed and a lot more strategy?  Take a crack at the Battle Mode!  In four different maze-like courses you’ll use Koopa Shells, Banana Peels, Super Stars and other wacky weapons to burst your opponent's target balloons and triumph!
+
+* 2 games in 1 - Mario Grand Prix and Battle Mode
+* 8  Familiar Characters
+* 20 Different Tracks
+* 3 Different Skill Levels
+* Battery-backed memory saves your best times!</desc>
+		<image>~/.emulationstation/downloaded_images/snes/Super Mario Kart (Europe)-image.jpg</image>
+		<releasedate>19920901T000000</releasedate>
+		<developer>Nintendo</developer>
+		<publisher>Nintendo</publisher>
+		<genre>Racing</genre>
+		<players>2</players>
+	</game>
+	<game>
+		<path>./Super Mario World (Europe) (Rev 1).zip</path>
+		<name>Super Mario World (MSU-1)</name>
+		<desc>This ROM hack adds CD quality versions of Super Mario World’s soundtrack by using MSU-1 chip invented by byuu. 
+
+So far, it is only supported and tested on bsnes, higan and the SD2SNES flashcart. If the MSU-1 chip is not detected, the hack plays the SNES soundtrack instead.</desc>
+		<image>~/.emulationstation/downloaded_images/snes/Super Mario World (Europe) (Rev 1)-image.jpg</image>
+		<releasedate>20150629T000000</releasedate>
+		<developer>Nintendo</developer>
+		<publisher>Nintendo</publisher>
+		<genre>Platform, Unofficial</genre>
+		<players>2</players>
+	</game>
+</gameList>

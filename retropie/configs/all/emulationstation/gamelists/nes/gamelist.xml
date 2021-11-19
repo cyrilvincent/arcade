@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<gameList>
+	<game>
+		<path>./Super Mario Bros (E) [a1].zip</path>
+		<name>Super Mario Bros. 2016</name>
+		<desc>The original game with updated sprites from Super Mario 3.  Another hidden gem from BaronGaming.</desc>
+		<image>~/.emulationstation/downloaded_images/nes/Super Mario Bros (E) [a1]-image.jpg</image>
+		<releasedate>20160101T000000</releasedate>
+		<developer>ROM Hack</developer>
+		<publisher>Romhacking.net</publisher>
+		<genre>Platform</genre>
+		<players>2</players>
+	</game>
+	<game>
+		<path>./Super Mario Bros 2 (E) [!].zip</path>
+		<name>Super Mario Bros. (2-Player Hack)</name>
+		<desc>This is a hack of the original Super Mario Bros. that features both players simultaniously playing the game rather than taking turns.  It's great to play with a buddy, and a lot more fun!</desc>
+		<image>~/.emulationstation/downloaded_images/nes/Super Mario Bros 2 (E) [!]-image.jpg</image>
+		<releasedate>20181210T000000</releasedate>
+		<developer>ROM Hack</developer>
+		<publisher>Romhacking.net</publisher>
+		<genre>Action, Platform, Unofficial</genre>
+		<players>2</players>
+	</game>
+	<game>
+		<path>./Super Mario Bros 3 (E).zip</path>
+		<name>Super Mario Bros 3 (PAL)</name>
+		<desc>Fight monsters and mini-bosses, avoid ghosts and the burning sun. Make your way through water and quicksand. Dodge cannonballs and bullets and rescue the King’s wand! In Super Mario Bros. 3 there are more warps, more chances at extra lives, and new special suits! The raccoon suit lets you fly and knock out blocks. The frog suit helps you out-swim the deadly fish. There are suits for every occasion! Store up flowers and mushrooms to use later on. Play game-show type bonus rounds! Go back to that last screen and get a mushroom! Pause to take a break, then continue where you left off! Super Mario Bros. 3 is fun to play alone, or team up with a buddy to prolong the adventure! Note: Turn based Co-op as players work in turn to clear individual levels in a world. There is also a vs. mini-game where players try to steal items from each other.</desc>
+		<image>~/.emulationstation/downloaded_images/nes/Super Mario Bros 3 (E)-image.jpg</image>
+		<releasedate>19910829T000000</releasedate>
+		<developer>Nintendo</developer>
+		<publisher>Nintendo</publisher>
+		<genre>Platform</genre>
+	</game>
+</gameList>

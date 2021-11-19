@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<gameList>
+	<game>
+		<path>./Barbari2.dsk</path>
+		<name>Barbari2</name>
+		<playcount>1</playcount>
+		<lastplayed>20211116T011450</lastplayed>
+	</game>
+	<game>
+		<path>./Advanced Pinball Simulator (1988)(Codemasters).zip</path>
+		<name>Advanced Pinball Simulator</name>
+		<desc>Part of Codemasters' original budget-price range,  this pinball game aimed to put fast &amp; furious action first.
+
+The table design features extra flippers on both sides, which are at the bases of sections of features. The best scores can be achieved by repeatedly bashing away at sections of blocks.
+
+The essential theme of the table is of magic and wizardry, with the targets to be lit including the word 'MAGIC' as well as a weather potion and a magic cottage. Trapdoors must be shot open to get their bonuses, then shot shut again to prevent the ball being lost in them. Extra balls are offered every 10,000 points.</desc>
+		<image>~/.emulationstation/downloaded_images/amstradcpc/Advanced Pinball Simulator (1988)(Codemasters)-image.png</image>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Codemasters</developer>
+		<publisher>Codemasters</publisher>
+		<genre>Pinball</genre>
+		<players>1-3</players>
+	</game>
+	<game>
+		<path>./Asphalt.dsk</path>
+		<name>Asphalt</name>
+		<desc>In the world of Asphalt, roads and highways have become a playground for violent criminals. Only heavily armed vehicles dare travel between cities. It is your job as a truck driver to deliver your cargo despite all dangers.
+
+Asphalt is a top-down shooter, you don't have to worry about driving (the road is as straight as it can be), all you have to do is shoot your opponents before they have a chance to do too much damage to your vehicle. You have a machine gun turret with unlimited ammunition, a flamethrower and some mines, as well as a damage display to see what part of the truck needs to be protected.
+
+The difficulty is rather progressive, each new level bringing new, better armed opponents, requiring new tactics to defeat them without damaging your vehicle too much. You can also grab some bonuses like extra ammo, instant repair or bonus points.</desc>
+		<rating>0.75</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Ubisoft</developer>
+		<publisher>Ubisoft</publisher>
+		<genre>Race, Driving</genre>
+	</game>
+	<game>
+		<path>./Cauldron.dsk</path>
+		<name>Cauldron</name>
+		<desc>Playing a witch, you must assemble the six ingredients required to kill off your arch-rival, an evil pumpkin. The ingredients are all located in underground buildings, each of which can only be entered once you've found the appropriate key. The keys are located overground, and you must fly around on your broom to collect them.
+
+The overground sections play like standard shoot 'em ups, as your broom is not affected by gravity and can fire bullets using your magic energy. Bats, fireballs and even seagulls are among the many creatures trying to stop you - contact will cost you more energy than shooting at them would. There are energy recharges on offer.
+
+Once you go underground, the gameplay becomes a test of precision platform jumping, including some Manic Miner-esque blind jumps. The six underground sections can be completed in a variety of orders, but you will sometimes reach points that cna't be completed without objects from other sections, so a lot of back-tracking is required. Although you start with nine lives, they won't last all that long at first.</desc>
+		<rating>0.8</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>Palace</developer>
+		<publisher>Palace</publisher>
+		<genre>Adventure</genre>
+	</game>
+	<game>
+		<path>./Commando (1985)(Elite).zip</path>
+		<name>Commando</name>
+		<desc>Several levels await your super-tough Commando in this arcade conversion. Armed with only a standard rifle and a few grenades you must take on hordes of Nazis. Some are wandering around in the open, while others have picked out hiding places, which you must approach from certain angles. Trees, rivers and bridges create a varied combat-like terrain and must be incorporated into your thinking. Extra grenades can be collected, and will definitely be required, as they allow you to kill form distance and thus avoid some enemy shots.</desc>
+		<image>~/.emulationstation/downloaded_images/amstradcpc/Commando (1985)(Elite)-image.png</image>
+		<rating>0.5</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>Elite Systems</developer>
+		<publisher>Capcom</publisher>
+		<genre>Action</genre>
+	</game>
+	<game>
+		<path>./cpc464.zip</path>
+		<name>ZZZ(notgame):Cpc464</name>
+		<genre></genre>
+		<players></players>
+	</game>
+	<game>
+		<path>./Ghost 'n Goblins (1986)(Elite).zip</path>
+		<name>Ghost 'n Goblins</name>
+		<desc>Ghosts'n Goblins is a sideways scrolling action platformer spread over six levels, each of which must be completed within three minutes (or a life is lost), taking in forest, mountain and cavern settings.Arthur the brave knight must rescue his lady from t</desc>
+		<image>~/.emulationstation/downloaded_images/amstradcpc/Ghost 'n Goblins (1986)(Elite)-image.png</image>
+		<rating>0.9</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Elite Systems</developer>
+		<publisher>Capcom</publisher>
+		<genre>Fight</genre>
+	</game>
+	<game>
+		<path>./Ikari Warriors (1988)(Elite Systems).zip</path>
+		<name>Ikari Warriors</name>
+		<desc>A conversion of the arcade game, Ikari Warriors is a vertically scrolling action game. One or two players fight their way through a variety of terrain, such as jungles, rivers, and ruins. Along the way different weapons can be found, including machine guns, grenades, and rocket launchers.</desc>
+		<image>~/.emulationstation/downloaded_images/amstradcpc/Ikari Warriors (1988)(Elite Systems)-image.png</image>
+		<rating>0.8</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>SNK</publisher>
+		<genre>Action</genre>
+		<players>1-2</players>
+	</game>
+	<game>
+		<path>./Orphee (1985)(Loriciels)(fr).zip</path>
+		<name>Orphée : Voyage aux Enfers</name>
+		<desc>Falling asleep at the wheel, you die in a car crash... and you awake in hell. You must now find the way out to the world of the living. Well, it's easier said than done because it's going to be a long road!</desc>
+		<releasedate>19850101T000000</releasedate>
+		<developer>Loriciels</developer>
+		<publisher>Loriciels</publisher>
+		<genre>Adventure</genre>
+	</game>
+	<game>
+		<path>./Shinobi.dsk</path>
+		<name>Shinobi</name>
+		<desc>You control a ninja, Shinobi, who must battle his way through each level in search of hostages which must be rescued. You have shurikens, kicks and punches to defend yourself with. As well as the powerful ninja magic which can clear the screen of enemies in one go.
+
+Each level is broken down into smaller scenes and hostages are guarded by big blokes who throw swords. Watch out for gun-toting enemy henchmen and ninjas.
+
+Reaching the end of each level will find you battling it out with a boss. These range from 8ft giants to helicopter gunships.</desc>
+		<image>~/.emulationstation/downloaded_images/amstradcpc/Shinobi-image.png</image>
+		<rating>0.9</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Sales Curve</developer>
+		<publisher>SEGA</publisher>
+		<genre>Action</genre>
+	</game>
+	<game>
+		<path>./Sorcery.dsk</path>
+		<name>Sorcery+</name>
+		<desc>The player embodies a magician whose goal is to find and deliver 8 colleagues who were captured by a necromancer. The environment, represented in profile, is made up of about forty paintings interconnected by doors (one place can give access to four other places), which makes it complex to explore. To carry out his quest, he must discover the usefulness of the many objects found along the way and get rid of the enemies that threaten him. The player only has a few minutes to complete the mission, which requires reflexes, sense of direction, memory, and tactical sense.</desc>
+		<image>~/.emulationstation/downloaded_images/amstradcpc/Sorcery-image.png</image>
+		<rating>0.9</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>Amsoft</developer>
+		<publisher>Virgin</publisher>
+		<genre>Platform</genre>
+		<players></players>
+	</game>
+</gameList>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<gameList>
+	<game>
+		<path>./srallyc.zip</path>
+		<name>Sega Rally Championship - TWIN (Revision C)</name>
+		<playcount>1</playcount>
+		<lastplayed>20211114T181449</lastplayed>
+	</game>
+	<game>
+		<path>./srallycdxa.zip</path>
+		<name>srallycdxa</name>
+		<playcount>2</playcount>
+		<lastplayed>20211114T181540</lastplayed>
+	</game>
+	<game>
+		<path>./polepos.zip</path>
+		<name>Pole Position (World)</name>
+		<playcount>1</playcount>
+		<lastplayed>20211116T005946</lastplayed>
+	</game>
+</gameList>

@@ -1,0 +1,253 @@
+Nov 19 20:51:34 lvl2: 	EmulationStation - v2.9.6rp, built Nov  4 2020 - 15:08:50
+Nov 19 20:51:34 lvl2: 	Parsing XML file "/opt/retropie/supplementary/emulationstation/resources/mamenames.xml"...
+Nov 19 20:51:35 lvl2: 	Parsing XML file "/opt/retropie/supplementary/emulationstation/resources/mamebioses.xml"...
+Nov 19 20:51:35 lvl2: 	Parsing XML file "/opt/retropie/supplementary/emulationstation/resources/mamedevices.xml"...
+Nov 19 20:51:35 lvl2: 	Creating window...
+Nov 19 20:51:35 lvl2: 	Created window successfully.
+Nov 19 20:51:35 lvl2: 	GL vendor:   Broadcom
+Nov 19 20:51:35 lvl2: 	GL renderer: VideoCore IV HW
+Nov 19 20:51:35 lvl2: 	GL version:  OpenGL ES-CM 1.1
+Nov 19 20:51:35 lvl2: 	Checking available OpenGL extensions...
+Nov 19 20:51:35 lvl2: 	 ARB_texture_non_power_of_two: MISSING
+Nov 19 20:51:35 lvl2: 	Loading system config file /etc/emulationstation/es_systems.cfg...
+Nov 19 20:51:35 lvl2: 	Parsing XML file "/home/pi/.emulationstation/gamelists/amstradcpc/gamelist.xml"...
+Nov 19 20:51:35 lvl1: 	  Warning from theme "/etc/emulationstation/themes/carbon/amstradcpc/theme.xml"
+  (from included file "/etc/emulationstation/themes/carbon/amstradcpc/../carbon.xml")
+    could not find file "" 
+Nov 19 20:51:35 lvl2: 	Parsing XML file "/home/pi/.emulationstation/gamelists/arcade/gamelist.xml"...
+Nov 19 20:51:35 lvl1: 	File "/home/pi/RetroPie/roms/arcade/polepos.zip" does not exist! Ignoring.
+Nov 19 20:51:35 lvl1: 	  Warning from theme "/etc/emulationstation/themes/carbon/arcade/theme.xml"
+  (from included file "/etc/emulationstation/themes/carbon/arcade/../carbon.xml")
+    could not find file "" 
+Nov 19 20:51:35 lvl2: 	Parsing XML file "/home/pi/.emulationstation/gamelists/atari2600/gamelist.xml"...
+Nov 19 20:51:35 lvl1: 	  Warning from theme "/etc/emulationstation/themes/carbon/atari2600/theme.xml"
+  (from included file "/etc/emulationstation/themes/carbon/atari2600/../carbon.xml")
+    could not find file "" 
+Nov 19 20:51:35 lvl1: 	  Warning from theme "/etc/emulationstation/themes/carbon/atari5200/theme.xml"
+  (from included file "/etc/emulationstation/themes/carbon/atari5200/../carbon.xml")
+    could not find file "" 
+Nov 19 20:51:35 lvl1: 	System "atari5200" has no games! Ignoring it.
+Nov 19 20:51:35 lvl1: 	  Warning from theme "/etc/emulationstation/themes/carbon/atari7800/theme.xml"
+  (from included file "/etc/emulationstation/themes/carbon/atari7800/../carbon.xml")
+    could not find file "" 
+Nov 19 20:51:35 lvl1: 	System "atari7800" has no games! Ignoring it.
+Nov 19 20:51:35 lvl1: 	  Warning from theme "/etc/emulationstation/themes/carbon/atari800/theme.xml"
+  (from included file "/etc/emulationstation/themes/carbon/atari800/../carbon.xml")
+    could not find file "" 
+Nov 19 20:51:35 lvl1: 	System "atari800" has no games! Ignoring it.
+Nov 19 20:51:35 lvl1: 	  Warning from theme "/etc/emulationstation/themes/carbon/atarilynx/theme.xml"
+  (from included file "/etc/emulationstation/themes/carbon/atarilynx/../carbon.xml")
+    could not find file "" 
+Nov 19 20:51:35 lvl1: 	System "atarilynx" has no games! Ignoring it.
+Nov 19 20:51:35 lvl1: 	Error - folder with path "/home/pi/RetroPie/roms/coleco" is not a directory!
+Nov 19 20:51:35 lvl1: 	  Warning from theme "/etc/emulationstation/themes/carbon/colecovision/theme.xml"
+  (from included file "/etc/emulationstation/themes/carbon/colecovision/../carbon.xml")
+    could not find file "" 
+Nov 19 20:51:35 lvl1: 	System "coleco" has no games! Ignoring it.
+Nov 19 20:51:35 lvl2: 	Parsing XML file "/home/pi/.emulationstation/gamelists/fba/gamelist.xml"...
+Nov 19 20:51:35 lvl1: 	File "/home/pi/RetroPie/roms/fba/sfiii3.zip" does not exist! Ignoring.
+Nov 19 20:51:35 lvl1: 	  Warning from theme "/etc/emulationstation/themes/carbon/fba/theme.xml"
+  (from included file "/etc/emulationstation/themes/carbon/fba/../carbon.xml")
+    could not find file "" 
+Nov 19 20:51:35 lvl1: 	System "fba" has no games! Ignoring it.
+Nov 19 20:51:35 lvl1: 	  Warning from theme "/etc/emulationstation/themes/carbon/fds/theme.xml"
+  (from included file "/etc/emulationstation/themes/carbon/fds/../carbon.xml")
+    could not find file "" 
+Nov 19 20:51:35 lvl1: 	System "fds" has no games! Ignoring it.
+Nov 19 20:51:35 lvl2: 	Parsing XML file "/home/pi/.emulationstation/gamelists/gameandwatch/gamelist.xml"...
+Nov 19 20:51:35 lvl1: 	  Warning from theme "/etc/emulationstation/themes/carbon/gameandwatch/theme.xml"
+  (from included file "/etc/emulationstation/themes/carbon/gameandwatch/../carbon.xml")
+    could not find file "" 
+Nov 19 20:51:35 lvl1: 	  Warning from theme "/etc/emulationstation/themes/carbon/gamegear/theme.xml"
+  (from included file "/etc/emulationstation/themes/carbon/gamegear/../carbon.xml")
+    could not find file "" 
+Nov 19 20:51:35 lvl1: 	System "gamegear" has no games! Ignoring it.
+Nov 19 20:51:35 lvl1: 	  Warning from theme "/etc/emulationstation/themes/carbon/gb/theme.xml"
+  (from included file "/etc/emulationstation/themes/carbon/gb/../carbon.xml")
+    could not find file "" 
+Nov 19 20:51:35 lvl1: 	System "gb" has no games! Ignoring it.
+Nov 19 20:51:35 lvl1: 	  Warning from theme "/etc/emulationstation/themes/carbon/gba/theme.xml"
+  (from included file "/etc/emulationstation/themes/carbon/gba/../carbon.xml")
+    could not find file "" 
+Nov 19 20:51:35 lvl1: 	System "gba" has no games! Ignoring it.
+Nov 19 20:51:35 lvl1: 	  Warning from theme "/etc/emulationstation/themes/carbon/gbc/theme.xml"
+  (from included file "/etc/emulationstation/themes/carbon/gbc/../carbon.xml")
+    could not find file "" 
+Nov 19 20:51:35 lvl1: 	System "gbc" has no games! Ignoring it.
+Nov 19 20:51:35 lvl2: 	Parsing XML file "/home/pi/.emulationstation/gamelists/mame-advmame/gamelist.xml"...
+Nov 19 20:51:35 lvl1: 	File "/home/pi/RetroPie/roms/mame-advmame/srallyc.zip" does not exist! Ignoring.
+Nov 19 20:51:35 lvl1: 	File "/home/pi/RetroPie/roms/mame-advmame/srallycdxa.zip" does not exist! Ignoring.
+Nov 19 20:51:35 lvl1: 	  Warning from theme "/etc/emulationstation/themes/carbon/mame/theme.xml"
+  (from included file "/etc/emulationstation/themes/carbon/mame/../carbon.xml")
+    could not find file "" 
+Nov 19 20:51:35 lvl2: 	Parsing XML file "/home/pi/.emulationstation/gamelists/mame-libretro/gamelist.xml"...
+Nov 19 20:51:35 lvl1: 	File "/home/pi/RetroPie/roms/mame-libretro/polepos.zip" does not exist! Ignoring.
+Nov 19 20:51:35 lvl1: 	  Warning from theme "/etc/emulationstation/themes/carbon/mame/theme.xml"
+  (from included file "/etc/emulationstation/themes/carbon/mame/../carbon.xml")
+    could not find file "" 
+Nov 19 20:51:35 lvl1: 	System "mame-libretro" has no games! Ignoring it.
+Nov 19 20:51:36 lvl1: 	  Warning from theme "/etc/emulationstation/themes/carbon/mastersystem/theme.xml"
+  (from included file "/etc/emulationstation/themes/carbon/mastersystem/../carbon.xml")
+    could not find file "" 
+Nov 19 20:51:36 lvl1: 	System "mastersystem" has no games! Ignoring it.
+Nov 19 20:51:36 lvl1: 	  Warning from theme "/etc/emulationstation/themes/carbon/megadrive/theme.xml"
+  (from included file "/etc/emulationstation/themes/carbon/megadrive/../carbon.xml")
+    could not find file "" 
+Nov 19 20:51:36 lvl1: 	System "megadrive" has no games! Ignoring it.
+Nov 19 20:51:36 lvl1: 	Error - folder with path "/home/pi/RetroPie/roms/msx" is not a directory!
+Nov 19 20:51:36 lvl1: 	  Warning from theme "/etc/emulationstation/themes/carbon/msx/theme.xml"
+  (from included file "/etc/emulationstation/themes/carbon/msx/../carbon.xml")
+    could not find file "" 
+Nov 19 20:51:36 lvl1: 	System "msx" has no games! Ignoring it.
+Nov 19 20:51:36 lvl2: 	Parsing XML file "/home/pi/.emulationstation/gamelists/n64/gamelist.xml"...
+Nov 19 20:51:36 lvl1: 	  Warning from theme "/etc/emulationstation/themes/carbon/n64/theme.xml"
+  (from included file "/etc/emulationstation/themes/carbon/n64/../carbon.xml")
+    could not find file "" 
+Nov 19 20:51:36 lvl1: 	  Warning from theme "/etc/emulationstation/themes/carbon/neogeo/theme.xml"
+  (from included file "/etc/emulationstation/themes/carbon/neogeo/../carbon.xml")
+    could not find file "" 
+Nov 19 20:51:36 lvl1: 	System "neogeo" has no games! Ignoring it.
+Nov 19 20:51:36 lvl2: 	Parsing XML file "/home/pi/.emulationstation/gamelists/nes/gamelist.xml"...
+Nov 19 20:51:36 lvl1: 	  Warning from theme "/etc/emulationstation/themes/carbon/nes/theme.xml"
+  (from included file "/etc/emulationstation/themes/carbon/nes/../carbon.xml")
+    could not find file "" 
+Nov 19 20:51:36 lvl1: 	  Warning from theme "/etc/emulationstation/themes/carbon/ngp/theme.xml"
+  (from included file "/etc/emulationstation/themes/carbon/ngp/../carbon.xml")
+    could not find file "" 
+Nov 19 20:51:36 lvl1: 	System "ngp" has no games! Ignoring it.
+Nov 19 20:51:36 lvl1: 	  Warning from theme "/etc/emulationstation/themes/carbon/ngpc/theme.xml"
+  (from included file "/etc/emulationstation/themes/carbon/ngpc/../carbon.xml")
+    could not find file "" 
+Nov 19 20:51:36 lvl1: 	System "ngpc" has no games! Ignoring it.
+Nov 19 20:51:36 lvl1: 	  Warning from theme "/etc/emulationstation/themes/carbon/pcengine/theme.xml"
+  (from included file "/etc/emulationstation/themes/carbon/pcengine/../carbon.xml")
+    could not find file "" 
+Nov 19 20:51:36 lvl1: 	System "pcengine" has no games! Ignoring it.
+Nov 19 20:51:36 lvl1: 	  Warning from theme "/etc/emulationstation/themes/carbon/psx/theme.xml"
+  (from included file "/etc/emulationstation/themes/carbon/psx/../carbon.xml")
+    could not find file "" 
+Nov 19 20:51:36 lvl1: 	System "psx" has no games! Ignoring it.
+Nov 19 20:51:36 lvl2: 	Parsing XML file "/home/pi/.emulationstation/gamelists/retropie/gamelist.xml"...
+Nov 19 20:51:36 lvl1: 	  Warning from theme "/etc/emulationstation/themes/carbon/retropie/theme.xml"
+  (from included file "/etc/emulationstation/themes/carbon/retropie/../carbon.xml")
+    could not find file "" 
+Nov 19 20:51:36 lvl1: 	  Warning from theme "/etc/emulationstation/themes/carbon/sega32x/theme.xml"
+  (from included file "/etc/emulationstation/themes/carbon/sega32x/../carbon.xml")
+    could not find file "" 
+Nov 19 20:51:36 lvl1: 	System "sega32x" has no games! Ignoring it.
+Nov 19 20:51:36 lvl1: 	  Warning from theme "/etc/emulationstation/themes/carbon/segacd/theme.xml"
+  (from included file "/etc/emulationstation/themes/carbon/segacd/../carbon.xml")
+    could not find file "" 
+Nov 19 20:51:36 lvl1: 	System "segacd" has no games! Ignoring it.
+Nov 19 20:51:36 lvl1: 	  Warning from theme "/etc/emulationstation/themes/carbon/sg-1000/theme.xml"
+  (from included file "/etc/emulationstation/themes/carbon/sg-1000/../carbon.xml")
+    could not find file "" 
+Nov 19 20:51:36 lvl1: 	System "sg-1000" has no games! Ignoring it.
+Nov 19 20:51:36 lvl2: 	Parsing XML file "/home/pi/.emulationstation/gamelists/snes/gamelist.xml"...
+Nov 19 20:51:36 lvl1: 	  Warning from theme "/etc/emulationstation/themes/carbon/snes/theme.xml"
+  (from included file "/etc/emulationstation/themes/carbon/snes/../carbon.xml")
+    could not find file "" 
+Nov 19 20:51:36 lvl1: 	  Warning from theme "/etc/emulationstation/themes/carbon/vectrex/theme.xml"
+  (from included file "/etc/emulationstation/themes/carbon/vectrex/../carbon.xml")
+    could not find file "" 
+Nov 19 20:51:36 lvl1: 	System "vectrex" has no games! Ignoring it.
+Nov 19 20:51:36 lvl1: 	  Warning from theme "/etc/emulationstation/themes/carbon/zxspectrum/theme.xml"
+  (from included file "/etc/emulationstation/themes/carbon/zxspectrum/../carbon.xml")
+    could not find file "" 
+Nov 19 20:51:36 lvl1: 	System "zxspectrum" has no games! Ignoring it.
+Nov 19 20:51:36 lvl1: 	  Warning from theme "/etc/emulationstation/themes/carbon/auto-allgames/theme.xml"
+  (from included file "/etc/emulationstation/themes/carbon/auto-allgames/../carbon.xml")
+    could not find file "" 
+Nov 19 20:51:36 lvl1: 	  Warning from theme "/etc/emulationstation/themes/carbon/auto-favorites/theme.xml"
+  (from included file "/etc/emulationstation/themes/carbon/auto-favorites/../carbon.xml")
+    could not find file "" 
+Nov 19 20:51:36 lvl1: 	  Warning from theme "/etc/emulationstation/themes/carbon/auto-lastplayed/theme.xml"
+  (from included file "/etc/emulationstation/themes/carbon/auto-lastplayed/../carbon.xml")
+    could not find file "" 
+Nov 19 20:51:36 lvl1: 	  Warning from theme "/etc/emulationstation/themes/carbon/custom-collections/theme.xml"
+  (from included file "/etc/emulationstation/themes/carbon/custom-collections/../carbon.xml")
+    could not find file "" 
+Nov 19 20:52:02 lvl2: 	Added/Updated 1 entities in '/home/pi/.emulationstation/gamelists/amstradcpc/gamelist.xml'
+Nov 19 20:52:02 lvl2: 	Saved gamelist.xml for system "amstradcpc" in 1 ms
+Nov 19 20:52:03 lvl2: 	Added/Updated 2 entities in '/home/pi/.emulationstation/gamelists/amstradcpc/gamelist.xml'
+Nov 19 20:52:03 lvl2: 	Saved gamelist.xml for system "amstradcpc" in 1 ms
+Nov 19 20:52:04 lvl0: 	ScreenScraperRequest - Error parsing XML.
+No document element found
+Nov 19 20:52:05 lvl0: 	ScreenScraperRequest - Error parsing XML.
+No document element found
+Nov 19 20:52:08 lvl0: 	ScreenScraperRequest - Error parsing XML.
+No document element found
+Nov 19 20:52:09 lvl0: 	ScreenScraperRequest - Error parsing XML.
+No document element found
+Nov 19 20:52:12 lvl2: 	Added/Updated 3 entities in '/home/pi/.emulationstation/gamelists/amstradcpc/gamelist.xml'
+Nov 19 20:52:12 lvl2: 	Saved gamelist.xml for system "amstradcpc" in 1 ms
+Nov 19 20:52:14 lvl0: 	ScreenScraperRequest - Error parsing XML.
+No document element found
+Nov 19 20:52:20 lvl2: 	Added/Updated 4 entities in '/home/pi/.emulationstation/gamelists/amstradcpc/gamelist.xml'
+Nov 19 20:52:20 lvl2: 	Saved gamelist.xml for system "amstradcpc" in 1 ms
+Nov 19 20:52:22 lvl2: 	Added/Updated 5 entities in '/home/pi/.emulationstation/gamelists/amstradcpc/gamelist.xml'
+Nov 19 20:52:22 lvl2: 	Saved gamelist.xml for system "amstradcpc" in 1 ms
+Nov 19 20:52:23 lvl0: 	ScreenScraperRequest - Error parsing XML.
+No document element found
+Nov 19 20:52:26 lvl2: 	Added/Updated 6 entities in '/home/pi/.emulationstation/gamelists/amstradcpc/gamelist.xml'
+Nov 19 20:52:26 lvl2: 	Saved gamelist.xml for system "amstradcpc" in 1 ms
+Nov 19 20:52:31 lvl2: 	Added/Updated 7 entities in '/home/pi/.emulationstation/gamelists/amstradcpc/gamelist.xml'
+Nov 19 20:52:31 lvl2: 	Saved gamelist.xml for system "amstradcpc" in 1 ms
+Nov 19 20:52:31 lvl2: 	Added/Updated 8 entities in '/home/pi/.emulationstation/gamelists/amstradcpc/gamelist.xml'
+Nov 19 20:52:31 lvl2: 	Saved gamelist.xml for system "amstradcpc" in 1 ms
+Nov 19 20:52:32 lvl0: 	ScreenScraperRequest - Error parsing XML.
+No document element found
+Nov 19 20:52:36 lvl0: 	ScreenScraperRequest - Error parsing XML.
+No document element found
+Nov 19 20:52:38 lvl0: 	ScreenScraperRequest - Error parsing XML.
+No document element found
+Nov 19 20:52:43 lvl2: 	Added/Updated 9 entities in '/home/pi/.emulationstation/gamelists/amstradcpc/gamelist.xml'
+Nov 19 20:52:43 lvl2: 	Saved gamelist.xml for system "amstradcpc" in 1 ms
+Nov 19 20:52:47 lvl2: 	Added/Updated 10 entities in '/home/pi/.emulationstation/gamelists/amstradcpc/gamelist.xml'
+Nov 19 20:52:47 lvl2: 	Saved gamelist.xml for system "amstradcpc" in 1 ms
+Nov 19 20:52:50 lvl2: 	Added/Updated 1 entities in '/home/pi/.emulationstation/gamelists/arcade/gamelist.xml'
+Nov 19 20:52:50 lvl2: 	Saved gamelist.xml for system "arcade" in 1 ms
+Nov 19 20:52:55 lvl2: 	Added/Updated 1 entities in '/home/pi/.emulationstation/gamelists/atari2600/gamelist.xml'
+Nov 19 20:52:55 lvl2: 	Saved gamelist.xml for system "atari2600" in 1 ms
+Nov 19 20:52:58 lvl2: 	Added/Updated 1 entities in '/home/pi/.emulationstation/gamelists/gameandwatch/gamelist.xml'
+Nov 19 20:52:58 lvl2: 	Saved gamelist.xml for system "gameandwatch" in 1 ms
+Nov 19 20:53:02 lvl2: 	Added/Updated 2 entities in '/home/pi/.emulationstation/gamelists/gameandwatch/gamelist.xml'
+Nov 19 20:53:02 lvl2: 	Saved gamelist.xml for system "gameandwatch" in 1 ms
+Nov 19 20:53:04 lvl2: 	Added/Updated 3 entities in '/home/pi/.emulationstation/gamelists/gameandwatch/gamelist.xml'
+Nov 19 20:53:04 lvl2: 	Saved gamelist.xml for system "gameandwatch" in 1 ms
+Nov 19 20:53:07 lvl2: 	Added/Updated 4 entities in '/home/pi/.emulationstation/gamelists/gameandwatch/gamelist.xml'
+Nov 19 20:53:07 lvl2: 	Saved gamelist.xml for system "gameandwatch" in 1 ms
+Nov 19 20:53:11 lvl2: 	Added/Updated 5 entities in '/home/pi/.emulationstation/gamelists/gameandwatch/gamelist.xml'
+Nov 19 20:53:11 lvl2: 	Saved gamelist.xml for system "gameandwatch" in 1 ms
+Nov 19 20:53:14 lvl2: 	Added/Updated 6 entities in '/home/pi/.emulationstation/gamelists/gameandwatch/gamelist.xml'
+Nov 19 20:53:14 lvl2: 	Saved gamelist.xml for system "gameandwatch" in 1 ms
+Nov 19 20:53:15 lvl2: 	Added/Updated 7 entities in '/home/pi/.emulationstation/gamelists/gameandwatch/gamelist.xml'
+Nov 19 20:53:15 lvl2: 	Saved gamelist.xml for system "gameandwatch" in 1 ms
+Nov 19 20:53:20 lvl2: 	Added/Updated 8 entities in '/home/pi/.emulationstation/gamelists/gameandwatch/gamelist.xml'
+Nov 19 20:53:20 lvl2: 	Saved gamelist.xml for system "gameandwatch" in 1 ms
+Nov 19 20:53:22 lvl2: 	Added/Updated 9 entities in '/home/pi/.emulationstation/gamelists/gameandwatch/gamelist.xml'
+Nov 19 20:53:22 lvl2: 	Saved gamelist.xml for system "gameandwatch" in 1 ms
+Nov 19 20:53:24 lvl2: 	Added/Updated 10 entities in '/home/pi/.emulationstation/gamelists/gameandwatch/gamelist.xml'
+Nov 19 20:53:24 lvl2: 	Saved gamelist.xml for system "gameandwatch" in 1 ms
+Nov 19 20:53:27 lvl2: 	Added/Updated 11 entities in '/home/pi/.emulationstation/gamelists/gameandwatch/gamelist.xml'
+Nov 19 20:53:27 lvl2: 	Saved gamelist.xml for system "gameandwatch" in 1 ms
+Nov 19 20:54:22 lvl2: 	 req sound [detailed.launch]
+Nov 19 20:54:22 lvl2: 	   (missing)
+Nov 19 20:54:23 lvl2: 	Attempting to launch game...
+Nov 19 20:54:23 lvl2: 		/opt/retropie/supplementary/runcommand/runcommand.sh 0 _SYS_ arcade /home/pi/RetroPie/roms/arcade/1942.zip
+Nov 19 20:54:49 lvl2: 	Creating window...
+Nov 19 20:54:49 lvl2: 	Created window successfully.
+Nov 19 20:54:49 lvl2: 	GL vendor:   Broadcom
+Nov 19 20:54:49 lvl2: 	GL renderer: VideoCore IV HW
+Nov 19 20:54:49 lvl2: 	GL version:  OpenGL ES-CM 1.1
+Nov 19 20:54:49 lvl2: 	Checking available OpenGL extensions...
+Nov 19 20:54:49 lvl2: 	 ARB_texture_non_power_of_two: MISSING
+Nov 19 20:55:08 lvl2: 	Added/Updated 10 entities in '/home/pi/.emulationstation/gamelists/amstradcpc/gamelist.xml'
+Nov 19 20:55:08 lvl2: 	Saved gamelist.xml for system "amstradcpc" in 2 ms
+Nov 19 20:55:08 lvl2: 	Added/Updated 2 entities in '/home/pi/.emulationstation/gamelists/arcade/gamelist.xml'
+Nov 19 20:55:08 lvl2: 	Saved gamelist.xml for system "arcade" in 2 ms
+Nov 19 20:55:08 lvl2: 	Added/Updated 1 entities in '/home/pi/.emulationstation/gamelists/atari2600/gamelist.xml'
+Nov 19 20:55:08 lvl2: 	Saved gamelist.xml for system "atari2600" in 1 ms
+Nov 19 20:55:08 lvl2: 	Added/Updated 11 entities in '/home/pi/.emulationstation/gamelists/gameandwatch/gamelist.xml'
+Nov 19 20:55:08 lvl2: 	Saved gamelist.xml for system "gameandwatch" in 1 ms
+Nov 19 20:55:08 lvl2: 	EmulationStation cleanly shutting down.

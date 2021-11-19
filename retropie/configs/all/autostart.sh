@@ -1,0 +1,2 @@
+pinout
+emulationstation #auto

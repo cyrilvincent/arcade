@@ -1,0 +1,216 @@
+<?xml version="1.0"?>
+<gameList>
+	<game>
+		<path>./dkong.zip</path>
+		<name>Donkey Kong</name>
+		<desc>Donkey Kong is an arcade game released by Nintendo in 1981. It is an early example of the platform game genre, as the gameplay focuses on maneuvering the main character across a series of platforms while dodging and jumping over obstacles. In the game, Jumpman (since renamed Mario) must rescue a damsel in distress, Lady (now named Pauline) from a giant ape named Donkey Kong. The hero and ape later became two of Nintendo's most popular characters.
+The game was the latest in a series of efforts by Nintendo to break into the North American market. Hiroshi Yamauchi, Nintendo's president at the time, assigned the project to a first-time game designer named Shigeru Miyamoto. Drawing from a wide range of inspirations, including Popeye, Beauty and the Beast and King Kong, Miyamoto developed the scenario and designed the game alongside Nintendo's chief engineer, Gunpei Yokoi. The two men broke new ground by using graphics as a means of characterization, including cut scenes to advance the game's plot, and integrating multiple stages into the gameplay.
+Despite initial misgivings on the part of Nintendo's American staff, Donkey Kong proved a success in North America and Japan. Nintendo licensed the game to Coleco, who developed home console versions for numerous platforms. Other companies cloned Nintendo's hit and avoided royalties altogether. Miyamoto's characters appeared on cereal boxes, television cartoons, and dozens of other places. A lawsuit brought on by Universal City Studios, alleging Donkey Kong violated their trademark of King Kong, ultimately failed. The success of Donkey Kong and Nintendo's win in the courtroom helped position the company to dominate the video game market from its release in 1981, until the mid 1990s.</desc>
+		<image>~/.emulationstation/downloaded_images/arcade/dkong-image.jpg</image>
+		<releasedate>19810709T000000</releasedate>
+		<developer>Nintendo</developer>
+		<publisher>Nintendo</publisher>
+		<genre>Platform</genre>
+		<players>2</players>
+	</game>
+	<game>
+		<path>./ffight.zip</path>
+		<name>Final Fight</name>
+		<desc>Final Fight can be played by up to two players simultaneously, with each player controlling a different character. Before the game begins, the player chooses between the three main characters, Guy, Cody, and Haggar, each with his own fighting style and attributes. Guy is the weakest but has faster attacks, Haggar is the strongest but also the slowest, and Cody has all-round attributes.
+
+Final Fight consists of six stages or "rounds", as well as two bonus rounds. Each round takes place in a different section of Metro City such as the Slums and the Subway, with most rounds featuring more than one level. At the end of each round the player will face a boss character unique to that round.</desc>
+		<image>~/.emulationstation/downloaded_images/arcade/ffight-image.jpg</image>
+		<releasedate>19891201T000000</releasedate>
+		<developer>Capcom</developer>
+		<publisher>Capcom</publisher>
+		<genre>Action, Fighting, Platform</genre>
+		<players>2</players>
+	</game>
+	<game>
+		<path>./gauntlet.zip</path>
+		<name>Gauntlet</name>
+		<desc>Gauntlet is a fantasy-themed hack and slash 1985 arcade game by Atari Games. It is noted as the first class-based multiplayer game. Released during the emergence of popularity of other role-playing games like Dungeons &amp; Dragons, the game was a sensation, being one of the first true dungeon crawl arcade games.</desc>
+		<image>~/.emulationstation/downloaded_images/arcade/gauntlet-image.jpg</image>
+		<releasedate>19851001T000000</releasedate>
+		<developer>Atari Games</developer>
+		<publisher>Atari Games</publisher>
+		<genre>Adventure</genre>
+		<players>4</players>
+	</game>
+	<game>
+		<path>./gng.zip</path>
+		<name>Ghosts 'n Goblins</name>
+		<desc>Ghosts 'n Goblins is a platform game where the player controls a knight, named Sir Arthur, who must defeat zombies, ogres, demons, armored giants, dragons, and other undead creatures in order to rescue Princess Prin Prin, who has been kidnapped by Satan, King of Demon World. Along the way the player can pick up new weapons, bonuses and extra suits of armor that can help in this task.</desc>
+		<image>~/.emulationstation/downloaded_images/arcade/gng-image.jpg</image>
+		<releasedate>19850919T000000</releasedate>
+		<developer>Capcom</developer>
+		<publisher>Capcom</publisher>
+		<genre>Platform</genre>
+		<players>2</players>
+	</game>
+	<game>
+		<path>./mslug.zip</path>
+		<name>Metal Slug 2</name>
+		<desc>As Marco, Eri, Tarma, or Fio, you must defeat the evil General Morden and his henchman. To do this, you must defeat various enemies that get in your way. Throughout the game, you can collect new weapons including the Heavy Machine Gun, Shot Gun, Rocket Launcher, Flame Shot, Laser Shot, Flame Bottles, and Armor Piercer. Also scattered throughout the game, you can ride in four different vehicles (aka: Slugs) such as the Metal Slug, Slug Flyer, Camel Slug, and SlugNoid. By using these vehicles, you can cause awesome destruction against Morden's evil army. Other items such as energy, extra ammunition, and food (eat too much and your player will gain weight) are also found throughout the game.</desc>
+		<image>~/.emulationstation/downloaded_images/arcade/mslug-image.jpg</image>
+		<releasedate>19980223T000000</releasedate>
+		<developer>SNK</developer>
+		<publisher>SNK</publisher>
+		<genre>Action, Adventure, Shooter</genre>
+		<players>2</players>
+	</game>
+	<game>
+		<path>./mslug4.zip</path>
+		<name>Metal Slug 4</name>
+		<desc>One year after the events of Metal Slug 3, the world is trembling under the new threat of a mysterious but deadly cyber virus that threatens to attack and destroy any nation's military computer system. With Tarma and Eri unable to help due to their own assignments in the matter, Marco and Fio are called in to investigate the situation and are joined by two newcomers, Nadia and Trevor. In their investigation, the group discovers that a terrorist organization known as Amadeus is behind the nefarious plot and that they head into battle against Amadeus' forces, hoping to destroy the cyber virus before it gets the chance to wipe out the entire world's military computer system</desc>
+		<image>~/.emulationstation/downloaded_images/arcade/mslug4-image.png</image>
+		<releasedate>20020327T000000</releasedate>
+		<developer>Mega Enterprise</developer>
+		<publisher>MEGA Enterprise Co., Ltd.</publisher>
+		<genre>Action, Adventure, Shooter</genre>
+		<players>2</players>
+	</game>
+	<game>
+		<path>./mk2.zip</path>
+		<name>Mortal Kombat II</name>
+		<desc>Following his failure to defeat Liu Kang in the first Mortal Kombat game, the evil sorcerer Shang Tsung begs his master, Shao Kahn, to spare his life. He tells Shao Kahn that the invitation for Mortal Kombat cannot be turned down, and if they hold it in Outworld, the Earthrealm warriors must attend. Kahn agrees to this plan, and even restores Tsung's youth. He then extends the invitation to Raiden, who gathers his warriors and takes them into Outworld. The new tournament is much more dangerous, as Shao Kahn has the home field advantage, and an Outworld victory will allow him to subdue Earthrealm.</desc>
+		<image>~/.emulationstation/downloaded_images/arcade/mk2-image.jpg</image>
+		<releasedate>19930625T000000</releasedate>
+		<developer>Midway</developer>
+		<publisher>Midway Games</publisher>
+		<genre>Fighting</genre>
+		<players>2</players>
+	</game>
+	<game>
+		<path>./outrun.zip</path>
+		<name>Out Run</name>
+		<desc>Out Run is an arcade game released by Sega in 1986. It was designed by Yu Suzuki and developed by Sega AM2. The game was a critical and commercial success, becoming one of the best-selling video games of its time. It is notable for its pioneering hardware, graphics and music, and innovative features such as a selectable soundtrack and nonlinear gameplay.
+
+The object of the game is to reach one of a variety of destinations against a timer. If the timer reaches zero, the game ends. The player periodically encounters checkpoints near junctions, which add time to the clock. At each junction, the player must choose one of two directions, each of which lead to different environments.</desc>
+		<image>~/.emulationstation/downloaded_images/arcade/outrun-image.jpg</image>
+		<releasedate>19860920T000000</releasedate>
+		<developer>Sega AM2 R&amp;D Division</developer>
+		<publisher>Sega</publisher>
+		<genre>Racing</genre>
+	</game>
+	<game>
+		<path>./shinobi.zip</path>
+		<name>Shinobi</name>
+		<desc>Shinobi is a side-scrolling action game produced by Sega originally released for the arcades in 1987. In Shinobi, the player controls a modern day ninja named Joe Musashi who goes on a mission to rescue his kidnapped students from a group of terrorists. Shinobi was later adapted by Sega to their Master System game console, followed by conversions to other platforms such as the Nintendo Entertainment System, PC Engine, and various home computers, as well as downloadable emulated versions of the original arcade game for the Wii and Xbox 360. The success of Shinobi inspired the development of various sequels and spin-offs.</desc>
+		<image>~/.emulationstation/downloaded_images/arcade/shinobi-image.jpg</image>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Sega</developer>
+		<publisher>Sega</publisher>
+		<genre>Fighting</genre>
+		<players>2</players>
+	</game>
+	<game>
+		<path>./sf2ce.zip</path>
+		<name>Street Fighter II: Champion Edition</name>
+		<desc>Street Fighter II': Champion Edition  is a competitive fighting game released for the arcades by Capcom in 1992. It was the first of several updated versions of the original Street Fighter II: The World Warrior. The main changes consisted of the addition of the Grand Masters (the final four computer-controlled opponents in the single-player mode) as playable characters and mirror matches (same character vs. matches). The fighting techniques of the eight main characters from the original game were also further refined to allowed for more balanced competitive play.
+
+Champion Edition was followed by Street Fighter II' Turbo: Hyper Fighting, released several months later.</desc>
+		<image>~/.emulationstation/downloaded_images/arcade/sf2ce-image.jpg</image>
+		<releasedate>19920801T000000</releasedate>
+		<developer>Capcom</developer>
+		<publisher>Capcom</publisher>
+		<genre>Fighting</genre>
+		<players>2</players>
+	</game>
+	<game>
+		<path>./sfiii3.zip</path>
+		<name>Street Fighter III: 3rd Strike</name>
+		<desc>Street Fighter III 3rd Strike: Fight for the Future is a 2D competitive fighting game produced by Capcom originally released for the arcade in 1999. It is the second follow-up to Street Fighter III, following Street Fighter III 2nd Impact. Like its predecessors, it runs on the CP System III hardware. 3rd Strike increased the character roster by adding five new characters, including Chun-Li. It also added further refinements to the previous game's play mechanics and rules. It was ported to the Dreamcast, PlayStation 2, and Xbox. A downloadable online version titled Street Fighter III: 3rd Strike Online Edition was released on PlayStation Network and Xbox Live Arcade in August 2011.</desc>
+		<image>~/.emulationstation/downloaded_images/arcade/sfiii3-image.jpg</image>
+		<releasedate>19990512T000000</releasedate>
+		<developer>Capcom</developer>
+		<publisher>Capcom</publisher>
+		<genre>Fighting</genre>
+		<players>2</players>
+	</game>
+	<game>
+		<path>./atetris.zip</path>
+		<name>Tetris</name>
+		<desc>Tetris (In Russian: Тетрис) is a puzzle video game originally designed and programmed by Alexey Pajitnov in the Soviet Union. It was released on June 6, 1984, while he was working for the Dorodnicyn Computing Centre of the Academy of Science of the USSR in Moscow, Russian Soviet Federative Socialist Republic. He derived its name from the Greek numerical prefix tetra- (all of the game's pieces contain four segments) and tennis, Pajitnov's favorite sport.</desc>
+		<image>~/.emulationstation/downloaded_images/arcade/atetris-image.jpg</image>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Atari Games</developer>
+		<publisher>Atari Games</publisher>
+		<genre>Puzzle</genre>
+		<players>2</players>
+	</game>
+	<game>
+		<path>./mk.zip</path>
+		<name>Mortal Kombat</name>
+		<desc>The game takes place on a fictional island in Earthrealm, where a tournament is being held at Shang Tsung's Island, on which seven of its locations serve as stages in the game. For 500 years straight, Goro has been undefeated in the tournament, and now a new generation of warriors must challenge him. The player receives information about the characters in biographies displayed during the attract mode. Additional information about the characters and their motivations for entering the tournament is received upon completion of the game with each character.</desc>
+		<image>~/.emulationstation/downloaded_images/arcade/mk-image.jpg</image>
+		<releasedate>19921008T000000</releasedate>
+		<developer>Midway</developer>
+		<publisher>Midway Games</publisher>
+		<genre>Action, Fighting</genre>
+		<players>2</players>
+		<playcount>1</playcount>
+		<lastplayed>20211114T213341</lastplayed>
+	</game>
+	<game>
+		<path>./commando.zip</path>
+		<name>Commando</name>
+		<desc>Commando is a vertically scrolling shooter staring an elite soldier named Super Joe. The object is to help Super Joe blast through enemy lines, destroying compounds and rescuing hostages along the way, over the course of 16 stages. Armed with a machine gun and supply of grenades, you must carefully avoid near continuous gunfire from rival troops, tanks, and jeeps. Trees, bunkers, and similar barriers can serve as a temporary reprieve from the onslaught of bullets, and extra lives can be earned by achieving specific point milestones. While Super Joe has an unlimited amount of ammunition, he must periodically replenish his grenade supply by finding crates left behind by enemies.</desc>
+		<image>~/.emulationstation/downloaded_images/arcade/commando-image.png</image>
+		<releasedate>19850101T000000</releasedate>
+		<developer>Capcom</developer>
+		<publisher>Capcom</publisher>
+		<genre>Shooter</genre>
+		<players>2</players>
+		<playcount>1</playcount>
+		<lastplayed>20211114T213622</lastplayed>
+	</game>
+	<game>
+		<path>./rtype.zip</path>
+		<name>R-Type</name>
+		<desc>R-Type is a side scrolling shoot-em-up arcade game produced by Irem in 1987. The player controls a space fighter named the R-9 to defend humanity against a mysterious powerful alien life-form known as the "Bydo".
+
+The game is composed of several sequential levels, with a boss enemy at the end of each. The player must navigate terrain and fight enemies using various weapons. The player's spacecraft has, by default, a weak but rapid-firing main gun; and a more powerful gun called a wave cannon, which requires the player to hold the fire button to build up power for the cannon.
+
+During the game, the player can obtain an auxiliary device called a Force. This resembles a glowing orange ball. The Force can be attached to the front or back of the player's spacecraft, or detached to fly freely. When attached, the Force provides one of three different powerful weapons, in addition to the main gun and the wave cannon. When detached, these weapons cannot be used, but the Force will instead resort to a secondary set of guns, which can be fired by the player even if the Force is at a distance from the spacecraft. The Force has a secondary use as a shield; it is completely indestructible and can block most things fired at it, as well as damage or destroy enemies on contact.</desc>
+		<image>~/.emulationstation/downloaded_images/arcade/rtype-image.jpg</image>
+		<releasedate>19870701T000000</releasedate>
+		<developer>Irem Corp.</developer>
+		<publisher>Irem Corp.</publisher>
+		<genre>Shooter</genre>
+		<players>2</players>
+		<playcount>1</playcount>
+		<lastplayed>20211115T221815</lastplayed>
+	</game>
+	<game>
+		<path>./polepos.zip</path>
+		<name>Pole Position (World)</name>
+		<playcount>1</playcount>
+		<lastplayed>20211116T005658</lastplayed>
+	</game>
+	<game>
+		<path>./1942.zip</path>
+		<name>1942</name>
+		<desc>1942 is set in the Pacific theater of World War II. The goal is to reach Tokyo and destroy the entire Japanese air fleet. The player pilots a plane dubbed the "Super Ace" (but its appearance is clearly that of a Lockheed P-38 Lightning). The player has to shoot down enemy planes; to avoid enemy fire, the player can perform a roll or "loop-the-loop".</desc>
+		<image>~/.emulationstation/downloaded_images/arcade/1942-image.jpg</image>
+		<releasedate>19841201T000000</releasedate>
+		<developer>Capcom</developer>
+		<publisher>Capcom</publisher>
+		<genre>Shooter</genre>
+		<players>2</players>
+		<playcount>4</playcount>
+		<lastplayed>20211119T205449</lastplayed>
+	</game>
+	<game>
+		<path>./zaxxon.zip</path>
+		<name>Zaxxon</name>
+		<desc>Zaxxon is an isometric scrolling shoot-em-up in which the player pilots an armed spaceship and must penetrate heavily-fortified enemy bases, destroying enemy ships and installations before reaching the final confrontation with a giant armoured robot. </desc>
+		<image>~/.emulationstation/downloaded_images/arcade/zaxxon-image.png</image>
+		<rating>0.9</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shoot'em Up</genre>
+		<players>1-2</players>
+	</game>
+</gameList>

@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<gameList>
+	<game>
+		<path>./Donkey Kong (Coleco).mgw</path>
+		<name>Donkey Kong (Coleco)</name>
+		<playcount>1</playcount>
+		<lastplayed>20211114T123109</lastplayed>
+	</game>
+	<game>
+		<path>./Donkey Kong II (Nintendo, Multi Screen).mgw</path>
+		<name>Donkey Kong II (Nintendo, Multi Screen)</name>
+		<playcount>2</playcount>
+		<lastplayed>20211114T145006</lastplayed>
+	</game>
+	<game>
+		<path>./Donkey Kong Jr. (Coleco).mgw</path>
+		<name>Donkey Kong Jr. (Coleco)</name>
+		<playcount>1</playcount>
+		<lastplayed>20211114T123216</lastplayed>
+	</game>
+	<game>
+		<path>./Mario Bros. (Nintendo, Multi Screen).mgw</path>
+		<name>Mario Bros. (Nintendo, Multi Screen)</name>
+		<playcount>1</playcount>
+		<lastplayed>20211114T145144</lastplayed>
+	</game>
+	<game>
+		<path>./Parachute (Nintendo, Wide Screen).mgw</path>
+		<name>Parachute (Nintendo, Wide Screen)</name>
+		<playcount>1</playcount>
+		<lastplayed>20211114T180034</lastplayed>
+	</game>
+	<game>
+		<path>./Armor Battle (Mattel Electronics).mgw</path>
+		<name>Armor Battle</name>
+		<desc>You are on a dangerous tank mission. To reach and destroy your assigned target, you must maneuver through a field filled with enemy mines. Although these are hidden, the mine detection equipment in your tank warns you of their presence by producing a buzzing sound. This is your signal to change course on route to your target. If you should stumble into a mine, your tank will be "destroyed" and returned to its original starting position. If you get through the minefield and successfully engage the target, the built-in computer will automatically set up another challenge with a new starting position, target location, and minefield.</desc>
+		<image>~/.emulationstation/downloaded_images/gameandwatch/Armor Battle (Mattel Electronics)-image.png</image>
+		<releasedate>19780101T000000</releasedate>
+		<developer>Mattel Electronics</developer>
+		<publisher>Mattel Electronics</publisher>
+		<genre>Action</genre>
+	</game>
+	<game>
+		<path>./Banana (VTech, Time &amp; Fun).mgw</path>
+		<name>Banana</name>
+		<desc>Move a busy thrash man around the street to clean banana peels. When a pedestrian falls on a banana peel, one miss is scored. Five misses and game ends.
+1 point is scored for each safe pedestrian.</desc>
+		<image>~/.emulationstation/downloaded_images/gameandwatch/Banana (VTech, Time &amp; Fun)-image.png</image>
+		<releasedate>19810101T000000</releasedate>
+		<developer>VTech</developer>
+		<publisher>VTech</publisher>
+		<genre>Action</genre>
+	</game>
+	<game>
+		<path>./Baseball (VTech, Explorer Time &amp; Fun).mgw</path>
+		<name>Baseball</name>
+		<desc>Train baseball by playing with your coach. Move the player left and right to get all balls. When a ball falls to the ground, a chance is missed. Three misses and game ends. 10 points are scored each time a ball is hit. A quick rest is awarded at every 1000 points. Maximum displayed score is 9990.</desc>
+		<image>~/.emulationstation/downloaded_images/gameandwatch/Baseball (VTech, Explorer Time &amp; Fun)-image.png</image>
+		<releasedate>19840101T000000</releasedate>
+		<developer>VTech</developer>
+		<publisher>VTech</publisher>
+		<genre>Action</genre>
+	</game>
+	<game>
+		<path>./Bomb Fight (VTech, Mini Time &amp; Fun).mgw</path>
+		<name>Bomb Fight</name>
+		<desc>An angry lion is throwing bombs to a peaceful elephant. Playing the elephant, you have to spit water to bombs to defuse them before they explode. Misses: one miss per exploded bomb. Three misses and game ends. 10 points are awarded when the elephant successfully defuses a bomb. All bombs are cleared at every 1000 points. Maximum displayed score is 9999.</desc>
+		<image>~/.emulationstation/downloaded_images/gameandwatch/Bomb Fight (VTech, Mini Time &amp; Fun)-image.png</image>
+		<releasedate>19820101T000000</releasedate>
+		<developer>VTech</developer>
+		<publisher>VTech</publisher>
+		<genre>Action</genre>
+	</game>
+	<game>
+		<path>./Caccia al Ladro (VTech, Mini Time &amp; Fun).mgw</path>
+		<name>Caccia Al Ladro</name>
+		<desc>Help Heathcliff the cat to prevent Sonja's fish to be stolen by a thief, or she'll shout at him in anger. Spike the dog disturbs Heathcliff's action. Misses: one miss per cleared dish of fish. Three misses and game ends. 10 points are awarded when Heathcliff successfully attacks a thief. All fish are restored at every 1000 points. Maximum displayed score is 9999.</desc>
+		<image>~/.emulationstation/downloaded_images/gameandwatch/Caccia al Ladro (VTech, Mini Time &amp; Fun)-image.png</image>
+		<releasedate>19820101T000000</releasedate>
+		<developer>VTech</developer>
+		<publisher>VTech</publisher>
+		<genre>Action</genre>
+	</game>
+	<game>
+		<path>./Cessate il Fuoco (VTech, Mini Time &amp; Fun).mgw</path>
+		<name>Cessate Il Fuoco</name>
+		<desc>Help Heathcliff the cat to prevent Sonja's flowers from being burned by flaming sticks thrown by an enemy cat. Spike the dog watches from behind the fence. Misses: one miss per burnt flower. Three misses and game ends. 10 points are awarded when Heathcliff successfully extinguishes a flame. All flames are cleared at every 1000 points. Maximum displayed score is 9999.</desc>
+		<image>~/.emulationstation/downloaded_images/gameandwatch/Cessate il Fuoco (VTech, Mini Time &amp; Fun)-image.png</image>
+		<releasedate>19820101T000000</releasedate>
+		<developer>VTech</developer>
+		<publisher>VTech</publisher>
+		<genre>Action</genre>
+	</game>
+	<game>
+		<path>./Chicky Woggy (VTech, Arcade Time &amp; Fun).mgw</path>
+		<name>Chicky Woggy (time And Fun)</name>
+		<desc>Help Chicky Woggy fill the labyrinth with eggs, while wolves chase her. Chicky Woggy can move across bridges, subways and tunnels to escape wolves. As soon as Chicky Woggy eats magic worms, she can chase and defeat wolves for a short period of time. When the labyrinth is full of eggs, Chicky Woggy moves to a new empty labyrinth. Three misses and game ends. 10 points are scored each time an egg is laid. 50 points are scored each time a worm is eaten. 200 to 400 points are scored each time a wolf is defeated. Bonus life is awarded at 2000 points. Maximum displayed score is 99990.</desc>
+		<image>~/.emulationstation/downloaded_images/gameandwatch/Chicky Woggy (VTech, Arcade Time &amp; Fun)-image.png</image>
+		<releasedate>19820101T000000</releasedate>
+		<developer>VTech</developer>
+		<publisher>VTech</publisher>
+		<genre>Action</genre>
+	</game>
+	<game>
+		<path>./Chicky Woggy (VTech, Electronic Tini-Arcade).mgw</path>
+		<name>Chicky Woggy (tini-arcade)</name>
+		<desc>Help Chicky Woggy fill the labyrinth with eggs, while wolves chase her. Chicky Woggy can move across bridges, subways and tunnels to escape wolves. As soon as Chicky Woggy eats magic worms, she can chase and defeat wolves for a short period of time. When the labyrinth is full of eggs, Chicky Woggy moves to a new empty labyrinth. Three misses and game ends. 10 points are scored each time an egg is laid. 50 points are scored each time a worm is eaten. 200 to 400 points are scored each time a wolf is defeated. Bonus life is awarded at 2000 points. Maximum displayed score is 99990.</desc>
+		<image>~/.emulationstation/downloaded_images/gameandwatch/Chicky Woggy (VTech, Electronic Tini-Arcade)-image.png</image>
+		<releasedate>19820101T000000</releasedate>
+		<developer>VTech</developer>
+		<publisher>VTech</publisher>
+		<genre>Action</genre>
+	</game>
+	<game>
+		<path>./Condor (VTech, Time &amp; Fun).mgw</path>
+		<name>Condor</name>
+		<desc>Move a caveman to prevent condors from stealing his food, then entrap them. When a condor gets a piece of food, one miss is scored. Five misses and game ends. 1 point is scored each time you entrap a condor. Maximum displayed score is 9999.</desc>
+		<image>~/.emulationstation/downloaded_images/gameandwatch/Condor (VTech, Time &amp; Fun)-image.png</image>
+		<releasedate>19810101T000000</releasedate>
+		<developer>VTech</developer>
+		<publisher>VTech</publisher>
+		<genre>Action</genre>
+	</game>
+	<game>
+		<path>./Crazy Chewy (VTech, Electronic Tini-Arcade).mgw</path>
+		<name>Crazy Chewy</name>
+		<desc>You are in a deep-sea maze. Your task is to outwit the deadly sea monsters. Every step you take you absorb a power atom giving you the energy to continue and score points. Your aim is to clear the maze completely. The monsters will try to protect the territory and chase you. If you are captured you loose a life. You have three lives. If you manage to absorb a "marine energizer" you can chase and destroy the monsters scoring bonus points. There are many power atoms, marine energizers and two bonus stars - which flash on and off. If you manage to clear the maze, a new full maze will appear, allowing you to continue your greedy rampage. There are two secret tunnels in the maze. Both Chewy and the monsters can enter them. The tunnels are indicated by arrows on the screen. 10 points are scored each time a power atom is absorbed. 200 points are scored each time a sea monster is defeated. 2000 points are scored each time a bonus star is absorbed. Bonus life is awarded at 20000 points. Maximum displayed score is 99990.</desc>
+		<image>~/.emulationstation/downloaded_images/gameandwatch/Crazy Chewy (VTech, Electronic Tini-Arcade)-image.png</image>
+		<releasedate>19820101T000000</releasedate>
+		<developer>VTech</developer>
+		<publisher>VTech</publisher>
+		<genre>Action</genre>
+	</game>
+	<game>
+		<path>./Defendo (VTech, Explorer Time &amp; Fun).mgw</path>
+		<name>Defendo</name>
+		<desc>Enemy soldiers continuously move towards your camp from three paths, trying to steal your Army's gold. Move the brave soldier to prevent soldiers from reaching the camp. When an enemy successfully reaches the camp, a chance is missed. Five misses and game ends. 1 point is scored each time an enemy soldier is hit. Maximum displayed score is 9999.</desc>
+		<image>~/.emulationstation/downloaded_images/gameandwatch/Defendo (VTech, Explorer Time &amp; Fun)-image.png</image>
+		<releasedate>19840101T000000</releasedate>
+		<developer>VTech</developer>
+		<publisher>VTech</publisher>
+		<genre>Action</genre>
+	</game>
+</gameList>
