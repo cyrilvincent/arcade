@@ -14,25 +14,28 @@ from gpiozero import Button
 from signal import pause
 from subprocess import check_call
 
-poweroff = False
+
+class ShutDownButton:
+
+    def __init__(self):
+        self.reboot = True
+        self.button = Button(use_button, hold_time=0.1, hold_repeat=True)
+        self.button.when_held = self.hold
+        self.button.when_released = self.release
+
+    def release(self):
+        print("Reboot")
+        if self.reboot:
+            check_call(['/sbin/reboot'])
+
+    def hold(self):
+        held = self.button.held_time + self.button.hold_time
+        if held > 2.0:
+            self.reboot = False
+            print("Power off")
+            check_call(['/sbin/poweroff'])
 
 
-def release():
-    print("Reboot")
-    if not poweroff:
-        check_call(['/sbin/reboot'])
-
-
-def hold():
-    held = button.held_time + button.hold_time
-    if held > 2.0:
-        print("Power off")
-        check_call(['/sbin/poweroff'])
-        poweroff = True
-
-
-button=Button(use_button, hold_time=0.1, hold_repeat=True)
-button.when_held = hold
-button.when_released = release
-
-pause()
+if __name__ == '__main__':
+    ShutDownButton()
+    pause()
