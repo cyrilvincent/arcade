@@ -1,0 +1,66 @@
+$1
+    
+$2
+
+Utilitaire de configuration SCSI Iomega.  Version %1d.%2s. 
+Copyright (C) 1991 - 1995 Iomega Corporation.  Tous droits r‚serv‚s.
+$3
+Constitue un fichier de configuration du mat‚riel (SCSI.SCF) 
+pour le driver d'unit‚s SCSI Iomega.
+USAGE:  SCSICFG [Interrupteurs d'option]
+Interrupteurs d'option support‚s:
+     /? ou /H    Afficher ce texte, puis sortir du programme.
+     /P=Chemin   Sp‚cifiez le chemin d'accŠs et/ou le nom du fichier de 
+                 configuration … utiliser.
+     /L=pays     Pr‚cisez la langue d'aprŠs le code du pays d‚fini 
+                 par "pays".
+     /NOSCAN     Ne constituez pas de nouveau fichier de configuration
+                 s'il en existe d‚j… un.
+     /VERBOSE    Affichez des messages informatifs d‚taill‚s.
+     /TERSE      Affichez uniquement les informations requises.
+     /I:ID,LUN,PORT
+                 Ignorez l'unit‚ … "Num‚ro d'identification SCSI",
+                 "LUN", "Adresse de port" (Hex).
+$4
+Interrupteur d'option de ligne de commande incorrect d‚tect‚.
+Interrupteur d'option ignor‚.
+$5
+%1s adaptateur branch‚ sur le port: %2XH.
+Recherche d'unit‚s.
+$6
+     IDE/Unit‚ ATA %1d -%2s
+$7
+     SCSI ID %1d, LUN %2d - %3s
+$8
+Format de fichier de table d'adaptateur incorrect: 
+$9
+Configuration suspendue.
+$10 
+Fichier de configuration g‚n‚rateur d'erreurs:(%1s).
+$11
+Une m‚moire morte d'initialisation de bas niveau a ‚t‚ d‚tect‚e dans votre systŠme.
+Ceci peut expliquer la panne d'‚criture.
+Se reporter au manuel de l'utilisateur pour de plus amples informations.
+$12
+Erreur interne du systŠme de fichiers.
+$13
+Erreur de disque ou fin de fichier inattendue lors de l'analyse 
+du fichier ".OP".
+$14
+Erreur d'affectation de m‚moire.
+$15
+Erreur de syntaxe dans le fichier de message de langue.
+$16
+Aucune table d'adaptateur trouv‚e.
+$17
+Aucune table d'unit‚ trouv‚e.
+$18
+Aucune unit‚ trouv‚e.
+$19
+Le noyau SCSI Iomega %1s version %2d.%3s est incompatible avec cette 
+version du SCSICFG.EXE.
+$20
+La table d'adaptateur %1s version %2d.%3s est incompatible avec
+cette version du SCSICFG.EXE.
+$21
+Incapable de charger le fichier:

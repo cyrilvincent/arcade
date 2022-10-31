@@ -1,0 +1,178 @@
+; GUEST.INF  -- This file install descriptions for Iomega adapters
+; Copyright (c) 1995 Iomega Corporation
+
+[Version]
+signature="$CHICAGO$"
+Class=SCSIAdapter
+Provider=%Iomega%
+
+[Manufacturer]
+%Iomega%=Iomega
+
+;****************************
+;Iomega-manufacturer device list
+[Iomega]
+%*isaPPA3.DeviceDesc%=*isaPPA3.drv,*isaPPA3
+%*isaZOOM.DeviceDesc%=*isaZOOM.drv,*isaZOOM
+%PCI\VEN_9004&DEV_5078.DeviceDesc%= AIC78XX,PCI\VEN_9004&DEV_5078
+%*isa1616.DeviceDesc%=*isa1616.drv,*isa1616
+%*isaB703.DeviceDesc%=*isaB703.drv,*isaB703
+%*isaB701.DeviceDesc%=*isaB701.drv,*isaB701
+%*isaB702.DeviceDesc%=*isaB702.drv,*isaB702     ;IOMEGA Cards
+;***************************************************************************
+;End of manufacturer device lists
+
+;******************************** Iomega Driver Installation Sections
+;
+
+[*isaB701.drv]          ;Iomega installation
+Copyfiles=@PC2X.mpd
+AddReg=IOS,Poll,PC2XReg
+LogConfig=*isaB701.LogConfig
+
+[*isaB702.drv]          ;Iomega installation
+Copyfiles=@PC2X.mpd
+AddReg=IOS,Poll,PC2XReg
+LogConfig=*isaB702.LogConfig
+
+[*isaB701.det]          ; Iomega installation
+addreg=ForceMPCopy
+
+[pc2xReg]
+HKR,,PortDriver,,pc2x.mpd
+
+[*isaB701.LogConfig]
+ConfigPriority=HARDRECONFIG
+IOConfig=4@340-373%fff0(3ff::)
+IRQConfig=5
+DMAConfig=1,3
+
+[*isaB702.det]          ; Iomega installation
+addreg=ForceMPCopy
+
+[*isaB702.LogConfig]
+ConfigPriority=HARDRECONFIG
+IOConfig=4@340-373%fff8(3ff::)
+IRQConfig=5,7
+DMAConfig=1,3
+
+[*isaB703.drv]
+Copyfiles=@PC800.mpd
+AddReg=IOS,PC800Reg
+LogConfig=Without_IRQ, With_IRQ
+
+[PC800Reg]
+HKR,,DevLoader,,*IOS
+HKR,,PortDriver,,PC800.mpd
+
+[Without_IRQ]          ;Primary Configuration, Factory default-NO IRQ's
+ConfigPriority=HARDRECONFIG
+IOConfig=280-28f(3ff::),290-29f(3ff::),300-30f(3ff::),310-31f(3ff::),330-33f(3ff::),340-34f(3ff::),348-357(3ff::),350-35f(3ff::)
+
+[With_IRQ]             ;Secondary Configuration
+ConfigPriority=HARDRECONFIG
+IOConfig=280-28f(3ff::),290-29f(3ff::),300-30f(3ff::),310-31f(3ff::),330-33f(3ff::),340-34f(3ff::),348-357(3ff::),350-35f(3ff::)
+IRQConfig = 7,3,4,5
+
+[*isa1616.drv]
+Copyfiles=@PC1616.MPD
+AddReg=IOS,NCR406Areg
+LogConfig = NormalOp
+
+[NCR406Areg]
+HKR,,DevLoader,,*IOS
+HKR,,PortDriver,,PC1616.MPD
+
+[NormalOp]
+; Primary Configuration
+ConfigPriority = HARDRECONFIG
+IOConfig=330-33F(3ff::),230-23f(3ff::)
+IRQConfig = 11,10,12,15
+
+[*isaPPA3.drv]
+Copyfiles=@ppa3.mpd
+AddReg=IOS,Poll,ppa3Reg
+
+[ppa3Reg]
+HKR,,DevLoader,,*IOS
+HKR,,PortDriver,,ppa3.mpd
+
+[*isaZOOM.drv]
+CopyFiles=@SPARROW.MPD
+AddReg=IOS,AHA152x.Reg
+DelFiles=ASPIDEV
+LogConfig=*ADP6360.LogConfig,6x60.lc2
+
+[AHA152x.Reg]
+HKR,,DevLoader,,*IOS
+HKR,,PortDriver,,SPARROW.MPD
+
+[ASPIDEV]
+VASPID.VXD
+
+[*ADP6360.LogConfig]
+ConfigPriority=HARDRECONFIG
+IOConfig=140-15F,340-35F
+IRQConfig=11,12,9,10
+
+[6x60.LC2]
+ConfigPriority=HARDRECONFIG
+IOConfig=140-15F,340-35F
+IRQConfig=11,12,15,9,10
+
+[AIC78XX]
+CopyFiles=@AIC78XX.MPD
+AddReg=IOS,AIC78XX.Reg
+DelFiles=ASPIDEV
+UpdateInis=DoubleBuffer
+
+[AIC78XX.Reg]
+HKR,,PortDriver,,AIC78XX.MPD
+
+
+
+
+;********************************IOS common section
+[IOS]
+HKR,,DevLoader,,*IOS
+HKR,,DontLoadIfConflict,,"Y"
+
+[IOSMCA]
+HKR,,ConfigFlags,1,00,02,00,00
+
+[Poll]   
+HKR,,Polling,,1
+
+[ForceMPCopy]
+HKR,,NoSetupUI,,1
+
+[DoubleBuffer]
+%31%\msdos.sys,Options,,"DoubleBuffer=1"
+
+;*****************************************************************
+[DestinationDirs]
+ASPIDEV = 11                    ; delete from SYSTEM dir if exists
+DefaultDestDir = 12             ; IOSubsys directory
+
+[SourceDisksNames]
+1="Iomega Windows 95 Tools","",0
+
+[SourceDisksFiles]
+ppa3.mpd=1
+sparrow.mpd=1
+AIC78XX.MPD=1
+PC1616.MPD=1
+PC800.MPD=1
+PC2X.MPD=1
+
+[Strings]
+SCSIClassName="SCSI controllers"
+
+Iomega="Iomega"
+*isaPPA3.DeviceDesc="Iomega Parallel Port Zip Interface"
+*isaZOOM.DeviceDesc="Iomega Zip Zoom SCSI Host Adapters or PC1600"
+PCI\VEN_9004&DEV_5078.DeviceDesc="Iomega Jet PCI SCSI Controller"
+*isa1616.DeviceDesc="Iomega PC1616 16-bit SCSI Host Adapter"
+*isaB703.DeviceDesc="Iomega PC800 8-bit SCSI Host Adapter"
+*isaB701.DeviceDesc="Iomega 8-bit PC2x SCSI Host Adapters except PC2F"
+*isaB702.DeviceDesc="Iomega PC2F 8-bit SCSI Host Adapters"

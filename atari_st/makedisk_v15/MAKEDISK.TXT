@@ -1,0 +1,114 @@
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+                                MakeDisk v1.5
+                      Copyright (c) Darren Birks 1999.                       
+                       email: darren@fatal-design.com                        
+                       www: http://makedisk.atari.org
+                            10th November 1999.                              
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+After more than two years, I have decided to update MakeDisk.  This will
+probably be the last version of MakeDisk for DOS as I am now learning to
+program for the Windows 95/98/2000 environment.
+
+The main reason for this release was to fix a number of bugs (such as
+making WinSTon/Real Atari friendly disk images) and to add the virus
+scanning code I wrote some time ago.
+
+What is MakeDisk:
+-----------------
+MakeDisk is a freeware disk image utility which creates image files of
+Atari ST disks.  These images can be used with Atari ST emulators such
+as PaCifiST, by Frederic Gidouin and WinSTon by Paul Bates.  It can read
+almost all Atari disks including disks with more than the conventional
+79 tracks and 9 sectors.
+
+MakeDisk can also write disk image files back to disks.  If the disk is
+not formatted to the same number of tracks, sectors and sides as the
+original disks then it is reformatted.  This means that all the disk images
+found on the Internet can be converted back to disk which you can boot up
+in a real Atari ST.
+
+MakeDisk can even create blank images which PaCifiST and WinSTon can write
+to. These images can be upto any size (within reason).  Be warned though,
+if you wish to write the images back to real floppy disks you should not use
+more that 82 tracks and 10 sectors with 2 sides as these will not write
+correctly to standard double density floppy disks.
+
+The last feature of MakeDisk is the ability to clean disk images.  This
+replaces the boot sector of disk images and replaces it with a blank boot
+sector.  Use this to remove virus's and anti-virus's which are imcompatible
+with the Emulator you are using.
+
+Image Formats Supported: [*NEW in v1.4*]
+----------------------------------------
+Since v1.4, MakeDisk supports two types of image files.  The original (.ST)
+files were just uncompressed copies of all tracks in logical order.  PaCifiST
+also supports images created with the Magic Shadow Archiver (.MSA).  These
+images are compressed and need to be unpacked before been read from or
+written to.  When writing images back to disks, MakeDisk will examine the image and decide
+for itself if the image is a compressed MSA file or an uncompressed .ST file.
+When reading images from disks, MakeDisk will assume you want to create an
+uncompressed .ST file unless you specify the /MSA paramater.
+
+Virus Scanning: [*NEW in v1.5*]
+-------------------------------
+When reading or writing disk images, MakeDisk automatically scans the disk
+for a number of known virus's.  If any of them are found MakeDisk will tell
+you and give you the option of filtering it out.  This does not affect the
+source disk or image, just the destination one.
+
+The following virus's are recognised by MakeDisk v1.5:
+
+- BHP Virus
+- C'T Virus
+- Cookie #1/#2 Virus
+- Directory Waster (Waister?) Virus
+- Evil Virus
+- Flying Chimp Virus
+- Ghost (Original) Virus / Ghost (Version G) Virus / Ghost (Version H) Virus
+- Green Goblins Virus
+- Kobold #2 Virus
+- Merlin's Fun Virus (Does not spread - has to be installed)
+- OLI Virus
+- Pirate Trap Virus
+- Signum Virus (With/Without Key Set)
+- TOI Virus (A Ghost Variant)
+
+Usage Examples:
+---------------
+   MAKEDISK /READ DISK.ST /AUTO
+   MAKEDISK /READ DISK.ST /TRACK 80 /SECTOR 10 /SIDE 2
+   MAKEDISK /READ DISK.ST /AUTO /MSA
+   MAKEDISK /READ DISK.ST /AUTO /SLOW
+   MAKEDISK /WRITE DISK.ST /AUTO
+   MAKEDISK /WRITE DISK.ST /TRACK 80 /SECTOR 10 /SIDE 2
+   MAKEDISK /WRITE DISK.ST /FORMAT
+   MAKEDISK /CREATE DISK.ST /AUTO
+   MAKEDISK /CREATE DISK.ST /TRACK 80 /SECTOR 10 /SIDE 2
+   MAKEDISK /CLEAN DISK.ST /AUTO
+   MAKEDISK /CLEAN DISK.ST /TRACK 80 /SECTOR 10 /SIDE 2
+
+Credits:
+--------
+Greetings must go to the following people:
+
+- Frederic Gidouin      http://pacifist.atari.org
+- Paul Bates            http://winston.atari.org
+- Rich Davey            http://www.atari.org and http://www.atarist.com
+- Jonathan McHugh 
+- Andreas Muegge        http://www.geocities.com/SiliconVally/Horizon/2361
+- Aengus Jankowsky      
+- Matt Sephton
+- Ben Stevenson         http://planetst.atari.org
+- Mug UK                http://muguk.atari.org 
+- Showaddywaddy/D-BUG   http://dbug.atari.org
+- Grazey/The PHF        http://tphf.atari.org
+
+And anyone else who I know.
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+Until MakeDisk 2000...
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+
+

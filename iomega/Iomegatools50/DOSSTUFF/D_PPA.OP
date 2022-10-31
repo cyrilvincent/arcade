@@ -1,0 +1,57 @@
+
+$OS
+dos
+$BUS
+ISA/MCA
+$FILENAME
+d_ppa.at
+$DESCRIP
+IOMEGA Parallel Port
+$SHORT
+PPA
+$CLASS
+adapter
+$VERSION
+000000
+d
+$SCSI_ADAPTER
+$PARAMS
+6
+/P0 - No PPA Waits
+/P0
+/P1 - 1 PPA Wait State
+/P1
+/P2 - 2 PPA Wait States (Default)
+/P2
+/P3 - 3 PPA Wait States
+/P3
+/P4 - 4 PPA Wait States
+/P4
+/P5 - 5 PPA Wait States
+/P5
+$SCSI_ID
+8
+$IRQ_RANGE
+255
+$DMA_CHANNEL
+0
+$NUMBER_IO_PORTS
+3
+$IO_BASE
+3BC,378,278
+$MEM_BASE
+0
+$BUF_BASE
+0
+$NUMBER_MEM_PORTS
+0
+$XFER_BUFFER_SIZE
+0
+$SCAN
+8
+3BC
+0
+255
+0
+0
+

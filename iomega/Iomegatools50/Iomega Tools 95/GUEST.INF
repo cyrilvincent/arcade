@@ -1,0 +1,214 @@
+; GUEST.INF  -- This file install descriptions for Iomega adapters
+; Copyright (c) 1995 Iomega Corporation
+
+[Version]
+signature="$CHICAGO$"
+Class=SCSIAdapter
+Provider=%Iomega%
+
+[ClassInstall]
+Addreg=SCSIReg
+
+[SCSIReg]
+HKR,,,,%SCSIClassName%
+
+[Manufacturer]
+%Iomega%=Iomega
+
+;***************************************************************************
+;Iomega-manufacturer device list
+[Iomega]
+%*isaPPA3.DeviceDesc%=*isaPPA3.drv,*isaPPA3
+%*isaZOOM.DeviceDesc%=*isaZOOM.drv,*ISAZOOM
+%PCI\VEN_9004&DEV_5078.DeviceDesc%= AIC78XX,PCI\VEN_9004&DEV_5078
+%*isa1616.DeviceDesc%=*isa1616.drv,*isa1616
+;Advansys device list
+%ABPPCI.DriverDesc%=ABPPCI,PCI\VEN_10CD&DEV_1100
+%ABPPCI.DriverDesc%=ABPPCI,PCI\VEN_10CD&DEV_1200
+%ABPPCI.DriverDesc%=ABPPCI,PCI\VEN_10CD&DEV_1300
+;Adaptec device list
+%*ADP1502.DeviceDesc%= AIC6X60.drv,*ADP1502
+%*ADP1520.DeviceDesc%= AIC6X60.drv,*ADP1520
+%*ADP1520.DeviceDesc%= AIC6X60.drv,*ADP2015
+%*ADP6360.DeviceDesc%= AIC6X60.drv,*ADP6360
+%APA1460.DeviceDesc%=  AIC6X60.drv,PCMCIA\Adaptec__Inc.-APA-1460_SCSI_Host_Adapter-BE89
+%APA1460.DeviceDesc%=  AIC6X60.drv,PCMCIA\Adaptec__Inc.-APA-1460_SCSI_Host_Adapter-B67E
+;***************************************************************************
+;Iomega Driver Installation Sections
+
+[*isa1616.drv]
+Copyfiles=@PC1616.MPD
+AddReg=IOS,NCR406A.Reg
+LogConfig = NormalOp
+
+[NormalOp]
+; Primary Configuration
+ConfigPriority = HARDRECONFIG
+IOConfig=330-33F(3ff::),230-23f(3ff::)
+IRQConfig = 11,10,12,15
+
+[*isaPPA3.drv]
+Copyfiles=@PPA3.mpd
+AddReg=IOS,Poll,PPA3.Reg
+
+[*isaZOOM.drv]
+CopyFiles=@SPARROW.MPD
+AddReg=IOS,isaZOOM.Reg
+DelFiles=ASPIDEV
+LogConfig=*ADP6360.LogConfig,6x60.LogConfig
+
+;adaptec driver installation section
+
+[AIC78XX]
+CopyFiles=@AIC78XX.MPD
+AddReg=IOS,AIC78XX.Reg
+DelFiles=ASPIDEV
+UpdateInis=DoubleBuffer
+
+[AIC6X60.drv]
+CopyFiles=@SPARROW.MPD
+AddReg=IOS,AHA152x.Reg
+DelReg=APA1460Switches
+DelFiles=ASPIDEV
+LogConfig=*ADP6360.LogConfig,6x60.lc2
+Reboot
+
+[AIC6X60.PosDup]
+*ADP6360
+
+;Advansys driver installation section
+
+[ABPPCI]
+CopyFiles=@ASC.mpd
+AddReg=IOS,ABPPCI.reg
+DelFiles=ASPIDEV
+UpdateInis=UpdateInisSection
+UpdateCfgSys = UpdateConfigSys
+
+[ASPIDEV]
+VASPID.VXD
+
+;******************************************
+;Addreg Section
+
+[NCR406A.Reg]
+HKR,,DevLoader,,*IOS
+HKR,,PortDriver,,PC1616.MPD
+
+[PPA3.Reg]
+HKR,,DevLoader,,*IOS
+HKR,,PortDriver,,PPA3.MPD
+
+;adaptec addreg section
+
+[isaZOOM.Reg]
+HKR,,DevLoader,,*IOS
+HKR,,PortDriver,,SPARROW.MPD
+
+[AHA152x.Reg]
+HKR,,PortDriver,,SPARROW.MPD
+
+[AIC78XX.Reg]
+HKR,,PortDriver,,AIC78XX.MPD
+
+;advansys addreg section
+
+[ABPPCI.Reg]
+HKR,,PortDriver,,ASC.MPD
+
+[*ASC1000.Det]
+AddReg=ForceMPCopy
+
+[*ADP6360.Det]
+AddReg=ForceMPCopy
+
+[*ADP6360.LogConfig]
+ConfigPriority=HARDRECONFIG
+IOConfig=140-15F,340-35F
+IRQConfig=11,12,9,10
+
+[6x60.LogConfig]
+ConfigPriority=HARDRECONFIG
+IOConfig=140-15F,340-35F
+IRQConfig=11,12,15,9,10
+
+[6x60.LC2]
+ConfigPriority=HARDRECONFIG
+IOConfig=140-15F,340-35F
+IRQConfig=9,10,11,12,15
+
+[*ADP1520.LogConfig]
+ConfigPriority = HARDRECONFIG
+IOConfig           = 140-15F,340-35F
+IRQConfig      = 9,10,11,12
+
+;********************************
+;IOS common section
+[IOS]
+HKR,,DevLoader,,*IOS
+HKR,,DontLoadIfConflict,,"Y"
+
+[IOSMCA]
+HKR,,ConfigFlags,1,00,02,00,00
+
+[Poll]   
+HKR,,Polling,,1
+
+[ForceMPCopy]
+HKR,,NoSetupUI,,1
+
+[DoubleBuffer]
+%31%\msdos.sys,Options,,"DoubleBuffer=1"
+
+[DestinationDirs]
+ASPIDEV = 11                    ; delete from SYSTEM dir if exists
+DefaultDestDir = 12             ; IOSubsys directory
+
+[SourceDisksNames]
+1=%instd1%,"",1
+
+[SourceDisksFiles]
+PPA3.MPD=1
+SPARROW.MPD=1
+AIC78XX.MPD=1
+PC1616.MPD=1
+ASC.MPD=1
+
+[ControlFlags]
+ExcludeFromSelect=*ABP5401
+
+[UpdateInisSection]
+%10%\IOS.INI, SafeList,, %AdvaspiStr%
+%10%\IOS.INI, CDUnsafe,, %AdvancdStr%
+%10%\SYSTEM.INI, 386Enh, "device=advw32.386", %Advw32Str%, 1
+
+[UpdateConfigSys]
+DevDelete = ADVANCD.SYS,1
+
+;*******************************************************************
+;User-Visible Strings
+
+[Strings]
+SCSIClassName="SCSI controllers"
+
+Iomega="Iomega"
+*ISAPPA3.DeviceDesc="Iomega Parallel Port Interface"
+*ISAZOOM.DeviceDesc="Iomega Zip Zoom SCSI Host Adapter"
+PCI\VEN_9004&DEV_5078.DeviceDesc="Iomega Jaz Jet SCSI Host Adapter"
+*ISA1616.DeviceDesc="Iomega PC1616 16-bit SCSI Host Adapter"
+
+; Adaptec visible strings
+
+*ADP1502.DeviceDesc="Iomega Zip Zoom SCSI Host Adapter"
+*ADP1520.DeviceDesc="Iomega Jaz Jet ISA SCSI Host Adapter"
+*ADP2015.DeviceDesc="Iomega Jaz Jet ISA SCSI Host Adapter"
+*ADP6360.DeviceDesc="Iomega Zip Zoom SCSI Host Adapter"
+APA1460.DeviceDesc="Iomega Zip Card PCMCIA SCSI Host Adapter"
+
+; Advansys visible strings
+
+ABPPCI.DriverDesc="Iomega Jaz Jet PCI SCSI Host Adapter"
+instd1 = "Iomega Tools Install Diskette"
+AdvaspiStr = "advaspi.sys	; Iomega ASPI Manager"
+AdvancdStr = "advancd.sys	; Iomega CD-ROM Driver"
+Advw32Str = ";By Iomega.INF: device=advw32.386"

@@ -1,0 +1,27 @@
+Traduction Française de l'Emulateur WinUAE version 4.9.1 - 64 Bits
+Mise à jour le 4 Février 2022
+
+Important :
+-----------
+
+Le fichier de langue fournis dans cette archive ne fonctionnera qu'avec cette
+version de l'émulateur.
+
+Comment avoir l'émulateur en français ?
+---------------------------------------
+
+- Lancez WinUAE
+- Cliquez sur Miscellaneous
+- Dans Language, choisissez French
+- Cliquez sur Démarrer et ensuite relancez WinUAE 
+
+
+CONTACT :
+---------
+
+Si vous trouvez des bugs dus à la traduction francaise par rapport à l'anglaise, des fautes d'orthographes ou de style, ou même remanié certaines expressions, écrivez-moi à :
+
+Siskoo@tradu-france.com 
+
+http://www.tradu-france.com/
+

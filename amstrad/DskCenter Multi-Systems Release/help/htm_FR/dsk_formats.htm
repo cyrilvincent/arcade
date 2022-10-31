@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE>System Requirements / (De-)Installation</TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 1.1.3  (Win32)">
+	<META NAME="CREATED" CONTENT="19970101;1572144">
+	<META NAME="CHANGED" CONTENT="19970105;5244146">
+	<STYLE>
+	<!--
+		P { color: #000000; font-family: "Verdana", "Helvetica", "Arial", sans-serif; font-size: 10pt }
+		H2 { color: #000000 }
+		H4 { color: #000000 }
+		A:link { color: #ffffff; font-weight: bold; background: transparent; text-decoration: none }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="fr-FR" TEXT="#000000" LINK="#ffffff" BGCOLOR="#90a1b3" DIR="LTR">
+<H2><U>Fichiers &laquo;&nbsp;Dsk&nbsp;&raquo; et incompatibilit&eacute;s
+de formats</U></H2>
+<H4>&nbsp;</H4>
+<P>L'&eacute;volution des &eacute;mulateurs a g&eacute;n&eacute;r&eacute;
+de nombreux formats propri&eacute;taires ou standard,
+malheureusement, l'extension utilis&eacute;e pour cr&eacute;er
+l'image d'une disquette a &eacute;t&eacute; &laquo;&nbsp;Dsk&nbsp;&raquo;
+pour <B>D</B>i<B>SK</B> en anglais.</P>
+<P>Dans cette extension g&eacute;n&eacute;rique, nous retrouvons donc
+plusieurs formats passant de l'Amstrad au MSX ...</P>
+<P>A l'origine, le fichier dsk est le fichier de l'image ( en format
+natif ) d'une disquette.</P>
+<P>Ce format vierge de toutes information est la copie fid&egrave;le
+de la disquette et peut &ecirc;tre reconnaissable par sa taille,
+identique &agrave; l'originale. Cette image est directement charg&eacute;e
+par l'&eacute;mulateur (dans une m&eacute;moire tampon) pour &ecirc;tre
+trait&eacute;e directement. Ce format peut-&ecirc;tre renomm&eacute;
+en *.raw ou *.ima suivant l'&eacute;mulateur utilis&eacute;.</P>
+<P>Pour des probl&egrave;mes au niveau de la structure de la
+disquette elle-m&ecirc;me, des formats propri&eacute;taires ont &eacute;t&eacute;
+cr&eacute;&eacute;s afin de r&eacute;cup&eacute;rer non seulement
+l'image du contenu de la disquette, mais aussi, l'image de la
+structure de la disquette.</P>
+<P>Les Formats ima, raw et dsk natif regroupent donc l'image de
+lecture surfacique de la disquette au format standard.</P>
+<P>Les formats propri&eacute;taires tel que le CPCEMU pour
+l'&eacute;mulateur CPCE ou le format Mess permettent la sauvegarde
+structurelle de la disquette :</P>
+<UL>
+	<LI><P>Ent&ecirc;te des pistes avec leur capacit&eacute; propre ( ou
+	pistes suppl&eacute;mentaire et formatages atypiques).</P>
+	<LI><P>Erreur du support (pour certains programmes testant les
+	erreurs de CRC tel que les formatages incomplets ou trous laser pour
+	certaines protections) 
+	</P>
+	<LI><P>Informations sur le type de formatage utilis&eacute; sur le
+	disque tel que le capacit&eacute; des secteurs, nombre de pistes,
+	nombre de t&ecirc;te de lecture ou version du m&eacute;dia utilis&eacute;.</P>
+	<P>Ces formats ne sont pas compatibles pour une raison simple, les
+	formats propri&eacute;taires poss&egrave;dent une en-t&ecirc;te de
+	description g&eacute;n&eacute;ral ou/et r&eacute;p&eacute;titives
+	pouvant &ecirc;tre interpr&eacute;t&eacute; par le driver de
+	chargement, comme des informations contenues sur la disquette et non
+	des informations de traitement du disque.</P>
+</UL>
+<P><B><U>Rappel</U></B>: autopsie d'une disquette.</P>
+<UL>
+	<P>Sch&eacute;ma et structure d'une disquette :</P>
+	<P><B><U>G&eacute;n&eacute;ralit&eacute;s</U><SPAN STYLE="text-decoration: none">:</SPAN></B></P>
+	<P>Exemple pour une disquette classique 5.25 pouces de type 40
+	pistes, 9 secteurs par face et 2 t&ecirc;tes.</P>
+	<LI><P><IMG SRC="../png/structure.png" NAME="Image1" ALIGN=LEFT WIDTH=255 HEIGHT=255 BORDER=0>1
+	) Marqueur de calage (d'azimut) : Trou physique dans le support
+	utiliser pour d&eacute;terminer la position du premier secteur sur
+	les disquettes 5.25 pouces (notez qu'avec les format 3.5 pouces, le
+	calage s'effectue directement au niveau du syst&egrave;me
+	d'entra&icirc;nement de la disquette et non par ce proc&eacute;d&eacute;
+	optique).</P>
+	<P>Ce proc&eacute;d&eacute; purement m&eacute;canique n'est pas
+	n&eacute;cessaire pour la lecture d'un fichier image.</P>
+	<P>Note: Certains supports, poss&eacute;dent plus d'un marqueur de
+	ce type (un par secteur sur certains supports sp&eacute;ciaux en
+	5,25 pouces) 
+	</P>
+	<LI><P>2 ) Zone secteur : Partition circulaire du support.</P>
+	<LI><P>3 ) Une unit&eacute; Secteur, partition d'une piste par un
+	secteur .</P>
+	<LI><P>4 ) Piste &ldquo;Boot&rdquo;, Cette piste est appel&eacute;e
+	lors du chargement du syst&egrave;me et lors du scan du m&eacute;dia.
+	( premi&egrave;re piste = 0), une piste = 9 secteurs.</P>
+	<LI><P>5 ) Piste de fin (derni&egrave;re piste = 39),en fait, Le
+	nombre de pistes est variable et d&eacute;pend du support ainsi que
+	de la technologie du formatage.(jusqu'&agrave; 42 pistes sur un
+	support 5.25 classique). 
+	</P>
+</UL>
+<P>Donc la capacit&eacute; d'une disquette ce calcule : Nombre
+d'octet par secteur x 9 secteurs x 40 pistes x 2 t&ecirc;tes</P>
+<P><SPAN LANG="en-US">512 x 9 x 40 x 2 = 368 640</SPAN> Ko (360ko
+pour 1ko=1024 octets)</P>
+<P><U>Lexique Anglophone</U> :</P>
+<P><B>Piste</B>: Track</P>
+<P><B>T&ecirc;te</B>: Head</P>
+<P><B>Secteur</B>: Sector</P>
+<P><B>Octet</B>: Byte = 8 bits<BR><BR><BR>
+</P>
+<HR>
+</BODY>
+</HTML>

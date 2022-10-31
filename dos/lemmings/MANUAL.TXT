@@ -1,0 +1,909 @@
+Introduction: 
+ 
+Lemmings is an intriguing game in which you help hordes of 
+mindless but delightful creatures, known as Lemmings, to escape 
+hostile environments in 120 unique adventures. 
+ 
+Lemmings appear on each level, after being dropped through a 
+trapdoor.  As they are creatures of very little brain, they need all 
+the help they can get to survive the dangers that lie ahead. 
+ 
+Lemmings are very cute but not very bright.  They will 
+mindlessly walk off of cliffs, into water, hazards and traps or 
+they will mill around, bumping into walls and whatever obstacles 
+they run across.  Your job is to assist them by assigning skills 
+and powers that will help them survive each level of the game.  
+As you progress through the levels, the environments that the 
+Lemmings must navigate become increasingly difficult.  The 
+number of skills, the amount of time, and the number of 
+Lemmings which you have can vary from level to level.  Your 
+goal is always to save as many Lemmings as possible, hopefully 
+enough to advance to the next level! 
+ 
+A quick mind, the ability to think ahead, and dedication to the 
+Save the Lemmings Campaign are required to get the right 
+Lemming to perform the right action at the right time.  A 
+forgotten blocker, a rogue miner, or a misplaced bridge could 
+spell disaster for every Lemming. 
+
+
+Overview: 
+ 
+	We recommend that you take at least a brief look at the 
+manual before you begin.  If you're in a hurry, take a look at the 
+Quick Start section to jump right in.  Otherwise, please take a 
+look at the Installation instructions. 
+ 
+ 
+The Lemmings Saga: 
+ 
+Lemmings: 
+	The original Lemmings game consists of 120 levels 
+arranged in four categories of 30 levels each.  Arranged from 
+easiest to most challenging, these categories are called Fun, 
+Tricky, Taxing and Mayhem.  You are now the proud owner of 
+this game package. 
+ 
+Oh No!  More Lemmings: 
+	Oh No!  More Lemmings again features our little green-
+haired friends in 100 all-new adventures and scenarios.  These 
+levels are arranged in five categories of 20 levels each, titled 
+Tame, Crazy, Wild, Wicked, and Havoc, again in ascending 
+order of difficulty.  Join us again as the little critters bash, 
+block, and blow their way home!  Oh No! More Lemmings is included 
+on this CD, and the information in this manual applies to both of them.
+
+	If you've never played Lemmings or Oh No!  More 
+Lemmings we recommend that you start with the Fun level, and 
+work your way up from there.  Of course, if you're feeling 
+adventurous, there's nothing to prevent you from jumping in 
+with both feet and trying one of the more difficult 
+categories...but don't blame us if Lemmings start splatting all 
+over the place! 
+ 
+Before you Begin: 
+ 
+Please make sure all the parts of your game package are present.  
+The game package should consist of this manual, and 1 CD.
+ 
+There are two ways you can use this manual.  You can jump right into the 
+game, and refer to the manual only when necessary, or you can 
+read the manual over carefully, and only approach the game 
+after you know everything there is to know about Lemmings.  
+Either way is fine, but we recommend that you read at least the 
+Installation instructions and description of the Lemmings Icons 
+before beginning. 
+
+
+Quick Start Procedure: 
+ 
+	For everyone who wants to get right into the game, we 
+have included a Quick Start procedure.  This will get you into 
+the game, and start your new friends roaming around your 
+computer screen...but you'll probably need to take a look at the 
+"Lemmings Icons" section before really starting to enjoy the 
+game. 
+	If you run into problems with any of the Quick Start 
+procedures, you may have an unusual configuration warranting 
+special instructions.  Please refer to the complete installation and 
+loading instructions for your computer for details. 
+ 
+For MS-DOS compatibles with hard disks: 
+1.	Boot your computer with DOS version 5.0 or higher.  If 
+you would like to use a mouse (Yes, yes!  Use a mouse!), 
+make sure that your mouse driver is installed. 
+2.	Insert appropriate disk into the CD drive, and run the install 
+program. 
+3.	Enter the directory to which you installed the Lemmings 
+program, and start the program by typing "LEMMINGS". 
+4.	If prompted, select the default graphics adapter offered. 
+5.	If prompted for a machine-type, select option 1. 
+6.	You should now be at the Main Menu.  If you are using a 
+mouse, simply click your left mouse button to continue.  
+Otherwise, select F4 to select your control device, and then 
+click your 'fire' button or equivalent to get started! 
+ 
+
+
+MS-DOS Installation and Loading Instructions: 
+ 
+Installing and Loading Lemmings: 
+ 
+Supported Graphics and Sound Boards: 
+	Lemmings supports CGA, Tandy, EGA, and VGA 
+graphics.  Lemmings also supports AdLib, SoundBlaster, Tandy, 
+Covox, and Thunderboard enhanced sound capabilities.  
+Lemmings automatically attempts to configure itself for optimum 
+performance on your computer. 
+ 
+Memory Requirements: 
+	Lemmings and Oh No! require approximately 500K of free 
+conventional DOS memory to run (580K for full sound and 
+music support.)  If you do not have sufficient free memory 
+available, the music may not work, or worse yet (Gasp!), the 
+game will not run at all.  You can check the amount of free 
+memory available by using the DOS CHKDSK command.  
+(Consult DOS manual for further details.) 
+ 
+Control Methods: 
+	Lemmings may be played from either the keyboard, 
+joystick or mouse; however, exhaustive Lemming research has 
+shown that a mouse is by far the most convenient control device.  
+If you are using a mouse, please be sure you use a 100% 
+MicrosoftTM compatible mouse driver.  We have discovered that 
+some third-party manufacturers' mouse drivers are not 100% 
+Microsoft compatible.  If you experience problems with your 
+mouse it is often because of an incompatible mouse driver.  In 
+these cases, we recommend that you obtain either a Microsoft 
+(Version 7.00 or greater) or a LogitechTM (Version 6.00 or 
+greater) mouse driver.  If you do not know how to install or 
+update your mouse driver, consult your mouse documentation, 
+or your retailer. 
+ 
+Hard Disk Users: 
+	Boot your computer as usual, using DOS 5.00 or higher.  
+Insert the Lemmings CD, into the appropriate drive, then select 
+the drive letter from the DOS prompt, and press enter (e.g., type D:
+or E:, and press return.) 
+	At the DOS prompt, type INSTALL and press Enter on 
+your keyboard. 
+	When the program asks you which graphics adapter you 
+have, answer VGA, EGA, Tandy or CGA as appropriate.  If 
+you are not sure, type ALL. 
+	Let the program know which drive your original 
+Lemmings disk is in when it asks (usually, either A: or B:). 
+	When the program asks where you would like to install 
+Lemmings, enter the directory in which you would like 
+Lemmings installed.  Unless you have a special reason for doing 
+otherwise, type C:\LEMMINGS, the default. 
+	Confirm your selection with a Y, if prompted, and then 
+sit back and wait while the installation program copies the 
+Lemmings program onto your hard drive.  If you are installing 
+from the 5.25" disks, you may be asked to switch disks.  Please 
+note:  You may not use all of the 5.25" disks.  Disk 2 contains 
+the VGA and EGA graphics, while Disk 3 contains the CGA and 
+Tandy graphics.  If you only elect to install one version, only 
+the appropriate disk(s) will be requested. 
+	The installation program will leave you in the 
+LEMMINGS subdirectory.  At this point, Lemmings has been 
+installed on your hard drive.  To start Lemmings, first make the 
+Lemmings directory current (by typing CD \LEMMINGS from 
+your C: prompt), and then type LEMMINGS to start the game.  
+Please see the section titled "Machine-Type Selection Screen" 
+for further instructions. 
+ 
+Machine-type Selection Screen: 
+	The first screen you will see after starting Lemmings asks 
+you what type of machine you have.  For the vast majority of 
+MS-DOS compatible machines, option 1 (PC Compatible or 
+Tandy) will work best.  If you have a PS/2, you can try the PS/2 
+mode for improved performance.  If you have a 386DX running 
+at 25 MHz or faster, you can try the High-Performance mode.  
+Please see the troubleshooting section if you experience 
+problems. 
+ 
+Windows Compatibility: 
+	We have tested Lemmings running in Windows with 
+limited success.  Lemmings will run usually successfully under 
+Windows 3.0 as a full-screen DOS application.  However, 
+Windows 3.1 is incompatible with Lemmings on certain 
+computer configurations, preventing the Lemmings skill icons 
+from appearing.  In almost all of these cases, exiting Windows 
+before running Lemmings will resolve the problem.  Under 
+Windows, however, you must select the PC or Compatible 
+option on the Machine-type Selection Screen. 
+ 
+Experienced DOS users: 
+	Lemmings supports various command-line parameters.  
+These are to be used in conjunction with the appropriate 
+executable, either VGALEMMI.EXE, TGALEMMI.EXE or 
+CGALEMMI.EXE. 
+	The command line parameters are as follows: 
+ 
+		-v	- VGA Mode 
+		-e	- EGA Mode 
+		-o	- High-Performance PC Mode 
+		-p	- PS/2 Mode 
+		-n	- Disable Mouse autodetect 
+		-t	- Disable Tandy sound autodetect 
+		-a	- Disable autodetects for other sound cards 
+		-d	- Amstrad PC1640 or PC2086 mode 
+		-m	- Monochrome EGA or VGA mode 
+ 
+	These parameters may be combined and used together.  
+For instance, typing VGALEMMI -p -v will run Lemmings on a 
+an IBM PS/2 in VGA. 
+ 
+
+
+A Guided Tour: 
+ 
+	Start the game as recommended in the installation and 
+loading instructions.  From the Main Menu, click on Let's Go! 
+or select One Player (depending on your computer type).  Here 
+comes the first level...it looks tiny!  Are your glasses on 
+backwards?  No, this is just the Objective screen.  This is where 
+you are given a brief overview of what you and your Lemmings 
+will be facing on this level.  From the screen, you can see that 
+this is Level 1 of the Fun category, called "Just Dig!"  (each 
+level has a name, which sometimes contains a subtle hint.)  This 
+level has ten lemmings, but you only need to save 10% (one 
+whole Lemming!).  Of course, it's better to save more than the 
+minimum, but as long as you get a Lemming to the exit of this 
+level, you will win your admission to the next level.  So, after 
+careful perusal of this incredibly informative screen, press the 
+left mouse button to continue.  After a brief pause, you will see 
+the actual game screen. 
+	The trapdoor will open up, and Lemmings will begin 
+dropping out on the screen.  Whilst the Lemmings are walking 
+around, let's take this opportunity to explore your interface into 
+the Lemmings world. 
+	Your control device (preferably, your mouse) moves the 
+crosshairs.  You'll notice that the crosshairs move as you move 
+your mouse. 
+	The top three-quarters of your screen shows the 
+Lemmings world.  Many levels are larger than the width of your 
+screen, so you can scroll the screen by pressing the crosshairs 
+against the left and right edges of the screen.  The first screen is 
+actually quite narrow, so scrolling the screen to either side 
+shows just blank space. 
+	By this time, your ten lemmings should be out on the 
+screen already, happily walking back and forth, and bumping 
+into the walls at either end of their little world.  You've already 
+been introduced to the release hatch, the trapdoor through which 
+the Lemmings enter the play screen.  Now, look in the lower 
+right-hand-corner of the level, where you'll see an archway with 
+a path and blue skies beyond; this is the exit.  The object is to 
+get the lemmings from the trap door to the exit.  Sounds simple, 
+right?  Not! 
+	Take a look at the bottom quarter of the screen.  First, 
+you'll see a row of text.  The first section (on the left hand side) 
+is blank, but during play, you will notice different things 
+appearing here, such as "Walker 2".  If you move the crosshairs 
+over a lemming, you will notice two things:  the pointer turns 
+into a box, and "Walker 1" appears in this text region.  This 
+tells you that there is one lemming under the pointer, and that he 
+is currently just walking. 
+	The center part of this text section tells you how many 
+lemmings are currently roaming around on this level, and what 
+percentage have already made it into the exit.  The last bit of 
+text tells you how much time remains, in units of minutes and 
+seconds.  (Please note:  on slower machines, the 'seconds' 
+recorded by this clock may not be exactly accurate to real time.) 
+	Along the bottom of the screen, you'll see a row of little 
+pictures of Lemmings engaged in various activities.  These 
+represent the Lemmings skills you have available to you.  
+(Please see the section titled "The Lemmings Icons" for a more 
+complete description of the icons and what they do.)  Now, click 
+on the Icon with a digging Lemming on it (It's the one with a 
+'10' above it.).  You should see a highlighted box appear around 
+that icon.  Then, move your crosshairs up to the main Lemmings 
+screen, and select a Lemming out of the crowd to become your 
+industrious Digger Lemming (i.e. wait until there's a Lemming 
+under the pointer, and then click your mouse button). 
+	You will now see a Lemming flinging dirt upwards with 
+his tiny little paws, and you will watch him progress gradually 
+downwards until eventually, he breaks through the bottom.  At 
+this point, the other Lemmings will fall through the hole he has 
+created, and head out through the exit.  (Some Lemmings may 
+fall through and head towards the left, but eventually, they will 
+hit the wall on the left side of the screen, and turn back towards 
+the right.) 
+	Congratulations!  You have now solved your first 
+Lemmings level!  Enjoy the view as the Lemmings hop into the 
+exit.  You have embarked on the journey to become a Lemmings 
+Master. 
+ 
+
+
+The Main Menu: 
+ 
+  
+Macintosh Lemmings Screen Shown 
+ 
+	This is the screen from which all games originate.  Be 
+sure to watch the Lemmings for a while, and to read the scroll 
+across the bottom when you have a few spare moments! 
+ 
+Main Menu: 
+	From here, you may select one of the following options 
+using the Function Keys: 
+ 
+F1:	Select this option to begin playing Lemmings!  Clicking 
+the fire button or the left mouse button at this menu has 
+the same effect as pressing F1. 
+F2:	Select this button to enter an access password which will 
+permit you to resume from the last level you completed. 
+F3:	This button controls what you hear while the game is 
+playing.  It will change from a set of musical notes, to a 
+symbol that says FX to signify sound effects, to a blank 
+card as you press F3.  The musical notes symbol signifies 
+that you will hear music and sound effects during the 
+game.  The FX symbol means that you will hear 
+improved sound effects, but no music during gameplay.  
+The blank card means that the game will play silently.  
+Please note:  The musical note symbol will not appear 
+unless you have enhanced sound capabilities installed in 
+your PC, either in the form of Tandy sound, or an 
+AdLib/SoundBlaster or compatible card. 
+F4:	This button will take you to another menu which will 
+allow you to decide which control device you would like 
+to use.  Lemmings defaults to mouse control if the 
+program finds a MicrosoftTM compatible mouse driver in 
+memory.  Otherwise, you will have the option of using 
+either Joystick or Keyboard.  (See the section entitled 
+Controlling Your Lemmings for further information) 
+Up and Down arrows:  These buttons will move you up and 
+down through the different categories of levels.  See the 
+section entitled Level Categories for further details. 
+ESC:	Exits back to DOS. 
+ 
+ 
+
+
+The Objective Screen: 
+ 
+  
+Macintosh Screen Shown 
+ 
+	This screen describes what you and your Lemmings will 
+be facing on the upcoming level.  You will see this page every 
+time you and your little friends embark on a new adventure. 
+ 
+Mini-Map:  This is basically a miniaturized version of the level, 
+so you can get an idea of what you will be facing. 
+Level Number:  Where this level ranks in the category. 
+Level Title:  Just the name of the level.  Read carefully, though, 
+because sometimes there's a hint hidden in the name! 
+Number of Lemmings:  The number of lemmings that will 
+come tumbling out of the hatch for you to save. 
+Number to be Saved:  The number of lemmings that must make 
+it (alive!) to the exit for you to win admission to the next, 
+more challenging adventure!  Please note:  This number 
+is expressed as a percentage of the total number of 
+lemmings available. 
+Release Rate:  The rate at which the lemmings will come 
+tumbling out of the hatch. A release rate of 1 will have 
+them coming out at the leisurely rate of one every few 
+seconds, while a release rate of 99 ensures a veritable 
+flood of lemmings pouring out of the hatch! 
+Time:  How much time you've got available to complete the 
+level. 
+Rating:  The category the level is in. 
+ 
+	At this point, there's nothing to do but click your mouse 
+and continue! 
+
+
+The Lemmings Game Screen: 
+ 
+  
+Macintosh Screen Shown 
+ 
+The Viewscreen: 
+	This part of the screen allows you to view the level, 
+where all of the actual game play takes place.  In this part of the 
+screen you will see an entrance, an exit, and several solid 
+objects.  The entrances are wooden trapdoors from which the 
+lemmings emerge onto the level.  The exits come in a few 
+different designs, but each resembles an archway through which 
+the lemmings disappear.  A given level may have multiple 
+entrances and exits. 
+	In between these two the lemmings can pass (or be 
+stopped by) a number of different objects.  Most of these objects 
+are just ground in its various forms (dirt, rock, brick, pastel 
+tile), but others have special properties.  Ground with arrows 
+pointing in one direction can only be dug through (bashing or 
+mining) in that direction.  Most steel cannot be dug through at 
+all.  In addition, some levels have traps which the lemmings 
+must bypass. 
+	Each level is more than one computer screen wide.  It is 
+necessary to scroll in both directions to see the entire level.  To 
+do this, simply push your mouse against the right or left edge of 
+the viewscreen.  To scroll more quickly, hold down the right 
+mouse button (or, the Option key on the Macintosh) as you push 
+against the edge. 
+ 
+The Status Line: 
+	This line, between the level and the icons, gives you 
+information about the current status of your game.  On the far 
+left is a word and a number.  The number tells you how many 
+lemming(s) are under your pointer; and the word tells you what 
+the lemming(s) are doing.  For instance, there are 6 Lemmings 
+in one spot, and one is digging, you will see "Digger 6", even 
+though only one lemming is currently digging.  This section will 
+appear only when your pointer covers at least one lemming.
+	Towards the center of the status line you can see "Out" 
+and a number, and then "In" and a number with a "%" after it.  
+These numbers tell you how many lemmings are currently on the 
+level, and what percentage of lemmings has already passed 
+through the exit.  Every lemming who enters the level increases 
+the "Out" category by one; every lemming who falls off the 
+screen, explodes, etc. decreases the "Out" category by one.  
+Every lemming who passes through the exit decreases the "Out" 
+category by one and increases the "In" category based on how 
+many lemmings originally started this level (e.g., if the level had 
+20 lemmings initially, then each lemming who passed through 
+the exit would increase the "Out" category by 5%). 
+	The word "Time" and a number appear at the far right of 
+the status line.  This number, which counts downwards, tells 
+you how much time you have left to finish the level.  When time 
+runs out, the level is evaluated on the percentage of lemmings 
+saved--this means you can run out of time, but still finish the 
+level! 
+ 
+The Icons: 
+	A series of icons along the bottom of the screen.  See 
+"Icon Panel" section for a description of their functions. 
+ 
+The Micro-map: 
+	In the lower right-hand corner is a miniaturized map of 
+the entire level, in green.  Lemmings currently on the level show 
+up as yellow dots.  In addition, a large light-colored box marks 
+the portion displayed on the viewscreen.  Clicking on the mini-
+map centers the viewscreen on the region clicked, making it 
+possible to jump from one side of the level to the other without 
+scrolling across the portions in between. 
+
+
+Lemmings Icons: 
+ 
+  
+Icon Panel (bottom of Game Screen) 
+ 
+	In Lemmings, you have no immediate control over the 
+actions of our little green-haired friends.  The only thing you 
+can do is promote some of them to the upper echelons of 
+Lemming-dom by giving them various skills and abilities to help 
+themselves (and their friends!) make it safely to the exit.  These 
+varying abilities are assigned by selecting icons on the gameplay 
+screen, and assigning them to the Lemming of your choice. 
+	The Icon Panel is your control panel for the game, and 
+your interface into the universe of the Lemmings.  The contents 
+of the panel are described below. 
+			 
+Decrease flow of Lemmings onto the level - This will slow the 
+rate at which the Lemmings come out of the Lemming hatch.  
+Changes will be reflected in the number above the "Increase 
+Icon."  Note:  You cannot slow the Lemming flow down past 
+the original rate (shown by the number at the top of this icon.) 
+Increase flow of Lemmings onto the level - This will cause the 
+Lemmings to come out of the Lemming hatch at an increased 
+rate. 
+Climber - Climbs walls.  This causes a Lemming to break out 
+his super-sticky shoes and gloves so he can scale vertical 
+surfaces.  Note:  A climber will always be a climber until the 
+end of the level.  (His super-sticky shoes and gloves get stuck to 
+his little paws). 
+Floater - A brolly (umbrella) ensures a Lemming's safe descent 
+from any height.  A Lemming who has been given one of these 
+will employ it at every opportunity, whether or not it's really 
+necessary.  Note:  Once given a brolly, the Lemming will have 
+one until the end of the level. 
+Bomber - Activate the chosen lemming's self-destruct 
+mechanism.  A five second countdown timer will appear above 
+the unfortunate Lemmings' head, and eventually, the Lemming 
+will explode in a colorful shower of confetti.  They really hate 
+when this happens.  Note:  This is one way to remove a blocker. 
+Blocker - This lemming will stand with his arms outstretched to 
+block the passage of his fellow lemmings.  These guys are very 
+patient.  They'll willingly stand around until the level timer runs 
+out, if you'll let them. 
+Bridge Builder - This Lemming will build a bridge.  The bridge 
+always goes upwards at the same angle, in the direction in which 
+he was heading when he was converted.  Each builder has 
+twelve tiles.  When he runs out, he will hesitate for a moment, 
+shrug, and will then become a walker, unless you have him do 
+something else (build again, for instance.)  Builders will stop 
+building immediately when they run out of bricks, or when the 
+bridge runs into an obstacle, and also when they hit their heads.  
+Oh, by the way:  no, you can't bridge downwards at an angle.  
+Note:  When a Builder is about to run out of bricks, he will 
+make a clicking noise.  Listen carefully! 
+Basher - This Lemming will dig horizontally, and will only dig 
+when a suitable surface is directly ahead of him.  As soon as he 
+breaks through the wall he's digging in, he'll stop and become a 
+walker again.  (He'll also stop if he runs into a substance that he 
+can't dig through...in which case he'll turn around.)  Note:  
+Lemmings can't dig through everything.  The most notable 
+exception is steel, shown on the screen as dull grey rusty plates. 
+Miner - Immediately causes the Lemming in question to break 
+out a mining pick, and dig diagonally, downward and in the 
+direction in which he was heading.  Miners will dig until they 
+run out of diggable material.  Usually, they will then fall out of 
+their little tunnel, hopefully onto solid ground underneath.  
+Lemmings can't mine through steel. 
+Digger - Immediately causes the lemming to begin burrowing 
+vertically.  If the lemming runs out of material to dig through, 
+he will simply fall through the hole he has created.  Lemmings 
+can't dig through steel. 
+Paws - Pause.  Freezes the action, giving you a chance to think 
+things through, or take a look at the level. 
+Armageddon - Blows all the lemmings into "lemming bits."  
+Use this when there is no hope of completing a level.  This gives 
+a wonderful pyro-lemming-technic display, and is a great tension 
+reliever.  (Double click to activate.) 
+ 
+	As you have probably already discovered, you assign a 
+skill to a Lemming by clicking on a particular skill icon, and 
+then clicking on a Lemming with your mouse pointer.  The 
+Lemming in question should immediately begin performing the 
+activity which you've assigned to it (i.e., he'll immediately start 
+building, etc.)  The only exception to this rule is the Climber 
+and Floater skills.  A Lemming who has been granted either of 
+these skills will not take advantage of these until they're 
+confronted by a vertical wall, or a cliff.  A Lemming who has 
+been made a Climber and a Floater becomes an Athlete, and will 
+be shown as such when you highlight him with your pointer. 
+ 
+Important Note: 
+ 	You only have a limited supply of each skill for each 
+level.  This is demonstrated by the number above each icon.  A 
+blank space immediately above the icon indicates that you have 
+none of these skills left. 
+	The number above the large minus sign (the Lemming-
+flow decrease icon) is the original Lemming release rate for the 
+level.  The number above the large plus sign (the Lemming-flow 
+increase icon) is the current Lemming release rate for the level.  
+You can, of course, adjust the rate at which the Lemmings 
+appear on the level by clicking on the large plus and minus 
+icons; however, you can never decrease it below the original 
+release rate.  A release rate of 1 is a very gradual progression of 
+Lemmings, approximately one every two or three seconds.  A 
+release rate of 99 is a veritable flood of Lemmings...they just 
+keep coming! 
+Controlling your Lemmings: 
+ 
+	A mouse is the best control device to use with Lemmings.  
+Besides, a mouse is much like a Lemming, only it's got more 
+buttons! 
+	To get a Lemming to perform a task, you first highlight 
+the desired skill by clicking on the desired skill on the Icon 
+Panel.  Then, you move your crosshair over the desired 
+Lemming.  (At this point, the crosshair will turn into a box, 
+framing the Lemming.)  Then, a simple mouse click will assign 
+this skill to the targeted Lemming.  Be sure you have a skill 
+available to you before you attempt to assign it...otherwise 
+nothing will happen! 
+	Sometimes, the Lemmings will get clumped together so 
+closely that you will not be able to distinguish one from another.  
+As you can imagine, it is very difficult to select a particular 
+Lemming under these circumstances!  However, if you hold 
+down the right mouse button while you're assigning a skill, your 
+assignment will only be given to a Lemming who is a Walker 
+(i.e., not digging, not building, etc.) 
+	Remember, some play levels are wider than the width of 
+your monitor's screen.  Keep an eye on the micro-map in the 
+lower right hand corner of the screen to see how the Lemmings 
+offscreen are doing. 
+	To scroll your window on the Lemmings world back and 
+forth, simply push your mouse pointer against the left or right 
+edges of the game screen, and the screen will scroll 
+appropriately.  If you want to get somewhere in a hurry, you can 
+just click on the micro-map to adjust your screen position, or, 
+you can hold down your right mouse button while pressing 
+against the edges of the screen to increase scrolling speed.  (On 
+the Macintosh, hold down the Option key while pressing against 
+the edges of the screen to scroll faster.) 
+ 
+ 
+Controls: 
+	If you are using the keyboard to play Lemmings, move 
+the crosshairs with the following keys: 
+					   Q	Moves the pointer up 
+Moves the pointer left:  	O + P   Moves the pointer right 
+    					   A 	Moves the pointer down 
+(Replace above with diagram) 
+	The space bar is used in place of a left mouse button 
+click. 
+	The return key is used in place of a right mouse button 
+click. 
+ 
+	The skills on the Icon Panel may always be chosen with 
+the following function keys, regardless of which control device 
+you are using: 
+	F1 - Decrease the rate at which Lemmings appear 
+	F2 - Increase the rate at which Lemmings appear 
+	F3 - Climber 
+	F4 - Floater 
+	F5 - Bomber 
+	F6 - Blocker 
+	F7 - Bridge Builder 
+	F8 - Basher 
+	F9 - Miner 
+	F10- Digger 
+	F11 or Plus on numeric keypad - Pause the game 
+	F12 or Delete - Nuke all the Lemmings 
+	ESC - Escapes from the current level 
+ 
+	See the section titled "Lemmings Icons" for further 
+information on the icons. 
+ 
+Level Completion Screen: 
+ 
+	This screen comes up when you're done with a level, one 
+way or another!  At this point, the computer tallies up all the 
+lemmings that you were entrusted with, whether they are alive, 
+in lemming heaven, squished flat, or whatever.  Then, the 
+computer determines whether or not your performance as the 
+Lemmings saviour was good enough to allow you to go onto the 
+next level, and gives you an encouraging message. 
+ 
+Level Passwords: 
+	If your performance was good enough to continue onto 
+the next level, you will be given a level password.  These 
+passwords are always made up of letters, and always exactly 10 
+letters long.  Keep track of these, as they allow you to skip 
+directly back to the level where you left off, without having to 
+repeat all of the levels which you have already mastered.  These 
+are used when you select New Level from the Main Menu.  
+After you type in your password, you will be returned to the 
+main menu.  At this point, start the game by selecting the 
+appropriate icon, and you will begin where you left off. 
+	The passwords for Lemmings may vary from game 
+session to game session, however they always work to get you 
+back to the point where you left off. 
+	Remember:  After completing a level, you will be given 
+an access password to the next level, (i.e. Once you finish level 
+1 of a category, you will be given the access password to level 
+2.)  Also, once you complete Level 30 of a category, the next 
+level you will play is Level 1 of the next category up.  (For 
+instance, if you finish Level 30 of Fun, the next level which 
+comes up is Level 1 of Tricky.) 
+
+
+"Lem Live and Lem Die" 
+The Care and Feeding of Lemmings 
+ 
+	Lemmings, although very endearing, are not the brightest 
+creatures on the planet.  However, they are very inventive when 
+it comes to ways to do themselves in.  Your job, of course, is to 
+keep them from blundering into oblivion. 
+	Some of the things to look out for: 
+	Death Dives:	Lemmings will die if they fall from a 
+height greater than about 80 pixels, unless they have an 
+umbrella.  This works out to be about 2 inches on most 
+monitors.  (You'll get a good feel for the exact distance the 
+Lemmings can fall; usually around the time when you've just 
+about finished a level...and find out that one drop was just a tiny 
+bit too high for the little critters.) 
+	Consuming Energy:  Lemmings will die if they fall into 
+fire, acid or water.  Try to avoid this, even though it does makes 
+a neat sound. 
+	Traps:  Lemmings will die if they run into one of the 
+multitude of traps that exist in the Lemmings universe.  You'll 
+get to know these too.  Basically, anything that squishes, 
+squashes, splats, electrocutes, fries, stomps, chomps, or 
+otherwise folds, spindles, and mutilates Lemmings is bad for 
+their general well-being.  (And sometimes, very bad for your 
+hair and mental health, as well.) 
+	Miasma:  Lemmings will die if they fall off the screen 
+into whatever electronic miasma lies underneath the playing 
+screen. 
+	Pop!  Goes the Lemming:	Lemmings will die if you 
+blow them up.  They hate it when that happens. 
+
+
+Hints and Tips: 
+ 
+1.	If your solution seems too complex, look for a simpler 
+one (except in the higher levels, where the solution is 
+more difficult than it seems, and possibly even more so.) 
+ 
+2.	One way to keep lemmings from roaming around (aside 
+from the obvious two-blocker method) is to dig a hole 
+deep enough to trap them, and then making the digger 
+build so he doesn't dig himself off the screen. 
+ 
+3.	An obstacle with arrows on it may only be dug through 
+in the direction in which the arrows point.  For instance, 
+if a mountain's got arrows going from left to right on it, 
+a basher Lemming can only dig through from the left side 
+to the right side.  He won't be able to go in the other 
+direction. 
+ 
+4.	You can 'stretch' a bridge by waiting for the builder to 
+take a step or two before having him build again. 
+ 
+5.	Most of the time, you only need to focus your attention 
+on one Lemming at a time.  Of course, that doesn't mean 
+that multitasking isn't always useful... 
+ 
+6.	There is no tip number 6! 
+ 
+7.	When you are first faced with the gameplay screen, pause 
+the game and look over the entire level, planning your 
+strategy before starting to play. 
+ 
+8.	Lemmings are incredible contortionists, and can squeeze 
+through the most minuscule gaps.  This can be useful, 
+but it's more likely to be extremely annoying. 
+ 
+9.	When lemmings with different skills interact, strange and 
+wonderful things can happen.  Experiment!  You never 
+know what may happen... 
+ 
+10.	With the exception of the blocker, a lemming performing 
+a skill can be made to perform another.  This is also an 
+extremely useful fact. 
+ 
+11.	If the timing is tight on a certain level, try using the 
+keyboard to select the icons and the mouse to choose a 
+Lemming at the same time. 
+ 
+12.	Remember, the difference between a Lemming going 
+splat! and a Lemming walking away from a fall can be a 
+single pixel! 
+ 
+13.	If you can't blow up your blocker, you can always try 
+going 'around' him...Heh, heh, heh... 
+ 
+14.	Make sure you have plenty of refreshments and munchies 
+on hand...extended play can make you very hungry and 
+thirsty! 
+ 
+15.	Try not to play Lemmings for more than 20 hours at a 
+sitting.  Your eyes may begin to bug out slightly. 
+ 
+16.	If you are REALLY stuck on a level, completely and 
+totally, help is available!  The Lemmings Companion, 
+the authoritative reference manual on Lemmings is 
+available at your favorite bookstore or computer software 
+store! 
+
+
+Troubleshooting: 
+ 
+The following describes the most common problems experienced 
+by Lemmings owners.  Please consult this list before contacting 
+our technical support department. 
+ 
+MS-DOS Compatibles: 
+If Lemmings won't recognize your mouse: 
+	Make sure that you're loading your mouse driver before 
+starting Lemmings.  Otherwise, you may have a mouse driver 
+which is incompatible with Lemmings.  Consult the Installation 
+Instructions and your mouse documentation for further details.  
+You may need an updated mouse driver from your mouse 
+manufacturer. 
+ 
+If Lemmings just drops you back out to DOS after you run it, 
+with the message "Disk 1 not found": 
+	The Lemmings program is keydisk protected.  From time 
+to time, it will ask to access your original disk 1 for verification. 
+ 
+If Lemmings just drops you back out to DOS after you run it, 
+with the message "Insufficient Memory": 
+	Lemmings requires 490 K of free conventional DOS 
+memory to run (580K for full sound and music support).  If you 
+do not have enough conventional memory available, you will 
+receive the above message.  Under these conditions, create a 
+DOS boot disk which loads no device drivers or TSRs (besides 
+your mouse driver) which will boot your computer with the 
+maximum amount of memory free. 
+	Consult your DOS manual for further details. 
+ 
+If your AdLib, Soundblaster, Covox, Thunderboard sound 
+card does not play music: 
+	You probably need more free conventional memory.  See 
+paragraph regarding "Insufficient Free Memory". 
+ 
+If the game loads fine, but starts up and one Lemming 
+freezes as soon as it comes out of the trap door: 
+	Start the game with "LEMMINGS -t" to disable the 
+Tandy sound autodetection routine.  See installation instructions 
+for further details. 
+ 
+If the game freezes on the Machine Selection Screen: 
+	Start the program with the following command:  
+"LEMMINGS -n".  See installation instructions for further 
+details 
+ 
+If the game exhibits odd behavior of any sort while you're 
+running it on a Compaq or Leading Edge: 
+	Start the game with "LEMMINGS -t" to disable the 
+Tandy sound autodetection routine.  See installation instructions 
+for further details. 
+ 
+If the game refuses to acknowledge mouse button presses on 
+a PS/2: 
+	Lemmings contains a special mode for PS/2 computers to 
+take advantage of its architecture.  If you experience problems 
+with the mouse, try running the Lemmings program in the 
+standard "PC Compatible, Tandy" mode. 
+ 
+If the Icon Panel does not appear while running under 
+Windows. 
+	Lemmings will usually run as a full-screen DOS 
+Application under Windows 3.0, but under Windows 3.1, the 
+icons will disappear on certain computer configurations.  In 
+almost all cases, exiting Windows before running Lemmings will 
+resolve the problem. 
+ 
+Contacting Psygnosis Technical Support: 
+ 
+Before contacting Psygnosis Technical Support, please do the 
+following: 
+ 
+Check the obvious (e.g. loose connectors, speakers turned off, 
+etc.). 
+ 
+Have information about your computer readily available (e.g. 
+how much memory you have, which brand is it, what version of 
+DOS you're using, what type of mouse you have, etc.) 
+ 
+Have your game package and accessory materials readily 
+available, especially your manual and program disks. 
+ 
+Call from a phone near your computer, if possible. 
+ 
+Psygnosis, United States Technical Support 
+	(617) 497-7794
+
+Warranty Information: 
+ 
+	The disk(s) included with this product are guaranteed to 
+be in correct working order and free from all manifestations of 
+'VIRUS' code when they left our factory.  It is the purchaser's 
+responsibility to prevent infection of this product with a 
+'VIRUS' which will often cause the product to cease working.  
+Psygnosis, Ltd. will replace, free of charge, any disks which 
+have manufacturing or duplication defects within 30 days of 
+purchase.  These disks should be returned directly to Psygnosis,, 
+for immediate replacement.  Defective disks within thirty days 
+of original purchase should be accompanied by a photocopy of 
+the original receipt to be covered under the above warranty. 
+	Psygnosis Limited will in no way assume responsibility 
+or liability for 'VIRUS' damage.  If the disks have been 
+corrupted by a 'VIRUS' then please return the disk(s) only 
+directly to Psygnosis, Ltd., accompanied by $7.95 or £2.50 to 
+cover replacement, shipping, and handling costs.  When 
+returning damaged product, please return the DISKS ONLY to 
+Psygnosis. 
+	Psygnosis Limited makes no warranties, either expressed 
+or implied, with respect to the software described in this 
+manual, its quality, performance, merchantability or fitness for 
+any particular purpose.  This software is licensed "as is".  The 
+entire risk as to the quality of and performance of the software is 
+with the buyer.  In no event will Psygnosis Ltd. be liable for 
+direct, indirect, incidental or consequential damages resulting 
+from any defect in the software even if they have been advised 
+of the possibility of such damages.  Some states do not allow the 
+exclusion or limitation of implied warranties or liabilities for 
+incidental or consequential damages, so the above limitation may 
+not apply to you. 
+	Return defective and damaged disks to: 
+ 
+Psygnosis Limited 
+675 Mass. Ave.		South Harrington Building 
+Cambridge, MA 02139	Sefton Street 
+U.S.A.			Liverpool, United Kingdom  L3 4BQ 
+ 
+Phone:  (617) 497-7794	Phone:   051-709 5755 
+Fax:      (617) 497-6759	Fax:       051-709 6466 
+ 
+ 
+ 
+This Product is Copyrighted: 
+	Here at Psygnosis we're dedicated to bringing you the 
+best in computer entertainment.  Every game we publish 
+represents years of hard work aimed at raising the standard of 
+the games you play.  Please respect our efforts and remember 
+that copying software reduces the investment available for 
+producing new and original games.  It is also a criminal offense. 
+	Lemmings is protected by international copyright laws.  
+This product is licensed to you, the purchaser.  This license 
+permits you to read the program from its distribution medium 
+into the memory of the computer system for which this product 
+is specifically designed. 
+	Any other use or continuation of use, including copying, 
+duplicating, selling, renting, or otherwise distributing or 
+transmitting this product is a violation of license, unless 
+specifically authorized in writing from Psygnosis Limited. 
+ 
+To order: 
+ 
+In North America, call 1-800-GET-PSYG (1-800-438-7794) 
+In Europe, call +44 51 709 5755 
+ 
+

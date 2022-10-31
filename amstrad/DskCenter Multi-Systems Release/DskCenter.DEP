@@ -1,0 +1,161 @@
+[Version]
+Version=0.0.0.10
+
+[VB5FR.DLL <000C>]
+Register=
+Dest=$(WinSysPath)
+Date=3/10/1997
+Time=0:00:00
+Version=5.0.37.24
+CABFilename=VB5FR.cab
+CABDefaultURL=http://activex.microsoft.com/controls/vb5
+CABINFFile=VB5FR.inf
+CABRunFile=
+Uses1=
+
+[MSVBVM50.DLL <000C>]
+Register=$(DLLSelfRegister)
+Dest=$(WinSysPathSysFile)
+Date=8/23/2001
+Time=0:00:00
+Version=5.2.82.44
+CABFilename=MSVBVM50.cab
+CABDefaultURL=http://activex.microsoft.com/controls/vb5
+CABINFFile=MSVBVM50.inf
+CABRunFile=
+Uses1=
+
+[STDOLE2.TLB <000C>]
+Register=$(TLBRegister)
+Dest=$(WinSysPathSysFile)
+Date=3/10/1997
+Time=0:00:00
+Version=2.20.4054.1
+CABFilename=
+CABDefaultURL=
+CABINFFile=
+CABRunFile=
+Uses1=OleAut32.dll
+Uses2=OLEPRO32.DLL
+Uses3=AsycFilt.dll
+Uses4=
+
+[OLEAUT32.DLL <000C>]
+Register=$(DLLSelfRegister)
+Dest=$(WinSysPathSysFile)
+Date=3/10/1997
+Time=0:00:00
+Version=2.20.4054.1
+CABFilename=
+CABDefaultURL=
+CABINFFile=
+CABRunFile=
+Uses1=
+
+[OLEPRO32.DLL <000C>]
+Register=$(DLLSelfRegister)
+Dest=$(WinSysPathSysFile)
+Date=3/10/1997
+Time=0:00:00
+Version=5.0.4055.1
+CABFilename=
+CABDefaultURL=
+CABINFFile=
+CABRunFile=
+Uses1=
+
+[ASYCFILT.DLL <000C>]
+Register=
+Dest=$(WinSysPathSysFile)
+Date=3/10/1997
+Time=0:00:00
+Version=2.20.4056.1
+CABFilename=AsycFilt.cab
+CABDefaultURL=http://activex.microsoft.com/controls/vb5
+CABINFFile=AsycFilt.inf
+CABRunFile=
+Uses1=
+
+[CTL3D32.DLL <000C>]
+Register=
+Dest=$(WinSysPathSysFile)
+Date=3/10/1997
+Time=0:00:00
+Version=2.31.0.0
+CABFilename=
+CABDefaultURL=
+CABINFFile=
+CABRunFile=
+Uses1=
+
+[COMCAT.DLL <000C>]
+Register=$(DLLSelfRegister)
+Dest=$(WinSysPathSysFile)
+Date=3/10/1997
+Time=0:00:00
+Version=4.71.1441.1
+CABFilename=
+CABDefaultURL=
+CABINFFile=
+CABRunFile=
+Uses1=
+
+[SCRRUN.DLL <000C>]
+Register=
+Dest=$(WinSysPath)
+Date=1/14/2003
+Time=12:18:30
+Version=5.6.0.8515
+CABFilename=
+CABDefaultURL=
+CABINFFile=
+CABRunFile=
+Uses1=
+
+[MSCOMCTL.OCX <000C>]
+Register=$(DLLSelfRegister)
+Dest=$(WinSysPath)
+Date=3/13/2001
+Time=14:51:08
+Version=6.0.88.62
+CABFilename=
+CABDefaultURL=
+CABINFFile=
+CABRunFile=
+Uses1=
+
+[UNZIP32.DLL <000C>]
+Register=
+Dest=$(WinSysPath)
+Date=1/1/1997
+Time=2:52:42
+Version=5.5.2.0
+CABFilename=
+CABDefaultURL=
+CABINFFile=
+CABRunFile=
+Uses1=
+
+[DSKCENTER.EXE <000C>]
+Register=
+Dest=$(AppPath)
+Date=1/11/2006
+Time=9:21:56
+Version=0.0.0.10
+CABFilename= ; Si vous allez compresser ce fichier en fichier .cab, vous devez ajouter ici le nom de ce fichier.
+CABDefaultURL= ; Si vous avez spécifié un CABFileName, vous pouvez placer ici l'emplacement de l'URL, afin que les utilisateurs d'Internet puissent placer le fichier cab à télécharger.
+CABINFFile= ; Si vous avez spécifié un CABFileName qui traite un fichier INF, vous devriez placer ici le nom du fichier inf contenu dans le fichier cab. Ceci est ignoré si Run= clé est aussi présent
+CABRunFile= ; Si vous avez spécifié un CABFileName qui traite un fichier EXE, vous devriez placer ici le nom du fichier exe contenu dans le fichier cab. Ceci est prioritaire par rapport à InfFile= clé
+Uses1=VB5FR.dll
+Uses2=MSVBVM50.dll
+Uses3=StdOle2.tlb
+Uses4=OleAut32.dll
+Uses5=OLEPRO32.DLL
+Uses6=AsycFilt.dll
+Uses7=Ctl3d32.dll
+Uses8=ComCat.dll
+Uses9=scrrun.dll
+Uses10=MSCOMCTL.OCX
+Uses11=unzip32.dll
+Uses12=zip32.dll
+Uses13=

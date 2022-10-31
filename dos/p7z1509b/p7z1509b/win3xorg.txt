@@ -1,0 +1,26 @@
+ \ \      / (_)_ __ |___ /_  __  ___  _ __ __ _ 
+  \ \ /\ / /| | '_ \  |_ \ \/ / / _ \| '__/ _` |
+   \ V  V / | | | | |___) >  < | (_) | | | (_| |
+    \_/\_/  |_|_| |_|____/_/\_(_)___/|_|  \__, |
+                                          |___/ 
+
+Uploadé sur win3x.org... protection et sauvegarde du patrimoine informatique.
+blablabla, venez, c'est trop bien. 
+
+Fichier téléchargé sur http://win3x.org/win3board/index.php :
+
+p7z1509b.zip => 	Compacteur 7zip version 15.09b pour DOS
+			Langage : anglais
+
+---------------------------
+Informations sur la somme de contrôle
+---------------------------
+Fichiers: p7z1509b.zip
+Dossiers: 0
+Taille: 614902 octets
+Somme de contrôle des données A28F8E1D
+Somme de contrôle des données et des noms 664A3EB4
+SHA-256: BE2D576F5068C948A134CBE74837046E07B3E6290162B6A09E535F2966F5EC40
+---------------------------
+OK   
+---------------------------

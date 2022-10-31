@@ -1,0 +1,948 @@
+[dialog]
+    caption = "Installation de Microsoft Excel version 4.0"
+
+
+[data]*W
+    langpatch = 1036
+    1000Seperator = ~
+    defdir = C:\EXCEL
+    shortname = Microsoft Excel Install
+    alldesc = Install MS Excel for Windows
+    str001 =,,%0\MACROLIB\
+    str002 =,,%0\MACROLIB\SOLVEUR\
+    str004 =,,%0\MACROLIB\DIAPOS\
+    str005 =,,%0\MACROLIB\TABCROIS\
+    str006 =,,%0\QE\
+
+[data]
+    langpatch = 1036
+    1000Seperator = ~
+    defdir = C:\EXCEL
+    shortname = Microsoft Excel Install
+    alldesc = Install MS Excel for Windows
+    str001 = ,,%0\MACROLIB\
+    str002 = ,,%0\MACROLIB\SOLVEUR\
+    str004 = ,,%0\MACROLIB\DIAPOS\
+    str005 = ,,%0\MACROLIB\TABCROIS\
+    str006 = ,,%0\QE\
+
+[disks]
+        1 =.,          "Disque 1 (Installation)"
+        2 =.,          "Disque 2"
+        3 =.,          "Disque 3"
+        4 =.,          "Disque 4"
+        5 =.,          "Disque 5"
+
+
+[needed]
+    minspace = 524288
+
+[options]
+     app.excel,         "Microsoft Excel", 0, 6, progman.null, suboptions_excel, "Installer Excel:", "Excel..."
+     app.library,                  "Bibliothèque de macros", 0, 2, progman.null, suboptions_lib, "Installer les macros complémentaires:", "Bibliothèque..."
+     app.solver,          "Solveur de Microsoft Excel", 0, 6, progman.null
+     app.tutorial,          "Didacticiel de Microsoft Excel", 0, 2, progman.null
+     app.examples,          "Exemples", 0, 2, progman.null
+     app.de,          "Dialog Editor", 0, 2, progman.de
+     app.trans,          "Traducteur de macros", 0, 2, progman.null
+     app.qe,          "Q+E", 0, 2, progman.null, suboptions_qe, "Installer Q+E:", "Q+E..."
+
+[app.excel]
+     #set.xlapp
+     #set.addinmgr
+     #set.Checkup
+     #set.crosstab
+     #set.reports
+     #set.scenario
+     #set.views
+     #set.switch
+     #set.slides
+
+[user]
+g.kGE3dPrB9gMu6XjJx0UmG.bRpD5eOsAZhLv4WklrTf
+7WgffTs1M.Hkl77RYiKw2VlHzaSoE3dPrB9gMu6XFs?d
+
+[app.tutorial]
+     #set.cbt
+
+[app.de]
+     #set.de
+
+[app.trans]
+     #set.trans
+
+[app.library]
+     #set.addinfns
+     #set.altstart
+     #set.autosave
+     #set.flatfile
+     #set.glossary
+     #set.debug
+     #set.changer
+     #set.whatif
+     #set.audit
+     #set.compare
+     #set.summary
+     #set.color
+     #set.crosstab
+     #set.checkup
+
+[app.examples]
+     #set.examples
+
+[app.solver]
+     #set.solver
+     #set.solverex
+
+[app.qe]
+     #set.qeapp
+     #set.qedbase
+     #set.qexl
+     #set.qeoracle
+     #set.qerdb
+     #set.qesql
+     #set.qetxt
+
+[suboptions_excel]
+"Microsoft Excel", set.xlapp, 7,, progman.excel
+"Assistant Tableaux croisés", set.crosstab, 6
+"Checkup", set.checkup, 6
+"Diaporama", set.slides, 6
+"Fichier d'Aide", set.helpfile, 6
+"Gestionnaire de macros complémentaires", set.addinmgr, 6
+"Gestionnaire de rapports", set.reports, 6
+"Gestionnaire de scénarios", set.scenario, 6
+"Gestionnaire de vues", set.views, 6
+"Vérificateur d'orthographe", set.spelling, 70
+
+[suboptions_lib]
+"Audit de feuille de calcul", set.audit, 2
+"Comparaison de feuilles de calcul", set.compare, 2
+"Débogueur de macros", set.debug, 2
+"Exportation de fichiers texte", set.flatfile, 2
+"Fonctions macro complémentaire", set.addinfns, 2
+"Glossaire d'abréviations", set.glossary, 2
+"Palettes personnalisées", set.color, 2
+"Passage à d'autres applications", set.switch, 2
+"Renommer noms", set.changer, 2
+"Répertoire de démarrage supplémentaire", set.altstart, 2
+"Sauvegarde automatique", set.autosave, 2
+"Simulation", set.whatif, 2
+"Synthèse de feuille de calcul", set.summary, 2
+
+[suboptions_qe]
+"Q+E", set.qeapp, 50,, progman.qe
+"dBASE", set.qedbase, 2
+"Excel", set.qexl, 2
+"Oracle", set.qeoracle, 2
+"Rdb", set.qerdb, 2
+"SQL_Server", set.qesql, 2
+"Texte", set.qetxt, 2
+
+[set.xlapp]*U
+      #set.reg
+      #set.winini
+      #set.commdlg
+      #set.shell
+      #set.fonts
+      #set.xl4ini
+      #set.server
+     +1,"bbRegCard"
+     +4,"bbAnalysis"
+      1:EXCEL.EXE, EXE, 0:, 0, 1, 2796032, "Microsoft Excel"
+      1:XLCALL.DL$, DLL, 0:, 0, 1, 2048, "DLL du langage C"
+      1:LISEZMOI.TX$, TXT, 0:, 0, 1, 11327, "Fichier LISEZMOI"
+      1:RESEAU.TX$, TXT, 0:, 0, 1, 23732, "Instructions pour l'installation réseau"
+      1:CNF2INI.EX$, EXE, 0:, 0, 1, 23725, "Support Lotus 1-2-3"
+      1:XLOUVRIR\NOEXIST.XXX, XXX,0:XLOUVRIR, 0, 8, 0, "Création du répertoire XLOUVRIR"
+      4:MACROLIB\FICHFNCT.DL$, DLL, 0:MACROLIB, 0, 1, 8255, "DLL des macros complémentaires"
+      4:MACROLIB\FICHFNCT.XL$, XLA, 0:MACROLIB, 0, 1, 20413, "Macro complémentaire FICHFNCT.XLA"
+      4:MACROLIB\TABCROIS\CROISFNC.XL$, XLA, 0:MACROLIB\TABCROIS, 0, 1, 3096, "Macro complémentaire CROISFNC.XLA"
+    @P1,"Microsoft Excel", "Open", "/F %s005CROISFNC.XLA", 16
+      1:EXCELINI.TX$, TXT, 0:, 0, 1, 12962, "Information concernant EXCEL4.INI"
+
+[set.xlapp]
+      #set.reg
+      #set.winini
+      #set.commdlg
+      #set.shell
+      #set.fonts
+      #set.xl4ini
+      #set.server
+     +1,"bbRegCard"
+     +2,"bbInstant"
+     +4,"bbAnalysis"
+      1:EXCEL41.EX$, EXE, 0:, 2, 1, 2796032, "Microsoft Excel"
+      2:EXCEL42.EX$, EXE, 0:, 1, 1, 0, "Microsoft Excel"
+      1:LISEZMOI.TX$, TXT, 0:, 0, 1, 11327, "Fichier LISEZMOI"
+      1:RESEAU.TX$, TXT, 0:, 0, 1, 23732, "Instructions pour l'installation réseau"
+      1:XLCALL.DL$, DLL, 0:, 0, 1, 2048, "DLL du langage C"
+      1:CNF2INI.EX$, EXE, 0:, 0, 1, 23725, "Support Lotus 1-2-3"
+      1:XLOUVRIR\NOEXIST.XXX, XXX,0:XLOUVRIR, 0, 8, 0, "Création du répertoire XLOUVRIR"
+      4:MACROLIB\FICHFNCT.DL$, DLL, 0:MACROLIB, 0, 1, 8255, "DLL des macros complémentaires"
+      4:MACROLIB\FICHFNCT.XL$, XLA, 0:MACROLIB, 0, 1, 20413, "Macro complémentaire FICHFNCT.XLA"
+      4:MACROLIB\TABCROIS\CROISFNC.XL$, XLA, 0:MACROLIB\TABCROIS, 0, 1, 3096, "Macro complémentaire CROISFNC.XLA"
+    @P1,"Microsoft Excel", "Open", "/F %s005CROISFNC.XLA", 16
+      1:EXCELINI.TX$, TXT, 0:, 0, 1, 12962, "Information concernant EXCEL4.INI"
+
+[set.server]*S
+     +1,"bbRegCard"
+      1:INSTALL.EX$, EXE, 0:, 0, 1, 156960, "Install"
+      1:EXCEL.IN$, INF, 0:, 0, 1, 37380
+      1:DIALOG.FO$,  FON,0:,0,1,15680,"Polices Dialog Editor"
+      1:DLL\VER.DL$,   DLL,0:,0,4,18414
+
+[set.addinmgr]
+    @P1,"Init Commands", "addinmgr", "1, Options, Macros comp&lémentaires...,'%s001ADDINMGR.XLA'!STUB,----,,Ajouter modifier ou retirer des macros complémentaires,EXCELHLP.HLP!1707"
+    +4,"bbAnalysis"
+     4:MACROLIB\ADDINMGR.XL$, XLA, 0:MACROLIB, 0, 1, 97996, "Macro complémentaire ADDINMGR.XLA"
+
+[set.checkup]
+     +4,"bbAnalysis"
+     4:MACROLIB\CHECKUP\CHECKUP.DL$, DLL, 0:MACROLIB\CHECKUP, 0, 1, 5632, "DLL du Checkup"
+     4:MACROLIB\CHECKUP\CHECKUP.XL$, XLM, 0:MACROLIB\CHECKUP, 0, 1, 30644, "Configuration du Checkup"
+
+[set.crosstab]
+    @P1,"Microsoft Excel", "Open", "%s005TABCROIS.XLL", 16
+     +4,"bbAnalysis"
+     4:MACROLIB\TABCROIS\TABCROIS.XL$, XLL, 0:MACROLIB\TABCROIS, 0, 1, 650528, "Assistant Tableaux croisés"
+     4:MACROLIB\TABCROIS\CROISTMP.XL$, XLT, 0:MACROLIB\TABCROIS, 0, 1, 1477, "Modèle Tableaux croisés"
+
+[set.reports]
+    @P1,"Init Commands", "rapports", "1, Fichier, Imprimer &un rapport...,'%s001RAPPORTS.XLA'!STUB,---,,Imprime ou définit un rapport,EXCELHLP.HLP!1731"
+    @P1,"Microsoft Excel", "Open", "/F %s001RAPPORTS.XLA", 16
+     +4,"bbAnalysis"
+     4:MACROLIB\RAPPORTS.XL$, XLA, 0:MACROLIB, 0, 1, 79993, "Macro complémentaire RAPPORTS.XLA"
+
+[set.scenario]
+    @P1,"Init Commands", "scenario", "1, Sélection, &Gestionnaire de scénarios...,'%s001SCENARIO.XLA'!STUB,,,Crée et examine des scénarios de simulation,EXCELHLP.HLP!1733"
+    @P1,"Microsoft Excel", "Open", "/F %s001SCENARIO.XLA", 16
+     +4,"bbAnalysis"
+     4:MACROLIB\SCENARIO.XL$, XLA, 0:MACROLIB, 0, 1, 154025, "Macro complémentaire SCENARIO.XLA"
+
+[set.views]
+    @P1,"Init Commands", "vues", "1, Ecran, V&ues...,'%s001VUES.XLA'!STUB,-,,Affiche ou définit une vue nommée,EXCELHLP.HLP!1730"
+    @P1,"Microsoft Excel", "Open", "/F %s001VUES.XLA", 16
+     +4,"bbAnalysis"
+     4:MACROLIB\VUES.XL$, XLA, 0:MACROLIB, 0, 1, 72384, "Macro complémentaire VUES.XLA"
+
+[set.switch]
+     +4,"bbAnalysis"
+     4:MACROLIB\BASCULER.XL$, XLA, 0:MACROLIB, 0, 1, 22282, "Macro complémentaire BASCULER.XLA"
+     4:MACROLIB\BASCVERS.XL$, XLA, 0:MACROLIB, 0, 1, 9421, "Macro complémentaire BASCVERS.XLA"
+
+[set.helpfile]
+     +1,"bbRegCard"
+     +3,"bbRequests"
+     #set.helpapp
+     3:EXCELHLP.HL$,HLP, 0:, 0, 1, 1414824, "Fichier d'Aide Excel"
+     1:PSS.HL$, HLP, 0:, 0, 1, 58453, "Fichier d'Aide du support produit"
+
+[set.helpapp]*S
+     +3,"bbRequests"
+     3:WINHELP.EX$, EXE, w:, 0, 1, 257824, "Aide pour Windows"
+     3:WINHELP.HL$, HLP, w:, 0, 1, 43215, "Fichier d'Aide pour Windows"
+
+[set.helpapp]@30a0
+     +3,"bbRequests"
+     3:WINHELP.EX$, EXE, w:, 0, 1, 257824, "Aide pour Windows"
+     3:WINHELP.HL$, HLP, w:, 0, 1, 43215, "Fichier d'Aide pour Windows"
+
+[set.commdlg]*S
+     +1,"bbRegCard"
+     1:DLL\COMMDLG.DL$, DLL, o:, 0, 1, 89920, "DLL des dialogues système"
+
+[set.commdlg]*W
+     5:DLL\COMMDLG.DL$, DLL, o:, 0, 193, 89920, "DLL des dialogues système"
+
+[set.commdlg]
+     +1,"bbRegCard"
+     1:DLL\COMMDLG.DL$, DLL, o:, 0, 129, 89920, "DLL des dialogues système"
+
+[set.shell]*S
+     +1,"bbRegCard"
+     1:DLL\SHELL.DL$, DLL, o:, 0, 1, 40960, "DLL d'incorporation"
+
+[set.shell]@30A0*W
+     5:DLL\SHELL.DL$, DLL, o:, 0, 193, 40960, "DLL d'incorporation"
+
+[set.shell]@30A0
+     +1,"bbRegCard"
+     1:DLL\SHELL.DL$, DLL, o:, 0, 129, 40960, "DLL d'incorporation"
+
+[set.custdic]*W
+     @P1, "Spell Checker", "Custom Dict 1", "%m\PROOF\DICOPER.DIC", 1
+     5:DICOPER.DI$, DIC, m:PROOF, 0, 68, 0, "Dictionnaire personnalisé"
+
+[set.custdic]
+     @P1, "Spell Checker", "Custom Dict 1", "%m\PROOF\DICOPER.DIC"
+     +5,"bbLearn"
+     5:DICOPER.DI$, DIC, m:PROOF, 0, 4, 0, "Dictionnaire personnalisé"
+
+[set.spelling]*W
+     #set.spellamerica
+     #set.spellbrittish
+     #set.custdic
+     5:MSSPELL.DL$, DLL, m:PROOF, 0, 65, 76800, "Vérificateur d'orthographe"
+
+[set.spelling]
+     #set.spellamerica
+     #set.spellbrittish
+     #set.custdic
+     +5,"bbLearn"
+     5:MSSPELL.DL$, DLL, m:PROOF, 0, 1, 76800, "Vérificateur d'orthographe"
+
+[set.spellamerica]!1*W
+     @, "MS Proofing Tools", "Spelling 1036,0", "%m\PROOF\MSSPELL.DLL,%m\PROOF\MSSP_FR.LEX", 1
+     @P1,"Spell Checker", "Speller", "Spelling 1036,0"
+     5:MSSP_FR.LE$, LEX, m:PROOF, 0, 65, 290925, "Vérificateur d'orthographe français"
+
+[set.spellbrittish]!0*W
+     @, "MS Proofing Tools", "Spelling 3084,0", "%m\PROOF\MSSPELL.DLL,%m\PROOF\MSSP_FC.LEX", 1
+     @P1,"Spell Checker", "Speller", "Spelling 3084,0"
+     5:MSSP_FC.LE$, LEX, m:PROOF, 0, 65, 266968, "Vérificateur d'orthographe canadien français"
+
+[set.spellamerica]!1
+     +5,"bbLearn"
+     @, "MS Proofing Tools", "Spelling 1036,0", "%m\PROOF\MSSPELL.DLL,%m\PROOF\MSSP_FR.LEX"
+     @P1,"Spell Checker", "Speller", "Spelling 1036,0"
+     5:MSSP_FR.LE$, LEX, m:PROOF, 0, 1, 290925, "Vérificateur d'orthographe français"
+
+[set.spellbrittish]!0
+     +5,"bbLearn"
+     @, "MS Proofing Tools", "Spelling 3084,0", "%m\PROOF\MSSPELL.DLL,%m\PROOF\MSSP_FC.LEX"
+     @P1,"Spell Checker", "Speller", "Spelling 3084,0"
+     5:MSSP_FC.LE$, LEX, m:PROOF, 0, 1, 266968, "Vérificateur d'orthographe canadien français"
+
+[set.fonts]*S
+     +3,"bbRequests"
+     3:SMALLB.FO$, FON, o:, 0, 1, 14848, "Polices d'écran"
+     3:SMALLE.FO$, FON, o:, 0, 1, 18432, "Polices d'écran"
+     3:SMALLF.FO$, FON, o:, 0, 1, 20992, "Polices d'écran"
+
+[set.fonts]@30A0%E*W
+     @,"fonts", "Small Fonts (EGA res)", "SMALLB.FON"
+     5:SMALLB.FO$, FON, o:, 0, 321, 14848, "Polices d'écran"
+     @S, SMALLB.FON
+
+[set.fonts]@30A0%V*W
+     @,"fonts", "Small Fonts (VGA res)", "SMALLE.FON"
+     5:SMALLE.FO$, FON, o:, 0, 321, 18432, "Polices d'écran"
+     @S, SMALLE.FON
+
+[set.fonts]@30A0%8*W
+     @,"fonts", "Small Fonts (8514/A res)", "SMALLF.FON"
+     5:SMALLF.FO$, FON, o:, 0, 321, 20992, "Polices d'écran"
+     @S, SMALLF.FON
+
+[set.fonts]@30A0%E
+     @,"fonts", "Small Fonts (EGA res)", "SMALLB.FON"
+     +3,"bbRequests"
+     3:SMALLB.FO$, FON, o:, 0, 257, 14848, "Polices d'écran"
+     @S, SMALLB.FON
+
+[set.fonts]@30A0%V
+     @,"fonts", "Small Fonts (VGA res)", "SMALLE.FON"
+     +3,"bbRequests"
+     3:SMALLE.FO$, FON, o:, 0, 257, 18432, "Polices d'écran"
+     @S, SMALLE.FON
+
+[set.fonts]@30A0%8
+     @,"fonts", "Small Fonts (8514/A res)", "SMALLF.FON"
+     +3,"bbRequests"
+     3:SMALLF.FO$, FON, o:, 0, 257, 20992, "Polices d'écran"
+     @S, SMALLF.FON
+
+[set.CBT]
+    @P1,"Microsoft Excel", "Basics", "0"
+     +2,"bbInstant"
+     2:EXCELCBT\EXOTIQUE.FM$,  FMT, 0:EXCELCBT, 0, 1, 701, "Classeur du Didacticiel"
+     2:EXCELCBT\QUINCAIL.FM$,  FMT, 0:EXCELCBT, 0, 1, 531, "Classeur du Didacticiel"
+     2:EXCELCBT\PLAN.FM$,  FMT, 0:EXCELCBT, 0, 1, 560, "Classeur du Didacticiel"
+     2:EXCELCBT\ZOOM2000.XL$, XLW, 0:EXCELCBT, 0, 1, 8866, "Classeur du Didacticiel"
+     2:EXCELCBT\EVASION2.XL$, XLW, 0:EXCELCBT, 0, 1, 19073, "Classeur du Didacticiel"
+     2:EXCELCBT\CBTLIB3.DL$, DLL, 0:EXCELCBT, 0, 1, 16608, "Classeur du Didacticiel"
+     2:EXCELCBT\ALSACE.XL$, XLW, 0:EXCELCBT, 0, 1, 13195, "Classeur du Didacticiel"
+     2:EXCELCBT\DIVISION.XL$, XLW, 0:EXCELCBT, 0, 1, 36188, "Classeur du Didacticiel"
+     2:EXCELCBT\EXCELCBT.CB$, CBT, 0:EXCELCBT, 0, 1, 116624, "Didacticiel"
+     2:EXCELCBT\EXCELLES.CB$, CBT, 0:EXCELCBT, 0, 1, 470877, "Didacticiel"
+     2:EXCELCBT\EXOTIQUE.WK$,  WK1, 0:EXCELCBT, 0, 1, 1508, "Fichier exemple du Didacticiel"
+     2:EXCELCBT\EXPORTS.XL$, XLW, 0:EXCELCBT, 0, 1, 23885, "Classeur du Didacticiel"
+     2:EXCELCBT\QUINCAIL.WK$, WK1, 0:EXCELCBT, 0, 1, 859, "Fichier exemple du Didacticiel"
+     2:EXCELCBT\PHOTOS.XL$, XLW, 0:EXCELCBT, 0, 1, 12249, "Classeur du Didacticiel"
+     2:EXCELCBT\VENTES.XL$,  XLW, 0:EXCELCBT, 0, 1, 39376, "Classeur du Didacticiel"
+     2:EXCELCBT\REPVENTE.XL$, XLW, 0:EXCELCBT, 0, 1, 8353, "Classeur du Didacticiel"
+     2:EXCELCBT\PLAN.WK$, WK1, 0:EXCELCBT, 0, 1, 1091, "Classeur du Didacticiel"
+     2:EXCELCBT\TOPOGRAP.XL$,  XLW, 0:EXCELCBT, 0, 1, 18976, "Classeur du Didacticiel"
+     2:EXCELCBT\OUTILS.XL$,  XLW, 0:EXCELCBT, 0, 1, 3055, "Classeur du Didacticiel"
+     2:EXCELCBT\CLIENSUD.XL$, XLW, 0:EXCELCBT, 0, 1, 20586, "Classeur du Didacticiel"
+     2:EXCELCBT\XLBASICS.CB$,  CBT, 0:EXCELCBT, 0, 1, 166364, "Didacticiel d'apprentissage de Microsoft Excel"
+     2:EXCELCBT\EVASION.XL$,  XLW, 0:EXCELCBT, 0, 1, 8032, "Classeur du Didacticiel"
+
+[set.de]
+     +4,"bbAnalysis"
+     4:EXCELDE.EX$, EXE, 0:, 0, 1, 95664, "Dialog Editor"
+
+[set.examples]
+     +4,"bbAnalysis"
+     4:EXEMPLES\AMORTISS.XL$, XLS, 0:EXEMPLES, 0, 1, 12515, "Exemple d'une table d'amortissement"
+     4:EXEMPLES\FACTURE.XL$, XLT, 0:EXEMPLES, 0, 1, 6125, "Modèle de facture"
+     4:EXEMPLES\RENTABIL.XL$, XLS, 0:EXEMPLES, 0, 1, 10854, "Feuille de calcul d'une analyse de rentabilité"
+     4:EXEMPLES\BUDGET.XL$, XLS, 0:EXEMPLES, 0, 1, 24706, "Feuille de calcul d'une gestion de budget"
+     4:EXEMPLES\BILVENTE.XL$, XLW, 0:EXEMPLES, 0, 1, 33390, "Classeur d'un suivi de vente"
+     4:EXEMPLES\STRUCTM.XL$, XLT, 0:EXEMPLES, 0, 1, 16666, "Modèle de macro structurée"
+
+[set.solverex]
+     +4,"bbAnalysis"
+     4:EXEMPLES\SOLVEUR\EXEMPLE.XL$, XLM, 0:EXEMPLES\SOLVEUR, 0, 1, 4516, "Macro exemple pour le solveur"
+     4:EXEMPLES\SOLVEUR\SOLVGRA.XL$, XLC, 0:EXEMPLES\SOLVEUR, 0, 1, 2057, "Graphique exemple pour le solveur"
+     4:EXEMPLES\SOLVEUR\SOLVEUR1.XL$, XLS, 0:EXEMPLES\SOLVEUR, 0, 1, 5516, "Feuille de calcul exemple pour le solveur"
+     4:EXEMPLES\SOLVEUR\SOLVEUR2.XL$, XLS, 0:EXEMPLES\SOLVEUR, 0, 1, 6065, "Feuille de calcul exemple pour le solveur"
+     4:EXEMPLES\SOLVEUR\SOLVEUR3.XL$, XLS, 0:EXEMPLES\SOLVEUR, 0, 1, 6834, "Feuille de calcul exemple pour le solveur"
+     4:EXEMPLES\SOLVEUR\SOLVEUR4.XL$, XLS, 0:EXEMPLES\SOLVEUR, 0, 1, 6731, "Feuille de calcul exemple pour le solveur"
+     4:EXEMPLES\SOLVEUR\SOLVEUR5.XL$, XLS, 0:EXEMPLES\SOLVEUR, 0, 1, 7196, "Feuille de calcul exemple pour le solveur"
+     4:EXEMPLES\SOLVEUR\SOLVEUR6.XL$, XLS, 0:EXEMPLES\SOLVEUR, 0, 1, 6236, "Feuille de calcul exemple pour le solveur"
+     4:EXEMPLES\SOLVEUR\SOLVEREX.XL$, XLS, 0:EXEMPLES\SOLVEUR, 0, 1, 7155, "Feuille de calcul exemple pour le solveur"
+
+[set.addinfns]
+     +4,"bbAnalysis"
+     4:MACROLIB\ADDINFNS.XL$, XLA, 0:MACROLIB, 0, 1, 11227, "Macro complémentaire ADDINFNS.XLA"
+
+[set.altstart]
+     +4,"bbAnalysis"
+     4:MACROLIB\REPINIT.XL$, XLA, 0:MACROLIB, 0, 1, 6174, "Macro complémentaire REPINIT.XLA"
+
+[set.autosave]
+     +4,"bbAnalysis"
+     4:MACROLIB\AUTOSAUV.XL$, XLA, 0:MACROLIB, 0, 1, 17823, "Macro complémentaire AUTOSAUV.XLA"
+
+[set.flatfile]
+     +4,"bbAnalysis"
+     4:MACROLIB\EXPORT.XL$, XLA, 0:MACROLIB, 0, 1, 21895, "Macro complémentaire EXPORTS.XLA"
+
+[set.glossary]
+     +4,"bbAnalysis"
+     4:MACROLIB\GLOSSAIR.XL$, XLA, 0:MACROLIB, 0, 1, 29506, "Macro complémentaire GLOSSAIR.XLA"
+
+[set.debug]
+     +4,"bbAnalysis"
+     4:MACROLIB\DEBOGUE.XL$, XLA, 0:MACROLIB, 0, 1, 45583, "Macro complémentaire DEBOGUE.XLA"
+
+[set.changer]
+     +4,"bbAnalysis"
+     4:MACROLIB\RENOMME.XL$, XLA, 0:MACROLIB, 0, 1, 17071, "Macro complémentaire RENOMME.XLA"
+
+[set.whatif]
+     +4,"bbAnalysis"
+     4:MACROLIB\SIMUL.XL$, XLA, 0:MACROLIB, 0, 1, 23551, "Macro complémentaire SIMUL.XLA"
+
+[set.audit]
+     +4,"bbAnalysis"
+     4:MACROLIB\AUDIT.XL$, XLA, 0:MACROLIB, 0, 1, 61927, "Macro complémentaire AUDIT.XLA"
+
+[set.compare]
+     +4,"bbAnalysis"
+     4:MACROLIB\COMPARE.XL$, XLA, 0:MACROLIB, 0, 1, 13786, "Macro complémentaire COMPARE.XLA"
+
+[set.summary]
+     +4,"bbAnalysis"
+     4:MACROLIB\SYNTHESE.XL$, XLA, 0:MACROLIB, 0, 1, 13917, "Macro complémentaire SYNTHESE.XLA"
+
+[set.solver]
+     @P1,"Init Commands", "solver", "1, Sélection, Solve&ur...,'%s002SOLVER.XLA'!STUB,,,Trouve la solution optimale à un modèle,EXCELHLP.HLP!1830"
+     @P1,"Microsoft Excel", "Open", "/F %s002SOLVER.XLA", 16
+     +4,"bbAnalysis"
+     4:MACROLIB\SOLVEUR\SOLVER.DL$, DLL, 0:MACROLIB\SOLVEUR, 0, 1, 109995, "DLL du Solveur"
+     4:MACROLIB\SOLVEUR\SOLVER.XL$, XLA, 0:MACROLIB\SOLVEUR, 0, 1, 144053, "Macro complémentaire SOLVEUR.XLA"
+     4:MACROLIB\SOLVEUR\SOLVREP.XL$, XLA, 0:MACROLIB\SOLVEUR, 0, 1, 42787, "Macro complémentaire SOLVREP.XLA"
+
+[set.color]
+     +4,"bbAnalysis"
+     4:MACROLIB\COULEUR\AUTOMNE.XL$, XLS, 0:MACROLIB\COULEUR, 0, 1, 2163, "Palette de couleurs Automne"
+     4:MACROLIB\COULEUR\NOIRBLNC.XL$, XLS, 0:MACROLIB\COULEUR, 0, 1, 2128, "Palette de couleurs Noir et blanc"
+     4:MACROLIB\COULEUR\BLEUROUG.XL$, XLS, 0:MACROLIB\COULEUR, 0, 1, 2163, "Palette de couleurs Bleus-rouges"
+     4:MACROLIB\COULEUR\BLEUS.XL$, XLS, 0:MACROLIB\COULEUR, 0, 1, 2163, "Palette de couleurs Bleus"
+     4:MACROLIB\COULEUR\DEFAUT.XL$, XLS, 0:MACROLIB\COULEUR, 0, 1, 2189, "Palette de couleurs par défaut"
+     4:MACROLIB\COULEUR\OBSCUR.XL$, XLS, 0:MACROLIB\COULEUR, 0, 1, 2163, "Palette de couleurs obscures"
+     4:MACROLIB\COULEUR\PALETTES.XL$, XLA, 0:MACROLIB\COULEUR, 0, 1, 19454, "Macro complémentaire PALETTES.XLA"
+     4:MACROLIB\COULEUR\PASTEL.XL$, XLS, 0:MACROLIB\COULEUR, 0, 1, 2163, "Palette de couleurs Pastels"
+     4:MACROLIB\COULEUR\ARCNCIEL.XL$, XLS, 0:MACROLIB\COULEUR, 0, 1, 2163, "Palette de couleurs Arc-en-ciel"
+     4:MACROLIB\COULEUR\ROUGES.XL$, XLS, 0:MACROLIB\COULEUR, 0, 1, 2163, "Palette de couleurs Rouges"
+     4:MACROLIB\COULEUR\ETE.XL$, XLS, 0:MACROLIB\COULEUR, 0, 1, 2163, "Palette de couleurs Eté"
+     4:MACROLIB\COULEUR\COUCHANT.XL$, XLS, 0:MACROLIB\COULEUR, 0, 1, 2163, "Palette de couleurs Soleil couchant"
+     4:MACROLIB\COULEUR\PERSO1.XL$, XLS, 0:MACROLIB\COULEUR, 0, 1, 2189, "Palette de couleurs personnalisées"
+     4:MACROLIB\COULEUR\PERSO2.XL$, XLS, 0:MACROLIB\COULEUR, 0, 1, 2189, "Palette de couleurs personnalisées"
+     4:MACROLIB\COULEUR\HIVER.XL$, XLS, 0:MACROLIB\COULEUR, 0, 1, 2163, "Palette de couleurs Hiver"
+     4:MACROLIB\COULEUR\JAUNVERT.XL$, XLS, 0:MACROLIB\COULEUR, 0, 1, 2163, "Palette de couleurs Jaunes-verts"
+
+
+[set.slides]*U
+    @P1,"Microsoft Excel", "Open", "/F %s004DIAPOS.XLT", 16
+     +4,"bbAnalysis"
+     4:MACROLIB\DIAPOS\XLDIAPOS.XLA, XLA, 0:MACROLIB\DIAPOS, 0, 1, 118486, "Macro complémentaire XLDIAPOS.XLA"
+     4:MACROLIB\DIAPOS\DIAPOS.XLT, XLT, 0:MACROLIB\DIAPOS, 0, 1, 6069, "Modèle Diaporama"
+     4:MACROLIB\DIAPOS\XLDIAPOS.DL$, DLL, 0:MACROLIB\DIAPOS, 0, 1, 44640, "DLL du Diaporama"
+
+[set.slides]
+    @P1,"Microsoft Excel", "Open", "/F %s004DIAPOS.XLT", 16
+     +4,"bbAnalysis"
+     4:MACROLIB\DIAPOS\XLDIAPOS.XL$, XLA, 0:MACROLIB\DIAPOS, 0, 1, 118486, "Macro complémentaire XLDIAPOS.XLA"
+     4:MACROLIB\DIAPOS\DIAPOS.XL$, XLT, 0:MACROLIB\DIAPOS, 0, 1, 6069, "Modèle Diaporama"
+     4:MACROLIB\DIAPOS\XLDIAPOS.DL$, DLL, 0:MACROLIB\DIAPOS, 0, 1, 44640, "DLL du Diaporama"
+
+[set.trans]
+     +3,"bbRequests"
+     3:TRANS.EX$, EXE, 0:, 0, 1, 167072, "Traducteur de macro"
+     3:TRANSMP.XL$, XLM, 0:, 0, 1, 19708, "Traducteur de macro Multiplan"
+     3:TRANS123.XL$, XLM, 0:, 0, 1, 21713, "Traducteur de macro Lotus 1-2-3"
+
+[set.qeapp]*U
+     #set.qexl4ini
+     #set.qeini
+     +1,"bbRegCard"
+     +5,"bbLearn"
+     5:QE.EX$, EXE, 0:, 0, 1, 372544, "Q+E"
+     5:QE.HL$, HLP, 0:, 0, 1, 59113, "Fichier d'Aide de Q+E"
+     1:LISEZQE.TX$, TXT, 0:, 0, 1, 7039, "Information concernant Q+E"
+     5:QE\ADRESSE.DB$, DBF, 0:QE, 0, 1, 640, "Fichier exemple de Q+E"
+     5:DBNMP3.DL$, DLL, 0:, 0, 1, 8017, "Fichier exemple de Q+E"
+     5:QE\SERVICE.DB$, DBF, 0:QE, 0, 1, 292, "Fichier exemple de Q+E"
+     5:QE\EMPLOYE.CS$, CSV, 0:QE, 0, 1, 684, "Fichier exemple de Q+E"
+     5:QE\EMPLOYE.DB$, DBF, 0:QE, 0, 1, 1070, "Fichier exemple de Q+E"
+     5:QE\EMPLOYE.DB$, DBT, 0:QE, 0, 1, 1646, "Fichier exemple de Q+E"
+     5:QE\EMPLOYE.TX$, TXT, 0:QE, 0, 1, 689, "Fichier exemple de Q+E"
+     5:QE\EMPLOYE.XL$, XLS, 0:QE, 0, 1, 2710, "Fichier exemple de Q+E"
+     5:QE\EMPSERV.ND$, NDX, 0:QE, 0, 1, 1024, "Fichier exemple de Q+E"
+     5:QE\EMPEMB.ND$, NDX, 0:QE, 0, 1, 1024, "Fichier exemple de Q+E"
+     5:QE\EMPNOM.ND$, NDX, 0:QE, 0, 1, 1024, "Fichier exemple de Q+E"
+     5:QE\LOC.DB$, DBF, 0:QE, 0, 1, 217, "Fichier exemple de Q+E"
+     5:QE\QE.XL$, XLA, 0:QE, 0, 1, 123223, "Macro complémentaire QE.XLA"
+     5:QEXLA.DL$, DLL, 0:, 0, 1, 10240, "DLL de Q+E"
+
+[set.qeapp]
+     #set.qexl4ini
+     #set.qeini
+     +1,"bbRegCard"
+     +5,"bbLearn"
+     5:QE.EX$, EXE, 0:, 0, 1, 372544, "Q+E"
+     5:QE.HL$, HLP, 0:, 0, 1, 59113, "Fichier d'Aide de Q+E"
+     1:LISEZQE.TX$, TXT, 0:, 0, 1, 7039, "Information concernant Q+E"
+     5:QE\ADRESSE.DB$, DBF, 0:QE, 0, 1, 640, "Fichier exemple de Q+E"
+     5:DBNMP3.DL$, DLL, 0:, 0, 1, 8017, "Fichier exemple de Q+E"
+     5:QE\SERVICE.DB$, DBF, 0:QE, 0, 1, 292, "Fichier exemple de Q+E"
+     5:QE\EMPLOYE.CS$, CSV, 0:QE, 0, 1, 684, "Fichier exemple de Q+E"
+     5:QE\EMPLOYE.DB$, DBF, 0:QE, 0, 1, 1070, "Fichier exemple de Q+E"
+     5:QE\EMPLOYE2.DB$, DBT, 0:QE, 0, 1, 1646, "Fichier exemple de Q+E"
+     5:QE\EMPLOYE.TX$, TXT, 0:QE, 0, 1, 689, "Fichier exemple de Q+E"
+     5:QE\EMPLOYE.XL$, XLS, 0:QE, 0, 1, 2710, "Fichier exemple de Q+E"
+     5:QE\EMPSERV.ND$, NDX, 0:QE, 0, 1, 1024, "Fichier exemple de Q+E"
+     5:QE\EMPEMB.ND$, NDX, 0:QE, 0, 1, 1024, "Fichier exemple de Q+E"
+     5:QE\EMPNOM.ND$, NDX, 0:QE, 0, 1, 1024, "Fichier exemple de Q+E"
+     5:QE\LOC.DB$, DBF, 0:QE, 0, 1, 217, "Fichier exemple de Q+E"
+     5:QE\QE.XL$, XLA, 0:QE, 0, 1, 123223, "Macro complémentaire QE.XLA"
+     5:QEXLA.DL$, DLL, 0:, 0, 1, 10240, "DLL de Q+E"
+
+[set.qedbase]
+    @P2,"SQLCONNECT", "dBASE", "QEDBF"
+    @P2,"QEDBF", "Extension", "DBF"
+    @P2,"QEDBF", "IndexExtension", "NDX,MDX"
+    @P2,"Q+E", "NoLogon", "dBASE", 32
+     +5,"bbLearn"
+     5:QEDBF.DL$, DLL, 0:, 0, 1, 118208, "Gestionnaire dBASE de Q+E"
+
+[set.qexl]
+    @P2,"SQLCONNECT", "Excel", "QEXLS"
+    @P2,"QEXLS", "Extension", "XLS"
+    @P2,"Q+E", "NoLogon", "Excel", 32
+     +5,"bbLearn"
+     5:QEXLS.DL$, DLL, 0:, 0, 1, 88368, "Gestionnaire Excel de Q+E"
+
+[set.qeoracle]
+    @P2,"SQLCONNECT", "Oracle", "QEORA"
+    @P2,"QEORA", "ServerName", ""
+     +5,"bbLearn"
+     5:QEORA.DL$, DLL, 0:, 0, 1, 61952, "Gestionnaire Oracle de Q+E"
+     5:ORA6WIN.DL$, DLL, 0:, 0, 1, 235767, "Gestionnaire Oracle de Q+E"
+
+[set.qerdb]
+    @P2,"SQLCONNECT", "Rdb", "QERDB"
+    @P2,"QERDB", "ServerName", ""
+     +5,"bbLearn"
+     5:QERDB.DL$, DLL, 0:, 0, 1, 51200, "Gestionnaire Rdb de Q+E"
+     5:SQSAPIW.DL$, DLL, 0:, 0, 1, 51712, "Gestionnaire Rdb de Q+E"
+
+[set.qesql]
+    @P2,"SQLCONNECT", "SQL_Server", "QESS"
+    @P2,"QESS", "ServerName", ""
+     +5,"bbLearn"
+     5:QESS.DL$, DLL, 0:, 0, 1, 35472, "Gestionnaire SQL serveur de Q+E"
+     5:W3DBLIB.DL$, DLL, 0:, 0, 1, 130736, "Gestionnaire SQL serveur de Q+E"
+
+[set.qetxt]
+    @P2,"SQLCONNECT", "Texte", "QETXT"
+    @P2,"QETXT", "Extension", "CSV"
+    @P2,"Q+E", "NoLogon", "Texte", 32
+     +5,"bbLearn"
+     5:QETXT.DL$, DLL, 0:, 0, 1, 89984, "Gestionnaire texte de Q+E"
+
+[set.xl4ini]
+    @P1,"Microsoft Excel", "Comment", "Cette section stocke les paramètres généraux de Microsoft Excel."
+    @P1,"Microsoft Excel", "Comment", "Les lignes open=/f ajoutent des fonctions personnalisées dans la liste Coller une fonction."
+    @P1,"Microsoft Excel", "Options", "87"
+    @P1,"Microsoft Excel", "Basics", "1"
+    @P1,"Init Commands", "Comment", "Cette section ajoute des commandes aux menus d'Excel."
+    @P1,"Init Commands", "Syntax", "numéro_barre_menu,nom menu,nom commande,macro,position,touche,texte de status,référence d'aide"
+    @P1,"WK? Settings", "Comment", "Cette section controle les paramètres d'ouverture et d'enregistrement des fichiers Lotus."
+    @P1,"WK? Settings", "WYSIWYG_Save", "1"
+    @P1,"WK? Settings", "Load_Chart_Wnd", "1"
+    @P1,"WK? Settings", "AFE", "2"
+    @P1,"WK? Settings", "Monospace", "1"
+    @P1,"WK? Settings", "Gridlines", "0"
+    @P1,"Line Print", "Comment", "Cette section controle les paramètres d'impression des macros Lotus."
+    @P1,"Line Print", "Options", "2"
+    @P1,"Line Print", "LeftMarg", "4"
+    @P1,"Line Print", "RightMarg", "76"
+    @P1,"Line Print", "TopMarg", "2"
+    @P1,"Line Print", "BotMarg", "2"
+    @P1,"Line Print", "PgLen", "66"
+    @P1,"Line Print", "Setup", ""
+
+[set.qeini]
+    @P2,"Q+E", "Maximized", "0"
+    @P2,"Q+E", "AsciiOem", "0"
+
+[lotushelp]
+    @P1,"Microsoft Excel", "Options3", "6"
+
+[nolotushelp]
+    @P1,"Microsoft Excel", "Options3", "0"
+
+[qestart]
+    @P1,"Delete Commands", "Comment", "Cette section supprime des commandes des menus de Microsoft Excel. Ces spécifications sont exécutées avant la section [Init Commands]."
+    @P1,"Delete Commands", "Syntax", "menu bar,menu name, command name"
+    @P1,"Delete Commands", "QE", "1,Données,Grille..."
+    @P1,"Delete Commands", "QE1", "1,Données,Rechercher"
+    @P1,"Delete Commands", "QE2", "1,Données,Extraire..."
+    @P1,"Delete Commands", "QE3", "1,Données,Supprimer"
+    @P1,"Delete Commands", "QE4", "1,Données,Base de données"
+    @P1,"Init Commands", "QE", "1,Données,&Grille...,'%s006qe.xla'!db.form,1,,Recherche modifie ou supprime des fiches de la base de données,excelhlp.hlp!1760"
+    @P1,"Init Commands", "QE1", "1,Données,&Rechercher,'%s006qe.xla'!db.find,Zone de critères,,Sélectionne la 1ère fiche correspondante,excelhlp.hlp!1761"
+    @P1,"Init Commands", "QE2", "1,Données,&Extraire...,'%s006qe.xla'!db.extract?,Zone de critères,,Copie les fiches correspondantes dans les cellules,excelhlp.hlp!1762"
+    @P1,"Init Commands", "QE3", "1,Données,&Supprimer,'%s006qe.xla'!db.delete?,Zone de critères,,Supprime les fiches correspondantes de la base de données,excelhlp.hlp!1763"
+    @P1,"Init Commands", "QE4", "1,Données,&Base de données...,'%s006qe.xla'!db.set.database?,Zone de critères,,Définit une base de données interne ou externe,excelhlp.hlp!1764"
+    @P1,"Init Commands", "QE5", "1,Données,Coller les &noms des champs...,'%s006qe.xla'!db.paste.fieldnames?,9,,Colle le nom des champs des bases de données définies,excelhlp.hlp!1765"
+    @P1,"Init Commands", "QE6", "1,Données,Interrogation S&QL...,'%s006qe.xla'!db.sql.query?,10,,Exécute des instructions SQL,excelhlp.hlp!1766"
+    @P1,"Init Commands", "QE7", "1,Données,-,'%s006qe.xla'!-,,,-,-
+    @P1,"Init Commands", "QE8", "1,Données,Acti&ver Q+E,'%s006qe.xla'!db.activate,,,Bascule vers l'application Q+E,excelhlp.hlp!1767"
+    @P1,"Microsoft Excel", "Open", "/F %s006QE.XLA", 16
+
+
+[set.winini]
+    @, "Extensions", "xla", "%0\EXCEL.EXE ^.xla"
+    @, "Extensions", "xlb", "%0\EXCEL.EXE ^.xlb"
+    @, "Extensions", "xlc", "%0\EXCEL.EXE ^.xlc"
+    @, "Extensions", "xll", "%0\EXCEL.EXE ^.xll"
+    @, "Extensions", "xlm", "%0\EXCEL.EXE ^.xlm"
+    @, "Extensions", "xls", "%0\EXCEL.EXE ^.xls"
+    @, "Extensions", "xlt", "%0\EXCEL.EXE ^.xlt"
+    @, "Extensions", "xlw", "%0\EXCEL.EXE ^.xlw"
+    @, "Embedding", "ExcelMacroSheet", "Macro Microsoft Excel,Macro Microsoft Excel, %0\EXCEL.EXE, picture"
+    @, "Embedding", "ExcelChart", "Graphique Microsoft Excel,Graphique Microsoft Excel, %0\EXCEL.EXE, picture"
+    @, "Embedding", "ExcelWorksheet", "Feuille de calcul Microsoft Excel,Feuille de calcul Microsoft Excel, %0\EXCEL.EXE, picture"
+
+[set.reg]
+    !, ".xla" , "ExcelMacroSheet"
+    !, ".xlb" , "ExcelMacroSheet"
+    !, ".xlc" , "ExcelChart"
+    !, ".xll" , "ExcelMacroSheet"
+    !, ".xlm" , "ExcelMacroSheet"
+    !, ".xls" , "ExcelWorksheet"
+    !, ".xlt" , "ExcelWorksheet"
+    !, ".xlw" , "ExcelWorksheet"
+
+    !, "ExcelMacroSheet" , "Feuille macro Microsoft Excel"
+    !, "ExcelMacroSheet\shell\print\ddeexec" , "[open(#034%%1#034)][print?()][close()]"
+    !, "ExcelMacroSheet\shell\print\ddeexec\ifexec" , "[open(#034%%1#034)][print?()][quit()]"
+    !, "ExcelMacroSheet\shell\print\ddeexec\application" , "Excel"
+    !, "ExcelMacroSheet\shell\print\ddeexec\topic" , "System"
+    !, "ExcelMacroSheet\shell\print\command" , "%0\EXCEL.EXE -e"
+    !, "ExcelMacroSheet\shell\open\ddeexec" , "[open(#034%%1#034)]"
+    !, "ExcelMacroSheet\shell\open\ddeexec\application" , "Excel"
+    !, "ExcelMacroSheet\shell\open\ddeexec\topic" , "System"
+    !, "ExcelMacroSheet\shell\open\command" , "%0\EXCEL.EXE -e"
+    !, "ExcelMacroSheet\protocol\StdFileEditing\server" , "%0\EXCEL.EXE"
+
+    !, "ExcelWorksheet" , "Feuille de calcul Microsoft Excel"
+    !, "ExcelWorksheet\shell\print\ddeexec" , "[open(#034%%1#034)][print?()][close()]"
+    !, "ExcelWorksheet\shell\print\ddeexec\ifexec" , "[open(#034%%1#034)][print?()][quit()]"
+    !, "ExcelWorksheet\shell\print\ddeexec\application" , "Excel"
+    !, "ExcelWorksheet\shell\print\ddeexec\topic" , "System"
+    !, "ExcelWorkSheet\shell\print\command" , "%0\EXCEL.EXE -e"
+    !, "ExcelWorksheet\shell\open\ddeexec" , "[open(#034%%1#034)]"
+    !, "ExcelWorksheet\shell\open\ddeexec\application" , "Excel"
+    !, "ExcelWorksheet\shell\open\ddeexec\topic" , "System"
+    !, "ExcelWorksheet\shell\open\command" , "%0\EXCEL.EXE -e"
+    !, "ExcelWorksheet\protocol\StdFileEditing\server" , "%0\EXCEL.EXE"
+
+    !, "ExcelChart" , "Graphique Microsoft Excel"
+    !, "ExcelChart\shell\print\ddeexec" , "[open(#034%%1#034)][print?()][close()]"
+    !, "ExcelChart\shell\print\ddeexec\ifexec" , "[open(#034%%1#034)][print?()][quit()]"
+    !, "ExcelChart\shell\print\ddeexec\application" , "Excel"
+    !, "ExcelChart\shell\print\ddeexec\topic" , "System"
+    !, "ExcelChart\shell\print\command" , "%0\EXCEL.EXE -e"
+    !, "ExcelChart\shell\open\ddeexec" , "[open(#034%%1#034)]"
+    !, "ExcelChart\shell\open\ddeexec\application" , "Excel"
+    !, "ExcelChart\shell\open\ddeexec\topic" , "System"
+    !, "ExcelChart\shell\open\command" , "%0\EXCEL.EXE -e"
+    !, "ExcelChart\protocol\StdFileEditing\server" , "%0\EXCEL.EXE"
+
+[cleansect]
+    0:XLOUVRIR\SOLVEUR\solver.xla,,^
+    0:XLOUVRIR\SOLVEUR\report.xla,,^
+    0:XLOUVRIR\SOLVEUR\solver.exe,,^
+    0:SOLVEX\EXEMPLE.XLC,,^
+    0:SOLVEX\EXEMPLE.XLM,,^
+    0:SOLVEX\EXEMPLE.XLS,,^
+    0:SOLVEX\EXEMPLE.XLW,,^
+    0:SOLVEX\SOLVEUR1.XLS,,^
+    0:SOLVEX\SOLVEUR2.XLS,,^
+    0:SOLVEX\SOLVEUR3.XLS,,^
+    0:SOLVEX\SOLVEUR4.XLS,,^
+    0:SOLVEX\SOLVEUR5.XLS,,^
+    0:SOLVEX\SOLVEUR6.XLS,,^
+    0:XLOUVRIR\MACRO-QE\QE.XLA,,^
+    0:XLOUVRIR\QE.XLA,,^
+    0:EXCELCBT\budget91\ventes.wk1,,^
+    0:EXCELCBT\zoom2000.xls,,^
+    0:EXCELCBT\immatric.xls,,^
+    0:EXCELCBT\evasion.xls,,^
+    0:EXCELCBT\angers.xls,,^
+    0:EXCELCBT\lecongra.xlm,,^
+    0:EXCELCBT\utilgrap.xlw,,^
+    0:EXCELCBT\graphes.xlw,,^
+    0:EXCELCBT\alsace.xlm,,^
+    0:EXCELCBT\alsace.xls,,^
+    0:EXCELCBT\excelcbt.dll,,^
+    0:EXCELCBT\exports.xls,,^
+    0:EXCELCBT\saumur.xls,,^
+    0:EXCELCBT\finantr3.wk1,,^
+    0:EXCELCBT\notes.xlm,,^
+    0:EXCELCBT\notes.xls,,^
+    0:EXCELCBT\poids.xls,,^
+    0:EXCELCBT\intro.xlm,,^
+    0:EXCELCBT\intro.xls,,^
+    0:EXCELCBT\intro.xlw,,^
+    0:EXCELCBT\lien1.xls,,^
+    0:EXCELCBT\lien2.xls,,^
+    0:EXCELCBT\macro1.xlm,,^
+    0:EXCELCBT\utilmac.xlw,,^
+    0:EXCELCBT\nouvimma.xls,,^
+    0:EXCELCBT\evasion.xlc,,^
+    0:EXCELCBT\evasion2.xlc,,^
+    0:EXCELCBT\aleatoir.xlm,,^
+    0:EXCELCBT\ventereg.xls,,^
+    0:EXCELCBT\revenus.wk3,,^
+    0:EXCELCBT\roussel.xls,,^
+    0:EXCELCBT\ventes.wk1,,^
+    0:EXCELCBT\ventetr1.wks,,^
+    0:EXCELCBT\vendeurs.xls,,^
+    0:EXCELCBT\totvente.xls,,^
+    0:EXCELCBT\graphpas.xlm,,^
+    0:EXCELCBT\graphpas.xlw,,^
+    0:EXCELCBT\macropas.xlw,,^
+    0:EXCELCBT\valesco.xls,,^
+    0:EXCELCBT\cliensud.xlm,,^
+    0:EXCELCBT\cliensud.xls,,^
+    0:EXCELCBT\pressud.xls,,^
+    0:EXCELCBT\ventesud.xls,,^
+    0:EXCELCBT\excel.xlw,,^
+    0:MACROLIB\FORMULES.XLS,,^
+    0:MACROLIB\FORMULES.XLA,,^
+    0:MACROLIB\BIBLIFIC.XLA,,^
+    0:MACROLIB\FONCTION.XLA,,^
+    0:MACROLIB\TABLEAUX.XLS,,^
+    0:MACROLIB\TABLEAUX.XLA,,^
+    0:MACROLIB\ECRAN.XLA,,^
+    0:MACROLIB\PRESENT.XLA,,^
+    0:MACROLIB\PRINTMGR.XLA,,^
+    0:MACROLIB\IMPRIMBD.XLA,,^
+    0:PREV.FON,,^
+
+[init-file]@30A0
+    1:DLL\VER.DL$,   DLL,o:,0,129,18414
+    1:DLL\SHELL.DL$, DLL,o:,0,129,40960
+
+[progman.excel]
+    icon.excel, "Microsoft Excel 4.0"
+    icon.readme, "Microsoft Excel 4.0"
+    icon.network, "Microsoft Excel 4.0"
+
+[progman.de]
+    Icon.de, "Microsoft Excel 4.0"
+
+[progman.qe]
+    Icon.qe, "Microsoft Excel 4.0"
+
+[progman.null]
+
+[icon.excel]
+    "Microsoft Excel", excel.exe
+
+[icon.qe]
+    "Q+E", qe.exe
+
+[icon.de]
+    "Dialog Editor", excelde.exe
+
+[icon.readme]
+    "lisezmoi.txt", lisezmoi.txt
+
+[icon.network]
+    "reseau.txt", reseau.txt
+
+[wash]
+0,0,255, 0,0,50, 128, 1024
+
+[wphelp]
+yes
+
+[fTwoDicts]
+"France","Canada (French)"
+
+[bbRegCard]
+@xa,4
+@ya,2
+waiting
+@xb, 3
+@ya,3
+"     C'est maintenant le moment idéal pour remplir", 0, 2
+"     votre carte de garantie. Vous bénéficierez", 0, 2
+"     alors des services Microsoft:", 0, 2
+""
+"         ·    un support technique téléphonique."
+@y,2
+"         ·    un abonnement à Horizons, la revue"
+"              des utilisateurs."
+@y,2
+"         ·    une information prioritaire sur les offres de"
+"              mise à jour dès la sortie d'une nouvelle version."
+
+[bbInstant]
+@ya,2
+@xa,4
+"Microsoft Excel est encore plus facile à utiliser.", 0, 2
+@y,2
+@ys
+mouse
+@xb,3
+@yr
+@y,2
+"Affichage des commandes les plus courantes en cliquant"
+"sur le bouton droit de la souris."
+@xa,4
+@yr
+@yb,2
+@ys
+copycell
+@xb,3
+@yr
+@y,2
+"Déplacement et copie des cellules en faisant"
+"simplement glisser votre souris."
+@xa,4
+@yr
+@yb,2
+@ys
+dragfill
+@xb,3
+@yr
+@y,2
+"Création des séries de nombres ou d'étiquettes en faisant"
+"glisser la poignée de recopie."
+
+[bbRequests]
+@xa,4
+@ya,2
+"A votre demande, nous avons ajouté de nouvelles caractéristiques:", 0, 2
+""
+@ys
+zoomin
+@yr
+@xb,3
+zoomout
+@xb,3
+@yr
+@y,2
+"Visualisation de l'ensemble du document par un zoom arrière"
+"et visualisation des détails par un zoom avant."
+@xa,4
+@yr
+@yb,3
+@ys
+spell
+@xb,3
+@yr
+@y,2
+"Vérification de l'orthographe de vos documents."
+@xa,4
+@yr
+@yb,3
+@ys
+autofmt
+@xb,3
+@yr
+"Création de listes et de tables d'aspect professionnel"
+"en une seule étape avec le Format automatique."
+
+[bbLearn]
+@ya,2
+@xa,4
+"L'apprentissage de Microsoft Excel est facile et amusant.", 0, 2
+@ys
+tutorial
+@xb,3
+@yr
+@y,2
+"Le didacticiel Présentation de Microsoft Excel vous montre"
+"les nouvelles fonctionnalités."
+@xa,4
+@yr
+@yb,1
+@ys
+search
+@xb,3
+@yr
+@y,2
+"La recherche des informations est rapide"
+"en utilisant la commande Aide Rechercher."
+@xa,4
+@yr
+@yb,1
+@ys
+help
+@xb,3
+@yr
+@y,2
+"L'outil Aide vous permet d'obtenir rapidement de l'aide"
+"sur les éléments que vous sélectionnez."
+
+
+[bbAnalysis]
+@ya,2
+@xa,4
+"De nouveaux outils vous permettent de traiter", 0, 2
+"vos données avec encore plus d'efficacité.", 0, 2
+
+""
+@ys
+@y,2
+analysis
+@xb,3
+@yr
+@y,2
+"La possibilité d'examiner et stocker des combinaisons"
+"de variables à l'aide du Gestionnaire de scénarios."
+""
+""
+"L'exploration des relations entre les données à l'aide"
+"de l'Assistant Tableaux croisés."

@@ -1,0 +1,18 @@
+ \ \      / (_)_ __ |___ /_  __  ___  _ __ __ _ 
+  \ \ /\ / /| | '_ \  |_ \ \/ / / _ \| '__/ _` |
+   \ V  V / | | | | |___) >  < | (_) | | | (_| |
+    \_/\_/  |_|_| |_|____/_/\_(_)___/|_|  \__, |
+                                          |___/ 
+
+Downloaded from Win3x.Org, for the preservation of digital heritage.
+To get another abandonwares, visit our website : www.win3x.org !
+
+File details : msexcel20_35.7z => Microsoft Excel 2.0 (720 KB 3.5" floppy disks)
+Documentation Disk 1.ima (SHA-256) : 00C709C3BE41AAF42286C00D40E3191FD75F3632105E94D5FCE8969990454D17
+Documentation Disk 2.ima (SHA-256) : 4BB24A6CA8D1E206B5892BB32D502B187CFD5C6FF4C70CC9EAF7BFD314B6B5CC
+Fonts Disk.ima (SHA-256) : 0B3DBB39B0436FF71F167383FAFE1D68ACAEB0DBA5B55D574B0DAA0E9673FFFC
+Library Disk.ima (SHA-256) : D9F931DBC3855337AD4D7592CF1199481F72AE17D001375B1CC083E8179D0779
+Program Disk.ima (SHA-256) : 2DA1D1233D907E26A82E5E0BB5074CC0F71E0720A7036853C421B463649C48BB
+Setup Disk.ima (SHA-256) : 3A5BEF6C742EACF8668C8B6B5D9001ABB73259BE8BD3B73E9A241E97B3E29C3F
+Utilities Disk.ima (SHA-256) : 44E1CE1E98EC2579C397844C2FCD2D884A68C49910126DCA550443E518B30324
+Uploaded by Big Monstro, initially provided by tarlabnor

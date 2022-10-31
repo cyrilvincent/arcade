@@ -1,0 +1,22 @@
+[COM2]
+=0
+Comm Port=2
+Modem attached?=Yes
+Phone line attached?=Yes
+Modem type=Unknown
+Max fax send=Unknown
+Max fax receive=Unknown
+Chip type=Unknown
+Model=Unknown
+Revision=Unknown
+Manufacturer ID=Voice    E.C.  Version : T
+Max data rate=19200
+ATI0=\r\nNO CARRIER\r\n
+ATI1=
+ATI2=
+ATI3=
+ATI4=
+ATI5=ATI5\r\n\r\nMODEM CHIP : ROCKWELL RCV288DPi\r\n\r\nFAX CLASS 1 AND CLASS 2 + VOICE\r\n\r\nOK\r\n
+ATI6=
+ATI7=
+AT&V=

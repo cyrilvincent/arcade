@@ -1,0 +1,96 @@
+
+AdapterId 07FFAh
+
+AdapterName "Iomega PC4B/50 SCSI Host Adapter Board"
+
+NumBytes 4
+
+FixedResources            pos[0]=00XXXXXXb   pos[1]=X11XXXXXb
+
+
+NamedItem
+  Prompt "I/O Address Select"
+      choice "240"        pos[0]=XXXX001Xb   io 00240h-0025Fh
+      choice "340"        pos[0]=XXXX010Xb   io 00340h-0035Fh
+      choice "400"        pos[0]=XXXX011Xb   io 00400h-0041Fh
+      choice "420"        pos[0]=XXXX100Xb   io 00420h-0043Fh
+      choice "3240"       pos[0]=XXXX101Xb   io 03240h-0325Fh
+      choice "8240"       pos[0]=XXXX110Xb   io 08240h-0825Fh
+      choice "A240"       pos[0]=XXXX111Xb   io 0A240h-0A25Fh
+      choice "Disabled"   pos[0]=XXXX000Xb
+  Help
+"You may set the PC4 adapter to any one of the I/O Addresses
+listed.  The first choice is recommended.  Make your selection
+by using the F5=Previous or the F6=Next keys.  If your selection
+conflicts with an I/O address already assigned in your system,
+it will be marked with an asterisk and you must select an
+alternate address."
+
+
+NamedItem
+  Prompt "DMA Level Select"
+      choice "DMA Level 5"    pos[1]=1XXX0101b   arb 5
+      choice "DMA Level 6"    pos[1]=1XXX0110b   arb 6
+      choice "DMA Level 7"    pos[1]=1XXX0111b   arb 7
+      choice "DMA Disabled"   pos[1]=0XXX0000b
+  Help
+"The PC4 supports the direct memory access (DMA) mode of data
+transfer.  Most operating systems require this option to be
+enabled.  Each DMA level has a corresponding priority level;
+the lower the DMA level, the higher the corresponding priority.
+You may select any one of the DMA levels listed by using the
+F5=Previous or the F6=Next keys.  We recommend you select the
+first level listed, DMA level 5.  If your selection conflicts
+with a DMA level already assigned in the system, it will be
+marked with an asterisk and you must select an alternative level."
+
+
+NamedItem
+  Prompt "Fairness"
+      choice "Fairness Enabled"    pos[1]=XXX1XXXXb
+      choice "Fairness Disabled"   pos[1]=XXX0XXXXb
+  Help
+"If 'Fairness' is enabled, the PC4 adapter will not compete for
+the channel during the next arbitration phase if it is currently
+in control of the channel.  This allows other installed adapters
+to obtain the channel in the next sequence based on each adapter's
+assigned priority level.  When 'Fairness' is disabled, the adapter
+will compete for every arbitration phase and will obtain more than
+its fair share of channel usage.  We recommend you use 'Fairness 
+Enabled' for all adapters.  Select this option using the F5=Previous
+and the F6=Next keys."
+
+
+NamedItem
+  Prompt "IRQ level"
+      choice "IRQ 7"               pos[0]=XX10XXXXb pos[2]=1XXXXXXXb int 7
+      choice "IRQ 5"               pos[0]=XX01XXXXb pos[2]=1XXXXXXXb int 5
+      choice "IRQ 3"               pos[0]=XX00XXXXb pos[2]=1XXXXXXXb int 3
+      choice "IRQ 9"               pos[0]=XX11XXXXb pos[2]=1XXXXXXXb int 9
+      choice "IRQ Disabled"                         pos[2]=0XXXXXXXb
+  Help
+"Operation with multi-tasking operating systems may require the
+use of an IRQ signal when the PC4 requires processor service.
+No other adapter may be assigned the same IRQ level as the PC4.
+For DOS-only systems, this option may be disabled.  Choices are:
+IRQ 3, 5, 7, 9, or Disabled.  Select this option using the
+F5=Previous and the F6=Next keys."
+
+
+NamedItem
+  Prompt "Memory Address Select"
+      choice "Disabled"    pos[3]=XXXXX000b 
+      choice "D400"        pos[3]=XXXXX111b mem 0d4000h-0d5fffh
+      choice "D200"        pos[3]=XXXXX110b mem 0d2000h-0d3fffh
+      choice "D000"        pos[3]=XXXXX101b mem 0d0000h-0d1fffh
+      choice "CE00"        pos[3]=XXXXX100b mem 0ce000h-0cffffh
+      choice "CC00"        pos[3]=XXXXX011b mem 0cc000h-0cdfffh
+      choice "CA00"        pos[3]=XXXXX010b mem 0ca000h-0cbfffh
+      choice "C800"        pos[3]=XXXXX001b mem 0c8000h-0c9fffh
+  Help
+"You may set the PC4 adapter to any one of the Memory Addresses
+listed.  The first choice is recommended for systems with a fixed
+disk installed.  Make your selection by using the F5=Previous or
+the F6=Next keys.  If your selection conflicts with an memory
+address already assigned in your system, it will be marked with
+an asterisk and you must select an alternate address."

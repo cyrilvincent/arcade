@@ -1,0 +1,213 @@
+       Documentation for "Worst-Operating-System Floppy Disk Copy" (wfdcopy) v1.02
+       ------------------------------------------------------------
+
+Copyright (c) 2000-2004, Hervé PARISSI <hparissi@laposte.net>
+
+http://sourceforge.net/project/?group_id=8584
+http://sourceforge.net/projects/wfdcopy/
+
+-----------------------------------------------------------------------------
+
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program; if not, write to the Free Software
+ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+
+-----------------------------------------------------------------------------
+
+1) LICENSE
+----------
+
+wfdcopy is available under the terms of the GNU General Public License.
+See the file "COPYING" that is included in the distribution for details.
+
+2) OVERVIEW
+-----------
+
+wfdcopy is a floppy disk image maker for the Worst-Operating-System, its main
+purpose is to read floppy disks into image-files but it can be used to write
+them back or to copy a disk (be warned that these features aren't working fine,
+see below).
+
+I wrote it mainly to convert floppy disks into image-files for use in emulators,
+especially Atari ST emulators (that why the filename extension is ".st" by
+default).
+
+It should read any Atari ST and PC disks, including "overformatted" ST disks.
+
+Warning: if you have something else than a *real* 3"1/2 1.44Mb floppy drive
+then your drive is not supported and wfdcopy may not work properly.
+
+wfdcopy works under any 32-bit version of Worst-Operating-System.
+
+Requirements:
+- Any PC running the Worst-Operating-System (including i386 : I've tested it)
+- 8 Mb RAM
+- a 3"1/2 floppy drive
+- some hard-disk space (2 Mb should be enough)
+
+Read Section 7 if you want to compile the sources.
+
+3) USAGE
+--------
+
+Launch wfdcopy.exe, you should see a window with a big box splitted in several
+parts: it's the progression bar.
+The higher half corresponds to the 1st side of the disk, the lower part to the
+2nd side, the little bars corresponds to each tracks.
+
+There are 5 pushbuttons: "Disk-to-file", "File-to-disk", "Copy", "About" and
+"Exit" (which turns into "Cancel" while reading/writing/copying).
+
+It's a good idea to put the floppy disk in the drive *before* pressing
+"Disk-to-file" and "Copy" (it's good too to do so before "File-to-disk") since
+the program will access the floppy to read its 1st sector.
+
+3a) "Disk-to-file"
+-----------------
+
+The most advanced feature of this program! ;-)
+
+It begins by reading the boot sector (1st sector of the disk) to find out the
+disk geometry (number of sides, tracks, sectors/tracks). You'll see an error
+message "Insert floppy disk" if you didn't put a disk into the drive.
+You should see an error like "disk changed (floppy)" too, you can ignore it
+and go on.
+You may have a Abort-Retry-Ignore Error message, that means wfdcopy didn't
+read the boot sector correctly. Choosing "Abort" aborts the whole operation,
+choosing "Retry" makes wfdcopy re-read the boot sector, and "Ignore"
+makes wfdcopy ignore the error and go on (be warned that, then, the disk
+geometry may be wrong).
+
+Then you see the "Floppy parameters" dialog box (see below, section 4)
+You shouldn't have to change anything unless you know what you're doing.
+
+Then the program asks you for a file where the read disk will be put so you
+will need as much disk-space as the size of the floppy to hold it.
+Note: don't try to put the file on the floppy, it's surely not big enough ;-)
+and it's really no good idea (but you're free... just do not complain)
+
+After that, the read process should begin, you will see the progression in the,
+well, progression bar (see below, section 6, for the meaning of the colors).
+
+3b) "File-to-disk"
+------------------
+
+Just the opposite of "Disk-to-file", it asks for a file then tries to figure
+out the disk geometry from the 1st 512 bytes (boot-sector) of the file then
+asks you for "Floppy parameters" (see below, section 4).
+The file should be a valid floppy disk image or else you'll end up with a
+strange disk (but if you know what you're doing, you can put any file on a
+floppy disk, just like under unices).
+
+Since formatting doesn't work well (or at all), you should use a floppy disk
+already formatted with the *same* geometry as the source disk.
+
+3c) "Copy"
+----------
+
+It's just a combination of "Disk-to-file" and "File-to-disk", using a temporary
+file (so you will need enough disk-space in your temporary folder to hold the
+disk).
+
+3d) "About"
+-----------
+
+Well, a "nice" about dialog box...
+
+3e) "Exit"
+----------
+
+Are you surprised if I tell you that you can press this to exit wfdcopy ?
+Well, Alt+F4 or pressing the 'X' box will do the same !
+
+3f) "Cancel"
+------------
+
+While in operation, the "Exit" button turns into a "Cancel" button, so it just
+cancels any operation ("Disk-to-file", "File-to-disk", "Copy") straightforward.
+For instance, if you were reading a disk, you will have an unfinished file,
+likewise, if you were writing a disk, you will have an unfinished disk (that's
+quite more annoying...)
+
+4) "Floppy parameters" dialog-box
+---------------------------------
+
+4a) "Tracks"
+    tracks/side (should be between 80 and 85)
+
+4b) "Sectors"
+    sectors/tracks (should be between 9 to 12 for 720k disk, 18 to 21 for 1.44M
+	disks)
+
+4c) "Heads"
+    sides/disk (1 or 2)
+
+4d) "Attempts"
+    number of read/format/write attempts before considering an error (see
+	below, section 5) (should be at least 3)
+
+4e) "Slow Mode (sector mode)"
+    by default, wfdcopy reads/writes the disk track-by-track, if checked,
+	wfdcopy	reads/writes the disk sector-by-sector which is slower but safer
+	since if there's a bad sector in a track and this option is not checked,
+	the whole track is marked as bad
+
+4f) "Auto-Ignore errors"
+    if unchecked any errors will be submited for an "Abort/Retry/Ignore"
+	message-box, if checked any errors will be ignored
+
+4g) "Format floppy" ("File-to-disk" and "Copy" only)
+    if checked, format the destination floppy (left this unchecked since
+	IT DOES NOT WORK!)
+
+5) About "attempts"
+-------------------
+
+Most programs (including OSes) have an assumption: "if I can't read it the 1st
+time, I couldn't read it at all" (well some programs make 3 attempts), wfdcopy
+just doesn't have this assumption, instead it assumes "if I can't read it the
+1st time, I try again some more times until it works or a certain amount of
+attempts has been done".
+
+That's the use of the "attempts" option: to specify how many times a sector or
+track (depending on the "slow-mode" option) is read/write before marking it as
+"bad". And yes, it sometimes works : I've managed to read some bad disks with
+this.
+
+By default, 10 attempts are made, it should be enough, but you should play with
+it. And don't forget that if you have a bad sector/track the 1st time you read
+a disk, you should retry with the "slow-mode" option and/or more attempts to
+get the most "good" sectors out of your disk.
+
+6) What do the colors in the progress bar mean ?
+------------------------------------------------
+
+- "Light Green" means "read ok"
+- "Green" means "write ok"
+- "Blue" means "format ok"
+- "Red" means "bad read/format/write"
+
+And yes, I'm aware that there are few cosmetic bugs in the progress bar.
+
+7) COMPILING
+------------
+
+I've used MingW (gcc 3.2.3) to compile wfdcopy, find it at 
+http://www.mingw.org, http://www.xraylith.wisc.edu/~khan/software/gnu-win32,
+and you can use CygWin too, http://sources.redhat.com/cygwin/ (since it's
+supposed to compile MingW projects), but CygWin support is rather untested.
+
+MingW is the only development environment that I support.
+
+Oh, by the way, I use VIM (http://www.vim.org) as an editor.
+

@@ -1,0 +1,28 @@
+README 1ST for wfdcopy
+----------------------
+
+Copyright (c) 2000-2004, Hervé PARISSI <hparissi@laposte.net>
+
+http://sourceforge.net/project/?group_id=8584
+http://sourceforge.net/projects/wfdcopy/
+
+LICENSE
+-------
+
+It's GPL'd, if you don't know what it means, I urge you to read the file
+"COPYING" or check http://www.gnu.org/
+
+What is "wfdcopy" ?
+-------------------
+
+wfdcopy means "Worst-Operating-System Floppy Disk Copy", so it's a program to
+copy floppy disk, at least, it's useful to convert disks into files.
+I made it as a helpful tool for Atari ST emulators and as an easy floppy
+recovery tool.
+
+Please read the file "wfdcopy.txt" for more informations.
+Read the file "History.txt" for version informations.
+
+Don't complain if you didn't read wfdcopy.txt and anyway, don't complain, since
+it's still beta ;-) and it runs under a misconceived OS.
+

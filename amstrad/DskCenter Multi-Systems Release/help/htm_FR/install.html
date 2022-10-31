@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE>System Requirements / (De-)Installation</TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 1.1.3  (Win32)">
+	<META NAME="CREATED" CONTENT="19970101;1545704">
+	<META NAME="CHANGED" CONTENT="19970101;4360322">
+	<STYLE>
+	<!--
+		P { color: #000000; font-family: "Verdana", "Helvetica", "Arial", sans-serif; font-size: 10pt }
+		H2 { color: #000000 }
+		A:link { color: #ffffff; font-weight: bold; background: transparent; text-decoration: none }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="fr-FR" TEXT="#000000" LINK="#ffffff" BGCOLOR="#90a1b3" DIR="LTR">
+<HR>
+<H2>Installation :</H2>
+<P>Il su<SPAN STYLE="text-decoration: none"><FONT FACE="Verdana, sans-serif">ffit
+simplement de d&eacute;sarchiver le fichier compress&eacute; sur un
+lecteur.</FONT></SPAN></P>
+<P><I><B>Le programme l'auto-configurera selon le r&eacute;pertoire
+d'installation, v&eacute;rifiera la pr&eacute;sence des fichiers
+utile &agrave; sont ex&eacute;cution et si besoin est, demandera
+l'accord afin de cr&eacute;er des fichiers utiles au bon d&eacute;roulement
+du programme.</B></I></P>
+<P><I><B>(A noter qu'aucune information n'est enregistrer dans la
+base de registre, cela facilitera donc la d&eacute;sinstallation.)</B></I></P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0cm">'<FONT COLOR="#e6e6ff">DskCenter.exe</FONT>'
+	&ndash; Programme compil&eacute; en ex&eacute;cutable. 
+	</P>
+	<LI><P STYLE="margin-bottom: 0cm">'<FONT COLOR="#e6e6ff">Disk.def</FONT>'
+	&ndash; Liste des disquettes disponibles, utilisable avec CPCemu
+	pour cr&eacute;er une disquette vierge. 
+	</P>
+	<LI><P STYLE="margin-bottom: 0cm">'<FONT COLOR="#e6e6ff">Mess Disk
+	format.txt</FONT>' &ndash; Base de donn&eacute;e Mess pour
+	l'affichage des compatibilit&eacute;s syst&egrave;me. 
+	</P>
+	<LI><P STYLE="margin-bottom: 0cm">'<FONT COLOR="#e6e6ff">Info
+	DskCenter.txt</FONT>' &ndash; Fichier d'information en Anglais. 
+	</P>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT COLOR="#000000">'</FONT><FONT COLOR="#e6e6ff">zip32.dll</FONT><FONT COLOR="#000000">'</FONT>
+	&ndash; Fichier de libraire dynamique pour la compression des
+	fichiers ( lire Info DskCenter.txt pour plus d'informations)</P>
+	<LI><P>'<FONT COLOR="#e6e6ff">unzip32.dll</FONT>' - Fichier de
+	libraire dynamique pour la d&eacute;compression des fichiers ( lire
+	Info DskCenter.txt pour plus d'informations)</P>
+	<LI><P>Divers r&eacute;pertoire pour l'organisation des fichiers
+	esclaves :</P>
+	<P><FONT COLOR="#e6e6ff">Softwares</FONT> &gt; R&eacute;pertoire par
+	d&eacute;faut des diff&eacute;rents syst&egrave;mes. 
+	</P>
+	<P><FONT COLOR="#e6e6ff">Icones</FONT> &gt; R&eacute;pertoire des
+	ic&ocirc;nes par d&eacute;faut des diff&eacute;rents syst&egrave;mes.
+		</P>
+	<P><FONT COLOR="#e6e6ff">CPCformat</FONT>, <FONT COLOR="#e6e6ff">CPNformat</FONT>
+	&gt; R&eacute;pertoire de sortie des fichiers convertis aux formats
+	respectif. 
+	</P>
+	<P><FONT COLOR="#e6e6ff">Exported files</FONT> &gt; R&eacute;pertoire
+	de sortie des Fichiers CPC en mode texte. 
+	</P>
+	<P><FONT COLOR="#e6e6ff">Zip Tags</FONT> &gt; R&eacute;pertoire
+	d'archivage des commentaires Zip.</P>
+	<P><FONT COLOR="#e6e6ff">Boot</FONT> &gt; R&eacute;pertoire
+	d'archivage pour les fichiers contenant les diff&eacute;rents
+	syst&egrave;mes reconnus (saut PC DOS, bootstraps variables).</P>
+	<P><FONT COLOR="#e6e6ff">Language</FONT> &gt; R&eacute;pertoire
+	linguistique compos&eacute; de fichiers ressource du type Fr.lng,
+	De.lng ...</P>
+	<P>Nota: Pour changer le fichier ressource il suffit de changer le
+	fichier de configuration comme suit : Fichier DskCenter.ini</P>
+	<P>[setup]</P>
+	<P>Language=FR</P>
+	<P>(Pour les nostalgiques de l'Anglais, il suffit de ne rien mettre
+	apr&egrave;s le &eacute;gale)</P>
+	<P><FONT COLOR="#e6e6ff">Temp</FONT> &gt; R&eacute;pertoire
+	temporaire pour la d&eacute;compression des fichiers s&eacute;lectionn&eacute;s
+	dans l'explorateur DskCenter.</P>
+</UL>
+<P><BR><BR>
+</P>
+<H2>Mise &agrave; jour :</H2>
+<P>Il est important de garder les fichiers de configuration d&eacute;j&agrave;
+mis &agrave; jour :</P>
+<P>soit, 
+</P>
+<UL>
+	<LI><P><U>pour les &eacute;mulateurs</U> : <FONT COLOR="#e6e6ff">Emulator_list.ini</FONT>
+	(liste des arguments pour le lancement des applications)</P>
+	<LI><P><U>Pour DskCenter</U> : <FONT COLOR="#e6e6ff">DskCenter.ini</FONT>
+	(liste des Fichiers pr&eacute;f&eacute;rences, dossier de travail
+	...)</P>
+	<LI><P><U>Pour les commentaires de fichiers compress&eacute;s</U> :
+	<FONT COLOR="#e6e6ff">\Zip Tags\ZipTag.ini </FONT>(liste des
+	fichiers texte)</P>
+	<P>Dans ce cas, il est recommander d'ouvrir &laquo;&nbsp;WinZip&nbsp;&raquo;
+	et de d&eacute;compresser &agrave; la demande ou d'archiver les
+	fichiers &laquo;&nbsp;ini&nbsp;&raquo; dans le menu du programme et
+	de les rappeler ult&eacute;rieurement.</P>
+</UL>
+<HR>
+<H2>D&eacute;sinstallation</H2>
+<P>Il suffit d'effacer le r&eacute;pertoire concern&eacute;. (Sans
+oublier de d&eacute;placer les fichiers contenus dans le r&eacute;pertoire
+&laquo;<FONT COLOR="#e6e6ff">&nbsp;Softwares&nbsp;</FONT>&raquo;,
+s'il existe des images disques &agrave; l'int&eacute;rieur.)</P>
+<P><BR><BR>
+</P>
+<H2><BR><BR>
+</H2>
+</BODY>
+</HTML>

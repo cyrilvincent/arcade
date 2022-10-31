@@ -1,0 +1,23 @@
+  MS-DOS 7.1 autonome avec installateur en français
+-----------------------------------------------------------
+-----------------------------------------------------------
+-----------------------------------------------------------
+
+Cette archive contient une image de disquette (fichier IMA).
+Il ne faut pas copier ce fichier directement sur une disquette.
+Cette image représente à elle seule un volume entier. Il faut
+utiliser un outil comme WinImage sous Windows (ou dd sous Linux)
+qui permett de copier le contenu de cette image brute sur une
+disquette physique. Vous pouvez également l'utiliser directement
+dans un émulateur de PC sans passer par une écriture physique 
+sur une disquette.
+
+Winimage est disponible à cette adresse : http://www.winimage.com
+Vous pouvez également utiliser Rawrite en ligne de commande.
+Sous Linux, une commande suffit : dd if=fichierimage.ima of=/dev/fd0
+ou encore cat fichierimage.ima > /dev/fd0 avec les privilèges administrateur
+L'emploi d'image disque est obligatoire pour l'installation de systèmes
+d'exploitation (à cause notamment du secteur de démarrage)
+
+Décembre 2017, Big Monstro
+ Admin sur www.win3x.org

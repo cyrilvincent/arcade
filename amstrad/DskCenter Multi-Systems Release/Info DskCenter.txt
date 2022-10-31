@@ -1,0 +1,111 @@
+ ****    ***  *
+  *  *  *     *  *
+  *  *   **   * *
+  *  *     *  **       **
+  *  *     *  * *     *
+ ****   ***   *  *     ** ENTER **  0.11
+
+________________________________________
+CPC RELEASE : DSK, ZIPPDED FILES AND SNA...
+Pc  RELEASE : DSK, HD & CHD
+Multi-System RELEASE (this release)...
+________________________________________
+
+Multi-computers Front-End for computer's emulators.
+
+- Able to show you CpcEmu and specifics disk parameters.
+- Auto display of Ams Dos catalog and Cp/m 2.2 statut.
+- Auto display CP/m 68000 [MP/M], CP/m 86 and CP/m v.3 for MSX (Raw formats).
+- Auto display Pc, Msx Dos and generics catalogs (Fat12 formats). 
+- Auto display of Apple PRODOS catalog.
+- Auto display of Linux image disks (partials informations).
+- Auto display of Dos 2.xx catalogs for Atari/Atari XL.
+- Auto display of Atari ST [ST DOS] catalog.
+- Auto display of Amiga Dos [ADF files] catalog.
+- Auto display of Ti99a or Geneve V9t9 and PC99 catalogs [IMG;DSK].
+- Auto display of TRS DOS ,New DOS and OS9 (DMK or JVC format)[DSK files](for TRS/80 "CoCo series" or Dragon 16/32) catalogs.
+- Auto display of Maxi Dos [SAD files] (for Sam Coupe) catalogs.
+- Auto display of Oric1, Oric Atmos and Pravetz 8d [SedOric DOS ... MFM format] catalog.
+- Auto display of BBC model B/B+ [BBC OS: IMG, BBC & SSD format] catalog.
+- Auto display of Thomson models [fd format] catalog.
+- Auto display of Altair models [dsk format] catalog.
+- Auto display of X68000 models [xdf format] catalog.
+- Auto display of ZX81 files and tapes.
+- Auto display of ZX81 disk images files on Larken drives controllers.
+- Auto display of consoles.
+- Launch disks images formats to your favorite emulator.
+  (limitation of emulators config, can be changed in codes)
+- Support Zip format, and can auto-reZip all changed image disk structure.  
+- SNA structures can be scanned and display.  
+- Able Zip-tags with your ascii arts.
+- Visual Display of incompatible disk image with CpcEmu Dsk format. 
+- Display somme PC, Msx, Ti99 and Coco image disk, to move it in the good directory.  
+- Now enable a graphic disk mapping and allocations errors on CPC disks.
+- Several convertions filters.
+- Binary tools to trim, patch or convert current  disks images formats . (cut headers or add a standard boot sector)
+
+- Advenced initialize function for CPCemu format (1 side only-> tag 0).
+  (this format don't support 2 sides disks check your emulator's documentation.)
+- Multi-languages support (just change Language key in DskCenter.ini or GUI)
+
+  English (default): Language=
+  French           : Language=FR
+  
+
+Scan feature may be changed to display other computer's disks devices!
+If your are interested in such modifications, Throw me your Web 
+Home page link to enhance intelligent Dsk front-ends !
+
+Overs project can be open, Mail me suggestions.
+
+Codes are free, but could you respect other sources codes ...
+just, send / or / distribute Name, pseudo and "Legals" with codes and
+compiled software, Thank you !.
+
+Avoid using "shareware" ocx or Dll ... users had to register it !
+
+DskCenter is a FreeWrare: don't send money, donations or personal information !
+
+Codes and compiled Software can't be distributed without authors comments and 
+names, with commercial purpose (deal, SharWare, advertising, Donations...) but
+suggestions and questions could be send to authors.
+
+ - Multi-Devices Purpose  -
+
+Actual links:
+XavSnap (realease 0.10x contribution)
+Mail : dskcenter@free.fr
+Home : http://dskcenter.free.fr/index.html
+ 
+ - Other computers Purpose -
+
+
+ - Zip DLL / driver -
+
+Info-ZIP's UnZip DLL for Win32
+Zip utility (included)
+
+Their web site address is http://www.info-zip.org/pub/infozip so you can get the latest version
+This wrapper class extends it to strings and full files, too.
+Two other postings on www.planetsourcecode.com deal with UnZip & Zip Dlls.
+
+Note: DLL update.
+Just copy new zip32.dll or unzip32.dll in "windows\system"(w95/98) or "windows\system32"(XP) folder.
+(dlls in DskCenter folder are ignored)
+
+Additionals resources by Steve McMahon (steve@vbaccelerator.com)
+www.vbaccelerator.com exemples and systems class.
+
+Additionals cutomised fonts by -CK!- (ckrule@geocities.com or pixelite@lycos.de)
+http://www.freakyfonts.de plenty of wonderfull fonts.
+And fonts from http://dskcenter.free.fr from XavSnap.
+
+release :
+
+ List of authors (project members):
+
+ Version 0.11       - XavSnap. (Xavier Martin) 28/03/2006.
+
+Have Fun !
+
+XavSnap.

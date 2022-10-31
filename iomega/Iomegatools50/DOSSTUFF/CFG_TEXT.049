@@ -1,0 +1,65 @@
+$1
+    
+$2
+
+Iomega SCSI-Konfigurationsdienstprogramm.  Version %1d.%2s.
+Copyright (C) 1991 - 1995 Iomega Corporation. Alle Rechte vorbehalten.
+$3
+Erstellt die Hardware-Konfigurationsdatei (SCSI.SCF) fÅr den Iomega SCSI-
+GerÑtetreiber.
+BENUTZUNG:  SCSICFG [Optionsschalter]
+UnterstÅtzte Optionsschalter:
+     /? oder /H    Diesen Text anzeigen und dann verlassen.
+     /P=Pfad       Pfad und/oder Dateinamen der zu verwendenden 
+                   Konfigurationsdatei angeben.
+     /L=Land       Sprache nach Landescode unter "Land" angeben.
+     /NOSCAN       Keine neue Konfigurationsdatei erstellen, wenn 
+                   bereits eine besteht.
+     /V(wortreich) Die wortreichen, informativen Meldungen abbilden.
+     /T(knapp)     Nur die notwendigen Informationen abbilden.
+     /I:ID,LUN,PORT
+                   Die GerÑte bei "SCSI ID", "LUN", 
+                   "Port Address" (Hex)" ignorieren.
+$4
+UngÅltigen oder falschen Befehlszeilenoptionsschalter gefunden.
+Optionsschalter wurde ignoriert.
+$5
+%1s Adapter gefunden am Anschlu·: %2XH.
+Scanne fÅr GerÑte.
+$6
+     IDE/ATA GerÑt %1d - %2s
+$7
+     SCSI ID %1d, LUN %2d - %3s
+$8
+Schlechtes Adaptertabellendateiformat:
+$9
+Konfiguration abgebrochen.
+$10
+Fehler beim Schreiben der Konfigurationsdatei:(%1s).
+$11
+Ein niedriger Boot-ROM wurde im System entdeckt
+Dieses kînnte die Ursache des Schreibfehlers sein.
+Weitere Informationen sind im Benutzerhandbuch zu finden.
+$12
+Interner Dateisystemfehler.
+$13
+Diskettenfehler oder unerwartetes Ende der Datei bei 
+der Syntaxanalyse ".OP" Datei.
+$14
+Speicherzuordnungsfehler.
+$15
+Syntaxfehler in der Sprachenmeldungsdatei.
+$16
+Keine Adaptertabellen gefunden.
+$17
+Keine GerÑtetabellen gefunden.
+$18
+Keine GerÑte gefunden.
+$19
+Iomega SCSI-Kern %1s Version %2d.%3s ist inkompatibel mit
+dieser Version von SCSICFG.EXE.
+$20
+Adaptertabelle %1s Version %2d.%3s ist nicht kompatibel mit
+dieser Version von SCSICFG.EXE
+$21
+Kann Datei nicht laden:

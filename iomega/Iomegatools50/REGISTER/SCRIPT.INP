@@ -1,0 +1,3 @@
+0|Dialing iomega|2400,n,8,1|ATDT*70,1800,9823627|ATX4L1|img10101|img10101||2|2|2||REG|0!2!rhsicomm.drv!R-ockwell H-igh S-peed I-nterface (RHSI) communications driver!!2.2.353Apr1796!040517031914!!3.10!||$2...$r ORK $2NUI$s06790019$r ord $1PB8CQM$r ctive $2prof$s3$r -n $22101882$r ogin: $2pipehost$r$n ord: $1spiffy$r$n ogin: $1$r$n -n|
+2|Sending 'pipedlg.dat'|G:\REGISTER\PIPEDLG.DAT|1|
+5|Receiving Specials|R|ACTION.PCA||||Transfer|action.pca|||||

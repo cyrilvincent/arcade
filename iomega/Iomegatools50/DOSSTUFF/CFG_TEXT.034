@@ -1,0 +1,65 @@
+$1
+    
+$2
+
+Utilidad de la configuraci¢n SCSI Iomega.  Versi¢n %1d.%2s.
+Derechos de autor 1991 - 1995 Iomega Corporation. Todos los derechos reservados.
+$3
+Crea el archivo de configuraci¢n del hardware (SCSI.SCF) para el 
+driver del dispositivo SCSI de Iomega.
+USO: SCSICFG [interruptores de opci¢n]
+Interruptores de opci¢n apoyada:
+     /? or /H    Muestre este texto y luego salga.
+     /P=v¡a      Especifique la v¡a y/o el nombre del archivo del
+                 archivo de configuraci¢n que va a utilizar.
+     /L=pa¡s     Fije el idioma actual al c¢digo del pa¡s especificado
+                 por "pa¡s"
+     /NOSCAN     No cree un nuevo archivo de configuraci¢n si ya hay uno.
+     /VERBOSE    Muestra mensajes largos e informativos.
+     /TERSE      Muestra s¢lo la informaci¢n requerida.
+     /I:ID,LUN,PORT
+                 Ignore el dispositivo en la identificaci¢n "SCSI",
+                 "LUN", "Direcci¢n de puerto" (Hex)
+$4
+Se ha detectado interruptor de opci¢n de l¡nea de comando inv lido o incorrecto.
+Se ha ignorado el interruptor de opci¢n.
+$5
+Se ha encontrado un adaptador %1s en puerto: %2XH.
+Explorando dispositivos.
+$6
+     IDE/ATA %1d - %2s
+$7
+     Identificaci¢n SCSI %1d, LUN %2d - %3s
+$8
+Formato defectuoso de archivo de la tabla del adaptador:
+$9
+Configuraci¢n abortada.
+$10
+Error al escribir el archivo de configuraci¢n:(%1s).
+$11
+Se detect¢ una ROM de bajo nivel en el sistema.
+Esa puede ser la raz¢n del fallo de escritura.
+V‚ase el Manual del usuario para obtener m s informaci¢n.
+$12
+Error de archivo interno del sistema.
+$13
+Error de disco, o fin inesperado de archivo, al
+analizar el archivo ".OP".
+$14
+Error de asignaci¢n de memoria.
+$15
+Error de sintaxis en el archivo de mensajes de idioma.
+$16
+No se hallaron tablas del adaptador.
+$17
+No se encontraron tablas del dispositivo.
+$18
+No se encontraron dispositivos.
+$19
+El n£cleo SCSI Iomega %1s versi¢n %2d.%3s es incompatible con esta
+versi¢n del archivo SCSICFG.EXE.
+$20
+La versi¢n %2d.%3s de la tabla del adaptador %1s no es compatible con
+esta versi¢n del SCSICFG.EXE.
+$21
+No se puede cargar el archivo:

@@ -1,0 +1,581 @@
+
+                            GUEST HELP
+                         October 30, 1996
+
+     Contents
+     
+     Section#  Topic
+          1    What is Guest?
+          2    System Requirements for Guest
+          3    How to Load Guest
+          4    Advanced Loading Options
+                    Loading Guest into Upper Memory
+                    Express Loading Guest
+                    Assigning Specific Drive Letters with 
+                         GUEST.EXE
+
+          5    Solving Problems that may occur when using Guest
+                    Guest does not assign a drive letter to your 
+                         drive
+                    Computer hangs when you run Guest
+                    Duplicate drive letters
+                    No drive letter available for the drive
+                    Using Guest with non-Iomega ASPI managers
+                    Drive C: no longer accessible
+
+          6    Required Files for Using Guest
+          7    Using Guest as a Permanent Driver
+          8    Using Guest on Other Systems
+          
+     
+     _________________________________________________________
+     Section 1
+     What is Guest?
+     
+     Guest is a portable driver program that lets you use an
+     external Zip or Jaz drive on a computer without having to
+     permanently install the Iomega driver or Tools software. 
+     There are versions of Guest for both Macintosh and PC
+     systems.  Guest for IBM-compatible PC's running Windows 3.1
+     and/or DOS is described here.  If you want to use your drive
+     on a PC running Windows 95 or on a Macintosh, refer to the
+     section on "Using Guest on Other Systems" later in this
+     file.
+
+     When you run GUEST.EXE, the Guest driver loads into the
+     computer's memory and stays there until the computer is
+     rebooted.  While Guest is in memory, it tells the computer
+     how to talk to your drive and provides the drive with a
+     drive letter.  Guest allows you to read files from and write
+     files to your Zip or Jaz disks.
+
+     NOTE:  When you install Tools software under Windows 3.1, it
+     installs the Guest driver program in the computer's
+     AUTOEXEC.BAT file so that Guest loads each time the computer
+     boots.  For more information, refer to Section 7, "Using
+     Guest as a Permanent Driver."
+
+     
+     
+     _________________________________________________________
+     Section 2
+     System Requirements for Guest
+
+     To run GUEST.EXE, you need a compatible version of DOS
+     and/or Windows.
+  
+       *  Compatible versions of DOS include MS-DOS version 5.0
+          or higher, and PC-DOS version 6.0 or higher.  To check
+          your version of DOS, use the DOS VER command.
+
+        * Compatible versions of Windows include Windows 3.1 or
+          3.11, and Windows for Workgroups 3.1 or 3.11.
+
+     The drive you want Guest to support must be connected to the
+     computer before Guest is loaded.
+     
+
+
+     _________________________________________________________
+     Section 3
+     How to Load Guest
+     
+     Use the following procedure to load Guest:
+
+      1.  Connect your drive to the computer according to the
+          instructions in the drive's Installation Guide.
+
+      2.  Insert the "Install" floppy diskette for Windows/DOS
+          into the computer's floppy drive.
+
+      3.  If you are using Windows, you MUST exit Windows before
+          loading Guest.  Select Exit from the Program Manager's
+          File menu, and click on OK to end the Windows session.
+
+      4.  At the DOS prompt, type either "a:Guest" (if the
+          "Install" floppy is in drive a:), or "b:Guest" (if the
+          "Install" floppy is in drive b:), then press the Enter
+          key.  If you use Windows, you can restart Windows after
+          Guest loads.
+
+     If you encounter any problems, refer to Solving Problems in
+     this help file.
+
+     
+     _________________________________________________________
+     Section 4
+     Advanced Loading Options
+     
+
+     ______________________________
+     Section 4.1
+     Loading Guest into Upper Memory
+     
+     Guest can be loaded into upper memory using the DOS LOADHIGH
+     command, provided an expanded memory manager (such as
+     EMM386, QEMM, BLUEMAX, or 386MAX) is loaded on the computer. 
+     Refer to your DOS User's Guide for detailed information on
+     using the LOADHIGH command.
+     
+     
+     ______________________________
+     Section 4.2
+     Express Loading Guest
+     
+     Each time the Guest driver loads, it must also load an ASPI
+     manager so that it can communicate with your Zip or Jaz
+     drive through the computer's SCSI host adapter.  To provide
+     Guest with the flexibility to use a variety of host
+     adapters, the Windows/DOS "Install" diskette that came with
+     your drive includes ASPI managers for all current Iomega
+     adapters.  As Guest loads, it tries to load each ASPI
+     manager in turn until it finds one that allows it to talk to
+     your drive.
+
+     Guest can load much more quickly if it does not have to use
+     this trial-and-error process to find the correct ASPI
+     manager.  If you use Guest routinely with one or two
+     specific host adapters, you may want to edit the GUEST.INI
+     file and remark-out the ASPI managers you do not need.  Then
+     Guest will try to load only the ASPI managers for the
+     adapters you normally use.
+
+     Use the following procedure to customize your GUEST.INI
+     file:
+
+     Step 1:  Copy all files on the "Install" diskette for
+     Windows/DOS to another disk.
+
+     The "Install" diskette is permanently write-protected, so in
+     order to edit the GUEST.INI file and use the new file to run
+     the Guest program, you must copy the files to another disk. 
+     You can copy the files to another floppy diskette or to the
+     hard disk on the computer where you will be using the Guest
+     program.  If you need instructions on copying files, refer
+     to the documentation that came with your Windows or DOS
+     programs.
+
+     Step 2:  Locate the GUEST.INI file on your copy of the
+     "Install" diskette and open it using a text editor. The
+     GUEST.INI file is a text file, so you can use the Notepad in
+     Windows, the DOS EDIT program, or any other ASCII text
+     editor to edit it.
+
+     Step 3:  Identify the ASPI manager line Guest needs to load
+     to support your drive.
+
+     For example, if you routinely use Guest when your drive is
+     connected to an Iomega PC1616 adapter, the Guest program
+     needs to load the line that reads "ASPI=ASPI1616.SYS".  Use
+     the following table to help you identify the ASPI manager
+     line you need to load:
+
+        Iomega Adapter                       ASPI Manager
+
+        Jaz jet PCI (PC/Mac model)           ADVASPI.SYS
+        Jaz jet (PC-only model)              ASPI8DOS.SYS
+        Jaz jet ISA                          ASPIPC16.SYS
+        Jaz Traveller                        ASPIPPM1.SYS*
+        Parallel Port Zip drive              ASPIPPM1.SYS*
+        Zip zoom SCSI Accelerator            ASPIPC16.SYS
+        Zip Card PCMCIA SCSI adapter         ASPIPC16.SYS
+        Zip IDE drive                        ASPIIDE.SYS
+        PC1616 adapter                       ASPI1616.SYS
+        PC1600 adapter                       ASPIPC16.SYS
+
+          *Some hardware uses ASPIPPM2.SYS rather than
+          ASPIPPM1.SYS.
+
+     Step 4:  Remark out each ASPI manager line you do NOT need
+     to load by inserting "rem " at the start of the line.
+
+     For the example where Guest is routinely used when the Zip
+     or Jaz drive is connected to an Iomega PC1616 adapter, you
+     would remark out all ASPI manager lines except the
+     ASPI1616.SYS line:
+
+          rem ASPI=ASPIIDE.SYS /INFO /SCAN
+          rem ASPI=ASPIPPM1.SYS /INFO FILE=NIBBLE.ILM SPEED= 1
+          rem ASPI=ASPIPPM2.SYS /INFO FILE=NIBBLE2.ILM SPEED= 1
+          rem ASPI=ASPI8DOS.SYS /D
+          rem ASPI=ADVASPI.SYS
+          rem ASPI=ASPIPC16.SYS /SCAN /INFO
+          ASPI=ASPI1616.SYS /SCAN /INFO
+
+     Step 5:  Save the changes to the GUEST.INI file and exit the
+     text editor.
+
+     If you are using an editor that has a variety of file
+     formats, be sure to save the GUEST.INI file as ASCII text or
+     DOS text.
+
+     NOTE:  If you later need to use an ASPI manager which has
+     been remarked out, simply edit GUEST.INI again and remove
+     the "rem " at the start of the ASPI manager line, or use the
+     original "Install" floppy diskette to run Guest.
+
+     ASPI Manager Reference:  Detailed reference information on
+     the ASPI managers used by the Guest driver is located in the
+     electronic "Installation Manual" (MANUAL.EXE).  You can
+     access the manual from the "Install" diskette for
+     Windows/DOS by going to the DOS prompt and typing:
+
+               A: <Enter>
+               MANUAL <Enter>
+
+     
+          
+     ______________________________
+     Section 4.3
+     Assigning Specific Drive Letters with GUEST.EXE.
+
+     GUEST.EXE allows you to specify what drive letter you want
+     assigned to your drive.  You may want to use this feature if
+     you are running applications from your Zip or Jaz drive, or
+     if you use your drive as a portable device on other
+     computers and you want to maintain the same drive letter as
+     you use on your own machine.
+
+     To tell GUEST.EXE which drive letter to use, add the
+     following option to the GUEST.EXE command line:
+
+        letter=[the first drive letter you want Guest to use]
+
+     For example, the following command line would tell Guest to
+     assign "g:" to the first drive it finds to support:
+
+               guest letter=g
+
+     If you have more that one drive supported by GUEST.EXE, each
+     additional drive would receive a drive letter following G in
+     alphabetical order.  (When supporting more than one drive,
+     GUEST.EXE assigns drive letters in order of SCSI ID number
+     from lowest to highest.)
+
+     NOTES:
+
+     The Letter option can be used when running GUEST.EXE from a
+     floppy diskette, or it can be added to the GUEST.EXE command
+     line in the computer's AUTOEXEC.BAT file.  (See Section 7,
+     "Using Guest as a Permanent Driver" for information on
+     installing GUEST.EXE in the AUTOEXEC.BAT.)
+
+     When using the Letter option, there must be a LASTDRIVE
+     statement in the computer's CONFIG.SYS file that specifies a
+     letter later in the alphabet than that used with the Letter
+     option.  If GUEST.EXE is supporting more than one drive, the
+     LASTDRIVE statement must provide enough drive letters for
+     all supported drives.  If you need detailed instructions on
+     adding a LASTDRIVE statement to CONFIG.SYS, refer to the
+     information in Section 5.3, "No drive letter available for
+     the drive."
+
+
+
+     _________________________________________________________
+     Section 5
+     Solving Problems that may occur when using Guest
+
+     
+     _____________________________
+     Section 5.1
+     Guest does not assign a drive letter to your drive
+     
+     If you run the Guest program and it informs you that no
+     drives were found, or if Guest tells you that no drive
+     letters were added, and yet you cannot access your drive,
+     there is probably a hardware installation problem that is
+     preventing Guest from locating your Zip or Jaz drive.  Refer
+     to the printed User's Guide that shipped with your drive for
+     hardware installation troubleshooting information.
+
+     
+     _____________________________
+     Section 5.2
+     Computer hangs when you run Guest
+
+     If the computer hangs when you run Guest, edit the GUEST.INI
+     file and remove (rem) all ASPI managers except the one you
+     need to load.  If you are using a non-Iomega adapter and
+     Guest hangs, rem all of the ASPI managers in the GUEST.INI
+     file and make sure the ASPI manager for the non-Iomega
+     adapter is correctly installed in the computer's CONFIG.SYS
+     file.  For detailed instructions on editing GUEST.INI to rem
+     ASPI managers, refer to the instructions in Section 4.2,
+     "Express Loading Guest."
+
+     
+
+     _______________________________
+     Section 5.3
+     Duplicate drive letters
+     
+     If you see two drive letters for a single drive on your
+     system after running GUEST.EXE, reboot the computer
+     immediately.  Using your drive when it is assigned duplicate
+     drive letters can result in data loss.  
+     
+     After the computer reboots, do not load GUEST.EXE.  You do
+     not need to use Guest  to access the drive on this system
+     because the drive is already being assigned a drive letter.
+
+     NOTE: It is recommended that you always use an Iomega driver
+     (either GUEST.EXE or SCSIDRVR.SYS) to support your Zip or
+     Jaz drive.  If you see two drive letters after running
+     GUEST.EXE, check your system to make sure a non-Iomega
+     driver is not supporting your Iomega drive.  Note that if
+     the drive is under BIOS control (either adapter or computer
+     BIOS), disk removability will not be supported.
+
+     
+     ______________________________
+     Section 5.4
+     No drive letter available for the drive
+     
+     If all drive letters available for physical drives are in
+     use on the system, GUEST.EXE will be unable to assign a
+     drive letter to the drive you want to support.  Use the DOS
+     LASTDRIVE command in the computer's CONFIG.SYS file to
+     increase the number of physical drive letters.  For example,
+     adding the statement LASTDRIVE=m to CONFIG.SYS will provide
+     drive letters for ten additional drives after drive C:.  The
+     following procedure provides detailed instructions for
+     editing the CONFIG.SYS file. 
+
+     Step 1:  Use a text editor to open the CONFIG.SYS file.
+
+     You can use the Notepad in Windows, the DOS EDIT program, or
+     any other ASCII text editor.  The CONFIG.SYS file is a text
+     file located in the root directory on the computer's boot
+     drive (C:).
+
+     Step 2:  Add the following line to the end of the CONFIG.SYS
+     file.
+
+               LASTDRIVE=m 
+
+     This will provide ten additional drive letters for any new
+     drives you want to add to your system, including your Zip or
+     Jaz drive.  If you do not need all of the drive letters
+     between d: and m: for physical drives, you can use a letter
+     earlier in the alphabet in place of the letter m; however,
+     make sure you provide enough drive letters after e: to
+     accommodate the drive you are using with Guest and any other
+     drives you may add to your system.  If your CONFIG.SYS file
+     already has a LASTDRIVE line, change the last drive letter
+     to one further down the alphabet.  Do not set the last drive
+     letter to a letter late in the alphabet, such as X, Y, or Z,
+     as this will use extra memory and prevent access to network
+     drives assigned these letters on your system.
+
+     Step 3:  Save the changes to the CONFIG.SYS file and exit
+     the text editor.
+
+     If you are using an editor that has a variety of file
+     formats, be sure to save as ASCII text or DOS text.
+
+     Step 4:  Reboot the computer, and load GUEST.EXE after the
+     computer boots. 
+
+     Network Users:  You may have to relocate your network drive
+     letter.  
+
+     Ask your network administrator for help, or refer to the
+     following instructions:
+
+     Your first network drive letter will be the letter following
+     the one used in the LASTDRIVE statement in your CONFIG.SYS
+     file.  For example, if you used LASTDRIVE=m, the first
+     network drive letter will be N.
+
+     If your network drive letter has changed, applications you
+     are running from the network (such as Windows or other
+     applications that reference specific drive letters) may fail
+     to work correctly unless they are reinstalled or adjusted
+     for the drive letter change.  If you use a batch file to
+     connect to the network, it will need to be adjusted to the
+     new drive letter.  Your network login script may need to be
+     revised if it refers to a specific drive letter for your
+     network drive.
+
+     Check the following:
+
+       *  Edit the Path statement in your AUTOEXEC.BAT file to
+          correctly reference your new network drive letter.
+ 
+       *  Edit any batch files which load shells or applications
+          from a network (including AUTOEXEC.BAT) to correctly
+          reference new drive letter assignments.
+ 
+       *  Edit your Windows "INI" files and your Windows groups
+          to correctly reference your new drive letters.
+ 
+       *  Check other application setup files.  Rerun the setup
+          if drive letters cannot be edited.
+ 
+       *  Check your user login script for references to specific
+          network drive letters.  
+ 
+     Reboot your computer and check your applications. 
+     Applications that do not work with the new drive letter may
+     need to be reinstalled.
+     
+     
+     _____________________________
+     Section 5.5
+     Using Guest with non-Iomega ASPI managers
+
+     The Guest driver utilizes ASPI managers to communicate with
+     drives connected through a SCSI host adapter, so the
+     "Install" diskette for Windows/DOS includes ASPI managers
+     for current Iomega adapters.  If you are using a non-Iomega
+     host adapter and ASPI manager software, make sure the ASPI
+     manager is correctly loaded in the computer's CONFIG.SYS
+     file.  This will enable GUEST.EXE to locate any Iomega
+     drives connected to the adapter.  If you need instructions
+     on installing the ASPI manager software in CONFIG.SYS, refer
+     to the documentation that came with the adapter.
+
+     NOTE:  If the adapter does not have an ASPI manager, Guest
+     will not be able to operate.
+
+
+     _____________________________
+     Section 5.6
+     Drive C: no longer accessible
+
+     If you are booting from an Iomega PC1600 or Adaptec adapter,
+     the ASPI manager for the adapter must be installed in the
+     computer's CONFIG.SYS file before GUEST.EXE is run.  If the
+     ASPI manager is not installed in CONFIG.SYS when GUEST.EXE
+     is run, Guest will load the ASPI manager via the GUEST.INI
+     file, which will cause drive C: to no longer be accessible.  
+
+     NOTE:  The ASPI manager for the bootable adapter must be
+     loaded before any other ASPI managers in the CONFIG.SYS
+     file.  If you need information on installing Iomega ASPI
+     managers, refer to the electronic "Installation Manual"
+     (MANUAL.EXE).  You can access the manual from the "Install"
+     diskette for Windows/DOS by typing:
+
+               A: <Enter>
+               MANUAL <Enter>
+
+     
+     _________________________________________________________
+     Section 6
+     Required Files for Using Guest
+     
+     All of the files needed to load Guest are present on the
+     "Install" floppy diskette for Windows/DOS.  If you create
+     additional disks for loading Guest, make sure you include
+     the following files:
+
+          GUEST.EXE
+          GUEST.INI
+          ASPIPPM1.SYS
+          ASPIPPM2.SYS
+          ASPIIDE.SYS
+          ASPI8DOS.SYS
+          ADVASPI.SYS
+          ASPIPC16.SYS
+          ASPI1616.SYS
+          NIBBLE.ILM (Required for ASPIPPM1.SYS)
+          NIBBLE2.ILM (Required for ASPIPPM2.SYS)
+
+     Refer to Section 4.2, "Express Loading Guest," for
+     instructions on customizing the GUEST.INI file to minimize
+     the time it takes to load Guest.
+     
+
+     
+     _________________________________________________________
+     Section 7
+     Using Guest as a Permanent Driver
+
+     The Guest program, GUEST.EXE, is also the permanent driver
+     program for your Zip or Jaz drive under Windows 3.1.  If you
+     install Tools software under Windows 3.1 using the SETUP.EXE
+     program, it automatically installs GUEST.EXE in the
+     computer's AUTOEXEC.BAT file.  This causes GUEST.EXE to run
+     each time the computer boots.  If Guest can locate a Zip or
+     Jaz drive (or other supported drive), it loads into the
+     computer's memory and assigns your drive a drive letter.  If
+     Guest cannot locate a supported drive, it does not load.
+
+     If you use the Guest program frequently on a particular
+     computer, you may want to install GUEST.EXE as a permanent
+     driver on that computer.  If Windows is installed on the
+     computer, the easiest way to permanently install Guest is by
+     using the Setup program on the "Install" floppy diskette for
+     Windows/DOS.  If desired, you can select to install only the
+     driver.
+
+     To run the SETUP.EXE program, insert the Windows/DOS Install
+     diskette into the computer's floppy drive.  Load Windows and
+     choose Run from the Program Manager's File menu.  In the
+     Command Line box, type either a:setup (if the Install
+     diskette is in drive a:), or b:setup (if the Install
+     diskette is in drive b:), then click on OK or press the
+     Enter key.
+
+     If the computer does not have Windows, you can manually
+     install GUEST.EXE as the permanent driver in the computer's
+     AUTOEXEC.BAT file.  For a detailed manual installation
+     procedure, refer to MANUAL.EXE located on your "Install"
+     floppy diskette.
+
+
+     _________________________________________________________
+     Section 8
+     Using Guest on Other Systems
+
+     In addition to Guest for Windows 3.1/DOS, there are versions
+     of Guest for Windows 95 and for Macintosh.  Use these other
+     versions of Guest if you ever need to use your Zip or Jaz
+     drive temporarily on one of these systems.
+
+     Windows NT Users:  There is not currently a version of Guest
+     for Windows NT because Windows NT does not yet support plug-
+     and-play.  When connecting a Zip or Jaz drive to a Windows
+     NT system, refer to the adapter installation instructions in
+     the NTReadme.txt file on the Windows NT Install diskette
+     that came with your drive.
+
+
+     To use your drive on a PC running Windows 95:
+     Connect your drive and use the Guest95 program which is
+     included on the Windows/DOS "Install" floppy diskette:
+
+      1.  Insert the Windows/DOS "Install" diskette that came
+          with your Zip or Jaz drive into the computer's floppy
+          drive.
+
+      2.  Open My Computer and double click on the floppy drive
+          icon.
+
+      3.  Double click on the icon for Guest95.
+
+     Refer to "Help for Guest95" on the Windows/DOS "Install"
+     diskette for additional information.
+
+
+     To use your drive on a Macintosh:
+     You can load the Iomega Driver temporarily from any Zip or
+     Jaz disk that is formatted for Macintosh:
+
+      1.  Shut down the Macintosh and connect your Zip or Jaz
+          drive.
+
+      2.  Turn on power to your drive and insert a Mac-formatted
+          disk.  (This procedure will work only if you use a Zip
+          or Jaz disk that is formatted for Macintosh.)
+
+      3.  Start the Macintosh following your normal startup
+          procedure.
+
+     NOTE:  The Mac must be using a version of System 7 (up to
+     7.5.5).  If you install Tools software on the Macintosh as
+     well as on your PC, you can refer to Iomega Guest Help on
+     the Macintosh for additional information.
+

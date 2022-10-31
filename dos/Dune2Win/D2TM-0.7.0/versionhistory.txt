@@ -1,0 +1,245 @@
+Dune II - The Maker
+===================
+Contact	: stefan[at]fundynamic.com
+Url	#1	: http://www.dune2themaker.com
+Url	#2	: http://dune2themaker.fundynamic.com
+Github  : https://github.com/stefanhendriks/Dune-II---The-Maker
+Forums  : https://forum.dune2k.com/forum/19-arrakis/
+Twitter : @dune2themaker
+Discord : https://dune2themaker.fundynamic.com/discord
+
+==========
+DISCLAIMER
+==========
+THIS PROGRAM IS NOT SUPPORTED BY ELECTRONIC ARTS. YOU MUST OWN THE ORIGINAL
+SOFTWARE (DUNE 2 - THE BUILDING FOR A DYNASTY / DUNE 2 - THE BATTLE FOR ARRAKIS)
+IN ORDER TO USE THIS SOFTWARE. YOU UNDERSTAND THAT THIS PROGRAM IS NOT DUNE 2.
+
+IF YOU DO NOT OWN DUNE 2 (ONE OF ITS TITLES, AS DESCRIBED ABOVE) YOU MUST DELETE
+THIS PROGRAM FROM YOUR COMPUTER IMMEDIATELY.
+
+USE AT YOUR OWN RISK.
+
+===================
+Version information
+===================
+Version number	: 0.7.0
+
+===========
+Description
+===========
+This game is a tribute and a Dune 2 remake that is more up to date with the 
+current standards yet still keeps the 'nostalgia' (as far as that can go with remakes).
+
+
+=====
+Usage
+=====
+Double-click d2tm.exe
+
+If you want to influence the screen resolution, full-screen mode and other things:
+1. You can either edit settings.ini
+2. You can also run d2tm.exe with flags, ie from command prompt, run "d2tm.exe --help" for all possible options
+
+========
+Features
+========
+* 1080p or higher screen resolution (minimum is 800x600)
+  - change resolution in settings.ini
+  - full-screen/windowed mode can be set in settings.ini
+* Smooth gameplay
+  - C&C like controls
+  - "point and click" gameplay
+  - map zooming (mouse wheel)
+  - easy to use interface
+  - queueing
+* Hotkeys
+  - Press R (and click accordingly) to repair units and structures
+  - Unit selected: hold CTRL to force attack 
+  - Structure selected: hold CTRL to set rally point
+  	- can be used on anything that has to do with units (repair facility, etc)
+* Double sized and enhanced (by hand) dune 2 graphics:
+  - sharp units/structures
+  - real-shadows blending for units
+  - enhanced terrain
+  - enhanced shroud
+  - drawn graphics resemble size of original dune 2
+* Able play the original Dune 2 campaign
+  - lacks cutscenes
+  - lacks scoring screen
+  - no end-scene yet and credits
+* Able to show the strategy/campaign map, use similar animations and has the same
+  campaigns as in the original dune 2
+* Uses the dune 2 tech-level tree
+* Ability to generate dune 2 seed maps
+* Uses all original dune 2 (english) mission briefings
+* Little animation 'system' for nice effects (fading, explosions, smoke, etc)
+* Ability to play Skirmish games (4 players max)
+   - Max map size (random maps) is 128x128
+     - with own random map generator
+   - ability to create your own maps (see skirmish folder, max size is 64x64)
+   
+===================
+System Requirements
+===================
+The program has been tested on several systems; though it is timer based
+the ideal is 60 fps or higher for a fluent gameplay overall. Most systems
+with just Windows would run the program.
+
+There are good experiences running this game within Wine on Linux. Those who
+do not use Windows, but still want to try out the game, you could give Wine
+a shot.
+
+If you are a Linux user, good chance is you can compile this yourself. Head out
+to the Github repository and follow the readme.md
+
+==================================
+BALACING NOTES / UNIT DESCRIPTIONS
+==================================
+One of the things DUNE 2 lacked, was real balancing. Mostly you would win by just having bigger
+better , and mostly, more units than your computer opponent. In D2TM this issue should be solved;
+though I am not there yet, I do intent to get there!
+
+In order to tackle this issue, a few things have been changed:
+
+Troopers/Trooper:
+-----------------
+These units have big impact on units now. They can take out a tank/quad in a few shots. Though tanks
+cannot kill any infantry with their massive firepower. Yet they do have effect on structures and other
+units.
+
+Infantry/Soldier:
+-----------------
+These units have little to no effect on bigger units, but they are the best weapon against the Trooper
+and Troopers. Having no soldiers around your base, makes it a lot tougher to defend it. Even trikes
+and Quads will have a worse time to take out Trooper/Troopers then the Infantry/Soldier.
+
+Quad/Trike/Raider:
+------------------
+These units are quick and have machineguns, so they are better against legged units. They can take out
+any infantry (troopers, etc) quicker then any other tracked unit. In groups these units can be a 
+massacre for any infantry legion.
+
+Tank/Siege Tank:
+----------------
+With their massive brute force firepower, the tanks can take out any wheeled units without trouble.
+They do have a lot of trouble with Troopers and the Trooper. A few Troopers take out tanks in no-time
+so its not wise just to use these units.
+
+Rocket Launcher:
+----------------
+Like in the original Dune 2. These units are devastating, when set on the right range towards their
+target. It is not wise to use them against units who like to fire at close range. Once the target 
+gets too near, the rockets will never hit their target and miss terribly. These units are perfect
+for taking out bases quickly, especially turrets while your tanks distract the turrets firepower
+from the Launcher.
+
+Devastator/Sonic Tank:
+----------------------
+These units are accessible once you have built the House of IX and upgraded your Heavy Factory. 
+The units deliver more firepower. The Devastator has more armor and is harder to destroy; yet it is 
+a slow tank. When destroyed the Devastator will take any surrounding units/structures with it or
+damage them horribly.
+
+The Sonic Tank uses a sonic wave to attack its units. Effective against infantry and troopers! It
+is fast but it lacks armor. Therefor it is easy to destroy.
+
+Deviator:
+---------
+The Deviator acts like a normal Rocket Launcher. However, by firing its nerve gas it will convert
+any unit to its own side. (Unlike Dune 2, the units will STAY that way and not be converted back).
+The unit is fast, light-weighted and has little armor; thus easily to destroy. However, do NOT
+underestimate the power and danger of this unit!
+
+
+=======
+CREDITS
+=======
+Dune 2 - The Maker could never get this far, without the help of the following people:
+
+Libraries:
+Allegro (www.allegro.cc)
+AlFONT  (Javier Gonzalez)
+
+Contributors:
+Vidiware (www.vidiware.com)
+Jesse Reid (Gobalopper, www.dune2k.com)
+Amarillion (allegro.cc)
+Jpexs	   (dune 2 seedmap generator)
+Rene	   (for the D2TM skirmish map editor)
+Rozmy      (improved gfx since 0.7.0)
+Timen
+Nema Fakei
+MrFlibble
+Guillaume Lavoie
+Dennis Stansert
+Ash
+Ruurd Nijdam
+rphl
+Rene
+Paul (code contributions)
+Miria (code contributions)
+
+
+Books / Must reads:
+C++ Grand Cru (Stevem Holzner)
+Game Programming Patterns - http://gameprogrammingpatterns.com/
+
+D2TM is based on:
+
+Dune 2 - "The Battle for Arrakis" by Westwood Studios & Virgin Interactive
+
+Credits of DUNE II (not affiliated with this remake):
+-----------------------------------------------------
+
+Design					Joseph Bostic, Aaron E. Powell
+Programming				Joseph Bostic, Scott K. Bowen
+Graphics / Artwork		Elie Arabian, Aaron E. Powell, Ren Olsen, Judith Peterson, Eric Shults
+Musical Lead and Sound Effect Verification	
+						Paul S. Mudra
+						
+Music					Frank Klepacki, Dwight K. Okahara
+Sound					Frank Klepacki, Dwight K. Okahara
+Cover Art				Lauren Rifkin
+Documentation			Lisa A. Ballan, Lisa Marcinko
+Producer				Brett Sperry
+Director				Aaron E. Powell, Lyle J. Hall
+Project Coordination in UK	
+						Dan Marchant, Peter Hickman
+						
+Writing / Dialogue / Story	Rick Gush, Donna J. Bundy
+
+Quality Assurance	
+						Jesse Clemit, 
+						Matt Collins, 
+						Patrick J. Collins, 
+						Scott J. Duckett, 
+						William F. Foster, 
+						Michael S. Glosecki, 
+						Danny Lewis, 
+						Michael Lightner, 
+						Eugene Martin, 
+						Justin Norr, 
+						Glenn Sperry, 
+						Noah Tool, 
+						Matthew Spall, 
+						John Martin, 
+						Darren Lloyd, 
+						Ken Jordan, 
+						Richard Hewison, 
+						Paul Coppins
+						
+Coordination of Art & Design	
+						Matthew Walker
+						
+Manual Design for UK, Germany, France & Italy	
+						Definition
+						
+Acting / Voiceovers	
+						Donna J. Bundy, Frank Klepacki, Eric Shults, Glenn Sperry, Julie Stainer
+						
+Special Thanks To	
+						David Bishop, Marc Cram, David A. Luehmann
+						
+European Cover Design	
+						Andrew Wright

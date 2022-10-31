@@ -1,0 +1,7 @@
+[Defaults]
+Remind=14
+RemindSection=OFFER
+Regrmdr=$(HOME)\ITP.EXE REGRMDR.SEQ
+FirstScreen=io_iden
+
+

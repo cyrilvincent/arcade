@@ -1,0 +1,11 @@
+; Microhelp Demo
+[Defaults]
+Remind=14
+RemindSection=iomega
+Regrmdr=$(HOME)\ITP.EXE REGRMDR.SEQ
+IniFile=REGRMDR.INI
+FirstScreen=REGRMDR1
+
+
+
+

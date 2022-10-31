@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE>Getting started...</TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.0  (Win32)">
+	<META NAME="CREATED" CONTENT="19970101;202560">
+	<META NAME="CHANGED" CONTENT="19970101;4254157">
+	<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+	<STYLE>
+	<!--
+		P { color: #000000; font-family: "Verdana", "Helvetica", "Arial", sans-serif; font-size: 10pt }
+		H2 { color: #000000 }
+		A:link { color: #ffffff; font-weight: bold; background: transparent; text-decoration: none }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="fr-FR" TEXT="#000000" LINK="#ffffff" BGCOLOR="#90a1b3" DIR="LTR">
+<H2><FONT FACE="Verdana, sans-serif">Outils Binaires ...</FONT></H2>
+<P>Cet outil permet la modification d'une image de disquette gr&acirc;ce
+&agrave; des outils de base Couper, superposer, allonger ou r&eacute;tr&eacute;cir.</P>
+<P><B><U>Le &laquo;&nbsp;File trimmer&nbsp;&raquo;</U> :</B></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P><IMG SRC="../png/dsk11.bmp" NAME="Image3" ALIGN=BOTTOM WIDTH=16 HEIGHT=16 BORDER=0>
+<B><FONT FACE="Verdana, sans-serif">Il permet de couper un &laquo;&nbsp;Header&nbsp;&raquo;
+(ou l'ent&ecirc;te d'un fichier) dans un format diff&eacute;rent &agrave;
+partir d'un index de d&eacute;calage.  </FONT></B>
+</P>
+<UL>
+	<P STYLE="font-weight: medium">Exemple: Pour la conversion de
+	fichiers ATR en XFD, il suffit de  d&eacute;terminer une ent&ecirc;te
+	de 16 octets sur le format ATR, et de sauvegarder le fichier obtenu
+	en XFD.</P>
+	<P STYLE="font-weight: medium"></P>
+</UL>
+<P><B><U>Le &laquo;&nbsp;Boot patcher&nbsp;&raquo;</U> :</B></P>
+<P><IMG SRC="../png/dsk11.bmp" NAME="Image2" ALIGN=BOTTOM WIDTH=16 HEIGHT=16 BORDER=0>
+ <B><FONT FACE="Verdana, sans-serif">Il permet de superposer un
+fichier Boot ou ent&ecirc;te sur une disquette. </FONT></B>
+</P>
+<UL>
+	<P STYLE="font-weight: medium">Exemple: Je veux cr&eacute;er une
+	disquette Cpm avec un fichier boot d'une autre disquette ou changer
+	l'ent&ecirc;te du M&eacute;dia.</P>
+	<P STYLE="font-weight: medium"></P>
+</UL>
+<P><B><U>Le &laquo;&nbsp;Raw format converter&nbsp;&raquo;</U> :</B></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P><IMG SRC="../png/dsk11.bmp" NAME="Image1" ALIGN=BOTTOM WIDTH=16 HEIGHT=16 BORDER=0>
+<B>Il Permet de changer le format d'une disquette image en mode
+native pour la convertir dans un autre format</B></P>
+<P><B>Pour r&eacute;duire ou augmenter la taille d'une disquette.</B></P>
+<UL>
+	<LI><P><B>R&eacute;duire la taille d'une image: </B><SPAN STYLE="font-weight: medium">le
+	fichier est tronqu&eacute; aux dimensions du support choisit <I>(les
+	donn&eacute;es en trop seront supprim&eacute;es du fichier
+	sauvegard&eacute;)</I>.</SPAN></P>
+	<P STYLE="font-weight: medium">Exemple: Je veux r&eacute;cup&eacute;rer
+	une disquette de 720ko au lieu de 1440ko ou bien r&eacute;cup&eacute;rer
+	une disquette de 5 Mo apr&egrave;s &ecirc;tre pass&eacute; dans un
+	&eacute;mulateur ( sur CPC ce n'est pas rare ) .</P>
+	<P STYLE="font-weight: medium"><I><U>Nota</U>: Sous Dos, pour
+	r&eacute;cup&eacute;rer un m&eacute;dia stable, il faut &laquo;&nbsp;patcher&nbsp;&raquo;
+	un nouveau &laquo;&nbsp;boot-strap&nbsp;&raquo;, une nouvelle ent&ecirc;te
+	de disque.</I></P>
+	<LI><P><B>Pour augmenter la taille d'une disquette d'une disquette.</B></P>
+	<P><B>Augmenter la taille d'une image : </B><SPAN STYLE="font-weight: medium">le
+	fichier est augment&eacute; d'autant avec un caract&egrave;re
+	d&eacute;fini. Pour Passer d'un support physique &agrave; un autre.</SPAN></P>
+	<P><SPAN STYLE="font-weight: medium"><U>Exemples</U>: Je veux
+	augmenter la taille d'une disquette syst&egrave;me de 720ko au lieu
+	de 1440ko pour y placer un logiciel &agrave; d&eacute;marrage
+	automatique. (m&ecirc;mes pr&eacute;caution avec le boot-strap
+	Ms-DOS) ou l'image disque que j'ai r&eacute;cup&eacute;r&eacute;
+	poss&egrave;de des erreurs de lecture et ne fait que 650ko sur les
+	720ko! La taille correcte peut &ecirc;tre retrouv&eacute;e ou une
+	image CopyQM n'est pas assez grande! (information du format dans
+	l'ent&ecirc;te du fichier)</SPAN></P>
+	<P STYLE="font-weight: medium">Pourquoi en mode Natif [IMG] ?</P>
+	<P STYLE="font-weight: medium">En fait, pour une raison simple : les
+	formats &agrave; structure propri&eacute;taire poss&eacute;dent des
+	informations sur la structure proprement dite : le nombre de
+	secteurs, de pistes, sur la capacit&eacute; de clusters ... et
+	peuvent m&ecirc;me poss&eacute;der des informations sur chaque
+	secteur!</P>
+	<P STYLE="font-weight: medium">Dans ce cas, le fichier sera rejeter
+	par le logiciel h&ocirc;te, m&ecirc;me s'il supporte la taille du
+	format donn&eacute;.</P>
+	<P STYLE="font-weight: medium">Une conversion &agrave; l'aide d'un
+	utilitaire sp&eacute;cial sera donc utile pour ressortir les pistes
+	une &agrave; une.  
+	</P>
+</UL>
+</BODY>
+</HTML>

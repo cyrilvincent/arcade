@@ -1,0 +1,79 @@
+ 		 \ \      / (_)_ __ |___ /_  __  ___  _ __ __ _ 
+		  \ \ /\ / /| | '_ \  |_ \ \/ / / _ \| '__/ _` |
+		   \ V  V / | | | | |___) >  < | (_) | | | (_| |
+		    \_/\_/  |_|_| |_|____/_/\_(_)___/|_|  \__, |
+  	 	                                          |___/  
+
+Uploadé sur win3x.org... protection et sauvegarde du patrimoine informatique.
+blablabla, venez, c'est trop bien. 
+
+Fichier téléchargé sur http://win3x.org/win3board/index.php :
+
+Archive : MSWord11_fr.zip  => Microsoft Word 1.10 version française (Windows 2.11 ou sup)
+
+Origine : disquettes perso
+
+---------------------------
+Informations sur la somme de contrôle
+---------------------------
+Fichiers: DISK1.IMA
+Dossiers: 0
+Taille: 737280 octets
+Somme de contrôle des données 44749308
+Somme de contrôle des données et des noms C1CC7725
+SHA-256: F1F10895AF311787DFA0B483485C3C8043D2367D9BC3BDF5B1A7484B0E86E372
+---------------------------
+Fichiers: disk2.IMA
+Dossiers: 0
+Taille: 737280 octets
+Somme de contrôle des données 31C87D7F
+Somme de contrôle des données et des noms B5EC2982
+SHA-256: B444A632761948020547EDDC63C4E85D847BFF82B462062AF3B3A9D534629265
+---------------------------
+Fichiers: disk3.IMA
+Dossiers: 0
+Taille: 737280 octets
+Somme de contrôle des données E4CA6A49
+Somme de contrôle des données et des noms 644D7046
+SHA-256: 252D53B7BCF5953129D51C0AF1BE326A67DAF570EBA82BE619908B9CB78FCC69
+---------------------------
+Fichiers: disk4.IMA
+Dossiers: 0
+Taille: 737280 octets
+Somme de contrôle des données D3664DE1
+Somme de contrôle des données et des noms D79A3EB9
+SHA-256: 394DA6633D4A88B95D010745AAEF927EC5D771CC4AA5293EEA3C733299265C9C
+---------------------------
+---------------------------
+Informations sur la somme de contrôle
+---------------------------
+Fichiers: disk5.IMA
+Dossiers: 0
+Taille: 737280 octets
+Somme de contrôle des données 943618CE
+Somme de contrôle des données et des noms B47BE5D9
+SHA-256: 3CAB8B3711236A67AEDD967773221506812111C311EE7B46D90C2B05CDA53E39
+---------------------------
+Fichiers: disk6.IMA
+Dossiers: 0
+Taille: 737280 octets
+Somme de contrôle des données 9151145B
+Somme de contrôle des données et des noms 5959268C
+SHA-256: 31E967D620A1A0D63A771742715283491D9304C2493220FBF5360855B5296F4B
+---------------------------
+Fichiers: disk7.IMA
+Dossiers: 0
+Taille: 737280 octets
+Somme de contrôle des données 9B85567C
+Somme de contrôle des données et des noms A4131ED4
+SHA-256: 9A99E0B3948F08C6C88CA38B69317AF394BE86ECF18CD0BECE28A633F42D33E7
+---------------------------
+Fichiers: disk8.IMA
+Dossiers: 0
+Taille: 737280 octets
+Somme de contrôle des données 98935EBB
+Somme de contrôle des données et des noms E20BAB41
+SHA-256: 29DD1BAD441B6FA1181F1E78B0401F4E0C42217DE6A0BCFD4DD1C82417CDD598
+---------------------------
+OK   
+---------------------------

@@ -1,0 +1,4 @@
+Démarrer Thom dans dosbox
+esc
+Mettre le basic.m7 en cartouche
+Mettre l'aigle d'or en k7

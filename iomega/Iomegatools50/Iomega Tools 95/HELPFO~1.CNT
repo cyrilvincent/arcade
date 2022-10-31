@@ -1,0 +1,15 @@
+:Base Guest95.HLP>(w95sec)
+:Title Help for Guest95
+1 What is Guest95
+2 What is Guest95?=What_is_Guest95
+2 Guest95 and Iomega Setup95=Guest95_and_Iomega_Setup95
+2 Guest for Other Systems=Guest_for_Other_Systems
+1 Using Guest95
+2 Why run Guest95?=Why_run_Guest95
+2 How to run Guest95=How_to_run_Guest95
+1 Solving Problems
+2 Guest95 Does Not Assign a Drive Letter=Guest95_Does_Not_Assign_a_Drive_Letter
+2 Resolving Adapter Conflicts=Resolving_Adapter_Conflicts
+2 Guest95 Hangs or No Drives are Found=Manual_Adapter_Installation
+2 Shifting Drive Letters=Shifting_Drive_Letters
+2 Multiple Drive Letters=Multiple_Drive_Letters

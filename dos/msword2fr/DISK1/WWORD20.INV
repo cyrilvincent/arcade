@@ -1,0 +1,1375 @@
+	
+
+
+[dialog]
+	caption = "Installation de Microsoft Word 2.0c"
+
+
+[data]*W
+	langpatch = 1036
+	1000Seperator = ,
+	defdir = C:\WINWORD
+	shortname = Microsoft Word Install
+	alldesc = Installation de MS Word pour Windows
+    str001 = "MS Graphic Import Filters","Windows Metafile(.WMF)",%wgrphflt\
+    str002 = ,"MSDraw\protocol\StdFileEditing\server",%wmsdraw\
+    str003 = ,"MSGraph\protocol\StdFileEditing\server",%wmsgraph\
+    str004 = ,"Equation\protocol\StdFileEditing\server",%wequation\
+    str005 = "MS Graphic Import Filters", "DrawPerfect(.WPG)", %wgrphflt\
+    str006 = "MS Graphic Export Filters", "DrawPerfect(.WPG)", %wgrphflt\
+    str007 = "MS Graphic Import Filters", "Micrografx Designer/Draw(.DRW)", %wgrphflt\
+    str008 = "MS Graphic Import Filters", "AutoCAD Format 2-D(.DXF)", %wgrphflt\
+    str009 = "MS Graphic Import Filters", "HP Graphic Language(.HGL)", %wgrphflt\
+    str010 = "MS Graphic Import Filters", "Computer Graphics Metafile(.CGM)", %wgrphflt\
+    str011 = "MS Graphic Import Filters", "Encapsulated Postscript(.EPS)", %wgrphflt\
+    str012 = "MS Graphic Import Filters", "Tagged Image Format(.TIF)", %wgrphflt\
+    str013 = "MS Graphic Import Filters", "PC Paintbrush(.PCX)", %wgrphflt\
+    str014 = "MS Graphic Import Filters", "Lotus 1-2-3 Graphics(.PIC)", %wgrphflt\
+    str015 = "MS Graphic Import Filters", "AutoCAD Plot File(.PLT)", %wgrphflt\
+    str016 = ,"WordArt\protocol\StdFileEditing\server",%wwordart\
+    
+[data]
+	langpatch = 1036
+    1000Seperator = ,
+    defdir = C:\WINWORD
+    shortname = Microsoft Word Install
+	alldesc = Installation de MS Word pour Windows
+    str001 = "MS Graphic Import Filters","Windows Metafile(.WMF)",%m\grphflt\
+    str002 = ,"MSDraw\protocol\StdFileEditing\server",%m\msdraw\
+    str003 = ,"MSGraph\protocol\StdFileEditing\server",%m\msgraph\
+    str004 = ,"Equation\protocol\StdFileEditing\server",%m\equation\
+    str005 = "MS Graphic Import Filters", "DrawPerfect(.WPG)", %m\grphflt\
+    str006 = "MS Graphic Export Filters", "DrawPerfect(.WPG)", %m\grphflt\
+    str007 = "MS Graphic Import Filters", "Micrografx Designer/Draw(.DRW)", %m\grphflt\
+    str008 = "MS Graphic Import Filters", "AutoCAD Format 2-D(.DXF)", %m\grphflt\
+    str009 = "MS Graphic Import Filters", "HP Graphic Language(.HGL)", %m\grphflt\
+    str010 = "MS Graphic Import Filters", "Computer Graphics Metafile(.CGM)", %m\grphflt\
+    str011 = "MS Graphic Import Filters", "Encapsulated Postscript(.EPS)", %m\grphflt\
+    str012 = "MS Graphic Import Filters", "Tagged Image Format(.TIF)", %m\grphflt\
+    str013 = "MS Graphic Import Filters", "PC Paintbrush(.PCX)", %m\grphflt\
+    str014 = "MS Graphic Import Filters", "Lotus 1-2-3 Graphics(.PIC)", %m\grphflt\
+    str015 = "MS Graphic Import Filters", "AutoCAD Plot File(.PLT)", %m\grphflt\
+    str016 = ,"WordArt\protocol\StdFileEditing\server",%m\wordart\
+
+[vercheck]
+	msdraw =   %s002msdraw.exe,  65536,  206696
+	msgraph =  %s003GRAPH.EXE,  196608,  131072
+	equation = %s004EQNEDIT.EXE, 65536, 1255272
+	wordart =  %s016wordart.exe, 65536,	 16
+
+
+[disks]
+	1 =.,		   "Disque 1 (Installation)"
+	2 =.,		   "Disque 2"
+	3 =.,		   "Disque 3"
+	4 =.,		   "Disque 4"
+	5 =.,		   "Disque 5"
+	6 =.,		   "Disque 6"
+	7 =.,		   "Disque 7"
+	8 =.,		   "Disque 8"
+
+
+
+[needed]
+    minspace = 524288
+
+
+[options]
+     app.spiff,         "Microsoft Word", 0, 7, progman.word
+	 app.embed, 		 "Draw, Graph, Editeur d'équations, WordArt", 0, 2, progman.null, suboptions_embed, "Installer outils:", "Outils..."
+	 app.prooftls,			"Outils de vérification français", 0, 2, progman.null, suboptions_prooftls, "Installer outils de vérification pour:", "Outils de vérification..."
+	 app.ukprooftls,		  "Outils de vérification anglais", 0, 2, progman.null, suboptions_ukprooftls, "Installer outils de vérification anglais pour:", "Outils de vérification..."
+	 app.conv,			"Convertisseurs / Filtres graphiques", 0, 2, progman.null, suboptions_conv, "Installer convertisseurs / filtres pour:", "Convertisseurs ..."
+	 app.cbt,				   "Leçons en ligne", 0, 2, progman.null, suboptions_cbt, "Installer leçons:", "Leçons..."
+	 app.help,			"Aide", 0, 2, progman.null
+	 app.sample,		  "Exemples de modèles et Clip Art", 0, 2, progman.null, suboptions_samples, "Installer les exemples:", "Exemples..."
+
+
+
+[suboptions_embed]
+"Draw", set.draw, 2
+"Graph", set.graph, 2
+"Editeur d'équations", app.equation, 2
+"WordArt", set.fontfx, 2
+
+[suboptions_prooftls]
+"Vérificateur orthographique", set.spell1, 2
+"Césure", set.hyph, 2
+"Dictionnaire des synonymes", set.thes1, 2
+"Grammaire", set.grammar, 2
+
+[suboptions_ukprooftls]
+"Vérificateur orthographique", set.ukspell1, 162, "Si vous décidez d'installer uniquement le vérificateur orthographique anglais, quelques leçons du CBT ne fonctionneront pas."
+"Césure", set.ukhyph, 2,"
+"Dictionnaire des synonymes", set.ukthes1, 2,
+
+
+
+[suboptions_conv]
+"Texte avec mise en forme (DOS)", set.pc8, 2
+"Texte avec mise en forme", set.ansi, 2
+"WordPerfect 5.0, 5.1", set.wp5, 2
+"WordPerfect 4.2, 4.1", set.wp, 2
+"Word 1.x pour Windows", set.wwrd, 2
+"Word pour MS-DOS", set.pcword, 2
+"Word pour le Macintosh", set.macword, 2
+"Works pour Windows", set.wwrks, 2
+"Works pour MS-DOS", set.wrks, 2
+"RFT-DCA", set.dca, 2
+"Multimate 4.0, Adv II, Advantage, 3.3", set.mltmt, 2
+"WordStar 5.5, 5.0, 4.0, 3.45, 3.3", set.ws, 2
+"Windows Write", set.write, 2
+"Microsoft Excel", set.bif, 2
+"Lotus 1-2-3", set.123, 2
+"Multiplan", set.mltp, 2
+"dBASE", set.dbase, 2
+"Filtre Windows Metafile", set.wmf, 2
+"Filtre d'importation DrawPerfect", set.wpg, 2
+"Filtre d'exportation DrawPerfect", set.wpgexp, 2
+"Filtre Micrografx Designer/Draw", set.drw, 2
+"Filtre de format AutoCAD", set.dxf, 2
+"Filtre de langage graphique HP", set.hpgl, 2
+"Filtre Computer Graphics Metafile", set.cgm, 2
+"Filtre Encapsulated PostScript", set.eps, 2
+"Filtre Tagged Image Format", set.tiff, 2
+"Filtre PC Paintbrush", set.pcx, 2
+"Filtre graphique Lotus 1-2-3", set.pic, 2
+"Filtre AutoCAD Plot File", set.adi, 2
+
+
+[suboptions_cbt]
+"Mise en route", app.gstart, 2
+"Apprentissage de Word", app.lword, 2
+
+[suboptions_samples]
+"Modèles", set.template, 2
+"Clip Art", set.clipart, 2
+
+[user]
+f4HbVJP7?R9gMu6XjJx0UmG.bRpD5eOsAZhLv4WkIy?TnF1cQqltg?
+C7fNt8YiKw2VlHzaSoE3dPrB9gMu6XjJx0UmG.bRpD5eOsAZhLFsRa
+
+[cleansect]
+	@C,"Microsoft Word","AskforPrinterPicture","Microsoft Word 2.0"  
+	@C,"Microsoft Word","BAK-Extension","Microsoft Word 2.0"  
+	@C,"Microsoft Word","DateFormat","Microsoft Word 2.0"  
+	@C,"Microsoft Word","DDETIMEOUT","Microsoft Word 2.0"  
+	@C,"Microsoft Word","DOC-Extension","Microsoft Word 2.0"  
+	@C,"Microsoft Word","DOT-Extension","Microsoft Word 2.0"  
+	@C,"Microsoft Word","DOT-path","Microsoft Word 2.0"  
+	@C,"Microsoft Word","INI-path","Microsoft Word 2.0"  
+	@C,"Microsoft Word","TimeFormat","Microsoft Word 2.0"  
+	@C,"Microsoft Word","LoadCore","Microsoft Word 2.0"  
+	@C,"Microsoft Word","NovellNet","Microsoft Word 2.0"  
+	@C,"Microsoft Word","UnderlineMode","Microsoft Word 2.0"  
+	@C,"Microsoft Word","util-path","Microsoft Word 2.0", "tools-path" 
+	@,"Microsoft Word 2.0", "HPDSKJET", ""
+	0:CONV-WRD.DLL, ,^
+	0:CONV-MCW.DLL, ,^
+	0:CONV-DCA.DLL, ,^
+	0:CONV-WP5.DLL, ,^
+	0:CONV-WP.DLL,  ,^
+	0:CONV-WS.DLL,  ,^
+	0:CONV-TXT.DLL, ,^
+	0:CONV-TX8.DLL, ,^
+	0:CGMMPORT.FLT, ,^
+	0:ADIMPORT.FLT, ,^
+	0:HPGLIMP.FLT,  ,^
+	0:LOTUSPIC.FLT, ,^
+	0:DRAW.FLT,     ,^
+	0:WMF.FLT,      ,^
+	0:PCXIMP.FLT,   ,^
+	0:TIFF.FLT,     ,^
+	0:EPSIMP.FLT,   ,^
+	0:HYPH.DAT,     ,^
+	0:LEX-FR.DAT,	,^
+	0:LEX-FR.DLL,	,^
+	0:SYN-FR.DAT,	,^
+	0:SYN-FR.DLL,	,^
+	0:WHELP.EXE,    ,^
+	0:WINWORD.CBT\WINWORD.CBT, ,^
+        0:WINWORD.CBT\ARTICLE.DOC, ,^
+        0:WINWORD.CBT\BATEAUX.DOC, ,^
+        0:WINWORD.CBT\CATALOGUE.DOC, ,^
+        0:WINWORD.CBT\DOCUMENT.DOC, ,^
+        0:WINWORD.CBT\EMPLOI.DOC, ,^
+        0:WINWORD.CBT\ICARE.DOC, ,^
+        0:WINWORD.CBT\NOEUDS.DOC, ,^
+	0:WINWORD.CBT\GENBAUX.DOC, ,^
+	0:WINWORD.CBT\COURS.DOC, ,^
+        0:WINWORD.CBT\MARCHE.DOC, ,^
+        0:WINWORD.CBT\MARC.DOC, ,^
+        0:WINWORD.CBT\NEPAL.DOC, ,^
+        0:WINWORD.CBT\DEVINER.DOC, ,^
+        0:WINWORD.CBT\BULLETIN.DOC, ,^
+        0:WINWORD.CBT\ORIENT.DOC, ,^
+        0:WINWORD.CBT\EMBALLER.DOC, ,^
+        0:WINWORD.CBT\REVUE.DOC, ,^
+        0:WINWORD.CBT\VOILES.DOC, ,^
+        0:WINWORD.CBT\OBJECTIF.DOC, ,^
+        0:WINWORD.CBT\SUGCOURS.DOC, ,^
+        0:WINWORD.CBT\ARTICLE.DOT, ,^
+        0:WINWORD.CBT\BROCHDON.DOT, ,^
+        0:WINWORD.CBT\BROCHFUS.DOT, ,^
+        0:WINWORD.CBT\BROCHURE.DOT, ,^
+	0:WINWORD.CBT\CBTNORM.DOT, ,^
+	0:WINWORD.CBT\CONTRAT.DOT, ,^
+	0:WINWORD.CBT\DOSSIER.DOT, ,^
+	0:WINWORD.CBT\MACRECO.DOT, ,^
+        0:WINWORD.CBT\DONDOC.DOT, ,^
+        0:WINWORD.CBT\EXEMPLE.DOT, ,^
+        0:WINWORD.CBT\MEMO.DOT, ,^
+        0:WINWORD.CBT\MEMOIRE.DOT, ,^
+        0:WINWORD.CBT\OFFRE.DOT, ,^
+        0:WINWORD.CBT\COTRE.TIF, ,^
+        0:WINWORD.CBT\FLOTTE.TIF, ,^
+        0:WINWORD.CBT\BONBON.TIF, ,^ 
+        0:WINWORD.CBT\YOLE.TIF, ,^ 
+        0:WINWORD.CBT\WINWORD.LIB, ,^ 
+	0:WINWORD.CBT\WINWORD.LES, ,^
+
+
+[init-file]@30A0
+	1:DLL\VER.DLL,	 DLL,o:,0,136,18414
+	1:DLL\SHELL.DLL, DLL,o:,0,129,24384
+
+[app.spiff]*M
+	 #set.oledll
+	 #set.minspiff
+	 #set.fsympcl
+	 #set.fsympcl5a
+	 #set.sfont
+	 #set.printdrv
+	 #set.draw
+	 #set.graph
+	 #set.spell1
+	 #set.hyph
+	 #set.help
+	 #set.readme
+
+[app.spiff]
+	 #set.oledll
+	 #set.spiff
+	 #set.fsympcl
+	 #set.fsympcl5a
+	 #set.sfont
+	 #set.printdrv
+	 #set.wphelp
+	 #set.readme
+
+[app.embed]
+	 #set.draw
+	 #set.graph
+	 #app.equation
+	 #set.fontfx
+
+[app.prooftls]
+	 #set.spell1
+	 #set.hyph
+	 #set.thes1
+	 #set.grammar
+
+[app.ukprooftls]
+	 #set.ukspell1
+	 #set.ukhyph
+	 #set.ukthes1
+
+[app.conv]
+	 #set.pc8
+	 #set.ansi
+	 #set.wp5
+	 #set.wp
+	 #set.wwrd
+	 #set.pcword
+	 #set.macword
+	 #set.wwrks
+	 #set.wrks
+	 #set.dca
+	 #set.mltmt
+	 #set.ws 
+	 #set.write
+	 #set.bif
+	 #set.123
+	 #set.mltp
+	 #set.dbase
+	 #set.wmf
+	 #set.wpg
+	 #set.wpgexp
+	 #set.drw
+	 #set.dxf
+	 #set.hpgl
+	 #set.cgm
+	 #set.eps
+	 #set.tiff
+	 #set.pcx
+	 #set.pic
+	 #set.adi
+
+[app.equation]
+	 #set.equation
+	 #set.feepcl
+	 #set.feepcl5a
+	 #set.feeps
+	 #set.feescreen
+	 #set.fttee
+
+[app.cbt]
+	#set.gstart
+	#set.lword
+	#set.cbtall
+
+[app.gstart]
+	#set.gstart
+	#set.cbtall
+
+[app.lword]
+	#set.lword
+	#set.cbtall
+
+[app.help]
+	 #set.help
+
+[app.sample]
+	 #set.template
+	 #set.clipart
+
+
+[set.minspiff]
+	!,"WordDocument", "Document Word"
+	!,"WordDocument\protocol\StdFileEditing\server", "%0\winword.exe"
+	!,"WordDocument\protocol\StdFileEditing\verb\0", "Edition"
+	!,".DOC", "WordDocument"
+	!,"WordDocument\shell\open\command", "%0\winword.exe"
+	!,"WordDocument\shell\open\ddeexec", "[FichierOuvrir(#034%%1#034)]"
+	!,"WordDocument\shell\print\command", "%0\winword.exe"
+	!,"WordDocument\shell\print\ddeexec", "[FichierOuvrir(#034%%1#034)][FichierImprimer()][DocFermeture(2)]"
+	!,"WordDocument\shell\print\ddeexec\ifexec", "[FichierOuvrir(#034%%1#034)][FichierImprimer()][FichierQuitter(2)]"
+	@,"Extensions", "reg", "regedit.exe ^.reg"
+	@,"Extensions", "doc", "%0\winword.exe ^.doc"
+	@,"Extensions", "dot", "%0\winword.exe ^.dot"
+	@,"Extensions", "rtf", "%0\winword.exe ^.rtf"
+       +2,"bbtb1"
+	2:WINWORD.EX$,	EXE,0:,16, 1,1298848,"Fichier programme Word pour Windows"
+       ;@,"Microsoft Word 2.0", "Novellnet", "YES"
+	@,"Microsoft Word 2.0", "autosave-path", "%0", 1
+	@,"Microsoft Word 2.0", "INI-path", "%0", 1
+	@,"Microsoft Word 2.0", "programdir", "%0"
+       +1,"bbRegCard"
+	1:DIALOG.FO$,  FON,0:,0,1,15680,"Polices"
+	#set.docpath
+
+
+[set.spiff]
+	!,"WordDocument", "Document Word"
+	!,"WordDocument\protocol\StdFileEditing\server", "%0\winword.exe"
+	!,"WordDocument\protocol\StdFileEditing\verb\0", "Edition"
+	!,".DOC", "WordDocument"
+	!,"WordDocument\shell\open\command", "%0\winword.exe"
+	!,"WordDocument\shell\open\ddeexec", "[FichierOuvrir(#034%%1#034)]"
+	!,"WordDocument\shell\print\command", "%0\winword.exe"
+	!,"WordDocument\shell\print\ddeexec", "[FichierOuvrir(#034%%1#034)][FichierImprimer()][DocFermeture(2)]"
+	!,"WordDocument\shell\print\ddeexec\ifexec", "[FichierOuvrir(#034%%1#034)][FichierImprimer()][FichierQuitter(2)]"
+	@,"Extensions", "reg", "regedit.exe ^.reg"
+	@,"Extensions", "doc", "%0\winword.exe ^.doc"
+	@,"Extensions", "dot", "%0\winword.exe ^.dot"
+	@,"Extensions", "rtf", "%0\winword.exe ^.rtf"
+	@,"MSWord Editable Sections", "DCAConv", "yes"
+	@,"MSWord Editable Sections", "TextLytConv", "yes"
+	@,"MSWord Editable Sections", "PCWordConv", "yes"
+	@,"MSWord Editable Sections", "MacWordConv", "yes"
+	@,"MSWord Editable Sections", "PCWorksConv", "yes"
+	@,"DCAConv", "foo", "yes"
+	@,"DCAConv", "foo", ""
+	@,"TextLytConv", "foo", "yes"
+	@,"TextLytConv", "foo", ""
+	@,"PCWordConv", "foo", "yes"
+	@,"PCWordConv", "foo", ""
+	@,"MacWordConv", "foo", "yes"
+	@,"MacWordConv", "foo", ""
+	@,"PCWorksConv", "foo", "yes"
+	@,"PCWorksConv", "foo", ""
+       +2,"bbtb1"
+	2:WINWORD.EX$,	EXE,0:,16, 1,1298848,"Fichier programme Word pour Windows"
+       ;@,"Microsoft Word 2.0", "Novellnet", "YES"
+	@,"Microsoft Word 2.0", "AUTOSAVE-path", "%0", 1
+	@,"Microsoft Word 2.0", "INI-path", "%0", 1
+	@,"Microsoft Word 2.0", "programdir", "%0"
+	8:MACRODE.EX$, EXE,0:,0,1,105680,"Dialog Editor"
+	+1,"bbRegCard"
+	1:INSTALL.EX$,	EXE,0:,0,1,197584,"Programme d'installation"
+	1:WWORD20.INF, INF,0:,0,1,54373
+	1:DIALOG.FO$,  FON,0:,0,1,15680,"Polices"
+	#set.docpath
+
+[set.docpath]*W
+	@,"Microsoft Word 2.0", "DOC-path", "%0", 1
+
+[set.printdrv]*S
+	#set.drvfiles
+
+[set.printdrv]@30A0^P(HPPCL5A)
+	w:FS5*.PCL, ,^
+	o:FS5*.PCL, ,^
+	#set.drvfiles
+
+[set.drvfiles]*W
+	8:HP_IMPR\HPPCL5A.DR$, DRV, o:, 0, 193, 426272,"Gestionnaire HP LaserJet III Win 3.0 mis à jour"
+	8:HP_IMPR\HPPCL5A.HL$, HLP, o:, 0, 193,  27683
+	8:HP_IMPR\FINSTALL.DL$,DLL, o:, 0, 193, 201248
+	8:HP_IMPR\FINSTALL.HL$,HLP, o:, 0, 193,  28821
+
+[set.drvfiles]
+	8:HP_IMPR\HPPCL5A.DR$, DRV, o:, 0, 193, 426272,"Gestionnaire HP LaserJet III Win 3.0 mis à jour"
+	7:HP_IMPR\HPPCL5A.HL$, HLP, o:, 0, 193,  27683
+	2:HP_IMPR\FINSTALL.DL$,DLL, o:, 0, 193, 201248
+	7:HP_IMPR\FINSTALL.HL$,HLP, o:, 0, 193,  28821
+
+[set.oledll]*S
+	1:DLL\*.DLL,	  DLL,o:,0,4,  42798
+	2:DLL\OLECLI.DL$, DLL,o:,0,4,  75264,"Bibliothèques OLE"
+	2:DLL\OLESVR.DL$, DLL,o:,0,4,  22528
+
+[set.oledll]@30A0*W
+	8:DLL\VER.DLL,	  DLL,o:,0,68, 18414
+	8:DLL\SHELL.DLL,  DLL,o:,0,68, 24384
+	8:DLL\OLECLI.DLL, DLL,o:,0,193,75264, "Bibliothèques OLE"
+	8:DLL\OLESVR.DLL, DLL,o:,0,193,22528
+
+[set.oledll]@30A0*H
+       +1,"bbRegCard"
+	1:DLL\VER.DLL,	  DLL,o:,0,4,  18414
+	1:DLL\SHELL.DLL,  DLL,o:,0,4,  24384
+	2:DLL\OLECLI.DL$, DLL,o:,0,129,75264,"Bibliothèques OLE"
+	2:DLL\OLESVR.DL$, DLL,o:,0,129,22528
+
+[set.draw]
+	!,"MSDraw", "Microsoft Draw"
+	!,"MSDraw\protocol\StdFileEditing\server", "%s002msdraw.exe"
+	!,"MSDraw\protocol\StdFileEditing\SetDataFormats", "CF_METAFILEPICT"
+	!,"MSDraw\protocol\StdFileEditing\RequestDataFormats", "CF_METAFILEPICT"
+       +3,"bbtb1"
+	3:MSDRAW\MSDRAW.EX$,  EXE,%s002msdraw.exe,0, 1,575552,"Outil de dessin"
+	&3, msdraw
+	3:MSDRAW\MSDRAW.HL$,  HLP,%s002msdraw.hlp,0, 1,357091,"Outil de dessin"
+	&3, msdraw
+	3:MSDRAW\16COULRS.PA$,PAL,%s00216COULRS.pal,0,1,162,"Palette"
+	&3, msdraw
+	3:MSDRAW\17GRIS.PA$,  PAL,%s00217GRIS.PAL,0,1,162,"Palette"
+	&3, msdraw
+	3:MSDRAW\47COULRS.PA$,PAL,%s00247COULRS.PAL,0,1,238,"Palette"
+	&3, msdraw
+	3:MSDRAW\86COULRS.PA$,PAL,%s00286COULRS.PAL,0,1,394,"Palette"
+	&3, msdraw
+	3:MSDRAW\GENI.PA$,    PAL,%s002GENI.PAL,0,1,410,"Palette"
+
+[set.graph]
+	!,"MSGraph", "Microsoft Graph"
+	!,"MSGraph\protocol\StdFileEditing\server", "%s003graph.exe"
+	!,"MSGraph\protocol\StdFileEditing\SetDataFormats", "Native,CF_Text"
+	!,"MSGraph\protocol\StdFileEditing\RequestDataFormats", "Native,CF_METAFILEPICT"
+	!,"MSGraph\protocol\StdExecute\server", "%s003graph.exe"
+       +1,"bbRegCard"
+	1:MSGRAPH\GRAPH.EX$, EXE,%s003GRAPH.EXE,0, 1,544768,"Outil de dessin graphique"
+	&1, msgraph
+	1:MSGRAPH\MSGRAPH.HL$, HLP,%s003MSGRAPH.HLP,0, 1,355522,"Outil de dessin graphique"
+	m:MSGRAPH\GRAPH.HLP, ,^
+
+[set.equation]
+	w:MTFONTS.INI, ,^
+	o:MTFONTS.INI, ,^
+	!,"Equation", "Editeur d'équations"
+	!,"Equation\protocol\StdFileEditing\server", "%s004eqnedit.exe"
+	!,"Equation\protocol\StdFileEditing\verb\0", "Edition"
+	!,"Equation\protocol\StdFileEditing\SetDataFormats", "Native,RTF"
+	!,"Equation\protocol\StdFileEditing\RequestDataFormats", "Native,CF_METAFILEPICT,EqnDims"
+	!,"Equation\protocol\StdExecute\server", "%s004eqnedit.exe"
+       +3,"bbtb1"
+	3:EQUATION\EQNEDIT.EX$, EXE,%s004EQNEDIT.EXE,0, 1025,378816,"Editeur d'équations"
+	&3, equation
+	3:EQUATION\EQNEDIT.HL$, HLP,%s004EQNEDIT.HLP,0, 1025,190000,"Editeur d'équations"
+
+[set.fontfx]
+	!,"WordArt", "MS WordArt"
+	!,"WordArt\protocol\StdFileEditing\server", "%s016wordart.exe"
+	!,"WordArt\protocol\StdFileEditing\verb\0", "Edition"
+       +1,"bbRegCard"
+       +3,"bbtb1"
+	3:WORDART\WORDART.EX$, EXE,%s016wordart.exe,0,1,38208,"Font Effects"
+	&3, wordart
+	3:WORDART\WORDART.HL$, HLP,%s016wordart.hlp,0,1,70382,"Font Effects"
+	&1, wordart
+	1:WORDART\FONTFX.DL$, DLL,%s016fontfx.dll,0,1,42496,"Font Effects"
+	&1, wordart
+	1:WORDART\FONTFX.FN$, FNT,%s016fontfx.fnt,0,1,387088,"Font Effects"
+
+[set.spell1]
+	@,"Microsoft Word 2.0", "Spelling 1036,0", "%0\SPELL.DLL,%0\SP_FR.LEX"
+       +8,"bbRegCard2"
+       +4,"bbdiv"
+	8:SPELL.DL$,	DLL,0:,0,1,140629,"Moteur du programme de vérification orthographique"
+	4:SP_FR.LE$,	LEX,0:,0,1,679936,"Vérificateur orthographique"
+
+[set.ukspell1]
+	@,"Microsoft Word 2.0", "Spelling 2057,0", "%0\SPELL.DLL,%0\SP_BR.LEX"
+	8:SPELL.DL$,	DLL,0:,0,1,140629,"Moteur du programme de vérification orthographique"
+	8:SP_BR.LE$,	LEX,0:,0,1,266752,"Vérificateur orthographique anglais"
+
+[set.hyph]
+	@,"Microsoft Word 2.0", "Hyphenate 1036,0", "%0\HYPH.DLL,%0\HY_FR.LEX,%0\SP_FR.LEX"
+       +2,"bbtb1"
+       +4,"bbdiv"
+       +5,"bbtb2"
+	2:HYPH.DL$,	DLL,0:,0,1,78412,"Moteur du programme de césure"
+	4:HY_FR.LE$,	LEX,0:,0,1,35328,"Césure"
+	4:SP_FR.LE$,	LEX,0:,0, 1,679936,"Césure"
+	   
+[set.ukhyph]
+	@,"Microsoft Word 2.0", "Hyphenate 2057,0", "%0\HYPH.DLL,%0\HY_BR.LEX,%0\SP_BR.LEX"
+       +2,"bbtb1"
+	2:HYPH.DL$,    DLL,0:,0,1,78412,"Moteur du programme de césure"
+	8:HY_BR.LE$,   LEX,0:,0,1,78848,"Césure anglaise"
+	8:SP_BR.LE$,   LEX,0:,0, 1,266752,"Césure anglaise"
+	   
+[set.thes1]
+	@,"Microsoft Word 2.0", "Thesaurus 1036,0", "%0\THES.DLL,%0\TH_FR.LEX"
+       +4,"bbdiv"
+	4:TH_FR.LE$, LEX,0:,0,1,388937,"Dictionnaire des synonymes"
+	8:THES.DL$,  DLL,0:,0,1,39811,"Moteur du programme Dictionnaire des synonymes"
+
+[set.ukthes1]
+	@,"Microsoft Word 2.0", "Thesaurus 2057,0", "%0\THES.DLL,%0\TH_BR.LEX"
+	8:TH_BR.LE$, LEX,0:,0,1,391745,"Dictionnaire des synonymes anglais"
+	8:THES.DL$,  DLL,0:,0,1,39811,"Dictionnaire des synonymes anglais"
+
+[set.grammar]
+	@,"Microsoft Word 2.0", "Grammar 1036,0", "%0\GR_FR.DLL,%0\GR_FR.LEX"
+       +4,"bbdiv"
+	4:GR_FR.DL$, DLL,0:,0,1,2309122,"Vérificateur grammatical"
+	4:GR_FR.LE$,   LEX,0:,0, 1,228322,"Vérificateur grammatical"
+	4:GR_FR.HL$, HLP,0:,0,1,97812,"Vérificateur grammatical"
+	4:GR_FR.INI, INI,0:,0,1,1111,"Vérificateur grammatical"
+	4:GR_FR.CO$, COD,0:,0,1,18074,"Vérificateur grammatical"
+	4:GR_FR.DI$, DIC,0:,0,1,196867,"Vérificateur grammatical"
+
+[set.pc8]
+	@,"MSWord Text Converters","DOS Text with Layout","Texte avec mise en forme (DOS), %0\TXTWLYT.CNV, asc"
+	@,"TextLytConv", "CharMaps", "a,a;"
+	@,"TextLytConv", "Width", "80"
+	@,"TextLytConv", "PointSize", "12"
+       +5,"bbtb2"
+	5:TXTWLYT.CN$, CNV,0:,0,1,176016,"Texte avec mise en forme (DOS)"
+
+[set.ansi]
+	@,"MSWord Text Converters","Text with Layout","Text avec mise en forme, %0\TXTWLYT.CNV, ans"
+	@,"TextLytConv", "CharMaps", "a,a;"
+	@,"TextLytConv", "Width", "80"
+	@,"TextLytConv", "PointSize", "12"
+       +5,"bbtb2"
+	5:TXTWLYT.CN$, CNV,0:,0,1,176016,"Texte avec mise en forme"
+
+[set.dca]
+	@,"MSWord Text Converters","RFTDCA","RFT-DCA, %0\RFTDCA.CNV, rft"
+	@,"DCAConv", "AbsLineSpacing", "no"
+	@,"DCAConv", "StrikeThrough", "'-'"
+	@,"DCAConv", "Tab", "DecimalTab"
+	@,"DCAConv", "TranslateBeta", "German"
+	@,"DCAConv", "Variant", "DW42"
+       +5,"bbtb2"
+	5:RFTDCA.CN$, CNV,0:,0,1,179712,"RFT-DCA"
+	5:DCA_RTF.TX$, TXT,0:,0,1,2741,"Fichier de substitution de polices"
+	5:RTF_DCA.TX$, TXT,0:,0,1,2204,"Fichier de substitution de polices"
+
+[set.macword]
+	@,"MSWord Text Converters","MSWordMac4","Word 4.0 pour le Macintosh, %0\WORDMAC.CNV, mcw"
+	@,"MSWord Text Converters","MSWordMac","Word 5.0 pour le Macintosh, %0\WORDMAC.CNV, mcw"
+	@,"MacWordConv", "ConvertMerge", "yes"
+	@,"MacWordConv", "FontDialog", "yes"
+	@,"MacWordConv", "RetainInclude", "yes"
+       +5,"bbtb2"
+	5:WORDMAC.CN$, CNV,0:,0,1,157216,"Word pour le Macintosh"
+	5:MW5_RTF.TX$, TXT,0:,0,1,2435,"Fichier de substitution de polices"
+	5:RTF_MW5.TX$, TXT,0:,0,1,2508,"Fichier de substitution de polices"
+
+[set.wp]
+       +5,"bbtb2"
+	@,"MSWord Text Converters","WordPerfect 4.2",""
+	@,"MSWord Text Converters","WordPerfect 4.1",""
+	@,"MSWord Text Converters","WrdPrfctDOS42","WordPerfect 4.2, %0\WPFT4.CNV, doc"
+	@,"MSWord Text Converters","WrdPrfctDOS41","WordPerfect 4.1, %0\WPFT4.CNV, doc"
+	5:WPFT4.CN$, CNV,0:,0,1,87344,"WordPerfect 4.2, 4.1"
+
+
+[set.wp5]
+	0:WPFT5.CNW, ,^
+	0:WPFT5I.CNW, ,^
+	@,"MSWord Text Converters","WrdPrfctDOS50","WordPerfect 5.0, %0\WPFT5.CNV, doc"
+	@,"MSWord Text Converters","WrdPrfctDOS","WordPerfect 5.1, %0\WPFT5.CNV, doc"
+       +5,"bbtb2"
+	5:WPFT5.CN$, CNV,0:,0,1,238128,"WordPerfect 5.0, 5.1"
+	5:WP5_RTF.TX$, TXT,0:,0,1, 7004,"Fichier de substitution de polices"
+	5:RTF_WP5.TX$, TXT,0:,0,1, 4426,"Fichier de substitution de polices"
+
+[set.pcword]
+	@,"MSWord Text Converters","MSWordDos",""
+	@,"MSWord Text Converters","MSWordDos","Word pour MS-DOS, %0\WORDDOS.CNV, doc"
+	@,"PCWordConv", "ConvertMerge", "yes"
+	@,"PCWordConv", "MirrorOriginal", "no"
+	@,"PCWordConv", "NewSectForHdrFtr", "yes"
+	@,"PCWordConv", "PCWordLayout", "yes"
+	@,"PCWordConv", "StyleDialog", "yes"
+	@,"PCWordConv", "TabsInHangInd", "yes"
+       +5,"bbtb2"
+	5:WORDDOS.CN$, CNV,0:,0,1,181760,"Word pour MS-DOS"
+	5:PCW_RTF.TX$, TXT,0:,0,1,5694,"Fichier de substitution de polices"
+	5:RTF_PCW.TX$, TXT,0:,0,1,3734,"Fichier de substitution de polices"
+	5:50CONVRT.GL$,GLO,0:,0,1,3584,"Fichier de substitution de polices"
+	5:55CONVRT.GL$,GLO,0:,0,1,4096,"Fichier de substitution de polices"
+	8:MSWORD.DT$,	DOT,0:,0,1,20031,"Macros de conversion du glossaire"
+	#set.ldfont
+
+
+[set.ldfont]*W
+	@,"fonts", "MS LineDraw (All res)", "WINLD.FON"
+	8:WINLD.FON, FON,o:,0,321,17008,"Police Linedraw"
+	@S, WINLD.FON
+
+[set.ldfont]
+	@,"fonts", "MS LineDraw (All res)", "WINLD.FON"
+	4:WINLD.FO$, FON,o:,0,257,17488,"Police Linedraw"
+	@S, WINLD.FON
+
+[set.ws]
+	@,"MSWord Text Converters","WordStar 5.5","WordStar 5.5, %0\WORDSTAR.CNV, doc"
+	@,"MSWord Text Converters","WordStar 5.0","WordStar 5.0, %0\WORDSTAR.CNV, doc"
+	@,"MSWord Text Converters","WordStar 4.0","WordStar 4.0, %0\WORDSTAR.CNV, doc"
+	@,"MSWord Text Converters","WordStar 3.45","WordStar 3.45, %0\WORDSTAR.CNV, doc"
+	@,"MSWord Text Converters","WordStar 3.3","WordStar 3.3, %0\WORDSTAR.CNV, doc"
+	8:WORDSTAR.CN$, CNV,0:,0,1,109760,"WordStar 5.5, 5.0, 4.0, 3.45, 3.3"
+
+[set.bif]
+	@,"MSWord Text Converters","MSBiff","Feuille de calcul Excel, %0\XLBIFF.CNV, xls"
+	7:XLBIFF.CN$, CNV,0:,0,1025,108032,"Feuille de calcul Excel"
+
+[set.123]
+	@,"MSWord Text Converters","Lotus123","Feuille de calcul Lotus 1-2-3, %0\LOTUS123.CNV, wk1 wk3"
+       +5,"bbtb2"
+	5:LOTUS123.CN$, CNV,0:,0,1025,104448,"Feuille de calcul Lotus 1-2-3"
+       
+[set.mltp]
+	@,"MSWord Text Converters","Multiplan",""
+	@,"MSWord Text Converters","MSMultiplan","Feuille de calcul Multiplan, %0\MLTIPLAN.CNV, mp"
+	8:MLTIPLAN.CN$, CNV,0:,0,1,135680,"Feuille de calcul Multiplan"
+
+[set.mltmt]
+	@,"MSWord Text Converters","Multimate",""
+	@,"MSWord Text Converters","MulMate4","Multimate 4.0, %0\MULTIMAT.CNV, dox"
+	@,"MSWord Text Converters","MulMateII","Multimate Adv II, %0\MULTIMAT.CNV, doc"
+	@,"MSWord Text Converters","MulMateAdv","Multimate Advantage, %0\MULTIMAT.CNV, doc"
+	@,"MSWord Text Converters","MulMate3","Multimate 3.3, %0\MULTIMAT.CNV, doc"
+	8:MULTIMAT.CN$, CNV,0:,0,1,97808,"Multimate"
+
+[set.dbase]
+	@,"MSWord Text Converters","ATdBase","Ashton-Tate dBASE, %0\DBASE.CNV, dbf"
+	6:DBASE.CN$, CNV,0:,0,1,49152,"Ashton-Tate dBASE"
+
+[set.wwrd]
+	@,"MSWord Text Converters","MSWordWin","Word 1.x pour Windows, %0\WORDWIN1.CNV, doc"
+       +5,"bbtb2"
+	5:WORDWIN1.CN$, CNV,0:,0,1025,155648,"Word 1.x pour Windows"
+
+[set.wwrks]
+	@,"MSWord Text Converters","MSWorksWin","Works pour Windows, %0\WRKSWIN.CNV, wps"
+	6:WRKSWIN.CN$, CNV,0:,0,1,92656,"Works pour Windows"
+	5:WWP_RTF.TX$, TXT,0:,0,1,4955,"Fichier de substitution de polices"
+	5:RTF_WWP.TX$, TXT,0:,0,1,4923,"Fichier de substitution de polices"
+
+
+[set.wrks]
+	@,"MSWord Text Converters","MSWorks",""
+	@,"MSWord Text Converters","MSWorksDos","Works pour MS-DOS, %0\WRKSDOS.CNV, wps"
+       +3,"bbtb1"
+	3:WRKSDOS.CN$, CNV,0:,0,1,80272,"Works pour MS-DOS"
+
+[set.write]
+	@,"MSWord Text Converters","Windows Write",""
+	@,"MSWord Text Converters","MSWinWrite","Windows Write, %0\WRITWIN.CNV, wri"
+	8:WRITWIN.CN$, CNV,0:,0,1,66560,"Windows Write"
+
+
+[set.wpg]
+	@,"MS Graphic Import Filters","DrawPerfect(.WPG)","%s005wpgimp.flt,WPG"
+       +5,"bbtb2"
+	5:GRPHFLT\WPGIMP.FL$,  FLT,%s005WPGIMP.FLT,0,1,3424,"Filtre d'importation DrawPerfect"
+	5:GRPHFLT\IMWPG.DL$,   DLL,%s005IMWPG.DLL,0,1,74224,"Filtre d'importation DrawPerfect"
+	5:GRPHFLT\CGI_GDI.DL$, DLL,%s005CGI_GDI.DLL,0,1,204240,"Filtre d'importation DrawPerfect"
+
+[set.wpgexp]
+	@,"MS Graphic Export Filters","DrawPerfect(.WPG)","%s006wpgexp.flt,WPG"
+       +5,"bbtb2"
+	5:GRPHFLT\WPGEXP.FL$,  FLT,%s006WPGEXP.FLT,0,1,3408,"Filtre d'exportation DrawPerfect"
+	5:GRPHFLT\EMWPG.DL$,   DLL,%s006EMWPG.DLL,0,1,118992,"Filtre d'exportation DrawPerfect"
+	5:GRPHFLT\IMWMF.DL$,   DLL,%s006IMWMF.DLL,0,1,70144,"Filtre d'exportation DrawPerfect"
+	5:GRPHFLT\CGI_GDI.DL$, DLL,%s006CGI_GDI.DLL,0,1,204240,"Filtre d'exportation DrawPerfect"
+
+[set.drw]
+	@,"MS Graphic Import Filters","Micrografx Designer/Draw(.DRW)","%s007drwimp.flt,DRW"
+       +5,"bbtb2"
+	5:GRPHFLT\DRWIMP.FL$,  FLT,%s007DRWIMP.FLT,0,1,3392,"Filtre Micrografx Designer/Draw"
+	5:GRPHFLT\IMDRW.DL$,   DLL,%s007IMDRW.DLL,0,1,78224,"Filtre Micrografx Designer/Draw"
+	5:GRPHFLT\CGI_GDI.DL$, DLL,%s007CGI_GDI.DLL,0,1,204240,"Filtre Micrografx Designer/Draw"
+
+[set.dxf]
+	@,"MS Graphic Import Filters","AutoCAD Format 2-D(.DXF)","%s008dxfimp.flt,DXF"
+       +5,"bbtb2"
+	5:GRPHFLT\DXFIMP.FL$,  FLT,%s008DXFIMP.FLT,0,1,3392,"Filtre AutoCAD"
+	5:GRPHFLT\IMDXF.DL$,   DLL,%s008IMDXF.DLL,0,1,85920,"Filtre AutoCAD"
+	5:GRPHFLT\CGI_GDI.DL$, DLL,%s008CGI_GDI.DLL,0,1,204240,"Filtre AutoCAD"
+
+[set.hpgl]
+	@,"MS Graphic Import Filters","HP Graphic Language(.HGL)","%s009hpglimp.flt,HGL"
+       +5,"bbtb2"
+	5:GRPHFLT\IMHGL.DL$, DLL,%s009IMHGL.DLL,0,1,65408,"Filtre HP Graphic Language"
+	5:GRPHFLT\HPGLIMP.FL$, FLT,%s009HPGLIMP.FLT,0,1,3424,"Filtre HP Graphic Language"
+	5:GRPHFLT\CGI_GDI.DL$, DLL,%s009CGI_GDI.DLL,0,1,204240,"Filtre HP Graphic Language"
+	
+[set.cgm]
+	@,"MS Graphic Import Filters","Computer Graphics Metafile(.CGM)","%s010cgmimp.flt,CGM"
+       +5,"bbtb2"
+	5:GRPHFLT\CGMIMP.FL$,  FLT,%s010CGMIMP.FLT,0,1,45504,"Filtre Computer Graphics Metafile"
+
+[set.eps]
+	@,"MS Graphic Import Filters","Encapsulated Postscript(.EPS)","%s011epsimp.flt,EPS"
+       +5,"bbtb2"
+	5:GRPHFLT\EPSIMP.FL$,  FLT,%s011epsimp.flt,0,1,72320,"Filtre Encapsulated PostScript"
+
+[set.tiff]
+	@,"MS Graphic Import Filters","Tagged Image Format(.TIF)","%s012tiffimp.flt,TIF"
+       +5,"bbtb2"
+	5:GRPHFLT\IFFTIFF.DL$,	DLL,%s012ifftiff.dll,0,1,32912,"Filtre TIFF"
+	5:GRPHFLT\TIFFIMP.FL$,	FLT,%s012tiffimp.flt,0,1,8608,"Filtre TIFF"
+
+[set.wmf]
+	@,"MS Graphic Import Filters","Windows Metafile(.WMF)","%s001wmfimp.flt,WMF"
+       +5,"bbtb2"
+	5:GRPHFLT\WMFIMP.FL$,  FLT,%s001wmfimp.flt,0,1,5104,"Filtre Windows Metafile"
+
+[set.pcx]
+	@,"MS Graphic Import Filters","PC Paintbrush(.PCX)","%s013pcximp.flt,PCX"
+       +5,"bbtb2"
+	5:GRPHFLT\PCXIMP.FL$,  FLT,%s013pcximp.flt,0,1,12912,"Filtre PCX"
+
+[set.pic]
+	@,"MS Graphic Import Filters","Lotus 1-2-3 Graphics(.PIC)","%s014lotusimp.flt,PIC"
+       +5,"bbtb2"
+	5:GRPHFLT\LOTUSIMP.FL$,FLT,%s014lotusimp.flt,0,1,15504,"Filtre PIC"
+
+[set.adi]
+	@,"MS Graphic Import Filters","AutoCAD Plot File(.PLT)","%s015adimport.flt,PLT"
+       +5,"bbtb2"
+	5:GRPHFLT\ADIMPORT.FL$,FLT,%s015adimport.flt,0,1,7680,"Filtre d'importation AutoCAD"
+
+[set.gstart]
+       +6,"bbtb3"
+	6:WINWORD.CBT\GSTART.LE$,  LES,0:winword.cbt,0,1,527218,"Mise en route"
+
+[set.lword]
+       +6,"bbtb3"
+	6:WINWORD.CBT\LWORD.LE$, LES,0:winword.cbt,0,1,894928,"Apprentissage de Word"
+
+[set.cbtall]
+       +6,"bbtb3"
+	6:WINWORD.CBT\WINWORD.CB$, CBT,0:winword.cbt,0,1,112864,"Leçons en ligne"
+        6:WINWORD.CBT\MOUSEMV.CB$, CBT,0:winword.cbt,0,1,6144,"Leçons en ligne"
+        6:WINWORD.CBT\GRAMMAR.CB$, CBT,0:winword.cbt,0,1,1928,"Leçons en ligne"
+        6:WINWORD.CBT\CBTLIB2.DL$, DLL,0:winword.cbt,0,1,14976,"Leçons en ligne"
+        6:WINWORD.CBT\LETTRE.DO$,  DOC,0:winword.cbt,0,1,3560,"Documents d'exemple"
+        6:WINWORD.CBT\RAPPORT.DO$,  DOC,0:winword.cbt,0,1,6659,"Documents d'exemple"
+        6:WINWORD.CBT\CARROUSL.DO$,DOC,0:winword.cbt,0,1,16558,"Documents d'exemple"
+        6:WINWORD.CBT\LETTRTYP.DO$,DOC,0:winword.cbt,0,1,4521,"Documents d'exemple"
+        6:WINWORD.CBT\MARKETNG.DO$,  DOC,0:winword.cbt,0,1,4633,"Documents d'exemple"
+        6:WINWORD.CBT\NEPAL.DO$,   DOC,0:winword.cbt,0,1,8510,"Documents d'exemple"
+        6:WINWORD.CBT\BULLETIN.DO$,DOC,0:winword.cbt,0,1,44293,"Documents d'exemple"
+        6:WINWORD.CBT\LISTPRIX.DO$,DOC,0:winword.cbt,0,1,3611,"Documents d'exemple"
+        6:WINWORD.CBT\CURVITAE.DO$,  DOC,0:winword.cbt,0,1,4340,"Documents d'exemple"
+        6:WINWORD.CBT\GAGNANTS.DO$, DOC,0:winword.cbt,0,1,2281,"Documents d'exemple"
+        6:WINWORD.CBT\CBTNORM.DT$, DOT,0:winword.cbt,0,1,27896,"Documents d'exemple"
+        6:WINWORD.CBT\CHEVAL.BM$,   BMP,0:winword.cbt,0,1,8702
+
+[set.help]
+       +7,"bbRegCard2"
+	7:WINWORD.HL$, HLP,0:,0,1,2307432,"Aide en ligne"
+
+;[set.wphelp]
+;        5:WPHELP.DL$,  DLL,0:,0,1,175232,"WordPerfect Help"
+
+[set.fsympcl5a]*S
+	#set.symfiles
+
+[set.fsympcl5a]@30A0^P(HPPCL5A)
+	@F(SYMBOL08.SFP),"HPPCL5A,^P(HPPCL5A)", "SoftFont", "%rPCLFONTS\SYMBOL08.PFM,%rPCLFONTS\SYMBOL08.SFP"
+	@F(SYMBOL10.SFP),"HPPCL5A,^P(HPPCL5A)", "SoftFont", "%rPCLFONTS\SYMBOL10.PFM,%rPCLFONTS\SYMBOL10.SFP"
+	@F(SYMBOL12.SFP),"HPPCL5A,^P(HPPCL5A)", "SoftFont", "%rPCLFONTS\SYMBOL12.PFM,%rPCLFONTS\SYMBOL12.SFP"
+	@F(SYMSUB14.SFP),"HPPCL5A,^P(HPPCL5A)", "SoftFont", "%rPCLFONTS\SYMSUB14.PFM,%rPCLFONTS\SYMSUB14.SFP"
+	@F(SYMSUB18.SFP),"HPPCL5A,^P(HPPCL5A)", "SoftFont", "%rPCLFONTS\SYMSUB18.PFM,%rPCLFONTS\SYMSUB18.SFP"
+	@F(SYMSUB24.SFP),"HPPCL5A,^P(HPPCL5A)", "SoftFont", "%rPCLFONTS\SYMSUB24.PFM,%rPCLFONTS\SYMSUB24.SFP"
+	#set.symfiles
+
+[set.fsympcl]@30A0^P(HPPCL)
+	@F(SYMBOL08.SFP),"HPPCL,^P(HPPCL)", "SoftFont", "%rPCLFONTS\SYMBOL08.PFM,%rPCLFONTS\SYMBOL08.SFP"
+	@F(SYMBOL10.SFP),"HPPCL,^P(HPPCL)", "SoftFont", "%rPCLFONTS\SYMBOL10.PFM,%rPCLFONTS\SYMBOL10.SFP"
+	@F(SYMBOL12.SFP),"HPPCL,^P(HPPCL)", "SoftFont", "%rPCLFONTS\SYMBOL12.PFM,%rPCLFONTS\SYMBOL12.SFP"
+	@F(SYMSUB14.SFP),"HPPCL,^P(HPPCL)", "SoftFont", "%rPCLFONTS\SYMSUB14.PFM,%rPCLFONTS\SYMSUB14.SFP"
+	@F(SYMSUB18.SFP),"HPPCL,^P(HPPCL)", "SoftFont", "%rPCLFONTS\SYMSUB18.PFM,%rPCLFONTS\SYMSUB18.SFP"
+	@F(SYMSUB24.SFP),"HPPCL,^P(HPPCL)", "SoftFont", "%rPCLFONTS\SYMSUB24.PFM,%rPCLFONTS\SYMSUB24.SFP"
+	#set.symfiles
+
+[set.symfiles]
+	3:PCLFONTS\SYMBOL08.SF$, SFP,r:pclfonts,0,1,15608,"Polices Symbol (imprimantes HP / PCL)"
+        3:PCLFONTS\SYMBOL08.PF$, PFM,r:pclfonts,0,1,721,"Polices Symbol (imprimantes HP / PCL)"
+        3:PCLFONTS\SYMBOL10.SF$, SFP,r:pclfonts,0,1,20751,"Polices Symbol (imprimantes HP / PCL)"
+        3:PCLFONTS\SYMBOL10.PF$, PFM,r:pclfonts,0,1,722,"Polices Symbol (imprimantes HP / PCL)"
+        3:PCLFONTS\SYMBOL12.SF$, SFP,r:pclfonts,0,1,26404,"Polices Symbol (imprimantes HP / PCL)"
+        3:PCLFONTS\SYMBOL12.PF$, PFM,r:pclfonts,0,1,722,"Polices Symbol (imprimantes HP / PCL)"
+        3:PCLFONTS\SYMSUB14.SF$, SFP,r:pclfonts,0,1,5487,"Polices Symbol (imprimantes HP / PCL)"
+        3:PCLFONTS\SYMSUB14.PF$, PFM,r:pclfonts,0,1,722,"Polices Symbol (imprimantes HP / PCL)"
+        3:PCLFONTS\SYMSUB18.SF$, SFP,r:pclfonts,0,1,8717,"Polices Symbol (imprimantes HP / PCL)"
+        3:PCLFONTS\SYMSUB18.PF$, PFM,r:pclfonts,0,1,722,"Polices Symbol (imprimantes HP / PCL)"
+        3:PCLFONTS\SYMSUB24.SF$, SFP,r:pclfonts,0,1,14196"Polices Symbol (imprimantes HP / PCL)"
+        3:PCLFONTS\SYMSUB24.PF$, PFM,r:pclfonts,0,1,722"Polices Symbol (imprimantes HP / PCL)"
+
+[set.sfont]*S
+	7:SMALLE.FO$,  FON,o:,0,1,20480,"Polices d'écran"
+        7:SMALLF.FO$,  FON,o:,0,1,22528,"Polices d'écran"  
+        7:SMALLB.FO$,  FON,o:,0,1,16384,"Polices d'écran"  
+
+[set.sfont]%V*W        
+	@,"fonts", "Small Fonts (VGA res)", "SMALLE.FON"
+	8:SMALLE.FON,	FON,o:,0,321,20480,"Polices d'écran"
+	@S, SMALLE.FON
+
+[set.sfont]%8*W
+	@,"fonts", "Small Fonts (8514/A res)", "SMALLF.FON"
+	8:SMALLF.FON,	FON,o:,0,321,22528,"Polices d'écran"
+	@S, SMALLF.FON
+
+[set.sfont]%E*W
+	@,"fonts", "Small Fonts (EGA res)", "SMALLB.FON"
+	8:SMALLB.FON,	FON,o:,0,321,16384,"Polices d'écran"
+	@S, SMALLB.FON
+
+[set.sfont]%V
+	@,"fonts", "Small Fonts (VGA res)", "SMALLE.FON"
+	7:SMALLE.FO$,  FON,o:,0,257,20480,"Polices d'écran"
+	@S, SMALLE.FON
+
+[set.sfont]%8
+	@,"fonts", "Small Fonts (8514/A res)", "SMALLF.FON"
+	7:SMALLF.FO$,  FON,o:,0,257,22528,"Polices d'écran"
+	@S, SMALLF.FON
+
+[set.sfont]%E
+	@,"fonts", "Small Fonts (EGA res)", "SMALLB.FON"
+	7:SMALLB.FO$,  FON,o:,0,257,16384,"Polices d'écran"
+	@S, SMALLB.FON
+
+[set.fttee]*S
+	3:EQUATION\FENCES.TT$, TTF,o:,0,1,13992,"Polices TT Fences"
+	3:EQUATION\MTEXTRA.TT$, TTF,o:,0,1,9116,"Polices TT Extra"
+
+[set.fttee]@30A0
+
+[set.fttee]@3100*W
+	@,"fonts", "Fences (TrueType)", ""
+	@,"fonts", "Fences Plain (TrueType)", ""
+	@,"fonts", "MT Extra (TrueType)", ""
+	@,"fonts", "Fences Regular", ""
+	@,"fonts", "MT Extra Regular", ""
+	@,"fonts", "MT Extra Plain (True Type)", ""
+	o:FENCES.FOT, ,^
+	o:MTEXTRA.FOT, ,^
+	w:eeprefs.pre, ,^
+	@,"FontSubstitutes", "MT Symbol", "Symbol"
+	@,"fonts", "Fences Regular (TrueType)", "FENCES.FOT"
+	@,"fonts", "MT Extra Regular (TrueType)", "MTEXTRA.FOT"
+	&8, equation
+	8:EQUATION\FENCES.TT$, TTF,o:,0,321,13992,"Polices TT Fences"
+	@S, %oFENCES.FOT, FENCES.TTF, %o
+	&8, equation
+	8:EQUATION\MTEXTRA.TT$, TTF,o:,0,321,9116,"Polices TT Extra"
+	@S, %oMTEXTRA.FOT, MTEXTRA.TTF, %o
+
+[set.fttee]@3100
+	@,"fonts", "Fences (TrueType)", ""
+	@,"fonts", "MT Extra (TrueType)", ""
+	@,"fonts", "Fences Regular", ""
+	@,"fonts", "MT Extra Regular", ""
+	o:FENCES.FOT, ,^
+	o:MTEXTRA.FOT, ,^
+	w:eeprefs.pre, ,^
+	@,"FontSubstitutes", "MT Symbol", "Symbol"
+	@,"fonts", "Fences Regular (TrueType)", "FENCES.FOT"
+	@,"fonts", "MT Extra Regular (TrueType)", "MTEXTRA.FOT"
+	&3, equation
+	3:EQUATION\FENCES.TT$, TTF,o:,0,1,13992,"Polices TT Fences"
+	@S, %oFENCES.FOT, FENCES.TTF, %o
+	&3, equation
+	3:EQUATION\MTEXTRA.TT$, TTF,o:,0,1,9116,"Polices TT Extra"
+	@S, %oMTEXTRA.FOT, MTEXTRA.TTF, %o
+
+[set.feepcl5a]*S
+	#set.feefiles
+
+[set.feepcl5a]@30A0^P(HPPCL5A)
+	@F(fenc10.sfp),"HPPCL5A,^P(HPPCL5A)", "SoftFont", "%s004fenc10.pfm,%s004fenc10.sfp"
+	@F(fenc14.sfp),"HPPCL5A,^P(HPPCL5A)", "SoftFont", "%s004fenc14.pfm,%s004fenc14.sfp"
+	@F(fenc24.sfp),"HPPCL5A,^P(HPPCL5A)", "SoftFont", "%s004fenc24.pfm,%s004fenc24.sfp"
+	@F(fenc36.sfp),"HPPCL5A,^P(HPPCL5A)", "SoftFont", "%s004fenc36.pfm,%s004fenc36.sfp"
+	@F(mtex12.sfp),"HPPCL5A,^P(HPPCL5A)", "SoftFont", "%s004mtex12.pfm,%s004mtex12.sfp"
+	@F(mtex18.sfp),"HPPCL5A,^P(HPPCL5A)", "SoftFont", "%s004mtex18.pfm,%s004mtex18.sfp"
+	@F(mtex5.sfp),"HPPCL5A,^P(HPPCL5A)", "SoftFont",  "%s004mtex5.pfm,%s004mtex5.sfp"
+	@F(mtex7.sfp),"HPPCL5A,^P(HPPCL5A)", "SoftFont",  "%s004mtex7.pfm,%s004mtex7.sfp"
+	@F(mtsp12.sfp),"HPPCL5A,^P(HPPCL5A)", "SoftFont", "%s004mtsp12.pfm,%s004mtsp12.sfp"
+	@F(mtsp18.sfp),"HPPCL5A,^P(HPPCL5A)", "SoftFont", "%s004mtsp18.pfm,%s004mtsp18.sfp"
+	@F(mtsp5.sfp),"HPPCL5A,^P(HPPCL5A)", "SoftFont",  "%s004mtsp5.pfm,%s004mtsp5.sfp"
+	@F(mtsp7.sfp),"HPPCL5A,^P(HPPCL5A)", "SoftFont",  "%s004mtsp7.pfm,%s004mtsp7.sfp"
+	@F(mtsi12.sfp),"HPPCL5A,^P(HPPCL5A)", "SoftFont", "%s004mtsi12.pfm,%s004mtsi12.sfp"
+	@F(mtsi18.sfp),"HPPCL5A,^P(HPPCL5A)", "SoftFont", "%s004mtsi18.pfm,%s004mtsi18.sfp"
+	@F(mtsi5.sfp),"HPPCL5A,^P(HPPCL5A)", "SoftFont",  "%s004mtsi5.pfm,%s004mtsi5.sfp"
+	@F(mtsi7.sfp),"HPPCL5A,^P(HPPCL5A)", "SoftFont",  "%s004mtsi7.pfm,%s004mtsi7.sfp"
+	#set.feefiles
+
+[set.feepcl]@30A0^P(HPPCL)
+	@F(fenc10.sfp),"HPPCL,^P(HPPCL)", "SoftFont", "%s004fenc10.pfm,%s004fenc10.sfp"
+	@F(fenc14.sfp),"HPPCL,^P(HPPCL)", "SoftFont", "%s004fenc14.pfm,%s004fenc14.sfp"
+	@F(fenc24.sfp),"HPPCL,^P(HPPCL)", "SoftFont", "%s004fenc24.pfm,%s004fenc24.sfp"
+	@F(fenc36.sfp),"HPPCL,^P(HPPCL)", "SoftFont", "%s004fenc36.pfm,%s004fenc36.sfp"
+	@F(mtex12.sfp),"HPPCL,^P(HPPCL)", "SoftFont", "%s004mtex12.pfm,%s004mtex12.sfp"
+	@F(mtex18.sfp),"HPPCL,^P(HPPCL)", "SoftFont", "%s004mtex18.pfm,%s004mtex18.sfp"
+	@F(mtex5.sfp),"HPPCL,^P(HPPCL)", "SoftFont", "%s004mtex5.pfm,%s004mtex5.sfp"
+	@F(mtex7.sfp),"HPPCL,^P(HPPCL)", "SoftFont", "%s004mtex7.pfm,%s004mtex7.sfp"
+	@F(mtsp12.sfp),"HPPCL,^P(HPPCL)", "SoftFont", "%s004mtsp12.pfm,%s004mtsp12.sfp"
+	@F(mtsp18.sfp),"HPPCL,^P(HPPCL)", "SoftFont", "%s004mtsp18.pfm,%s004mtsp18.sfp"
+	@F(mtsp5.sfp),"HPPCL,^P(HPPCL)", "SoftFont", "%s004mtsp5.pfm,%s004mtsp5.sfp"
+	@F(mtsp7.sfp),"HPPCL,^P(HPPCL)", "SoftFont", "%s004mtsp7.pfm,%s004mtsp7.sfp"
+	@F(mtsi12.sfp),"HPPCL,^P(HPPCL)", "SoftFont", "%s004mtsi12.pfm,%s004mtsi12.sfp"
+	@F(mtsi18.sfp),"HPPCL,^P(HPPCL)", "SoftFont", "%s004mtsi18.pfm,%s004mtsi18.sfp"
+	@F(mtsi5.sfp),"HPPCL,^P(HPPCL)", "SoftFont", "%s004mtsi5.pfm,%s004mtsi5.sfp"
+	@F(mtsi7.sfp),"HPPCL,^P(HPPCL)", "SoftFont", "%s004mtsi7.pfm,%s004mtsi7.sfp"
+	#set.feefiles
+
+[set.feefiles]
+	3:EQUATION\fenc10.pf$, PFM,%s004fenc10.PFM,0,1,725,"Polices Fences"
+        3:EQUATION\fenc10.SF$, SFP,%s004fenc10.SFP,0,1,4154,"Polices Fences"
+        3:EQUATION\fenc14.PF$, PFM,%s004fenc14.PFM,0,1,724,"Polices Fences"
+        3:EQUATION\fenc14.SF$, SFP,%s004fenc14.SFP,0,1,6316,"Polices Fences"
+        3:EQUATION\fenc24.PF$, PFM,%s004fenc24.PFM,0,1,725,"Polices Fences"
+        3:EQUATION\fenc24.SF$, SFP,%s004fenc24.SFP,0,1,13299,"Polices Fences"
+        3:EQUATION\fenc36.PF$, PFM,%s004fenc36.PFM,0,1,725,"Polices Fences"
+        3:EQUATION\fenc36.SF$, SFP,%s004fenc36.SFP,0,1,25187,"Polices Fences"
+        3:EQUATION\mtex12.PF$, PFM,%s004mtex12.PFM,0,1,727,"Polices Extra"
+        3:EQUATION\mtex12.SF$, SFP,%s004mtex12.SFP,0,1,4917,"Polices Extra"
+        3:EQUATION\mtex18.PF$, PFM,%s004mtex18.PFM,0,1,726,"Polices Extra"
+        3:EQUATION\mtex18.SF$, SFP,%s004mtex18.SFP,0,1,9037,"Polices Extra"
+        3:EQUATION\mtex5.PF$,  PFM,%s004mtex5.PFM,0,1,727,"Polices Extra"
+        3:EQUATION\mtex5.SF$,  SFP,%s004mtex5.SFP,0,1,2058,"Polices Extra"
+        3:EQUATION\mtex7.PF$,  PFM,%s004mtex7.PFM,0,1,727,"Polices Extra"
+        3:EQUATION\mtex7.SF$,  SFP,%s004mtex7.SFP,0,1,2525,"Polices Extra"
+        3:EQUATION\mtsp12.PF$, PFM,%s004mtsp12.PFM,0,1,725,"Polices Symbol"
+        3:EQUATION\mtsp12.SF$, SFP,%s004mtsp12.SFP,0,1,27786,"Polices Symbol"
+        3:EQUATION\mtsp18.PF$, PFM,%s004mtsp18.PFM,0,1,724,"Polices Symbol"
+        3:EQUATION\mtsp18.SF$, SFP,%s004mtsp18.SFP,0,1,51984,"Polices Symbol"
+        3:EQUATION\mtsp5.PF$,  PFM,%s004mtsp5.PFM,0,1,725,"Polices Symbol"
+        3:EQUATION\mtsp5.SF$,  SFP,%s004mtsp5.SFP,0,1,9854,"Polices Symbol"
+        3:EQUATION\mtsp7.PF$,  PFM,%s004mtsp7.PFM,0,1,725,"Polices Symbol"
+        3:EQUATION\mtsp7.SF$,  SFP,%s004mtsp7.SFP,0,1,13374,"Polices Symbol"
+        3:EQUATION\mtsi12.PF$, PFM,%s004mtsi12.PFM,0,1,735,"Polices Symbol italique"
+        3:EQUATION\mtsi12.SF$, SFP,%s004mtsi12.SFP,0,1,30380,"Polices Symbol italique"
+        3:EQUATION\mtsi18.PF$, PFM,%s004mtsi18.PFM,0,1,734,"Polices Symbol italique"
+        3:EQUATION\mtsi18.SF$, SFP,%s004mtsi18.SFP,0,1,58489,"Polices Symbol italique"
+        3:EQUATION\mtsi5.PF$,  PFM,%s004mtsi5.PFM,0,1,735,"Polices Symbol italique"
+        3:EQUATION\mtsi5.SF$,  SFP,%s004mtsi5.SFP,0,1,10320,"Polices Symbol italique"
+        3:EQUATION\mtsi7.PF$,  PFM,%s004mtsi7.PFM,0,1,735,"Polices Symbol italique"
+        3:EQUATION\mtsi7.SF$,  SFP,%s004mtsi7.SFP,0,1,14315,"Polices Symbol italique"
+
+[set.feeps]*S
+	#set.feepsfiles
+
+[set.feeps]@30A0^P(PSCRIPT)
+	@F(fences.pfb),"PostScript,^P(PSCRIPT)", "SoftFont", "%s004fences.pfm,%s004fences.pfb"
+	@F(mtextra.pfb),"PostScript,^P(PSCRIPT)", "SoftFont", "%s004mtextra.pfm,%s004mtextra.pfb"
+	@F(mtsymbol.pfb),"PostScript,^P(PSCRIPT)", "SoftFont", "%s004mtsymbol.pfm,%s004mtsymbol.pfb"
+	@F(mtsymita.pfb),"PostScript,^P(PSCRIPT)", "SoftFont", "%s004mtsymita.pfm,%s004mtsymita.pfb"
+	#set.feepsfiles
+
+[set.feepsfiles]
+	3:EQUATION\fences.pf$, PFM,%s004fences.pfm,0,1,672,"Polices Fences"
+        3:EQUATION\fences.pb$, PFB,%s004fences.pfb,0,1,13818,"Polices Fences"
+        3:EQUATION\mtextra.pf$, PFM,%s004mtextra.pfm,0,1,676,"Polices Extra"
+        3:EQUATION\mtextra.pb$, PFB,%s004mtextra.pfb,0,1,10785,"Polices Extra"
+        3:EQUATION\mtsymbol.pf$, PFM,%s004mtsymbol.pfm,0,1,678,"Polices Symbol"
+        3:EQUATION\mtsymbol.pb$, PFB,%s004mtsymbol.pfb,0,1,29803,"Polices Symbol"
+        3:EQUATION\mtsymita.pf$, PFM,%s004mtsymita.pfm,0,1,692,"Polices Symbol italique"
+        3:EQUATION\mtsymita.pb$, PFB,%s004mtsymita.pfb,0,1,30278,"Polices Symbol italique"
+
+[set.feescreen]@30A0%V*W
+	@,"fonts", "Fences 10,14,20,24,28,36,48,72 (VGA res)", "FENCEE.FON"
+	8:EQUATION\fencee.fon, FON,o:,0,321,85504,"Polices Fences"
+        @S, fencee.fon
+        @,"fonts", "MT Extra 5,7,10,12,14,18,24,36 (VGA res)", "MTEXTRAE.FON"
+	8:EQUATION\mtextrae.fon, FON,o:,0,321,39424,"Polices Extra"
+        @S, mtextrae.fon
+        @,"fonts", "MT Symbol 5,7,10,12,14,18,24,36 (VGA res)", "MTSYMBOE.FON"
+	8:EQUATION\mtsymboe.fon, FON,o:,0,321,128000,"Polices Symbol"
+        @S, mtsymboe.fon
+        @,"fonts", "MT Symbol Italic 5,7,10,12,14,18,24,36 (VGA res)", "MTSYMITE.FON"
+	8:EQUATION\mtsymite.fon, FON,o:,0,321,137216,"Polices Symbol italique"
+        @S, mtsymite.fon
+
+[set.feescreen]@30A0%8*W
+	@,"fonts", "Fences 10,14,20,24,28,36,48,72 (8514/a res)", "FENCEF.FON"
+	8:EQUATION\fencef.fon, FON,o:,0,321,126464,"Polices Fences"
+        @S, fencef.fon
+        @,"fonts", "MT Extra 5,7,10,12,14,18,24,36 (8514/a res)", "MTEXTRAF.FON"
+	8:EQUATION\mtextraf.fon, FON,o:,0,321,52224,"Polices Extra"
+        @S, mtextraf.fon
+        @,"fonts", "MT Symbol 5,7,10,12,14,18,24,36 (8514/a res)", "MTSYMBOF.FON"
+	8:EQUATION\mtsymbof.fon, FON,o:,0,321,131072,"Polices Symbol"
+        @S, mtsymbof.fon
+        @,"fonts", "MT Symbol Italic 5,7,10,12,14,18,24 (8514/a res)", "MTSYMITF.FON"
+	8:EQUATION\mtsymitf.fon, FON,o:,0,321,115712,"Polices Symbol italique"
+        @S, mtsymitf.fon
+
+[set.feescreen]@30A0%E*W
+	@,"fonts", "Fences 10,14,20,24,28,36,48,72 (EGA res)", "FENCEB.FON"
+	8:EQUATION\fenceb.fon, FON,o:,0,321,67072,"Polices Fences"
+        @S, fenceb.fon 
+        @,"fonts", "MT Extra 5,7,10,12,14,18,24,36 (EGA res)", "MTEXTRAB.FON"
+	8:EQUATION\mtextrab.fon, FON,o:,0,321,32768,"Polices Extra"
+        @S, mtextrab.fon 
+        @,"fonts", "MT Symbol 5,7,10,12,14,18,24,36 (EGA res)", "MTSYMBOB.FON"
+	8:EQUATION\mtsymbob.fon, FON,o:,0,321,100352,"Polices Symbol"
+        @S, mtsymbob.fon 
+        @,"fonts", "MT Symbol Italic 5,7,10,12,14,18,24,36 (EGA res)", "MTSYMITB.FON"
+	8:EQUATION\mtsymitb.fon, FON,o:,0,321,107008,"Polices Symbol italique"
+        @S, mtsymitb.fon 
+
+[set.feescreen]*S
+	3:EQUATION\*.fo$, FON,o:,0,1,1122816,"Polices d'écran"
+
+[set.feescreen]@30A0%V
+	@,"fonts", "Fences 10,14,20,24,28,36,48,72 (VGA res)", "FENCEE.FON"
+        3:EQUATION\fencee.fo$, FON,o:,0,257,85504,"Polices Fences"
+        @S, fencee.fon
+        @,"fonts", "MT Extra 5,7,10,12,14,18,24,36 (VGA res)", "MTEXTRAE.FON"
+        3:EQUATION\mtextrae.fo$, FON,o:,0,257,39424,"Polices Extra"
+        @S, mtextrae.fon
+        @,"fonts", "MT Symbol 5,7,10,12,14,18,24,36 (VGA res)", "MTSYMBOE.FON"
+        3:EQUATION\mtsymboe.fo$, FON,o:,0,257,128000,"Polices Symbol"
+        @S, mtsymboe.fon
+        @,"fonts", "MT Symbol Italic 5,7,10,12,14,18,24,36 (VGA res)", "MTSYMITE.FON"
+        3:EQUATION\mtsymite.fo$, FON,o:,0,257,137216,"Polices Symbol italique" 
+        @S, mtsymite.fon
+
+[set.feescreen]@30A0%8
+	@,"fonts", "Fences 10,14,20,24,28,36,48,72 (8514/a res)", "FENCEF.FON"
+        3:EQUATION\fencef.FO$, FON,o:,0,257,126464,"Polices Fences"
+        @S, fencef.fon
+        @,"fonts", "MT Extra 5,7,10,12,14,18,24,36 (8514/a res)", "MTEXTRAF.FON"
+        3:EQUATION\mtextraf.FO$, FON,o:,0,257,52224,"Polices Extra"
+        @S, mtextraf.fon
+        @,"fonts", "MT Symbol 5,7,10,12,14,18,24,36 (8514/a res)", "MTSYMBOF.FON"
+        3:EQUATION\mtsymbof.FO$, FON,o:,0,257,131072,"Polices Symbol"
+        @S, mtsymbof.fon
+        @,"fonts", "MT Symbol Italic 5,7,10,12,14,18,24 (8514/a res)", "MTSYMITF.FON"
+        3:EQUATION\mtsymitf.FO$, FON,o:,0,257,115712,"Polices Symbol italique" 
+        @S, mtsymitf.fon
+
+[set.feescreen]@30A0%E
+	@,"fonts", "Fences 10,14,20,24,28,36,48,72 (EGA res)", "FENCEB.FON"
+        3:EQUATION\fenceb.FO$, FON,o:,0,257,67072,"Polices Fences"
+        @S, fenceb.fon 
+        @,"fonts", "MT Extra 5,7,10,12,14,18,24,36 (EGA res)", "MTEXTRAB.FON"
+        3:EQUATION\mtextrab.FO$, FON,o:,0,257,32768,"Polices Extra"
+        @S, mtextrab.fon 
+        @,"fonts", "MT Symbol 5,7,10,12,14,18,24,36 (EGA res)", "MTSYMBOB.FON"
+        3:EQUATION\mtsymbob.FO$, FON,o:,0,257,100352,"Polices Symbol"
+        @S, mtsymbob.fon 
+        @,"fonts", "MT Symbol Italic 5,7,10,12,14,18,24,36 (EGA res)", "MTSYMITB.FON"
+        3:EQUATION\mtsymitb.FO$, FON,o:,0,257,107008,"Polices Symbol italique" 
+        @S, mtsymitb.fon 
+
+[set.clipart]
+       +6,"bbtb3"
+	6:CLIPART\*.wm$,	  WMF,0:clipart,0,4,208576,"Clip Art"
+	#set.wmf
+
+[set.template]*W
+	@,"Microsoft Word 2.0", "DOT-path", "%0", 1
+	8:ARTICLE2.DT$,	  DOT,0:,0,66, 13073,"Modèles"
+	8:DISSERT2.DT$,	  DOT,0:,0,66, 32555,"Modèles"
+	8:LETBLOC.DT$,	  DOT,0:,0,66, 87294,"Modèles"
+	8:MEMO2.DT$,	  DOT,0:,0,66, 41155,"Modèles"
+	8:DONNEES2.DT$,	  DOT,0:,0,66, 71478,"Modèles"
+	8:TELECOP.DT$,	  DOT,0:,0,66, 10441,"Modèles"
+	8:LETBLOC2.DT$,	  DOT,0:,0,66,	9454,"Modèles"
+	8:LETBLOC1.DT$,	  DOT,0:,0,66,	9454,"Modèles"
+	8:LETPERSO.DT$,	  DOT,0:,0,66,	8442,"Modèles"
+	8:ETIQUETT.DT$,	  DOT,0:,0,66, 38068,"Modèles"
+	8:TRANSPAR.DT$,	  DOT,0:,0,66, 18205,"Modèles"
+	8:PRESSE.DT$,	  DOT,0:,0,66, 13545,"Modèles"
+	8:OFFRE.DT$,	  DOT,0:,0,66, 10751,"Modèles"
+	8:PAYSAGE.DT$,	  DOT,0:,0,66, 18271,"Modèles"
+	8:TITRE.DT$,	  DOT,0:,0,66, 18605,"Modèles"
+	8:PORTRAIT.DT$,	  DOT,0:,0,66, 17999,"Modèles"
+	8:EXAMEN.DT$,	  DOT,0:,0,66, 14519,"Modèles"
+	8:NOUVMACR.DO$,	  DOC,0:,0,66,131926,"Modèles"
+
+[set.template]
+       +1,"bbRegCard"
+       +7,"bbRegCard2"
+	8:ARTICLE2.DT$,   DOT,0:,0,66, 13073,"Modèles"
+	8:DISSERT2.DT$,   DOT,0:,0,66, 32555,"Modèles"
+	1:LETBLOC.DT$,	  DOT,0:,0,66, 87294,"Modèles"
+	2:MEMO2.DT$,	  DOT,0:,0,66, 41155,"Modèles"
+	7:DONNEES2.DT$,   DOT,0:,0,66, 71478,"Modèles"
+	7:TELECOP.DT$,	  DOT,0:,0,66, 10441,"Modèles"
+	7:LETBLOC2.DT$,   DOT,0:,0,66,	9454,"Modèles"
+	7:LETBLOC1.DT$,   DOT,0:,0,66,	9454,"Modèles"
+	4:LETPERSO.DT$,   DOT,0:,0,66,	8442,"Modèles"
+	4:ETIQUETT.DT$,   DOT,0:,0,66, 38068,"Modèles"
+	7:TRANSPAR.DT$,   DOT,0:,0,66, 18205,"Modèles"
+	4:PRESSE.DT$,	  DOT,0:,0,66, 13545,"Modèles"
+	7:OFFRE.DT$,	  DOT,0:,0,66, 10751,"Modèles"
+	7:PAYSAGE.DT$,	  DOT,0:,0,66, 18271,"Modèles"
+	7:TITRE.DT$,	  DOT,0:,0,66, 18605,"Modèles"
+	4:PORTRAIT.DT$,   DOT,0:,0,66, 17999,"Modèles"
+	7:EXAMEN.DT$,	  DOT,0:,0,66, 14519,"Modèles"
+	7:NOUVMACR.DO$,   DOC,0:,0,66,131926,"Modèles"
+
+[set.readme]*W
+	8:LISEZMOI.DO$,	  DOC,0:,0,65,34492,"Fichier d'information"
+	8:IMPRIM.DO$,	  DOC,0:,0,66,59281,"Fichier d'information sur l'impression"
+	8:CONVINFO.DO$,	  DOC,0:,0,65,101787,"Fichier d'information sur la conversion de fichiers"
+	8:MODELES.DO$,	  DOC,0:,0,66,13082,"Fichier d'information sur les modèles"
+	8:MACROCNV.DO$,	  DOC,0:,0,66,23783,"Fichier d'information sur la conversion de macros"
+	8:GRAPHICS.DO$,	  DOC,0:,0,66,36387,"Fichier d'information sur les filtres graphiques"
+	8:DOSW55W.DO$,	  DOC,0:,0,65,62821,"Fichier d'information sur la conversion de PCWord 5.5"
+	8:DOSW50W.DO$,	  DOC,0:,0,65,85024,"Fichier d'information sur la conversion de PCWord 5.0"
+	8:PSS.DO$,	  DOC,0:,0,66,101213,"Fichier pour le service technique de Microsoft"
+
+[set.readme]
+	1:LISEZMOI.DO$,   DOC,0:,0,1,34492,"Fichier d'information"
+	2:IMPRIM.DO$,	  DOC,0:,0,2,59281,"Fichier d'information sur l'impression"
+	2:CONVINFO.DO$,   DOC,0:,0,1,101787,"Fichier d'information sur la conversion de fichiers"
+	7:MODELES.DO$,	  DOC,0:,0,2,13082,"Fichier d'information sur les modèles"
+	8:MACROCNV.DO$,   DOC,0:,0,2,23783,"Fichier d'information sur la conversion de macros"
+	4:GRAPHICS.DO$,   DOC,0:,0,2,36387,"Fichier d'information sur les filtres graphiques"
+	7:DOSW55W.DO$,	  DOC,0:,0,65,62821,"Fichier d'information sur la conversion de PCWord 5.5"
+	7:DOSW50W.DO$,	  DOC,0:,0,65,85024,"Fichier d'information sur la conversion de PCWord 5.0"
+	7:PSS.DO$,	  DOC,0:,0,66,101213,"Fichier pour le service technique de Microsoft"
+
+
+[progman.word]*M
+icon.word, "WinWord 2.0"
+
+[progman.word]
+icon.word, "Word pour Windows 2.0"
+icon.setup, "Word pour Windows 2.0"
+icon.de, "Word pour Windows 2.0"
+
+[progman.null]
+
+[icon.word]
+"Microsoft Word", winword.exe
+
+[icon.setup]
+"Word Install", install.exe
+
+[icon.de]
+"Dialog Editor", macrode.exe
+
+[wash]
+0,0,255, 0,0,50, 128, 1024
+
+[wphelp]
+no
+
+[bbRegCard]
+@xa,4
+@ya,2
+waiting
+@xb, 3
+@ya,3
+"     C'est maintenant le moment idéal pour remplir", 0, 2
+"     votre carte de garantie. Vous bénéficierez", 0, 2
+"     alors des services Microsoft : ", 0, 2
+""
+"         ·    un support technique téléphonique."
+@y,2
+"         ·    un abonnement à Horizons, la revue des "
+"              utilisateurs."
+@y,2
+"         ·    une information prioritaire sur les offres de"
+"              mise à jour dès la sortie d'une nouvelle version."
+
+
+[bbtb1]
+@xa,4
+@ya,2
+"Microsoft Word pour Windows simplifie la création de tableaux, l'insertion "
+"de caractères spéciaux, le multicolonnage, etc. grâce à la barre d'outils. "
+"Plus facile. Tous les jours."
+@y,1
+bbtbar
+@xa,4
+@ys
+bbbutenv
+@xb,3
+@yr
+@y,2
+"Insérez une adresse sur l'enveloppe en cliquant sur la barre d'outils."
+@yr         
+@yb,3
+@xa,4
+@ys
+bbbutbul
+@xb,3
+@yr
+"Ajoutez automatiquement des caractères spéciaux à votre texte en "
+"cliquant sur ce bouton de la barre d'outils. Choisissez parmi un "
+"large éventail de caractères spéciaux et de symboles."
+
+
+[bbtb2]
+@ya,2
+@xa,4
+"Créez très aisément de beaux documents à l'aide de la barre d'outils.", 0, 2
+""
+@ys
+bbbuttbl
+@xb,3
+@yr
+@y,2
+"Insérez des tableaux en quelques secondes avec la barre d'outils.
+@xa,4
+@yr
+@yb,3
+@ys
+bbbutcol
+@xb,3
+@yr
+"Modifiez le nombre de colonnes à l'aide de ce bouton"
+"de la barre d'outils."
+@xa,4
+@yr
+@yb,3
+@ys
+bbbutfrm
+@xb,3
+@yr
+"Ajoutez un cadre que vous pouvez redimensionner et déplacer"
+"sur la page."
+""
+"Utilisez l'option Glisser-Déplacer avec la souris afin de réorganiser"
+"rapidement votre page."
+
+
+[bbtb3]
+@ya,4
+@xa,4
+@ys
+bbbutgrf
+@xb,3
+@yr
+@y,2
+"Utilisez l'outil de dessin pour créer logos, cartes et bien plus encore."
+@xa,4
+@yr
+@yb,3
+@ys
+bbbutcht
+@xb,3
+@yr
+"Créez des graphiques (3-D!) pour donner de l'éclat à vos documents."
+"Redimensionnez-les et retournez-les afin d'obtenir ce que vous voulez."
+@xa,4
+@yr
+@yb,3
+@ys
+bbbutchk
+@xb,3
+@yr
+@y,2
+"Utilisez le vérificateur orthographique pour de parfaits documents."
+
+
+;[bbwphelp]
+;@ya,2
+;bbwphelp,2
+;@xa,4
+;@ya,3
+;"Vous êtes nouveau à Word pour Windows",0, 2
+;"mais familier à WordPerfect ?", 0, 2
+;"Consultez "Votre premier document Word", qui se trouve à la première page"
+;"de votre Guide de l'utilisateur Microsoft afin d'obtenir"
+;"de l'aide sur ce que vous devez savoir pour commencer"
+;"efficacement avec Word pour Windows."
+""
+;"Need more help getting past WordPerfect", 0, 2
+;"keystrokes?",0, 2
+;"Select WordPerfect Help and Word automatically"
+;"demonstrates the equivalent commands in"
+;"Word - right in your document."
+
+
+[bbdiv]
+@ya,4
+@xa,4
+@ys
+bbgram
+@xb,3
+@yr
+@y, 1
+"Utilisez le vérificateur grammatical pour un texte de qualité."
+@xa,4
+@yr
+@yb,3
+@ys
+bbpmhelp
+@xb,3
+@yr
+@y, 1
+"Utilisez l'aide à la fusion pour vous guider dans la création"
+"de lettres personnalisées et de mailing."
+
+;[bbCBT]
+;@xa,4
+;@ya,2
+;bbhelp
+;@xb,3
+;@ya,2
+;"Pour mieux connaître ces fonctionnalités et", 0, 2
+;"d'autres, essayez notre didacticiel.", 0, 2
+;"Les leçons en ligne contiennent plus", 0, 2
+;"de 50 leçons et exercices vous aidant", 0, 2
+;"à utiliser de manière optimale Word", 0, 2
+;"pour Windows.", 0, 2
+
+[bbRegCard2]
+@xa,4
+@ya,2
+waiting
+@xb,3
+@ya,3
+"     Si vous n'avez pas encore rempli votre carte", 0, 2
+"     de garantie, faites-le dès maintenant, pendant", 0, 2
+"     qu'Install termine l'installation de Word. Vous", 0, 2
+"     bénéficierez alors des services Microsoft :", 0, 2
+""
+"         ·    un support technique téléphonique."
+@y,2
+"         ·    un abonnement à Horizons, la revue des "
+"              utilisateurs."
+@y,2
+"         ·    une information prioritaire sur les offres de"
+"              mise à jour dès la sortie d'une nouvelle version."

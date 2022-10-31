@@ -1,0 +1,24 @@
+diff -ru audiofile-0.3.6orig/libaudiofile/CAF.cpp audiofile-0.3.6/libaudiofile/CAF.cpp
+--- audiofile-0.3.6orig/libaudiofile/CAF.cpp	2013-03-06 06:30:03.000000000 +0100
++++ audiofile-0.3.6/libaudiofile/CAF.cpp	2015-10-03 18:00:54.160717500 +0200
+@@ -704,7 +704,7 @@
+ 	if (track->f.channelCount > 2)
+ 		codecDataSize += kChannelAtomSize + kALACAudioChannelLayoutSize;
+ 	m_codecData = new Buffer(codecDataSize);
+-	bzero(m_codecData->data(), m_codecData->size());
++	memset(m_codecData->data(), 0, m_codecData->size());
+ 
+ 	AUpvlist pv = AUpvnew(2);
+ 
+diff -ru audiofile-0.3.6orig/libaudiofile/modules/ModuleState.cpp audiofile-0.3.6/libaudiofile/modules/ModuleState.cpp
+--- audiofile-0.3.6orig/libaudiofile/modules/ModuleState.cpp	2013-03-06 06:30:03.000000000 +0100
++++ audiofile-0.3.6/libaudiofile/modules/ModuleState.cpp	2015-10-03 18:00:54.166719100 +0200
+@@ -402,7 +402,7 @@
+ 		addModule(new Transform(outfc, in.pcm, out.pcm));
+ 
+ 	if (in.channelCount != out.channelCount)
+-		addModule(new ApplyChannelMatrix(infc, isReading,
++		addModule(new ApplyChannelMatrix(outfc, isReading,
+ 			in.channelCount, out.channelCount,
+ 			in.pcm.minClip, in.pcm.maxClip,
+ 			track->channelMatrix));

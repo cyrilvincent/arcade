@@ -1,0 +1,65 @@
+$1
+       
+$2
+
+Programma di configurazione SCSI Iomega. Versione %1d.%2s. 
+Copyright (C) 1991 - 1995 Iomega Corporation. Tutti i diritti riservati.
+$3
+Scrive il file di configurazione hardware (SCSI.SCF) per il device 
+driver SCSI Iomega.
+USO:  SCSICFG [switch opzionali]
+Switch opzionali supportati:
+     /? od /H    Visualizza questo testo ed esce.
+     /P=path     Specificare il path ed/o il nomefile del file di 
+                 configurazione da usare.
+     /L=country  Imposta la lingua corrente per il codice paese 
+                 specificato da "country"
+     /NOSCAN     Non scrive un nuovo file di configurazione se 
+                 ne esiste gi… uno.
+     /VERBOSE    Visualizza i messaggi d'informazione in forma estesa.
+     /TERSE      Visualizza solo le informazioni necessarie.
+     /I:ID,LUN,PORT
+                 Ignora il device a "ID SCSI ", "LUN", "Indirizzo Porta" (Hex)
+$4
+E' stato trovato uno switch opzionale della riga dei comandi non valido od errato.
+Switch opzionale ignorato.
+$5
+%1s adattatore trovato alla porta: %2XH.
+Ricerca dei device in corso.
+$6
+     IDE/ATA Device %1d - %2s
+$7
+     SCSI ID %1d, LUN %2d - %3s
+$8
+Formato file della tabella degli adattatori non valido: 
+$9
+La configurazione viene interrotta.
+$10
+Errore nella scrittura del file config:(%1s).
+$11
+E' stata riscontrata nel sistema una ROM di boot a basso livello.
+Potrebbe essere questa la ragione dell'errore di scrittura.
+Consultare il manuale dell'operatore per ulteriori informazioni.
+$12
+Errore di sistema di un file interno.
+$13
+Errore di disco, o fine file imprevista durante l'analisi 
+sintattica del file ".OP".
+$14
+Errore di allocazione della memoria.
+$15
+Errore di sintassi nel file di messaggi in lingua.
+$16
+Non Š stata trovata la tabella degli adattatori.
+$17
+Non Š stata trovata la tabella dei device.
+$18
+Non sono stati trovati device. 
+$19
+Il kernel SCSI Iomega %1s versione %2d.%3s Š incompatibile con
+questa versione di SCSICFG.EXE.
+$20
+La tabella degli adattatori %1s versione %2d.%3s Š incompatibile
+con questa versione di SCSICFG.EXE.
+$21
+Impossibile caricare il file:

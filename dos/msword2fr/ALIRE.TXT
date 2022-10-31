@@ -1,0 +1,21 @@
+MS Word 2.0 pour Windows 3.x
+
+Traitement de texte de microsoft.
+
+Copier sur disquettes avant l'installation.
+
+Nom des volumes: WW20CFRN144
+(gestionnaire de fichiers, Menu disque, Nommer une disquette)
+ 
+Il est n‚cessaire qu'une imprimante soit install‚e avant d'installer
+MS Word 2.0.
+Si vous n'avez pas d'imprimante, voici la marche … suivre:
+1 - double cliquez sur l'icone du panneau de configuration...
+2 - double cliquez sur l'icone "imprimantes"....
+3 - cliquez sur "Installer une imprimante"....
+4 - recherchez dans la liste: Hewlett Packard 500 ( ou HP 500 )
+    c'est une driver "passe-partout".
+5 - cliquez sur "installer" et ins‚rer les disquettes demand‚es.
+6 - red‚marrez Windows (si install ne le fait pas).
+7 - proc‚dez … l'installation de Word 2
+

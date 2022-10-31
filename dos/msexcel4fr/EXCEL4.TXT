@@ -1,0 +1,7 @@
+MS Excel 4.0 pour Windows 3.x. Version fran‡aise
+
+Bases de donn‚es, tableur.
+
+Noms des volumes : WINXL40
+(gestionnaire de fichiers, Menu disque: nommer une disquette)
+ou sous DOS: label a:WINXL40

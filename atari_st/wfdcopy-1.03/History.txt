@@ -1,0 +1,111 @@
+-----------------------------------------------------------------------------
+
+wfdcopy: Worst-Operating-System Floppy Disk Copy
+
+Copyright (c) 2000-2004, Hervé PARISSI <hparissi@laposte.net>
+
+-----------------------------------------------------------------------------
+
+History
+
+-----------------------------------------------------------------------------
+
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program; if not, write to the Free Software
+ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+
+-----------------------------------------------------------------------------
+
+v1.03 (24/01/2004)
+------------------
+
+- getting rid of stupid & illegal trademark on "Fenêtres" replacing it
+  by "Worst-Operating-System" insuring I don't advertise it...
+
+v1.02 (14/03/2002)
+------------------
+- add some support for second drive (low-level)
+- quick-fix the bug when no disk is in the drive
+- add *.bin in the file-selector
+
+v1.01 (05/01/2002)
+------------------
+- format errors under NT _should_ now be reported correctly
+- write-protection with format when writing disk is now reported
+- now all floppy-images (*.st, *.dsk *.img) are displayed in the file-selector
+
+v1.00 (26/10/2001)
+------------------
+- small fixes (windres bug workaround for instance !)
+- e-mail change (hparissi@laposte.net)
+- going v1.00 at least !
+
+v0.09b (20/09/2000)
+-------------------
+- oops, v0.09 didn't work, re-write the failing code!
+
+v0.09 (19/09/2000)
+------------------
+- add support to bypass bad bootsector
+
+v0.08 (04/08/2000)
+------------------
+- some fixes, fix the bad version "bug"...
+- some cleaning
+
+V0.07 (02/08/2000)
+------------------
+- wntfloppy.[ch] : started the wNT/w2k part
+- unifloppy.[ch] : "universal" (w95/wNT) floppy access
+- some small fixes
+- release to SourceForge
+
+v0.06 (02/08/2000)
+------------------
+- documentations: README.1ST, wfdcopy.txt
+- some fixes
+- release to SourceForge
+
+v0.05 (31/07/2000-01/08/2000)
+-----------------------------
+- copy.c : copy (disk-to-file-to-disk)
+
+v0.04 (20/07/2000)
+------------------
+- file2dsk.c : write images to floppy disks, formatting does not work
+- fix the Borland C++ 5.5 "bug" (#define _WIN32_WINNT 0x0400)
+- upload the source archive to SourceForge (wfdcopy.sourceforge.net)
+
+v0.03 (19/07/2000 - 20/07/2000)
+-------------------------------
+- Progression UI
+- Auto-ignore feature
+- Source clean-up
+
+v0.02 (17/07/2000 - 18/07/2000)
+-------------------------------
+- read floppy disk in the background (so the main window doesn't lock anymore)
+- cosmetic changes
+- write alternative makefiles and try them (Borland C++ 5.5 doesn't work fine,
+  LCC-win32 is ok)
+
+v0.01 (16/07/2000)
+------------------
+- UI
+- implement a basic read-disk-to-file (in the foreground, so it locked the
+  window)
+
+v0.00 (15/07/2000)
+------------------
+- writing w9xfloppy.c
+

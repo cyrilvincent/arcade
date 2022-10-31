@@ -1,0 +1,347 @@
+(Pour obtenir le meilleur affichage écran dans le Bloc-Notes de Windows,
+agrandissez sa fenêtre au maximum et activez le renvoi à la ligne
+automatique. Pour de meilleurs résultats à l'impression, ouvrez ce 
+document sous Microsoft Word pour Windows, ou un autre traitement de
+texte, sélectionnez la totalité du document et mettez le texte en 
+Courier 10 points avant de l'imprimer.)
+
+
+-------------------------------------------------------------
+Configuration et utilisation de Microsoft Excel sur un réseau
+-------------------------------------------------------------
+
+Sommaire
+
+Configuration de Microsoft Excel sur un réseau
+
+   Configuration de Microsoft Excel sur un serveur
+     * Pour installer Microsoft Excel sur un serveur de réseau
+   Configuration de Microsoft Excel sur une station de travail
+     * Pour installer Microsoft Excel de façon à ce qu'il tourne à partir d'un serveur du réseau
+     * Pour installer Microsoft Excel de façon à ce qu'il tourne à partir d'une station de travail locale
+   Paramètres de chemin d'accès dans WIN.INI
+
+Utilisation de Microsoft Excel sur un réseau
+
+   Utilisation de Microsoft Excel par un groupe d'utilisateurs
+   Stockage de documents sur un réseau
+   Partage de documents sur un réseau
+   Protections de documents au niveau du système et du réseau
+     * Pour définir la protection pour un document
+   Protections de documents Microsoft Excel 
+     * Pour ouvrir un document partagé
+   Impression sur un réseau
+   Exécution des didacticiels à partir d'un répertoire de type lecture-écriture
+
+
+----------------------------------------------
+Configuration de Microsoft Excel sur un réseau
+----------------------------------------------
+Sur un réseau, de nombreux utilisateurs peuvent partager le programme Microsoft Excel. Une fois que Microsoft Excel est configuré sur le réseau, il peut être exécuté à partir du serveur du réseau ou bien installé sur les disques durs des stations de travail. Ce document suppose que vous connaissez l'utilisation du réseau pour vous connecter et localiser des fichiers stockés sur le réseau. 
+
+Note: Chaque utilisateur de Microsoft Excel doit avoir une licence
+----  Microsoft Excel. Une licence est attribuée lors de l'achat
+      d'une licence au détail ou d'un coffret de licences Microsoft.
+      Pour plus d'informations sur les restrictions d'utilisation sur
+      un réseau, reportez-vous à votre licence Microsoft Excel.
+
+
+
+Avant de configurer Microsoft Excel :
+* Le réseau doit être opérationnel et vous devez bénéficier du privilège de lecture-écriture sur le répertoire du réseau dans lequel vous voulez installer Microsoft Excel. Pour plus d'informations, consultez la documentation de votre réseau. 
+
+
+* Vous devez configurer l'environnement graphique Microsoft Windows version 3.0 ou ultérieure sur les ordinateurs qui exécuteront le programme Microsoft Excel. Pour plus d'informations sur la configuration de Windows, consultez votre documentation Windows.
+
+La configuration de Microsoft Excel sur un réseau se déroule en deux étapes. Vous devez en premier installer Microsoft Excel sur le serveur du réseau et ensuite configurer les stations de travail, soit pour exécuter Microsoft Excel à partir du serveur, soit pour installer Microsoft Excel sur le disque dur de chaque station de travail.
+
+Note: Chaque station de travail doit avoir au moins 2 Mo de mémoire vive
+----  afin d'exécuter le programme Microsoft Excel.
+
+
+Configuration de Microsoft Excel sur un serveur
+-----------------------------------------------
+Avant d'installer Microsoft Excel sur une station de travail, vous devez l'installer sur le serveur du réseau.
+
+
+* Installation de Microsoft Excel sur le serveur d'un réseau
+
+  1. A partir d'une station de travail, ouvrez une session sur le réseau et connectez-vous au disque où vous allez installer Microsoft Excel.
+
+  2. Si Windows n'est pas encore en cours d'exécution, tapez, à partir de la  ligne de commande DOS:
+
+       win 
+
+     et appuyez sur ENTREE.
+
+     -Ou-
+
+     Si Windows est exécuté, fermez toutes les applications ouvertes.
+
+  3. Choisissez la commande Fichier Exécuter.
+
+  4. Insérez la Disquette 1 du programme d'installation dans le lecteur A.
+
+  5. Tapez :
+
+         a:install
+
+     Appuyez sur ENTREE.
+
+  6. Tapez votre nom et celui de votre organisation, puis choisissez le bouton « Continuer ».
+
+     Chaque nom ne doit pas excéder 31 caractères.
+
+  7. Dans l'écran suivant, choisissez le bouton « Continuer ».
+
+     -Ou-
+
+     Choisissez le bouton « Modifier » pour revenir à l'écran précédent et effectuer des modifications.
+
+  8. Tapez le chemin d'accès du répertoire du serveur où se trouvera le programme Microsoft Excel ; par exemple, tapez e:\excel
+
+     Choisissez le bouton « Continuer ».
+
+     Si Install détecte une version précédente de Microsoft Excel dans ce répertoire, il vous demande si vous voulez la remplacer.
+
+     Si vous choisissez de ne pas supprimer la version précédente, Install vous demande de spécifier un nouveau chemin d'accès.
+
+  9. Choisissez le bouton « Installation serveur » et suivez les instructions qui apparaissent à l'écran.
+
+ 10. Lorsque Install a terminé, choisissez « OK » pour revenir dans Windows.
+
+     Bien que le répertoire du programme Microsoft Excel sur le serveur (celui contenant EXCEL.EXE) puisse être du type lecture-écriture ou lecture seule, nous vous conseillons de le définir en lecture seule après l'installation de Microsoft Excel pour éviter que des utilisateurs ne modifient accidentellement des fichiers. Pour plus d'informations, référez-vous à la documentation de votre système d'exploitation.
+
+
+Configuration de Microsoft Excel sur une station de travail
+-----------------------------------------------------------
+
+Vous pouvez installer Microsoft Excel sur des stations de travail locales afin que les utilisateurs puissent exécuter le programme à partir du serveur du réseau, ou bien vous pouvez l'installer afin que les utilisateurs puissent l'exécuter à partir du disque dur de leur station de travail locale. Effectuez les procédures suivantes à partir de la station de travail locale sur laquelle vous installez Microsoft Excel.
+
+Mémorisez la lettre de l'unité de disque que vous utilisez lorsque vous vous connectez au réseau et lancez le programme d'installation pour la première fois à partir de votre station de travail. Chaque fois que vous exécuterez Microsoft Excel sur le réseau, vous devez vous connecter au réseau en utilisant la même lettre d'unité de disque. Vous pouvez faire en sorte que votre ordinateur accède automatiquement au serveur du réseau chaque fois que vous le démarrez en ajoutant une commande d'accès au réseau dans votre fichier AUTOEXEC.BAT.
+
+Notes: Le programme d'installation copie les fichiers SHELL.DLL et
+------ COMMDLG.DLL dans le répertoire \WINDOWS\SYSTEM sur la station
+       de travail, à moins que ce répertoire ne soit du type
+       lecture-seule, auquel cas vous devrez copier ces fichiers à
+       partir du répertoire du réseau Microsoft Excel (par ex. E:\EXCEL)
+       vers le répertoire \WINDOWS\SYSTEM de la station de travail.
+
+(Les renseignements suivants ne s'appliquent que si vous utilisez Windows version 3.0 ; cela n'est pas valable pour Windows version 3.1 ou ultérieure.)
+L'installation copie aussi une variante des petites polices de Windows dans le répertoire \WINDOWS\SYSTEM de la station de travail à moins qu'il ne soit du type lecture seule auquel cas vous devez copier ces fichiers à partir du répertoire du réseau dans lequel vous avez installé Microsoft Excel (par ex. E:\EXCEL) vers le répertoire \WINDOWS\SYSTEM de la station de travail. Cette variante dépend de la résolution de votre moniteur. Si le répertoire \WINDOWS\SYSTEM est du type lecture-écriture, le programme d'installation détecte la résolution de l'écran et copie les fichiers appropriés. Si vous avez besoin de copier vous-même un fichier de petites polices, utilisez le tableau suivant pour déterminer le fichier à copier.
+
+
+	Si la résolution de			Copiez le fichier
+	votre moniteur est
+
+	VGA					SMALLE.FON
+	EGA					SMALLB.FON
+	8514					SMALLF.FON
+
+Microsoft Excel a besoin des petites polices afin d'afficher clairement certains textes. 
+
+
+* Installation de Microsoft Excel afin qu'il s'exécute à partir du serveur d'un réseau
+
+  1. A partir de la station de travail, accédez au réseau et connectez-vous au disque contenant le répertoire où se trouve EXCEL.EXE.
+
+  2. Si Windows n'est pas en cours d'exécution, tapez, à partir d'une ligne de commande DOS de la station de travail :
+
+       win
+
+     et appuyez sur ENTREE.
+
+     -Ou-
+
+     Si Windows est en cours d'exécution, fermez les applications ouvertes.
+
+  3. Choisissez la commande Fichier Exécuter.
+
+  4. Tapez le chemin d'accès complet de l'endroit où Microsoft Excel est installé sur le réseau, suivi de :
+
+       install
+
+     Par exemple, tapez e:\excel\install
+
+     Ensuite, appuyez sur ENTREE.
+
+  5. Tapez le nom de la personne qui utilisera la station de travail (31 caractères au maximum) et choisissez le bouton « Continuer ».
+
+     Ce nom sera utilisé dans Microsoft Excel comme nom d'auteur pour les documents.
+
+  6. Dans le prochain écran de Install, choisissez le bouton « Continuer ».
+
+     -Ou-
+
+     Choisissez le bouton « Modifier » pour revenir dans l'écran précédent et effectuer des modifications.
+
+  7. Tapez le chemin d'accès du répertoire de l'utilisateur sur votre station de travail. Par exemple, tapez c:\excel et choisissez le bouton « Continuer ».
+
+  8. Choisissez le bouton « Installation station de travail » et suivez les instructions qui apparaissent à l'écran.
+
+  9. Install demande si vous voulez mettre à jour le fichier de démarrage AUTOEXEC.BAT. Choisissez le bouton « Mettre à jour ».
+
+     Si vous choisissez le bouton « Ne pas mettre à jour », vous devez mettre à jour AUTOEXEC.BAT vous-même. Pour plus d'informations sur la manière de modifier le fichier AUTOEXEC.BAT, voir « Modification de la commande Path dans votre fichier AUTOEXEC.BAT » du fichier LISEZMOI.TXT ou consultez votre manuel MS-DOS.
+
+     Le programme Microsoft Excel reste sur le serveur, votre propre copie du fichier des paramètres de Microsoft Excel, EXCEL4.INI, étant stocké dans le répertoire que vous avez spécifié à l'étape 7. EXCEL4.INI contient les informations dont Microsoft Excel a besoin  pour s'exécuter à partir du serveur du réseau.
+
+     Si vous avez d'anciennes copies d'applications complémentaires fournies avec Microsoft Excel, par exemple le Vérificateur d'orthographe, Install les met à jour dans le répertoire WINDOWS\MSAPPS. (Si vous exécutez Windows à partir du réseau, vous n'aurez pas ce répertoire.)
+
+ 10. Quand Install a fini, choisissez « OK » pour revenir dans Windows.
+
+
+* Installation de Microsoft Excel afin qu'il s'exécute à partir d'une station de travail locale
+
+La méthode d'installation à partir d'un serveur de réseau permet de gagner du temps et est plus pratique que l'installation de Microsoft Excel à partir de disquettes. Avant d'installer Microsoft Excel sur une station de travail, vous devez être conforme aux termes de votre licence Microsoft Excel.
+
+  1. A partir de la station de travail, connectez-vous au réseau et positionnez-vous dans le répertoire contenant EXCEL.EXE.
+
+  2. Si Windows n'est pas en cours d'exécution, tapez, à partir  d'une ligne de commande DOS de la station de travail:
+     
+       win
+
+     et appuyez sur ENTREE.
+
+     -Ou-
+
+     Si Windows est en cours d'exécution, fermez toutes les applications ouvertes.
+
+  3. Choisissez la commande Fichier Exécuter.
+
+  4. Tapez le chemin d'accès complet de l'endroit où Microsoft Excel est installé sur le réseau, suivi de :
+
+       install
+
+     Par exemple, tapez e:\excel\install
+
+     Puis appuyez sur ENTREE.
+
+  5. Tapez votre nom et choisissez le bouton « Continuer ».
+
+     Le nom ne peut pas excéder 31 caractères.
+
+  6. Dans le prochain écran de Install, choisissez le bouton « Continuer ».
+
+     -Ou-
+
+     Choisissez le bouton « Modifier » pour revenir à l'écran précédent et effectuer des modifications.
+
+  7. Tapez le chemin d'accès du répertoire de l'utilisateur sur votre station de  travail ; par exemple, tapez c:\excel
+
+     Ensuite, choisissez le bouton « Continuer ».
+
+     Si Install détecte une version précédente de Microsoft Excel dans ce répertoire, il demande si vous voulez la remplacer. Si vous répondez par l'affirmative, Install installe la version 4.0  à la place de la version précédente.
+
+     Si vous choisissez de conserver la version précédente, tapez un autre chemin d'accès et choisissez le bouton « Continuer ».
+
+  8. Choisissez le bouton « Installation complète » ou le bouton « Installation personnalisée » et suivez les instructions apparaissant à l'écran.
+
+  9. Install demande si vous voulez mettre à jour le fichier AUTOEXEC.BAT. Choisissez le bouton « Mettre à jour ».
+
+     Si vous choisissez le bouton « Ne pas mettre à jour », vous devrez modifier vous-même le fichier AUTOEXEC.BAT. Pour plus d'informations, référez-vous au paragraphe « Modification de la commande Path dans votre fichier AUTOEXEC.BAT » du fichier LISEZMOI.TXT ou consultez votre manuel MS-DOS.
+
+     Si vous avez d'anciennes copies d'applications complémentaires fournies avec Microsoft Excel, par exemple le Vérificateur d'orthographe, Install les met à jour dans le répertoire WINDOWS\MSAPPS.
+
+ 10. Quand le programme d'installation est terminé, choisissez « OK » pour revenir dans Windows.
+
+
+Paramètres de chemin d'accès dans WIN.INI
+-----------------------------------------
+Install effectue des modifications dans le fichier de configuration Windows, WIN.INI, qui contient des informations sur vos applications Windows. Pour plus d'informations sur WIN.INI, consultez votre documentation Windows.
+
+WIN.INI contient des chemins d'accès pour les dictionnaires de vérification d'orthographe, y compris le dictionnaire standard et le dictionnaire personnalisé. Si vous stockez le dictionnaire standard dans un répertoire protégé en écriture sur le serveur du réseau, assurez-vous que le dictionnaire personnalisé soit placé dans un répertoire où vous avez des privilèges d'écriture.
+
+
+--------------------------------------------
+Utilisation de Microsoft Excel sur un réseau
+--------------------------------------------
+L'utilisation de Microsoft Excel sur un réseau est pratiquement identique à l'utilisation de Microsoft Excel à partir d'un disque dur sur un ordinateur individuel. Sur le réseau, vous pouvez mettre un document à la disposition d'autres utilisateurs et leur permettre d'effectuer des modifications sur le fichier, ou bien vous pouvez protéger le fichier afin qu'il ne soit pas modifié. Vous pouvez utiliser le serveur du réseau pour stocker, échanger des documents entre les utilisateurs et partager une imprimante attachée au serveur du réseau.
+
+Utilisation de Microsoft Excel par un groupe d'utilisateurs
+--------------------------------------------------------
+Un groupe d'utilisateurs est un groupe de personnes qui partagent des documents ou des informations. Microsoft Excel est doté de nombreuses fonctions qui peuvent augmenter la productivité d'un groupe d'utilisateurs.
+
+En liant un document sur une station de travail avec un document mis en commun sur le réseau, vous pouvez mettre à jour automatiquement les informations dans le document de la station de travail quand elles sont modifiées dans le document commun. Vous pouvez lier des documents Microsoft Excel entre eux et avec des documents créés dans d'autres applications telles que Microsoft Word. Pour plus d'informations, voir le chapitre 3 du Volume 2 du Guide de l'utilisateur de Microsoft Excel.
+
+Vous pouvez utiliser une protection par mot de passe pour contrôler l'accès aux documents qui contiennent des informations délicates. Pour plus d'informations, voir le chapitre 4 du Volume 1 du Guide de l'utilisateur de Microsoft Excel.
+
+Stockage de documents sur un réseau
+-----------------------------------
+Vous pouvez créer des documents sur le disque dur de votre station de travail ou sur le serveur du réseau. Par défaut, Microsoft Excel enregistre vos documents dans le répertoire contenant EXCEL.EXE sur le disque dur de votre station de travail. Vous pouvez modifier cette fonction par défaut en sélectionnant l'icône Microsoft Excel, en choisissant la commande Fichier Propriétés dans le Gestionnaire de programmes, et en ajoutant un paramètre dans la zone « Ligne de commande ». Pour plus d'informations, voir « Modification des propriétés de l'icône Microsoft Excel » et « Contrôle du démarrage de Microsoft Excel pour Windows » dans « Informations complémentaires sur le démarrage de Microsoft Excel » au chapitre 1 du Volume 1 du Guide de l'utilisateur de Microsoft Excel. Si vous enregistrez vos documents sur le serveur du réseau, créez votre propre répertoire pour stocker ces documents. N'enregistrez pas vos documents dans le répertoire où se trouve EXCEL.EXE.
+
+
+Partage de documents sur un réseau
+----------------------------------
+Vous pouvez protéger des documents qui sont partagés sur un réseau pour éviter des modifications involontaires. Au niveau du système ou du réseau, vous pouvez affecter des permissions d'accès ; dans Microsoft Excel, vous pouvez limiter les accès et l'étendue des permissions d'écriture pour un document.
+
+Si Microsoft Excel est exécuté à partir d'un serveur du réseau, le programme Install écrit le nom de l'utilisateur local dans la copie locale de EXCEL4.INI. Ensuite, quand un autre utilisateur reçoit un message de violation de partage, Microsoft Excel affiche le nom de l'utilisateur qui a ouvert le document.
+
+
+Protections de documents au niveau du système et du réseau
+----------------------------------------------------------
+Au niveau du système, vous pouvez limiter l'accès à un document unique ou à tous les documents d'un répertoire. Pour plus d'informations sur la manière d'affecter des permissions d'accès, consultez la documentation de votre système d'exploitation. Par exemple,
+
+   * Pour empêcher des modifications sur tous les documents d'un répertoire, affectez un accès en lecture seule à ce répertoire.
+   * Pour autoriser les utilisateurs à ouvrir un document sans le modifier sous son nom en cours, affectez un accès en lecture seule à ce document.
+   * Pour autoriser tous les utilisateurs à ouvrir un document et à enregistrer des modifications, affectez une permission de lecture-écriture pour ce document. Le premier utilisateur qui ouvre un document possède le contrôle sur l'original jusqu'à la fermeture du document. D'autres utilisateurs peuvent alors ouvrir une copie du document et enregistrer les modifications sous un autre nom.
+
+Certains systèmes d'exploitation et réseaux locaux (LAN) fournissent d'autres méthodes pour protéger des documents. Pour en savoir davantage sur les fonctions de protection de document complémentaires, consultez la documentation de votre système d'exploitation ou de votre réseau. Vous pouvez assigner une permission de lecture seule au niveau du système ou de lecture-écriture pour un document dans Windows en utilisant les procédures suivantes :
+
+* Pour définir la protection pour un document
+
+  1. Dans le Gestionnaire de programmes, cliquez deux fois sur l'icône du Gestionnaire de fichiers.
+
+  2. Sélectionnez le document à protéger en lecture seule ou en lecture-écriture.
+
+  3. Choisissez la commande Fichier Changer les attributs.
+
+  4. Activez ou désactivez la case « Lecture seule ».
+
+  5. Choisissez « OK ».
+
+
+Protections des documents Microsoft Excel
+-----------------------------------------
+Dans Microsoft Excel, quand un utilisateur ouvre un document en lecture-écriture, l'utilisateur peut protéger le document original contre des modifications accidentelles en sélectionnant la case à cocher « Lecture seule » dans la boîte de dialogue Ouvrir. Cela n'empêche pas l'utilisateur d'enregistrer des modifications sous un autre nom de document. En outre, vous pouvez verrouiller un document afin qu'il ne puisse être ouvert qu'en tapant un mot de passe. Pour plus d'informations sur la protection par mot de passe et sur l'ouverture de documents, voir le chapitre 4 du Volume 1 du Guide de l'utilisateur de Microsoft Excel.
+
+* Pour ouvrir un document commun
+
+  1. Connectez-vous à l'ordinateur du réseau qui contient le document que vous voulez ouvrir et lancez Microsoft Excel.
+
+  2. Choisissez la commande Fichier Ouvrir.
+
+  3. Dans la zone « Nom de fichier », sélectionnez le document à ouvrir.
+
+  4. Si vous ne voulez pas apporter de modifications au document original commun, sélectionnez la case à cocher « Lecture seule ».
+
+  5. Choisissez « OK ».
+
+     Si vous essayez d'ouvrir un document alors qu'un autre utilisateur l'a ouvert, Microsoft Excel affiche un message pour indiquer que le document est verrouillé.
+
+  6. Si vous voyez ce message, choisissez « OK » pour ouvrir une copie du document original. Pour effectuer des modifications sur votre copie, vous devez l'enregistrer sous un autre nom.
+
+Quand un document verrouillé est ouvert, le premier utilisateur qui l'a ouvert peut effectuer des modifications qui ne seront pas reflétées dans la copie que vous utilisez. Vous ne pouvez pas faire de modifications sur l'original.
+
+Quand vous ouvrez un document en lecture seule, un message vous l'indique. Pour enregistrer des changements sur un document en lecture seule, enregistrez-le sous un autre nom.
+
+
+Impression sur un réseau
+------------------------
+Pour plus d'informations sur la configuration des imprimantes, consultez votre documentation Windows. Pour plus d'informations sur l'impression avec Microsoft Excel, voir le chapitre 16 au Volume 1 du Guide de l'utilisateur de Microsoft Excel.
+
+Les procédures pour imprimer à partir d'un réseau sont généralement les mêmes que pour imprimer à partir d'un ordinateur individuel. Vous utilisez le programme Install de Windows pour installer toutes les imprimantes qui sont disponibles. Ensuite, vous choisissez la commande Fichier Mise en page dans Microsoft Excel puis le bouton « Configurer » pour sélectionner une imprimante à utiliser dans Microsoft Excel et pour changer les paramètres de l'imprimante active. Si vous avez installé plusieurs imprimantes, vérifiez, quand vous lancez Microsoft Excel pour la première fois, que vous avez sélectionné la bonne imprimante pour vos documents. Si vous sélectionnez une imprimante lorsque vous mettez en forme un document et une autre imprimante quand vous l'imprimez, certaines polices, tailles de polices, ainsi que d'autres options de mise en forme risquent de ne pas être disponibles au moment de l'impression.
+
+Note: Votre logiciel de réseau peut vous demander d'exécuter une commande
+----- système pour qu'une imprimante du réseau soit disponible pour votre
+      ordinateur. Pour des procédures spécifiques à votre réseau,
+      consultez la documentation de votre logiciel de réseau.
+
+
+Exécution des didacticiels à partir d'un répertoire de type lecture-écriture
+----------------------------------------------------------------------------
+Pour exécuter les didacticiels, Microsoft Excel doit enregistrer les paramètres de l'environnement en cours. Pour cela, le répertoire en cours doit être du type lecture-écriture. Sinon, un message selon lequel Microsoft Excel ne peut pas enregistrer les informations s'affichera et les didacticiels ne s'exécuteront pas.
+
+
+
+
+0492

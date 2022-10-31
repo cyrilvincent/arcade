@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<TITLE>Thom - Manuel d'utilisation</TITLE>
+</HEAD>
+<BODY background="thomson.gif">
+<P align="CENTER"><IMG src="thom_logo.gif" width="592" height="144" alt="logo Thom"><BR>
+L'émulateur Thomson TO7-70<BR>
+version 1.5.5 (MSDOS/DPMI)<BR>
+Copyright © 1996 Sylvain Huet, 1999-2003 Eric Botcazou</P>
+
+<H2>Sommaire</H2>
+
+<OL>
+<LI><A href="#Introduction">Introduction</A></LI>
+
+<LI><A href="#Installation">Installation</A></LI>
+
+<LI><A href="#Lancement">Lancement</A></LI>
+
+<LI><A href="#Modes_graphiques">Modes graphiques</A></LI>
+
+<LI><A href="#Clavier">Clavier</A></LI>
+
+<LI><A href="#Manettes">Manettes</A></LI>
+
+<LI><A href="#Crayon_optique">Crayon optique</A></LI>
+
+<LI><A href="#Generateur_sonore">Générateur sonore</A></LI>
+
+<LI><A href="#Supports_amovibles">Supports amovibles de lecture/écriture</A></LI>
+
+<LI><A href="#Panneau_de_controle">Panneau de contrôle</A></LI>
+
+<LI><A href="#Acces_direct">Accès direct aux disquettes</A></LI>
+
+<LI><A href="#Commandes_diverses">Commandes diverses</A></LI>
+
+<LI><A href="#Limitations_et_bugs">Limitations et bugs</A></LI>
+
+<LI><A href="#Remerciements">Remerciements</A></LI>
+</OL>
+
+<H2><A name="Introduction">1. Introduction</A></H2>
+
+<P>Thom est un émulateur TO7-70 pour PC, i.e il reproduit <EM>aussi fidèlement que possible</EM> le fonctionnement d'un autre micro-ordinateur: le Thomson TO7-70.<BR>
+Il est basé sur la version 1.5 du FunzyTO7-70 de Sylvain Huet, dont les modules d'entrées/sorties ont été réécrits et l'interface utilisateur totalement refondue.<BR>
+Thom ne réalise lui-même que l'émulation <EM>matérielle</EM> du TO7-70, à savoir celle du microprocesseur Motorola MC6809E, de la carte mémoire, de la carte vidéo et des périphériques suivants: crayon optique, manettes de jeux et lecteur de cassettes; le système d'exploitation qui coordonne le tout n'est pas inclus et il faut donc utiliser une copie de la ROM d'un TO7-70 original pour faire tourner Thom.<BR>
+<BR>
+</P>
+
+<H2><A name="Installation">2. Installation</A></H2>
+
+<P>Pour faire fonctionner l'émulateur, vous devez disposer au minimum d'un 80386 muni de 2 Mo de RAM, d'une carte graphique VGA et de MSDOS version 5.0 ou supérieure, ou de Windows version 3.1 ou supérieure (Windows 95/98/Me); une carte son compatible Sound Blaster est nécessaire pour l'émulation sonore.<BR>
+Pour installer l'émulateur, il suffit de désarchiver <KBD>thom-1.5.5-dosexe.zip</KBD> et <KBD>thom-rom.zip</KBD> dans un même répertoire. Le programme éxécutable se nomme <KBD>thom.exe</KBD> .<BR>
+Le fichier <KBD>cwsdpmi.exe</KBD> n'est nécessaire que pour une utilisation en mode MS-DOS réel; si Thom n'est lancé que sous Windows, il peut être effacé.</P>
+
+<H2><A name="Lancement">3. Lancement</A></H2>
+
+<P>Le lancement du programme éxécutable provoque l'affichage de l'entête et des messages d'initialisation, puis le démarrage de l'émulation.<BR>
+Thom accepte les paramètres suivants sur la ligne de commande:</P>
+
+<TABLE border="0" summary="options">
+<TR>
+<TD><KBD>[-help]</KBD></TD>
+<TD>affiche l'aide en ligne</TD>
+</TR>
+
+<TR>
+<TD><KBD>[-m file.m7]</KBD></TD>
+<TD>place la cartouche file.m7 dans le lecteur</TD>
+</TR>
+
+<TR>
+<TD><KBD>[-nodisk]</KBD></TD>
+<TD>désactive le contrôleur de disquettes</TD>
+</TR>
+
+<TR>
+<TD><KBD>[-fast]</KBD></TD>
+<TD>active la pleine vitesse de l'émulateur</TD>
+</TR>
+
+<TR>
+<TD><KBD>[-nosound]</KBD></TD>
+<TD>supprime le son de l'émulateur</TD>
+</TR>
+</TABLE>
+
+<H2><A name="Modes_graphiques">4. Modes graphiques</A></H2>
+
+<P>L'émulateur fonctionne en mode graphique PC VGA 13h 320x200x8, ce qui lui assure un affichage performant et un support par toutes les cartes graphiques.</P>
+
+<H2><A name="Clavier">5. Clavier</A></H2>
+
+<P>Le clavier du TO7-70 est émulé dans sa totalité, y compris les combinaisons de touches à base de CNT et de ACC.<BR>
+L'émulation est (pratiquement) fidèle au clavier du PC (AZERTY), c'est à dire que le caractère affiché sur l'écran est (pratiquement) toujours celui inscrit sur la touche PC frappée, pourvu qu'il existe sur le clavier TO7-70. Les deux SHIFT jouent leur rôle naturel, et comme sur le clavier original, les dix chiffres de la première ligne de touches ne sont pas shiftés.<BR>
+Néanmoins, un caractère fait exception: # est mappé sur é (SHIFT + 2).<BR>
+La touche STOP est mappée sur le TAB du PC, CNT est mappée sur le CTRL gauche du PC, RAZ sur FIN, ACC sur le ALT, HOME sur HOME, les 4 flèches sur les 4 flèches, INS sur INSER, EFF sur SUPPR.<BR>
+La led CapsLock du PC émule de manière inversée la led MIN du clavier du TO7-70.</P>
+
+<H2><A name="Manettes">6. Manettes</A></H2>
+
+<P>Le pavé numérique du PC émule les huit directions de la manette 0. Le bouton Fire est mappé sur le CTRL droite.<BR>
+Dans le même temps, le bloc gauche clavier (A-E, Q-D, W-C) émule la manette 1, tout en continuant à renvoyer les lettres au TO7-70. Le bouton Fire est mappé sur le CTRL gauche.<BR>
+Comme sur une manette réelle, seule une direction est prise en compte et c'est celle de la dernière touche appuyée.</P>
+
+<H2><A name="Crayon_optique">7. Crayon optique</A></H2>
+
+<P>La souris permet d'émuler le bon vieux crayon optique du TO7-70. Le bouton gauche de la souris figure le bouton du crayon. Si le pointeur apparaissant sur l'écran est gênant, le bouton droit de la souris permet de le faire disparaître et réapparaître alternativement.<BR>
+Enfin c'est le centre du pointeur en forme de croix qui représente effectivement le point visé par le crayon.</P>
+
+<H2><A name="Generateur_sonore">8. Générateur sonore</A></H2>
+
+<P>Le son du TO7-70 est émulé via la carte son du PC. Les deux générateurs sonores 1-bit et 6-bit externe (interface Musique et Jeux) sont émulés.<BR>
+Toutes les cartes SoundBlaster et compatibles sont supportées, plus quelques autres modèles (Ensoniq Soundscape, ESS AudioDrive et Windows Sound System).<BR>
+Le <A href="#Panneau_de_controle">panneau de contrôle</A> permet de régler le volume du générateur sonore.</P>
+
+<H2><A name="Supports_amovibles">9. Supports amovibles de lecture/écriture</A></H2>
+
+<P>Thom peut manipuler trois types de support amovible de lecture et/ou écriture: les cartouches ROM, les cassettes analogiques et les disquettes 5"25 Thomson. Chaque support est virtualisé par le biais de fichiers au format Mémo7 (extension .m7), K7 (extension .k7) et SAP (extension .sap) respectivement.<BR>
+Voir le <A href="#Panneau_de_controle">panneau de contrôle</A> pour le mode d'emploi relatif à leur manipulation avec l'émulateur.</P>
+
+<H2><A name="Panneau_de_controle">10. Panneau de contrôle</A></H2>
+
+<P>L'appui sur la touche [ESC] du clavier du PC suspend l'émulation et ouvre le Panneau de contrôle.</P>
+
+<CENTER><IMG src="thom_d1.gif" width="320" height="200" alt="Panneau de contrôle"></CENTER>
+
+<P>Ce menu permet de communiquer avec l'émulateur et d'accéder aux périphériques du TO7-70 (lecteur de cartouches et lecteur de cassettes).</P>
+
+<H3>Commandes et Réglages</H3>
+
+<CENTER><IMG src="thom_d2.gif" width="320" height="200" alt="Commandes et Réglages"></CENTER>
+
+<P>Les deux premiers boutons sont à utiliser avec précaution:<BR>
+- Réinitialiser le TO7-70: il correspond à l'appui sur le bouton Reset du TO7-70 (situé à droite). Comme sur le véritable TO7-70, il n'est pas toujours suffisant pour sortir d'un plantage.<BR>
+- Redémarrer à froid le TO7-70: plus violent, il correspond à éteindre puis rallumer le TO7-70. A priori rien ne lui résiste.<BR>
+L'option vitesse permet de régler celle de l'émulation:<BR>
+- Vitesse exacte: émulation du MC6809E à 1Mhz strictement, c'est le choix normal, le seul utilisable pour les jeux et pour l'émulation sonore.<BR>
+- Vitesse maximale: émulation du MC6809E à la vitesse maximale atteinte par le PC (à titre d'exemple un P200 émule un MC6809E à 10Mhz). C'est utilisable pour les utilitaires, c'est même assez agréable d'avoir un TO7-70 rapide, mais le son est alors désactivé.<BR>
+Enfin le volume sonore de l'émulateur est réglable par le biais d'un curseur.</P>
+
+<H3>Lecteur de cartouches</H3>
+
+<CENTER><IMG src="thom_d3.gif" width="320" height="200" alt="Lecteur de cartouches"></CENTER>
+
+<P>Ce menu permet de sélectionner un fichier au format Mémo7 (extension .m7) et de le charger comme cartouche (bouton "..."). L'intitulé de la cartouche apparaît dans la zone de gauche. A noter que Thom effectue alors un redémarrage à froid afin que la cartouche soit effectivement prise en compte et apparaisse sur l'écran de démarrage.<BR>
+Il est conseillé de mettre tous les fichiers Mémo7 dans un même sous-répertoire <KBD>memo7</KBD> du répertoire de l'émulateur pour une sélection plus aisée.</P>
+
+<H3>Lecteur de cassettes</H3>
+
+<CENTER><IMG src="thom_d4.gif" width="320" height="200" alt="Lecteur de cassettes"></CENTER>
+
+<P>Vous pouvez ici non seulement sélectionner le fichier au format K7 (extension .k7) qui joue le rôle de cassette (bouton "...") mais aussi choisir de protéger son accès en écriture (case "prot.") ou encore modifier
+la position de la bande (champ numérique "Compteur" et boutons "+" et "-") ou même rembobiner la cassette, i.e revenir au début du fichier (bouton "Rembobiner"). Attention, tout changement de protection d'accès en écriture provoque automatiquement le rembobinage.<BR>
+Là encore, il est conseillé de mettre tous les fichiers K7 dans un même sous-répertoire <KBD>k7</KBD> du répertoire de l'émulateur pour une sélection plus aisée.</P>
+
+<H3>Lecteurs de disquettes</H3>
+
+<CENTER><IMG src="thom_d5.gif" width="320" height="200" alt="Lecteurs de disquettes"></CENTER>
+
+<P>Ce menu permet de sélectionner les fichiers au format SAP (extension .sap) qui seront utilisés comme disquettes en lecture/écriture par l'émulateur (bouton "..."). Ces fichiers sont des images des disquettes physiques Thomson, réalisées par un utilitaire spécifiques appelé SAP, et doivent être stockés sur le disque dur du PC, de préférence dans un sous-répertoire <KBD>disks</KBD> du répertoire de l'émulateur.<BR>
+Les lecteurs 0: et 1: correspondent aux deux faces du premier lecteur physique de disquettes d'un véritable TO7-70; les lecteur 2: et 3: correspondent quant à eux aux deux faces du second lecteur.<BR>
+Il est possible d'activer pour chacun des lecteurs, indépendamment des autres, la protection d'accès en écriture de la disquette (case "prot.").<BR>
+Le bouton "Accès direct" permet au lecteur spécifié <A href="#Acces_direct">d'accéder directement</A> à une disquette physique 5"25 - 360 ko au format TO7-70 introduite dans un lecteur 5"25 du PC.<BR>
+A noter qu'une led verte s'allume en haut à droite de l'écran lorsqu'un accès disque est en cours.</P>
+
+<H2><A name="Acces_direct">11. Accès direct aux disquettes</A></H2>
+
+<P>Le mode normal de gestion des disquettes de l'émulateur Thom est, à l'instar des autres périphériques, la virtualisation: les disquettes sont représentées par des fichiers au format SAP (extension .sap) et toutes les manipulations, en lecture ou en écriture, sont réalisées sur ces fichiers. Les deux bénéfices en sont une grande souplesse d'utilisation et une protection des données originales des disquettes TO7-70.<BR>
+Néanmoins, puisque le format 5"25 standard de disquette est resté le même depuis le premier TO7-70 jusqu'à aujourd'hui, il est possible matériellement de faire accéder directement tout PC aux disquettes 5"25 du TO7-70, à la fois en lecture et en écriture. Le menu disquettes du <A href="#Panneau_de_controle">Panneau de contrôle</A> de Thom permet de sélectionner cet accès direct pour les lecteurs 5"25 disponibles sur le système, mais uniquement pour la face 0.<BR>
+Sans commande explicite de l'utilisateur, dans le même souci de protection des données originales des disquettes Thomson, seule la <EM>lecture</EM> directe est autorisée: la case de protection en écriture d'un lecteur en accès direct reste bloquée en position active. Il est toutefois possible d'autoriser l'écriture directe (et donc également le formatage direct de disquettes 5"25 - 360 ko au format Thomson) en lançant Thom avec l'option <KBD>--enable-direct-write</KBD> (cette option n'est volontairement pas affichée par l'aide en ligne). Mais il est <B>très fortement recommandé</B> de ne pas utiliser l'écriture directe sur des disquettes originales Thomson: le format TO n'est pas le format natif des PC et des incompatibilités résiduelles pourraient avoir de <B>graves</B> conséquences sur l'intégrité des données; n'utiliser l'écriture directe que sur des <B>copies</B>, éventuellement réalisées par Thom lui-même.</P>
+
+<H2><A name="Commandes_diverses">12. Commandes diverses</A></H2>
+
+<UL>
+<LI>[F11] permet de réaliser une capture d'écran et de la sauvegarder au format BMP dans le répertoire de Thom.</LI>
+
+<LI>[F12] permet d'accéder au débogueur et au gestionnaire de mémoire intégrés (à réserver aux initiés).</LI>
+</UL>
+
+<H2><A name="Limitations_et_bugs">13. Limitations et bugs</A></H2>
+
+<P>Merci d'utiliser le <A href="mailto:ebotcazou_at_libertysurf_dot_fr">mail</A> pour toute remarque, suggestion et pour signaler les inévitables bugs.</P>
+
+<H2><A name="Remerciements">14. Remerciements</A></H2>
+
+<P>- <A href="http://www.sylvain-huet.com">Sylvain Huet</A> qui a bâti l'architecture et le coeur de l'émulateur,<BR>
+- <A href="http://alleg.sourceforge.net">Shawn Hargreaves</A> and friends pour leur magnifique librairie Allegro,<BR>
+- <A href="http://www.delorie.com">DJ Delorie</A> and friends pour l'indispensable DJGPP,<BR>
+- François Mouret (alias Préhis-To) pour sa documentation très complète sur les contrôleurs de disquettes Thomson,<BR>
+- et tous ceux qui m'ont signalé un problème ou suggéré une amélioration à apporter à Thom.</P>
+
+<HR>
+<TABLE width="100%" summary="pied de page">
+<TR>
+<TD align="LEFT"><SMALL>Copyright © 1999-2003 Eric Botcazou <A href="mailto:ebotcazou_at_libertysurf_dot_fr">(ebotcazou at libertysurf dot fr)</A><BR>
+Dernière modification: mardi 30 décembre 2003</SMALL></TD>
+<TD align="RIGHT">
+<TABLE summary="Thom Home Page">
+<TR>
+<TD>Thom Home Page</TD>
+<TD><A href="http://nostalgies.thomsonistes.org/thom_home.html"> <IMG src="home.gif" width="32" height="32" alt="Thom Home Page"></A></TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>
+

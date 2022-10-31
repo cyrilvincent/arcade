@@ -1,0 +1,45 @@
+\\-------------------
+\\Dune II - The Maker
+\\-------------------
+\\
+\\-------------------
+\\Version information
+\\-------------------
+0|INFO|VERSION|Version 0.7.0, Compiled at Apr 27 2022 , 17:07:15|Initializing
+0|INFO|GAMEINI|Load file settings.ini|(cIniFile)
+11|INFO|GAMEINI|Load file game.ini|(cIniFile)
+\\-------
+\\Allegro
+\\-------
+211|INFO|ALLEGRO|Allegro 4.4.3, MinGW32|SUCCESS|Allegro init
+211|INFO|ALLEGRO|Dune II - The Maker [0.7.0] - (by Stefan Hendriks)|SUCCESS|Set up window title
+211|INFO|ALLEGRO|install_timer()|SUCCESS|Initializing timer functions
+211|INFO|ALLEGRO|alfont_init()|SUCCESS|Initializing ALFONT
+242|INFO|ALLEGRO|install_keyboard()|SUCCESS|Initializing Allegro Keyboard
+242|INFO|ALLEGRO|install_mouse()|SUCCESS|Initializing Allegro Mouse
+242|INFO|ALLEGRO|LOCK_VARIABLE/LOCK_FUNCTION|SUCCESS|Set up timer related variables
+242|INFO|SETUP|Resolution 1920x1080 loaded from settings.ini.|Resolution from ini file
+242|INFO|ALLEGRO|Desktop color dept is 32.|Screen init
+242|INFO|ALLEGRO|Fullscreen mode requested.|Screen init
+1527|INFO|ALLEGRO|Successfully initialized full-screen with resolution 1920x1080 and color depth 32.|SUCCESS|Screen init
+1527|INFO|ALLEGRO|Set text mode to -1|SUCCESS|Font settings
+1527|INFO|ALFONT|loaded arrakeen.fon|SUCCESS|Loading font
+1527|INFO|ALFONT|loaded benegess.fon|SUCCESS|Loading font
+1527|INFO|ALFONT|loaded data/small.ttf|SUCCESS|Loading font
+1543|INFO|SOUND|Hooked datafile: gfxaudio.dat.|SUCCESS|Initialization
+1699|INFO|SOUND|Failed reserving 256 voices. Will try 128.|FAILED|Initialization
+1699|INFO|SOUND|Failed reserving 128 voices. Will try 64.|FAILED|Initialization
+2090|INFO|SOUND|Successfully installed sound. 64 voices reserved|SUCCESS|Initialization
+\\----
+\\GAME
+\\----
+2148|INFO|ALLEGRO|Hooked datafile: gfxdata.dat|SUCCESS|Load data
+2167|INFO|ALLEGRO|Hooked datafile: gfxinter.dat|SUCCESS|Load data
+2178|INFO|ALLEGRO|Hooked datafile: gfxworld.dat|SUCCESS|Load data
+2198|INFO|ALLEGRO|Hooked datafile: gfxmentat.dat|SUCCESS|Load data
+\\--------
+\\SHUTDOWN
+\\--------
+9047|INFO|ALLEGRO|Shutting down...|Allegro shutdown
+10503|INFO|ALLEGRO|Thanks for playing!|SUCCESS|Allegro shutdown
+10503|INFO|NONE|Thanks for playing.|Logger shut down

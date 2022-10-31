@@ -1,0 +1,309 @@
+(Pour obtenir le meilleur affichage écran dans le Bloc-Notes de Windows,
+agrandissez sa fenêtre au maximum et activez le renvoi à la ligne
+automatique. Pour de meilleurs résultats à l'impression, ouvrez ce
+document sous Microsoft Word pour Windows, ou un autre traitement de
+texte, sélectionnez la totalité du document et mettez le texte en
+Courier 10 points avant de l'imprimer.)
+
+
+-----------------------------------------------
+Fichier LISEZMOI de Microsoft Excel version 4.0 
+-----------------------------------------------
+Sommaire
+
+   Compatibilité de fichier avec les versions précédentes de Microsoft Excel
+
+   Compatibilité de macro avec les versions précédentes de Microsoft Excel
+
+   Message de dépassement mémoire après avoir quitté Microsoft Excel
+
+   Modification de la commande Path dans votre fichier AUTOEXEC.BAT
+
+   Exécution des didacticiels à partir d'un répertoire de type lecture-écriture
+
+   Fonctions DIALOGUE.OUVRIR et DIALOGUE.ENREGISTRER
+
+   Compatibilité avec Q+E et SQL Server
+
+   Word pour Windows version 2.0 et Microsoft Excel version 4.0 
+
+   Erreurs dans la documentation
+
+   Présentation fichier/répertoire dans Microsoft Excel version 4.0
+
+ 
+-------------------------------------------------------------------------
+Compatibilité de fichier avec les versions précédentes de Microsoft Excel 
+-------------------------------------------------------------------------
+Microsoft Excel version 4.0 lit tous les documents Microsoft Excel version 2.x et 3.0 existants. Cependant, les documents enregistrés sous le format Microsoft Excel version 4.0 ne peuvent pas être ouverts dans Microsoft Excel version 3.0a ou antérieure. Pour ouvrir un document dans une version précédente de Microsoft Excel, choisissez la commande Fichier Enregistrer sous et sélectionnez le format de fichier « Excel 3.0 » ou « Excel 2.1 ». NOTE: Vous risquez de perdre une partie de la mise en forme quand le document est enregistré sous le format d'une version précédente.
+
+
+-----------------------------------------------------------------------
+Compatibilité de macro avec les versions précédentes de Microsoft Excel
+-----------------------------------------------------------------------
+Les macros développées dans les versions précédentes de Microsoft Excel sont totalement compatibles avec Microsoft Excel version 4.0.
+
+
+-----------------------------------------------------------------
+Message de dépassement mémoire après avoir quitté Microsoft Excel
+-----------------------------------------------------------------
+Si vous utilisez Microsoft Windows version 3.0, et que vous recevez un message indiquant un dépassement mémoire lorsque vous tentez de lancer une application après avoir quitté Microsoft Excel, essayez de relancer l'application. Cela ne se produit pas sous Microsoft Windows version 3.1.
+
+
+----------------------------------------------------------------
+Modification de la commande Path dans votre fichier AUTOEXEC.BAT 
+----------------------------------------------------------------
+Si vous ne voulez pas que Microsoft Excel Install modifie votre fichier AUTOEXEC.BAT, vous pouvez le modifier vous-même. En particulier, vous devez modifier la commande Path pour y inclure le répertoire contenant le programme Microsoft Excel (EXCEL.EXE) et ses fichiers associés. 
+
+Pour modifier la commande Path, ouvrez le fichier AUTOEXEC.BAT dans un éditeur de texte ou un traitement de texte. Pour ajouter un répertoire dans la liste, ajoutez le chemin d'accès complet (lettre de l'unité de disque et nom du répertoire). Les chemins d'accès doivent être séparés par des points-virgules. Pour ajouter un répertoire appelé EXCEL, ajoutez ;c\excel à la ligne de AUTOEXEC.BAT qui commence par « path ». Par exemple,
+
+   path c:\dos;c:\windows;c:\excel
+
+Note: Si vous exécutez Microsoft Excel à partir du serveur d'un réseau,
+----- vous devez inclure le répertoire du serveur qui contient EXCEL.EXE
+      dans la commande Path du fichier AUTOEXEC.BAT de votre station de
+      travail.
+
+Lorsque vous avez fini de modifier le fichier, enregistrez-le sous le format texte seul et redémarrez votre ordinateur pour que les modifications soient prises en compte.
+
+Pour plus d'informations sur la commande Path et le fichier AUTOEXEC.BAT, consultez votre documentation MS-DOS.
+
+
+----------------------------------------------------------------------------
+Exécution des didacticiels à partir d'un répertoire du type lecture-écriture
+----------------------------------------------------------------------------
+Pour exécuter les didacticiels, Microsoft Excel doit enregistrer les paramètres de l'environnement en cours. Pour cela, le répertoire en cours doit être du type lecture-écriture. S'il ne l'est pas, un message d'erreur vous indiquera que Microsoft Excel ne peut enregistrer les informations et les didacticiels ne s'exécuteront pas.
+
+
+-------------------------------------------------
+Fonctions DIALOGUE.OUVRIR et DIALOGUE.ENREGISTRER
+-------------------------------------------------
+Ces deux fonctions macro ont été omises par inadvertance dans le manuel de référence des fonctions de Microsoft Excel. Ces fonctions deviennent disponibles lorsque vous installez la macro complémentaire FICHFNCT.XLA. Vous pouvez en apprendre plus sur les fonctions dans l'Aide. La manière la plus rapide d'accéder à ces informations est de :
+
+  1. Cliquer deux fois sur l'outil Aide.
+
+     Microsoft Excel affiche la boîte de dialogue Rechercher de l'Aide.
+
+  2. Taper dans la zone de texte : fonctions de fichier
+
+  3. Choisir « Atteindre ».
+
+
+------------------------------------
+Compatibilité avec Q+E et SQL Server 
+------------------------------------
+Si vous utilisez SQL Server version 4.2 ou une version ultérieure et si vous avez installé Q+E, supprimez les deux fichiers suivants de votre répertoire Excel :
+
+   DBNMP3.DLL
+   W3DBLIB.DLL
+
+Ces versions des fichiers ne sont pas compatibles avec SQL Server version 4.2. De nouvelles versions de ces fichiers sont installées avec SQL Server version 4.2 et doivent être copiées dans votre répertoire \WINDOWS\SYSTEM où ils peuvent être utilisés par Q+E ainsi que par toute application SQL Server.
+
+
+------------------------------------------------------------
+Word pour Windows version 2.0 et Microsoft Excel version 4.0 
+------------------------------------------------------------
+Si vous avez l'intention d'utiliser la commande Impression Fusion de Microsoft Word pour Windows version 2.0 avec une feuille de calcul de Microsoft Excel version 4.0, vous devez d'abord enregistrer la feuille de calcul sous le format de fichier de Excel 3.0.
+
+
+-----------------------------
+Erreurs dans la documentation
+-----------------------------
+* Pour éviter tout risque de confusion, les mois de Juin et Juillet sont respectivement abrégés en « Jun » et « Jul » (et non pas en « Jun » et « Jui », comme indiqué dans la documentation).
+
+* Dans Microsoft Excel pour Macintosh, pour obtenir les caractères [ et ] utilisés dans les références de classeur, vous pouvez appuyer respectivement sur les touches Option+Majuscule+5 et Option+Majuscule+°.
+
+
+----------------------------------------------------------------
+Présentation fichier/répertoire dans Microsoft Excel version 4.0 
+----------------------------------------------------------------
+Install de Microsoft Excel version 4.0 place les répertoires et les fichiers suivants sur le disque dur de votre ordinateur. Les répertoires sont affichés entre crochets []. La liste reflète l'installation de toutes les options.
+
+Note: Install place certains fichiers dans des sous-répertoires de votre
+----- répertoire Windows comme on le voit ci-dessous :
+
+      sous-répertoire : [SYSTEM]
+        COMMDLG.DLL
+        SHELL.DLL
+        VER.DLL
+
+      sous-répertoire : [MSAPPS\PROOF]
+        MSSPELL.DLL
+        MSSP_FR.LEX *
+        MSSP_FC.LEX *
+        DICOPER.DIC  **
+
+
+       * Un seul de ces fichiers est copié, en fonction de votre choix d'installer le dictionnaire Français ou Canadien Français lors de l'installation.
+     ** Ce fichier est copié UNIQUEMENT s'il n'existe pas déjà dans le répertoire.
+ 
+
+Contenu du répertoire principal de Microsoft Excel 
+--------------------------------------------------
+CNF2INI.EXE
+DBNMP3.DLL
+EXCEL.EXE
+EXCELDE.EXE
+EXCELHLP.HLP
+EXCELINI.TXT
+LISEZMOI.TXT
+LISEZQE.TXT
+ORA6WIN.DLL
+PSS.HLP
+QE.EXE
+QE.HLP
+QEDBF.DLL
+QEORA.DLL
+QERDB.DLL
+QESS.DLL
+QETXT.DLL
+QEXLA.DLL 
+QEXLS.DLL
+RESEAU.TXT
+SQSAPIW.DLL
+TRANS.EXE
+TRANS123.XLM
+TRANSMP.XLM
+W3DBLIB.DLL
+XLCALL.DLL
+[EXCELCBT]
+[EXEMPLES]
+[MACROLIB]
+[QE]
+[XLOUVRIR]
+
+Contenu de [EXCELCBT]
+---------------------
+ALSACE.XLW
+CBTLIB3.DLL
+CLIENSUD.XLW
+DIVISION.XLW
+EVASION.XLW
+EVASION2.XLW
+EXCELCBT.CBT
+EXCELLES.CBT
+EXOTIQUE.FMT
+EXOTIQUE.WK1
+EXPORTS.XLW
+OUTILS.XLW
+PHOTOS.XLW
+PLAN.FMT
+PLAN.WK1
+QUINCAIL.FMT
+QUINCAIL.WK1
+REPVENTE.XLW
+TOPOGRAPH.XLW
+VENTES.XLW
+XLBASICS.CBT
+ZOOM2000.XLW
+
+Contenu de [MACROLIB]
+---------------------
+ADDINFNS.XLA
+ADDINMGR.XLA
+AUDIT.XLA
+AUTOSAUV.XLA
+BASCULER.XLA
+BASCVERS.XLA
+COMPARE.XLA
+DEBOGUE.XLA
+EXPORT.XLA
+FICHFNCT.DLL
+FICHFNCT.XLA
+GLOSSAIR.XLA
+RAPPORTS.XLA
+RENOMME.XLA
+REPINIT.XLA
+SCENARIO.XLA
+SIMUL.XLA
+SYNTHESE.XLA
+VUES.XLA
+[CHECKUP]
+[COULEUR]
+[DIAPOS]
+[SOLVEUR]
+[TABCROIS]
+
+Contenu de [MACROLIB\TABCROIS]
+------------------------------
+CROISFNC.XLA
+CROISTMP.XLT
+TABCROIS.XLL
+
+Contenu de [MACROLIB\CHECKUP]
+-----------------------------
+CHECKUP.DLL
+CHECKUP.XLM
+
+Contenu de [MACROLIB\DIAPOS]
+----------------------------
+DIAPOS.XLT
+XLDIAPOS.DLL
+XLDIAPOS.XLA
+
+Contenu de [MACROLIB\COULEUR]
+---------------------------
+ARCNCIEL.XLS
+AUTOMNE.XLS
+BLEUROUG.XLS
+BLEUS.XLS
+COUCHANT.XLS
+DEFAUT.XLS
+ETE.XLS
+HIVER.XLS
+JAUNVERT.XLS
+NOIRBLNC.XLS
+OBSCUR.XLS
+PALETTES.XLA
+PASTEL.XLS
+PERSO1.XLS
+PERSO2.XLS
+ROUGES.XLS
+
+Contenu de [MACROLIB\SOLVEUR]
+----------------------------
+SOLVER.DLL
+SOLVER.XLA
+SOLVREP.XLA
+
+Contenu de [EXEMPLES]
+----------------------
+AMORTISS.XLS
+BILVENTE.XLW
+BUDGET.XLS
+FACTURE.XLT
+RENTABIL.XLS
+STRUCTM.XLT
+[SOLVEUR]
+
+Contenu de [EXEMPLES/SOLVEUR]
+-----------------------------
+EXEMPLE.XLM
+SOLVEUR1.XLS
+SOLVEUR2.XLS
+SOLVEUR3.XLS
+SOLVEUR4.XLS
+SOLVEUR5.XLS
+SOLVEUR6.XLS
+SOLVEREX.XLS
+SOLVGRA.XLC
+
+Contenu de [QE]
+----------------
+ADRESSE.DBF
+EMPEMB.NDX
+EMPLOYE.CSV
+EMPLOYE.DBF
+EMPLOYE.TXT
+EMPLOYE.XLS
+EMPLOYE2.DBT
+EMPNOM.NDX
+EMPSERV.NDX
+LOC.DBF
+QE.XLA
+SERVICE.DBF
+
+
+
+
+0492
