@@ -1,0 +1,5 @@
+dd if=/home/user/floppy.image of=/dev/fd0 bs=512 # conv=notrunc
+
+sinon mais je n'y crois pas
+superformat /dev/fd0 dd ds sect=10 cyl=80
+cp image.st /dev/fd0
