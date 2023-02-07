@@ -1,0 +1,104 @@
+<html><body>
+<H3><A NAME="wafer">Working With Aculab Floppy Tapes</A></H3>
+
+The Wafer menu shows all 8 tape drives and what wafer image is inserted
+in them or <TT>&lt;empty&gt;</TT> if there is none.  Any wafer name
+enclosed in <TT>&lt;&lt;&nbsp;..&nbsp;&gt;&gt;</TT> is a built-in wafer
+image.  If the name has an asterisk (<TT>*</TT>) before it the wafer has been
+modified and must exported to be saved.  For non-internal wafer images the
+changes are saved automatically.  trs80gp will prompt to save modified
+wafer images when you try to eject them or exit the emulator.
+
+<P>
+All built-in wafer images have a <A HREF="Working_With_Aculab_Floppy_Tapes.html#intwafer">short name</A>
+that starts with a colon. This is displayed in parenthesis on each entry
+in the "Insert wafer..." menu as a reminder that the short name can be used
+on the command line to insert the wafer when starting trs80gp.
+
+<P>
+Each drive has a sub-menu that lets you eject, replace, insert, export to a
+new file or toggle the write protection of a wafer image.
+This isn't the read-only flag of the PC file system but an internal one
+corresponding to the physical write protect sticker on real floppy tapes.
+
+<P>
+You can also use the Wafer menu to manage files on the image.  The menu
+shows a list of files on the wafer. Selecting one will prompt to save it
+to your PC.  A Delete sub-menu also lists the files and selecting an entry
+will delete that file from the wafer.  Finally, the Import... menu lets
+you copy files from the PC into the wafer image.  Because the Aculab firmware
+may have a copy of a sector in memory is best to <B><TT>@LIST</TT> a drive
+before and after doing any file imports or deletes</B>.
+
+<P>
+Whenever a wafer is accessed trs80gp will go into turbo mode automatically.
+This can be enabled or disabled with the Wafer &rarr; Auto Turbo menu.
+
+<P>
+The Wafer &rarr; Manual... brings up brief instructions how to activate
+and use the Aculab Floppy and access the files from within the TRS-80.
+
+<H4><A NAME="intwafer">Internal Wafer Images</A></H4>
+
+<CENTER>
+<TABLE>
+<TR><TH>Description</TH><TH>Command Line</TH></TR>
+<TR><TD>5 foot (14 sectors)</TD><TD>:a5</TD></TR>
+<TR><TD>10 foot (30 sectors)</TD><TD>:a10</TD></TR>
+<TR><TD>20 foot (64 sectors)</TD><TD>:a20</TD></TR>
+<TR><TD>30 foot (104 sectors)</TD><TD>:a30</TD></TR>
+<TR><TD>50 foot (180 sectors)</TD><TD>:a50</TD></TR>
+<TR><TD>75 foot (252 sectors)</TD><TD>:a75</TD></TR>
+<TR><TD>Maximum (256 sectors)</TD><TD>:amax</TD></TR>
+</TABLE>
+</CENTER>
+
+<H4>.tape File Format</H4>
+
+Aculab floppy tape wafers are stored in <TT>.tape</TT> format which is
+designed to hold not only those images but also Exatron Stringy Floppy
+images and cassette tapes in various formats.  It maintains 99% backwards
+compatibility by putting an identifying trailer at the end of the file.
+Simple formats such as <TT>.cas</TT> will see the trailer as noise at
+the end of the tape while others will simply ignore it.
+
+<P>
+The trailer can be up to 255 bytes long and has the following format:
+
+<CENTER>
+<TABLE>
+<TR><TH>Size</TH><TH>Type</TH><TH>Description</TH></TR>
+<TR><TD VALIGN="TOP">4&nbsp;bytes</TD><TD VALIGN="TOP">Magic&nbsp;string</TD>
+	<TD>Assist in identifying <TT>.tape</TT> format.</TD></TR>
+<TR><TD VALIGN="TOP">1&nbsp;byte</TD><TD VALIGN="TOP">Trailer&nbsp;length</TD>
+	<TD>Currently 9 bytes.  Will be longer if <TT>.tape</TT> format extended.</TD></TR>
+<TR><TD VALIGN="TOP">2&nbsp;bytes</TD><TD VALIGN="TOP">Trailer&nbsp;checksum</TD>
+	<TD>Computed by setting checksum to 0 and for each trailer byte doing
+		<TT>checksum = checksum * 2 + trailer[i];</TT>  Stored little-endian
+		and trailer bytes are treated as unsigned.</TD></TR>
+<TR><TD VALIGN="TOP">1&nbsp;byte</TD><TD VALIGN="TOP">Flags</TD>
+	<TD>bit 0 - write protected if set<BR>
+		bit 1 - has <TT>.ESF</TT> header<BR>
+		bit 2 - Aculab floppy tape<BR></TD></TR>
+<TR><TD VALIGN="TOP">1&nbsp;byte</TD><TD VALIGN="TOP">Data&nbsp;type</TD>
+	<TD>Character indicating the encoding of the data before the trailer.<BR>
+		'w' - waveform (e.g., audio from cassette)<BR>
+		't' - bit level (i.e., <TT>.cas</TT> format)</BR>
+		'p' - pulse (<TT>.cpt</TT> compatible)</BR>
+		'b' - byte stream like bit but without leaders or start bits<BR>
+		'd' - data - high level like sector data or files<BR></TD></TR>
+</TABLE>
+</CENTER>
+
+<P>
+trs80gp only creates and understands a specific variant of <TT>.tape</TT>
+files for Aculab Floppy Tape emulation &mdash; flag bit 2 set, data type
+<TT>'d'</TT> and data consisting of concatenated 256 byte sectors from 0
+to the tape size.
+
+<P>
+When Extratron Stringy Floppy emulation is added to trs80gp it is expected
+it will be capable of <TT>.esf</TT> wrapping and bit level encoding.
+
+
+</body></html>

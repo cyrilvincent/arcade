@@ -1,0 +1,46 @@
+<html><body>
+<H3><A NAME="mdl">Model Selection</H3>
+
+The various <TT>-m*</TT> options and the File &rarr; Change Model menu from
+quite a wide variety of different computers, terminals and printers to emulate.
+When trs80gp is run from the command line the model will default to <TT>-m3</TT>.
+When run from a GUI the model will be whatever was selected by the menu.
+In either case various preferences like display mode defaults are recalled
+based on the model.
+
+<P>
+Many of the command line arguments may not be applicable vary depending on
+the model.  For example, printers and terminals do not have cassette or disk
+storage and ignore those options.  One meaningful difference is the
+<TT>-r0, -r1, -r2, etc.</TT> ROM revision.  The lower the revision number
+the earlier the original release of that ROM.  Here is a table of revisions
+for each model which have more that one:
+
+<P>
+<CENTER>
+<TABLE>
+<TR><TH>Model</TH><TH>Revision</TH><TH>Default?</TD><TH>Version</TH></TR>
+<TR><TD ROWSPAN=4 ALIGN=CENTER>I<BR><A HREF="http://www.trs-80.org/model-1-level-2-basic-rom-versions/">(more info)</A></TD>
+    <TD>-r0</TD><TD></TD><TD>1.0 - earliest version with a few bugs</TD></TR>
+<TR><TD>-r1</TD><TD></TD><TD>1.1 - most bugs fixed</TD></TR>
+<TR><TD>-r2</TD><TD></TD><TD>1.2 - nearly identical to 1.1</TD></TR>
+<TR><TD>-r3</TD><TD>yes</TD><TD>1.3 - shortened <TT>MEM SIZE?</TT> prompt; some new features</TD></TR>
+<TR><TD ROWSPAN=2 ALIGN=CENTER>II,12<BR>16,6000</TD>
+    <TD>-r0</TD><TD></TD><TD>Early boot rom; no hard-drive boot.</TD></TR>
+<TR><TD>-r1</TD><TD>yes</TD><TD>Checksum $1BBE with hard-drive boot.</TD></TR>
+<TR><TD ROWSPAN=2 ALIGN=CENTER>III</TD>
+    <TD>-r0</TD><TD></TD><TD>No shift-down control keys; prints screen if S+P pressed at same time</TD></TR>
+<TR><TD>-r1</TD><TD>yes</TD><TD>Most common version</TD></TR>
+<TR><TD ROWSPAN=2 ALIGN=CENTER>4</TD>
+    <TD>-r0</TD><TD>yes</TD><TD>Usual Model 4 ROM</TD></TR>
+<TR><TD>-r1</TD><TD></TD><TD>Later "international" ROM; default for <TT>-m4ga</TT></TD></TR>
+</TABLE>
+</CENTER>
+
+<P>
+Both the Model I and Model III have Level I and Level II BASIC ROMs.  The
+rom revsisions only select between different Level II ROMs.  There is only
+one known version of the Level I ROMs for each.
+
+<P>
+</body></html>

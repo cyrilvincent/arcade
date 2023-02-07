@@ -1,0 +1,806 @@
+; Localized	11/03/1997 04:41 PM (GMT)	7:3.0.517 A	Mos.inf
+; MOS.INF
+;
+; Copyright (c) 1994-1997 Microsoft Corporation
+; 
+; This is the Setup information file to install The Microsoft Network
+; applications and system software.
+;
+; This version installs only the files to support Online Registration
+;   Wizard, and the Desktop icon and msninst.exe   
+;   -- 3/01/1997  Brian R. Daugherty, MSE (MSN Setup for Memphis Beta 2)
+; 
+; Modified to put msninst.exe in Program Files\Online Services instead of 
+;   Windows\System
+;   -- 5/1/1997   Brian R. Daugherty, MSE (MSN Setup for Memphis Beta 2)
+;
+; Modified for OSR 2.5, 
+;   -- 10/29/1997   Brian R. Daugherty, MSE (MSN Setup build 350 for OSR2.5 Beta)
+;   -- 10/31/1997   BRD, for OSR 2.5 RC
+
+[version]
+LayoutFile=layout.inf, layout1.inf
+signature="$CHICAGO$"
+SetupClass=BASE
+
+; ********************************************************************
+; [BaseWinOptions]
+;
+; Two things have to be set up as part of every Windows 95 install:
+;    1)  Maintenance mode information (MSN_MaintMode)
+;    2)  Online registration, MSN Signup, supporting DLLs, using;       
+;        version checking and leaving optional component files alone
+;
+; ********************************************************************
+
+[BaseWinOptions]
+MSN_MaintMode                ; Maintenance mode (optional components, Control Panel)
+MSN_RegWiz_BaseInstall       ; Registration Wizard & Signup, del old files
+
+[MSN_MaintMode]
+CopyFiles    = MaintMode.CopyFiles
+AddReg       = MaintMode.AddReg
+DelReg       = MaintMode.DelReg
+
+[MSN_RegWiz_BaseInstall]
+CopyFiles    = BaseWin_RegWiz_Files, BaseWin_MSN_Files, BaseWin_WinSys_Files, BaseWin_OLS_Files, BaseWin_WinHelp_Files
+DelFiles     = Old_WinHelp_Files, Old_WinMSN_Files, Old_WinSys_Files, Old_PFMSN_Files, Old_Desktop_Files
+AddReg       = BaseWin_AddReg
+UpdateInis   = BaseWin_UpdateInis
+DelReg       = BaseWin_DelReg
+
+
+; ********************************************************************
+; [Optional Components]
+;
+; MicrosoftNetwork encompasses the
+; files, reg keys, and INI lines needed to completely install MSN.
+; The MicrosoftNetwork optional component will always install
+; v 1.0 files, without regard for version checking.
+; ********************************************************************
+
+[Optional Components]
+;;;;;MOSTop
+;;;;;MicrosoftNetwork
+
+[MOSTop]
+; Top Level option
+OptionDesc   = "The Microsoft Network"
+Tip          = %MOS_TIP%
+IconIndex    = 29   ; MSN
+
+[MicrosoftNetwork]
+OptionDesc      = %MOS_DESC%"
+Tip             = %MOS_TIP%
+Needs           = MSMAIL, MAPI, InternetExplorer
+;Parent          = MOSTop
+;InstallDefault  = 0
+InstallType     = 0
+Priority        = 5   ; not implemented
+IconIndex       = 29  ; MSN
+CopyFiles       = Marvel_Copy_Files, Marvel_Help, Marvel_WinSys_Files
+AddReg          = MOS_Reg, Install.AddReg
+UpdateInis      = Convert_Start_Menu
+Uninstall       = MaintMode.Uninstall
+
+; ********************************************************************
+; [DesktopSetupXxx]
+;
+; These sections are needed to support serial setup of MSN and
+; Exchange from MSNEXCH.EXE.  The Needs line in [DesktopSetupIcon]
+; names the sections which have to be run; the Include line names the
+; INF files in which these sections appear.
+; [DesktopSetupExtras] is the section which is run at the end, for
+; this special case only.
+; ********************************************************************
+
+[DesktopSetupIcon]
+Include         = MOS.INF, MSMAIL.INF
+Needs           = MSMAIL, MAPI, MicrosoftNetwork, DesktopSetupExtras
+
+[DesktopSetupIconMsnOnly]
+Include         = MOS.INF
+Needs           = MicrosoftNetwork, DesktopSetupExtras
+
+[DesktopSetupExtras]
+AddReg          = DSE_AddReg
+
+[DSE_AddReg]
+;HKLM,"SOFTWARE\Microsoft\Exchange\Client\Options","SilentRunning",,"1"
+;HKLM,Software\Microsoft\Windows\CurrentVersion\RunOnce,Wrapper,,"runonce.exe"
+;HKLM,"Software\Microsoft\Windows\CurrentVersion\RunOnce\Setup","The Microsoft Network",,"%24%\%PROGRAMF%\%THEMICRO%\SIGNUP.EXE"
+
+; ********************************************************************
+; [Destination Dirs]
+;
+; MSN uses the following directories (assuming default install into
+; C:\Windows):
+;    C:\Program Files\The Microsoft Network    bulk of MSN files
+;    C:\Windows\System                         online registration
+;    C:\Windows\Help                           MSN help
+;    C:\Windows\Desktop                        desktop icon (M8)
+;    C:\Windows\Inf                            maint mode INF copy
+;    C:\Windows\MSN                            delete old installs
+;    c:\Program Files\Online Services          (desktop icon -> msninst.exe)
+; ********************************************************************
+
+[DestinationDirs]
+; Directories for install w/MSN optional component
+Marvel_Copy_Files   = 24,%OEM_PROGRAMF%\%OEM_THEMICRO%  ; LDID_APPS\Progra~1\TheMic~1
+Marvel_Help         = 18                             ; LDID_HELP
+Marvel_WinSys_Files = 11                             ; LDID_SYS
+MaintMode.CopyFiles = 17                             ; LDID_INF
+
+; Directories for base Windows install
+BaseWin_RegWiz_Files = 11                            ; LDID_SYS
+BaseWin_MSN_Files   = 24,%OEM_PROGRAMF%\%OEM_THEMICRO%  ; LDID_APPS\Progra~1\TheMic~1
+BaseWin_WinSys_Files = 11                            ; LDID_SYS
+BaseWin_WinHelp_Files = 18                           ; LDID_HELP
+BaseWin_OLS_Files     = 24,%OEM_PROGRAMF%\%OnlineShort%\%MSN%
+MSN251_CopyFiles      = 25,"Options\CABS\OLS\MSN"
+
+
+; Directories for minimal 1.0 files to be "forced" in (explicit uninstall case)
+Uninstall.v1_RegWiz  = 11                            ; LDID_SYS
+Uninstall.v1_PFMSN   = 24,%OEM_PROGRAMF%\%OEM_THEMICRO%
+Uninstall.v1_WinSys  = 11                            ; LDID_SYS
+Uninstall.v1_WinHelp = 18                           ; LDID_HELP
+
+; Directories from which obsolete files should be removed
+Old_WinHelp_Files   = 18                             ; LDID_HELP
+Old_WinMSN_Files    = 25,MSN                         ; LDID_SHARED\MSN
+Old_WinSys_Files    = 11                             ; LDID_SYS
+Old_PFMSN_Files     = 24,%OEM_PROGRAMF%\%OEM_THEMICRO%  ; LDID_APPS\Progra~1\TheMic~1
+Old_Desktop_Files   = 25,%OEM_Shared_Desktop%        ; LDID_SHARED\Desktop
+; ********************************************************************
+; Maintenance mode sections
+;
+; The following two sections are needed to support installing MSN
+; using the Windows Setup CPL after Win95 is already on the user's
+; machine.  The [MaintMode.Uninstall] section is needed to support
+; uninstalling MSN using the same CPL.
+; MaintMode.Uninstall leaves the version 1.0 MSN files needed to
+; support online reg. Note it *does* potentially perform a
+; downgrade, but this is the only way to guarantee this subset of
+; the MSN files will work together (in the case a later version
+; introduces a new dependency).
+; ********************************************************************
+
+[MaintMode.CopyFiles]
+MOS.INF
+
+[MaintMode.DelReg]
+; Remove old-top-level Optional Components entry
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents,MOSTop
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents,MOSTop
+
+[MaintMode.AddReg]
+; Set all components to uninstalled initially
+; Top-level
+;== removed by BRD, don't show MSN in CPL | Add/Remove Programs | Windows Setup tab
+;==HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents,"MOSTop",,"MOSTop"
+;==HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\MOSTop,INF,,"MOS.inf"
+;==HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\MOSTop,Section,,"MOSTop"
+;==HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\MOSTop,Installed,2,"0"
+; Sub-level
+;==HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents,"MSNetwork",,"MSNetwork"
+;==HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\MSNetwork,INF,,"MOS.inf"
+;==HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\MSNetwork,Section,,"MicrosoftNetwork"
+;==HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\MSNetwork,Installed,2,"0"
+; Dummy sub-level entries added to keep INETWIZ happy. DONT make it visible to CPL!
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\MSNetwork105,INF,,"MOS.INF"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\MSNetwork105,Section,,"MicrosoftNetwork105"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\MSNetwork105,Installed,0,"1"
+; sets identification of current version
+HKLM,"SOFTWARE\Microsoft\MSN\SoftwareInstalled","VersionOnDisk",0,"0.0"
+HKLM,"SOFTWARE\Microsoft\MSN\SoftwareInstalled","VersionOnSource",0,"2.51"
+HKLM,"SOFTWARE\Microsoft\MSN\SoftwareInstalled","VersionOnWeb",2,"0.0"
+
+[MaintMode.Uninstall]
+DelFiles        = Marvel_Copy_Files, Marvel_Help, MSN_Desktop_Icon, Marvel_WinSys_Files
+CopyFiles       = Uninstall.v1_PFMSN, Uninstall.v1_WinSys, Uninstall.v1_WinHelp, Uninstall.v1_RegWiz
+UpdateInis      = Uninstall.UpdateInis
+AddReg          = Uninstall.AddReg
+DelReg          = Uninstall.DelReg, MOS_Reg
+
+; dummy sections added to keep INETWIZ.EXE happy
+[MicrosoftNetwork105]         ;dummy section does nothing
+
+
+; ********************************************************************
+; [Old_XXX_Files]
+;
+; These sections list all the files which have been installed in 
+; previous versions of MSN, but which have been since moved
+; to a different folder or removed. Garbage collection.
+; ********************************************************************
+
+[Old_WinSys_Files]
+; C:\Windows\System
+800950.DAT
+CALLNED.NED
+CCEI.DLL
+CCPSH.DLL
+CONFAPI.DLL
+DATAEDCL.DLL
+DSNED.NED
+DZIPNT.DLL
+ENGCT.EXE
+GUIDE.EXE
+IMCLIENT.DLL
+LGINT.DLL
+MAILMSG.DLL
+MAILUTIL.DLL
+MARVEL.HLP
+MEDV13.DLL
+MMVDIB12.DLL
+MOSAF.DLL
+MOSCOMP.DLL
+MOSCP.EXE
+MOSSHELL.DLL
+MOSSTUB.DLL
+MPCCL.DLL
+MSNAPI.DLL
+MSNCALL.EXE
+MSNPROXY.DLL
+MSNSSPC.DLL
+;;; needed by other apps - don't delete ;;; MVCL13N.DLL
+MVTTL13C.DLL
+OLREGDLL.DLL
+PHONE.PBK
+PHTAGS.CSV
+RECEIVED.SHG
+REG.DLL
+SACLIENT.DLL
+SECURCL.DLL
+SERIALIZ.DLL
+SIGNONCL.DLL
+SIGNUP.EXE
+SRVMSG.DLL
+STATE.PBK
+TREEEDCL.DLL
+WELCOME.SHG
+
+[Old_WinMSN_Files]
+BBSNAV.NAV
+CCDIALER.EXE
+CMCLTCTR.CM
+CONFAPI.DLL
+DNR.EXE
+DSNAV.NAV
+DSNED.NED
+FINDLVCL.EXE
+FINDSTUB.DLL
+FTMCL.EXE
+GUIDENAV.NAV
+LEGALAGR.TXT
+MMVDIB12.DLL
+MOSFIND.DLL
+MOSVIEW.EXE
+MSN.MSN
+MSNFIND.EXE
+NEWTIPS.TXT
+OLREGAPP.EXE
+ONLSTMT.EXE
+PLANS.TXT
+PRODINFO.TXT
+SIGNUP.EXE
+TCTLB.TLB
+TEXTCHAT.EXE
+
+[Old_WinHelp_Files]
+OLREG.HLP
+ONLSTMT.HLP
+W_MSN.CNT
+W_MSN.HLP
+W_MSN2.CNT
+W_MSNOV.CNT
+W_MSNOV.HLP
+W_OLREG.CNT
+
+[Old_PFMSN_Files]
+CCAPI.DLL
+CONFAPI.DLL
+DUNZIPNT.DLL
+DZIPNT.DLL
+FINDLVCL.EXE
+FTMAPI.DLL
+IMCLIENT.DLL
+LGINT.DLL
+MAILMSG.DLL
+MAILUTIL.DLL
+MCM.DLL
+MOSABP32.DLL
+MOSCFG32.DLL
+MOSCC.DLL
+MOSCL.DLL
+MOSCUDLL.DLL
+MOSMISC.DLL
+MOSRXP32.DLL
+MSN.MSN
+;;; needed by other apps - don't delete ;;; MVCL13N.DLL
+MVPR13N.DLL
+MVTTL13C.DLL
+REG.DLL
+SVCPROP.DLL
+THEMIC~1.{00
+TREENVCL.DLL
+WELCOME.SHG
+
+[Old_Desktop_Files]
+DESKTOP.MSN
+MSN.MSN
+THEMIC~1.{00
+
+; ********************************************************************
+; [BaseWin_XXX_Files]
+;
+; These sections list all the files which are part of the base Windows
+; installation.  This is the bare minimum set to support Online
+; Registration of Win95.
+; This is a very polite section, always respecting the version of
+; newer components with version stamps, and never writing
+; over files without version stamps.
+; ********************************************************************
+
+; ********************************************************************
+; [Marvel_Copy_Files], [Marvel_Help], [Marvel_WinSys_Files]
+;
+; These sections list all files which are installed as part of the
+; optional component for MSN. These are all marked to silently
+; leave later versions on the user's computer (in the case of
+; binaries) or not replace (in the case of non-binaries).
+; ********************************************************************
+
+; NOTE: The order of these sections is very important for automated
+; setup scripting to work.  Please do not change them.
+
+[BaseWin_RegWiz_Files]
+PRODINV.DLL,,,32
+REGWIZ.EXE,,,32
+
+[BaseWin_MSN_Files]
+800950.DAT,,,16
+BILLADD.DLL,,,32
+CCDIALER.EXE,,,32
+CCEI.DLL,,,32
+CCPSH.DLL,,,32
+ENGCT.EXE,,,32
+GUIDE.EXE,,,32
+MOSCOMP.DLL,,,32
+MOSCP.EXE,,,32
+MPCCL.DLL,,,32
+MSNVER.TXT,,,16
+PHONE.PBK,,,16
+SUUTIL.DLL,,,32
+SIGNUP.EXE,,,32
+;;MSNSIG13.EXE,,,32
+STATE.PBK,,,16
+
+[BaseWin_WinSys_Files]
+CCAPI.DLL,,,32
+DUNZIPNT.DLL,,,32
+FTMAPI.DLL,,,32
+MCM.DLL,,,32
+MOSCC.DLL,,,32
+MOSCL.DLL,,,32
+MOSCUDLL.DLL,,,32
+MOSMISC.DLL,,,32
+MSNSSPC.DLL,,,32
+;;SEC_SSPI.DLL,,,32
+SVCPROP.DLL,,,32
+TREENVCL.DLL,,,32
+
+[BaseWin_OLS_Files]
+;MSNINST.EXE,,,32
+
+[BaseWin_WinHelp_Files]
+MSN.HLP,,,16
+MSNINT.HLP,,,16
+MSNPSS.HLP,,,16
+
+[Marvel_Copy_Files]
+
+[Marvel_WinSys_Files]
+
+[Marvel_Help]
+
+; ********************************************************************
+; [Uninstall.v1_Xxx]
+;
+; Restores the version 1.0 online registration file set.  These lists
+; are the same as the BaseWin lists, but these lists are marked with
+; the VNLP_NOVERCHECK (0x0004) flag so version stamping is ignored.
+; These sections are used when uninstalling MSN only.
+; ********************************************************************
+
+[Uninstall.v1_RegWiz]
+PRODINV.DLL,,,4
+REGWIZ.EXE,,,4
+
+[Uninstall.v1_PFMSN]
+800950.DAT,,,4
+BILLADD.DLL,,,4
+CCDIALER.EXE,,,4
+CCEI.DLL,,,4
+CCPSH.DLL,,,4
+ENGCT.EXE,,,4
+GUIDE.EXE,,,4
+MOSCOMP.DLL,,,4
+MOSCP.EXE,,,4
+MPCCL.DLL,,,4
+MSNVER.TXT,,,4
+PHONE.PBK,,,4
+SUUTIL.DLL,,,4
+SIGNUP.EXE,,,4
+;;MSNSIG13.EXE,,,4
+STATE.PBK,,,4
+
+[Uninstall.v1_WinSys]
+CCAPI.DLL,,,4
+DUNZIPNT.DLL,,,4
+FTMAPI.DLL,,,4
+MCM.DLL,,,4
+MOSCC.DLL,,,4
+MOSCL.DLL,,,4
+MOSCUDLL.DLL,,,4
+MOSMISC.DLL,,,4
+MSNINST.EXE,,,4
+;;SEC_SSPI.DLL,,,4
+SVCPROP.DLL,,,4
+TREENVCL.DLL,,,4
+
+[Uninstall.v1_WinHelp]
+MSN.HLP,,,4
+MSNINT.HLP,,,4
+MSNPSS.HLP,,,4
+
+[BaseWin_UpdateInis]
+; system.ini,section,"old_line","new_line"
+
+; Create "group#" pointers to Start menu folders
+setup.ini, progman.groups,, "group0="
+setup.ini, progman.groups,, "group4=%APPS_DESC%"
+setup.ini, progman.groups,, "desktop=""..\..\%Shared_Desktop%"""
+
+; Create online registration shortcut in Accessories (group4) folder
+setup.ini, group4,, """%OLR_Link_Desc%"", ""%11%\regwiz.exe /i software\microsoft\windows\currentversion"""
+
+; changed to point to MSNINST.exe (the program formerly known as msnlaunch.exe)
+; Create link on desktop to the MSN/Exchange installer EXE in OLS directory
+;setup.ini, desktop,, """%Setup_MSN_DESC%"",""%24%\%OEM_PROGRAMF%\%OnlineShort%\%MSN%\MSNINST.EXE ""%Setup_MSN_DESC%"""""
+
+;;-- Online Services entries on Start menu (MSN Only)
+; Create the Online Services group under Programs on the Start menu
+;setup.ini, progman.groups,,"group5=%OnlineLong%"
+  ; Create the links to the respective EXEs
+;setup.ini, group5,, """%MSN_DESC%"",   ""%24%\%OEM_PROGRAMF%\%OnlineShort%\%MSN%\msninst.exe"""
+
+
+; Delete old shortcuts on Start Menu
+setup.ini, group0,, """%M8_Link_Desc%"""            ; M8 Signup/Explore Home Base
+setup.ini, group4,, """%Signup_Link_Desc%"""        ; pre-M8 signup
+setup.ini, group4,, """%Old_Signup_Link_Desc%"""    ; M7 signup
+
+; Delete obsolete pointer to MSN Mail Help (now in registry)
+exchng32.ini, "Custom Extensions",, "MSN Menu Extensions"
+
+[Convert_Start_Menu]
+; Add item to open Home Base in Explorer mode to Start/Programs
+setup.ini, progman.groups,, "group0="
+setup.ini, group0,, """The Microsoft Network"", ""explorer.exe /e,/root,{00028B00-0000-0000-C000-000000000046}"", %24%\%PROGRAMF%\%THEMICRO%\GUIDE.EXE,1,,,MSN"
+; Delete link on desktop to MSN installer EXE
+setup.ini, progman.groups,, "desktop=""..\..\%Shared_Desktop%"""
+setup.ini, desktop,, """%Setup_MSN_DESC%"""
+
+[Install.AddReg]
+;;; Set the installed flag for maint mode
+;HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\MSNetwork","Installed",,"1"
+;;; sets identification of current version
+;HKLM,"SOFTWARE\Microsoft\MSN\SoftwareInstalled","VersionOnDisk",0,"1.3"
+;HKLM,"SOFTWARE\Microsoft\MSN\SoftwareInstalled","VersionOnSource",2,"1.3"
+;HKLM,"SOFTWARE\Microsoft\MSN\SoftwareInstalled","VersionOnWeb",2,"0.0"
+
+
+; ********************************************************************
+; [BaseWin_AddReg]
+;
+; Registry keys for all Windows installations.  Includes full set of
+; MSN keys, and those needed to hide files installed in BaseWin.
+; ********************************************************************
+
+[BaseWin_AddReg]
+HKLM,"Software\Microsoft\Windows\CurrentVersion\Run","MSN251",,"%01%\msn251.exe /Q /R:n"
+
+
+; Create the long filenames for C:\Program Files\The Microsoft Network
+;   Note that when you rename a long name, VFAT changes the short name from
+;   foobar~1 to foobar~2.
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\AppFilesRoot,,,%24%
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\AppFilesRoot,%OLD_PROGRAMF%,,"%Old_Program_Files%"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\AppFilesRoot,%PROGRAMF%,,!$!$!$!$.$!$
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\AppFilesRoot,!$!$!$!$.$!$,,"%Program_Files%,1"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\AppFiles,,,%24%\%PROGRAMF%
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\AppFiles,%THEMICRO%,,!$!$!$!$.JWP
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\AppFiles,!$!$!$!$.JWP,,"The Microsoft Network,1"
+
+; Hide BaseWin files in \Program Files\The Microsoft Network that are not
+; useful for the user to see or double-click.
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\MSNetwork,,,"%24%\%PROGRAMF%\%THEMICRO%"
+; =============== Paste "RegOnly = yes" SHR keys below this line ==============
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\MSNetwork,800950.DAT,,"800950.DAT,2"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\MSNetwork,CCDIALER.EXE,,"CCDIALER.EXE,2"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\MSNetwork,CCEI.DLL,,"CCEI.DLL,2"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\MSNetwork,CCPSH.DLL,,"CCPSH.DLL,2"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\MSNetwork,ENGCT.EXE,,"ENGCT.EXE,2"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\MSNetwork,GUIDE.EXE,,"GUIDE.EXE,2"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\MSNetwork,MOSCOMP.DLL,,"MOSCOMP.DLL,2"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\MSNetwork,MOSCP.EXE,,"MOSCP.EXE,2"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\MSNetwork,MPCCL.DLL,,"MPCCL.DLL,2"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\MSNetwork,PHONE.PBK,,"PHONE.PBK,2"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\MSNetwork,STATE.PBK,,"STATE.PBK,2"
+; =============== Paste SHR keys above this line ==============
+; Now all the keys needed by MSN
+; =================== Paste below this line ===================
+HKCR,".msn",,,"MS.Network.Document"
+HKCR,"MS.Network.Document",,,"%MSN_Document%"
+HKCR,"MS.Network.Document\DefaultIcon",,,"%24%\%PROGRAMF%\%THEMICRO%\MOSSHELL.DLL"
+HKCR,"CLSID\{00028B00-0000-0000-C000-000000000046}",,,"The Microsoft Network"
+HKCR,"CLSID\{00028B00-0000-0000-C000-000000000046}\ShellFolder","Attributes",1,50,00,00,00
+HKCR,"CLSID\{00028B00-0000-0000-C000-000000000046}\DefaultIcon",,,"%24%\%PROGRAMF%\%THEMICRO%\MOSSTUB.DLL,0"
+HKCR,"CLSID\{00028B00-0000-0000-C000-000000000046}\InProcServer32",,,"%24%\%PROGRAMF%\%THEMICRO%\MOSSTUB.DLL"
+HKCR,"CLSID\{00028B00-0000-0000-C000-000000000046}\InProcServer32","ThreadingModel",,"Apartment"
+HKCR,"CLSID\{00028B00-0000-0000-C000-000000000046}\Shell\Open\Command",,,"explorer.exe /root,{00028B00-0000-0000-C000-000000000046},""%24%\%PROGRAMF%\%THEMICRO%\TheMic~1.msn"""
+HKCR,"CLSID\{00028B00-0000-0000-C000-000000000046}\Shell\Explore",,,"%Menu_Explore%"
+HKCR,"CLSID\{00028B00-0000-0000-C000-000000000046}\Shell\Explore\Command",,,"explorer.exe /e,/root,{00028B00-0000-0000-C000-000000000046},""%24%\%PROGRAMF%\%THEMICRO%\TheMic~1.msn"""
+HKCR,"CLSID\{00028B00-0000-0000-C000-000000000046}\Shell\Find",,,"%Menu_Context_Find%"
+HKCR,"CLSID\{00028B00-0000-0000-C000-000000000046}\Shell\Find\Command",,,"%24%\%PROGRAMF%\%THEMICRO%\MSNFIND.EXE"
+HKCR,"CLSID\{00028B00-0000-0000-C000-000000000046}\ShellExplorerRoot",,,"%24%\%PROGRAMF%\%THEMICRO%\TheMic~1.msn"
+HKCR,"CLSID\{00028B00-0000-0000-C000-000000000046}\ShellEx\ContextMenuHandlers\{00028BA1-0000-0000-C000-000000000046}]",,," "
+HKCR,"CLSID\{00028B00-0000-0000-C000-000000000046}\ShellEx\PropertySheetHandlers\{00028BA1-0000-0000-C000-000000000046}]",,," "
+HKCR,"CLSID\{00028BA1-0000-0000-C000-000000000046}\InProcServer32",,,"%24%\%PROGRAMF%\%THEMICRO%\MSNDUI.DLL"
+HKCR,"CLSID\{00028BA1-0000-0000-C000-000000000046}\InProcServer32","ThreadingModel",,"Apartment"
+HKCR,"CLSID\{9b1c0180-a4c7-11ce-81ee-00aa00a71bab}",,,"MSN Custom Application"
+HKCR,"CLSID\{9b1c0180-a4c7-11ce-81ee-00aa00a71bab}\InProcServer32",,,"%24%\%PROGRAMF%\%THEMICRO%\MSNAPI.DLL"
+HKCR,"CLSID\{9b1c0180-a4c7-11ce-81ee-00aa00a71bab}\InProcServer32","ThreadingModel",,"Apartment"
+HKCR,".mcc",,,"Dialer10CallingCard"
+HKCR,"Dialer10CallingCard",,,"%CallCard_Desc%"
+HKCR,"Dialer10CallingCard","IsShortcut",," "
+HKCR,"Dialer10CallingCard\CLSID",,,"{00028B05-0000-0000-C000-000000000046}"
+HKCR,"Dialer10CallingCard\NotInsertable",,,"dummy"
+HKCR,"Dialer10CallingCard\protocol",,," "
+HKCR,"Dialer10CallingCard\shell\Open\Command",,,"%24%\%PROGRAMF%\%THEMICRO%\CCdialer.exe %%1"
+HKCR,"Dialer10CallingCard\shell\Explore",,,"%Menu_Explore%"
+HKCR,"Dialer10CallingCard\shell\Explore\Command",,,"%24%\%PROGRAMF%\%THEMICRO%\CCdialer.exe /e %%1"
+HKCR,"Dialer10CallingCard\shellex\IconHandler",,,"{00028B1E-0000-0000-C000-000000000046}"
+HKCR,"Dialer10CallingCard\shellex\PropertySheetHandlers",,,"SummaryInfo"
+HKCR,"Dialer10CallingCard\shellex\PropertySheetHandlers\SummaryInfo",,,"{00028B0C-0000-0000-C000-000000000046}"
+HKCR,"CLSID\{00028B1E-0000-0000-C000-000000000046}",,,"Calling Card Icon Handler"
+HKCR,"CLSID\{00028B1E-0000-0000-C000-000000000046}\InProcServer32",,,"%24%\%PROGRAMF%\%THEMICRO%\ccei.dll"
+HKCR,"CLSID\{00028B1E-0000-0000-C000-000000000046}\InProcServer32","ThreadingModel",,"Apartment"
+HKCR,"CLSID\{00028B0C-0000-0000-C000-000000000046}",,,"%CallCardProp_Desc%"
+HKCR,"CLSID\{00028B0C-0000-0000-C000-000000000046}\InProcServer32",,,"%24%\%PROGRAMF%\%THEMICRO%\CCpsh.dll"
+HKCR,"CLSID\{00028B0C-0000-0000-C000-000000000046}\InProcServer32","ThreadingModel",,"Apartment"
+HKCR,"CLSID\{00028B05-0000-0000-C000-000000000046}",,,"%CallCard_Desc%"
+HKCR,"CLSID\{00028B05-0000-0000-C000-000000000046}\LocalServer32",,,"%24%\%PROGRAMF%\%THEMICRO%\CCdialer.exe"
+HKCR,"CLSID\{00028B05-0000-0000-C000-000000000046}\InprocHandler32",,,"ole32.dll"
+HKCR,"CLSID\{00028B05-0000-0000-C000-000000000046}\ProgId",,,"Dialer10CallingCard"
+HKCR,"CLSID\{00028B05-0000-0000-C000-000000000046}\DefaultIcon",,,"%%1"
+HKCR,"CLSID\{00028B05-0000-0000-C000-000000000046}\AuxUserType\2",,,"%CallCard_Desc%"
+HKCR,"CLSID\{00028B05-0000-0000-C000-000000000046}\AuxUserType\3",,,"%CallCard_Desc%"
+HKCR,"CLSID\{00028B05-0000-0000-C000-000000000046}\MiscStatus",,,"2"
+HKCR,"CLSID\{00028B05-0000-0000-C000-000000000046}\DataFormats\DefaultFile",,,"Embed Source"
+HKCR,"CLSID\{00028B05-0000-0000-C000-000000000046}\DataFormats\GetSet\0",,,"Embed Source,1,8,1"
+HKCR,"CLSID\{00028B05-0000-0000-C000-000000000046}\DataFormats\GetSet\1",,,"3,1,32,1"
+HKCR,"CLSID\{00028B05-0000-0000-C000-000000000046}\DataFormats\GetSet\2",,,"Object Descriptor,1,1,1"
+HKCR,"CLSID\{00028B05-0000-0000-C000-000000000046}\DataFormats\GetSet\3",,,"FileContents,1,8,1"
+HKCR,"CLSID\{00028B05-0000-0000-C000-000000000046}\DataFormats\GetSet\4",,,"FileGroupDescriptor,1,1,1"
+HKCR,"CLSID\{00028B05-0000-0000-C000-000000000046}\DataFormats\GetSet\5",,,"Shell Object Offsets,1,1,1"
+HKCR,"CLSID\{00028B05-0000-0000-C000-000000000046}\DataFormats\GetSet\6",,,"Sysop Tools Internal,1,1,1"
+HKCR,"CLSID\{00028B05-0000-0000-C000-000000000046}\verb\0",,,"%Menu_Activate%,0,2"
+HKCR,"CLSID\{00028B07-0000-0000-C000-000000000046}",,,"Main MOS API Object"
+HKCR,"CLSID\{00028B07-0000-0000-C000-000000000046}\InprocServer32",,,"%24%\%PROGRAMF%\%THEMICRO%\MPCCL.DLL"
+HKCR,"CLSID\{00028B07-0000-0000-C000-000000000046}\InprocServer32","ThreadingModel",,"Apartment"
+HKCR,".PBK",,,"MSN_PhoneBook"
+HKCR,"MSN_PhoneBook",,,"%MSN_Phone_Book%"
+HKCR,"MSN_PhoneBook\Shell",,," "
+HKCR,"MSN_PhoneBook\DefaultIcon",,,"%11%\SHELL32.DLL,1"
+HKCR,"MSN_PhoneBook\QuickView",,,"*"
+HKCR,"MOSAF",,,"MSN Attached File"
+HKCR,"MOSAF\CLSID",,,"{00028B50-0000-0000-C000-000000000046}"
+HKCR,"CLSID\{00028B50-0000-0000-C000-000000000046}",,,"%MSN_Attached_File%"
+HKCR,"CLSID\{00028B50-0000-0000-C000-000000000046}\AuxUserType\2",,,"%File_Desc%"
+HKCR,"CLSID\{00028B50-0000-0000-C000-000000000046}\AuxUserType\3",,,"%MSN_Attached_File%"
+HKCR,"CLSID\{00028B50-0000-0000-C000-000000000046}\InprocServer32",,,"%24%\%PROGRAMF%\%THEMICRO%\mosaf.dll"
+HKCR,"CLSID\{00028B50-0000-0000-C000-000000000046}\InprocServer32","ThreadingModel",,"Apartment"
+HKCR,"CLSID\{00028B50-0000-0000-C000-000000000046}\verb\0",,,"%Menu_Open%,0,2"
+HKCR,"CLSID\{00028B50-0000-0000-C000-000000000046}\verb\1",,,"%Menu_Download%,0,2"
+HKCR,"CLSID\{00028B50-0000-0000-C000-000000000046}\verb\2",,,"%Menu_Properties%,0,2"
+HKCR,"CLSID\{00028B50-0000-0000-C000-000000000046}\ProgID",,,"MOSAF"
+HKCU,"Software\Microsoft\MOS\Connection","CurrentLocation",2,""
+HKCU,"Software\Microsoft\MOS\Connection","OlRegPhone",2,"+1 (800) 328-2427::A"
+HKCU,"Software\Microsoft\MOS\Connection","NewUserMVFile",2,"768"
+HKCU,"Software\Microsoft\MOS\Connection","PBKVerClient",3,11,00,00,00
+;; Rome Connection keys, set with the no-overwrite flag
+HKCU,"Software\Microsoft\MOS\Connection","PrimaryMSNGateway",2,"gateway.moswest.msn.net"
+HKCU,"Software\Microsoft\MOS\Connection","BackupMSNGateway",2,"gw-backup.moswest.msn.net"
+HKCU,"Software\Microsoft\MOS\Connection","LoginPrefix",2,"MSN/"
+;; end Rome Connection keys 
+HKCR,"TextConf.Application",,,"Text Conferencing Application"
+HKCR,"TextConf.Application\CLSID",,,"{00028B02-0000-0000-C000-000000000046}"
+HKCR,"TextConf.Application.1",,,"Text Conferencing 1.0 Application"
+HKCR,"TextConf.Application.1\CLSID",,,"{00028B02-0000-0000-C000-000000000046}"
+HKCR,"CLSID\{00028B02-0000-0000-C000-000000000046}",,,"Text Conferencing Application"
+HKCR,"CLSID\{00028B02-0000-0000-C000-000000000046}\ProgID",,,"TextConf.Application.1"
+HKCR,"CLSID\{00028B02-0000-0000-C000-000000000046}\VersionIndependentProgID",,,"TextConf.Application"
+HKCR,"CLSID\{00028B02-0000-0000-C000-000000000046}\LocalServer32",,,"%24%\%PROGRAMF%\%THEMICRO%\textchat.exe /Automation"
+HKCR,"Interface\{00028B2B-0000-0000-C000-000000000046}",,,"TextConf Interface"
+HKCR,"Interface\{00028B2B-0000-0000-C000-000000000046}\ProxyStubClsid",,,"{00020420-0000-0000-C000-000000000046}"
+HKCR,"Interface\{00028B2B-0000-0000-C000-000000000046}\NumMethod",,,"4"
+HKCR,"Interface\{00028B2B-0000-0000-C000-000000000046}\BaseInterface",,,"{00020420-0000-0000-C000-000000000046}"
+HKCR,"CLSID\{00028B8E-0000-0000-C000-000000000046}\ProgID",,,"MosShell.Application.1"
+HKCR,"CLSID\{00028B8E-0000-0000-C000-000000000046}\VersionIndependentProgID",,,"MosShell.Application"
+HKCR,"MosShell.Application\Clsid",,,"{00028B8E-0000-0000-C000-000000000046}"
+HKCR,"MosShell.Application.1\Clsid",,,"{00028B8E-0000-0000-C000-000000000046}"
+HKCU,"Software\Microsoft\MOS\FTM","DefaultDir",,"%24%\%PROGRAMF%\%THEMICRO%\%Download_Dir_Name%"
+HKLM,"Software\Microsoft\Windows\CurrentVersion\App Paths\CCDIALER.EXE",,,"%24%\%PROGRAMF%\%THEMICRO%\CCDIALER.EXE"
+HKLM,"Software\Microsoft\Windows\CurrentVersion\App Paths\CCDIALER.EXE","Path",,"%24%\%PROGRAMF%\%THEMICRO%;"
+HKLM,"Software\Microsoft\Windows\CurrentVersion\App Paths\ENGCT.EXE",,,"%24%\%PROGRAMF%\%THEMICRO%\ENGCT.EXE"
+HKLM,"Software\Microsoft\Windows\CurrentVersion\App Paths\GUIDE.EXE",,,"%24%\%PROGRAMF%\%THEMICRO%\GUIDE.EXE"
+HKLM,"Software\Microsoft\Windows\CurrentVersion\App Paths\MOSCP.EXE",,,"%24%\%PROGRAMF%\%THEMICRO%\MOSCP.EXE"
+HKLM,"Software\Microsoft\Windows\CurrentVersion\App Paths\msncall.EXE",,,"%24%\%PROGRAMF%\%THEMICRO%\MSNCALL.EXE"
+HKLM,"Software\Microsoft\Windows\CurrentVersion\App Paths\SIGNUP.EXE",,,"%24%\%PROGRAMF%\%THEMICRO%\SIGNUP.EXE"
+HKLM,"Software\Microsoft\Windows\CurrentVersion\App Paths\SIGNUP.EXE","Path",,"%24%\%PROGRAMF%\%THEMICRO%;"
+;HKLM,"Software\Microsoft\Windows\CurrentVersion\App Paths\MSNSIG13.EXE",,,"%24%\%PROGRAMF%\%THEMICRO%\MSNSIG13.EXE"
+;HKLM,"Software\Microsoft\Windows\CurrentVersion\App Paths\MSNSIG13.EXE","Path",,"%24%\%PROGRAMF%\%THEMICRO%;"
+HKLM,"Software\Microsoft\MOS","MSNShortcutsEnabled",,"1"
+HKLM,"Software\Microsoft\MOS\Applications",,," "
+HKLM,"Software\Microsoft\MOS\Directories","MOS",,"%24%\%PROGRAMF%\%THEMICRO%"
+HKLM,"Software\Microsoft\MOS\Directories","MOSBin",,"%24%\%PROGRAMF%\%THEMICRO%"
+HKLM,"Software\Microsoft\MOS\Directories","Win",,"%25%"
+HKLM,"Software\Microsoft\MOS\Directories","WinSys",,"%11%"
+HKLM,"Software\Microsoft\MOS\Directories","WinHelp",,"%18%"
+HKLM,"Software\Microsoft\Windows\CurrentVersion","InventoryPath",,"%11%\PRODINV.DLL"
+HKLM,"Software\Microsoft\Shared Tools\Registration Wizard\1.0","Location",,"%11%"
+; Rome. Add assoc for msn: urls
+HKCR,"msn",,,"URL:Microsoft Network Protocol"
+HKCR,"msn","URL Protocol",,""
+HKCR,"msn","EditFlags",1,02,00,00,00
+HKCR,"msn\DefaultIcon",,,"%24%\%PROGRAMF%\%THEMICRO%\CCDIALER.EXE,0"
+HKCR,"msn\shell\open\command",,,"%24%\%PROGRAMF%\%THEMICRO%\CCDIALER.EXE -f %%l"
+; =================== Paste above this line ===================
+
+; ********************************************************************
+; [BaseWin_DelReg]
+;
+; Cleans up reg keys which are obsolete.
+; ********************************************************************
+
+[BaseWin_DelReg]
+HKLM,Software\Microsoft\MOS\MosServiceList,,,
+HKLM,Software\Microsoft\MOS\CoreUpgradeInProgress,,,
+HKCU,Software\Microsoft\OlReg,,,
+HKCU,Software\Microsoft\Moslogin,,,
+HKCU,Software\Microsoft\MOSSignup,,,
+HKLM,"Software\Microsoft\MosServer",,,
+HKLM,"Software\Microsoft\MOS\Applications","Version of last update",,
+HKLM,"Software\Microsoft\Windows\CurrentVersion\App Paths\FTMCL.EXE",,,
+;don't remove this key - it is entered by the ICW inf
+;HKCR,"INSfile",,,
+HKCR,"Dialer10CallingCard\protocol\StdFileEditing",,,
+
+; ********************************************************************
+; [MOS_Reg]
+;
+; Installs remaining reg keys that are needed, renames MSNFULL.HLP to
+; MSN.HLP, and hides files installed as part of MSN optional component.
+; ********************************************************************
+
+[MOS_Reg]
+
+
+; ********************************************************************
+; [Uninstall.Xxx]
+;
+; Extra tasks to complete when uninstalling MSN.
+; ********************************************************************
+
+[Uninstall.UpdateInis]
+; Remove Start/Programs/[Explore] The Microsoft Network menu item
+setup.ini, progman.groups,, "group0="
+setup.ini, group0,, """The Microsoft Network"""
+
+[Uninstall.AddReg]
+; Turn off Installed flags for CPL
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\MSNetwork,Installed,,"0"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\MSNetwork105","Installed",,"0"
+; Delete the desktop icon
+HKLM,Software\Microsoft\Windows\CurrentVersion\DeleteFiles\MSNetwork,,,"%25%\%Shared_Desktop%"
+HKLM,Software\Microsoft\Windows\CurrentVersion\DeleteFiles\MSNetwork,MSN.MSN,,"The Microsoft Network.{00028B00-0000-0000-C000-000000000046}"
+HKCU,"Software\Microsoft\MOS\Connection","OlRegPhone",,"+1 (800) 328-2427::A"
+HKCU,"Software\Microsoft\MOS\Connection","PBKVerClient",1,05,00,00,00
+; Rome keys, set with overwrite flag (i.e. default flags)
+HKCU,"Software\Microsoft\MOS\Connection","PrimaryMSNGateway",,"gateway.moswest.msn.net"
+HKCU,"Software\Microsoft\MOS\Connection","BackupMSNGateway",,"gw-backup.moswest.msn.net"
+HKCU,"Software\Microsoft\MOS\Connection","LoginPrefix",,"MSN/"
+; sets identification of current version
+HKLM,"SOFTWARE\Microsoft\MSN\SoftwareInstalled","VersionOnDisk",0,"0.0"
+HKLM,"SOFTWARE\Microsoft\MSN\SoftwareInstalled","VersionOnSource",2,"1.3"
+HKLM,"SOFTWARE\Microsoft\MSN\SoftwareInstalled","VersionOnWeb",2,"0.0"
+
+[Uninstall.DelReg]
+; These keys should be deleted in addition to other keys which were created on install
+HKLM,Software\Microsoft\MOS\SoftwareInstalled,,,
+HKCU,"Software\Microsoft\Windows Messaging Subsystem\Profiles\Marvel Mail",,,
+HKCU,"Software\Microsoft\Windows Messaging Subsystem\Profiles\Microsoft Network Mail",,,
+HKCU,"Software\Microsoft\Windows Messaging Subsystem\Profiles\Mail via The Microsoft Network",,,
+HKCU,"Software\Microsoft\Windows Messaging Subsystem\Profiles\%MSN_MAIL_DESC%",,,
+; Delete Upgrade In Progress value for component manager
+HKLM,"Software\Microsoft\MOS\Applications","UpgradeInProgress",,
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace\{00028B00-0000-0000-C000-000000000046}",,,
+HKLM,"Software\Microsoft\Windows\CurrentVersion\Explorer\FindExtensions\Static\MSNFind",,,
+HKLM,"Software\Microsoft\Windows\CurrentVersion\Explorer\FindExtensions\MSNFind",,,
+HKLM,"Software\Microsoft\Exchange\Client\Extensions","MSN Menu Extensions",,
+; Following 4 values need to be deleted when reverting to 1.0 because 1.05+ values may not be backwardly compatible
+HKCU,"Software\Microsoft\MOS\Connection","ConnectProtocol",,
+HKCU,"Software\Microsoft\MOS\Connection","Phone",,
+HKCU,"Software\Microsoft\MOS\Connection","BackupPhone",,
+HKCU,"Software\Microsoft\MOS\Connection","CityBaud",,
+HKCU,"Software\Microsoft\MOS\Connection","UserInfo",,
+
+[Strings]
+; ************************************************************************
+; General strings
+; ************************************************************************
+APPS_DESC = "Accessoires"	; name of Start/Programs submenu
+OLR_Link_Desc = "Enregistrement en ligne"	; Start menu shortcut (Online Registration)
+MOS_DESC = "The Microsoft Network"
+MOS_TIP = "Service en ligne de Microsoft ( Windows Messaging et modem nécessaires)"
+CallCard_Desc = "Raccourci vers The Microsoft Network"	; MSN shortcut description
+CallCardProp_Desc = "Propriétés des raccourcis vers The Microsoft Network"
+Signup_Link_Desc = "The Microsoft Network"	; Start menu shortcut (MSN Signup)
+M8_Link_Desc = "The Microsoft Network"	; Item on Start/Programs for M8 (was Signup_Link_Desc)
+Old_Signup_Link_Desc = "Installation de The Microsoft Network"	; M7 signup shortcut to delete
+MSN_MAIL_DESC = "Service en ligne The Microsoft Network"	; Exchange profile, address book, service
+MSN_Document = "Central MSN"	; desktop icon description
+BE_Install = "Informations d'installation MSN "	; Installer document description ("MSN " + .INF description)
+MSN_App_Extension = "Extension de l'application MSN"	; Description of .NAV and .NED files ("MSN " + .DLL description)
+MSN_Phone_Book = "Annuaire MSN "	; Description of .PBK files
+Saved_MSN_Search = "Recherche MSN enregistrée"	; Description of .MNF files (from .FND description "Saved Search")
+MSN_Attached_File = "Fichier MSN joint"	; Description of BBS attachment objects
+File_Desc = "Fichier"	; Short description of BBS attachment
+
+; ************************************************************************
+; Menu commands
+; These are used for the common OLE object and Shell command verbs.
+; Ellipses, if required, are included here
+; ************************************************************************
+Menu_Open = "&Ouvrir"
+Menu_Properties = "&Propriétés..."
+Menu_Download = "&Télécharger"
+Menu_Explore = "&Explorer"
+Menu_Activate = "&Activer"
+Menu_Find = "Sur The &Microsoft Network..."
+Menu_Context_Find = "&Rechercher..."
+
+; ************************************************************************
+; Directory names - note that that short versions must match the truncated
+; 8 char names for the long versions
+; ************************************************************************
+Old_Program_Files = "Anciens fichiers programme"
+OLD_PROGRAMF = "Programf"
+Program_Files = "Fichiers programme"
+Start_Menu = "Start Menu"
+PROGRAMF = "Progra~1"	; first 6 chars of Program_Files, + "~1"
+OEM_PROGRAMF = "Progra~1"	; first 6 chars of Program_Files, + "~1" - in OEM codepage (not Ansi)
+THEMICRO = "TheMic~1"	; first 6 chars of The Microsoft Network, + "~1"
+OEM_THEMICRO = "TheMic~1"	; first 6 chars of The Microsoft Network, + "~1"  - in OEM codepage (not Ansi)
+OnlineShort = "Online~1"
+OnlineLong = "Services en ligne"
+MSN = "MSN"	; name of MSN dir under Online Services
+Shared_Desktop = "Bureau"
+OEM_Shared_Desktop = "Bureau"
+Download_Dir_Name = "Fichiers transférés "
+Setup_MSN_DESC = "Essayer The Microsoft Network"
+MSN_DESC = "The Microsoft Network"
+

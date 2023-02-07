@@ -1,0 +1,181 @@
+     ------------------------------------------------------------
+         LISEZMOI pour les fournisseurs de services en ligne     
+                            Novembre 1997                          
+     ------------------------------------------------------------
+
+                (c) Copyright Microsoft Corporation, 1997
+
+
+----------------------------
+COMMENT UTILISER CE DOCUMENT
+----------------------------
+
+Pour visualiser Services.txt dans le Bloc-notes, agrandissez la 
+fenêtre du Bloc-notes.
+
+Pour imprimer Services.txt, ouvrez-le dans le Bloc-notes ou dans 
+un autre traitement de texte, puis utilisez la commande Imprimer 
+du menu Fichier.
+
+
+CONTENU
+=======
+
+GÉNÉRALITÉS
+SUPPORT TECHNIQUE ET FACTURATION
+  AOL France
+  AOL Canada (au Canada)
+  CompuServe
+  MSN (The Microsoft Network)
+POUR DÉFINIR UN NOUVEAU COMPTE
+POUR CONFIGURER VOTRE ORDINATEUR AFIN QU'IL UTILISE UN COMPTE EXISTANT
+
+
+GÉNÉRALITES
+===========
+
+Vous pouvez utiliser à votre convenance les fournisseurs de services 
+en ligne mis à votre disposition dans ce dossier. Vous pouvez 
+sélectionner le fournisseur de services en ligne de votre choix. 
+
+
+SUPPORT TECHNIQUE ET FACTURATION
+================================
+
+En sélectionnant un fournisseur de services en ligne figurant dans 
+ce dossier, vous établirez un compte avec ce fournisseur de services 
+en ligne, et non pas avec Microsoft Corporation. Par conséquent, 
+votre paiement devra être effectué à ce fournisseur. Le fournisseur 
+de services en ligne que vous sélectionnez vous fournira les 
+instructions relatives au règlement.
+
+Microsoft ne fournit aucun support technique pour les services que 
+votre fournisseur de services en ligne vous vend. Si vous avez des 
+questions, quelles qu'elles soient, concernant les produits ou le
+fonctionnement d'un fournisseur de services en ligne particulier, 
+veuillez contacter directement ce fournisseur.
+
+Si vous utilisez l'un des fournisseurs de services en ligne suivants, 
+vous trouverez ci-dessous des informations relatives au support technique.
+
+
+AOL France
+-----------
+Le logiciel client AOL France inclus dans cette version de Windows est la
+version 3.0 de AOL. Vous pourrez télécharger une mise à jour dès qu'elle sera disponible.
+
+Service clientèle : appelez le 01 69 19 94 50 (ou 353 1 806 90 35 pour les 
+appels hors de France), ou, une fois en ligne tapez le mot clé "Assistance Clientèle".
+
+Des renseignements supplémentaires sur les conditions d'utilisation sont donnés 
+lors de l'ESSAI GRATUIT. 
+
+
+AOL Canada (au Canada)
+----------------------
+Téléphone:
+   Support technique : 1 888 265-6306
+   Questions d'ordre général : 1 888 265-4357
+En ligne :
+    Des informations en ligne sur les conditions d'utilisation sont disponibles dans ce logiciel.
+
+
+
+CompuServe
+----------
+Service Ventes : 
+  France : 0 803 00 6000
+  Belgique : 02 702 21 65
+  International : +33 1 47 14 21 65
+  Ces numéros peuvent être joints du lundi au samedi de 9H00 à 21H00.
+
+Assistance technique :
+  France : 0 803 00 9000
+  Belgique : 02 702 21 90
+  International : +33 1 47 14 21 90
+  Ces numéros peuvent être joints du lundi au samedi de 9H00 à 21H00.
+
+Service administratif :
+  France : 0 803 00 8000
+  Belgique : 02 702 21 60
+  International : +33 1 47 14 21 60
+  Ces numéros peuvent être joints du lundi au samedi de 9H00 à 21H00.
+
+Télécopies :
+  France : 01 47 14 21 51
+  International : 33 1 47 14 21 51
+
+Assistance en ligne :
+  Pour accéder à l'assistance en ligne, utilisez la commande "Aller à", 
+  puis entrez MEMBER.
+
+L'adresse de CompuServe en France est la suivante :
+  CompuServe Information Services
+  Rueil 2000
+  15, Av. Edouard Belin
+  92500 Rueil-Malmaison
+  France
+
+
+MSN (The Microsoft Network)
+---------------------------
+
+  Service clientèle :
+     Pour les questions sur la facturation, les changements de mot de passe et les numéros d'accès :	
+     Allemagne				 0180 525 7536
+     Australie				 02 9934 9000
+     Canada (anglais)			 800-386-5550
+     Canada (français)			 800-952-1110
+     Canada TDD (anglais)		 800-840-9890
+     États-Unis				 800-386-5550
+     États-Unis 		TDD	 800-840-9890
+     France				 01 43 62 34 50 (Valable jusqu'en mars 1998)
+     Irlande				 0800 709 904
+     Japon				 044 965 0196
+     Royaume-Uni			 0870 601 1000
+     Suisse (français)			 0800 55 47 19
+     Suisse (allemand)		 	 0800 55 47 18
+
+     Si vous appelez d'un pays non mentionné ci-dessus, composez le +44 181 607 0012 pour une assistance en anglais.	
+
+  Support technique :	
+     Pour une assistance sur les problèmes de connexion et les messages d'erreur :	
+     Allemagne				 0180 525 7526
+     Australie				 02 9934 9000
+     Canada/Montréal (anglais/français)	 514-846-2085
+     Canada/Toronto (anglais/français)	 416-340-9184
+     Canada/Vancouver (anglais/français) 604-681-2226
+     Canada TDD (anglais)		 425-635-4948
+     États-Unis				 425-635-7019
+     États-Unis 		TDD	 425-635-4948
+     France				 01 69 86 47 47 (Valable jusqu'en mars 1998)
+     Irlande				 0800 709 904
+     Japon				 044 965 0196
+     Royaume-Uni			 0870 601 1000
+     Suisse (français)			 0800 55 47 19
+     Suisse (allemand)			 0800 55 47 18
+
+     Si vous appelez d'un pays non mentionné ci-dessus, composez le +44 181 607 0012 pour une assistance en anglais.	
+  En ligne :
+     Cliquez sur la commande d'envoi de demande d'assistance à MSN par courrier électronique pour envoyer votre question.
+
+
+POUR DÉFINIR UN NOUVEAU COMPTE
+==============================
+
+Si vous décidez de sélectionner l'un des fournisseurs de services en 
+ligne figurant dans ce dossier, cliquez simplement sur l'icône 
+correspondant à ce fournisseur de services en ligne. Vous pourrez ainsi 
+commencer la configuration de votre ordinateur pour l'accès aux services 
+de ce fournisseur.
+
+
+POUR CONFIGURER VOTRE ORDINATEUR AFIN QU'IL UTILISE UN COMPTE EXISTANT
+======================================================================
+
+Si vous disposez déjà d'un compte établi avec l'un des fournisseurs de 
+services en ligne figurant dans ce dossier, vous pouvez cliquer sur 
+l'icône correspondant à ce fournisseur pour commencer la configuration 
+de votre ordinateur afin de pouvoir utiliser votre compte existant.
+
+ 

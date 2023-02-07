@@ -1,0 +1,59 @@
+<html><body>
+<H3><A NAME="videotex">TRS-80 Videotex</H3>
+
+The TRS-80 Videotex terminal was an early foray into online information
+access.  It had a 300 baud modem allowing it 
+to get the latest news and information.
+The built-in software is very minimal and trs80gp itself hasn't been
+polished enough yet to help round off the rough edges.
+
+<P>
+The Videotex could run in offline mode.  It lets you enter pages of text
+and it was possible to later upload that data to an online service.
+To experience this, run <TT>trs80gp -mv</TT> or use
+File &rarr; Change Model &rarr; Videotex.  Press almost any key
+(except backspace) and you'll be entering text in the offline mode.
+Take time to be amazed that it word-wraps text as you type.
+
+<P>
+If you press backspace (which is a physical mapping of the BREAK key;
+sorry about that) it will then prompt you with "PLACE CALL".  On the
+real machine you'd pick up your phone, dial the information service.
+When in answered you'd put the phone down and press ENTER to let it
+know you're connected.  
+
+<P>
+When you hung up the phone (or the server hung up) the terminal will
+print <TT>OFF LINE</TT> indicating this.  There was also an LED, I gather.
+There must be some way to proceed from this point but either I don't
+know what it is or trs80gp doesn't quite emulate it yet.  You can reset
+the emulator if necessary.
+
+<PP>
+You can use another terminal to act as the online service.  See the
+<A HREF="Serial_(RS-232)_Ports.html#serial">Serial</A> section for general information on how
+to virtually hook up two trs80gp emulators.  Here's a quick rundown
+of how to see it in action.
+
+<OL>
+<LI>Start a Videotex with a DT-1 attached: <TT>trs80gp -mv -r :dt1</TT>
+(or select "DT-1 Data Terminal" from the dropdown in the Serial port
+dialog box).
+<LI>Press backspace on the Videotex to see the "PLACE CALL" prompt.
+<LI>Wait a second or two.
+<LI>Press Enter on the Videotex.
+<LI>Typing in the Videotex should now cause characters to appear on
+the DT-1 side and vice-versa.
+<LI>Not really a step, but you can use paste on either one as another
+way to enter text.
+<LI>Close the DT-1 window and see the Videotex say "OFF LINE".
+</OL>
+
+You may find the 
+<A HREF="https://colorcomputerarchive.com/repo/Documents/Manuals/Hardware/#U">
+Videotex manual and technical documentation</A> helpful.  It does support
+a monochrome 128 x 96 graphics mode.  And there was even a way to download
+6809 code.  At which point the built-in 6809 debugger may see some use.
+
+
+</body></html>

@@ -1,0 +1,42 @@
+<html><body>
+<H3><A NAME="turbo">Turbo Mode</A></H3>
+
+trs80gp can be explicitly or manually told to enter turbo mode where the
+emulated TRS-80 is run faster than real time, sometimes as much as 8 times faster.
+The entire system and not just the Z-80 is sped up so any virtual I/O between
+cassette and diskette is not affected nor are any active recordings.  It will
+try to record faster but the resulting recording will be at normal speed.
+Turn off authentic rendering with View &rarr; Authentic Display of the <TT>-na</TT>
+command line option to let the TRS-80 run a bit faster.
+
+<P>
+Use the <TT>-turbo</TT> command line option to have it run constantly in
+turbo mode.  Or hold the <TT>F12</TT> key for a temporary speed boost.
+<TT>shift-F12</TT> will keep turbo mode active without having to hold
+<TT>F12</TT> and will turn off when you release <TT>F12</TT>.
+
+<P>
+In order to let you experience the TRS-80 in the best light trs80gp
+automatically enters turbo mode when doing cassette of diskette I/O.
+That can be turned off with the Cassette &rarr; Auto Turbo and
+Diskette &rarr; Auto Turbo menus.  
+
+<P>
+Normally a turbo mode would cause massive key repeats because your normal
+typing speed will appear to the TRS-80 as if each key has been held down
+for a very long time.  This is mitigated by trs80gp dropping out of turbo
+mode whenever a key is pressed.  Use Keyboard &rarr; Auto De-turbo to turn
+off this feature if it isn't a problem for your application.  Typically
+games still work fine and you can challenge yourself by playing them at
+high speed.
+
+<P>
+At the expense of graphical and timing accuracy the emulator can run up
+to twice as fast as turbo mode with the <TT>-haste</TT> command line argument
+(or by using the File &rarr; Haste menu item).  As the old saying goes,
+haste makes waste so only use this when speed is vital.  Besides only
+updating the display once per second, "haste" skips wait state calculations
+which will throw off the timing of a program that accesses the display.
+Any video capture will also be distorted.
+
+</body></html>

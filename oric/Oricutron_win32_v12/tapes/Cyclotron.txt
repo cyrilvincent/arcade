@@ -1,0 +1,225 @@
+
+                                CycloTron
+
+                         a 4kb Tron clone game
+                          for your Oric Atmos
+	
+
+
+Author:        Mickael Pointier (aka Dbug)
+Platform:      Oric ATMOS (not Oric 1/Telestrat compatible)
+Release date:  September 26th, 2004
+Contact email: mike@defence-force.org
+									 
+
+
+  ----------------
+ / Introduction /
+----------------
+
+As a programmer of ENCOM, the famous high tech company that specializes in 3D
+temporal scanning and other reconstruction systems, you worry about the 
+disappearance of some of your colleagues yesterday. Searching for them, you
+finally arrive at the 3D scanner console, and on the desk you recognize the 
+ballpoint pen of Flynn, the ex-genius of the company that got laid off last 
+year after a big argument with Dilliger, the current boss of the company.
+
+Trying to figure out what happened, you decide to log on to the console and
+check for any trace of what Flynn was trying to do there.
+
+You are so preoccupied by the endless stream of data that moves across the 
+screen that you do not notice the movement behind you: Directly behind you 
+is the complicated system that is used to scan items in 3D. The lens cover 
+slides down and brief impulses of light start to shine around the head of the
+laser canon, while a barely audible buzzing noise is being emitted from the 
+energy amplifier.
+
+Suddenly noticing that something is wrong, you turn your head towards the noise,
+but at this moment all the energy stored in the generators is expelled and
+concentrated in the laser beam that meticulously starts cutting you down in
+pieces of atomic scale. A few seconds later, nothing remains of you in this
+room.
+
+But this is not the end, it is only the beginning.
+
+As soon as you started being dematerialised in real life, you got reconstructed
+atom per atom, ... or rather "bit per bit", in the vast memory of ENCOM's 
+cluster of mainframe computers.
+
+As soon as you reappear, you are enslaved by the Master Control Program's 
+cerberus and put in a numeric jail. Your destiny is to die in various games 
+reminiscent of the time of Roman Gladiators. Fortunately for you, the Master 
+Control Program does not know that you are the nearest equivalent on earth of 
+what could be called a god of video games. You easily manage to escape from the 
+light cycles arena and roam freely outside.
+
+However you are still a prisoner of the numeric world, currently driving a fast 
+moving light cycle, trying to survive, avoiding any collision with the computer 
+subsystems and data, moving from one disc area to another in the hope of 
+finally defeating the Master Control Program and save all your friends who are 
+still prisoners of the  computer.
+
+Good luck !
+
+
+
+
+  ----------------
+ / How to load  /
+----------------
+
+You can play this game on a real Oric Atmos, or use an emulator.
+To play the game on a real Oric Atmos, put the tape in the tape player and type:
+
+	CLOAD"" 
+
+then press RETURN/ENTER. The message "SEARCHING" should appear in the status 
+bar at the top of the screen. You can then press play on the tape player.
+After a while you should see "LOADING". Once loaded, the game will start 
+automatically.
+
+(For emulator users, check your emulator manual.)
+
+
+
+  ----------------
+ / How to play  /
+----------------
+
+After the animation showing the TRON logo, the highscore table appears, the
+colours start to animate, and the message "PRESS SPACE TO PLAY" appears 
+blinking at the bottom of the screen. Just press the space bar when you are 
+bored :-)
+
+You are then required to enter your name. This is a secure computer system, 
+so you have to log in. Just type your name using normal keys. You can also use 
+LEFT and RIGHT arrows to move around, DEL will erase the current character, and 
+the ESCAPE key will erase the whole text field which by default contains the 
+"SIMPLE USER" name. This name will appear later in the highscore table, so be 
+sure to enter a name that will let you show everybody how good you are.
+
+Please note that you can also use the UP key on this screen to switch between
+the two available control modes.
+
+Two control modes? Yes: 2 key (relative) mode, and 4 key (absolute) mode.
+
+ENCOM early simulations showed that the human population is roughly split in
+two categories when things have to be moved on a screen. In the case of this
+simulation, some people will be able to think as if they were actually driving 
+the bike, and thus they only need two keys. One to turn 90 degrees to their 
+LEFT and the other to turn to the other side.
+
+Other people will feel very uneasy with the 2 key control method because they 
+are outside, watching on a computer screen something that moves in a particular 
+direction. For them the best control mode is the 4 key one, where pressing 
+UP, DOWN, LEFT or RIGHT will make the light cycle move in the chosen direction.
+Just do a dummy game session in both modes and decide which one feels better to
+you. 
+
+When the selection is done, simply press RETURN/ENTER to validate the name and
+enter the game.
+
+From this moment you will be playing through a number of different levels,
+using the keys you chose to move your bike, and trying to survive and finish
+each level.
+
+You can press the P key to pause the game, and you can also press the ESCAPE
+key to exit the game and get back to the introduction.
+
+
+
+  ---------------
+ / The levels  /
+---------------
+
+The objective of each level is clearly explained during the generation of each
+level. Each level is a combination of colour schemes, obstacles, and game rules.
+Some levels have obstacles, some have none, some levels have a surrounding wall,
+some don't and wrap around in one or two directions. In some levels you
+are alone, in some there is a RED light cycle controlled by the computer.
+
+You start the game with a total of 3 lives, you lose one after any collision,
+after three collisions you are disconnected from the system and disappear from 
+the world forever. That's a sad way to disappear, so stay awake !
+
+Please note that after each level the speed increases slightly.
+
+After the 8th level the game wraps around to level 0 with additional speed.
+
+After each successfully finished level you get some bonus points.
+	
+
+
+
+  -----------------
+ / Tips & Tricks /
+-----------------
+
+When you are playing versus a computer controlled bike, you can try to do a
+"bike shot". If you collide with the bike of the opponent, you are granted
+the victory. This gives you a chance, because the computer AI is not
+that bad, and with the scrolling and obstacles, the odds are against you...
+
+Try to anticipate your trajectories, and take advantage of the fact that you 
+have three lives, and that there is NO RANDOM event in this game. 
+Try to experiment, and after a while you should manage to go through all levels 
+with no difficulty.
+
+
+
+  -------------
+ / Greetings /
+-------------
+
+I wish to thanks the following people, that have been helping me improving this
+game by offering advices, giving test feedback, or proofreading this 
+documentation (not including this part, or course !), the list is in lexical
+order:
+
+* DJ-Katy
+* Fabrice Frances
+* Jede
+* Jonathan Bristow
+* Jylam
+* Peter
+* Romu
+* Symoon
+* Vanja Utne
+
+Also special greetings to every individual person than helps keeping alive all
+these old machines we like that much, either by reviewing the minigames, or by
+creating them, or by organising such competitions.
+
+
+
+  ---------
+ / Bonus /
+---------
+
+As usual this game as been released with complete source code. If you assemble
+it, you will notice that the final size of the executable is 4569 bytes. The
+final release is made using FilePack (available in the OSDK on Defence-Force
+website), that crunch it to 4069 bytes (including the 146 bytes long LZ77 
+unpacking routine).
+
+This source code is supposed to be assembled using the OSDK. You can port this
+code to do variants of this game on other machines, you can use tricks and tips
+found in this code. Just notice me when you use something, its good for my
+pride to know that I've done something that is useful for someone else.
+
+Alternatively, if you find something particularly lame, don't hesitate to give
+me that information so I will hopefully do something better next time.
+
+Thanks !
+
+
+
+
+
+
+
+
+
+
+
+

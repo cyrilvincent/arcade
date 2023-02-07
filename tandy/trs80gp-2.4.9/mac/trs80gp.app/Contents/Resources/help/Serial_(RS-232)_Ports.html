@@ -1,0 +1,63 @@
+<html><body>
+<H3><A NAME="serial">Serial (RS-232) Ports</A></H3>
+
+trs80gp can map serial ports to TCP/IP connections or emulate 2 and 3 button
+serial mice.  To have a serial port connect to a TCP/IP server use
+<TT>-r&nbsp;host:port</TT> or open Serial &rarr; Port A, fill in the hostname
+and port and choose "TCP/IP Connect".  Or the serial port can listen on a
+TCP/IP port with <TT>-r&nbsp;@port</TT> or use "TCP/IP Listen" in the serial
+port dialog box.  Most machines have a single serial port, the Model 2 line
+has two ports accessible on the command line with <TT>-rA</TT> and <TT>-rB</TT>.
+
+<P>
+trs80gp instances can now be "wired" together through serial ports.
+The ultimate setup is one trs80gp running Model 16 Xenix with two trs80gp's
+attached running DT-1 terminals.  But here's a simple example of hooking
+two DT-1 terminal emulations together.
+
+<PRE>
+     trs80gp -mdt1 -r :4000
+     trs80gp -mdt1 -r @4000
+</PRE>
+
+Characters typed on one of the DT-1's will appear on the second one.  Assuming
+everything is working. If it does not work check the "Status" indicator of each
+serial port.  Both sides should note they are "connected".  But the "@" side
+may only show "Listening..." or the other side "Connecting..." both indicating
+no connection has been made.  Or "-unbound-" if there has been some error.
+
+<P>
+To break a connection use the "None" option in the dialog box dropdown.  The
+other side may not see the loss of connection so you may need to manually
+manage "unplugging" on both sides.  trs80gp is not quite ready to be an
+internet "dial-up" BBS.
+
+<P>
+The status will also show the current transmission settings of the serial port.
+Baud rate, bits per word, parity and number of stop bits.  These do not affect
+TCP/IP connections but the emulation will limit transmit and receive speeds
+based on port setup.  Most original TRS-80 hardware could be set up to have
+different transmit and receive speeds.  That unlikely configuration will be
+hidden from view.  In the Model 2 line the higher baud rate settings are not
+exact.  trs80gp will display the exact baud rate (feature or bug? You tell me).
+
+<P>
+As a convenience trs80gp can launch <A HREF="DT-1_Terminal.html#dt1">DT-1</A> and
+<A HREF="TRS-80_Videotex.html#videotex">Videotex</A> terminals directly from the command line
+or in the serial port connection dialog.  For example, you might launch a
+two terminal Xenix system with:
+
+<PRE>
+     trs80gp -m6000 -h xenix33.cfg -rA :dt1 -rB :dt1
+</PRE>
+
+Or you can choose the desired terminal from the dropdown in the
+serial port connection dialog.  Either way, these terminals will act
+as a unit with the main trs80gp emulator.  If you exit the main emulator
+the terminals will also be forced to exit.
+
+<P>There is not yet a facility to map serial ports to real serial ports on
+the host machine.
+
+
+</body></html>

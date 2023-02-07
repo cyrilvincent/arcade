@@ -1,0 +1,106 @@
+<html><body>
+<H3><A NAME="ec">Electric Crayon</A></H3>
+
+The Electric Crayon is an external device that provides a colour video
+display.  It can work with practically any computer as it connects via
+the printer port.  It was primarily targeted at Model 1 and 3 users
+as the machines did not have a colour display nor high resolution graphics.
+
+<P>
+You may attach an emulated Electric Crayon to trs80gp by using
+<TT>-p&nbsp;:ec</TT> on the command line or bringing up the
+Printer &rarr; Connection... dialog box and choosing "Electric Crayon"
+from the dropdown.  In either case a new instance of trs80gp will
+run acting as an Electric Crayon emulator.  When launched this way
+the Electric Crayon emulator will go away when you quit the main
+trs80gp program.
+
+<P>
+Even with an Electric Crayon attached trs80gp still records the
+output to the printer in the normal window.  This can be very handy
+to capture a drawing or debug a program using the Electric Crayon.
+
+<P>
+You can also just run a standalone Electric Crayon emulation via
+<TT>trs80gp -mec</TT> and hook it to
+another trs80gp emulator using the <TT>-p</TT> command line options
+to map TCP/IP connections to the printer port.  The <A HREF="The_Printer.html#print">Printer</A>
+section gives some more details on how to do that.
+
+<P>
+Although the owner had no direct control over the real Electric Crayon, trs80gp
+supports pasting text to its command processor.  Thus even run standalone
+you can draw using the usual paste methods: Edit &rarr; Paste, the
+input macros or <TT>-i</TT> on the command line.  For example:
+
+<CENTER>
+<PRE>
+       trs80gp -mec -i "A 10 4 HELLO WORLD\r"
+</PRE>
+</CENTER>
+
+<P>
+Not many programs were written for the Electric Crayon.  Here's quick overview
+of the available commands so you can write some yourself.  You can get more
+detail from the January 1981 issue of 80 Microcomputer.  However, don't miss
+out on the fun of playing with the commands and figuring it out yourself.
+
+<CENTER>
+<TABLE>
+<TR><TH ALIGN="LEFT">Command</TH><TH></TH><TH ALIGN="LEFT">Operation</TH></TH>
+<TR><TD><TT>A x y string</TT></TD>
+	<TD>&nbsp;&nbsp;&nbsp;</TD>
+	<TD>Display text string.</TD></TR>
+<TR><TD><TT>C n</TT></TD>
+	<TD>&nbsp;&nbsp;&nbsp;</TD>
+	<TD>Select colour.</TD></TR>
+<TR><TD><TT>ERS</TT></TD>
+	<TD>&nbsp;&nbsp;&nbsp;</TD>
+	<TD>Erase display.</TD></TR>
+<TR><TD><TT>H x y len</TT></TD>
+	<TD>&nbsp;&nbsp;&nbsp;</TD>
+	<TD>Draw horizontal line.</TD></TR>
+<TR><TD><TT>M n</TT></TD>
+	<TD>&nbsp;&nbsp;&nbsp;</TD>
+	<TD>Change graphics mode.</TD></TR>
+<TR><TD><TT>I</TT></TD>
+	<TD>&nbsp;&nbsp;&nbsp;</TD>
+	<TD>Invert. (swap between the two palettes)</TD></TR>
+<TR><TD><TT>LD*</TT></TD>
+	<TD>&nbsp;&nbsp;&nbsp;</TD>
+	<TD>Load data or code in S record format.</TD></TR>
+<TR><TD><TT>P n</TT></TD>
+	<TD>&nbsp;&nbsp;&nbsp;</TD>
+	<TD>Set semigraphics value written when drawing.</TD></TR>
+<TR><TD><TT>R x y string</TT></TD>
+	<TD>&nbsp;&nbsp;&nbsp;</TD>
+	<TD>Display string in reversed colours.</TD></TR>
+<TR><TD><TT>S x y</TT></TD>
+	<TD>&nbsp;&nbsp;&nbsp;</TD>
+	<TD>Set pixel (or P pattern if in semigraphics)</TD></TR>
+<TR><TD><TT>V x y len</TT></TD>
+	<TD>&nbsp;&nbsp;&nbsp;</TD>
+	<TD>Draw vertical line.</TD></TR>
+</TABLE>
+
+</CENTER>
+
+<PRE>    Graphics Modes:
+
+    0	alphanumerics and semigraphics-4
+    1	2 x 3 semigraphics-6
+    2	 64 x  64 x 4 graphics
+    3	128 x  64 x 2 graphics
+    4	128 x  64 x 4 graphics
+    5	128 x  96 x 2 graphics
+    6	128 x  96 x 4 graphics
+    7	128 x 192 x 2 graphics
+    8	128 x 192 x 4 graphics
+    9	256 x 192 x 2 graphics
+</PRE>
+
+<P>
+The Electric Crayon's 6800 CPU is fullly emulated.  There's a debugger
+and most of the usual trs80gp programming features.
+
+</body></html>

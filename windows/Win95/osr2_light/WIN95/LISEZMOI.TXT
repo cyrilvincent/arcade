@@ -1,0 +1,37 @@
+-----------------------------------------------------------
+	            LISEZMOI pour les OEM
+	                Novembre 1997
+-----------------------------------------------------------
+
+	      (c) Copyright Microsoft Corporation, 1997
+
+
+-----------------------------
+COMMENT UTILISER CE DOCUMENT
+-----------------------------
+
+Pour lire ce document sur votre écran avec le Bloc-notes, agrandissez 
+la fenêtre du Bloc-notes.
+
+Pour imprimer ce document, ouvrez-le avec le Bloc-notes ou un autre 
+logiciel de traitement de texte, puis utilisez la commande Imprimer 
+du menu Fichier.
+
+
+
+-------------
+MISES À JOUR
+-------------
+
+Le répertoire \Updates contient les Kits de préinstallation (OPK), 
+des Suppléments que Microsoft vous a déjà fourni, et des mises à 
+jour spécifiques (QFE) qui peuvent vous être utiles. Ces éléments 
+ne doivent pas nécessairement être installés sur le nouveau 
+matériel, ils vous sont simplement fournis pour votre convenance.
+
+Chaque sous-répertoire contient un fichier texte expliquant la 
+mise à jour et la façon dont elle doit être installée.
+
+\updates\USB - Kit de préinstallation USB 
+\updates\DX5 - Kit de préinstallation DX5
+

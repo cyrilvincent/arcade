@@ -1,0 +1,107 @@
+<html><body>
+<H3><A NAME="display">Display</A></H3>
+
+By default trs80gp starts in authentic display mode.  This mode
+looks most like the original TRS-80 display and scales very well to fit any
+window size.  It is selected with <TT>-va</TT> or View &rarr; Authentic Display.
+
+<P>
+For a less realistic but still scalable display there is View &rarr; Sharp Display
+or the <TT>-vs</TT> flag.  In this mode pixels are drawn as tiny rectangles
+in a single colour rather than the fuzzy dots that are brightest in the middle
+used in authentic mode.
+
+<P>
+Since the sharp display doesn't look as good at some scales due to poorer
+antialiasing there is View &rarr; Fixed Sharp Display or <TT>-vi</TT>.  While
+the window can be resized in this mode the display will only use whole number
+scales (e.g., 1X, 2X, 3X, etc.) to make the display look as sharp as possible.
+
+<P>
+Finally there is View &rarr; Cheap Display or <TT>-vh</TT>.  It will
+scale up in whole number jumps it always maintains a correspondence between
+TRS-80 pixels and PC display pixels even if the aspect ratio is not the
+same as the original TRS-80 display.  The Model I mode is particularly
+distorted and the window size will change when a Model 4 switches between
+80 and 64 character modes.  This mode is mainly of benefit to PCs with
+small displays or less processing power.  It is also useful for testing since
+the mapping from the resulting pixels to TRS-80 graphics is simpler.
+
+<P>
+While ignored in authentic mode, <TT>-vN</TT> can be used on the command line
+to start the emulator at a fixed display scale (e.g., <TT>-v3</TT> for 3X scaling).
+In any mode <TT>-win WxH</TT> can set the starting window size to W x H.
+
+<P>
+trs80gp can start in full screen mode (showing no menu bar, window borders
+or system elements) using <TT>-vf</TT> or <TT>-win full</TT>.  Use the
+View &rarr; Fullscreen menu entry to switch to full screen mode at any time
+or toggle between fullscreen and windowed with the <TT>Alt-Enter</TT> keyboard
+shortcut.  Or use the right-click context menu.
+Full screen mode is nice for
+those whose eyesight isn't what it used to be or if you want your PC to feel
+more like a real TRS-80 instead of an emulation.
+
+<P>
+The View &rarr; Controls dialog allows additional control over the display.
+There are sliders to adjust the brightness and contrast of the display much
+like the original TRS-80.  It even permits adjustments that leave the display
+dimmed or brightened beyond readability.
+
+<P>
+The display colour can be changed from the usual bluish-white to any colour
+you like with quick presets for Green, Amber and white.  Similarly the colour
+used to show beam conflicts (a programmer feature, more on that below) can
+also be changed from the default blue.  Changes to colours become the default
+on a per-model basis.  I personally like my Model 4 display green and amber
+for the Model 2.  The <TT>-vc</TT> and <TT>-vd</TT> command line options can
+change the display colour without saving it as a default.  Or they can
+specify the factory default by using <TT>-</TT> as the colour
+(e.g., <TT>-vc -</TT>).
+
+<P>
+Under Windows trs80gp remembers the display mode and window positions for
+each particular model.  The windows can be set up just the way you like them
+and will be in those positions the next time you run.  If you run more than
+one trs80gp emulator for a model at once the second and subsequent instances
+will have their own set of window positions and display settings.  They will
+also indicate the instance as a <TT>#2</TT>, <TT>#3</TT>, etc. in the
+window title bar.
+
+<H4>Beam Debug</H4>
+
+View &rarr; Beam Debug (or <TT>-bd</TT>) turns on beam debug mode which is
+used to illustrate when the Z-80 and video circuitry conflict over access to
+display memory.  When this happens on a real TRS-80 the video display will
+show short black streaks (or white in hires) instead of the actual data
+displayed.  This was most prevalent on the Model I and was colloquially
+referred to as "screen hash" or "snow" or "raster lines".  The Model 3 has
+this to a generally lesser extent.  It should appear in Model 4 hires modes
+and on the Model 2 but, much to my shame, I have not written that emulation yet.
+
+<P>
+In "Beam Debug" mode these dropouts are instead coloured in blue to made them
+even more noticeable but yet show what would have been displayed had there
+been no conflict in shades of blue.  This is very helpful for getting the
+timing right when development programs that write to the display with very
+precise timing to increase effective display resolution. For instance, see
+<A HREF="http://48k.ca/ball.html">my bouncing ball demo</A>.  Beam debug mode reveals how
+it secretly writes to the display where it is already black so beam conflict
+remains hidden from view.
+
+<P>
+This mode also shows the V-Blank and H-Blank portions of the display as
+rectangular regions below and to the right of the usual display respectively.
+Z-80 access to video memory during those times will show up as beam conflicts
+even though there is no actual conflict.  Instead they function as a sort of
+oscilloscope to show when the Z-80 is accessing video memory.  H-Blank or
+"Horizontal Blank" is the short time when the CRT electron beam is moving
+from the end of a display line to the start of the next one.  V-Blank or
+"Vertical Blank" is a longer interval when the beam is moving from the bottom
+of the display to the top.
+
+<P>
+Beam Debug is not supported by the authentic display mode so if activated it
+will automatically switch the TRS-80 to cheap display mode.
+
+</body></html>

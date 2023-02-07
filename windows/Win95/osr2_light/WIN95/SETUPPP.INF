@@ -1,0 +1,259 @@
+; SETUPPP.INF
+;
+; This is the main Setup information file for the Windows 95
+; retail product.
+;
+; Copyright (c) 1993-1995 Microsoft Corporation
+
+[version]
+LayoutFile=layout.inf
+signature="$CHICAGO$"
+
+[DestinationDirs]
+inf.files           = 17    ; LDID_INF
+expo.win.files      = 25    ; LDID_SHARED
+readme.win.files    = 25    ; LDID_SHARED
+expo.help.files     = 18    ; LDID_HELP
+mfcdlls.files       = 11    ; LDID_SYS
+
+[BaseWinOptions]
+infs
+
+[infs]
+CopyFiles  = inf.files, expo.win.files, mfcdlls.files, expo.help.files, readme.win.files
+AddReg     = expo.addreg, tour.addreg, version.addreg
+
+[inf.files]
+setup.inf,setuppp.inf
+layout.inf
+layout1.inf
+mtd.inf
+rna.inf
+
+ bkupagnt.inf
+ cheyenne.inf
+ decpsmw4.inf
+ hpnetprn.inf
+ mdmvv.inf
+ netcd.inf
+ netdca.inf
+ netsmc32.inf
+ netub.inf
+ netncr.inf
+ netracal.inf
+ netevx.inf
+ netznote.inf
+ nettulip.inf
+ netftp.inf
+
+[expo.win.files]
+
+ expostrt.exe          ;Microsoft Expo stub (CD only)
+
+[expo.help.files]
+
+ expo.hlp              ;Microsoft Expo help file (CD only)
+ w_tour.cnt            ;Tour  contents entry
+
+[mfcdlls.files]
+
+ mfc30.dll             ;MFC dll for Expo stub (CD only)
+
+[tour.addreg]
+
+ ;Tour stub (CD only)
+ HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\SETUP,SourcePathType,1,05,00,00,00
+
+[expo.addreg]
+
+ ;Microsoft Expo stub (CD only)
+ HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\SETUP,EXPOSTRT,,"1"
+
+[version.addreg]
+HKLM,"Software\Microsoft\Windows\CurrentVersion",SubVersionNumber,,"%SubVersionString%"
+
+[readme.win.files]
+extra.txt
+
+[load_inf]
+adapter.inf
+apm.inf
+applets.inf
+awfax.inf
+awupd.inf
+deskmgmt.inf
+diskdrv.inf
+enable.inf
+fonts.inf
+gps.inf
+icm.inf
+imagevue.inf
+inetmail.inf
+infrared.inf
+joystick.inf
+keyboard.inf
+layout.inf
+locale.inf
+machine.inf
+mf.inf
+midi.inf
+msinfo.inf
+modems.inf
+monitor.inf
+monitor2.inf
+monitor3.inf
+monitor4.inf
+monitor6.inf
+mos.inf
+motown.inf
+msbase.inf
+mscdrom.inf
+msdisp.inf
+msdos.inf
+msdx.inf
+msfdc.inf
+mshdc.inf
+msmail.inf
+msmouse.inf
+msports.inf
+msprint.inf
+msprint2.inf
+mtd.inf
+multilng.inf
+net.inf
+nettrans.inf
+ndscli.inf
+netcli.inf
+netservr.inf
+netcli3.inf
+netdlc32.inf
+net3com.inf
+netsilc.inf
+nettdkp.inf
+netauxt.inf
+netflex.inf
+netmadge.inf
+nettcc.inf
+netcable.inf
+netprot.inf
+netgen.inf
+netsock.inf
+netamd.inf
+netdec.inf
+netee16.inf
+netpci.inf
+netnice.inf
+netnovel.inf
+netoli.inf
+netppp.inf
+nethp.inf
+netsmc.inf
+netsmctr.inf
+netxir.inf
+netibm.inf
+netibmcc.inf
+netcpq.inf
+netsnip.inf
+netcem.inf
+netbw.inf
+netdlc.inf
+mfosi.inf
+netosi.inf
+cemmf.inf
+nodriver.inf
+osr2.inf
+ohare.inf
+ole2.inf
+override.inf
+pcmcia.inf
+pcmciamf.inf
+prtupd.inf
+quartz.inf
+irdalan.inf
+scsi.inf
+setupc.inf
+shell.inf
+shell2.inf
+tapi.inf
+timezone.inf
+unknown.inf
+vidcap.inf
+wave.inf
+winver.inf
+wordpad.inf
+rna.inf
+
+ shell3.inf
+ appletpp.inf
+ bkupagnt.inf
+ cheyenne.inf
+ hpnetprn.inf
+ mmopt.inf
+ msnetmtg.inf
+ mswebsvr.inf
+ netcd.inf
+ netdca.inf
+ netsmc32.inf
+ netub.inf
+ netncr.inf
+ netracal.inf
+ netevx.inf
+ netznote.inf
+ nettulip.inf
+ netftp.inf
+ unimodv.inf
+ athena.inf      ;athena.inf needs to be loaded after locale.inf
+
+[reload_inf]
+layout.inf
+layout1.inf
+msbase.inf
+msdos.inf
+setupc.inf
+winver.inf
+osr2.inf
+
+[data]
+;
+; Registry file names.
+;
+sys_registry    = system.dat
+user_registry   = user.dat
+;
+minboot = 1500000
+minboothost = 1500000
+DiskPad = 10:86000000    ; Can list multiple LDIDs and values.
+;
+AveSystemDat = 500000
+AveUserDat   = 100000
+
+ ProductType=9
+
+[SetupInit]
+; This section is executed during setup initialization.
+; Since the Windows directory is not known at this point, 
+; only AddReg, DelReg, UpdateCfgSys and UpdateAutoBat GenInstall
+; commands are allowed.
+DelReg=Cleanup.Reg
+
+[SetupInitOnce]
+DelReg=Cleanup.Reg.Once
+
+[Cleanup.Reg]
+HKLM,HARDWARE\ENUM
+HKLM,HARDWARE\CLASS
+; Removed to fix problem w/ net upgrades:
+;HKLM,SYSTEM\CURRENTCONTROLSET\SERVICES\VXD
+;HKLM,SYSTEM\CURRENTCONTROLSET\SERVICES\ARBITRATORS
+;HKLM,SYSTEM\CURRENTCONTROLSET\SERVICES\MSPRINT.DLL
+
+HKLM, Software\Microsoft\Windows\CurrentVersion\RunOnce
+
+[Cleanup.Reg.Once]
+HKLM,System\CurrentControlSet\Control\InstalledFiles
+HKLM,System\CurrentControlSet\Control\VMM32Files
+; Remove BIOS in case we now punt on it. If we don't this will get reinstall
+HKLM,System\CurrentControlSet\Services\VxD\BIOS
+
+[Strings]
+SubVersionString = " C"   ; for final freeze replace w/ " r-#" where # is subversionnumber

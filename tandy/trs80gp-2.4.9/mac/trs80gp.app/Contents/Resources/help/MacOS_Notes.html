@@ -1,0 +1,21 @@
+<html><body>
+<H3><A NAME="mac">MacOS Notes</A></H3>
+
+Some trs80gp features are only available through the command line.  The
+easiest way to run from the command line is use the <TT>open</TT> command.
+For example, here is how to start trs80gp in Model I mode with the PCG-80
+programmable character graphics generator enabled:
+
+<PRE>
+    open trs80gp.app --args -m1 -pcg-80
+</PRE>
+
+You can run the executable directly which may be preferable in some cases.
+Just use the path to it inside the trs80gp.app directory.  Here's how to
+start a Model II in turbo mode:
+
+<PRE>
+    trs80gp.app/Contents/MacOS/trs80gp -m2 -turbo
+</PRE>
+
+</body></html>

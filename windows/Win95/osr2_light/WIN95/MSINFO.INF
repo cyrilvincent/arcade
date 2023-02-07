@@ -1,0 +1,176 @@
+; MSINFO INF file
+
+[version]
+signature="$CHICAGO$"
+SetupClass=BASE
+LayoutFile=layout.inf
+
+; Base options only happen during Windows Setup
+; Setting up the registry settings and INF file locations
+
+[BaseWinOptions]
+Msinfo.reg
+Msinfo2.reg
+online.info.reg
+
+[DefaultInstall]
+CopyFiles       =Online.copy.OnlineServices, online.copy.prog.comp, online.copy.prog.AOL, online.copy.prog.att, online.copy.prog.prodigy, icwhack.copy
+AddReg          =Online.reg
+UpdateInis      =Online.Links
+
+[Msinfo.reg]
+CopyFiles       =msinfo.copyfiles.inf, Help.CopyFiles, citCopy.sys, online.copy.win, logo.copy.sys
+AddReg          =Online.reg
+UpdateInis      =Online.Links
+
+[Msinfo2.reg]
+CopyFiles = Online.copy.OnlineServices, online.copy.prog.comp, online.copy.prog.AOL, online.copy.prog.att, online.copy.prog.prodigy, icwhack.copy
+
+
+[online.info.reg]
+;CopyFiles       =online.copy.prog.comp.tip, shock.copy
+
+[destinationdirs]
+CitCopy.sys                     =11   ; windows\system
+Msinfo.copyfiles.inf            =17   ; windows\inf
+Help.CopyFiles                  =18   ; windows\help
+Online.copy.sys                 =11
+Online.copy.hlp                 =18
+Online.copy.prog                =24,%PROGRAMF%\%QCDPROG%
+Online.copy.win                 =25
+Online.copy.inf                 =17
+Online.copy.OnlineServices      =25,%Desktop%\%OnlineShort%
+online.copy.prog.comp           =24,%OEM_PROGRAMF%\%OnlineShort%\%CompuShort%
+online.copy.prog.comp.tip       =24,%OEM_PROGRAMF%\%OnlineShort%\%CompuShort%
+online.copy.prog.AOL            =24,%OEM_PROGRAMF%\%OnlineShort%\%AOL%
+online.copy.prog.att            =24,%OEM_PROGRAMF%\%OnlineShort%\%att%
+;online.copy.prog.prodigy        =24,%OEM_PROGRAMF%\%OnlineShort%\%Prodigy%
+shock.copy                      =24,%OEM_PROGRAMF%\%OEM_MICROS%
+logo.copy.sys                   =30
+;icwhack.copy                    =24,%OEM_PROGRAMF%\%Internet%\%ICW%
+
+[Msinfo.copyfiles.inf]
+msinfo.inf
+
+[online.copy.prog.comp]
+cssetup.exe
+cs3kit.exe
+
+;this will alacate space on the dest disk for cs3kit.exe
+;[SourceDisksNames]
+;107="Windows 95 CD-ROM",,0
+
+;[SourceDisksFiles]
+;cs3kit.exe=107,,5783436
+;swinst4.exe=107,,1009600
+
+[online.copy.prog.comp.tip]
+;cs3kit.exe
+
+[shock.copy]
+;swinst4.exe
+
+[online.copy.prog.att]
+
+[online.copy.prog.AOL]
+;aol30fr.exe
+aol30fr.exe
+
+[Help.CopyFiles]
+apmcp.hlp
+apmcp.cnt
+display.hlp
+pingname.bat
+pingnum.bat
+rnaapp.hlp
+unimdm.hlp
+whatsnew.hlp
+update.cnt
+
+[online.copy.win]
+setupslt.exe
+script.doc
+pws.txt
+
+[CitCopy.sys]
+drwatson.exe
+
+[Online.copy.OnlineServices]
+INFORM~1.TXT,services.txt
+
+[logo.copy.sys]
+logo2_0.sys
+
+[Online.Links]
+;wab.cnt This sets the directory where the shortcuts will go
+; Make online services Link
+setup.ini, progman.groups,,"desktopOnline=""..\..\%Desktop%\%OnlineShort%"""
+; This sets the Group on the start menu
+setup.ini, progman.groups,, "group5=%Onlinelong%"
+; This makes the Links to the .exe  On the start menu
+setup.ini, group5,, """%CIS_Desc_cs3%"", ""%24%\%OEM_PROGRAMF%\%OnlineShort%\%CompuShort%\cssetup.exe /CS2"",,,,,%CIS_desc_CS3%"""
+setup.ini, group5,, """%AOL_Desc%"", ""%24%\%OEM_PROGRAMF%\%OnlineShort%\%AOL%\aol30fr.exe"",,,,,%CIS_desc_CS3%"""
+setup.ini, group5,, """%att_Desc%"", ""%24%\%OEM_PROGRAMF%\%OnlineShort%\%att%\pcvkit.exe"", ""%24%\%OEM_PROGRAMF%\%OnlineShort%\%att%\pcvkit.exe"",0 ,,,%att_desc%
+; Make online services Link in the online folder on the dektop.
+setup.ini, DesktopOnline,,"""%CIS_Desc_cs3%"", ""%24%\%OEM_PROGRAMF%\%OnlineShort%\%CompuShort%\cssetup.exe /CS2"",,,,,%CIS_desc_CS3%
+setup.ini, DesktopOnline,,"""%AOL_desc%"", ""%24%\%OEM_PROGRAMF%\%OnlineShort%\%AOL%\aol30fr.exe"",,,,,%AOL_desc%
+setup.ini, DesktopOnline,, """%att_Desc%"", ""%24%\%OEM_PROGRAMF%\%OnlineShort%\%att%\attwnsvc.ISP"", ""%24%\%OEM_PROGRAMF%\%OnlineShort%\%att%\attwns.ICO"",0 ,,,%att_desc%
+
+; Remove Old Shortcuts 
+setup.ini, DesktopOnline,,"""%Old_WOW_desc%"""
+setup.ini, group5,,"""%Old_WOW_desc%"""
+setup.ini, DesktopOnline,,"""%OLD_ATT_DESC%"""
+setup.ini, group5,,"""%OLD_ATT_DESC%"""
+
+; A u d i o   A s s o c i a t i o n
+[Online.reg]
+;Rername the Dir Online~1 the long file name in desktop
+HKLM,Software\Microsoft\Windows\CurrentVersion\RenameFiles\OnlineDesk1,,,%25%\%Desktop%
+HKLM,Software\Microsoft\Windows\CurrentVersion\RenameFiles\OnlineDesk1,%OnlineShort%,,!$!$.ME
+HKLM,Software\Microsoft\Windows\CurrentVersion\RenameFiles\OnlineDesk1,!$!$.ME,,"%OnlineLong%"
+;Rename Inform~1.txt the log name
+HKLM,Software\Microsoft\Windows\CurrentVersion\RenameFiles\OnlineTxt1,,,%25%\%Desktop%\%OnlineShort%
+HKLM,Software\Microsoft\Windows\CurrentVersion\RenameFiles\OnlineTxt1,%Online_Txt_short%,,!$!$-23.ME
+HKLM,Software\Microsoft\Windows\CurrentVersion\RenameFiles\OnlineTxt1,!$!$-23.ME,,"%Online_Txt_long%"
+;Rername the Dir Online~1 the long file name in program files
+HKLM,Software\Microsoft\Windows\CurrentVersion\RenameFiles\OnlineProg1,,,%24%\%OEM_PROGRAMF%
+HKLM,Software\Microsoft\Windows\CurrentVersion\RenameFiles\OnlineProg1,%OnlineShort%,,!$!$!!.ME
+HKLM,Software\Microsoft\Windows\CurrentVersion\RenameFiles\OnlineProg1,!$!$!!.ME,,"%OnlineLong%"
+;Rername the Dir Compus~1 the long file name 
+HKLM,Software\Microsoft\Windows\CurrentVersion\RenameFiles\OnlineCis1,,,%24%\%OEM_PROGRAMF%\%OnlineShort%
+HKLM,Software\Microsoft\Windows\CurrentVersion\RenameFiles\OnlineCis1,%CompuShort%,,!$!$!!$.ME
+HKLM,Software\Microsoft\Windows\CurrentVersion\RenameFiles\OnlineCis1,!$!$!!$.ME,,"%CompuLong%"
+;Logo.sys rename for OSR2.0
+HKLM,Software\Microsoft\Windows\CurrentVersion\RenameFiles\OSR2logo,,,%30%
+HKLM,Software\Microsoft\Windows\CurrentVersion\RenameFiles\OSR2logo,logo2_0.sys,,"logo.sys,2"
+;Rename the Dir Connec~1 to the long file name in program files
+HKLM,Software\Microsoft\Windows\CurrentVersion\RenameFiles\ICW_Ren,,,%24%\%OEM_PROGRAMF%\%Internet% 
+HKLM,Software\Microsoft\Windows\CurrentVersion\RenameFiles\ICW_Ren,%ICW%,,!$!$!!.CW
+HKLM,Software\Microsoft\Windows\CurrentVersion\RenameFiles\ICW_Ren,!$!$!!.CW,,"%ICW_Long%"
+
+
+[Strings]
+Desktop                 ="Bureau"
+OnlineShort             ="Servic~1"
+OEM_MICROS              ="Intern~1"
+Onlinelong              ="Services en ligne"
+CompuShort              ="compus~1"
+CompuLong               ="CompuServe"
+CIS_Desc_cs3            ="Installer CompuServe"
+CIS_Desc_WOW            ="Installer WOW! depuis CompuServe"
+AOL_desc                ="Essai gratuit AOL & Internet!"
+Online_Txt_long         ="A propos des services en ligne.txt"
+Online_Txt_short        ="INFORM~1.TXT"
+OEM_PROGRAMF            ="Progra~1"          ; first 6 chars of Program_Files
+AOL                     ="AOL"
+att_Desc                ="AT&T WorldNet Service"
+att                     ="AT&T"
+Start                   ="menudé~1"
+Programs                ="programmes"
+Internet        	="Intern~1"
+Internet_Long		="Internet Explorer"
+ICW              	="Connec~1"
+ICW_Long		="Connection Wizard"
+; The following strings are for deleting OSR 2 links to previous OLS clients
+Old_ATT_DESC		="AT&T WorldNet Signup"
+Old_WOW_DESC            ="Installer WOW! de CompuServe"

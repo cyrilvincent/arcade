@@ -1,0 +1,53 @@
+<html><body>
+<H3><A NAME="record">Recording</A></H3>
+
+The screen display and sound of the emulator can be written to a file
+using the Record &rarr; Flash Video and Record &rarr; Video menus the start
+and stop recording.  The window title will flash either <TT>*flv*</TT>
+or <TT>*avi*</TT> to remind that that recording is in progress.  The
+"Flash Video" option is recommended as the resulting file size is <B>much</B>
+smaller than "Video"'s uncompressed <TT>.AVI</TT> output.
+
+<P>
+Use Record &rarr; Animated GIF to start and stop recording of the screen in
+animated GIF format.  The window title will flash <TT>*gif*</TT> to let
+you know GIF recording is in progress.  The resulting files are large and
+not exactly the same frame rate as the TRS-80.
+
+<P>
+For a screen shot you can use Edit &rarr; Copy which copies ASCII text,
+Unicode and bitmap versions of the screen to the clipboard.
+Or use the <TT>Ctrl-Alt-C</TT> and <TT>Ctrl-Insert</TT> keyboard shortcuts.
+You can then paste it in Notepad or Paint (or pretty much anything else).
+
+<P>
+There is also Record &rarr; Screenshot to save the screen display as a GIF
+image (shortcut: <TT>F11</TT>).  Record &rarr; Cleanshot or <TT>Shift-F11</TT>
+will save a clean screenshot (or "cleanshot") that does not have the beam
+drop-outs as normally appeared on the Model I and Model III.
+
+<P>
+Audio output can be captured in <TT>.WAV</TT> format using Record &rarr; Audio
+with <TT>*wav*</TT> flashing in the title bar to let you know it is recording.
+This is fine for sound effects but unfortunately does not work as a way
+to create files that can be loaded on real TRS-80's.  Instead you should rely
+on the automatic Cassette &rarr; Auto Save feature and use
+<A HREF="http://48k.ca/trld.html">my trld program</A> to convert the <TT>.CAS</TT> file to
+<TT>.WAV</TT> format.
+
+<P>
+The rest of the Record menu entries are meant for programmers and are
+<A HREF="Programming.html#prog">documented in the programming section</A>.  I will note
+that Record &rarr; MHz Audio records audio files with a very high sampling rate
+equal to the Z-80 processor speed.  Most times you do <B>not</B> need that
+level of fidelity.
+
+<P>
+The <TT>-batch</TT> command line option causes all the Record menu entries
+to save to a specific file name to allow for fully automated testing of
+trs80gp itself.  It also can be thought of as a way for the emulated TRS-80
+to act as a batch processor.  More on this in the
+<A HREF="Programming.html#prog">programming section</A>.
+
+
+</body></html>

@@ -1,0 +1,949 @@
+
+ -----------------------------------------------------------
+ Microsoft Windows 95 : Lisez-moi concernant l'installation
+                        Novembre 1997            
+ -----------------------------------------------------------
+
+        (c) Copyright Microsoft Corporation, 1997
+
+
+Ce document contient des informations complémentaires de dernière
+minute qui complètent la documentation de Microsoft Windows 95.
+
+
+-----------------------------
+Comment utiliser ce document
+-----------------------------
+
+Pour lire Install.txt sur votre écran avec le Bloc-notes, agrandissez 
+la fenêtre du Bloc-notes.
+
+Pour imprimer Install.txt, ouvrez-le avec le Bloc-notes ou un autre 
+logiciel de traitement de texte, puis utilisez la commande Imprimer 
+du menu Fichier.
+
+
+------------------
+TABLE DES MATIÈRES
+
+INSTALL.TXT
+REMARQUES GÉNÉRALES SUR L'INSTALLATION
+RECHERCHE ET CORRECTION DES PROBLÈMES DE DISQUE DUR PENDANT 
+L'INSTALLATION (AVEC SCANDISK)
+SI VOUS AVEZ UN LECTEUR COMPRESSÉ
+INSTALLATION DE WINDOWS 95 SUR WINDOWS NT 
+INSTALLATION DE WINDOWS 95 SUR OS/2
+INSTALLATION DE WINDOWS 95 SUR LES ORDINATEURS UTILISANT LANTASTIC
+MESSAGES D'ERREUR DE L'INSTALLATION
+REMARQUES GÉNÉRALES SUR L'INSTALLATION
+GESTIONNAIRES DE MEMOIRE
+PROGRAMMES D'ANTÉMÉMOIRE DISQUE
+LOGICIELS ANTI-VIRUS
+UTILISATION DE PROGRAMMES ET DE PILOTES RÉSIDENTS (TSR)
+PROBLÈMES D'INSTALLATION POTENTIELS CONNUS
+MISES À JOUR DISPONIBLES SUR LE CD
+-------------------------------------------------------------------
+
+
+INSTALL.TXT
+===========
+
+Ce fichier contient des informations sur les problèmes que vous pouvez 
+rencontrer en installant Windows 95.
+
+REMARQUE : Nous vous conseillons de vérifier que votre disque dur ne  
+contient pas de virus avant d'installer Windows 95. Si vous disposez 
+de MS-DOS 6.x, exécutez MSAV avant d'exécuter Install.
+
+Avant d'exécuter Install, vous devez, le cas échéant, désactiver vos écrans
+de veille ainsi que vos logiciels anti-virus.
+
+REMARQUES GÉNÉRALES SUR L'INSTALLATION
+=======================================
+
+ - FAITES UNE NOUVELLE DISQUETTE DE DÉMARRAGE ! En raison des changements des 
+   kernels en mode réel et en mode protégé pour prendre en charge FAT32, les 
+   disquettes de démarrage créées avec Windows 95 version 4.00.950 ne sont 
+   pas compatibles avec les disquettes de démarrage créées avec la 
+   version 4.00.950 C de Windows 95 et vice-versa. Par conséquent, n'oubliez 
+   pas de créer une nouvelle disquette de démarrage lorsque vous installerez 
+   la version 4.00.950 C de Windows 95 pour la première fois, MÊME SI VOUS 
+   NE COMPTEZ PAS UTILISER FAT32.
+
+ - La version 4.00.950 C de Windows 95 contient 2 mises à jour principales qui 
+   sont effectuées pendant l'installation : Internet Explorer version 4.01 et les 
+   Services en ligne. Les Services en ligne diffèrent selon les versions par pays, et 
+   ne sont pas présents pour toutes les langues. Si le processus de configuration de 
+   IE 4.01 échoue ou si vous l'interrompez, vous pourrez toujours recommencer cette 
+   configuration en double-cliquant sur ie4setup.exe dans le répertoire \options\cabs
+   de votre disque dur ou dans le répertoire \win95 de votre support de stockage.
+
+ - Si vous disposez de l'utilitaire " In Control " de Diamond Video dans votre groupe
+   Démarrage, le message suivant apparaîtra :
+
+   " Les paramètres du Panneau de configuration ou de certains périphériques
+   ont changé depuis le dernier démarrage de Windows. Fermez toutes vos 
+   applications, redémarrez Windows et relancez l'installation. " 
+
+   Ces utilitaires sont installés par certains pilotes de cartes graphiques
+   Diamond Stealth. Supprimez-les de votre groupe Démarrage avant de lancer 
+   l'installation.
+
+ - Si vous disposez d'une carte graphique Number Nine Imagine 128, il vous
+   faudra probablement soit effectuer l'installation à partir de MS-DOS, 
+   soit remplacer votre pilote d'affichage par VGA pour éviter un blocage 
+   lors de l'installation. Un nouveau pilote I128 est fourni dans la 
+   version 4.00.950 C de Windows 95. Ce pilote ne doit être utilisé 
+   qu'avec la version 4.00.950 C de Windows 95 pour l'instant.
+
+ - Si vous avez un portable Compaq LTE 5xxx, un blocage peut survenir 
+   lors de la détection matérielle pour l'installation ou la configuration 
+   de nouveau matériel, dans le cas où ce portable est arrimé à une station 
+   d'accueil. Dans ce cas, redémarrez votre ordinateur et laissez la 
+   récupération sans incident de l'installation se poursuivre. Le code 
+   de détection qui provoque le blocage sera ignoré, et l'installation se 
+   terminera normalement. Cette particularité est due à la façon dont le BIOS 
+   de cet ordinateur fonctionne. 
+
+
+
+RECHERCHE ET CORRECTION DES PROBLÈMES DE DISQUE DUR PENDANT L'INSTALLATION
+(AVEC SCANDISK)
+===========================================================================
+Le programme d'installation de Windows 95 exécute automatiquement ScanDisk 
+pour vérifier que vos disques durs ne contiennent pas d'erreurs. Si des 
+erreurs sont détectées, l'installation ne peut pas continuer tant qu'elles 
+n'ont pas été corrigées.
+
+REMARQUE : La version MS-DOS de ScanDisk exécutée par l'installation peut 
+détecter des erreurs de noms de fichiers longs, mais elle ne peut pas les 
+corriger. Ces erreurs n'empêcheront pas l'installation de continuer.  
+Une fois l'installation terminée, exécutez la nouvelle version Windows de 
+ScanDisk depuis Windows 95 pour corriger ces erreurs.
+
+Correction des problèmes de disque dur
+--------------------------------------
+Pendant l'installation, si vous voyez apparaître un message vous 
+invitant à exécuter ScanDisk pour corriger des erreurs sur votre 
+disque dur, suivez les instructions ci-dessous.
+
+Si vous installez Windows 95 à partir de MS-DOS ou d'une version 
+antérieure de Windows, telle que Windows 3.1 :
+
+1. Quittez Windows.
+2. Si vous effectuez l'installation à partir des disquettes, insérez 
+   la disquette d'installation 1 dans le lecteur et tapez le texte 
+   suivant à l'invite de commandes :
+
+	a:scandisk.exe /all
+
+   où " a " est le lecteur qui contient la disquette Windows.
+
+   Si vous effectuez l'installation à partir d'un CD-ROM, insérez 
+   celui-ci et tapez la ligne suivante :
+
+        f:\win95\scandisk.exe /all
+
+   où " f " est le lecteur qui contient le CD-ROM.
+
+4. Suivez les instructions qui apparaissent à l'écran et corrigez les 
+   problèmes signalés par ScanDisk.
+5. Démarrez Windows, puis exécutez à nouveau l'installation.
+
+Si vous installez Windows 95 à partir d'une version antérieure de 
+Windows 95 :
+
+1. Quittez Install.
+2. Dans le menu Démarrer, cliquez sur Programmes, Accessoires, 
+   Outils système, puis sur ScanDisk.
+3. Vérifiez vos disques durs et lecteurs hôtes et corrigez les 
+   erreurs qu'ils contiennent.
+
+REMARQUE : Si vous exécutez Install à partir de MS-DOS, ScanDisk 
+s'exécutera et vous pourrez corriger la plupart des problèmes 
+pendant l'installation.
+
+Problèmes liés à l'exécution de ScanDisk
+----------------------------------------
+Pendant l'installation, si vous voyez un message vous informant qu'il n'y 
+a pas assez de mémoire pour exécuter ScanDisk, libérez un peu de mémoire 
+conventionnelle et/ou supérieure, puis relancez l'installation. Si vous 
+disposez de MS-DOS 6.x, essayez d'exécuter MEMMAKER pour libérer de la 
+mémoire.
+
+Si la mémoire disponible ne suffit toujours pas, ou si vous rencontrez
+d'autres problèmes lorsque l'installation exécute ScanDisk, vous pouvez 
+désactiver la vérification du disque par ScanDisk durant l'installation 
+en exécutant Install avec l'option /IS. Tapez la commande suivante :
+
+	install /is
+
+REMARQUE : Il n'est pas conseillé de désactiver ScanDisk pendant
+l'installation. Si vous le faites, des problèmes éventuels liés à 
+votre disque dur peuvent empêcher l'installation ou l'exécution 
+correcte de Windows 95.
+
+Si les problèmes persistent quand vous exécutez Install avec l'option /IS, 
+essayez l'option /IQ en tapant la commande suivante :
+
+        install /is /iq
+
+
+
+SI VOUS AVEZ UN LECTEUR COMPRESSÉ
+=================================
+
+Si vous avez compressé votre disque dur à l'aide d'un logiciel de 
+compression, vous risquez de recevoir un message indiquant qu'il n'y 
+a pas assez de place sur la partition hôte du lecteur compressé. Il se 
+peut que Install soit amené à copier certains fichiers sur votre lecteur 
+de démarrage, l'hôte de votre lecteur de démarrage, ou l'hôte de votre 
+lecteur Windows. Si ce message apparaît, libérez de l'espace sur le 
+lecteur spécifié, puis exécutez de nouveau Install. En pareil cas, 
+essayez l'une des solutions suivantes :
+
+- Si vous installez Windows sur un lecteur compressé, essayez de 
+  l'installer sur un lecteur non compressé, si cela est possible.
+- Supprimez les fichiers inutiles sur votre partition hôte.
+- Si vous exécutez Windows 3.1 et si vous avez créé un fichier d'échange
+  permanent, essayez de réduire sa taille. Dans le Panneau de 
+  configuration, double-cliquez sur l'icône 386 Etendu, puis cliquez sur
+  Mémoire virtuelle. Modifiez ensuite la taille de votre fichier d'échange.
+- À l'aide de votre logiciel de compression de disque, libérez de l'espace
+  sur le lecteur hôte de votre lecteur compressé. Si vous avez compressé
+  votre lecteur à l'aide de DriveSpace ou de DoubleSpace, exécutez la
+  procédure suivante :
+
+  1. Quittez Windows.
+  2. Exécutez Drvspace.exe ou Dblspace.exe.
+  3. Sélectionnez le lecteur compressé sur l'hôte duquel vous souhaitez 
+     libérer de l'espace.
+  4. Dans le menu Lecteur, cliquez sur Ajuster l'espace libre.
+
+  Si vous avez utilisé un autre logiciel de compression, notamment Stacker, 
+  consultez la documentation qui l'accompagne.
+
+REMARQUE : Si vous remarquez des différences entre la quantité d'espace libre
+signalée par Install et la quantité d'espace que vous croyez libre sur votre
+lecteur hôte, il se peut que Windows utilise une partie de cet espace pour 
+créer un fichier d'échange. Celui-ci peut ne pas apparaître lorsque Windows 
+n'est pas en cours d'exécution.
+
+REMARQUE : Si vous créez une disquette de démarrage au cours de 
+l'installation, veillez à ne pas utiliser une disquette compressée.
+
+Si vous utilisez l'utilitaire de compression SuperStor 
+------------------------------------------------------
+Si vous avez compressé votre disque dur à l'aide de SuperStor, il est
+possible qu'Install ne trouve pas votre lecteur de démarrage et n'installe
+pas Windows 95. 
+Si vous recevez un message à ce sujet au cours de l'installation,
+décompressez votre disque et supprimez SuperStor avant d'exécuter
+de nouveau Install.
+
+Si vous utilisez l'utilitaire de compression XtraDrive 
+------------------------------------------------------
+Si vous avez compressé votre disque dur à l'aide de XtraDrive et si 
+vous effectuez la mise à jour d'une version antérieure de Windows, 
+Install ne pourra installer Windows 95 que si vous désactivez 
+l'antémémoire d'écriture en procédant de la manière suivante :
+
+1. Quittez Windows.
+2. Exécutez Vmu.exe (l'utilitaire de maintenance des volumes de XtraDrive).
+3. Choisissez Advanced Options, puis appuyez sur ENTRÉE.
+4. Définissez la valeur 0 comme taille de l'antémémoire EMS.
+5. Affectez la valeur minimum (1) à l'antémémoire conventionnelle.
+6. Affectez la valeur NO à l'option Allow Write Caching.
+7. Choisissez Yes en réponse au message de confirmation. Vous voyez 
+   alors apparaître un message qui vous invite à redémarrer votre 
+   ordinateur afin que les modifications puissent être appliquées.
+8. Quittez l'utilitaire de maintenance des volumes, puis redémarrez 
+   votre ordinateur.
+9. Démarrez Windows, puis exécutez de nouveau Install.
+
+
+INSTALLATION DE WINDOWS 95 SUR WINDOWS NT 
+=========================================
+
+Si vous utilisez l'amorçage multiple de MS-DOS et Windows NT, amorcez 
+MS-DOS, puis exécutez Install à partir de MS-DOS ou Windows 3.x. Il est 
+impossible d'installer Windows 95 dans un répertoire contenant une 
+configuration Windows 3.x/Windows NT partagée ; dans ce cas, il faut
+installer Windows 95 dans un répertoire différent.
+
+Si vous n'utilisez pas l'amorçage multiple de MS-DOS et Windows NT, vous 
+devez commencer par configurer votre ordinateur pour l'amorçage multiple 
+MS-DOS et Windows NT, puis suivre les instructions ci-dessus.
+
+Si vous exécutez Install après avoir amorcé MS-DOS à partir d'une disquette, 
+vous ne pourrez plus amorcer Windows NT. Vous pourrez toutefois restaurer 
+Windows NT en amorçant à partir de la disquette amorçage/réparation de 
+Windows NT et en sélectionnant l'option Réparation.
+
+
+INSTALLATION DE WINDOWS 95 SUR OS/2
+===================================
+
+Install ne peut pas s'exécuter sur OS/2. Vous devez démarrer sous 
+MS-DOS et exécuter Install à partir de l'invite MS-DOS.
+
+REMARQUE : Si vous effectuez la mise à jour sur OS/2 dans une partition
+HPFS, vous devrez introduire la disquette d'installation 1 d'OS/2 au
+cours du processus d'installation.
+
+Si vous utilisez le Gestionnaire d'amorçage OS/2 pour choisir le système
+d'exploitation au démarrage, Install va désactiver le Gestionnaire
+d'amorçage pour s'assurer que Windows 95 peut relancer le système et
+achever son installation. Vous pourrez réactiver le Gestionnaire
+d'amorçage en exécutant l'utilitaire Fdisk qui accompagne Windows 95
+(de la manière décrite à la fin de cette section).
+
+Si vous n'exécutez pas le Gestionnaire d'amorçage, vous devez configurer 
+votre ordinateur pour l'utiliser, puis suivre les instructions ci-dessus.
+
+Si vous exécutez MS-DOS à partir d'une disquette et si vous exécutez ensuite 
+Install, vous ne pourrez plus amorcer OS/2 une fois que Windows 95 sera 
+installé. Vous devrez supprimer les fichiers Autoexec.bat et Config.sys
+utilisés par OS/2 avant d'exécuter le programme d'installation de Windows 95.
+
+Si vous souhaitez supprimer OS/2 de votre ordinateur après avoir installé 
+Windows 95, procédez comme suit :
+
+1. Enregistrez sur une disquette ou un lecteur réseau tous les fichiers 
+   de données que vous souhaitez conserver.
+
+2. Supprimez tous les fichiers de vos répertoires et sous-répertoires OS/2, 
+   puis supprimez les répertoires OS/2.
+
+3. Dans le répertoire racine, les fichiers suivants sont marqués comme 
+   fichiers système cachés et doivent être supprimés :
+
+	Ea data.sf
+	OS2ldr.msg
+	OS2krnl
+	OS2boot
+	Wp data.sf
+
+   Dans Poste de travail ou l'Explorateur Windows, vérifiez que les fichiers 
+   cachés sont visibles. Cliquez à cet effet sur le menu Affichage, puis sur 
+   Options, et enfin sur Afficher tous les fichiers. Supprimez ensuite les 
+   fichiers OS/2 énumérés ci-dessus.
+
+   REMARQUE : Si vous disposez d'une version d'OS/2 différente de la 
+   version 2.0, les noms des fichiers OS/2 enregistrés sur votre disque dur 
+   peuvent être différents de ceux indiqués plus haut. En outre, selon la
+   version d'OS/2, votre répertoire racine peut contenir les fichiers
+   suivants que vous pouvez aussi supprimer :
+
+	OS2dump
+	OS2ldr
+	OS2logo
+	OS2ver
+
+4. N'oubliez pas de vider la Corbeille pour supprimer définitivement les
+   fichiers de votre ordinateur.
+
+Si le Gestionnaire d'amorçage est installé et si vous souhaitez le
+supprimer, redémarrez votre ordinateur et suivez la procédure ci-dessous.
+(Il est conseillé d'imprimer ce fichier avant de redémarrer votre
+ordinateur.)
+
+1. Lorsque vous voyez apparaître le menu Gestionnaire d'amorçage, choisissez
+   l'amorçage MS-DOS, puis exécutez FDisk.
+2. Choisissez la partition MS-DOS (C) comme partition active.
+3. Quittez FDisk, puis redémarrez votre ordinateur.
+
+Si vous souhaitez rétablir le Gestionnaire d'amorçage après avoir installé 
+Windows 95, procédez de la manière suivante :
+
+1. Dans le menu Démarrer, cliquez sur Exécuter, puis tapez FDISK.
+2. Choisissez l'option 2, Activation d'une partition.
+3. Tapez le numéro de la partition du Gestionnaire d'amorçage. Il s'agira
+   de la partition non-MS-DOS de 1 Mo qui est généralement placée en haut
+   ou en bas.
+4. Quittez FDisk, puis redémarrez votre ordinateur de la manière indiquée.
+
+Vous pourrez alors amorcer OS/2 quand vous le souhaiterez et modifier 
+les étiquettes des partitions dans le Gestionnaire d'amorçage à l'aide du 
+programme FDisk d'OS/2.
+
+
+INSTALLATION DE WINDOWS 95 SUR LES ORDINATEURS UTILISANT LANTASTIC
+==================================================================
+
+Si vous exécutez le serveur LANtastic, vous devez le désactiver avant 
+d'installer Windows 95. Pour cela, vous devez supprimer le fichier 
+Server.exe de votre fichier Autoexec.bat, ou taper la commande suivante :
+
+	server /remove
+
+Si vous exécutez LANtastic et si vous avez redirigé ou partagé votre 
+lecteur de démarrage (habituellement le lecteur C), Install s'arrêtera 
+faute de pouvoir identifier votre lecteur de démarrage. 
+
+Avant d'exécuter Install, vous devrez désactiver la redirection ou mettre
+fin au partage de votre lecteur de démarrage.
+
+
+MESSAGES D'ERREUR DE L'INSTALLATION
+====================================
+
+Cette section énumère les messages d'erreur susceptibles de s'afficher
+au cours de l'exécution du programme Install. Elle vous renseigne 
+également sur la manière de réagir à ces messages.
+
+SU-0010, SU-0012, SU-0015, SU-0016
+----------------------------------
+Si vous recevez un de ces messages au cours de l'installation, reportez-vous
+aux sections relatives à OS/2 et Windows NT, plus haut dans ce document.
+
+SU-0011
+-------
+Si votre disque dur est protégé par un mot de passe, Install ne pourra pas 
+être exécuté. Vous devez supprimer la protection par mot de passe. Pour 
+plus d'informations, reportez-vous à la documentation qui accompagne 
+votre ordinateur.
+
+SU-0013
+-------
+Pour installer Windows 95, votre lecteur de démarrage doit être une
+partition d'amorçage MS-DOS. Si votre lecteur de démarrage est un système
+de fichiers HPFS ou Windows NT, vous devez créer une partition d'amorçage 
+MS-DOS avant d'exécuter Install. Pour plus d'informations sur la création 
+d'une partition d'amorçage MS-DOS, reportez-vous à la documentation qui 
+accompagne votre ordinateur.
+
+Si vous utilisez un réseau LANtastic ou le logiciel de compression
+SuperStor, reportez-vous aux sections appropriées, plus haut dans
+ce document.
+
+SU0167
+------
+Si votre répertoire Windows actuel comporte un sous-répertoire nommé 
+Bureau, Install ne pourra pas installer Windows 95 dans ce répertoire. 
+En effet, Windows 95 crée un répertoire nommé Bureau et l'utilise  
+pour les fichiers système. Si ce message apparaît au cours de
+l'installation, vous devez renommer ou déplacer votre répertoire
+Bureau actuel, avant d'exécuter de nouveau Install.
+
+Messages du mode standard
+-------------------------
+Si vous recevez un des messages d'erreur suivants, vous devez supprimer les 
+gestionnaires de mémoire (notamment Emm386.exe, QEMM ou 386Max) de 
+votre fichier Config.sys, puis exécuter de nouveau Install.
+
+	Standard Mode: Invalid DPMI return.
+	Standard Mode: Fault in MS-DOS Extender.
+	Standard Mode: Bad Fault in MS-DOS Extender.
+	Standard Mode: Unknown stack in fault dispatcher.
+	Standard Mode: Stack Overflow.
+
+
+REMARQUE : Si les problèmes persistent, essayez de replacer 
+Emm386.exe dans votre fichier Config.sys, mais en excluant toutes 
+les plages. Par exemple, 
+
+	device=c:\windows\emm386.exe x=A000-FFFF
+
+Si vous rencontrez ces messages ou si votre ordinateur s'arrête au cours 
+de l'installation, il se peut que vous deviez activer la double mise en
+mémoire tampon dans SmartDrive. Plusieurs disques durs SCSI et certains
+lecteurs ESDI exigent la double mise en mémoire tampon.
+
+Pour activer la double mise en mémoire tampon, ajoutez la ligne suivante au
+début de votre fichier Config.sys :
+
+	device=c:\windows\smartdrv.exe /double_buffer+
+
+où " c:\windows " correspond au chemin d'accès de votre répertoire Windows.
+
+Impossible de lire les fichiers d'installation (.cab) 
+-----------------------------------------------------
+Si vous disposez de Multimedia Cloaking et si vous installez 
+Windows 95 à partir des disquettes, il se peut qu'Install ne s'exécute 
+pas correctement. Si vous voyez apparaître des messages indiquant que
+Install ne peut pas lire des fichiers .cab, vous devez exécuter la procédure 
+suivante:
+
+1. Supprimez de vos fichiers Config.sys et Autoexec.bat les lignes
+   qui font référence à Cacheclk.exe.
+2. Redémarrez votre ordinateur.
+3. Exécutez de nouveau Install.
+
+
+L'installation n'a pas pu sauvegarder vos fichiers système
+-----------------------------------------------------------
+Si un message d'erreur s'affiche pendant qu'Install sauvegarde vos 
+fichiers système, il se peut qu'il n'y ait pas suffisamment 
+d'espace disque libre, en particulier sur les disques compressés. 
+Vous devez libérer de l'espace sur le lecteur sur lequel vous 
+sauvegardez vos fichiers (le lecteur par défaut étant C) en 
+supprimant tous les fichiers dont vous n'avez pas besoin.
+
+Impossible de continuer cette configuration système
+===================================================
+Si un message de ce type apparaît sur votre écran, il se peut que votre 
+partition de disque soit ancienne et incompatible. Avant d'exécuter Install, vous
+devez sauvegarder vos données puis repartitionner votre disque.
+
+
+REMARQUES GÉNÉRALES SUR L'INSTALLATION
+======================================
+
+Cette section contient des notes sur des configurations système spécifiques 
+susceptibles d'empêcher l'installation de Windows 95.
+
+
+Sager NP8200 ou Wedge Technologies 466/DX2
+-----------------------------------------
+AVERTISSEMENT : Si vous installez Windows 95 sur un ordinateur 
+portable Sager NP8200 ou Wedge Technologies 466/DX2, vous ne 
+pourrez plus utiliser votre ordinateur, même si vous réinstallez une 
+version antérieure de Windows.
+
+
+Cartes réseau Plug-and-Play et pilotes 16 bits en mode réel
+-----------------------------------------------------------
+Quand vous devez exécuter le pilote 16 bits en mode réel de votre carte réseau (ce qui est fréquent si vous utilisez DLC ou un autre protocole en mode réel),
+votre carte Plug-and-Play peut sembler ne plus fonctionner. La raison de 
+cet incident réside dans le fait que les pilotes de cartes réseau 16 bits sont chargés avant que Windows 95 ne puisse activer les cartes Plug-and-Play. En outre, certains pilotes de cartes réseau 16 bits ne reconnaissent pas les cartes Plug-and-Play (il en va de même pour la plupart des clones Plug-and-Play NE2000).
+
+Pour pouvoir utiliser votre carte Plug-and-Play avec un pilote de carte réseau 16 bits :
+1. Exécutez l'utilitaire Softset fourni avec votre carte Plug-and-Play, puis 
+   placez la carte en mode non Plug-and-Play.
+2. Double-cliquez sur l'icône Réseau du Panneau de configuration et 
+   supprimez la carte réseau.
+3. Double-cliquez sur l'icône Ajout de périphérique du Panneau de 
+   configuration et suivez les instructions affichées. Windows 95 détectera 
+   votre carte réseau.
+
+Si vous passez à un pilote de carte réseau 32 bits en mode protégé, vous pourrez 
+exécuter de nouveau l'utilitaire Softset pour activer le mode 
+Plug-and-Play pour votre carte.
+
+Utilitaires Diamond Video In-Control
+----------------------------------
+Vous devez supprimer ces utilitaires avant d'exécuter à nouveau
+le programme d'installation de Windows 95.
+
+Cartes réseau Intel EtherExpress 16 et ordinateurs PCI
+---------------------------------------------------
+Il se peut que vous soyez confronté à des blocages du système ou des 
+problèmes d'initialisation si vous utilisez une carte réseau Intel 
+EtherExpress 16 dans un ordinateur PCI avec certaines cartes vidéo 
+Diamond Speed Star PCI. Le passage ci-dessous est extrait de la Base de
+données de support client Intel. Ces problèmes ne sont pas liés à Windows 95 
+et surviennent sur une grande variété de systèmes d'exploitation. 
+En général, si vous rencontrez d'autres problèmes avec votre carte 
+EtherExpress 16 dans un ordinateur PCI, essayez de remplacer la 
+carte avant de signaler le problème à Microsoft.
+
+Si vous utilisez une des cartes vidéo suivantes, contactez votre fournisseur 
+pour vous procurer une mise à jour du BIOS vidéo.
+
+- Carte vidéo Diamond Speed Star PCI avec BIOS version 1.01
+- Carte vidéo Diamond Viper PCI VGA
+- Carte vidéo Diamond Stealth avec le Bios v1.03
+
+IBM Thinkpad modèles 750x/755x/360x
+----------------------------------
+Si vous possédez un de ces modèles (y compris un sous-modèle tel que 
+C, CE, CX, CS et CSE), consultez le serveur télématique IBM ou le forum 
+THINKPAD sur CompuServe. Vous pourrez y télécharger une mise à jour 
+du BIOS et/ou des pilotes Mwave pour votre ordinateur avant d'installer 
+Windows 95.
+
+Si vous ne mettez pas à jour votre BIOS, vous rencontrerez peut-être des 
+problèmes si vous déplacez la souris au moment où l'ordinateur active ou 
+désactive le mode de mise en attente.
+
+View Software
+-------------
+Certains utilitaires pour Windows 3.1, tels que Long File Names, 
+doivent être mis à jour ou utilisés différemment sous Windows 95. Pour 
+obtenir une version de View Software qui puisse fonctionner sous
+Windows 95, appelez le (800) 536-8439 si vous êtes aux États-Unis;
+sinon, appelez le (415) 856-8439.
+
+
+
+GESTIONNAIRES DE MÉMOIRE
+========================
+
+Si QEMM est installé sur votre ordinateur, nous vous conseillons de le 
+supprimer de votre fichier Config.sys avant d'installer Windows 95. Vous 
+pourrez le replacer une fois l'installation terminée.
+
+Les gestionnaires de mémoire suivants sont incompatibles ou ne fonctionnent 
+pas correctement avec Windows 95. Il est conseillé de supprimer toute référence
+à ces gestionnaires dans vos fichiers Config.sys et Autoexec.bat, et de gérer
+plutôt la mémoire à l'aide de Emm386.exe et Himem.sys qui sont fournis avec 
+Windows 95.
+
+	Allemm4.sys - All Charge 386 Version 3.1
+	HPemm386.sys et HPEMM486.SYS
+	HPmm.sys - Gestionnaire de mémoire HP (doit être enlevé avant 
+	d'exécuter Install)
+	Gestionnaire de mémoire Iemm.sys 
+	Émulateur de mémoire paginée Intel(R) (Ilim386.sys)
+	Gestionnaire de mémoire Maximizer (Maximize.com)
+	Gestionnaire de mémoire NetRoom (Rm386.sys)
+	Gestionnaire de mémoire QMAPS Version 5.16
+	UMB PRO Version 1.07
+
+REMARQUE : La documentation de 386MAX recommande de ne pas affecter 
+au paramètre EXT une valeur inférieure à 64. Si vous lui affectez la 
+valeur 0, Install échouera.
+
+REMARQUE: Si vous supprimez la ligne contenant Rm386.sys de votre fichier 
+Config.sys, vous devrez peut-être installer Himem.sys, qui est livré avec
+Windows ou MS-DOS. À cet effet, vous ajouterez la ligne suivante à votre
+fichier Config.sys :
+
+        device=<chemin d'accès>\himem.sys                                       
+
+Le <chemin d'accès> est l'emplacement de vos fichiers Windows ou MS-DOS 
+(par exemple, C:\Windows).
+
+
+PROGRAMMES D'ANTÉMÉMOIRE DISQUE
+===============================
+
+Avant d'exécuter Install, il est recommandé de supprimer les programmes 
+d'antémémoire de disque développés par des tiers et de les remplacer par
+Smartdrv.exe, qui est livré avec Windows 95.
+
+Quand vous exécutez Windows 95, il n'est pas nécessaire d'utiliser un 
+utilitaire d'antémémoire de disque. Install supprimera la plupart de ces
+utilitaires à votre place.
+
+Si vous utilisez un des utilitaires d'antémémoire de disque suivants, vous 
+devez le supprimer. Dans la plupart des cas, Install s'en chargera à votre 
+place.
+
+  Utilitaire d'antémémoire de disque 386MAX (Qcache.exe) (à ne pas utiliser 
+  avec SmartDrive)
+  Utilitaire d'antémémoire de disque Cache.exe 
+  Utilitaire d'antémémoire de disque Cache.sys 
+  Utilitaire d'antémémoire de disque Flash (Flash.exe) (à ne pas utiliser
+  avec SmartDrive)
+  Utilitaire d'antémémoire de disque Hyperdisk (à ne pas utiliser avec
+  SmartDrive)
+  Utilitaire d'antémémoire de disque Icache.sys 
+  Utilitaire d'antémémoire de disque IBMcache.sys 
+  Utilitaire d'antémémoire de disque Mace (Mcache.sys)
+  Utilitaire d'antémémoire de disque Norton Speed Drive (SPEEDRV)
+  Norton Utilities Version 5.0 et 6.1 (DISKREET, NCACHE)
+  PC-Cache (utilitaire d'antémémoire de disque PC Tools) (doit être supprimé
+  avant d'exécuter Install)
+  Utilitaire d'antémémoire de disque PC-Kwik (Pc-kwik.exe)
+  PC_Kwik Disk Accelerator
+  PC-Kwik Version 1.59 (Pck.exe, Pskscrn.exe, Pckey.com)
+  Utilitaire d'antémémoire de disque PC Tools(TM) (Pc-cache.com)
+  Utilitaire d'antémémoire de disque Secretdisk II (Fast512.sys)
+  (à ne pas utiliser avec SmartDrive)
+  Utilitaire d'antémémoire de disque Super PC-Kwik (Superpck.exe)
+
+
+LOGICIELS ANTIVIRUS
+===================
+
+Certains programmes antivirus peuvent engendrer des problèmes lorsque 
+vous exécutez Install. Assurez-vous donc qu'aucun programme de ce type 
+n'est en cours d'exécution au moment où vous installez Windows 95. S'il 
+s'agit d'un programme résident (TSR), supprimez toute référence à celui-ci
+dans vos fichiers Autoexec.bat, Config.sys et Win.ini.
+
+Si votre BIOS intègre une protection contre les virus, vous devez la 
+désactiver avant d'exécuter Install. Utilisez à cet effet le programme de
+configuration CMOS de votre BIOS. Pour plus d'informations, reportez-vous 
+à la documentation qui accompagne votre ordinateur.
+
+Vous trouverez ci-dessous des informations relatives à certains programmes 
+antivirus.
+
+Central Point Anti-Virus Version 1.1 (Vsafe.com/Vsafe.sys)
+----------------------------------------------------------
+Pour enlever VSAFE, supprimez toutes les lignes contenant Vsafe.com
+ou Vsafe.sys de votre fichier Autoexec.bat. Par ailleurs, enlevez toutes 
+les références à Vsafe.com ou Vsafe.sys de la ligne RUN= de votre fichier
+Win.ini.
+
+Si vous effectuez une mise à jour vers Windows 95, vous devez aussi 
+supprimer tous les fichiers Chklist.ms créés par VSAFE avant d'exécuter 
+Install. Comme Windows utilise le disque pour les échanges avec la 
+mémoire vive, vous devez désactiver l'option de protection contre l'écriture 
+de Vsafe quand vous exécutez Windows 95.
+
+Si vous n'enlevez pas VSAFE avant d'installer Windows, vous recevrez des 
+avertissements concernant Command.com, Win.com et Krnl.386 pendant le 
+démarrage de Windows. Si vous voyez apparaître ces messages d'avertissement, 
+ignorez-les et choisissez l'option de mise à jour. Pour plus d'informations, 
+consultez la documentation de Central Point Anti-Virus.
+
+F-PROT Professional
+-------------------
+Il est impossible d'exécuter Install en même temps que F-PROT 
+Professional. Enlevez donc ce programme de vos fichiers Autoexec.bat 
+et Config.sys, puis recherchez la ligne suivante dans Win.ini :
+
+	load=wvirstop.exe
+
+Si vous voyez cette ligne, supprimez-la. Ensuite, redémarrez votre 
+ordinateur, puis exécutez de nouveau Install.
+
+Norton Anti-Virus(R) (toutes les versions)
+------------------------------------------
+Quelle que soit votre version de Norton Anti-Virus, vous devez l'enlever 
+avant d'exécuter Install. Il est recommandé de ne pas exécuter Norton
+Anti-Virus avec Windows 95.
+
+Pour enlever Norton Anti-Virus version 1.5 :
+
+1. Dans votre fichier Config.sys, supprimez la ligne suivante :
+
+	device=c:\nav\nav_.sys
+
+2. Dans votre fichier Autoexec.bat, supprimez C:\Nav de l'instruction PATH.
+
+Pour enlever les fonctions antivirus de Norton Desktop pour Windows
+version 3.0 :
+
+1. Dans votre fichier Config.sys, supprimez la ligne suivante :
+
+	device=c:\ndw\navtsr.exe
+
+2. Dans votre fichier Autoexec.bat, supprimez les lignes suivantes :
+
+	c:\ndw\image.exe
+	c:\ndw dans l'instruction PATH 
+
+3. Dans votre fichier System.ini, supprimez les lignes suivantes :
+
+	shell=c:\ndw\ndw.exe (dans la section [boot])
+	device=symevent (dans la section [386enh])
+
+4. Dans votre fichier Win.ini, supprimez la ligne suivante :
+
+	load=c:\ndw\navtsrw.exe
+
+
+UTILISATION DE PROGRAMMES ET DE PILOTES RESIDENTS (TSR)
+=======================================================
+
+APPEND (MS-DOS)
+---------------
+N'utilisez pas l'utilitaire APPEND avec Windows 95. Cet utilitaire 
+empêche Windows et les applications Windows de créer des noms WPF 
+(Well-Formed-Path, Chemin d'accès détaillé) valides pour les fichiers qu'ils 
+utilisent. Un nom WPF est le nom complet d'un fichier, contenant la lettre 
+de lecteur et la spécification de chemin complète, à partir du répertoire
+racine.)
+
+Autocon Version 2.0e, Bootcon Version 1.60 et Boot.sys
+--------------------------------------------------------
+Ces programmes vous permettent d'effectuer un choix parmi plusieurs 
+configurations possibles au moment où vous démarrez votre ordinateur. 
+Le programme Install de Windows 95 modifie seulement la première 
+section de vos fichiers Config.sys et Autoexec.bat. Vous devrez peut-être 
+modifier manuellement ces fichiers à la suite d'Install si vous souhaitez 
+utiliser ces programmes. Pour plus d'informations, reportez-vous à la 
+documentation qui les accompagne.
+
+Cubit Version 3.01
+------------------
+Quand vous utilisez Cubit avec Windows 95, ne compressez pas le répertoire 
+System de Windows ou tout fichier chargé à partir de votre fichier
+Config.sys. 
+
+Avant d'effectuer la mise à niveau vers Windows 95, assurez-vous que la
+version antérieure de Windows n'est pas compressée sur votre disque dur. 
+Vous pouvez recompresser ces fichiers après l'installation de Windows 95. 
+
+Doubledisk Version 2.5
+----------------------
+Il se peut que Windows 95 tente d'accéder à des lecteurs de disque 
+" fantômes " si vous l'utilisez avec Doubledisk. Les lecteurs fantômes 
+apparaissent quand vous utilisez Doubledisk pour créer un lecteur 
+compressé. Par exemple, si les lecteurs A, B et C existent sur votre
+ordinateur et si vous utilisez Doubledisk pour créer le lecteur F, 
+Windows 95 et MS-DOS reconnaissent les lecteurs D et E comme 
+valides, même s'ils n'existent pas réellement. Vous pouvez exécuter 
+l'utilitaire DRVOFF pour empêcher Windows de reconnaître les lecteurs 
+fantômes. Pour commander une copie de l'utilitaire DRVOFF, contactez 
+Vertisoft.
+
+Infinite Disk version 2.1
+-------------------------
+Infinite Disk version 2.1 ne fonctionne pas convenablement avec 
+Windows 95. Vous pouvez soit supprimer le logiciel Infinite Disk de
+votre ordinateur avant d'exécuter Install, soit contacter votre
+fournisseur de logiciel pour obtenir une version d'Infinite Disk
+compatible avec Windows 95.
+
+Pour supprimer Infinite Disk de votre ordinateur :
+1. Restaurez tous les fichiers compressés dans leur état d'origine.
+2. Supprimez les lignes suivantes de vos fichiers Config.sys et
+   Autoexec.bat :
+
+	iddrv.sys
+	idres.exe
+	protect /c
+
+3. Redémarrez votre ordinateur et exécutez de nouveau Install.
+
+NetWare(R) NetBIOS
+------------------
+Le programme résident (TSR) NetWare NetBIOS est incompatible avec 
+Windows 95 dans nombre de configurations. Le plus souvent, Install 
+détecte NetWare NetBIOS et enlève sa commande de lancement de votre 
+système. Toutefois, si NetWare NetBIOS n'est pas lancé à partir de votre 
+fichier Autoexec.bat (par exemple, s'il démarre à partir d'un fichier de 
+commandes), Install ne peut pas le détecter. Dans ce cas, vous devez 
+enlever NetWare NetBIOS manuellement. Windows 95 contient un 
+protocole compatible IPX/SPX que vous pouvez utiliser à la place de 
+NetBIOS. Pour plus d'informations sur la configuration de Windows 95 
+en vue de l'utilisation de ce protocole, voir le document en ligne 
+Networks.txt.
+
+Newspace Version 1.07
+---------------------
+Cet utilitaire de compression de disque est incompatible avec Windows 95.
+
+Norton Desktop pour Windows (Ep.exe)
+-----------------------------------
+Si le programme de récupération de données Erase Protect (Ep.exe) 
+est chargé à partir de votre fichier Autoexec.bat, vous devez le désactiver 
+lorsque vous installez Windows 95, en particulier si vous mettez à jour 
+une ancienne version de Windows. Comme Erase Protect essaie 
+d'enregistrer une copie de tous les fichiers supprimés, vous risquez de 
+manquer d'espace disque en exécutant Install.
+
+Il est recommandé d'exécuter Erase Protect avec un fichier d'échange 
+permanent. Si vous utilisez un fichier d'échange temporaire, vous devez 
+exclure de la protection contre l'effacement les fichiers qui portent une 
+extension .tmp ou .swp.
+
+Norton Disklock Versions 3.01 et 3.5
+------------------------------------
+Les versions 3.01 et 3.5 de Norton Disklock ne fonctionnent pas correctement 
+avec Windows 95. Supprimez le logiciel de votre ordinateur avant 
+d'exécuter Install, ou contactez le support technique Symantec pour 
+obtenir une version de Disklock compatible avec Windows 95.
+
+Pour plus d'informations sur la manière de supprimer Disklock de votre 
+ordinateur, reportez-vous à la documentation qui accompagne Norton 
+Disklock.
+
+PC Tools Deluxe(TM) Version 7.1 (DATAMON)
+-----------------------------------------
+Si vous chargez PC Tools DATAMON avec l'option \SENTRY+, il est 
+possible que l'installation de Windows 95 échoue faute d'espace disque.
+N'utilisez pas l'option \SENTRY+ en chargeant DATAMON.
+
+Ne chargez pas DATAMON après SmartDrive, car vous vous exposeriez à 
+une défaillance du système. Pour plus d'informations sur la manière de 
+décharger DATAMON, reportez-vous à la documentation PC Tools. 
+
+PC Tools Deluxe Version 6.0 (DESKTOP)
+-------------------------------------
+Si vous tentez de démarrer PC Tools à partir d'une invite MS-DOS sous 
+Windows, votre système risque de se bloquer ou de redémarrer
+automatiquement. 
+Ces problèmes se produisent également si vous utilisez des commandes MS-DOS 
+depuis une invite MS-DOS sous Windows.
+
+La version 7.0 de PC Tools est susceptible de remédier à ces problèmes. 
+Toutefois, ne chargez pas DESKTOP à partir d'une invite MS-DOS s'il a été 
+chargé avant le démarrage de Windows. Si vous le faites, votre système
+risque de subir une défaillance quand vous quittez Windows. Il est
+recommandé d'exécuter DESKTOP à partir de son PIF, qui est livré
+avec Windows 95.
+
+SUBST (MS-DOS)
+--------------
+Vous risquez de rencontrer des problèmes si SUBST est actif durant 
+l'installation de Windows 95, mais vous pouvez le rajouter en toute
+sécurité une fois l'installation terminée.
+
+UNDELETE
+--------
+Si vous exécutez UNDELETE avec l'option SENTRY, Install risque de 
+rencontrer des problèmes et, dans certains cas, l'installation peut
+s'arrêter faute d'espace disque. Il est recommandé de supprimer
+UNDELETE de vos fichiers Config.sys et Autoexec.bat avant d'exécuter
+Install.
+
+REMARQUE : L'option SENTRY crée un répertoire caché nommé Sentry. 
+Quand vous supprimez un fichier, UNDELETE le déplace depuis son 
+emplacement courant vers le répertoire Sentry. Avant de supprimer 
+UNDELETE de votre fichier Config.sys ou Autoexec.bat, vous devez libérer 
+de l'espace disque en utilisant la commande UNDELETE /PURGE sur tous 
+les lecteurs.
+
+Si vous n'enlevez pas UNDELETE, Install désactivera cette commande 
+à votre place.
+
+
+PROBLÈMES D'INSTALLATION POTENTIELS CONNUS
+==========================================
+
+L'installation de Windows 95 à partir des disquettes peut être très lente 
+sur un ordinateur 386 ou un ordinateur ne disposant que de 4 Mo de 
+mémoire. Pour accélérer l'installation :
+
+- Exécuter Install à partir de Windows 3.x ou Windows pour Workgroups. 
+  Évitez de l'exécuter à partir de MS-DOS.
+
+- Si vous exécutez un programme de compression de disque, tel que 
+  DriveSpace ou DoubleSpace, l'exécution d'Install peut être très lente. 
+  Copiez éventuellement les fichiers des disquettes vers un répertoire 
+  temporaire de votre disque dur, à partir duquel vous exécuterez Install. 
+  Pour copier les fichiers des disquettes 2 à 12, vous aurez besoin de la 
+  commande EXTRACT de la disquette 1 pour copier les fichiers 
+  Win95_xx.cab sur votre disque dur, puisqu'il s'agit de fichiers au 
+  nouveau format Microsoft DMF (Distribution Media Format). Les 
+  commandes MS-DOS normales, à savoir COPY et XCOPY, ne 
+  fonctionneront pas avec ces disquettes.
+
+  Pour copier un fichier .cab d'une disquette vers votre disque dur,
+  utilisez la commande suivante :
+
+	extract /c a:win95_xx.cab c:\<RépTemp>
+
+  où <RépTemp> est l'emplacement d'un répertoire temporaire sur votre 
+  disque dur.
+
+- Si, au cours de l'installation, vous remarquez que le témoin d'un lecteur 
+  de disquette vide clignote pendant une période prolongée et qu'Install 
+  est particulièrement lent, essayez d'insérer une disquette formatée dans 
+  le lecteur vide.
+
+- Si vous rencontrez des problèmes au cours de l'installation, notamment 
+  l'arrêt inattendu d'Install ou des messages d'erreur qui sont 
+  manifestement sans objet, essayez d'augmenter la taille de votre fichier 
+  d'échange permanent. Généralement, l'installation se déroulera 
+  normalement si la somme de la taille du fichier d'échange permanent 
+  et de la quantité de mémoire vive de votre ordinateur est au moins égale 
+  à 14 Mo. Une fois que vous avez modifié la taille de votre fichier
+  d'échange, essayez d'exécuter Install de nouveau.
+
+  REMARQUE : Si votre disque dur est compressé, vous devrez peut-être 
+             augmenter la taille de votre lecteur hôte avant de pouvoir
+	     accroître celle de votre fichier d'échange.
+
+
+
+MISES À JOUR DISPONIBLES SUR LE CD
+===================================
+
+Le support de stockage fourni avec votre ordinateur contient des mises 
+à jour que Microsoft a fourni aux constructeurs OEM pour la pré installation 
+en usine. Ces mises à jour ne sont pas nécessaires sur tous les ordinateurs, 
+elles concernent certains matériels seulement. Ces mises à jour sont fournies 
+pour votre convenance, au cas où vous devriez formater votre lecteur et 
+réinstaller Windows 95. Le répertoire \other\updates contient 4 sous-répertoires 
+pour des mises à jour spécifiques à certains matériels. Chacun de ces 
+sous-répertoires contient un fichier texte fournissant des conseils 
+d'installation.
+

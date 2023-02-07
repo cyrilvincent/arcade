@@ -1,0 +1,83 @@
+<html><body>
+<H3>Overview</H3>
+
+By default trs80gp comes up in Model 3 mode with a full 48K of memory
+and all supported hardware attached.  Command line arguments are used
+to select different models, hardware configurations and startup options.
+Run "trs80gp -?" or use the "Help &rarr; Command Line Options..." menu to get the
+latest information on them.
+
+<P>
+Programs can be run directly on the command line.  Doing so loads them
+much faster than reading from virtual <A HREF="Working_With_Cassettes.html#cass">cassette</A> files
+and without the hassle of writing them to a virtual <A HREF="Working_With_Floppies.html#floppy">disk</A>
+image.  Files in "DOS" format (.cmd) are run at the TRS-DOS prompt.
+Other machine language files and BASIC programs are run at the ROM BASIC
+<TT>READY</TT> prompt or at machine boot for Model 2 and 4P which don't have
+a ROM BASIC.
+
+<P>
+It may not be obvious that this direct running of programs is not the way
+the TRS-80 normally loads and executes programs.  Some programs may not work
+especially disk BASIC programs.  However it is very useful for program
+development and is otherwise extremely handy when it does work.
+
+<P>
+To give it a try, <A HREF="http://48k.ca/trs80gp.html">download the emulator</A> and
+also <A HREF="http://48k.ca/ball.zip">my bouncing ball demo program</A>.  You can run it
+directly from the .zip archive:
+
+<PRE>
+      trs80gp ball.zip
+</PRE>
+Which will prompt for which file to use.  Or specify the file inside the .zip
+archive directly like so:
+<PRE>
+      trs80gp ball.zip?ball.cas
+</PRE>
+
+Or you can extract the virtual cassette file yourself and run it:
+
+<PRE>
+      trs80gp ball.cas
+</PRE>
+
+You can load machine language programs in <TT>.cmd</TT>, <TT>.hex</TT>
+and <TT>.bds</TT> formats.  My <A HREF="http://48k.ca/zmac.html">Z-80 cross assembler zmac</A>
+produces all three formats and with <TT>.bds</TT> you get full source-level
+debugging (see Debug &rarr; Z-80 Debugger... and Debug &rarr; Source Code...).
+
+<P>
+It also can load BASIC programs in tokenized form or plain ASCII.
+
+<P>
+There's so much more!  But I'll leave it at that and spend the rest of
+this page more in "reference manual" mode.
+
+<UL>
+<LI><A HREF="Command_Line_Option_Summary.html#cli">Command Line Options</A>
+<LI><A HREF="Model_Selection.html#mdl">Model Selection</A>
+<LI><A HREF="Keyboard.html#keyboard">The Keyboard</A>
+<LI><A HREF="Light_Pen_and_Joystick.html#otherinp">Light Pen and Joystick</A>
+<LI><A HREF="Working_With_Floppies.html#floppy">Floppy Disks</A>
+<LI><A HREF="Working_With_Hard_Drives.html#hd">Hard Drives</A>
+<LI><A HREF="Working_With_Cassettes.html#cass">Cassette Tapes</A>
+<LI><A HREF="Working_With_Aculab_Floppy_Tapes.html#wafer">Aculab Floppy Tapes</A>
+<LI><A HREF="Sound.html#sound">Sound</A>
+<LI><A HREF="Memory.html#memory">Memory</A>
+<LI><A HREF="The_Printer.html#print">Printer</A>
+<LI><A HREF="Serial_(RS-232)_Ports.html#serial">Serial (RS-232) Ports</A>
+<LI><A HREF="Recording.html#record">Recording movies, pictures and audio.</A>
+<LI><A HREF="Turbo_Mode.html#turbo">Turbo Mode</A>
+<LI><A HREF="Display.html#display">Display</A>
+<LI><A HREF="Programming.html#prog">Programming</A>
+<LI><A HREF="FreHD_Emulation.html#frehd">FreHD Emulation</A>
+<LI><A HREF="DT-1_Terminal.html#dt1">DT-1 Terminal</A>
+<LI><A HREF="TRS-80_Videotex.html#videotex">TRS-80 Videotex</A>
+<LI><A HREF="Electric_Crayon.html#ec">Electric Crayon</A>
+<LI><A HREF="Linux_Notes.html#linux">Linux Notes</A>
+<LI><A HREF="MacOS_Notes.html#mac">MacOS Notes</A>
+</UL>
+
+
+</body></html>

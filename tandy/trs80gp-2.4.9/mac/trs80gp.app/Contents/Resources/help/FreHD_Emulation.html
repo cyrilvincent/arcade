@@ -1,0 +1,218 @@
+<html><body>
+<H3><A NAME="frehd">FreHD Emulation</A></H3>
+
+The FreHD is a modern-era TRS-80 Model 1, 3 and 4 peripheral which emulates
+a hard drive using image files on an SD card.  It was designed by
+Frédéric Vecoven in 2013 and is fully
+<A HREF="https://github.com/veco/FreHDv1">open source</A> but most users
+purchase kits or pre-assembled versions from
+<A HREF="http://frehd.com/">Ian Mavric</A>.  The open source hardware
+<A HREF="https://github.com/apuder/TRS-IO">TRS-IO</A> (for Model 1, 3 and 4)
+also operates in a hardware compatible fashion to the FreHD.
+
+<P>
+Since trs80gp can emulate a
+hard drive itself, FreHD emulation just means the other handy features of the
+FreHD such as the real time clock and access to the host file system for
+<A HREF="Working_With_Floppies.html#impexp">file import and export</A>.  It also means you can
+experience <A HREF="http://48k.ca/trsvid.html">TRS-80 video</A> and test
+your own FreHD files without needing a real TRS-80 or FreHD.
+
+<P>
+There are only two FreHD features not implemented.  The <TT>VHDUTIL</TT>
+cannot set the clock and you cannot mount floppy disk images through the
+FreHD using the special <TT>DSK/DTC</TT> device driver.
+
+<P>
+In most cases all that's needed is to copy the contents of a FreHD SD card
+to a directory (or simply mount the SD card on your PC) and run:
+
+<PRE>
+     trs80gp -m4 -frehd_dir frehd_file_directory
+</PRE>
+
+Or use the Hard Drive &rarr; FreHD &rarr; Directory... menu to
+accomplish the same thing through the GUI.
+
+<P>
+FreHD setups often come with patched versions of the TRS-80 Model 1, 3 or 4
+ROMs that will boot from the FreHD when the machine is powered on.  Normally
+they will only boot from floppy disk and require a special boot floppy that
+boots with the hard drive active.  Add the <TT>-frehd_patch</TT> option or
+use Hard Drive &rarr; FreHD &rarr; ROM Patches to have trs80gp act the same way.
+
+<P>
+When FreHD emulation is enabled trs80gp will try to connect the image files
+<TT>hard4-0</TT>, <TT>hard4-1</TT>, <TT>hard4-2</TT> and <TT>hard4-3</TT>
+in the root of the FreHD directory as hard drives 0 through 3 respectively.
+But it will only do it when the respective hard drive has no image connected.
+
+<P>
+The built-in FreHD loader block can be overriden with a custom 256 byte boot
+block using <TT>-frehd_load file.bin</TT> or the
+Hard Drive &rarr; FreHD &rarr; Loader... menu entry.
+FreHD's auto-boot normally tries to load the FreHD menu from a
+<TT>frehd.rom</TT> file in the FreHD directory.
+For convenience, trs80gp has a version of the FreHD menu program built-in and
+you can activate it with <TT>-frehd_menu</TT> or
+Hard Drive &rarr; FreHD &rarr; Built-in Menu.
+
+<H4>The FreHD Boot Sequence</H4>
+
+On a real FreHD changing the loader block requires a rebuild of the firmware.
+It is far easier to experiment with such changes on trs80gp.  However, the
+FreHD boot sequence is not widely understood so I will go over it in some
+detail to help anyone debugging or developing for the FreHD.
+
+<P>
+The Model 4P is the only TRS-80 in the 1,3,4 line that has hard drive boot
+code in its ROM.  A properly configured hard drive image will boot on the 4P
+without any FreHD auto-start patches to the 4P's 4K ROM.
+
+<P>
+The FreHD auto-start patches do not add direct hard-drive booting to the
+Model 1, 3 or 4.  Instead, just before trying to boot off the floppy,
+they load and execute 256 byte FreHD loader block
+into RAM location $5000.  If the space-bar is held the loader block will
+return to the ROM and the boot will proceed normally.
+Otherwise, the loader block will then try to load and
+execute the <TT>frehd.rom</TT> menu program from the SD card.  Despite it's
+suffix, the <TT>frehd.rom</TT> file is actually in <TT>/CMD</TT> format.
+
+<P>
+The FreHD menu program displays a nice splash screen which includes
+the version number of the FreHD firmware (as determined by querying the
+FreHD itself).  It then uses the FreHDs extended facilities to list
+available hard drive images to boot.  When the user selects one it
+instructs the FreHD to mount that hard drive image and proceeds to
+boot it.
+
+<P>
+Booting is mostly a matter of loading the second sector from the hard drive
+into $4300 (or $4200 on the Model 1) and executing it.  Before doing so
+the FreHD menu will write the current time and date into a few locations.
+Most TRS-80 operating systems will check for a valid date in these locations
+when they boot and not prompt for one.
+
+<P>
+Here is where I am not entirely clear on the exact operation for the FreHD
+menu program.  It will also try to make patches to the boot block and perhaps
+even the operating system itself.  I believe the intent of these patches it
+to allow certain TRS-80 operating system to accept the pre-initialized
+time and date.  There may well be other purposes.
+
+<H4>Boot Sequence in Depth</H4>
+<P>
+Note that you could write your own <TT>frehd.rom</TT> menu program.  And
+in the general sense it could do anything you want.  It could just be a
+game that auto-boots on the FreHD.  But if you aim to improve the menu
+or even make a different loader block then you'll want to
+<A HREF="https://github.com/veco/FreHDv1">consult the source code</A>.
+And continue reading as I have a few more details on how it all hangs
+together.
+
+<P>
+On the Model 3 a fairly short sequence of ROM BASIC commands can be used to mimic
+the auto-start ROM patch:
+
+<PRE>
+     POKE 16912,16
+     10 OUT 197,3
+     20 IF INP(196)<>254 THEN PRINT"No frehd":END
+     30 FORI=0TO255:POKE20480+I,INP(196):NEXT
+     RUN
+     SYSTEM
+     /20480
+</PRE>
+
+The same code will work on the Model 4, just change line 10 to output 4.
+And on the Model 1 don't do the initial <TT>POKE</TT> and change line 10
+to output 1.  The initial poke turns on <TT>EXTIO</TT> in the shadow register
+of port $EC.  Without that the FreHD will not see accesses to it.
+Note that the program will not work in Disk BASIC since the POKEs will
+scramble the extra code loaded by Disk BASIC and crash the program.
+
+<P>
+Notice that the loader block must start with $FE or it will be ignored by
+the auto-start patch.  That's so the auto-start patch has no effect when
+there is no FreHD attached.  It is actually bytes 1 through 255 of loader
+block that are put into RAM $5000 (20480).  The last byte at $50FF is the
+first byte which is $FE.  The initial <TT>OUT</TT> to port 197 ($C5) serves
+two purposes.  It tells the FreHD to start feeding byte 0 and on of the
+load block when reads come in on port 196 ($C4).  And it outputs that
+value as byte 2 of the loader block.  Since execution begins at byte 1
+the loader block must put an instruction there which effectively skips
+byte 2.  As such, loader blocks have byte 1 set to $FE which is the
+Z-80 <TT>CP A,n</TT> instruction.
+
+<P>
+This byte is used by the auto-start patch to indicate to the FreHD menu
+program what type of TRS-80 it is running on.  Hence the 1 for Model 2,
+3 for Model 3 and 4 for Model 4.  The Model 4P auto-start patch puts in a 5.
+
+<P>
+If the loader block cannot find a <TT>frehd.rom</TT> file on the SD card
+it will simply return and the TRS-80 will boot as normal.
+
+<P>
+Once the FreHD menu program is loaded it will load the model number from
+location $5001.  Initially it uses the model number to decide if it should
+use the ROM routine to read the keyboard (1, 2, 3, 4) or its own keyboard
+scanning for model 5, the 4P.  It then scans the root directory of the SD
+card looking for hard drive image files in
+<A HREF="http://www.trs-80emulators.com/hdv1-format/">HDV</A> format.
+A file must start with the bytes $56 $CB, have bit 0 of byte 8 set (indicating
+autoboot) and byte 11, the OS type must be one of:
+
+<PRE>
+     0 for LS-DOS 6.3.1
+     1 for LDOS 5.3.1
+     2 for CP/M
+     3 for Newdos 2.5
+     4 for Model I LDOS 5.3.1
+     5 for Model I NEWDOS 2.5
+</PRE>
+
+trs80gp's built-in FreHD menu also experimentally accepts 6 for MULTIDOS.
+Files meeting these criteria will be listed for the user to select but with
+one more condition for model number 5 (Model 4P).  An OS type of 1 or 3
+will only be listed if a 'modela.iii' is on the SD card.  That's because
+those are Model III OS's and will only work on the 4P if the ROM image
+has been loaded.
+
+<P>
+As mentioned before, once an image is selected it will be mounted as hard
+drive 0 and the menu will kick off the boot by loading sector 2 from the
+hard drive into $4300 (or $4200 if the model number is 1).
+
+<P>
+It will also write the current date and time into one or more memory locations
+depending on the model number and OS type.  This will make most TRS-80
+operating systems skip prompting of the date and time as they are already
+initalized.
+
+<P>
+Before executing the boot block the FreHD menu system may patch the hard
+drive boot block (or even, I think, some of the code loaded by the boot
+block) for unclear purposes.  I suspect it is to allow some of the
+OS's to accept an initialized date.  And maybe even patch the OS to load
+from the hard drive instead of diskette.
+The menu will also load the <TT>modeala.iii</TT>
+from the SD card on the Model 4P if the OS type is 1 or 3 so those Model 3
+operating systems will work on a 4P which does not have the necessary
+BASIC ROM to support them.
+
+<P>
+After that the FreHD system is out of the picture and the operating systems
+boots as it would off a regular hard drive.
+
+<P>
+The diligent programmer can make use of the various memory locations
+and I/O ports to set breakpoints to inspect the boot process at any point
+in its various steps.  Special FreHD operations such as opening and reading
+files on the SD card are recognized and displayed clearly in the
+<A HREF="Programming.html#trace">bus trace</A> allowing a high level view of what a
+program is doing with the FreHD.
+
+
+</body></html>

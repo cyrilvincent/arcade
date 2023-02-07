@@ -1,0 +1,3 @@
+http://www.win3x.org/win3board/viewtopic.php?t=491
+Win95 = FAT16
+Win95B = OSR2 = FAT32

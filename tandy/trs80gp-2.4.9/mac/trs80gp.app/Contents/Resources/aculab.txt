@@ -1,0 +1,46 @@
+The Aculab Floppy Tape has built-in firmware that can only be used in ROM BASIC.
+Typically this means starting with "trs80gp -m1 -dx -aft"
+It must be initialized by typing SYSTEM and /12345.  It will show a banner:
+
+   *** ACULAB FLOPPY TAPE OPERATING SYSTEM V3.4 ***
+READY
+>_
+
+Wafers can store up to 32 files and at most have 253 sectors of 256 bytes each.
+
+Commands are similar to disk BASIC but with @ prefixed:
+
+@NEW			initialize wafer (erasing all files)
+@LIST			show directory of wafer
+@SAVE"PROG/BAS"		save BASIC program
+@LOAD"PROG/BAS"		load BASIC program
+@RUN"PROG/BAS"		run BASIC program
+@MERGE"PROG/BAS"	merge BASIC program with the one in memory
+@KILL"PROG/BAS"		delete file
+
+@RUN"PROG/CIM"			run a machine language program
+@SAVE"PROG/CIM",5,32000		save 5*256 bytes starting at 32000
+@SAVE"PROG/CIM",5,32000,32500	as above but with entry address 32500
+
+To access drives 1 through 7 add ":d" to the file name:
+
+	@NEW":3"
+	@LIST":2"
+	@SAVE"PROG/BAS:4"
+
+Errors are always indicated with ?FD ERROR.
+Use ? PEEK(17396) to get the error code:
+
+1	$01	Tape write protected.
+2	$02	Drive not present.
+4	$04	Checksum error.
+8	$08	Parity error.
+16	$10	Sector not found.
+129	$81	Directory full, 32 files.
+130	$82	Tape full or insufficient tape to save file.
+132	$84	No file to save (BASIC file, no program in memory).
+136	$88	End-Of-File encountered (tried to @GET a record that does not exist).
+144	$90	Load file format error (tried to @LOAD or @RUN a data file or @RUN a
+		machine language file without an entry address).
+160	$A0	Insufficient memory (to load a BASIC file).
+192	$C0	File not found in directory (wrong file name).

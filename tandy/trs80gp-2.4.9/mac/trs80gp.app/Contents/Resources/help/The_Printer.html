@@ -1,0 +1,31 @@
+<html><body>
+<H3><A NAME="print">The Printer</A></H3>
+
+Many different types of printers could be attached to a TRS-80.  The
+emulator supports a simple text mode printer.  Use Printer &rarr; Printer...
+to see the current output in a "Printer Output" window.  There's a
+Save button to save the output to a file.
+<P>
+The printer window can automatically pop up when the emulator prints
+something.  Use Printer &rarr; Auto Popup to enable this feature.  You
+can also simulate a powered-down (or disconnected) printer with
+Printer &rarr; On.
+<P>
+Like the serial ports the printer port can be mapped to a TCP/IP connection.
+To listen for a connection use <TT>-p&nbsp;@port</TT> or the "TCP/IP Listen"
+option in the Printer &rarr; Connection... dialog.  To make a connection
+use <TT>-p&nbsp;host:port</TT> or "TCP/IP Connect" in the connection dialog.
+<P>
+To attach an emulated MX-70 printer use <TT>-p :mx70</TT> on the command line
+or use Printer &rarr; Connection... and select it from the drop-down.
+<P>
+The Electric Crayon colour display actually attaches via the printer port.
+The idea was to make it easy to program.  For example, a BASIC
+<TT>LPRINT"ERS"</TT> will erase the screen.  See the section on
+the <A HREF="Electric_Crayon.html#ec">Electric Crayon</A> for some details on how to use it.
+
+<P>
+In batch mode and TRS-80 printer output is written to a file
+called <TT>trs80-printer.txt</TT>.
+
+</body></html>

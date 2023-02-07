@@ -1,0 +1,566 @@
+<html><body>
+<H3><A NAME="prog">Programming</A></H3>
+
+Whether you're writing programs for the TRS-80 or simply wish to
+dissect existing programs trs80gp has much to offer.  As such this section
+is rather brief on details.  Please do get in touch with me if you have
+questions.
+
+<H4><A NAME="batch">Running Programs</A></H4>
+
+Normally on a TRS-80 programs are run either as <TT>/CMD</TT> files at the
+TRS-DOS prompt or loaded from cassette with CLOAD or SYSTEM commands.
+This is the best way to test programs you write but only needs to be done as a
+final test.  For development trs80gp will directly load programs from
+the command line or via the File &rarr; Run... menu or via drag and drop.
+This is largely similar to standard procedure but does has its differences.
+Existing TRS-80 games often work well when run directly but there's no guarantee.
+
+<H4><A NAME="batch">Batch Mode</A></H4>
+
+Activate batch mode using the <TT>-batch</TT> command line option.  In
+this mode many operations (most in the Record menu) will not prompt for
+a file name but will instead simple write the file to some fixed file name.
+This may seem odd but is very useful for testing your programs or trs80gp
+itself.  One way to use this is to have your program write status information
+to the printer (out $F8 will do on Model 3,4) and use the
+<A HREF="Programming.html#ee">emulator extensions</A> to make trs80gp exit.  You can then
+run it using:
+
+<PRE>
+     trs80gp -m4 -ee program.cmd
+</PRE>
+
+And it will go through its paces writing output to <TT>trs80-printer.txt</TT>.
+If trs80gp doesn't exit then you know your program went wrong.
+
+<P>
+In batch mode many of the menu entries switch to saving files without
+prompting.  In most cases those files are named in sequence starting
+with <TT>file-0.txt</TT>, <TT>file-1.txt</TT> and so on.  Those are
+represented by <TT>file-%d.txt</TT>.
+
+<CENTER>
+<TABLE>
+<TR><TH>Menu</TH><TH>Output file(s)</TH></TR>
+<TR><TD>Bus Use</TD><TD>bus-use-%d.txt</TD></TR>
+<TR><TD>Backtrace</TD><TD>backtrace-%d.txt</TD></TR>
+<TR><TD>Text VRAM</TD><TD>trs80-text-%d.bin</TD></TR>
+<TR><TD>Character Generator VRAM</TD><TD>trs80-char-%d.bin</TD></TR>
+<TR><TD>Graphics VRAM</TD><TD>trs80-graphics-%d.bin</TD></TR>
+<TR><TD>RAM</TD><TD>trs80-ram-%d.bin</TD></TR>
+<TR><TD>RAM16</TD><TD>trs80-ram16-%d.bin</TD></TR>
+<TR><TD>Expansion RAM</TD><TD>trs80-expram-%d.bin</TD></TR>
+<TR><TD>Cassette &rarr; Auto Save</TD><TD>trs80-cassette-%d.bin</TD></TR>
+<TR><TD>Audio</TD><TD>trs80-%d.wav</TD></TR>
+<TR><TD>MHz Audio</TD><TD>trs80-%d-mhz.wav</TD></TR>
+<TR><TD>Z-80 Profile</TD><TD>profile-%d.txt</TD></TR>
+<TR><TD>Trace</TD><TD>bus-trace-%d.txt</TD></TR>
+<TR><TD>Flash Video</TD><TD>trs80-%d.flv</TD></TR>
+<TR><TD>Video</TD><TD>trs80-%d.avi</TD></TR>
+<TR><TD>Animated GIF</TD><TD>trs80-%d.gif</TD></TR>
+<TR><TD>Screenshot</TD><TD>trs80-%d.gif</TD></TR>
+<TR><TD>Printer</TD><TD>trs80-printer.txt</TD></TR>
+<TR><TD>Diskette (on exit)</TD><TD>trs80-drive%d-%d.dsk</TD></TR>
+<TR><TD>Hard Drive</TD><TD>trs80-hard-disk-%d.dsk</TD></TR>
+<TR><TD>Wafer (on exit)</TD><TD>trs80-wafer%d-%d.tape</TD></TR>
+</TABLE>
+</CENTER>
+
+<P>
+It is worth re-iterating that <A HREF="Keyboard.html#autoin">automated input</A> options
+are tantamount to scripting control over the emulated TRS-80 and can be used
+to build up automated tests of your TRS-80 programs.
+
+
+<H4><A NAME="debug">Z-80 Debugger</A></H4>
+
+The Z-80 debugger may be activated at any time using Debug &rarr; Z-80 Debugger...
+It will also come up automatically when a breakpoint is hit.  Breakpoints can
+be set interactively in the debugger window in the section just below
+the "Go" button.  Breakpoints cover a range of addresses from the value
+in the left box to the one in the right which will be filled in semi-automatically
+to specify a single address.  Make sure to tick the checkbox next to the
+start address/label to enable the breakpoint.  PC breakpoints can also
+be set by double-clicking on the Disassembly sub-window.  
+
+<P>
+You may set up to 4 breakpoints of each type.  A "PC Breakpoint" is the
+traditional kind which is triggered whenever a program executes in the given
+address range.  Other types trigger whenever memory is read or written in
+the range or I/O is performed.  These types are useful to find when particular
+variables are changed or accessed and finding when devices are accessed.
+Breakpoints may also be set on the command
+line by the <TT>-b</TT>, <TT>-bm</TT>, <TT>-bio</TT> and related options.
+
+<P>
+A <TT>&gt;</TT> appears in the disassembly window to indicate the next
+instruction to execute and an asterisk (<TT>*</TT>) to show any active
+PC breakpoints.
+
+<P>
+Memory and I/O breakpoints (or if the Z-80 has set breakpoints using the
+the <A HREF="Programming.html#ee">Emulator Extensions</A>) show extra information in the
+debug window when they are triggered.
+The Disassembly sub-window will show a <TT>!</TT> to indicate
+the instruction that caused the fault and additional letter codes
+indicating what kind of fault or faults occurred.  The <TT>&gt;</TT> will
+point to the next instruction to execute as usual.
+
+<PRE>
+       R      Read protected memory
+       W      Write protected memory
+       E      Execute protected memory
+       S      Stack protected memory
+       I      Input protected I/O
+       O      Output protected I/O
+</PRE>
+
+Various sub-windows show the current Z-80 register contents with them displayed
+in red if they changed during the previous step.  All values are displayed
+in hexadecimal except for the T-state and cycles counters.
+There is also a view of
+the top of the stack and a T-state counter which can be changed as desired
+to measure intervals interactively.
+
+<P>
+The Step button moves execution forward a single instruction.  Step Over
+sets a breakpoint after the current instruction and resumes execution.  This
+is useful for <TT>CALL</TT>s to run quickly though a subroutine.  Grizzled
+Z-80 programmers know there's no guarantee a <TT>CALL</TT> will return right
+after itself so caveat emptor.  "Go" resumes execution until the next breakpoint
+or protection violation.  The "Emulator Extensions" checkbox may be
+turned off to disable protection checks.
+
+<P>
+When single stepping the display will turn gray to give an indication where
+the CRT beam is at that moment in execution.  There are also boxes in the
+lower left which give the CRT beam raster Y and X coordinates.  The debugger
+is still operational when the TRS-80 is running.  You can change registers and
+memory locations which will show a light-blue background to indicate you've
+frozen your view of them so you may change it.
+
+<P>
+Since the screen shows the contents of the previous frame and the drawing of
+the current frame you will not usually see an immediate change when writing
+to screen memory.  It only shows up when the CRT beam reads and draws it.
+The debugger memory view gives you the ability to see immediate changes to
+the various different RAM systems.  The defaults is "Z-80 Memory" which shows
+the Z-80's view of its 65536 memory locations.  In the Model 1 and 3 this
+will show the BASIC ROM in the first 12 or 14 K or memory, the keyboard
+matrix from $3800 to $3BFF, the video RAM from $3C00 to $3FFF and ordinary
+RAM from $4000 up to $FFFF or less if a value lower than 48 was given to
+the <TT>-mem</TT> command line option.  There may be no memory for some
+of the address space (e.g., $3000 .. $37FF on the Model I).  Such regions
+will display as <TT>~ff</TT> (or <TT>~00</TT> on the Model II) and cannot
+be changed.
+
+<P>
+You can also select just the RAM to focus on the 48K of memory.  But keep
+in mind these other views use their own addressing.  The RAM view starts at 0
+but that is seen (by the Model 1 and 3) as starting at $4000.  The amount
+and type of each varies depending on the Model but you'll typically see 
+Text VRAM for the usual character display, and Hires VRAM for the high
+resolution graphics option (which is usually only accessible to the Z-80
+through I/O ports).
+
+<P>
+You can search through memory by typing a string into the search box.
+The usual backslash escapes can be used for control and graphics characters:
+<TT>\n</TT>, <TT>\r</TT>, <TT>\t</TT> and <TT>\HH</TT> for any hexadecimal value.
+If the string starts with <TT>$</TT> then the rest is taken to be
+hexadecimal digits with spaces ignored.
+The <TT>&lt;</TT> and </TT>&gt;</TT> buttons cycle through the matches
+which are highlighted in the memory window below.
+
+<P>
+In a clunky way RAM can be changed.  The easiest approach to to select
+a memory byte and write a new hexadecimal value for it.  The emulator
+simply reads back the memory dump so you can also delete a line and
+enter any address followed by a colon and a series of space-separated
+hexadecimal bytes to change memory locations without having to look at
+them.
+
+<P>
+A few pseudo-memory regions are viewable but not changeable.  They
+are intended to give a partial view of the TRS-80 hardware state.
+
+<PRE>
+   Z-80 Device        What the Z-80 would return if an I/O were read.
+   Z-80 Port Writes   The last value written by the Z-80 to a port.
+   Z-80 Port Reads    The last value read from an I/O port by the Z-80.
+</PRE>
+
+<P>
+At the bottom of the window are line of check boxes and drop-downs to
+control <A HREF="Programming.html#trace">bus tracing</A> which is discussed later.
+
+<P>
+Most of the Z-80 register state shown is familiar to Z-80 programmers
+and can be directly altered by Z-80 programs.  The <TT>IFF1</TT> checkbox
+is checked when interrupts are enabled (by an <TT>EI</TT>) instruction
+and not when they are disabled by a <TT>DI</TT> instruction or entry into
+an interrupt routine.  Relatedly, <TT>IM</TT> shows the interrupt mode
+of the processor which pretty much has to be 1 for Model 1, 3 and 4 computers
+and 2 for the Model 2 line.  The <TT>I</TT> register is mostly only relevant
+in interrupt mode 2.
+
+<P>
+Other state is not directly accessible and pretty much just showing off how
+accurate trs80gp's Z-80 emulation is.
+
+<P>
+<TT>WZ</TT> is an internal temporary register used by Z-80 during various
+16 bit operations.  In an officially undocumented but reliable quirk of
+implementation bits 3 and 5 of this register are put into bits 3 and 5 of
+the flag register <TT>F</TT> whenever a <TT>BIT</TT> test is done on
+<TT>(HL))</TT>.  Early investigators of this called the register MEMPTR.
+Google "Z80 MEMPTR" or try
+<A HREF="https://gist.github.com/drhelius/8497817">this link</A>
+to learn more.
+
+<P>
+<TT>EXX</TT>, <TT>AFAF'</TT>, <TT>DEHL</TT> and <TT>DE'HL'</TT> show the
+state of internal flip-flops that select different banks of registers
+when <TT>EXX</TT>, <TT>EX AF,AF'</TT> and <TT>EX DE,HL</TT> instructions
+are executed.  Effectively they show the number of times modulo 2
+each instruction has been executed but the Z-80 program and trs80gp's
+Z-80 debugger show the currently active sets are you would expect.
+
+<P>
+The dropdown shows special Z-80 processor states and will spend 99.999% of
+its time in <TT>Normal</TT> mode.  The other modes are:
+
+<UL>
+<LI>IntrDis - An <TT>EI</TT> instruction was just executed so the Z-80 will
+not respond to a maskable interrupt until the next instruction finishes
+execution.
+<LI> Halt - The Z-80 has executed a <TT>HALT</TT> instruction and will not
+resume execution until an interrupt occurs.  During this time it will continue
+to fetch and ignore the opcode of the current instruction.
+<LI> Pfix, PfIy - The Z-80 is in the middle of a series of <TT>$DD</TT>
+and <TT>$FD</TT> bytes.  The Z-80 only pays attention to the last byte
+in such a series to determine if it has an <TT>IX</TT> ($DD) or
+<TT>IY</TT> ($FD) instruction.  The Z-80 cannot be interrupted during this
+processing but for practical reasons trs80gp breaks such sequences down to a
+progression of artificial <TT>pfix</TT> and <TT>pfiy</TT> instructions.
+<LI> PostIff2 - The Z-80 has just executed a <TT>LD A,I</TT> or <TT>LD A,R</TT>
+instruction which will read the wrong value of <TT>IFF2</TT> if an interrupt
+occurs at the same time as the instruction.  This is to emulate a Z-80 bug
+and, unlike the others, does not correspond to a real internal state latch.
+</UL>
+
+<P>
+The debugger also provides a sub-window for watching expressions.
+For each expression you choose what result to show: The memory byte or word
+at the calculated value, or the value itself (or the high/or low byte of the value)
+
+<P>
+Expressions use C-like syntax consisting of:
+<UL>
+<LI>Decimal constants (use <TT>$</TT> or <TT>0x</TT> to prefix hexadecimal constants)
+<LI>Parenthesis to control order of evaluation
+<LI>C number operations: <TT>+ - * / %</TT>
+<LI>C bit operations: <TT>! ~ &lt;&lt; >> & ^ |</TT>
+<LI>C comparisons: <TT>== != &lt; > &lt;= >=</TT>
+<LI>C logical and/or: <TT>&& ||</TT>
+<LI>Register names: e.g. <TT>A B C AF HL IX AF'</TT>
+<LI>Register flags: e.g. <TT>F.C, F.N</TT>
+<LI>Source code symbol values (if loaded)
+</UL>
+
+There is a special syntax for reading memory inside an expression.
+The expressions <TT>(expr)b</TT> and <TT>(expr)w</TT> return the
+value of the byte or word at the memory location inside the expression.
+
+<H4><A NAME="src">Source Level Debugging</A></H4>
+
+My <A HREF="http://48k.ca/zmac.html">zmac</A> cross assembler will output machine
+language programs in <TT>.bds</TT> format.  It is a text format so by
+looking at it and the zmac source code you can probably figure out how
+to generate it yourself.  But the important part here is that loading
+<TT>.bds</TT> files from the command line will enable source level
+debugging.
+
+<P>
+Use Debug &rarr; Source Code to bring up the source code that has been loaded.
+It will look a bit like an assembler listing file.  The current program
+location will be highlighted and follow the execution of the Z-80.
+
+<P>
+The format also defines symbolic labels so you can type these labels
+in to the breakpoint or register windows instead of having to look up
+the hexadecimal values yourself.  You can also use labels for the <TT>-b</TT>
+and other command line option to set breakpoints.
+
+<P>
+In certain situations you may want to have symbols available for a program
+but don't wish to load it into memory.  The <TT>-ls</TT> command line option
+and File &rarr; Load Symbols... menu entry are used to only load the symbols
+from a <TT>.bds</TT> file.  Doing so allows you to use symbolic names in
+the debugger but does not alter RAM contents in case the program is already
+underway.
+
+<H4><A NAME="diskview">Disk Viewer</A></H4>
+
+Under the Debug menu there is a Disk Viewer which allows you to browse
+through all the floppy and hard drive images inserted and examine their data.
+There is a search feature to look for strings or binary data.
+The usual backslash escapes can be used for control and graphics characters:
+<TT>\n</TT>, <TT>\r</TT>, <TT>\t</TT> and <TT>\HH</TT> for any hexadecimal value.
+If the string starts with <TT>$</TT> then the rest is taken to be
+hexadecimal digits with spaces ignored.
+The <TT>&lt;</TT> and <TT>&gt;</TT> buttons will cycle through all the matches.
+
+<P>
+Use the drop downs to select disk images, sides, tracks and sectors.  The
+sector dropdown presents both the physical and logical sector numbers.  The
+logical number is the value written on the disk and is what is used when
+we generically refer to reading or writing sector N.  The physical number
+is the relative position of the sector in the track.
+
+<H4><A NAME="devmap">Device Map</A></H4>
+
+The debug menu also features the somewhat experimental "Device Map" feature.
+It gives you a quick overview of the current mappings of Z-80 address and
+I/O space to RAM and devices.  In short, something like the typical memory
+map seen in programmer guides.  Do keep in mind that it shows the mapping
+when it was brought up.  If the program subsequently switches memory maps
+the window will not be updated.
+
+<P>
+The feature is experimental mainly because it doesn't yet display all
+the emulator implicitly knows about the address space.  For example,
+the Model I does not have any memory mapped from $3000 to $36FF but the
+map will display that as read-only RAM.  And it says nothing at all about
+the memory mapped printer and floppy disk devices accessible in the
+$3700 - $37FF range.  In other words, the map can be incomplete or misleading.
+But it seems more handy having it around even with its current shortcomings.
+
+<H4><A NAME="arec">Advanced Recording</A></H4>
+
+Sometimes examining memory in the debugger is too cumbersome.  The
+"Text VRAM", "Graphics VRAM", "RAM", "RAM16" and "Expansion RAM" entries
+in the "Record" menu will save those RAM areas to a file where you can
+use external tools to do a more thorough analysis.
+
+<P>
+The normal <A HREF="Recording.html#record">recording</A> options can assist debugging.
+It may be helpful to step through a video a frame at a time to see some
+graphical glitch in detail.  The "MHz Audio" option takes this to the
+extreme by recording audio output a sample rate equal to the speed of
+the Z-80.  In effect this lets you see exactly when the audio changes.
+
+<P>
+The Trace option is the most useful so I've dedicated
+<A HREF="Programming.html#trace">section to it</A>.  The other options attempt to
+self-document in their output.  Unlike the Trace option these other
+options don't record everything.  Typically they'll just track the
+PC values to keep overhead low.  When they do their final output
+the use whatever value is in RAM at the time for the disassembly.
+If the program changes you may seen confusing output.  This gets even
+worse if the memory mapping changes.
+
+<P>
+All these recording options can be activated and stopped at any time.
+It is useful and often desirable to start them when the program is
+stopped in the debugger and then stop them at the next breakpoint after
+an interesting subroutine or full step of a game simulation has run.
+
+<P>Record &rarr; Z-80 Profile tracks every instruction executed and shows you a list
+of those instructions, the number of times each instruction was executed
+and the total T-States spent on each instruction.  It is intended to
+help measure where your program spends its time to be used as a guide
+for optimization.  It can also be used to simply track what a program
+as done during an interval.  However, "Bus Use" is better for that task
+and <A HREF="Programming.html#trace">Trace</A> will show every instruction in order.
+
+<P>Record &rarr; Backtrace show the last 65536 instructions executed.  In theory
+you can use this to respond to a crash.  But practically speaking that many
+instructions is at most a tenth of a second so you're not likely to be quick
+enough to catch it.
+
+<P>Record &rarr; Bus Use tracks the execution of a program.  The output is
+much like a disassembler but with markup indicating how memory was accessed:
+read, written, executed, jumped to, called and so on.  The disassembly tends
+to be better than a static disassembly since it uses the Z-80's execution
+path to point out what is code and what is data.
+
+<P>The disassembly will be entirely commented out except for any areas where
+a program was loaded by the command line (or using File &rarr; Load/Run) into
+memory.  The intent here is to distinguish the loaded program from the ROM
+or operating system routines it uses.  If the program is sufficiently put
+through its paces the result should be a good disassembly that can be
+assembled to produce the original code.  Unlike the other trace options any
+data uncommented in the disassembly is based on the original data loaded so
+it won't be fooled by simple self-modifying code.  However, this is a problem
+if the program relocates itself.  In which case you'll have to get a relocated
+version of the program loaded.  At least "Bus Use" will help understand the
+relocator code.
+
+<H4><A NAME="ee">Emulator Extensions</A></H4>
+
+These are enabled by the <TT>-ee</TT> command line option.  They can be
+turned off using the "Emulator Extensions" checkbox in the Z-80 Debugger.
+A Z-80 program accesses them by sending a function code to I/O port $47.
+Here is a brief overview:
+
+<PRE>
+     0     Set bus permissions for address HL to DE to B
+     2     Trigger bus fault B
+     3     Disable (B=0) or enable (B=1) bus permissions
+     4     Trigger execute fault (i.e., drop into the debugger)
+     5     Reset (B=0) or get (B=1, into DEHL) T-state counter
+     6     Control recording
+              B=$41 - toggle audio recording
+              B=$4D - toggle Mhz Audio recording
+              B=$47 - toggle animated GIF recording
+              B=$46 - toggle Flash video recording
+              B=$56 - toggle video recording
+              B=$53 - take screenshot
+              B=$47 - take cleanshot
+   64..127 Set parameter (see below)
+     128   exit emulator with return code BC
+     255   set carry flag (to detect if extensions active)
+</PRE>
+
+Function 5 allows for automated profiling of Z-80 code.  Function 128
+is typically used to end a test in batch mode.  The bus permissions are
+very helpful in tracking down nasty bugs.  For example, you can set your
+code section to execute-only.  The emulator will trap into the debugger
+the instant something tries to overwrite over your code.  Or even read it.
+Another useful technique is turning off stack permissions at the bottom
+and top of your stack to detect stack overflow or underflow.
+
+<P>For function 0 the lower 7 bits in B are set to indicate what Z-80
+operation is allowed on that memory location.  Or for the first 256
+addresses what I/O operation is allowed on a port.  Those bits are:
+
+<PRE>
+   Mask    Operation  Z-80 Debugger letter indicator
+     1     Read       R
+     2     Write      W
+     4     Execute    E
+     8     Stack      S
+     16    In         I
+     32    Out        O
+     64    DMA        D
+</PRE>
+
+<P>Stack permission is required for CALL, RET, PUSH, POP, RETI and RETN.
+
+<P>For BASIC where <TT>OUT</TT> is readily available but controller register
+contents is difficult there a way to trigger any function with just OUT
+commands.
+
+<P>
+<TT>OUT 71,32+n</TT> will trigger function <TT>n</TT> using whatever parameters
+were previously set.  A parameter is set by first doing an <TT>OUT 71,64+p</TT>
+where <TT>p</TT> is the parameter number and then doing <TT>OUT 71,x</TT> to
+set the value.  If a command requires a register then the parameter triggered
+version of the command will read parameter 2 for register B, parameter 3 for
+register C, parameter 8 for H and so on.  Or put another way, you select
+the parameter for register R by sending the ascii value of the register letter.
+
+<P>
+For example, this will toggle animated GIF recording:
+<PRE>
+    OUT 71,66:OUT 71,71:OUT 71,32+6
+</PRE>
+
+<H4><A NAME="trace">Bus Trace</A></H4>
+
+The Record &rarr; Trace feature is a very powerful and comprehensive tool for
+debugging Z-80 programs and the emulator itself.  It can log every
+instruction executed, memory access, interrupt and I/O port access the
+Z-80 or any DMA device does.  It also places markers in the output file
+to indicate when a frame has ended and when one second of execution has
+finished.  It can be activated a program start with the <TT>-trace</TT>
+option.  The full log is recorded in the output file.  The last frame
+or two of the log can be viewed using Debug &rarr; Trace Log...
+
+<P>
+The output can be voluminous.  You'll want to use breakpoints to
+turn tracing on and off for as short a period as possible.  The "Tracing"
+checkpoint in the Z-80 Debugger is a convenient shortcut.  And there
+are additional check boxes to enable or disable tracing for Z-80
+instruction, I/O accesses, memory accesses and interrupts.
+
+<P>
+For even finer control I/O logging can be enabled on a per-device basis.
+This is handled by the device drop-down.  The interface is awkward.
+As you select each device in the drop-down the checkmark to the right
+changes to indicate if that device is being logged.  But you still must
+check the I/O box to enable I/O logging.  To make it more confusing but
+usable the best course is to turn I/O off, select the device you're
+interested in, enable it and then turn I/O back on.  If you turn I/O
+on first it will enable all devices by default.
+
+<P>
+Yes, it's bad but at least it gives some way to target particular devices.
+Obviously these controls should be in some other window but the debugger
+happened to be handy at the time.  trs80gp wasn't built in a day.
+
+<P>
+The actual logging looks something like this:
+
+<PRE>
+   8033317 @3018 z ex       jp     $35c2
+   8033327 @35c2 z ex       push   af
+       +11 @35c2 z wr _ffb4 00 ram[ffb4]
+       +11 @35c2 z wr _ffb3 44 ram[ffb3]
+   8033338 @35c3 z ex       in     a,($e0)
+       +11 @35c3 z in _e0 fb
+   8033349 @35c5 z ex       rra
+   8033353 @35c6 z ex       jp     nc,$3365
+   8033363 @35c9 z ex       rra
+   8033367 @35ca z ex       jp     nc,$3369
+   8033377 @35cd z ex       push   bc
+       +11 @35cd z wr _ffb2 38 ram[ffb2]
+       +11 @35cd z wr _ffb1 80 ram[ffb1]
+</PRE>
+
+The first column is the T-State counter.  The second is the PC of the Z-80
+when the operation occurred.  Next a letter code shows the device responsible
+('z' for Z-80 and 'd' for DMA chip).  The type of access follows.  Most
+are "ex" for instruction execution with a disassembly of the instruction
+following.  But for reads, writes, ins and outs (rd, wr, in, ot) the
+memory or I/O address is shown followed by the value read or written.
+Other possible operations are:
+
+<PRE>
+     ht     Fetch during Z-80 halt
+     i0     Interrupt mode 0 bus read
+     i1     Interrupt mode 1 bus read
+     i2     Interrupt mode 2 bus read
+     ni     NMI (non-maskable interrupt) bus read
+</PRE>
+
+After any access there may be a description of what the value means to that
+device and possibly the internal state of the device.  A good example is
+the CRTC video controller chip used in the Model 2 and 4.  An I/O write (out) to
+its address register will be annotated with the name of the register
+selected.  An I/O write will show the name of the register changed and
+its current value.  Some devices are very simple in that any byte read
+or written can only have one meaning.  But for the CRTC a write to a register
+depends on which register was previously selected.  Without the annotation
+you would have to search backwards for the last register selection.  And
+if the register is 16 bits wide you'd also have to look back for the last
+time that other 8 bits were changed.  This is tedious and may not even appear
+in the bus trace you've made.
+
+<P>
+Not all devices provide annotations.  If they do then you can bet they were
+giving us trouble in developing the emulator.  Most of the Model 2 devices
+have annotations.
+
+<P>
+By the way, the underscore and @ signs in front of addresses are intentional
+and useful.  vi (and maybe other editors) make it easy to search on words.
+So starting a search on _ffb2 will only find other references to that
+memory location being read or written.  But searching the word ffb2 will
+find instructions that reference the address.  Or you can search for @ffb2
+explicitly to restrict your search to only instructions executed at that
+address.
+
+</body></html>

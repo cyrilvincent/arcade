@@ -1,0 +1,22 @@
+<html><body>
+<H3><A NAME="otherinp">Light Pen and Joystick</A></H3>
+
+The Windows version supports joystick input on the Model 1, 3 and 4 and
+light pen input on the Model 1.  The light pen must be enabled with the
+<TT>-lp</TT> option; the joystick can be disabled with the <TT>-jx</TT> option.
+
+<P>
+An Alpha products joystick is emulated using any of the standard joysticks
+attached to your computer.  The actual joystick was a bus hog that would
+respond to reads on practically any I/O port.  Most programs use port $00, $13
+or $F7 so only those are mapped by trs80gp.
+
+<P>
+With the light pen enabled pressing the mouse button down will simulate the
+light pen making contact with that position on screen.  Releasing the mouse
+button acts as if the pen were removed from the screen.  Very few programs
+were found that have light pen support so please report any problems you
+see.  We'd be very much interested to run some test programs if you have
+an original light pen.
+
+</body></html>

@@ -1,0 +1,5 @@
+DEVICE=HIMEM.SYS
+BUFFERS=20
+FILES=60
+device=display.sys con=(ega,,1)
+country=033,850,country.sys

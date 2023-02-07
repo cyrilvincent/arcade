@@ -1,0 +1,25 @@
+<html><body>
+<H3><A NAME="memory">Memory</A></H3>
+
+The <TT>-mem</TT> option is used to set the main memory size in kilobytes.
+It defaults to the maximum standard RAM for the model.
+On Model 16 and 6000 systems
+there is <TT>-mem16</TT> for the 68000 processor's available memory.  It
+defaults to 1 MB as earlier versions of Xenix would crash if more memory
+was available.  In the Record menu and debugger memory is referred to as
+RAM and <TT>ram[]</TT> in <A HREF="Programming.html#trace">Bus Trace</A> output.
+<P>
+The standard maximum RAM on a Model 4 was 128 KB.  HyperMEM expands
+that up to a megabyte with <TT>-mem hyper:1024</TT> and is represented
+as a larger RAM in the debugger, recording and trace.  For memory
+sizes greater than 128 K hyperMEM is assumed.  <TT>-mem 256</TT> is
+equivalent to <TT>-mem hyper:256</TT> on a Model 4.
+<P>
+The Model 4 also features two expansion RAMs, <TT>-mem super:1024</TT>
+and <TT>-mem mega:16384</TT>.  These don't extend main memory but provide
+a new tranche of banked RAM.  The Record menu and the debugger refer
+to them as "Expansion RAM" and accesses to it show up as <TT>expram[]</TT>
+in the trace log.
+
+
+</body></html>

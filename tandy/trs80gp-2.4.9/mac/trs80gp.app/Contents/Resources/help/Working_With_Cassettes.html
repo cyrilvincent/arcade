@@ -1,0 +1,34 @@
+<html><body>
+<H3><A NAME="cass">Working With Cassettes</A></H3>
+
+Cassette tape image files in the standard <TT>.cas</TT> format can be
+inserted into the virtual cassette drive with the Cassette &rarr; Insert...
+menu or the <TT>-c</TT> command line option.  Upon insertion trs80gp
+adds entries to the Cassette menu corresponding to each cassette file
+found in the <TT>.cas</TT> image.  Normally there is only one file.
+You can "fast forward" or "rewind" the cassette by selecting the
+menu entry for a file.  Each menu entry gives information on each
+cassette file: counter position, 
+format, name (if any), baud rate and length in seconds.
+
+<P>
+When the TRS-80 goes to read the cassette (usually as the result of
+a <TT>CLOAD</TT> or <TT>SYSTEM</TT> command) the emulator will send the
+data to the TRS-80 and go into turbo mode to load the data as quickly as
+possible.  Cassette &rarr; Auto Turbo can be used to disable this feature.
+
+<P>
+When the TRS-80 saves a cassette file (e.g., a <TT>CSAVE"A"</TT> command
+is entered) the emulator switches to turbo mode.  It will prompt you for
+a PC file in which to save the <TT>.cas</TT> image when the save is done.
+If you'd rather just hear the cassette send to the speaker turn off
+Cassette &rarr; Auto Save.
+
+<P>
+When loading a cassette file the emulator displays the cassette
+counter in the title bar as <TT>Cr|123|</TT>.  When writing the
+title bar will show <TT>Cw|001|</TT>.  If the counter stops when reading
+then the emulator has reached the end of the inserted cassette tape image.
+If the TRS-80 hasn't finished loading then the load has likely failed.
+
+</body></html>

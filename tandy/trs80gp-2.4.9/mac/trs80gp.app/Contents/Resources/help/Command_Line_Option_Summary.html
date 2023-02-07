@@ -1,0 +1,247 @@
+<html><body>
+<H3><A NAME="cli">Command Line Option Summary</A></H3>
+<CENTER>
+
+<!-- Reminder: use "perl cmdline.pl x" to generate the options TABLE -->
+<!-- Better: !*perl cmdline.pl x -->
+
+<TABLE>
+<TR><TH>Option</TH><TH>Effect</TH></TR>
+<TR><TD></TD></TR>
+<TR><TH ALIGN=CENTER COLSPAN=2>Hardware Selection</TH></TR>
+<TR><TD></TD></TR>
+<TR><TD>-m1</TD><TD>Emulate Model I</TD></TR>
+<TR><TD>-mj</TD><TD>Emulate Japanese Model I</TD></TR>
+<TR><TD>-m2</TD><TD>Emulate Model II</TD></TR>
+<TR><TD>-m3</TD><TD>Emulate Model III (default)</TD></TR>
+<TR><TD>-m3n</TD><TD>Emulate Norcom Model III clone that fit in a Model I case</TD></TR>
+<TR><TD>-m4</TD><TD>Emulate Model 4 (same as -m4a)</TD></TR>
+<TR><TD>-m4a</TD><TD>Emulate Model 4 with 2 wait states per instruction</TD></TR>
+<TR><TD>-m4b</TD><TD>Emulate Model 4 with 1 wait state per instruction</TD></TR>
+<TR><TD>-m4c</TD><TD>Emulate Model 4 with no wait states per instruction</TD></TR>
+<TR><TD>-m4ga</TD><TD>Emulate Model 4 Gate Array</TD></TR>
+<TR><TD>-m4p</TD><TD>Emulate Model 4P</TD></TR>
+<TR><TD>-m4d</TD><TD>Emulate Model 4D</TD></TR>
+<TR><TD>-m4ss</TD><TD>Emulate Model 4 Student Station</TD></TR>
+<TR><TD>-m12</TD><TD>Emulate Model 12</TD></TR>
+<TR><TD>-m16</TD><TD>Emulate Model 16</TD></TR>
+<TR><TD>-m6000</TD><TD>Emulate Model 6000</TD></TR>
+<TR><TD>-mc10</TD><TD>Emulate Micro Color Computer Model MC-10</TD></TR>
+<TR><TD>-mdt1</TD><TD>Emulate DT-1 Terminal</TD></TR>
+<TR><TD>-mv</TD><TD>Emulate Videotex Terminal</TD></TR>
+<TR><TD>-mec</TD><TD>Emulate Electric Crayon</TD></TR>
+<TR><TD>-mx70</TD><TD>Act like MX-70 Printer</TD></TR>
+<TR><TD></TD></TR>
+<TR><TD>-l1</TD><TD>Run Level I BASIC ROM (Model I or III)</TD></TR>
+<TR><TD>-l2</TD><TD>Run Level II BASIC ROM (default) (Model I or III)</TD></TR>
+<TR><TD>-rN</TD><TD>Use ROM revision N (-r0, -r1, -r2, ...)</TD></TR>
+<TR><TD>-nlc</TD><TD>No lowercase for Model I</TD></TR>
+<TR><TD>-nld</TD><TD>Do not load Model I lowercase driver from cassette</TD></TR>
+<TR><TD>-nsc</TD><TD>Do not try to set the clock for the boot OS</TD></TR>
+<TR><TD>-alt</TD><TD>Use alternate character set</TD></TR>
+<TR><TD>-charrom file</TD><TD>Use character generator ROM from file</TD></TR>
+<TR><TD>-50</TD><TD>Set frame rate to 50 Hz</TD></TR>
+<TR><TD>-gX</TD><TD>Hires graphics: -g0 none, -gt Tandy, -gg Grafyx, -gc Grafyx clone</TD></TR>
+<TR><TD></TD><TD>-gtp for Tandy with fixed PROMs for Model 2,3,12,16,6000.</TD></TR>
+<TR><TD></TD><TD>-gl for Model 1 Lowe Electronics 18</TD></TR>
+<TR><TD>-ddTYPE</TD><TD>Select Model I floppy doubler: -ddx none, -ddp Percom,</TD></TR>
+<TR><TD></TD><TD>-ddr Radio Shack, -ddrp RS+Percom, -ddd detect at boot)</TD></TR>
+<TR><TD>-dx</TD><TD>Disable floppy disk controller (boot into ROM BASIC).</TD></TR>
+<TR><TD>-dNss</TD><TD>Set drive N (0,1,2,3) single-sided only.</TD></TR>
+<TR><TD>-dNds</TD><TD>Set drive N (0,1,2,3) double-sided only.</TD></TR>
+<TR><TD>-dNas</TD><TD>Set drive N (0,1,2,3) to automatically act as single or double-sided.</TD></TR>
+<TR><TD></TD></TR>
+<TR><TD>-hx</TD><TD>Disable hard drive controller</TD></TR>
+<TR><TD>-mem n</TD><TD>Emulate n KB of RAM</TD></TR>
+<TR><TD>-mem type:n</TD><TD>Emulate n KB of hyper/super/mega expansion RAM.</TD></TR>
+<TR><TD>-mem16 n</TD><TD>Emulate n KB of 68000 RAM</TD></TR>
+<TR><TD>-memgap16 b n</TD><TD>Unmap an n KB gap in 68000 RAM starting at KB b</TD></TR>
+<TR><TD>-mmu16 bits</TD><TD>Set number of extension bits in 68000 MMU (default 3)</TD></TR>
+<TR><TD>-rom file</TD><TD>Use ROM image from file</TD></TR>
+<TR><TD>-rom1 file</TD><TD>Map ROM image from file to $3000 (Model 1 only)</TD></TR>
+<TR><TD>-aft</TD><TD>Aculab floppy tape (Model I only)</TD></TR>
+<TR><TD>-80-grafix</TD><TD>80-Grafix hires character generator (Model I only)</TD></TR>
+<TR><TD>-80-grafix+</TD><TD>80-Grafix+ hires character generator (Model I only)</TD></TR>
+<TR><TD>-pcg-80</TD><TD>PCG-80 hires character generator (Model I only)</TD></TR>
+<TR><TD>-80-grafix3</TD><TD>80-Grafix3 hires character generator (Model III only)</TD></TR>
+<TR><TD>-omikron</TD><TD>Omikron Mapper for Model I (for Omikron CP/M)</TD></TR>
+<TR><TD>-omikron-a</TD><TD>Omikron Mapper using version A ROM</TD></TR>
+<TR><TD></TD></TR>
+<TR><TH ALIGN=CENTER COLSPAN=2>Program/Media Selection</TH></TR>
+<TR><TD></TD></TR>
+<TR><TD>-c file.cas</TD><TD>Insert cassette file.cas</TD></TR>
+<TR><TD>-w file.tape</TD><TD>Insert floppy tape wafer file.tape into next free drive</TD></TR>
+<TR><TD>-dN file.dsk</TD><TD>Insert disk into drive N (0,1,2,3)</TD></TR>
+<TR><TD>-d file.dsk</TD><TD>Insert disk into next free drive</TD></TR>
+<TR><TD>-d dmk</TD><TD>Insert unformatted disk into next free drive (.dmk format)</TD></TR>
+<TR><TD></TD><TD>(add -ds for double-sided and #N for tracks)</TD></TR>
+<TR><TD>-d imd</TD><TD>Insert unformatted disk into next free drive (.imd format)</TD></TR>
+<TR><TD>-d :name</TD><TD>Insert internal diskette ":name" into next free drive</TD></TR>
+<TR><TD>-td</TD><TD>Boot TRS-DOS (default)</TD></TR>
+<TR><TD>-ld</TD><TD>Boot LDOS or LS-DOS</TD></TR>
+<TR><TD>-d0 -</TD><TD>Don't insert TRS-DOS disk</TD></TR>
+<TR><TD>-h file.hdv</TD><TD>Attach hard drive to next free slot</TD></TR>
+<TR><TD>-hN file.hdv</TD><TD>Attach hard drive to slot N</TD></TR>
+<TR><TD>-cs -csx</TD><TD>Enable/disable cassette auto save</TD></TR>
+<TR><TD>file.dsk</TD><TD>Insert disk into next free drive (also .dmk, .imd)</TD></TR>
+<TR><TD>file.tape</TD><TD>Insert floppy tape wafer into next free drive</TD></TR>
+<TR><TD>:name</TD><TD>Insert internal diskette or wafer into next free drive</TD></TR>
+<TR><TD>file</TD><TD>One or more files to load and execute after auto-boot</TD></TR>
+<TR><TD></TD><TD>.cmd files are run from dos prompt</TD></TR>
+<TR><TD></TD><TD>.cas, .bas and .bds files are loaded into ROM BASIC</TD></TR>
+<TR><TD></TD></TR>
+<TR><TH ALIGN=CENTER COLSPAN=2>Serial Port (RS-232) Options</TH></TR>
+<TR><TD></TD></TR>
+<TR><TD>-r host:port</TD><TD>Connect serial port to TCP/IP host, port endpoint.</TD></TR>
+<TR><TD>-r @port</TD><TD>Listen for TCP/IP connections on port for serial line.</TD></TR>
+<TR><TD></TD><TD>(also -rB for second and -rA for first serial port)</TD></TR>
+<TR><TD>-r :mouse</TD><TD>Emulate 2 button mouse on serial port</TD></TR>
+<TR><TD>-r :mouse3</TD><TD>Emulate 3 button mouse on serial port</TD></TR>
+<TR><TD>-r :dt1</TD><TD>Run DT-1 emulator attached to serial port.</TD></TR>
+<TR><TD>-r :v</TD><TD>Run Videotex emulator attached to serial port.</TD></TR>
+<TR><TD></TD></TR>
+<TR><TH ALIGN=CENTER COLSPAN=2>Printer Port Options</TH></TR>
+<TR><TD></TD></TR>
+<TR><TD>-p host:port</TD><TD>Connect printer port to TCP/IP host, port endpoint.</TD></TR>
+<TR><TD>-p @port</TD><TD>Listen for TCP/IP connections on port for printer.</TD></TR>
+<TR><TD>-p :mx70</TD><TD>Run MX-70 emulator attached to printer port.</TD></TR>
+<TR><TD>-p :ec</TD><TD>Run Electric Crayon emulator attached to printer port.</TD></TR>
+<TR><TD>-poff</TD><TD>Printer appears powered off</TD></TR>
+<TR><TD></TD></TR>
+<TR><TH ALIGN=CENTER COLSPAN=2>View Options</TH></TR>
+<TR><TD></TD></TR>
+<TR><TD>-va</TD><TD>Authentic display (default)</TD></TR>
+<TR><TD>-vs</TD><TD>Sharp display</TD></TR>
+<TR><TD>-vi</TD><TD>Sharp display but only allows integer scaling</TD></TR>
+<TR><TD>-vh</TD><TD>Cheap display</TD></TR>
+<TR><TD>-vN</TD><TD>Scale cheap or sharp display up by N times</TD></TR>
+<TR><TD>-vf</TD><TD>Start in full-screen mode (use Alt+Enter to go windowed)</TD></TR>
+<TR><TD>-vc #RRGGBB</TD><TD>Set display colour to 24 bit colour value ("-vc - " for default)</TD></TR>
+<TR><TD>-vd #RRGGBB</TD><TD>Set beam conflict colour ("-vd -" for default)</TD></TR>
+<TR><TD>-vb #RRGGBB</TD><TD>Set border colour ("-vb -" for default)</TD></TR>
+<TR><TD>-win WxH</TD><TD>Set window width and height</TD></TR>
+<TR><TD>-win full</TD><TD>Start in full-screen mode (use Alt+Enter to go windowed)</TD></TR>
+<TR><TD>-bd</TD><TD>Turn beam debugging on</TD></TR>
+<TR><TD>-na</TD><TD>Turn off authentic display</TD></TR>
+<TR><TD>-wtfs N</TD><TD>Update window title only every N frames</TD></TR>
+<TR><TD></TD></TR>
+<TR><TH ALIGN=CENTER COLSPAN=2>Sound Options</TH></TR>
+<TR><TD></TD></TR>
+<TR><TD>-s hardware</TD><TD>Enable third party audio for model 1,3 or 4.</TD></TR>
+<TR><TD></TD><TD>orch80	Orchestra 80</TD></TR>
+<TR><TD></TD><TD>orch85	Orchestra 85</TD></TR>
+<TR><TD></TD><TD>orch90	Orchestra 90</TD></TR>
+<TR><TD></TD><TD>-	Disable third party audio</TD></TR>
+<TR><TD>-mute</TD><TD>Start with audio muted.</TD></TR>
+<TR><TD>-vol N</TD><TD>Set audio volume percentage (0 to 100; -sv is synonymous)</TD></TR>
+<TR><TD>-su</TD><TD>Turn off audio filtering (faster; slightly less accurate)</TD></TR>
+<TR><TD>-sx</TD><TD>Disable all audio output</TD></TR>
+<TR><TD>-s1</TD><TD>Force mono sound</TD></TR>
+<TR><TD>-s2</TD><TD>Force stereo sound</TD></TR>
+<TR><TD>-sbg</TD><TD>Mute audio if trs80gp does not have the focus</TD></TR>
+<TR><TD>-sfg</TD><TD>Audio and sound effects always play (unlike -sbg)</TD></TR>
+<TR><TD>-sfmute</TD><TD>Mute sound effects</TD></TR>
+<TR><TD>-sfv N</TD><TD>Set sound effect volume percentage</TD></TR>
+<TR><TD>-sf fx file.wav</TD><TD>Use file.wav for named sound effect fx:</TD></TR>
+<TR><TD></TD><TD>   spin-empty	empty floppy drive motor on</TD></TR>
+<TR><TD></TD><TD>   spin-floppy	floppy spinning in drive</TD></TR>
+<TR><TD></TD><TD>   step		floppy drive seeking</TD></TR>
+<TR><TD></TD><TD>   relay-on	cassette motor relay activating</TD></TR>
+<TR><TD></TD><TD>   relay-off	cassette motor relay turning off</TD></TR>
+<TR><TD></TD></TR>
+<TR><TH ALIGN=CENTER COLSPAN=2>Automation Options</TH></TR>
+<TR><TD></TD></TR>
+<TR><TD>-turbo</TD><TD>Run at top speed</TD></TR>
+<TR><TD>-haste</TD><TD>Run fast by drawing once per second (graphics/timing inaccurate)</TD></TR>
+<TR><TD>-batch</TD><TD>Have "Record" menu save files without prompting.</TD></TR>
+<TR><TD>-fa hex</TD><TD>Update FPS when Z-80 hits address</TD></TR>
+<TR><TD>-ta hex</TD><TD>Turbo for 5 frames at Z-80 address</TD></TR>
+<TR><TD>-rand</TD><TD>Initialize RAM and the R register with random data.</TD></TR>
+<TR><TD>-ct -ctx</TD><TD>Enable/disable cassette auto turbo</TD></TR>
+<TR><TD>-dt -dtx</TD><TD>Enable/disable floppy disk auto turbo</TD></TR>
+<TR><TD>-ht -htx</TD><TD>Enable/disable hard drive auto turbo</TD></TR>
+<TR><TD>-wt -wtx</TD><TD>Enable/disable wafer drive auto turbo</TD></TR>
+<TR><TD></TD></TR>
+<TR><TH ALIGN=CENTER COLSPAN=2>Keyboard, Joystick and Light Pen Input</TH></TR>
+<TR><TD></TD></TR>
+<TR><TD>-jx</TD><TD>Disable joystick input</TD></TR>
+<TR><TD>-kl log|phys</TD><TD>Set keyboard layout to logical or physical</TD></TR>
+<TR><TD>-kg -kgx</TD><TD>Enable/disable key ghosting on keyboard input</TD></TR>
+<TR><TD>-kt -ktx</TD><TD>Enable/disable keyboard auto de-turbo</TD></TR>
+<TR><TD>-kc</TD><TD>Clustered key layout in software keyboard (Model 4 only)</TD></TR>
+<TR><TD>-i str</TD><TD>Send str as keyboard input (as if it were pasted)</TD></TR>
+<TR><TD>-if file</TD><TD>Send file contents as keyboard input</TD></TR>
+<TR><TD>-iw str</TD><TD>Wait until str appears on screen</TD></TR>
+<TR><TD>-ik row mask</TD><TD>Set keyboard matrix row to mask</TD></TR>
+<TR><TD>-ictl reset</TD><TD>Reset the TRS-80</TD></TR>
+<TR><TD>-id N</TD><TD>Delay N frames</TD></TR>
+<TR><TD>-itime N</TD><TD>Give up on input after N frames of waiting</TD></TR>
+<TR><TD>-ix</TD><TD>Exit emulator when command line input has been sent</TD></TR>
+<TR><TD>-is</TD><TD>Save a screenshot</TD></TR>
+<TR><TD>-ics</TD><TD>Save a clean screenshot (no beam interference dropouts)</TD></TR>
+<TR><TD>-it</TD><TD>Write text VRAM to file</TD></TR>
+<TR><TD>-ig</TD><TD>Write hires graphics VRAM to file</TD></TR>
+<TR><TD>-ic</TD><TD>Write programmable character generator VRAM to file</TD></TR>
+<TR><TD>-im dump N file</TD><TD>Save ASCII image of disk N to file.</TD></TR>
+<TR><TD>-im wp N on|off</TD><TD>Enable or disable write protect on disk N</TD></TR>
+<TR><TD>-im trackdump N file</TD></TR>
+<TR><TD></TD><TD>Save ASCII image of disk track data of disk N to file</TD></TR>
+<TR><TD>-im insert N file</TD></TR>
+<TR><TD></TD><TD>Insert disk image file into drive N</TD></TR>
+<TR><TD>-im eject N 1</TD><TD>Eject disk image in drive N with no prompting</TD></TR>
+<TR><TD>-ip host:port</TD><TD>Read keyboard input from TCP/IP host, port endpoint.</TD></TR>
+<TR><TD>-ip @port</TD><TD>Listen for TCP/IP connections on port for keyboard.</TD></TR>
+<TR><TD>-ir audio</TD><TD>Toggle audio recording (turn on if off, off if on)</TD></TR>
+<TR><TD>-ir flash</TD><TD>Toggle flash video recording</TD></TR>
+<TR><TD>-ir video</TD><TD>Toggle AVI video recording</TD></TR>
+<TR><TD>-ir gif</TD><TD>Toggle animated GIF recording</TD></TR>
+<TR><TD>-ir mhz</TD><TD>Toggle MHz recording</TD></TR>
+<TR><TD>-lp</TD><TD>Enable light pen emulation (1,3,4)</TD></TR>
+<TR><TD>-esc-exits</TD><TD>Pressing the escape key exits trs80gp</TD></TR>
+<TR><TD></TD></TR>
+<TR><TH ALIGN=CENTER COLSPAN=2>Programmer Help</TH></TR>
+<TR><TD></TD></TR>
+<TR><TD>-b hex</TD><TD>Set debugger breakpoint (can use "-b hex" up to 4 times).</TD></TR>
+<TR><TD>-b label</TD><TD>Set breakpoint at label (if .bds file loaded)</TD></TR>
+<TR><TD>-b start:end</TD><TD>Set breakpoints from start to end (0:ffff can be handy)</TD></TR>
+<TR><TD>-bm hex/label</TD><TD>Set Z-80/6800/6809 memory access breakpoint</TD></TR>
+<TR><TD></TD><TD>also -bmr or -bmw to trap only reads or writes</TD></TR>
+<TR><TD>-bio hex/label</TD><TD>Set Z-80 I/O access breakpoint</TD></TR>
+<TR><TD></TD><TD>also -bior or -biow to trap only reads or writes</TD></TR>
+<TR><TD>-b16 hex</TD><TD>Set 68000 debugger breakpoint</TD></TR>
+<TR><TD>-b16m hex/label</TD><TD>Set 68000 memory access breakpoint</TD></TR>
+<TR><TD></TD><TD>also -b16mr or -b16mw to trap only reads or writes</TD></TR>
+<TR><TD>-l file</TD><TD>Load file into memory but don't run it</TD></TR>
+<TR><TD>-ls file.bds</TD><TD>Load symbols from file but don't load its data.</TD></TR>
+<TR><TD>-ee</TD><TD>Enable emulator extensions (debugging oriented)</TD></TR>
+<TR><TD>-trace</TD><TD>Start with tracing on (Record &rarr; Trace)</TD></TR>
+<TR><TD></TD></TR>
+<TR><TH ALIGN=CENTER COLSPAN=2>FreHD Emulation</TH></TR>
+<TR><TD>-frehd</TD><TD>Enable FreHD emulation</TD></TR>
+<TR><TD>-frehd_dir dir</TD><TD>Set directory used for FreHD external file import/export</TD></TR>
+<TR><TD></TD><TD>Also enables FreHD emulation</TD></TR>
+<TR><TD>-frehd_load fl</TD><TD>Use boot block in file instead of the built-in one</TD></TR>
+<TR><TD>-frehd_patch</TD><TD>Apply FreHD auto-start patches to the ROM</TD></TR>
+<TR><TD>-frehd_menu</TD><TD>Use built-in FreHD menu program rather than frehd.rom</TD></TR>
+<TR><TD></TD><TD>in the -frehd_dir</TD></TR>
+<TR><TD></TD></TR>
+<TR><TH ALIGN=CENTER COLSPAN=2>Esoterica</TH></TR>
+<TR><TD></TD></TR>
+<TR><TD>-sync</TD><TD>Try to maintain frame rate exactly (uses excessive CPU)</TD></TR>
+<TR><TD>-trsnic</TD><TD>Preliminary trsnic emulation (model 1,3,4 only)</TD></TR>
+<TR><TD>-time render|frame|emulation</TD><TD>Show timing in title bar</TD></TR>
+<TR><TD>-showkey</TD><TD>Show Windows key code in title bar</TD></TR>
+<TR><TD>-showframe</TD><TD>Show the frame number in title bar</TD></TR>
+<TR><TD>-writerom</TD><TD>Make ROM writeable (Model 1 and 3 only)</TD></TR>
+<TR><TD>-m1_vblank</TD><TD>VBLANK readable as bit 0 of port $FF (Model I only)</TD></TR>
+<TR><TD>-x1hack</TD><TD>Temporary fix for Xenix 1 boot error (and TRSDOS-16)</TD></TR>
+<TR><TD></TD><TD>(disables 68000 to Z-80 interrupt request through CTC1)</TD></TR>
+<TR><TD>-mmu9f</TD><TD>Model I 16 RAM bank 0 when bit 0 of port $9F set.</TD></TR>
+<TR><TD>-t1hack</TD><TD>Modification to when FDC switches to Type I status.</TD></TR>
+<TR><TD></TD><TD>Only useful to make TRSDOS-II RESTORE work.</TD></TR>
+</TABLE>
+
+</CENTER>
+
+<P>
+</body></html>

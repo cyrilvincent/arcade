@@ -1,0 +1,246 @@
+-----------------------------------------------------------------------------
+            Microsoft Windows 95 : Lisez-moi relatif à Microsoft Windows
+                                                     Août 1995
+-----------------------------------------------------------------------------
+
+                          (c) Copyright Microsoft Corporation, 1995
+
+
+----------------------------
+COMMENT UTILISER CE DOCUMENT
+----------------------------
+
+Pour consulter ce document à l'écran dans le Bloc-notes, agrandissez 
+la fenêtre Bloc-notes.
+
+Pour imprimer ce document, ouvrez-le dans le Bloc-notes ou tout autre 
+logiciel de traitement de texte, puis utilisez la commande Imprimer du 
+menu Fichier.
+
+
+------------------
+TABLE DES MATIERES
+------------------
+
+SI VOUS N'AVEZ PAS INSTALLÉ WINDOWS 95
+LISTE DES FICHIERS LISEZ-MOI DE WINDOWS 95
+COMMENT LIRE LES FICHIERS LISEZ-MOI
+DÉSINSTALLATION DE WINDOWS 95
+------------------------------
+
+
+SI VOUS N'AVEZ PAS INSTALLÉ WINDOWS 95
+======================================
+
+Le fichier INSTALL.TXT contient des informations complémentaires 
+concernant l'installation. Il se trouve sur la disquette d'installation
+n° 1 de Windows 95. Pour lire ce fichier, utilisez le logiciel Bloc-notes
+fourni avec Windows 3.1. Si vous avez acheté la version CD-ROM de
+Windows 95, vous trouverez INSTALL.TXT dans le répertoire \Win95.
+
+
+LISTE DES FICHIERS LISEZ-MOI DE WINDOWS 95
+==========================================
+En plus de LISEZMOI.TXT, Windows 95 est livré avec les fichiers Lisez-moi
+suivants : 
+	
+	CONFIG.TXT	Ce fichier contient des informations relatives
+			à la syntaxe des commandes que vous utilisez avec
+			votre fichier CONFIG.SYS.
+
+	DISPLAY.TXT	Ce fichier contient des informations vous 
+			permettant de configurer les 
+			pilotes d'affichage disponibles, de 
+			corriger les problèmes d'affichage 
+			et de vous procurer des pilotes 
+			d'affichage supplémentaires.
+
+	EXCHANGE.TXT	Ce fichier contient des informations vous permettant 
+			d'installer et d'utiliser Microsoft Exchange.
+
+        EXTRA.TXT	Ce fichier fournit des informations sur l'emplacement 
+                        de fichiers Windows 95 supplémentaires, tels que 
+                        les mises à jour et les pilotes, en plus des
+                        fichiers spécifiques à la version CD-ROM de Windows 95.
+
+        FAQ.TXT		Ce fichier contient des réponses aux questions 
+			fréquemment posées à propos de Windows 95.
+
+	GENERAL.TXT	Ce fichier contient des informations concernant 
+			les problèmes de démarrage, les
+			programmes livrés avec Windows 95, 
+			les utilitaires de gestion de disque,
+			les disques et les CD, les pilotes, les supports
+			amovibles, Microsoft FAX et Pen Services.
+
+			Ce fichier contient également des informations de
+			dernière minute reçues trop tard pour pouvoir être
+			inclues dans les autres fichiers LISEZMOI.
+			Si vous avez par exemple une question sur une
+			imprimante, sachez qu'il peut être utile de
+			consulter les fichiers GENERAL.TXT et PRINTERS.TXT.
+
+	HARDWARE.TXT	Ce fichier contient des informations concernant les 
+			problèmes matériels connus et la 
+			manière de les résoudre. En cas de
+			problème avec votre imprimante 
+			ou votre souris, consultez également 
+			les fichiers PRINTERS.TXT et MOUSE.TXT.
+
+	INTERNET.TXT	Ce fichier contient des informations vous 
+			permettant, si ce n'est déjà fait, 
+			de vous connecter au réseau 
+			Internet. Il vous indique également 
+			les services télématiques à partir
+			desquels vous pouvez télécharger 
+			Explorateur Internet, le nouvel 
+			utilitaire d'exploration Web de Microsoft.
+
+	MOUSE.TXT	Ce fichier contient des informations 
+			concernant les problèmes connus 
+			de fonctionnement de la souris et 
+			du clavier et propose des solutions 
+			pour les résoudre.
+
+	MSDOSDRV.TXT Contient des informations relatives à la syntaxe
+			pour pilotes de périphériques MS-DOS. Pour obtenir
+			des informations d'aide supplémentaires sur les
+			commandes MS-DOS, consultez le fichier CONFIG.TXT.
+			Vous pouvez également utiliser l'aide commande-ligne
+			à l'invite de commande en tapant /? à la suite du
+			nom des commandes.
+
+	MSN.TXT	Ce fichier contient des informations vous permettant 
+			de vous connecter à The Microsoft Network.
+
+	RESEAUX.TXT	Ce fichier contient des informations concernant 
+			l'installation et l'utilisation de serveurs réseau.
+
+	PRINTERS.TXT Ce fichier contient des informations concernant les 
+			problèmes d'impression connus et la
+			manière de les résoudre.
+
+	PROGRAMS.TXT Ce fichier contient des informations concernant les 
+			problèmes connus rencontrés lors de 
+			l'exécution de certains programmes 
+			Windows et MS-DOS avec Windows 95 
+			et propose des solutions pour les résoudre.
+
+	SUPPORT.TXT	Ce fichier contient des informations vous indiquant 
+			comment obtenir une aide 
+			complémentaire relative à 
+			l'utilisation de Windows 95.
+
+	TIPS.TXT	Ce fichier contient des conseils et des 
+			astuces pour l'utilisation de 
+			Windows 95 qui, pour la plupart,
+			ne figurent pas dans l'aide en ligne 
+			ou la documentation imprimée.
+
+
+COMMENT LIRE LES FICHIERS LISEZ-MOI
+===================================
+
+Lorsque vous installez Windows 95, tous les fichiers Lisez-moi sont copiés
+dans le répertoire \Windows.
+
+Pour ouvrir un fichier Lisez-moi après l'installation de Windows 95 : 
+1. Cliquez sur le bouton Démarrer.
+2. Cliquez sur Exécuter.
+3. Tapez le nom du fichier Lisez-moi.
+
+Vous pouvez ouvrir les fichiers Lisez-moi même si vous n'avez pas encore
+installé Windows 95.
+
+Pour ouvrir un fichier Lisez-moi avant l'installation de Windows 95 : 
+
+Si vous avez acheté une version disquettes de Windows 95 :
+----------------------------------------------------------
+1. Insérez la disquette d'installation n° 1 dans le lecteur A (ou dans 
+le lecteur de votre choix).
+2. A l'invite de commande MS-DOS, tapez : 
+
+   a:extract.exe /a /l c:\windows win95_02.cab nomfichi.txt
+
+Par exemple, si vous voulez ouvrir le fichier GENERAL.TXT, tapez : 
+
+   a:extract.exe /a /l c:\windows win95_02.cab general.txt
+
+3. Accédez au répertoire \Windows.
+4. A l'invite de commande, tapez : 
+
+   edit nomfichi.txt
+
+Si vous avez acheté la version CD-ROM de Windows 95 :
+-----------------------------------------------------
+1. Insérez le CD dans votre lecteur de CD-ROM (lecteur X dans cet exemple).
+2. Placez-vous dans le répertoire \Win95 de votre lecteur de CD-ROM.
+2. A l'invite de la commande MS-DOS, tapez:
+
+   extract.exe /a /l c:\windows win95_02.cab nomfichi.txt
+
+Par exemple, si vous voulez ouvrir le fichier GENERAL.TXT, tapez : 
+
+   extract.exe /a /l c:\windows win95_02.cab general.txt
+
+3. Accédez au répertoire Windows sur le lecteur C.
+4. A l'invite de commande, tapez :
+
+   edit filename.txt
+
+
+DÉSINSTALLATION DE WINDOWS 95
+=============================
+
+Au cours de l'installation, le programme vous propose d'enregistrer vos 
+fichiers système afin de pouvoir ultérieurement désinstaller Windows 95. 
+Si vous souhaitez pouvoir désinstaller ultérieurement Windows 95, 
+choisissez Oui. Le programme Install enregistre alors vos fichiers 
+système dans un fichier compressé et caché. Si vous ne souhaitez pas 
+pouvoir désinstaller ultérieurement Windows 95, choisissez Non.
+
+Ce choix ne vous sera pas proposé lors de l'installation si : 
+- vous effectuez la mise à niveau d'une version antérieure de Windows 95 ;
+- vous installez Windows 95 dans un nouveau répertoire ;
+- vous utilisez une version de MS-DOS antérieure à la version 5.0.
+
+REMARQUE : les fichiers de désinstallation doivent être enregistrés sur
+un disque dur local et non sur une disquette ou un lecteur réseau. Si 
+vous possédez plusieurs disques durs locaux, le programme vous demandera
+de choisir celui sur lequel vous voulez enregistrer les informations de
+désinstallation.
+
+Pour désinstaller Windows 95 et restaurer intégralement sur votre 
+ordinateur les versions précédentes de MS-DOS et de Windows 3.x, 
+procédez comme suit : 
+
+1. Cliquez sur le bouton Démarrer, pointez sur Paramètres, puis cliquez
+   sur Panneau de configuration.
+2. Cliquez deux fois sur l'icône Ajout/Suppression de programmes.
+3. Dans la boîte de dialogue Installation/Désinstallation, cliquez sur 
+   Windows 95, puis sur Supprimer.
+
+Ou bien, si vous avez des problèmes pour démarrer Windows 95, démarrez 
+votre ordinateur en utilisant votre disquette de démarrage, puis exécutez
+UNINSTAL à partir de cette disquette.
+
+REMARQUE : le programme de désinstallation a besoin d'arrêter Windows 95.
+S'il ne peut le faire en raison d'un problème sur votre ordinateur, 
+redémarrez ce dernier, puis appuyez sur la touche F8 lorsque vous voyez 
+apparaître le message " Démarrage de Windows 95 ". Choisissez ensuite 
+l'option Invite de commande uniquement, puis exécutez UNINSTAL à partir
+de l'invite de commande.
+
+Si vous exécutez Windows 95 et souhaitez supprimer les fichiers de 
+désinstallation afin de libérer de 6 à 9 Mo d'espace disque, procédez
+comme suit : 
+
+1. Cliquez sur le bouton Démarrer, pointez sur Paramètres, puis cliquez 
+   sur Panneau de configuration.
+2. Cliquez deux fois sur l'icône Ajout/Suppression de programmes.
+3. Dans la boîte de dialogue Installation/Désinstallation, cliquez sur
+   Fichiers système d'une version antérieure de Windows 3.x et MS-DOS, 
+   puis sur Supprimer.
+
+Vous ne pourrez plus ensuite désinstaller Windows 95.
+

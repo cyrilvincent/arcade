@@ -1,0 +1,43 @@
+<html><body>
+<H3><A NAME="hd">Working With Hard Drives</A></H3>
+
+The Hard Drive menu can attach up to 4 drives.
+There are only unformatted hard drive images built-in so you will have to
+either supply your own or go through the process of formatting and otherwise
+setting up the emulated hard drive for use under your choice of emulated
+operating system.
+
+<P>
+Selecting Hard Drive &rarr; :slot &rarr; &lt;&lt; unformatted hdv &gt;&gt;
+(or "emu" or "DREM") will
+connect an unformatted hard drive image to the selected controller slot.
+It will immediately prompt for a file to save the hard drive data.
+This is unlike the diskettes which will track changes internally and only
+ask to save when they are ejected.
+
+<P>
+On the command line use <TT>-h :hdv</TT> (or <TT>:emu</TT> or <TT>:drem</TT>)
+to attach a blank hard drive image and <TT>-hx</TT> to disable the hard drive
+controller.
+
+<P>
+The "drem" format is compatible with the DREM hard drive emulator available
+at <A HREF="https://www.drem.info/">https://www.drem.info/</A>.  It stores
+hard drive images as a pair of files.  A <TT>file.cfg</TT> which gives the
+geometry and other information and a <TT>file.dsk</TT> which holds the data
+for all the blocks.
+
+<P>
+The "emu" format is compatible with the Gesswein MFM emulator available at
+<A HREF="https://www.pdp8online.com/mfm/mfm.shtml">https://www.pdp8online.com/mfm/mfm.shtml</A>.
+Both the "drem" and "emu" formats allow for convenient copying of hard drive
+images to or from real TRS-80's.
+
+<P>
+FreHD emulation is not generally compatible with the Model II hard drive.
+Model II operating systems like the built in TRSDOS-2.0a which are unaware
+of the hard drive can import and export files using the FreHD utilities.
+But TRSDOS-II will fail to boot with <TT>-frehd</TT> enabled.
+
+
+</body></html>

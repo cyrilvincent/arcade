@@ -1,0 +1,588 @@
+Version 2.4.9 - October 8, 2022
+-------------------------------
+
+(WIP) 6803 timer (MC bouncy ball OK but complete implementation expected)
+
+(WIP) Corvus hard disk emulation
+
+(WIP) Snapshots
+
+Japanese Model 1 emulation (-m1j)
+
+Orchestra 85 and 90 now play in stereo on Windows.
+
+LDOS DiskDISK floppy disk image support.
+
+Disk drive and other sound effects.
+
+Model 1,3,4 unmapped printer port bits now correctly float high.
+
+MC-10 implements SG6 display mode properly.
+
+Corrected various 6803 instruction timings for MC-10.
+
+Slightly green text background for Electric Crayon, Videotex and MC-10.
+
+Model 4 can be set up with 16K memory.  Or 0K as if no RAM is installed.
+
+Various auto turbo modes now per-model perferences; settable on command line.
+
+Disassembly windows show symbolic names for memory locations when available.
+
+Memory view windows independent of debugger.
+
+Bus use for MC-10 and Electric Crayon now functional.
+
+Bus use no longer clearing loaded flag returning it to usefulness.
+
+Edit -> Copy crashed in Videotex, Electric Crayon and MC-10 graphics mode.
+
+F12 now activates turbo on linux.
+
+.bds symbols and loading works on all CPUs, including the 68000.
+
+Low probability .bds file loading hang/crash bug fixed.
+
+68000 debugger upgraded to 18 breakpoints.
+
+Model I RS Doubler ignores side select commands which didn't really exist.
+
+Corvus hard drive emulation improved, added debugger (Windows only).
+
+
+Version 2.4.8 - June 4, 2022
+----------------------------
+
+MC-10 emulation (-mc10).
+
+Memory access breakpoints for 6800, 6803, 6809 and 68000 processors.
+
+Bus trace for 6800, 6803 and 6809 processors.
+
+Help in MacOS menu now opens the trs80gp manual.
+
+Turbo turns off Haste mode and vice versa.
+
+Cassette image can be ejected and shows currently loaded file in menu.
+
+Debug -> Symbol Table to view all symbols from loaded .bds files.
+
+Unbreak -m4b and -m4c as they were not removing wait states.
+
+Removed spurious FreHD menu from DT-1, Videotex, Electric Crayon and MX-70.
+
+Ctrl-A now selects all text in the printer window on Windows.
+
+
+Version 2.4.7 - April 9, 2022
+-----------------------------
+
+-haste option faster than turbo but graphics emulation compromized.
+
+Orchestra-90 support.
+
+Added menu entry to unload symbols from previous .bds file/symbol loads.
+
+FDC 0xd8 command modified so SuperUtilty boots with Percom doubler.
+
+Add slight jitter on Model III disk emulation to handle problems with perfect 200ms rotations colliding with 60Hz interrupt.
+
+Improved display of IDAM and DAM CRC errors in disk image debug tools.
+
+Raspberry Pi version works on 64 bit Raspbian.
+
+
+Version 2.4.6 - March 5, 2022
+-----------------------------
+
+Arrow keys on numeric keypad work in Linux.
+
+FDC emulates head load delays, so file format for Model III PFS:file now works.
+
+FDC fix to Type I status change after interrupt commands. The TRSDOS-II RESTORE command now works.
+
+Disassembler window added.
+
+FreHD images bootable via the FreHD menu as needed FreHD extensions emulated.
+
+FreHD autoboot emulated.  Can set custom boot block with -fred_load file.
+
+Can apply FreHD auto-start ROM patches with -frehd_patch.
+
+New -rom1 option to load a ROM into the Model I "hole" from $3000 .. $37df.
+
+Eliminated spurious wait states on $3C00 .. $3FFF in Model 4 memory map 2+3.
+
+Corrected Unicode translation of Model III Greek letters Lambda to Rho.
+
+No more annoying click in Windows when focus changes and mute is on.
+
+Command line control over keyboard layout, ghosting and auto-de-turbo.
+
+New option -kc shows clustered arrow key layout in software keyboard.
+
+New option -m4d shows Model 4D layout in software keyboard.
+
+
+Version 2.4.5 - December 4, 2021
+--------------------------------
+
+Lowe Electronics LS-18 Model I hires emulated (use -gl).
+
+HyperMEM memory for Model 4 with -mem 256 (or 512 or 1024) or -mem hyper:512.
+
+SuperMEM expansion memory for Model 4 with up to -mem super:1024 K.
+
+MegaMEM expansion memory for Model 4 with up to -mem mega:16384 K.
+
+Fixed hires memory debug view and dump.
+
+Added '-ik row bits' for automated control of low-level keyboard input.
+
+Added '-ig' to dump hires graphics memory.
+
+8" drives default to restricting emulation to single or double sided.
+
+Added -dNss, -dNds, -dNas to force floppy drive N to be single, double or any-sided.
+
+Emulator extensions can now trigger audio and video recordings, screenshots.
+
+Easy interface to emulator extensions from BASIC.
+
+Model I TRSDOS 2.3 patched.  Pressing BREAK at first prompt no longer reboots.
+
+Linux version no longer crashes on paste if the clipboard is empty.
+
+Debug T-States/Cycles treats input as decimal instead of hex.
+
+Added watch expressions to debugger.
+
+Cassette counter and read/write indication in title bar during cassette I/O.
+
+Mac version can save cassette output (.cas files) again.
+
+Fix .bds load bug causing crashes on certain > 256 data lengths.
+
+Stop right-hand glyph replacement when copying Model 3 Japanese unicode text.
+
+
+Version 2.4.4 - September 4, 2021
+---------------------------------
+
+Raspberry Pi 32-bit (Raspian) and 64-bit (Ubuntu) versions.
+
+MX-70 printer emulation (-mx70 or -p :mx70)
+
+Authentic mode faster by redrawing only changed lines of display.
+
+NEWDOS/80 can now format .imd format diskette images.
+
+Additional views for Disk Debug window including a diskette summary.
+
+-mmu16 n option to control number of extension bits of 68000 MMU (0 .. 3).
+
+-memgap16 option to create gaps of unmmaped 68000 memory.
+
+Orchestra-85 sound no longer noisy.
+
+Add -nld to suppress loading lower-case driver in Model I cassette boot.
+
+Stop crash when flag register checkbox clicked on windows.
+
+Have entry point breakpoint of /CMD file loaded under a DOS trigger promptly.
+
+Update window title at most every 10 frames on linux; change with -wtfs N
+
+DREM hard drive loader uses .DSK or .dsk for data filename (Linux fix).
+
+EMU hard drive blank tracks now same as ext2emu.
+
+Formatting more than 128 tracks works for HFE and IMD.
+
+Disk ASCII dump works on Super Utility (removed assert()).
+
+HFEv3 floppy format will warn and not load (version 3 not supported).
+
+IMD floppy format correctly reading/writing head/cylinder maps.
+
+Floppy loading improved to fix memory leaks and allow larger images.
+
+Memory leak fixes for cut/paste and bus tracing.
+
+Model I RS Doubler detect modified so Super Utility doesn't trigger it immediately.
+
+Disk debug window has additional views to show IDAM/DAM and disk summary.
+
+Linux GTK version added icon for the main window.
+
+Bus trace details interrupt status/mask bits for Model III.
+
+
+Version 2.4.3 - June 6, 2021
+----------------------------
+
+Drag and drop to run program files.
+
+68000 instruction fix has UNOS booting on Model 16.
+
+Instruction and data breakpoints in .BDS files allow automatic memory protection.
+
+Debugger resizable and disassembly shows more by using full height of dialog.
+
+-win command line option works in linux now.
+
+Crude Orchestra-85 emulation.
+
+Command line loading of SYSTEM programs turns off cursor before running them.
+
+Preliminary cassette I/O in in .cpt (Cassette Pulse Train) format.
+
+Cassette file mounting breaks out individual files better and crashes less.
+
+Keyboard ghosting menu option.
+
+
+Version 2.4.2 - March 6, 2021
+-----------------------------
+
+RM/COS for the model 16 boots (fixes to floppy status; 68000 STOP, Scc inst.).
+
+Omikron mapper emulation for Model I (-omikron).
+
+Support for HxC2001 HFE floppy format.
+
+68000 debugger now has execution breakpoints; can set with command line -b16 
+
+Added interrupt and address bus tracing to 68000 trace output.
+
+Diskette -> Replace only ejects if a new diskette is chosen.
+
+Remove Debug -> Disk Viewer... if no disk drives or hard drives attached.
+
+GIF recording timing more accurate when possible.
+
+Experimental Logical Layout keyboard mode for a certain custom CP/M BIOS.
+
+Caps lock on mac now toggles properly.  But may be out of phase with keyboard led.
+
+
+Version 2.4.1 - January 5, 2021
+-------------------------------
+
+Critical bug fix where .jv1, .jv3 and .imd disk drives were not saving changes.
+
+Windows version remembers window positions and display modes.  This includes
+a notion of "instances" which have their own preferences and show "#2", "#3",
+etc. in their window title.
+
+FreHD firmware and boot versions to 9.08 and 7.06 to avoid frehd.rom bugs.
+
+Command line -sx option to disable audio output entirely.
+
+Unmapped memory regions now display in debugger as ~ff (or ~00 on the Model II).
+
+Keyboard input can be fed in via TCP/IP with -ip @port or Keyboard -> Connection.
+
+Don't crash when given a floppy image for DT-1, Videotex or "-b 0" for DT-1.
+
+MacOS wasn't filling in disk view hex data or debugger hex data.
+
+Z-80 debugger wasn't updating I and R register displays in MacOS.
+
+Linux custom colour picking works now.
+
+
+Version 2.4 - December 3, 2020
+------------------------------
+
+Linux beta version.
+
+Videotex terminal emulation (use -mv)
+
+Electric Crayon emulator; -p :ec or choose Electric Crayon in Printer -> Connection
+
+TCP/IP printer support with "-p host:port" (like -r option is for serial ports)
+
+Works on Windows XP again (removed a trivial dependency).
+
+Fix crash due to format mis-identification when loading up certain .cas images.
+
+Command line breakpoints support range syntax. e.g., "-b 5200:6000".
+
+Floppy disk doubler detection for Model I improved.
+
+ENTER key works from "all pressed" location in logical mode.
+
+Stop audio from popping when continuous tones played.
+
+Add various "-ir" command-line options to trigger audio and video recording.
+
+Add "-su" command line option to turn off audio filtering.
+
+FreHD directory settable to ease IMPORT2/EXPORT2 usage (command line and menu).
+
+DT-1 Setup -> Save Setup wasn't saving the settings correctly.
+
+Stop crashing if screenshot or animated GIF save file dialog is cancelled.
+
+
+Version 2.3.2 - August 20, 2020
+-------------------------------
+
+DT-1 (Data Terminal 1).  Use -mdt1
+
+Add -rand so games run on command line aren't always the same.
+
+Turbo mode displays multiplier and can change after startup on Mac and Linux.
+
+Mute and Volume are now per-model preferences (i.e., saved between runs).
+
+Refined floppy timing.
+
+Format will promote single-sided floppy images to double-sided.
+
+Physical keyboard layout better approximates original key positions
+(especially the arrow keys).
+
+Preliminary mouse emulation with "-r :mouse" or use "Serial" menu.
+
+Keys F3 .. F8 work on Model 2/12/16/6000.
+
+
+Version 2.3.1 - May 30, 2020
+----------------------------
+
+Alpha joystick emulation on Windows.
+
+Software keyboard for Mac.
+
+PCG-80, 80-Grafix, 80-Grafix+ and 80-Grafix III programmable character graphics.
+
+Z-80 debugger can set ranged breakpoints on memory read/write and I/O in/out.
+
+Floppy and hard drive sector viewer.
+
+Memory and disk search capability (in Z-80 debugger and Disk Viewer).
+
+Alt-0 though Alt-9 are user-definable keyboard macros (Edit menu) [windows].
+
+Floppy command delay added; Sledge of Rahmul and other Duo-Loader games boot.
+
+Return floppy sector type fixing Zork boot and improved write protect handling.
+
+Right-shift on Model 1 logical keyboard working again.
+
+Hard drive emulation supports WD2010 mode with up to 2048 cylinders.
+
+JV3 format floppies with more than 40 tracks work now.
+
+Now have warm and cold restart with the latter re-initializing RAM.
+
+Xenix printing much faster as Model 2/16 emulation generates printer interrupts.
+
+Model 1/3/4 logical keyboard now maps '^' to '['.  This may help someone who's
+entering BASIC from a listing that shows '^' for exponentiation.
+
+Add Backslash as CLEAR in logical mode (not just physical); better for Macs.
+
+Micro Matrix Photopoint light pen emulation for Model 1,3,4 (-lp) [windows].
+
+Load custom character generator ROM with -charrom
+
+Add -l file to load but not execute a file on the command line.
+
+Add -ls file, Load Symbols... to load only the symbols from a BDS file.
+
+Model 2 etc. hires displays properly CRTC start address changes (e.g., when Xenix scrolls)
+
+Model 4 LS-DOS now has drives 0,1,2,3 instead of 0,1,3,4
+
+Fixed occasional character drop when pasting large amounts of text.
+
+Only show gray bars above and below Model 4's 64 column mode in beam debug.
+
+Add -tsr flag for laughs.  Or rename your executable to tsr80gp.exe
+
+
+Version 2.3 - February 29, 2020
+-------------------------------
+
+Support for hard drives.
+
+Model 16 emulation.
+
+Preliminary support for Model I Percom and Radio Shack double-density disk interfaces.
+
+Model II double-sided floppy support.
+
+Montezuma CP/M no longer misses shift keys regularly.
+
+If a disk FORMAT proceeds beyond the last track, DMK and IMD append blank tracks.
+
+DMK format detection rules relaxed to allow for larger file truncation.
+
+No longer get down-arrow stuck when using Ctrl+Alt+V and the like.
+
+Debugger memory, disassembly and stack update on reset or change in memory map.
+
+Cassette auto-save capture Scott Adams Adventures saves one instead of two files.
+
+New Model II ROM now the default; get original with "-r0".
+
+Added Model 1 revision 1.1 ROM and -nlc not needed for earlier ROM revisions.
+
+-dN tries adding .dmk, .imd, .jv3, .jv1 and .dsk to files it can't find.
+
+Windows menu key brings up the right-click context menu.
+
+Animated GIF output usually smaller by extending the delay for repeated frames.
+
+Debugger now shows Model II ROM contents and disassembly when it is mapped in.
+
+Single stepping in debugger updates the trace window even if tracing is off.
+
+Current drive track is displayed status bar.
+
+Writes to Model 4P ROM now go to RAM.
+
+-write_rom allows Z-80 to write to ROM on Model I and III.
+
+-m1_vblank makes VBLANK readable from bit 0 of port $FF (Model I only).
+
+
+Version 2.1.2 - July 16, 2019
+-----------------------------
+
+CP/M Plus 1.00 for Model 4 now boots.
+
+Improve formatted track conversion for IMD disk images.
+
+Model I LDOS diskette 2 now inserted in drive 2 instead of diskette 1.
+
+Handle .jv1 disk images with more than 40 tracks.
+
+-frehd supports file writing so EXPORT2/CMD works.
+
+Internal disk images loadable on command line with :name or "-d :name"
+
+Added internal utility diskettes :tu1, :tu2, :tu3, :tu4, :lu1, :lu2, :lu3, :lu4
+for TRSDOS/LDOS Model 1 .. 4 containing import2, export2 and vhdutl.  And
+:t4u2 for TRSDOS 4 Model II.
+
+Added pre-formatted internal diskettes :tb1 .. :tb4, :lb1 .. :lb4 and :t4b2
+for TRSDOS and LDOS and TRSDOS 4 Model II.
+
+Aculab Floppy Tape emulation for Model I.
+
+Don't allow load or run to overwrite ROM.
+
+Check for reasonable BASIC program start address when loading BASIC programs.
+
+Remove spurious complaint about lack of entry point when running BASIC programs.
+
+Super Utility for Model I and Model 4 boot (A1_REPAIR enabled).
+
+Menu items deleted and checked as required when started in full screen.
+
+Border colour now defaults to black and can be changed with -vb option.
+
+Add Ctrl+Alt+R and Ctrl+Alt+L shortcuts for File -> Load and File -> Run
+
+Relative T-state times in bus trace now reflect actual memory/IO access times.
+Also some clean up of NMI and IRQ details.
+
+Bus trace outputs nested curly braces to help track subroutine calls.
+
+Toggling Z-80 flag checkboxes in debugger updates F register value and vice-versa.
+
+
+Version 2.1.1 - March 13, 2019
+------------------------------
+
+LDOS and LS-DOS can now format .imd disk images.
+
+Volume control with slider in Controls dialog box and -vol N option.
+
+Some menu checkmarks (e.g., Record -> Audio) were not being updated.
+
+Added -mute, -m4ga flags.
+
+FreHD can be enabled/disabled with Diskette -> FreHD
+
+-d now selects the first free drive instead of drive 0 erroneously.
+
+Release notes now available in trs80gp itself via Help -> Release Notes.
+
+Built-in double-sided (and unformatted) disk images added (e.g., -d dmk-ds)
+And tracks beyond the default with #N (e.g., -d imd#44).
+
+Preliminary trsnic emulation via -trsnic.
+
+Corrected frequency of beep in Model 2.
+
+EXTIO enable was incorrectly required for FreHD access on Model 1 and 2.
+
+
+Version 2.1.0 - February 17, 2019
+---------------------------------
+
+Numerous bug fixes in floppy emulation especially around formatting.
+
+.cmd files now loaded under TRSDOS/LSDOS rather than ROM BASIC.
+
+Sound mute menu entry and auto-muting paused or using menus.
+
+Full screen and new sharp rendering mode. (perfectly square pixels with scaling)
+See -vf, -vs, -vi command line options and new View menu.
+
+Reassigned and new hot keys:
+	Alt-F5 - reset (also in File menu)
+	Ctrl-Alt-F5 - cold reset (also in File menu)
+	F9 - pause (also in File menu)
+	F11 - screenshot
+	Shift-F11 - clean shot (screen shot without beam conflict dropouts)
+	F12 - turbo mode while held
+	Shift-F12 - turbo mode (also in File menu)
+	Alt-Enter - toggle full screen mode
+	Ctrl-Alt-C, Ctrl-Insert - Copy
+	Ctrl-Alt-V, Shift-Insert - Paste
+
+Right-click context menu for easier cut/paste and exit of full screen mode.
+
+Disk files recognized by .dmk, .imd, .dsk suffix so can be listed without
+-dN on command line.  Or with just -d if suffix unknown.
+
+Can insert unformatted blank disks with "-d dmk" and "-d imd".
+
+Printer menu to turn off pop-up and turn off printer (also -poff).
+
+Reset button and RAM badge added to soft keyboard.
+
+Added IM mode, WZ register, EX latches and Z-80 instruction state to debugger.
+
+BASICG and hires graphics utilities now on built-in Model II TRSDOS boot disk.
+
+Handling of reset button and HALT instruction fixed on Model I.
+
+Clock automatically set for Model 1, 3, 4 built-in TRS-DOS, LDOS and LS-DOS.
+
+Added -is, -ics, -id, -itime, -im trackdump  and -showframe for automatic input "scripting".
+
+Add "Replace" to diskette menu for quicker eject + insert workflow.
+
+Now have -m3n for Norcom emulation (99% just a different character ROM).
+
+Bug fixes in screenshot when paused.
+
+Beam debug now defaults to blue for conflict colour and shows the data that
+would have been displayed if the conflict did not occur.
+
+Display and beam conflict colours selectable on command line with -vc, -vd.
+
+Built-in Model 4 LDOS now configured for 4 floppy drives (it had only 2).
+
+
+Version 2.0.4 - August 27, 2018
+---------------------------------
+
+Major update featuring Model II emulation.

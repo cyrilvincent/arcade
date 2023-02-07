@@ -1,0 +1,455 @@
+<html><body>
+<H3><A NAME="floppy">Working With Floppies</A></H3>
+
+The Diskette menu shows all 4 floppy drives and what disk image is
+inserted in them or <TT>&lt;empty&gt;</TT> if there is none.  Any
+disk file name enclosed in <TT>&lt;&lt; .. &gt;&gt;</TT> is a built-in
+disk image.  If the name has an asterisk (<TT>*</TT>) before it the
+disk has been modified and must be saved.  For non-internal disk images
+the changes are saved automatically, but changes to internal disk images
+or disk images loaded from .zip archives must be explicitly saved to another
+file.  trs80gp will remind you to do this if you try to eject a disk with
+changes or exit the emulator with unsaved changes.
+
+<P>
+All built-in disk images have a <A HREF="Working_With_Floppies.html#intflop">short name</A>
+that starts with a colon. This is displayed in parenthesis on each entry
+in the "Insert disk..." menu as a reminder that the short name can be used
+on the command line to insert the floppy when starting trs80gp.
+
+<P>
+Each drive has a sub-menu that lets you eject diskettes, replace diskettes,
+insert diskettes, save them to a new file or toggle their write protection.
+This isn't the read-only flag of the PC file system but an internal one
+corresponding to the physical write protect notch on the real floppy disks.
+Besides saving a copy of a disk image file, Diskette &rarr; ... &rarr; Export...
+can write out the disk image in ASCII format or as a track dump in ASCII
+format for debugging purposes.
+
+<P>
+The internal diskettes <TT>unformatted dmk</TT> and <TT>unformatted imd</TT>
+are single-sided unformatted diskettes in <TT>DMK</TT> and <TT>IMD</TT> format.
+Equivalent to the <TT>-d dmk</TT> and <TT>-d imd</TT> command line options.
+Your currently running DOS will need to format them before they can be used.
+<TT>unformatted dmk DS</TT> and <TT>unformatted imd DS</TT> are double-sided
+disk images also accessible from the command line as <TT>-d dmk-DS</TT>
+and <TT>-d imd-DS</TT>.
+
+<P>
+The <TT>-d0, -d1, -d2, -d3, -td and -ld</TT> command line options allow you
+to select disks to insert into the floppy drives when the emulator starts.
+The default is to put a TRS-DOS floppy in drive <TT>:0</TT> so that the
+TRS-80 will boot into TRS-DOS (which is the same as the <TT>-td</TT> option).
+You can just use <TT>-d file.dsk</TT> to have a floppy disk inserted in the next
+available drive or just the name of the floppy disk image if it ends in one
+of the known suffixes (<TT>.dmk</TT>, <TT>.dsk</TT>, <TT>.imd</TT>,
+<TT>.hfe</TT>, <TT>.jv1</TT> or <TT>.jv3</TT>).
+
+<P>
+Whenever a floppy is accessed trsg80p will go into turbo mode automatically.
+This can be enabled or disabled with the Diskette &rarr; Auto Turbo menu.  Running
+in turbo mode has no harmful effect on diskette usage as the necessary relative
+timing remains the same.  Generally you'd only want to turn the feature off
+to experience the original pace of the machine or when faster disk operations
+make it hard to read text.  Or to keep the TRS-80's real time clock in sync
+with the current time.
+
+<P>
+Unlike actual floppy drives, the emulated drives operate in a special <EM>any-sided</EM> mode.
+If a double-sided disk image is inserted, the drive will become double-sided.  If the drive has a single-sided
+disk image and the operating system attempts to format a track on side 2, the drive
+and disk image will automatically upgrade to double-sided.
+
+<P>
+To control this behaviour, the The <TT>-dNss</TT>, <TT>-dNds</TT> and <TT>-dNas</TT> command line options
+allow you to force drive N in the system to behave as single-sided, double-sided or any-sided.
+Alternatively, you can enable or disable any-sided mode via the Diskette &rarr; Drive &rarr; Emulate only ...
+menu option. 
+
+<P>
+Because of problems with CP/M auto-detecting drive sides during FORMAT,
+the any-sided drive behaviour is <EM>not</EM> the default on the Model II family.
+The index hole position is different between single and doubled sided 8" diskettes.
+Real 8" double-sided disk drives use the position change to actively detect doubled-sided or single-sided diskettes.
+As a result (unless <TT>-dNas</TT> is used), the emulator will signal <TT>NOT READY</TT>
+from the 8" drive in the follow cases:
+
+<UL>
+<LI>Double-sided image used in a single-sided drive
+<LI>Access the second side of single-sided image in a double-sided drive 
+</UL>
+
+<P>Note that in this strict mode if you wish to format a double-sided disk image you must
+insert a double-sided blank as the single-sided blank will not be promoted to double-sided.
+
+<P>Like the original machines, the Model II (<TT>-m2</TT>) will have single-sided 8" drives
+and the Models 12, 16, and 6000 (<TT>-m12 -m16 -m6000</TT>) will have double-sided 8" drives.
+
+<H4><A NAME="impexp">File Import and Export</A></H4>
+
+<P>
+The built-in <A NAME="intflop">utilities floppy</A> provides the <TT>IMPORT2</TT>
+and <TT>EXPORT2</TT> to bring files into and out of the emulator.  They use
+the FreHD emulation so trs80gp must be run with the <TT>-frehd</TT> option for
+them to work or activated by the Hard Drive &rarr; FreHD menu.  Otherwise they
+will say <TT>No FreHD attached</TT> and exit.  Most Model II operating systems
+will require the hard drive controller to be disabled (<TT>-hx</TT>) for
+the utilities to function.
+
+<P>
+<TT>IMPORT2</TT> will read a file from the host computer and write it to a
+TRS-80 disk file.
+
+<P>Usage: <TT>IMPORT2 [-lnep] hostfile [trs80file]</TT>
+
+<P>
+If the <TD>trs80file</TD> parameter is omitted the last component of the
+<TT>hostfile</TT> is used with '.' changed to '/'.  If this is not a legal
+TRS-80 file name you will get an error message.
+
+<P>Options:
+<DL>
+
+<DT>-l</DT>
+<DD>Convert the host file name to lower case.
+This is needed for NEWDOS/80 which insists on uppercasing the command line.</DD>
+
+<DT>-n</DT>
+<DD>Change all newlines ('\n') in the host file to carriage return ('\r')</DD>
+
+<DT>-e</DT>
+<DD><B>Most Models:</B> Use the NEWDOS/80 end of file convention.  This is required for DOSes such
+as DOSPLUS which use the NEWDOS/80 convention but are not detected by IMPORT2.
+<BR><B>Model II:</B> Write the file with a logical record length of 1.  This is
+required for JCL files and likely most text files.
+</DD>
+
+<DT>-p</DT>
+<DD>Model II only - write a program rather than data file.  This must be
+speficied when importing executable (i.e., <TT>/CMD</TT> files).<DD>
+
+</DL>
+
+<P>
+<TT>EXPORT2</TT>  will read a file from the TRS-80 and write it to the host computer.
+
+<P>Usage: <TT>EXPORT2 [-lne] trs80file [hostfile]</TT>
+
+<P>
+If the <TT>hostfile</TT> parameter is omitted the <TT>trs80file</TT> is used
+with '/' changed to '.'.
+
+<P>Options:
+<DL>
+
+<DT>-l</DT>
+<DD>Convert the host file name to lower case.
+This is needed for NEWDOS/80 which insists on uppercasing the command line.</DD>
+
+<DT>-n</DT>
+<DD>Change all carriage returns ('\r') in the TRS-80 file to newlines ('\n')</DD>
+
+<DT>-e</DT>
+<DD>Use the NEWDOS/80 end of file convention.  This is required for DOSes such
+as DOSPLUS which use the NEWDOS/80 convention but are not detected by EXPORT2.
+</DD>
+
+</DL>
+
+<P>
+<TT>IMPORT2</TT> and <TT>EXPORT2</TT> are my modified versions of Frederic
+Vecoven's modified version of
+<A HREF="https://github.com/TimothyPMann/xtrs">Timothy Mann's originals</A>.
+<TT>VHDUTL</TT> is a modified version of Frederic Vecoven's original. 
+My main change was to add support for the Model II operating systems.
+Note that although there is a utility floppy image for each DOS and
+model the executables are all identical.  The copies are only required because
+of their incompatible file systems and floppies.  The executables themselves
+detect the DOS they are run under and use the correct system calls.
+
+<P>
+Except for the Model II they should work on a real machine with
+a FreHD hard drive emulator.  I have not tested this.
+
+<P>
+For bulk import and export I recommend either creating a <TT>/JCL</TT>
+(batch/script file) containing all the commands or using the <TT>-i</TT>
+options to have trs80gp do all the typing.
+There are also command line and GUI utilities to read and write files
+for many TRS-80 floppy image formats.
+I recommend the graphical
+<A HREF="http://www.trs-80emulators.com/trstools/">TRSTools</A> utility
+or the command line
+<A HREF="http://www.trs-80emulators.com/trsread-trswrite/">trsread &amp; trswrite</A>
+utilities.  Neither have any support for the Model II which was the primary
+motivation to add <TT>IMPORT2</TT> and <TT>EXPORT2</TT> to trs80gp.
+
+<H4><A NAME="intflop">Internal Floppy Images</A></H4>
+
+A handy table listing all the available internal floppy image files and
+how they may be accessed from the command line.  trs80gp only shows
+floppies made for the current model in the menu which is generally helpful
+but you can't use them to boot a Model 4 with a Model III TRSDOS like
+<TT>trs80gp -m4 :td3</TT> will do from the command line.  Unless you
+export the internal <TT>:td3</TT> image to a file in Model III mode and
+then insert that file in Model 4 mode.
+
+<P>
+<CENTER>
+<TABLE>
+<TR>
+<TH>Model</TH>
+<TH>DOS</TH>
+<TH>Menu Entry</TH>
+<TH>Type</TH>
+<TH>Command Line</TH>
+</TR>
+
+<TR>
+<TD ROWSPAN="9" VALIGN="TOP">I</TD>
+<TD ROWSPAN="4" VALIGN="TOP">TRSDOS 2.3</TD>
+<TD>&lt;&lt; TRSDOS23.dmk &gt;&gt;</TD>
+<TD>Boot</TD>
+<TD>:td1 or -td</TD>
+</TR>
+
+<TR>
+<TD>&lt;&lt; m1-trsdos-blank.dmk &gt;&gt;</TD>
+<TD>Blank</TD>
+<TD>:tb1</TD>
+</TR>
+
+<TR>
+<TD>&lt;&lt; m1-trsdos-util.dmk &gt;&gt;</TD>
+<TD>Utilities</TD>
+<TD>:tu1</TD>
+</TR>
+
+<TR>
+<TD>&lt;&lt; TRSDOS23j.dmk &gt;&gt;</TD>
+<TD>Boot</TD>
+<TD>:tj1<BR><TT>-m1j</TT> default</TD>
+</TR>
+
+<TR>
+<TD ROWSPAN="5" VALIGN="TOP">LDOS 5.3.1</TD>
+<TD>&lt;&lt; ld351-1.dsk &gt;&gt;</TD>
+<TD>Boot</TD>
+<TD>:ld1 or -ld<BR>(also inserts :ld1e)</TD>
+</TR>
+
+<TR>
+<TD>&lt;&lt; ld351-2.dsk &gt;&gt;</TD>
+<TD>Extras</TD>
+<TD>:ld1e</TD>
+</TR>
+
+<TR>
+<TD>&lt;&lt; m1-ldos-blank.dmk &gt;&gt;</TD>
+<TD>Blank</TD>
+<TD>:lb1</TD>
+</TR>
+
+<TR>
+<TD>&lt;&lt; m1-ldos-util.dmk &gt;&gt;</TD>
+<TD>Utilities</TD>
+<TD>:lu1</TD>
+</TR>
+
+<TR>
+<TD>&lt;&lt; ld531-1j.dmk &gt;&gt;</TD>
+<TD>Boot</TD>
+<TD>:lj1<BR><TT>-m1j</TT> for <TT>-ld</TT></TD>
+</TR>
+
+<TR>
+<TD ROWSPAN="8" VALIGN="TOP">II</TD>
+<TD ROWSPAN="3" VALIGN="TOP">TRSDOS 2.0a</TD>
+<TD>&lt;&lt; TSDOS20A.IMD &gt;&gt;</TD>
+<TD>Boot</TD>
+<TD>:td2 or -td</TD>
+</TR>
+
+<TR>
+<TD>&lt;&lt; m2-trsdos-blank.dmk &gt;&gt;</TD>
+<TD>Blank</TD>
+<TD>:tb2</TD>
+</TR>
+
+<TR>
+<TD>&lt;&lt; m2-trsdos-util.dmk &gt;&gt;</TD>
+<TD>Utilities</TD>
+<TD>:tu2</TD>
+</TR>
+
+<TR>
+<TD ROWSPAN="3" VALIGN="TOP">LS-DOS 6.3.1a</TD>
+<TD>&lt;&lt; l2-631a.dmk &gt;&gt;</TD>
+<TD>Boot</TD>
+<TD>:ld2 or -ld</TD>
+</TR>
+
+<TR>
+<TD>&lt;&lt; m2-lsdos-blank.dmk &gt;&gt;</TD>
+<TD>Blank</TD>
+<TD>:lb2</TD>
+</TR>
+
+<TR>
+<TD>&lt;&lt; m2-lsdos-util.dmk &gt;&gt;</TD>
+<TD>Utilities</TD>
+<TD>:lu2</TD>
+</TR>
+
+<TR>
+<TD ROWSPAN="2" VALIGN="TOP">TRSDOS II 4.2</TD>
+<TD>&lt;&lt; m2-trsdos4-blank.dmk &gt;&gt;</TD>
+<TD>Blank</TD>
+<TD>:t4b2</TD>
+</TR>
+
+<TR>
+<TD>&lt;&lt; m2-trsdos4-util.dmk &gt;&gt;</TD>
+<TD>Utilities</TD>
+<TD>:t4u2</TD>
+</TR>
+
+<TR>
+<TD ROWSPAN="6" VALIGN="TOP">III</TD>
+<TD ROWSPAN="3" VALIGN="TOP">TRSDOS 1.3</TD>
+<TD>&lt;&lt; TRSDOS13.DSK &gt;&gt;</TD>
+<TD>Boot</TD>
+<TD>:td3 or -td</TD>
+</TR>
+
+<TR>
+<TD>&lt;&lt; m3-trsdos-blank.dmk &gt;&gt;</TD>
+<TD>Blank</TD>
+<TD>:tb3</TD>
+</TR>
+
+<TR>
+<TD>&lt;&lt; m3-trsdos-util.dmk &gt;&gt;</TD>
+<TD>Utilities</TD>
+<TD>:tu3</TD>
+</TR>
+
+<TR>
+<TD ROWSPAN="3" VALIGN="TOP">LDOS 5.3.1</TD>
+<TD>&lt;&lt; ld3-531.dsk &gt;&gt;</TD>
+<TD>Boot</TD>
+<TD>:ld3 or -ld</TD>
+</TR>
+
+<TR>
+<TD>&lt;&lt; m3-ldos-blank.dmk &gt;&gt;</TD>
+<TD>Blank</TD>
+<TD>:lb3</TD>
+</TR>
+
+<TR>
+<TD>&lt;&lt; m3-ldos-util.dmk &gt;&gt;</TD>
+<TD>Utilities</TD>
+<TD>:lu3</TD>
+</TR>
+
+<TR>
+<TD ROWSPAN="6" VALIGN="TOP">4</TD>
+<TD ROWSPAN="3" VALIGN="TOP">TRSDOS 6.2.1</TD>
+<TD>&lt;&lt; TRS621.DSK &gt;&gt;</TD>
+<TD>Boot</TD>
+<TD>:td4 or -td</TD>
+</TR>
+
+<TR>
+<TD>&lt;&lt; m4-trsdos-blank.dmk &gt;&gt;</TD>
+<TD>Blank</TD>
+<TD>:tb4</TD>
+</TR>
+
+<TR>
+<TD>&lt;&lt; m4-trsdos-util.dmk &gt;&gt;</TD>
+<TD>Utilities</TD>
+<TD>:tu4</TD>
+</TR>
+
+<TR>
+<TD ROWSPAN="3" VALIGN="TOP">LS-DOS 6.3.1</TD>
+<TD>&lt;&lt; ld4-631.dsk &gt;&gt;</TD>
+<TD>Boot</TD>
+<TD>:ld4 or -ld</TD>
+</TR>
+
+<TR>
+<TD>&lt;&lt; m4-lsdos-blank.dmk &gt;&gt;</TD>
+<TD>Blank</TD>
+<TD>:lb4</TD>
+</TR>
+
+<TR>
+<TD>&lt;&lt; m4-lsdos-util.dmk &gt;&gt;</TD>
+<TD>Utilities</TD>
+<TD>:lu4</TD>
+</TR>
+
+<TR>
+<TD ROWSPAN="4" VALIGN="TOP">Any</TD>
+<TD ROWSPAN="4" VALIGN="TOP">Any</TD>
+<TD>&lt;&lt; Unformatted dmk &gt;&gt;</TD>
+<TD>Unformatted</TD>
+<TD>:dmk</TD>
+</TR>
+
+<TR>
+<TD>&lt;&lt; Unformatted imd &gt;&gt;</TD>
+<TD>Unformatted</TD>
+<TD>:imd</TD>
+</TR>
+
+<TR>
+<TD>&lt;&lt; Unformatted dmk DS &gt;&gt;</TD>
+<TD>Unformatted</TD>
+<TD>:dmk-ds</TD>
+</TR>
+
+<TR>
+<TD>&lt;&lt; Unformatted imd DS &gt;&gt;</TD>
+<TD>Unformatted</TD>
+<TD>:imd-ds</TD>
+</TR>
+
+</TABLE>
+</CENTER>
+
+<P>
+<CENTER>
+<TABLE>
+<TR><TH>Type</TH><TH>Description</TH></TR>
+
+<TR><TD>Boot</TD>
+<TD>Boot floppy for the given DOS.  Must go into drive <TT>:0</TT></TD>
+</TR>
+
+<TR><TD>Blank</TD>
+<TD>Formatted floppy for the given DOS.</TD>
+</TR>
+
+<TR><TD>Utility</TD>
+<TD>Utility programs for copying files to and from emulated floppies.</TD>
+</TR>
+
+<TR><TD>Unformatted&nbsp;&nbsp;</TD>
+<TD>Floppy image without any data.  Will require a <TT>FORMAT</TT> before
+it can be used by a particular DOS.
+</TD>
+</TR>
+
+<TR><TD>Extras</TD>
+<TD>Second floppy for Model I LDOS which doesn't have the space for
+everything on a single floppy.</TD>
+</TR>
+
+</TABLE>
+</CENTER>
+
+</body></html>
