@@ -1,0 +1,84 @@
+DOOM -> BUILD Notes (8/17/95):
+
+WAD2MAP.EXE and WAD2ART.EXE programmed by Ken Silverman
+
+Hello BUILDers:
+I made a DOOM to BUILD converter.  It's not perfect, but it works pretty
+darn well.  I thank Matthew S. Fell (msfell@aol.com) for providing the
+unofficial DOOM spec where I got most of my information from.
+
+There are 2 ways you can use my converter programs:
+
+1.  Converting doom maps using DOOM ART.
+         This method is useful for viewing a doom map in the BUILD editor
+         or for viewing the artwork in EDITART.  Remember that if you wanted
+         the game to run with doom's artwork, you may as well play the real
+         doom!  (And Apogee wouldn't want that to happen!)
+
+2.  Converting doom maps using DUKE3D ART (or your own art) & TAGS by
+       	 using a script file.  To convert maps using this method, you can
+       	 run WAD2MAP.EXE with the additional script filename parameter as
+       	 described below.
+
+WAD2ART:
+	Command line: Wad2Art [Doom IWAD file]
+		Wad2art creates all the necessary files needed to use Doom maps
+	except for the map files themselves.  It will make these 3 files in
+	the current directory:
+
+	TILES000.ART - All the texture data
+	PALETTE.DAT  - VGA palette, shade lookups, (*)transluscent table
+	NAMES.H      - The Wad directory listed as defines, useful for editors.
+
+	Example: C:\TEMP>wad2art c:\doom\doom.wad
+	This will create TILES000.ART, PALETTE.DAT, and NAMES.H in C:\TEMP.
+	Warning: NEVER RUN WAD2ART IN A DIRECTORY THAT HAS ART, PALETTE.DAT,
+				or NAMES.H files that you need!
+
+		(*) If you want to use transluscence, you will need to run
+	TRANSPAL.EXE on the palette file.  It will add a 64K lookup table at
+	the end of palette.dat.  If you do not do this, then transluscence
+	won't work with the palette.
+
+WAD2MAP:
+     Command line: Wad2Map (PWADName) IWADName MapName (ScriptName)
+
+     Example #1: C:\TEMP>wad2map c:\doom\doom e1m1
+		The above will create E1M1.MAP with doom textures in the
+		current directory.
+
+     Example #2: C:\TEMP>wad2map c:\doom\doom e1m1 kenbuild.txt
+		The above will create E1M1.MAP with converted textures/tags
+		in the current directory.
+
+     Example #3: C:\TEMP>wad2map c:\doom\mypwad c:\doom\doom e1m1
+		The above will create E1M1.MAP from the PWAD with doom
+		textures in the current directory.
+
+     Example #4: C:\TEMP>wad2map c:\doom\mypwad c:\doom\doom e1m1 kenbuild.txt
+		The above will create E1M1.MAP from the PWAD with converted
+		textures/tags in the current directory.
+
+     You can run WAD2MAP.EXE to convert any doom map, including maps from
+                DOOM1 or DOOM2 in IWADs or PWADs.
+
+	I included a sample script file, KENBUILD.TXT.  Try it and see how it
+works with my game!  There are directions on how to use the script file in
+the script file itself.
+
+TRANSPAL.EXE:
+		Command line:
+
+		TRANSPAL [numshades][transluscence percentage][r][g][b]
+			Ex #1: transpal 32 170 30 59 11
+										  юддаддаддд The RGB scales are optional\n");
+        Transluscence percentage is 0 for invisible and 255 for opaque.
+
+        Use TRANSPAL.EXE to create a transluscence table to PALETTE.DAT.  Make
+	sure you have PALETTE.DAT in the directory before running TRANSPAL.EXE.
+	If the table does not already exist, it will add a 64K lookup table
+	to the end of PALETTE.DAT.  If you do not do this, then transluscence
+	won't work when you use the BUILD editor.
+-----------------------------------------------------------------------------
+
+               Doom & Doom II are (c) 1993-1996 id Software, Inc.

@@ -1,1 +1,0 @@
-loadfix.com rick.com

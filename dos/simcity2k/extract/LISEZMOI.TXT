@@ -1,0 +1,275 @@
+SIMCITY 2000 (TM)
+Notes de derniŠre minute
+27/12/93
+----------------
+
+Veuillez lire _TOUT_ le document ! TrŠs important !
+
+Ce texte contient beaucoup d'informations sur la m‚moire, 
+l'installation, les cartes graphiques et sonores, les problŠmes li‚s au 
+jeu, l'importation de villes provenant d'autres versions de SimCity et 
+sur les touches de raccourci.
+
+** LE PLUS IMPORTANT -- LA MEMOIRE
+
+SimCity 2000 exige beaucoup de m‚moire pour tourner, 4 Mo au total, et 
+utilise une grande partie de la m‚moire conventionnelle de 640 Ko. 
+Parfois, mˆme avec 4 Mo de m‚moire, SimCity 2000 indique que la m‚moire 
+conventionnelle ou EMS disponible sur l'ordinateur est insuffisante. 
+C'est pourquoi il est recommand‚ de cr‚er une disquette d'amorce en 
+suivant les instructions en page 6 de l'Addenda/D‚marrage rapide de 
+SimCity 2000. Une autre solution consiste … installer le programme sans 
+s‚lectionner les options de son et de musique. Si vous avez d‚j… 
+install‚ SimCity 2000, vous pouvez modifier ses paramŠtres sonores, 
+musicaux et graphiques actuels en ex‚cutant le programme INSTALL.EXE du 
+r‚pertoire SimCity 2000.
+
+Il vaut mieux ne pas charger de gestionnaires de m‚moire ou 
+d'utilitaires de cache disque tandis que SimCity 2000 tourne, notamment 
+si l'ordinateur utilise une version DOS 6.x et ne dispose que de 4 Mo de 
+RAM. 
+
+Si un gestionnaire de m‚moire est utilis‚, il NE DOIT PAS ˆtre r‚gl‚ en 
+mode automatique car il risque d'entrer en conflit avec SimCity 2000. 
+
+Si vous devez absolument charger EMM386.EXE, la version MS-DOS v.6.X 
+‚tant install‚e sur l'ordinateur, d‚finissez la taille de la m‚moire EMS 
+sur 'noems' ou sup‚rieure … 4096. Voir la documentation DOS pour plus de 
+d‚tails concernant cette op‚ration. 
+
+
+** INSTALLER LES COMPOSANTS
+
+S‚lection graphique
+----------------
+Le programme d'installation de SimCity 2000 recherche d'abord le type de 
+carte vid‚o install‚ sur l'ordinateur. AprŠs l'avoir d‚tect‚e, le 
+programme identifie la carte dans la fenˆtre de s‚lection vid‚o. Si le 
+programme d'installation n'arrive pas … confirmer le type de carte vid‚o 
+utilis‚, ou s'il d‚tecte la pr‚sence d'un pilote VESA  en m‚moire (ou 
+dans le BIOS), il s‚lectionne par d‚faut le VESA VIDEO DRIVER (PILOTE 
+VIDEO VESA). Cliquez sur la flŠche … droite de PILOTE VIDEO VESA pour 
+afficher la liste des cartes possibles, proches du type d‚tect‚ sur 
+l'ordinateur. Si le nom de la carte est cit‚ sur la liste, s‚lectionnez-
+le … la place du pilote VESA choisi par d‚ faut.
+
+S‚lection sonore
+----------------
+SimCity 2000 ne sait pas d‚tecter automatiquement le type de la carte 
+sonore install‚e. Vous devez trouver son nom sur la liste. Le programme 
+d'installation essaye alors de confirmer la pr‚sence de cette carte sur 
+l'ordinateur. Si le programme d'installation ne confirme pas la pr‚sence 
+de la carte sp‚cifi‚e, il est probable que certains r‚glages mat‚riels 
+diffŠrent des r‚glages que SimCity 2000 attend pour cette carte. Pour 
+changer ces paramŠtres, s‚lectionner l'option Modifier les paramŠtres de 
+la fenˆtre de v‚rification de la carte sonore (celle qui indique ® OK ¯ 
+ou ® Echec! ¯). Pour plus d'informations sur les paramŠtres de 
+configuration mat‚rielle, voir la documentation de la carte sonore.
+
+
+** SUPPORT DE CARTE VIDEO
+
+Pilotes VESA
+--------------
+SimCity 2000 reconnaŒt un grand nombre de cartes vid‚o ainsi que le mode 
+de r‚solution VESA 101 (640 x 480 x 256 couleurs). Ce mode satisfait … 
+la norme ‚lectronique et vid‚o VESA (Video Electronics Standards 
+Association). Si le nom de votre carte vid‚o n'apparaŒt pas sur la liste 
+affich‚e par le programme d'installation, choisissez PILOT
+E VIDEO VESA et lancez un pilote VESA reconnu par votre carte vid‚o 
+avant de lancer SimCity 2000. Certaines cartes vid‚o sont accompagn‚es 
+de pilotes VESA incorpor‚s, ce qui ‚vite de charger le pilote en mode 
+manuel. D'autres cartes ont un fichier externe … ex‚cuter sur la ligne 
+de commande DOS avant de lancer SimCity 2000. D'autres cartes 
+vid‚o, telle que Diamond Viper VLB, ont un pilote VESA incorpor‚ … la 
+m‚moire BIOS de la carte vid‚o, mais dans ce cas, vous devez informer la 
+carte de charger le pilote avant de lancer SimCity 2000. Dans l'exemple 
+du Diamond Viper VLB, tapez 'VPRMODE VESA' [Entr‚e] sur la ligne de 
+commande pour charger son pilote.
+Si le pilote VESA est un programme externe, il est probablement plac‚ 
+sur les disquettes d'installation de la carte vid‚o. Si vous ne poss‚dez 
+pas de pilote VESA, contactez le revendeur de votre carte vid‚o. Des 
+pilotes VESA ont ‚t‚ ajout‚s … SimCity 2000 pour g‚rer les types de 
+cartes trŠs courants.
+
+Cartes vid‚o ATI Ultra Pro ou Mach 32 
+------------------------------------
+Si une carte ATI Ultra Pro ou pilot‚e par puce Mach 32 est utilis‚e, 
+vous devez ex‚cuter l'utilitaire MW_ATIUP avant de lancer SimCity pour 
+assurer la pleine compatibilit‚.
+
+Pour utiliser une carte ATI avec SimCity 2000 :
+
+Tapez :       MW_ATIUP [Entr‚e]
+Puis :          SimCity 2000 [Entr‚e]
+
+Cartes vid‚o Trident
+----------------
+Les anciennes cartes vid‚o Trident ne sont pas toujours compatibles avec 
+le pilote Trident install‚ par SimCity 2000. Si l'installation d'une 
+carte vid‚o pose des difficult‚s d'affichage, lancez le programme 
+INSTALL.EXE dans le r‚pertoire SimCity 2000 et s‚lectionnez le pilote 
+vid‚o VESA.
+
+
+** SUPPORT DE CARTE SONORE
+
+Pilotes sonores Miles 
+----------------
+Le support sonore sous SimCity 2000 est assur‚ par le biais de 
+bibliothŠques de pilotes sonores John Miles AIL. Des pilotes sont 
+disponibles pour plusieurs cartes sonores. La plupart sont g‚r‚es et 
+install‚es par le programme d'installation de SimCity 2000. Si le nom de 
+votre carte n'apparaŒt pas dans le programme d'installation, adressez-
+vous … son constructeur pour obtenir les pilotes concern‚s et d‚couvrir 
+le potentiel sonore complet de SimCity 2000. SimCity 2000 requiert des 
+pilotes en mode plat … 32 bits. Les affichages diff‚rents de 32 bits ne 
+fonctionnent pas.
+
+Pro Audio Spectrum
+----------------
+MUSIQUE : Pour activer le pilote musical de Pro Audio Spectrum, chargez 
+MVSOUND.SYS de Media Vision en gestionnaire, en modifiant le fichier 
+CONFIG.SYS. Si ce pilote n'est pas charg‚ en gestionnaire, le programme 
+d'installation affiche un message d'‚chec … la v‚rification et le 
+programme n'‚met AUCUNE musique pendant le d‚roulement du jeu. Pour plus 
+d'informations sur MVSOUND.SYS, reportez-vous au manuel d'utilisation 
+Pro Audio Spectrum, ou contactez le Support technique de Media Vision.
+
+EFFETS SONORES : Si vous choisissez la carte d'effets sonores Pro Audio 
+Spectrum, vous constatez parfois des ® chutes ¯ de niveau subites ou 
+mˆme l'absence de toute ‚mission sonore. Si cela se produit, ex‚cutez … 
+nouveau le programme INSTALL, et remplacez la carte d'effets sonores Pro 
+Audio Spectrum par Sound Blaster.
+
+ATTENTION : Cela ne marche pas obligatoirement, selon le type Pro Audio  
+Spectrum utilis‚. Appelez le Support technique de Media Vision en cas de 
+problŠmes.
+
+Gravis Ultrasound
+----------------
+SimCity 2000 est compatible avec le programme d'‚mulation r‚sidant SBOS 
+Sound Blaster pour le GUS. Toutefois, SimCity 2000 NE PERMET PAS 
+d'utiliser en mˆme temps SBOS et les gestionnaires de m‚moire courants 
+(tel que EMM386). Il NE FAUT PAS essayer d'ex‚cuter ou mˆme d'installer 
+SimCity 2000 si SBOS et un gestionnaire de m‚moire sont r‚sidants en 
+mˆme temps. Une catastrophe pourrait se produire.
+
+Cartes sonores Aria
+----------------
+Nous offrons d‚sormais des pilotes Miles Design destin‚s … toutes les 
+cartes sonores de type ARIA Sound Synth de Sierra Semiconductor :
+
+Viva Maestro 16
+VR Alpha Systems
+Cyber Audio
+Add Tech Sound 2000
+Sound Tower
+Cardinal Technologies Sound Pilot
+Diamond Computer Systems Sonic Sound
+Sonic Sound Pro
+Genoa Systems AudioBahn
+AudioBahn Listener
+Kingston Technologies Omnivox
+Zoltrix TESS
+Et bien d'autres encore...
+
+** PROBLEMES LIES AU JEU
+
+Micro-simulateurs
+----------------
+Lors de ses recherches, le programme fournit des statistiques locales 
+sur certaines structures. Ainsi, l'interrogation d'un Commissariat 
+signale le nombre de crimes et d'arrestations report‚s, l'interrogation 
+d'une ‚cole indique le nombre d'enseignants et d'‚lŠves fr‚quentant 
+l'‚tablissement, ainsi que les moyennes des ‚lŠves. La plupart des 
+structures de type institutionnel sont ‚quip‚es de micro-simulateurs 
+(police, pompiers, ‚coles, universit‚, eau et ‚lectricit‚, h“tel de 
+ville, arcologies, etc). Parfois, l'utilisation d'un micro-simulateur 
+est partag‚e entre toutes les structures introduites. Les transports en 
+commun, les gares, les marinas, les bibliothŠques, les moulins … vent et 
+les compagnies d'hydro-‚lectricit‚ parmi d'autres, possŠdent 1 
+microprocesseur par cat‚gorie (un microprocesseur pour toutes les 
+stations d'autobus, un pour les gares ferroviaires, etc). Si vous vous 
+demandez o— nous voulons en arriver, sachez que chaque ville ne peut 
+disposer que de 150 micro-simulateurs. Une fois ce chiffre d‚pass‚, 
+chaque structure introduite continue d'affecter le fonctionnement global 
+du simulateur (les policiers continuer d'arrˆter les bandits, les 
+autobus de transporter des passagers, les arcologies d'abriter des 
+gens), mais les informations locales sur ces structures ne peuvent plus 
+ˆtre visualis‚es. Ce qui ne veut pas dire que la ville est d‚sormais 
+menac‚e. Non, mais on peut manquer de micro-simulateurs dans une grande 
+ville, tenez-vous le pour dit, mˆme si cela ne doit pas vous inqui‚ter 
+inutilement.
+
+Modification du terrain
+----------------
+Lorsque vous passez en mode de modification de terrain au moment de 
+construire une ville, les bƒtiments disparaissent pour ne r‚v‚ler que 
+les arbres ou les cours d'eau que vous avez introduits dans le paysage. 
+En outre, si vous avez remblay‚ un terrain pour y construire 
+automatiquement un pont ou une autre structure, la pr‚paration du 
+terrain
+ est ‚galement repr‚sent‚e en mode de modification. Ces ‚l‚ments peuvent 
+ˆtre supprim‚s du paysage … l'aide de l'outil Rabaisser terrain.
+
+A‚roports
+---------
+Vous devez pr‚voir l'emplacement des pistes d'atterrissage au moment de 
+construire un a‚roport, ou il ne sera pas bƒti. L'aire minimum de la 
+surface utile pour les a‚roports mesure 2 parcelles sur 6. Pour bƒtir 
+l'a‚roport, il est recommand‚ d'utiliser des incr‚ments de 4 parcelles 
+sur 6. Par ailleurs, essayez d'‚viter la proximit‚ des grandes tours ! 
+Les pilotes de SimCity 2000 ne sont pas r‚put‚s pour leur talents d'as 
+du ciel ! N'oubliez pas non plus de pr‚voir l'implantation de lignes 
+‚lectriques dans l'installation de l'a‚roport. Les a‚roports ne peuvent 
+ˆtre construits que s'ils sont fournis en ‚lectricit‚ sur certaines 
+parcelles.
+
+
+** IMPORTATION D'AUTRES VILLES
+
+Importer des villes de SimCity Classic et de SimCity 2000 Mac
+------------------------------------------------------
+Vous pouvez charger des villes de SimCity Classic et de SimCity 2000 Mac 
+et les enregistrer en format SimCity 2000 DOS.
+
+Pour importer des parties SimCity Classic DOS et SimCity 2000 Mac, 
+renommez l'ancien fichier avec l'extension ® .SC2 ¯. Si le fichier est 
+de format SimCity Classic DOS, SimCity 2000 vous demande de confirmer sa 
+conversion en format SimCity 2000. La conversion ne modifie le fichier 
+original qu'au moment de son nouvel enregistrement.
+Pour convertir des fichiers SimCity Classic Mac, vous devez utiliser le 
+fichier PC2MAC.EXE install‚ dans le r‚pertoire SimCity 2000.
+
+Tapez PC2MAC <NOMMAC> <NOMDOS.SC2> [Entr‚e] pour convertir le fichier. 
+Par exemple, si le fichier Mac s'appelle Megapole, tapez la commande 
+suivante pour convertir son fichier :
+
+		PC2MAC Megapole Megapole.SC2 [Entr‚e]
+
+
+** TOUCHES D'APPEL
+
+TOUCHE MAJ -
+1. Au moment d'introduire un ‚l‚ment, appuyez sur la touche Maj avant de 
+relƒcher le bouton de la souris si vous voulez annuler sa position … 
+l'‚cran.
+2. Maintenez la touche Maj enfonc‚e tout en cliquant sur l'‚l‚ment voulu 
+dans la fenˆtre de modification pour ouvrir l'‚cran d'interrogation sur 
+cet ‚l‚ment. 
+3. Maintenez la touche Maj enfonce‚ tout en cliquant sur un bouton ou un 
+‚l‚ment dans une fenˆtre si vous voulez obtenir une description d'aide.
+
+CTRL - transforme temporairement le curseur en outil Bulldozer.
+ORIGINE - agrandit d'un niveau l'‚chelle de la ville
+FIN - r‚duit d'un niveau l'‚chelle de la ville
+SUP - fait pivoter la ville de 90 degr‚s vers la gauche 
+PG.SUIV - fait pivoter la ville de 90 degr‚s vers la droite 
+Touche fl‚ch‚es - permet de naviguer dans la ville
+
+Merci d'avoir achet‚ SimCity 2000
+En vous souhaitant autant de plaisir que nous en avons eu … le cr‚er.
+
+[EOF]
+-------------------------------------------------------------------
