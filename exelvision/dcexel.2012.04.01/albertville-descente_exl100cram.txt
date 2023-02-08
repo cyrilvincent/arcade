@@ -1,0 +1,3 @@
+ALBERTVILLE DESCENTE version Exelmémoire
+Lancement du jeu en Exelbasic ou Exelbasic+
+CALL EXEC(32768)
