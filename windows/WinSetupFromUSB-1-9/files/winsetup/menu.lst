@@ -1,0 +1,20 @@
+color black/cyan yellow/cyan
+timeout 10
+
+#graphicsmode 0x6A
+graphicsmode -1 640 480:800 24:32 || graphicsmode -1
+## Menu AutoNumber
+write 0x8274 0x2001
+
+#graphicsmode -1 800:640 -1 24:32 || graphicsmode -1
+#font /unifont.hex.gz
+
+
+#clear mappings and set root in case we return from bootmgr
+map --unmap=0:0xff
+map --unhook
+map --rehook
+ls /usbdrive.tag > nul || find --set-root --devices=hf /usbdrive.tag > nul
+ls /default > nul && default /default
+
+

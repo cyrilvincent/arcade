@@ -1,0 +1,17 @@
+color black/cyan yellow/cyan
+write 0x8274 0x2001
+timeout 10
+ls /windefault > nul && default /windefault
+
+title ...Back to Main Menu
+ls /usbdrive.tag > nul || find --set-root --devices=hf /usbdrive.tag > nul
+configfile /menu.lst
+
+title \n
+root
+
+#dpms#
+
+#F6##F6##F6##F6##F6##F6##F6##F6##F6##F6##F6##F6##F6##F6##F6##F6##F6##F6##F6##F6##F6##F6##F6##F6##F6##F6##F6##F6##F6##F6##F6##F6##F6# #DO NOT REMOVE THESE LINES 
+
+#separator#

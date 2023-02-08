@@ -1,0 +1,15 @@
+<?xml version="1.0"?> 
+<dpInst>
+
+<!--  <quietInstall/> -->
+  <suppressEulaPage/>
+
+  <scanHardware/>
+ 
+  <search>
+    <subDirectory>*</subDirectory>
+  </search>
+
+  <eula type="txt" path="eula.txt" />
+
+</dpInst> 

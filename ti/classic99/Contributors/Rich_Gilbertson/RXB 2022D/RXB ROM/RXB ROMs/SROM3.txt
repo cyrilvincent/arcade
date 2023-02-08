@@ -1,0 +1,885 @@
+************************************************************
+       AORG >6000
+       TITL 'RXB ROM3'
+************************************************************
+* EQUATS
+BIAS   EQU  >6000
+PAD    EQU  >8300       * TEMP
+PAD1   EQU  >8301       * TEMP
+PAD2   EQU  >8302       * VDP ADDRESS
+PAD3   EQU  >8303       * TEMP
+BYTES  EQU  >830C       * STRING LENGTH
+SREF   EQU  >831C       * STRING POINTER
+FAC    EQU  >834A       * RAM line buffer
+FAC1   EQU  >834B       * GCHAR buffer
+FAC4   EQU  >834E       * String Address
+FAC6   EQU  >8350       * String Length
+STATUS EQU  >837C       * GPL STATUS BYTE
+ISR    EQU  >83C4       * ISR HOOK
+GR0LB  EQU  >83E1       * GPLWS R0 LSB
+GR4LB  EQU  >83E9       * GPLWS R4 LSB
+ARG    EQU  >835C       * USED AS FLAG FOR ASCHEX
+VBUFF  EQU  >03C0       * line buffer in VRAM
+VDPRD  EQU  >8800       * VDP Read Data address
+VDPWD  EQU  >8C00       * VDP Write Data address
+************************************************************
+UNUSED DATA >0000,>0000,>0000,>0000
+       DATA >0000,>0000,>0000,>0000
+************************************************************
+* XML table number 7 for RXB ROM3 - must have              *
+*     it's origin at >6010                                 *
+************************************************************
+*             0     1     2     3     4     5     6
+       DATA RROLL,LROLL,UROLL,DROLL,HCHAR,VCHAR,ASCHEX
+*             7    8    9     A     B     C     D
+       DATA HPUT,VPUT,>0000,>0000,>0000,>0000,>0000
+*             E     F
+       DATA >0000,CHRLDR
+************************************************************
+* XML table number 8 for RXB ROM3 - must have              *
+*     it's origin at >6030                                 *
+************************************************************
+*             0      1     2     3     4     5     6     7
+       DATA COLLSP,>0000,>0000,>0000,>0000,>0000,>0000,>0000
+*             8     9     A     B     C     D     E     F
+       DATA >0000,>0000,>0000,CINIT,XISRON,XISROF,>0000,>0000
+*
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+* Write VRAM address
+*     Expects address in R0
+*
+* BL here for writing data
+*
+VWADD  ORI  R0,>4000    * set to write VRAM data
+*
+* BL here for reading data
+*
+VWADDA MOVB @GR0LB,*R15 * write LSB of R0 to VDPWA
+       MOVB R0,*R15     * write MSB of R0 to VDPWA
+       ANDI R0,>3FFF    * ensure R0 returned intact
+       RT
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+* The following utilities expect 
+*     R0 = VRAM address of row
+*     R1 = RAM buffer address
+*
+* R2 and R10 will be destroyed
+* 
+* Copy 1 row of 32 bytes from VDP (R0) to RAM (R1)
+*
+VRROW  MOV  R11,R10   * save return
+       BL   @VWADDA   * write out VDP read address
+       LI   R2,32     * read 1 row
+       LI   R8,VDPRD  * Register faster then address
+VRROW1 MOVB *R8,*R1+  * read next VDP byte to RAM
+       MOVB *R8,*R1+  * read next VDP byte to RAM
+       DECT R2        * dec count by 2
+       JNE  VRROW1    * repeat if not done
+       B    *R10      * return to caller
+
+* 
+* Copy 1 row of 32 bytes from RAM (R1) to VDP (R0)
+*
+VWROW  MOV  R11,R10   * save return
+       BL   @VWADD    * write out VDP write address
+       LI   R2,32     * write one row
+       LI   R8,VDPWD  * Register faster then address
+VWROW1 MOVB *R1+,*R8  * write next VDP byte from RAM
+       MOVB *R1+,*R8  * write next VDP byte from RAM
+       DECT R2        * dec count by 2
+       JNE  VWROW1    * repeat if not done
+       B    *R10      * return to caller
+
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+* RROLL
+*
+RROLL  MOV  R11,R9    * save return address
+       CLR  R0        * set to screen start
+       LI   R3,24     * rows to roll
+* Write row to RAM buffer
+RROLLP LI   R1,FAC+1  * RAM buffer+1 for roll-right positions
+       BL   @VRROW    * copy row to RAM buffer 2 bytes at a time
+* Copy last column before first in RAM buffer
+       MOVB @FAC+32,@FAC * copy roll-out byte to roll-in position
+* Copy rolled row back to screen (R0 still has correct location)
+       LI   R1,FAC    * reset RAM buffer pointer
+       BL   @VWROW    * copy rolled line          
+* Process next row
+       AI   R0,32     * next row                   
+       DEC  R3        * dec row count
+       JNE  RROLLP    * roll next row if not done
+       B    @PAGER    * return to caller
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+* LROLL
+*
+LROLL  MOV  R11,R9    * save return address
+       CLR  R0        * set to screen start
+       LI   R3,24     * rows to roll
+* Write row to RAM buffer
+LROLLP LI   R1,FAC    * RAM buffer+1 for roll-left positions
+       BL   @VRROW    * copy row to RAM buffer 2 bytes at a time
+* Copy first column after last in RAM buffer
+       MOVB @FAC,@FAC+32 * copy roll-out byte to roll-in position
+* Copy rolled row back to screen (R0 still has correct location)
+       LI   R1,FAC+1  * reset RAM buffer pointer
+       BL   @VWROW    * copy rolled line 2 bytes at a time
+* Process next row
+       AI   R0,32     * next row                   
+       DEC  R3        * dec row count
+       JNE  LROLLP    * roll next row if not done
+       B    @PAGER    * return to caller
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+* UROLL
+*
+UROLL  MOV  R11,R9    * save return address
+       CLR  R0        * set to screen start
+       LI   R3,23     * rows to roll (all but 1st)
+* Write first row to RAM buffer
+       LI   R1,FAC    * set RAM buffer
+       BL   @VRROW    * copy row to RAM buffer 2 bytes at a time
+* Copy RAM buffer to VRAM buffer
+       LI   R0,VBUFF  * set VRAM dest to VBUFF
+       LI   R1,FAC    * set RAM buffer
+       BL   @VWROW    * copy row to VBUFF 2 bytes at a time
+* Start copy loop at 2nd row
+       LI   R0,32     * point to 2nd row
+* Write row to RAM buffer
+UROLLP LI   R1,FAC    * set RAM buffer
+       BL   @VRROW    * copy row to RAM buffer 2 bytes at a time
+* Copy to previous row
+       AI   R0,-32    * back up 1 row
+       LI   R1,FAC    * reset RAM buffer pointer
+       BL   @VWROW    * copy to previous row 2 bytes at a time
+* Process next row
+       AI   R0,64     * next row
+       DEC  R3        * dec row count
+       JNE  UROLLP    * roll next row if not done
+* Copy saved row to RAM
+       LI   R0,VBUFF  * set VRAM source
+       LI   R1,FAC    * set RAM buffer
+       BL   @VRROW    * copy row to RAM buffer 2 bytes at a time
+* Copy saved row to last row
+       LI   R0,736    * point to last row
+       LI   R1,FAC    * reset RAM buffer pointer
+       BL   @VWROW    * copy to last row 2 bytes at a time
+       B    @PAGER    * return to caller
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+* DROLL
+*
+DROLL  MOV  R11,R9    * save return address
+       LI   R0,736    * set to last row
+       LI   R3,23     * rows to roll (all but last)
+* Write last row to RAM buffer
+       LI   R1,FAC    * set RAM buffer
+       BL   @VRROW    * copy row to RAM buffer 2 bytes at a time
+* Copy RAM buffer to VRAM buffer
+       LI   R0,VBUFF  * set VRAM dest to VBUFF
+       LI   R1,FAC    * set RAM buffer
+       BL   @VWROW    * copy row to VBUFF 2 bytes at a time
+* Start copy loop at 2nd-to-last row
+       LI   R0,704    *  point to row 22
+* Write row to RAM buffer
+DROLLP LI   R1,FAC    * set RAM buffer
+       BL   @VRROW    * copy row to RAM buffer 2 bytes at a time
+* Copy to next row
+       AI   R0,32     * down 1 row
+       LI   R1,FAC    * reset RAM buffer pointer
+       BL   @VWROW    * copy to next row 2 bytes at a time
+* Process next row
+       AI   R0,-64    * back up 2 rows
+       DEC  R3        * dec row count
+       JNE  DROLLP    * roll next row if not done
+* Copy saved row to RAM
+       LI   R0,VBUFF  * set VRAM source
+       LI   R1,FAC    * set RAM buffer
+       BL   @VRROW    * copy row to RAM buffer 
+*                     *  2 bytes at a time
+* Copy saved row to first row
+       CLR  R0        * point to first row
+       LI   R1,FAC    * reset RAM buffer pointer
+       BL   @VWROW    * copy to first row 2 bytes at a time
+       B    @PAGER    * return to caller
+*************************************************************
+* CALL HCHAR(row,column,character#,repetition)
+* R0 VDP ADDRESS = PAD2
+* R1 CHARACTER   = PAD 
+* R3 COUNTER     - FAC
+*
+HCHAR  MOV  R11,R9      * save return address
+       LI   R8,VDPWD    * put VDPWD in R8 for faster loop
+       MOV  @PAD2,R0    * VRAM start address for HCHAR4
+       MOV  @PAD,R1     * ASCII char code is in MSB
+       AI   R1,>6000    * Add screen offset (96) to char in MSB
+       MOV  @FAC,R3     * repetition to R3..
+       MOV  R3,R7       * .. and to R4 for manipulation
+       LI   R5,768      * get screen end = 768 to a register..
+       MOV  R5,R6       * ..and to R6 for screen size
+       C    R6,R7       * scrn_size > cnt, i.e., cnt OK?
+       JGT  HCHAR1      * yes; jump
+       MOV  R6,R7       * no; cnt = scrn_size
+HCHAR1 C    R0,R5       * VRAM address outside screen?
+       JHE  HCHARX      * error if so..just exit
+       S    R0,R5       * bytes to end of screen
+HCHAR2 MOV  R7,R3       * put cnt in R3 for HCHAR4
+       JGT  HCHAR3      * are we done?
+       JMP  HCHARX      * yup; we're outta here!
+HCHAR3 S    R5,R7       * no; do we wrap to screen start?
+       JLT  HCHAR4      * no
+       MOV  R5,R3       * yes, just go to screen end
+HCHAR4 BL   @VWADD      * write out VRAM write address
+HCHAR5 MOVB R1,*R8      * Write a byte to next VRAM location
+       DEC  R3          * decrement count
+       JNE  HCHAR5      * Not done, fill another
+       CLR  R0          * wrap for next round
+       MOV  R6,R5       * scrn_size to bytes-to-end-of-screen
+       JMP  HCHAR2      * see if more
+HCHARX B    @PAGER      * return to caller
+*************************************************************
+* CALL VCHAR(row,column,character#,repetition)
+* R0 VDP ADDRESS = PAD2
+* R1 CHARACTER   = PAD 
+* R3 COUNTER     = FAC
+VCHAR   MOV  R11,R9     * save return address
+        MOV  @PAD2,R0   * VDP ADDRESS 
+        MOV  R0,R7      * Copy VDP ADDRESS
+VCHART  CI   R7,31      * VDP ADDRESS>=31 top?
+        JLE  VCHARD     * column<=31 top found
+        AI   R7,-32     * VDP ADDRESS-32
+        JMP  VCHART     * Loop
+VCHARD  CI   R7,31      * column=31?
+        JNE  VCHARR     * 0 to 30
+        CLR  R7         * Reset column to 0
+        JMP  VCHARZ
+VCHARR  INC  R7         * column+1
+VCHARZ  MOV  @PAD,R1    * Character to display
+        AI   R1,BIAS    * Screen offset 96 
+        MOV  @FAC,R3    * Repetition  
+        LI   R8,VDPWD   * Register faster then @
+VCHAR0  BL   @VWADD     * write out VRAM write address
+VCHAR1  MOVB R1,*R8     * write next VRAM byte from R1
+        CI   R0,768     * End of screen?
+        JEQ  VCHARE     * Yes
+        CI   R0,735     * next to last ROW?
+        JLE  VCHAR3     * Yes
+VCHARE  MOV  R7,R0      * VDP ADDRESS=COPY VDP ADDRESS 
+        INC  R7         * column+1 
+        CI   R7,31      * Next row past last column? 
+        JLE  VCHAR2     * No
+        CLR  R7         * Wrap Column back
+VCHAR2  DEC  R3         * repetition-1
+        JNE  VCHAR0     * No done yet
+        JMP  VCHAR4     * Exit
+VCHAR3  AI   R0,32      * ROW+1
+        CI   R0,768     * Off screen?
+        JHE  VCHARE     * Yes reset
+        DEC  R3         * REPETITION-1
+        JNE  VCHAR0     * No loop
+VCHAR4  B    @PAGER     * RETURN TO XB
+*************************************************************
+* CALL HPUT(row,column,string or number)
+* R0 VDP SCREEN ADDRESS = PAD2 R5,R0
+* R4 VDP STRING ADDRESS = FAC4 R4,R0
+* R3 COUNTER            = FAC6 R3
+*
+HPUT    MOV  R11,R9     * save return address
+        MOV  @PAD2,R5   * VDP SCREEN ADDRESS
+        MOV  @FAC4,R4   * String address or number
+        MOV  @FAC6,R3   * Length
+        LI   R7,BIAS    * Get Screen bias off set 
+        LI   R1,VDPWD   * Register faster then @
+        LI   R8,VDPRD   * Register faster then @
+        CI   R3,0       * Length=0? 
+        JEQ  HPUT2      * Yes
+HPUT0   MOV  R4,R0      * Get String/number address
+        BL   @VWADDA    * read out VDP address R4
+        MOVB *R8,R6     * Get $/# from R4 byte into R6
+        AB   R7,R6      * Add bias
+        MOV  R0,R4      * Get new update into R4
+        INC  R4         * STRING ADDRESS+1
+        MOV  R5,R0      * Get SCREEN ADDRESS
+        BL   @VWADD     * write out VDP write address R5
+        MOVB R6,*R1     * Put R6 onto screen address R0 
+        MOV  R0,R5      * Get new update into R5
+        INC  R5         * SCREEN ADDRESS+1
+        CI   R5,768     * Last row:col?
+        JNE  HPUT1      * No, so continue loop
+        CLR  R5         * Reset back to top row:col
+        DEC  R3         * count by -1
+        JNE  HPUT0      * count=0? Restart at top row:col
+        B    @PAGER     * return to caller
+HPUT1   DEC  R3         * count by -1
+        JNE  HPUT0      * count=0?
+HPUT2   B    @PAGER     * return to caller
+*************************************************************
+* CALL VPUT(row,column,string or number)
+* R0 VDP SCREEN ADDRESS = PAD2 R5,R0
+* R4 VDP STRING ADDRESS = FAC4 R4,R0
+* R3 COUNTER            = FAC6 R3
+*
+VPUT    MOV  R11,R9     * save return address
+        MOV  @PAD2,R5   * VDP ADDRESS
+        MOV  @FAC4,R4   * String address or number
+        MOV  @FAC6,R3   * Length
+        LI   R7,BIAS    * Get Screen bias off set 
+        LI   R1,VDPWD   * Register faster then @
+        LI   R8,VDPRD   * Register faster then @
+        CI   R3,0       * Length=0? 
+        JEQ  VPUT2      * Yes
+VPUT0   MOV  R4,R0      * Get String/number address
+        BL   @VWADDA    * read out VDP address R4
+        MOVB *R8,R6     * Get $/# from R4 byte into R6
+        AB   R7,R6      * Add bias
+        MOV  R0,R4      * Get new update into R4
+        INC  R4         * STRING ADDRESS+1
+        MOV  R5,R0      * Get SCREEN ADDRESS
+        BL   @VWADD     * write out VDP write address R5
+        MOVB R6,*R1     * Put R6 onto screen address R0 
+        MOV  R0,R5      * Get new update into R5
+        CI   R5,767     * OFF SCREEN?
+        JEQ  VPUT3      * Yes
+        CI   R5,735     * Last ROW?
+        JGT  VPUT4      * Yes
+        AI   R5,32      * ROW+1
+VPUT1   DEC  R3         * Length-1
+        JNE  VPUT0      * No loop
+VPUT2   B    @PAGER     * RETURN TO XB
+VPUT3   CLR  R5         * RESET TO TOP LEFT CHARACTER
+        JMP  VPUT1      * Always loop
+VPUT4   INC  R5         * COL+1
+        S    @PAD2,R5   * Original address-screen address    
+        JMP  VPUT1      * Always loop
+***********************************************************
+* HEX VDP to RAM (String to Address) LES version
+* R0 TEMP ASC TO HEX    
+* R1 HEX ADDRESS        = FAC
+* R2 STRING             = PAD 
+* R3 COUNTER            = SREF
+ASCHEX MOV  R11,R9      * save return address
+       CLR  R1          * clear result reg
+       LI   R2,PAD      * assume 4-bytes in PAD-PAD3
+       MOV  @SREF,R3    * load counter
+HEX01  CLR  R0          * zero out work reg
+       MOVB *R2+,R0     * Get ASC byte
+       SWPB R0          * get byte to LSB
+* Check for valide HEX values in string
+       CI   R0,0        * FLAG NO CHARACTER
+       JEQ  HEX03       * SKIP IT
+       CI   R0,48       * 0? 
+       JLT  ERRBV       * <0 yes error
+       CI   R0,58       * :?
+       JLT  HEX02       * <: yes 9 or less
+       CI   R0,65       * A?
+       JLT  ERRBV       * <A yes error
+       CI   R0,71       * F?    
+       JLT  HEX02       * <F yes F or less
+* Convert ASC to value
+ERRBV  LI   R1,>994A    * Get FLAG word
+       MOV  R1,@ARG     * Load FLAG word
+       B    @PAGER      * return to caller
+HEX02  AI   R0,>FFD0    * correct for 0-9 in LSB
+       CI   R0,>000A    * LSB < 10?
+       JLT  HEX03       * we're good
+       AI   R0,>FFF9    * correct LSB for A-F
+* Add digit and shift if not done
+HEX03  A    R0,R1       * add hex digit to result reg LSB
+       DEC  R3          * decrement counter
+       JEQ  HEX04       * return if done
+       SLA  R1,4        * shift hex digit left 1 nybble
+       JMP  HEX01       * get another hex digit
+HEX04  MOV  R1,@FAC     * get result to FAC for CIF
+       B    @PAGER      * return to caller
+***********************************************************
+* RXB CALL INIT ASSEMBLY ROUTINE
+*
+CINIT   MOV  R11,R9    * save return address
+        LI   R0,>2000  * RAM destination address
+        LI   R1,ALCEND * ROM source address 
+        LI   R2,>0274  * COUNT
+INITLP  MOV  *R1+,*R0+ * Write next RAM word 1
+        MOV  *R1+,*R0+ * Write next RAM word 2
+        MOV  *R1+,*R0+ * Write next RAM word 3
+        MOV  *R1+,*R0+ * Write next RAM word 4 
+        MOV  *R1+,*R0+ * Write next RAM word 5
+        MOV  *R1+,*R0+ * Write next RAM word 6
+        MOV  *R1+,*R0+ * Write next RAM word 7
+        MOV  *R1+,*R0+ * Write next RAM word 8
+        DEC  R2        * COUNT-1
+        JNE  INITLP    * Repeat if not done
+        MOV  *R1+,*R0+ * Last word to load
+        B    @PAGER       * DONE RETURN TO XB 
+***********************************************************
+ALCEND  DATA >205A,>24F4,>4000,>AA55
+        DATA >2038,>2096,>2038,>217E
+        DATA >2038,>21E2,>2038,>234C
+        DATA >2038,>2432,>2038,>246E
+        DATA >2038,>2484,>2038,>2490
+        DATA >2038,>249E,>2038,>24AA
+        DATA >2038,>24B8,>2038,>2090
+        DATA >0000,>0000,>0000,>0000
+        DATA >0000,>0000,>0000,>0000
+        DATA >0000,>0000,>0000,>0000
+        DATA >0000,>0000,>0000,>0000
+        DATA >6520,>C060,>2004,>0281
+        DATA >4000,>130E,>C001,>0202
+        DATA >834A,>8CB0,>1606,>8CB0
+        DATA >1604,>8CB0,>1602,>C030
+        DATA >0450,>0221,>0008,>10EF
+        DATA >0200,>2500,>C800,>8322
+        DATA >02E0,>83E0,>0460,>00CE
+        DATA >C81D,>8322,>10F9,>C01D
+        DATA >C06D,>0002,>06A0,>20DC
+        DATA >C0C1,>0603,>0223,>8300
+        DATA >D0D3,>1361,>0983,>0643
+        DATA >1612,>C000,>165C,>C0C5
+        DATA >05C3,>06A0,>2406,>1653
+        DATA >05C3,>06A0,>23CA,>0204
+        DATA >834A,>0202,>0008,>DC74
+        DATA >0602,>15FD,>0380,>06A0
+        DATA >20F8,>10F5,>C041,>1347
+        DATA >0A81,>9060,>8312,>1143
+        DATA >0981,>C141,>0A35,>0225
+        DATA >0008,>A160,>8310,>045B
+        DATA >C24B,>0643,>1634,>C0C5
+        DATA >06A0,>23CA,>C0C1,>06A0
+        DATA >2406,>112D,>06A0,>211C
+        DATA >06A0,>23CA,>6004,>0A30
+        DATA >A040,>0459,>C28B,>0A51
+        DATA >09D1,>C201,>D120,>8343
+        DATA >0984,>1303,>0600,>1123
+        DATA >0580,>0206,>0001,>C0C5
+        DATA >0223,>0004,>06A0,>23CA
+        DATA >C0C1,>0643,>05C3,>06A0
+        DATA >23CA,>0581,>6044,>3981
+        DATA >C186,>1611,>C187,>0608
+        DATA >15F5,>0606,>A184,>8180
+        DATA >150A,>05C3,>045A,>0200
+        DATA >0700,>0460,>2084,>0200
+        DATA >1C00,>0460,>2084,>0200
+        DATA >1400,>0460,>2084,>C01D
+        DATA >C06D,>0002,>06A0,>20DC
+        DATA >C0C1,>0603,>0223,>8300
+        DATA >D0D3,>0983,>160E,>C000
+        DATA >1622,>0202,>0008,>0204
+        DATA >834A,>C0C5,>06A0,>23CA
+        DATA >CD01,>05C3,>0642,>15FA
+        DATA >0380,>0643,>160F,>C000
+        DATA >1612,>C0C5,>05C3,>06A0
+        DATA >2406,>160B,>05C3,>06A0
+        DATA >23CA,>C101,>0201,>834A
+        DATA >0460,>20CA,>06A0,>20F8
+        DATA >10F8,>0460,>2166,>0460
+        DATA >216E,>C81D,>2038,>C82D
+        DATA >0002,>83E2,>C82D,>0004
+        DATA >2044,>02E0,>83E0,>C80B
+        DATA >2040,>C020,>2044,>06A0
+        DATA >20DC,>C0C1,>0603,>0223
+        DATA >8300,>D0D3,>0983,>0603
+        DATA >1332,>0643,>164A,>C2A0
+        DATA >2038,>162D,>C0C5,>05C3
+        DATA >06A0,>2406,>9801,>2058
+        DATA >1620,>0206,>0008,>0204
+        DATA >834A,>C0C5,>06A0,>23CA
+        DATA >CD01,>05C3,>0646,>15FA
+        DATA >06A0,>22DA,>0225,>0004
+        DATA >C105,>C046,>06A0,>23E6
+        DATA >05C4,>D050,>0981,>06A0
+        DATA >23E6,>C2E0,>2040,>C820
+        DATA >203E,>830C,>02E0,>2038
+        DATA >0380,>0200,>0700,>C2E0
+        DATA >2040,>0460,>2084,>0200
+        DATA >1C00,>0460,>226E,>C08B
+        DATA >0643,>16F3,>C0C5,>06A0
+        DATA >23CA,>C0C1,>06A0,>2406
+        DATA >1102,>0460,>226A,>C020
+        DATA >2038,>06A0,>211C,>6004
+        DATA >0A10,>A0C0,>06A0,>23CA
+        DATA >0452,>06A0,>227E,>0206
+        DATA >834A,>CD83,>DDA0,>2058
+        DATA >DD84,>CD81,>C0C1,>1602
+        DATA >04D6,>1005,>0603,>06A0
+        DATA >2406,>0981,>C581,>C020
+        DATA >2044,>06A0,>22DA,>0460
+        DATA >225A,>C80B,>203A,>C805
+        DATA >203C,>C2E0,>601E,>069B
+        DATA >C020,>2044,>C160,>203C
+        DATA >D190,>0986,>C820,>830C
+        DATA >203E,>C806,>830C,>C806
+        DATA >8350,>C2E0,>6012,>069B
+        DATA >C020,>2044,>0206,>834A
+        DATA >0204,>001C,>CD84,>DDA0
+        DATA >2058,>DD84,>C5A0,>831C
+        DATA >C0A0,>830C,>1309,>C116
+        DATA >C0C0,>0583,>D073,>06A0
+        DATA >241A,>0584,>0602,>15FA
+        DATA >C2E0,>6028,>069B,>C020
+        DATA >2044,>C160,>203C,>C2E0
+        DATA >203A,>045B,>C01D,>C06D
+        DATA >0002,>06A0,>20DC,>C0C1
+        DATA >0603,>0223,>8300,>D0D3
+        DATA >0983,>0603,>1302,>0643
+        DATA >1623,>C000,>1628,>C02D
+        DATA >0004,>C0C5,>05C3,>06A0
+        DATA >2406,>9801,>2058,>161D
+        DATA >05C3,>06A0,>23CA,>C041
+        DATA >1307,>C181,>0601,>C0C1
+        DATA >06A0,>2406,>9050,>1A15
+        DATA >DC01,>1309,>C0C6,>0981
+        DATA >C141,>06A0,>2406,>DC01
+        DATA >0583,>0605,>15FA,>0380
+        DATA >06A0,>227E,>C02D,>0004
+        DATA >10E6,>0460,>2166,>0460
+        DATA >216E,>0200,>1300,>0460
+        DATA >2084,>06C3,>D803,>8C02
+        DATA >06C3,>D803,>8C02,>1000
+        DATA >D060,>8800,>06C1,>D060
+        DATA >8800,>06C1,>045B,>06C4
+        DATA >D804,>8C02,>06C4,>0264
+        DATA >4000,>D804,>8C02,>1000
+        DATA >D801,>8C00,>06C1,>D801
+        DATA >8C00,>06C1,>045B,>06C3
+        DATA >D803,>8C02,>06C3,>D803
+        DATA >8C02,>1000,>D060,>8800
+        DATA >045B,>06C4,>D804,>8C02
+        DATA >06C4,>0264,>4000,>D804
+        DATA >8C02,>1000,>D801,>8C00
+        DATA >045B,>C83E,>83E2,>02E0
+        DATA >83E0,>C80B,>204E,>C081
+        DATA >0281,>0040,>1B0A,>C0A1
+        DATA >6010,>0281,>0004,>1605
+        DATA >C0A2,>0002,>0692,>2466
+        DATA >1001,>0692,>02E0,>2038
+        DATA >C80B,>83F6,>0380,>0200
+        DATA >0B00,>0460,>2084,>02E0
+        DATA >83E0,>C80B,>204E,>06A0
+        DATA >000E,>02E0,>2038,>C80B
+        DATA >83F6,>0380,>06A0,>24CA
+        DATA >D82D,>0002,>8C00,>0380
+        DATA >06A0,>24CA,>D831,>8C00
+        DATA >0602,>16FC,>0380,>06A0
+        DATA >24D0,>DB60,>8800,>0002
+        DATA >0380,>06A0,>24D0,>DC60
+        DATA >8800,>0602,>16FC,>0380
+        DATA >C05D,>D82D,>0001,>8C02
+        DATA >0261,>8000,>D801,>8C02
+        DATA >0380,>0201,>4000,>1001
+        DATA >04C1,>C09D,>D820,>203D
+        DATA >8C02,>E081,>D802,>8C02
+        DATA >C06D,>0002,>C0AD,>0004
+        DATA >045B
+**********************************************************
+* EDITOR ASSEMBLER LOWER 8K SUPPORT
+* Data for Initialization of
+* Memory Expansion
+*
+LOW1  DATA  >A55A,>2128,>2398,>225A
+LOW2  DATA  >A000,>FFD7,>2676,>3F38
+LOW3  DATA  >0064,>2000,>2EAA,>2094
+      DATA  >21C4,>2094,>2196,>2094,>21DE,>2094,>21F4
+      DATA  >2094,>2200,>2094,>220E,>2094,>221A,>2094,>2228
+      DATA  >209A,>22B2,>20DA,>23BA,>C80B,>2030,>D060
+      DATA  >8349,>2060,>20FC,>132A,>C020,>8350,>1311,>06A0
+      DATA  >2646,>101E,>0281,>3F38,>1319,>C001,>0202
+      DATA  >834A,>8CB0,>1611,>8CB0,>160F,>8CB0,>160D,>C810
+      DATA  >2022,>02E0,>20BA,>C020,>2022,>1309,>0690
+      DATA  >02E0,>83E0,>C2E0,>2030,>045B,>0221,>0008,>10E4
+      DATA  >0200,>0F00,>D800,>8322,>02E0,>83E0,>0460
+      DATA  >00CE,>5820,>20FC,>8349,>02E0,>2094,>0380,>C83E
+      DATA  >83E2,>02E0,>83E0,>C80B,>20AA,>C081,>0281
+      DATA  >8000,>1B07,>09C1,>0A11,>0A42,>09B2,>A0A1,>0CFA
+      DATA  >C092,>0692,>02E0,>2094,>C80B,>83F6,>0380
+      DATA  >D060,>8373,>0981,>C87E,>8304,>F820,>20FC,>8349
+      DATA  >02E0,>83E0,>C2E0,>2030,>045B,>02E0,>83E0
+      DATA  >C80B,>20AA,>06A0,>000E,>02E0,>2094,>C80B,>83F6
+      DATA  >0380,>06A0,>223A,>D82D,>0002,>8C00,>0380
+      DATA  >06A0,>223A,>D831,>8C00,>0602,>16FC,>0380,>06A0
+      DATA  >2240,>DB60,>8800,>0002,>0380,>06A0,>2240
+      DATA  >DC60,>8800,>0602,>16FC,>0380,>C05D,>D82D,>0001
+      DATA  >8C02,>0261,>8000,>D801,>8C02,>0380,>0201
+      DATA  >4000,>1001,>04C1,>C09D,>D820,>2099,>8C02,>E081
+      DATA  >D802,>8C02,>C06D,>0002,>C0AD,>0004,>045B
+      DATA  >0204,>834A,>C014,>C184,>04F6,>04F6,>C140,>1323
+      DATA  >0740,>0203,>0040,>04F6,>04D6,>0280,>0064
+      DATA  >1A13,>0280,>2710,>1A08,>0583,>C040,>04C0,>3C20
+      DATA  >20FA,>D920,>83E3,>0003,>0583,>C040,>04C0
+      DATA  >3C20,>20FA,>D920,>83E3,>0002,>D920,>83E1,>0001
+      DATA  >D520,>83E7,>0545,>1101,>0514,>045B,>C17E
+      DATA  >53E0,>20FC,>C020,>8356,>C240,>0229,>FFF8,>0420
+      DATA  >2114,>D0C1,>0983,>0704,>0202,>208C,>0580
+      DATA  >0584,>80C4,>1306,>0420,>2114,>DC81,>9801,>20FE
+      DATA  >16F6,>C104,>1352,>0284,>0007,>154F,>04E0
+      DATA  >83D0,>C804,>8354,>C804,>2036,>0584,>A804,>8356
+      DATA  >C820,>8356,>2038,>02E0,>83E0,>04C1,>020C
+      DATA  >0F00,>C30C,>1301,>1E00,>022C,>0100,>04E0,>83D0
+      DATA  >028C,>2000,>1332,>C80C,>83D0,>1D00,>0202
+      DATA  >4000,>9812,>20FF,>16EE,>A0A0,>20A4,>1003,>C0A0
+      DATA  >83D2,>1D00,>C092,>13E6,>C802,>83D2,>05C2
+      DATA  >C272,>D160,>8355,>1309,>9C85,>16F2,>0985,>0206
+      DATA  >208C,>9CB6,>16ED,>0605,>16FC,>0581,>C801
+      DATA  >203A,>C809,>2034,>C80C,>2032,>0699,>10E2,>1E00
+      DATA  >02E0,>209A,>C009,>0420,>2114,>09D1,>1604
+      DATA  >0380,>02E0,>209A,>04C1,>06C1,>D741,>F3E0,>20FC
+      DATA  >0380,>C80B,>2030,>02E0,>20BA,>0420,>2124
+      DATA  >02E0,>83E0,>1303,>C2E0,>2030,>045B,>D820,>20BA
+      DATA  >8322,>0460,>00CE,>04E0,>2022,>53E0,>20FC
+      DATA  >C020,>8356,>0420,>2120,>0008,>1332,>0220,>FFF7
+      DATA  >0201,>0200,>0420,>210C,>0580,>C800,>202E
+      DATA  >C1E0,>2024,>C147,>04CC,>06A0,>25E0,>0283,>0001
+      DATA  >1624,>058C,>04C3,>1023,>0283,>0046,>161E
+      DATA  >04C2,>06A0,>262E,>0283,>003A,>16F7,>C020,>202E
+      DATA  >0600,>0201,>0100,>0420,>210C,>06A0,>25E0
+      DATA  >C020,>2022,>1307,>06A0,>2646,>1005,>CB4E,>0016
+      DATA  >C3A0,>2022,>0380,>D740,>F3E0,>20FC,>0380
+      DATA  >06A0,>25C2,>04C4,>D123,>2662,>0974,>C808,>202C
+      DATA  >06A0,>2594,>0464,>23F8,>0580,>0240,>FFFE
+      DATA  >C120,>2024,>A100,>1808,>8804,>2026,>1B05,>C160
+      DATA  >2024,>C804,>2024,>100A,>C120,>2028,>A100
+      DATA  >8804,>202A,>140C,>C160,>2028,>C804,>2028,>C1C5
+      DATA  >0209,>0008,>06A0,>262E,>0609,>16FC,>10B6
+      DATA  >0200,>0800,>10CC,>A005,>C800,>2022,>10AF,>A800
+      DATA  >202C,>13AC,>0200,>0B00,>10C2,>A005,>C1C0
+      DATA  >10A6,>A005,>DDC0,>DDE0,>20DB,>10A1,>A005,>06A0
+      DATA  >2566,>C000,>1316,>0226,>FFF8,>8106,>1B02
+      DATA  >0514,>1096,>8594,>16F8,>89A4,>0002,>0002,>16F4
+      DATA  >89A4,>0004,>0004,>16F0,>C0E6,>0006,>C250
+      DATA  >C403,>C009,>16FC,>0224,>0008,>C804,>202A,>10EA
+      DATA  >A005,>06A0,>2566,>0226,>FFF8,>8106,>13E3
+      DATA  >C296,>1501,>050A,>8294,>16F7,>89A4,>0002,>0002
+      DATA  >16F3,>89A4,>0004,>0004,>16EF,>C296,>1516
+      DATA  >C0E6,>0006,>C253,>C4C0,>C0C9,>16FC,>C246,>6244
+      DATA  >C286,>022A,>0008,>C0C6,>0643,>064A,>C693
+      DATA  >0649,>16FB,>0224,>0008,>C804,>202A,>10D9,>CB44
+      DATA  >0002,>0200,>0C00,>0460,>2432,>0460,>2494
+      DATA  >C28B,>0209,>0006,>C1A0,>202A,>0226,>FFF8,>C106
+      DATA  >8806,>2028,>1AF3,>C806,>202A,>06A0,>262E
+      DATA  >DDA0,>20E1,>0609,>16FA,>C580,>0206,>4000,>045A
+      DATA  >C28B,>04C0,>C30C,>1308,>06A0,>262E,>D020
+      DATA  >20E1,>06A0,>262E,>A003,>045A,>0209,>0004,>06A0
+      DATA  >262E,>06A0,>25C2,>0A40,>A003,>0609,>16F8
+      DATA  >045A,>0223,>FFD0,>0283,>000A,>1A05,>0223,>FFF9
+      DATA  >0283,>0019,>1B01,>045B,>0200,>0A00,>0460
+      DATA  >2432,>02E0,>83E0,>0200,>2032,>C330,>C270,>C830
+      DATA  >8354,>C830,>8356,>C050,>1D00,>9820,>4000
+      DATA  >20FF,>161D,>0699,>101B,>1E00,>02E0,>20DA,>C020
+      DATA  >202E,>0201,>20DB,>0202,>0004,>0420,>2118
+      DATA  >7000,>0950,>1610,>0982,>C001,>0201,>203C,>0420
+      DATA  >2118,>04C8,>0602,>11D7,>D0F1,>0983,>A203
+      DATA  >045B,>02E0,>20DA,>04C0,>06C0,>0460,>2432,>0201
+      DATA  >3F40,>0221,>FFF8,>C011,>1105,>8060,>202A
+      DATA  >16F9,>05CB,>045B,>0200,>0D00,>045B,>2D52,>5163
+      DATA  >6483,>8455,>045C,>5B5F,>5EF0,>F003,>F0F0
+      DATA  >4700,>00C8,>3F38
+LOW4  DATA  >5554,>4C54,>4142,>2022,>5041,>4420,>2020,>8300
+      DATA  >4750,>4C57,>5320,>83E0,>534F,>554E,>4420
+      DATA  >8400,>5644,>5052,>4420,>8800,>5644,>5053,>5441
+      DATA  >8802,>5644,>5057,>4420,>8C00,>5644,>5057
+      DATA  >4120,>8C02,>5350,>4348,>5244,>9000,>5350,>4348
+      DATA  >5754,>9400,>4752,>4D52,>4420,>9800,>4752
+      DATA  >4D52,>4120,>9802,>4752,>4D57,>4420,>9C00,>4752
+      DATA  >4D57,>4120,>9C02,>5343,>414E,>2020,>000E
+      DATA  >584D,>4C4C,>4E4B,>2104,>4B53,>4341,>4E20,>2108
+      DATA  >5653,>4257,>2020,>210C,>564D,>4257,>2020
+      DATA  >2110,>5653,>4252,>2020,>2114,>564D,>4252,>2020
+      DATA  >2118,>5657,>5452,>2020,>211C,>4453,>524C
+      DATA  >4E4B,>2120,>4C4F,>4144,>4552,>2124,>4750,>4C4C
+      DATA  >4E4B,>2100
+***********************************************************
+*
+* RXB Character set 
+***********************************************************
+CHRLDR MOV  R11,R9    * save return address
+       LI   R0,>03F8
+       BL   @VWADD    * write out VDP write address
+       LI   R1,CHARS  * CHARACTER LIST
+       LI   R2,96     * COUNT
+       LI   R8,VDPWD  * Register faster then address
+CHRLP  MOVB *R1+,*R8  * write next VDP byte from RAM 1
+       MOVB *R1+,*R8  * write next VDP byte from RAM 2
+       MOVB *R1+,*R8  * write next VDP byte from RAM 3
+       MOVB *R1+,*R8  * write next VDP byte from RAM 4
+       MOVB *R1+,*R8  * write next VDP byte from RAM 5
+       MOVB *R1+,*R8  * write next VDP byte from RAM 6
+       MOVB *R1+,*R8  * write next VDP byte from RAM 7
+       MOVB *R1+,*R8  * write next VDP byte from RAM 8
+       DEC  R2        * COUNT-1
+       JNE  CHRLP     * repeat if not done  
+       B    @PAGER    * DONE
+***********************************************************
+CHARS  BYTE >00,>00,>00,>00,>00,>00,>00,>00 *   31
+       BYTE >00,>00,>00,>00,>00,>00,>00,>00 *   32
+       BYTE >00,>10,>10,>10,>10,>00,>10,>00 * ! 33 
+       BYTE >00,>28,>28,>28,>00,>00,>00,>00 * " 34
+       BYTE >00,>28,>7C,>28,>28,>7C,>28,>00 * # 35
+       BYTE >00,>38,>54,>30,>18,>54,>38,>00 * $ 36
+       BYTE >00,>44,>4C,>18,>30,>64,>44,>00 * % 37
+       BYTE >00,>20,>50,>20,>54,>48,>34,>00 * & 38
+       BYTE >00,>08,>10,>20,>00,>00,>00,>00 * ' 39
+       BYTE >00,>08,>10,>10,>10,>10,>08,>00 * ( 40
+       BYTE >00,>20,>10,>10,>10,>10,>20,>00 * ) 41
+       BYTE >00,>00,>28,>10,>7C,>10,>28,>00 * * 42
+       BYTE >00,>10,>10,>7C,>10,>10,>00,>00 * + 43
+       BYTE >00,>00,>00,>00,>00,>30,>10,>20 * , 44
+       BYTE >00,>00,>00,>7C,>00,>00,>00,>00 * - 45
+       BYTE >00,>00,>00,>00,>00,>30,>30,>00 * . 46
+       BYTE >00,>04,>08,>10,>20,>40,>00,>00 * / 47
+       BYTE >00,>3C,>4C,>54,>64,>44,>38,>00 * 0 48
+       BYTE >00,>10,>30,>10,>10,>10,>38,>00 * 1 49
+       BYTE >00,>38,>44,>08,>10,>20,>7C,>00 * 2 50
+       BYTE >00,>38,>44,>18,>04,>44,>38,>00 * 3 51
+       BYTE >00,>08,>18,>28,>48,>7C,>08,>00 * 4 52
+       BYTE >00,>78,>40,>78,>04,>44,>38,>00 * 5 53
+       BYTE >00,>38,>40,>78,>44,>44,>38,>00 * 6 54
+       BYTE >00,>7C,>04,>08,>10,>20,>20,>00 * 7 55
+       BYTE >00,>38,>44,>38,>44,>44,>38,>00 * 8 56
+       BYTE >00,>38,>44,>44,>3C,>04,>78,>00 * 9 57
+       BYTE >00,>00,>30,>30,>00,>30,>30,>00 * : 58
+       BYTE >00,>00,>30,>30,>00,>30,>10,>20 * ; 59
+       BYTE >00,>00,>10,>20,>40,>20,>10,>00 * < 60
+       BYTE >00,>00,>00,>7C,>00,>7C,>00,>00 * = 61
+       BYTE >00,>00,>10,>08,>04,>08,>10,>00 * > 62
+       BYTE >00,>38,>44,>08,>10,>00,>10,>00 * ? 63
+       BYTE >00,>38,>44,>54,>58,>40,>3C,>00 * @ 64
+       BYTE >00,>38,>44,>44,>7C,>44,>44,>00 * A 65
+       BYTE >00,>78,>24,>38,>24,>24,>78,>00 * B 66
+       BYTE >00,>38,>44,>40,>40,>44,>38,>00 * C 67
+       BYTE >00,>78,>24,>24,>24,>24,>78,>00 * D 68
+       BYTE >00,>7C,>40,>78,>40,>40,>7C,>00 * E 69
+       BYTE >00,>7C,>40,>78,>40,>40,>40,>00 * F 70
+       BYTE >00,>38,>44,>40,>4C,>44,>38,>00 * G 71
+       BYTE >00,>44,>44,>7C,>44,>44,>44,>00 * H 72
+       BYTE >00,>38,>10,>10,>10,>10,>38,>00 * I 73
+       BYTE >00,>04,>04,>04,>04,>44,>38,>00 * J 74
+       BYTE >00,>44,>48,>50,>70,>48,>44,>00 * K 75
+       BYTE >00,>40,>40,>40,>40,>40,>7C,>00 * L 76
+       BYTE >00,>44,>6C,>54,>44,>44,>44,>00 * M 77
+       BYTE >00,>44,>64,>54,>54,>4C,>44,>00 * N 78
+       BYTE >00,>38,>44,>44,>44,>44,>38,>00 * O 79 
+       BYTE >00,>78,>44,>44,>78,>40,>40,>00 * P 80
+       BYTE >00,>38,>44,>44,>54,>4C,>3C,>00 * Q 81
+       BYTE >00,>78,>44,>44,>78,>48,>44,>00 * R 82
+       BYTE >00,>38,>44,>30,>08,>44,>38,>00 * S 83
+       BYTE >00,>7C,>10,>10,>10,>10,>10,>00 * T 84
+       BYTE >00,>44,>44,>44,>44,>44,>38,>00 * U 85
+       BYTE >00,>44,>44,>44,>44,>28,>10,>00 * V 86
+       BYTE >00,>44,>44,>44,>54,>54,>28,>00 * W 87
+       BYTE >00,>44,>28,>10,>10,>28,>44,>00 * X 88
+       BYTE >00,>44,>44,>28,>10,>10,>10,>00 * Y 89
+       BYTE >00,>7C,>08,>10,>20,>40,>7C,>00 * Z 90
+       BYTE >00,>38,>20,>20,>20,>20,>38,>00 * [ 91
+       BYTE >00,>00,>40,>20,>10,>08,>04,>00 * \ 92
+       BYTE >00,>38,>08,>08,>08,>08,>38,>00 * ] 93
+       BYTE >00,>10,>38,>54,>10,>10,>10,>00 * ^ 94
+       BYTE >00,>00,>00,>00,>00,>00,>7C,>00 * _ 95
+       BYTE >00,>20,>10,>08,>00,>00,>00,>00 * ` 96
+       BYTE >00,>00,>00,>38,>48,>48,>3C,>00 * a 97
+       BYTE >00,>20,>20,>38,>24,>24,>38,>00 * b 98
+       BYTE >00,>00,>00,>1C,>20,>20,>1C,>00 * c 99
+       BYTE >00,>04,>04,>1C,>24,>24,>1C,>00 * d 100
+       BYTE >00,>00,>00,>1C,>28,>30,>1C,>00 * e 101
+       BYTE >00,>0C,>10,>38,>10,>10,>10,>00 * f 102
+       BYTE >00,>00,>00,>1C,>24,>1C,>04,>38 * g 103
+       BYTE >00,>20,>20,>38,>24,>24,>24,>00 * h 104
+       BYTE >00,>10,>00,>30,>10,>10,>38,>00 * i 105
+       BYTE >00,>08,>00,>08,>08,>08,>48,>30 * j 106
+       BYTE >00,>20,>20,>24,>38,>28,>24,>00 * k 107
+       BYTE >00,>30,>10,>10,>10,>10,>38,>00 * l 108
+       BYTE >00,>00,>00,>78,>54,>54,>54,>00 * m 109
+       BYTE >00,>00,>00,>38,>24,>24,>24,>00 * n 110
+       BYTE >00,>00,>00,>18,>24,>24,>18,>00 * o 111
+       BYTE >00,>00,>00,>38,>24,>38,>20,>20 * p 112
+       BYTE >00,>00,>00,>1C,>24,>1C,>04,>04 * q 113
+       BYTE >00,>00,>00,>28,>34,>20,>20,>00 * r 114
+       BYTE >00,>00,>00,>1C,>30,>0C,>38,>00 * s 115
+       BYTE >00,>10,>10,>38,>10,>10,>0C,>00 * t 116
+       BYTE >00,>00,>00,>24,>24,>24,>1C,>00 * u 117 
+       BYTE >00,>00,>00,>44,>28,>28,>10,>00 * v 118
+       BYTE >00,>00,>00,>44,>54,>54,>28,>00 * w 119
+       BYTE >00,>00,>00,>24,>18,>18,>24,>00 * x 120
+       BYTE >00,>00,>00,>24,>24,>1C,>04,>38 * y 121
+       BYTE >00,>00,>00,>3C,>08,>10,>3C,>00 * z 122
+       BYTE >00,>0C,>10,>10,>20,>10,>10,>0C * { 123
+       BYTE >00,>10,>10,>10,>00,>10,>10,>10 * | 124
+       BYTE >00,>60,>10,>10,>08,>10,>10,>60 * } 125
+       BYTE >00,>00,>20,>54,>08,>00,>00,>00 * ~ 126
+***********************************************************
+* CALL ALPHALOCK(numeric-variable)                        *
+***********************************************************
+ALPHA  MOV  R11,R9     * save return address
+       MOV  R12,R8     * save R12 value for later
+       CLR  R12
+       SBZ  21         * PUT ALPHA LOCK STROBE
+       SRC  R12,14     * WAIT
+       TB   7          * ALPHA LOCK DOWN?
+       SBO  21         * RESET ALPHA LOCK STROBE
+       JEQ  ALPHAF     * RETURN ALPHA LOCK OFF  
+       LI   R1,>994A   * ERROR CODE FLAG
+NERROR MOV  R1,@FAC    * LOAD ERROR CODE FLAG
+       MOV  R8,R12     * Restore R12 
+       B    @PAGER     * return to XB
+ALPHAF CLR  R1         * ZERO OUT FLAG
+       JMP  NERROR     * ALPHA LOCK OFF
+*************************************************************
+* CALL COLLIDE(#SPR,#SPR,TOLERANCE,DOTROW,DOTCOL)           *
+*************************************************************
+* PAD  = SPRITE 1 RETURN=ROW
+* PAD2 = SPRITE 2 RETURN=COLUMN
+* FAC  = TOLERANCE
+COLLSP MOV  R11,R9     * save return address
+* LOOK FOR SPRITE COINCIDENCE
+       LI   R8,PAD     * PAD
+       CLR  R0         * ZERO OUT
+       MOVB *R8+,R0    * Sprite #1 ROW in high byte
+       CLR  R4         * ZERO OUT
+       MOVB *R8+,R4    * Sprite #1 COL in high byte
+       CLR  R1         * ZERO OUT 
+       MOVB *R8+,R1    * Sprite #2 ROW in high byte
+       CLR  R5         * ZERO OUT
+       MOVB *R8+,R5    * Sprite #2 COL in high byte
+       MOV  @FAC,R7    * TOLERANCE
+       SWPB R7         * Put into high byte
+       CLR  @PAD       * zero out 
+       CLR  @PAD2      * zero out 
+*** CHECK FOR OFF SCREEN       
+       LI   R6,>C000   * Off screen value
+       C    R0,R6      * To Sprite #1 ROW to high?
+       JHE  COLL       * Yes defualt zero 
+       C    R1,R6      * To Sprite #2 ROW to high?
+       JHE  COLL       * Yes defualt zero 
+*** Row comparison
+       MOV  R1,R8
+       S    R0,R8      * Sprite #2 ROW-Sprite #1 ROW
+       ABS  R8         * No negative value
+       C    R8,R7      * Within tolerance?
+       JGT  COLL       * No defualt zero       
+*** Column comparison 
+       MOV  R5,R8
+       S    R4,R8      * Sprite #2 COL-Sprite #1 COL
+       ABS  R8         * No negative value
+       C    R8,R7      * Within tolerance?
+       JGT  COLL       * No defualt zero 
+       SWPB R0         * Sprite #1 ROW in low byte
+       MOV  R0,@PAD    * Save Sprite #1 ROW to XB
+       SWPB R4         * Sprite #1 COL in low byte
+       MOV  R4,@PAD2   * Save Sprite #1 COL to XB
+COLL   B    @PAGER     * return to XB  
+***********************************************************
+* CALL ISRON(variable)                                    *
+***********************************************************
+XISRON MOV  R11,R9       * save return address
+       MOV  @FAC,@ISR    * Put FAC into ISR Interupt hook
+       JMP  NEXIT        * exit
+***********************************************************
+* CALL ISROFF(variable)                                   *  
+***********************************************************
+XISROF MOV  R11,R9       * save return address
+       MOV  @ISR,@ISR    * Compare if new ISR HOOK
+       JEQ  NHOOK        * No 
+       MOV  @ISR,@FAC    * Put ISR Hook into FAC
+NHOOK  CLR  @ISR         * Clear ISR Hook
+NEXIT  CLR  @STATUS      * Clear GPL stuse byte
+       B    @PAGER       * return to XB
+***********************************************************
+       AORG >7FFA
+PAGER  CLR  @>6000       * RESTORE PAGE ONE
+       B    *R9          * return to caller   
+***********************************************************
+       END

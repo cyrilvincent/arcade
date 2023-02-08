@@ -1,0 +1,95 @@
+# This is a sample menu.lst file. You should make some changes to it.
+
+color black/cyan yellow/cyan
+default		1
+
+## timeout sec
+# Set a timeout, in SEC seconds, before automatically booting the default entry
+# (normally the first entry defined).
+timeout		15
+
+title ...Back to Main Menu
+configfile /menu.lst
+
+title Auto-detect and use F6 SATA/RAID/SCSI Driver - Single Floppy\nUse if your internal disk is not detected or getting BSOD 0x0000007B\nSelect once before Text mode of Setup or starting PE1\nCurrently 32 bit versions are supported.\nCreated by Chenall (http://chenall.net/)
+#http://bbs.wuyou.com/viewthread.php?tid=197550
+#http://chenall.net/
+map --unmap=0:0xFF
+map --unhook && map --rehook
+ls /DPMS/DPMS.ISO > nul || find --set-root --devices=hf /DPMS/DPMS.ISO > nul
+map /DPMS/DPMS.ISO (0xfa) || map --mem /DPMS/DPMS.ISO (0xfa)
+map --hook
+root (0xfa)
+/dpms.bat 0
+map --unmap=0xfa
+map --rehook
+set DPMS=1
+ls /usbdrive.tag > nul || find --set-root --devices=hf /usbdrive.tag > nul
+configfile /ubcd4win.lst
+
+title Auto-detect and use F6 SATA/RAID/SCSI Driver - Double Floppies\nUse if your internal disk is not detected or getting BSOD 0x0000007B\nSelect once before Text mode of Setup or starting PE1\nCurrently 32 bit versions are supported.\nCreated by Chenall (http://chenall.net/)
+#http://bbs.wuyou.com/viewthread.php?tid=197550
+#http://chenall.net/
+map --unmap=0:0xFF
+map --unhook && map --rehook
+ls /DPMS/DPMS.ISO > nul || find --set-root --devices=hf /DPMS/DPMS.ISO > nul
+map /DPMS/DPMS.ISO (0xfa) || map --mem /DPMS/DPMS.ISO (0xfa)
+map --hook
+root (0xfa)
+/dpms.bat 2
+map --unmap=0xfa
+map --rehook
+set DPMS=1
+ls /usbdrive.tag > nul || find --set-root --devices=hf /usbdrive.tag > nul
+configfile /ubcd4win.lst
+
+title Launch "The Ultimate Boot CD for Windows"
+root (hd0,0)
+chainloader /minint/setupldr.bin
+
+title Start Recovery Console of Windows NT/2K/XP
+root (hd0,0)
+chainloader /cmdcons/setupldr.bin
+#####################################################################
+# write string "cmdcons" to memory 0000:7C03 in 2 steps:
+#####################################################################
+### step 1. Write 4 chars "cmdc" at 0000:7C03
+write 0x7C03 0x63646D63
+### step 2. Write 3 chars "ons" and an ending null at 0000:7C07
+write 0x7C07 0x00736E6F
+
+title WinDiag
+map --mem (hd0,0)/images/windiag.img (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+
+title Darik's Boot and Nuke v.1.0.6
+map --mem (hd0,0)/images/dban.ima (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+
+title GOBACK Removal Tool
+map --mem (hd0,0)/images/goback.ima (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+
+title Memtest86
+map --mem (hd0,0)/images/memtest.img (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+
+title NTFS-Dos
+map --mem (hd0,0)/images/ntfs4dos.img (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+
+title commandline
+commandline
+
+title reboot
+reboot

@@ -1,0 +1,1 @@
+qemu-system-x86_64.exe -L . -boot c -m 580 -hda //./PhysicalDrive1 -hdb test.img

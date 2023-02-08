@@ -1,0 +1,57 @@
+DrvLoad (for Windows NT)
+-------
+
+With this tool you have the ability to install, uninstall, start and
+stop a driver dynamicly. DrvLoad provides a GUI and command line
+facilitys.
+
+Parameters:
+
+/d:xxxxx   - the drivers path and name
+/n:xxxxx   - the internal name for the SCM
+           (SCM - Service Control Manager)
+/install   - installs the driver without starting it
+/uninstall - uninstalls the driver
+/start     - starts the driver
+/stop      - stops the driver
+/run       - installs and starts the driver
+/remove    - stops and uninstalls the driver
+/quiet     - dont show error messages
+/gui       - runs the gui (default)
+
+Samples
+
+DrvLoad /d:e:\drv\idt.sys /n:IDTLook /run /quiet
+
+- installs the driver idt.sys, starts it and does not
+  show error messages, the internal name is IDTLook
+
+DrvLoad /n:IDTLook /remove /quiet
+
+- stops the driver, uninstalls it and does not
+  show error messages
+
+
+Bugs/Questions
+
+Please report bugs to ntdev@wischrop-net.de - use
+the same address for questions.
+
+
+Bye
+
+Guido Wischrop
+
+-------------------------------------------------
+          ---+++ Guido Wischrop +++---
+WWW
+   http://www.wischrop-net.de
+   http://www.imn.htwk-leipzig.de/~wischrop
+eMails
+ private    : guido@wischrop-net.de
+ Windows NT : ntdev@wischrop-net.de
+ SMS        : guido.wischrop@topmail.de
+--------------------------------------------------
+
+
+

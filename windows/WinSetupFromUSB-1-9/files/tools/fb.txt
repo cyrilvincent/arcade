@@ -1,0 +1,7 @@
+default 0
+timeout 2
+text "Please choose menu"
+text "F1. Continue boot to Grub4dos(default)"
+menu F1 grldr grldr
+text "F2. Launch PLoP boot manager"
+menu F2 linux "grub.exe" "" "--config-file=ls /plpbt.bin || find --set-root --devices=hf /plpbt.bin;kernel /plpbt.bin"

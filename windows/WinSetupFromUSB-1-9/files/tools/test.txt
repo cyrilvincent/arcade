@@ -1,0 +1,9 @@
+Disk information:
+****************************************
+Disk device: \\.\PhysicalDrive2
+Disk name: LEXAR JD LIGHTNING II (959.5 MB)
+
+Partition scheme: MBR
+C/H/S: 122/255/63
+Total sectors: 1965056
+Sector size: 512
