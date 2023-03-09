@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<shader id="glow" active="true" passes="1" >
+	<bufferSize fixed="true" fixedWidth="320" fixedHeight="400" factor="1.0" />
+	<flickering enabled="true" factor="0.2" />
+	<attenuation enabled="true" factor="2.076" />
+	<gains>
+		<horizontal enabled="true" factor="0.8" />
+		<vertical enabled="false" factor="1.5" />
+	</gains>
+	<kernel id="horizontal" >
+		<value>1.0</value>
+		<value>2.0</value>
+	</kernel>
+	<kernel id="vertical" >
+		<value>1.0</value>
+		<value>2.0</value>
+	</kernel>
+	<info>
+		<author />
+		<description><![CDATA[Not really a glow shader, but rather one that blurs the vectors a bit, and provide a good halo around the dots. It is also one of the fastest shader possible...  
+
+To have brighter vectors, enable and/or edit the brightness gain factor.]]></description>
+	</info>
+</shader>

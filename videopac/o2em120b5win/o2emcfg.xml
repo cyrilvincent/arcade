@@ -1,0 +1,660 @@
+<!-- ********************************************************************************************
+ Configuration File for O2EM - don't enter anything in "myConfig" if you don't want to use it. "all" 
+ basically serves as a template, just copy the options you want to use to "myConfig" (or create 
+ different configs with different names and set the name of the one you want to load in "useConfig" 
+ attribute of o2emConfig.
+ Any option set in the config file can be overriden on the command line! (e.g. if you set g7400 in 
+ here you can always use -o2rom to start with the odyssey2 bios instead of the g7400 bios)
+ ******************************************************************************************** -->
+<!-- ********************************************************************************************
+	Option stack:
+		Optionswitch / Default Option
+		Game Option
+		Command Line Option
+******************************************************************************************** -->
+<o2emConfig useConfig="myConfig">
+
+	<config name="myConfig">
+		<option name="joyautodetect" />
+		<option name="browsersortorder">gamename</option>
+	</config>
+
+	<config name="c7420" gamerom="videopac/vp_C7420.bin" />
+
+<!-- ********************************************************************************************
+ Config that contains all switches for use in your own config(s) - all used in config-tag are 
+ used on startup and for browser-config
+******************************************************************************************** -->
+	<config name="all" gamerom="xxx.rom">
+
+		<!-- disable O2EM internal file browser on startup -->
+		<option name="disablebrowser" />
+	
+		<!-- set sortorder for filebrowser to sort by gamename -->
+		<option name="browsersortorder">gamename</option>
+
+		<!-- Set Windowsize to double -->
+		<option name="wsize">2</option>
+	
+		<!-- Use Fullscreen -->
+		<option name="fullscreen" />
+	
+		<!-- Use Scannlines -->
+		<option name="scanlines" />
+	
+		<!-- Autodetect joysticks -->
+		<option name="joyautodetect" />
+	
+		<!-- Turn off sound -->
+		<option name="nosound" />
+	
+		<!-- Turn off voice -->
+		<option name="novoice" />
+	
+		<!-- Set Soundvolume to value -->
+		<option name="svolume">100</option>
+	
+		<!-- Set Voicevolume to value -->
+		<option name="vvolume">100</option>
+	
+		<!-- Start in Debug mode -->
+		<option name="debug" />
+	
+		<!-- Set speed to 100% -->
+		<option name="speed">100</option>
+	
+		<!-- Do not limit speed -->
+		<option name="nolimit" />
+	
+		<!-- Set bios to file -->
+		<option name="bios">o2rom.bin</option>
+	
+		<!-- set rom-directory to value (o2em searches for games there if file is not found in current directory) -->
+		<option name="romdir">roms/</option>
+	
+		<!-- set bios-directory to value (o2em searches for bios there if file is not found in current directory) -->
+		<option name="biosdir">bios/</option>
+	
+		<!-- use Odyssey2 Bios -->
+		<option name="o2rom" />
+	
+		<!-- use C52 Bios -->
+		<option name="c52" />
+	
+		<!-- use G7400 Bios -->
+		<option name="g7400" />
+	
+		<!-- use Jopac Bios -->
+		<option name="jopac" />
+	
+		<!-- use European Timing (50 Hz) -->
+		<option name="euro" />
+
+		<!-- force NTSC mode (60 Hz) -->
+		<option name="ntsc" />
+	
+		<!-- use audio low pass filter -->
+		<option name="filter" />
+	
+		<!-- Set screenshot files to dump*.bmp (* will be replaced by numbers) -->
+		<option name="scshot">dump@.bmp</option>
+	
+		<!-- turn on exrom bit for this ROM -->
+		<option name="exrom" />
+	
+		<!-- override system keys with the given values -->
+		<option name="s0">ESC,F1,F4,F5,F8,F2,F3,F6,F7,F9,F10,F11</option>
+	
+		<!-- set joystick 1 to mode 3 (joystick) -->
+		<option name="s1">0</option>
+	
+		<!-- set joystick 2 to mode 3 (joystick) -->
+		<option name="s2">0</option>
+	
+		<!-- enable Emulation of Videopac+ chip -->
+		<option name="vppenable" />
+	
+		<!-- set biosfile to o2rom.bin -->
+		<option name="biosfile">bios/o2rom.bin</option>
+	
+		<!-- force options for a specific ROM on the current game -->
+		<option name="crc">A7344D1F</option>
+	
+		<!-- emulate C7420 Microsoft BASIC cartridge (also needs the correct cartridge as ROM-file for O2EM!) -->
+		<option name="c7420" />
+	
+		<!-- filename for c7420bios (default is c7420_z80.bin in bios directory) -->		
+		<option name="c7420bios">bios/c7420_z80.bin</option>
+	
+		<!-- directory for saving/loading binary files using CLOAD/CSAVE -->
+		<option name="c7420dir">basic</option>
+	
+		<!-- tells CSAVE to save as text instead of binary -->
+		<option name="c7420savetext" />
+	
+		<!-- do not load gamespecific options -->
+		<option name="disablegameoption" />
+	
+		<!-- enable correct disabling of foreground gfx -->
+		<option name="useforen" />
+
+		<!-- enable pendirq -->
+		<option name="pendirq" />
+
+		<!-- disable horizontal irq -->
+		<option name="dishirq" />
+
+		<!-- set region offset -->
+		<option name="regionoff">65535</option>
+
+		<!-- set mxsnap -->
+		<option name="mxsnap">0</option>
+		
+		<!-- force special option for evblclk -->
+		<option name="evblclk">-1</option>
+
+		<!-- set sprite offset -->
+		<option name="sproff">0</option>
+		
+		<!-- enable tweaked audio -->
+		<option name="tweakedaudio" />
+
+		<!-- enable special evbl routine -->
+		<option name="handleevbl" />
+
+		<!-- enable special evbll routine -->
+		<option name="handleevbll" />
+
+		<!-- enable special draw region routine -->
+		<option name="drawregion">0</option>
+	
+		<!-- switch enter and return in videopac+ mode -->
+		<option name="switchenterkeys" />
+
+
+		<!-- disable joysticks -->
+		<option name="s1">0</option>
+		<option name="s2">0</option>
+
+	</config>
+	<!-- ********************************************************************************************
+	 Game Configs, these are loaded additionally to
+	 the config sections, and override the config option
+	******************************************************************************************** -->
+	<game crc32="0x8E824B98" name="C7420 Home Computer Cartridge">
+		<option name="g7400" />
+		<option name="vppenable" />
+		<option name="euro" />
+		<option name="c7420" />
+		<option name="switchenterkeys" />
+		<option name="joydefaultoff" />
+	</game>
+	<game crc32="0x020FCA15" name="Moto Crash (PAL)(non-plus hack)">
+		<option name="euro" />
+	</game>
+	<game crc32="0x06861A9C" name="Flashpoint+ (unreleased)(PAL hack)">
+		<option name="useforen" />
+		<option name="g7400" />
+		<option name="vppenable" />
+		<option name="euro" />
+	</game>
+	<game crc32="0x07685850" name="Legion (PAL) (hack)(voice hum fix)" />
+	<game crc32="0x084EE035" name="Tenpin Bowling/Basketball (PAL)" />
+	<game crc32="0x0A2F0F58" name="Flipper Game+ (PAL)(unreleased)(hack color corrections)" />
+	<game crc32="0x0B2DEB61" name="Tutankham (PAL)(unreleased)">
+		<option name="euro" />
+	</game>
+	<game crc32="0x0B6EB25B" name="unknown+">
+		<option name="g7400" />
+		<option name="vppenable" />
+		<option name="euro" />
+	</game>
+	<game crc32="0x0C2E4811" name="Out of this World! / Helicopter Rescue! (NTSC)">
+		<option name="regionoff">11</option>
+	</game>
+	<game crc32="0x0C4E4B0A" name="Mathematician/Echo (FR)" />
+	<game crc32="0x0CA26992" name="unknown+">
+		<option name="g7400" />
+		<option name="vppenable" />
+		<option name="euro" />
+	</game>
+	<game crc32="0x0D2D721D" name="Trans American Rally+ (PAL)">
+		<option name="g7400" />
+		<option name="vppenable" />
+		<option name="euro" />
+		<option name="tweakedaudio" />
+	</game>
+	<game crc32="0x0F46CF66" name="Chez-Maxime (Jopac)" />
+	<game crc32="0x0F870806" name="Golf (NTSC)" />
+	<game crc32="0x105231F8" name="Cosmic Conflict+ (FR)" />
+	<game crc32="0x11EDF25B" name="Chinese Logic (PAL)" />
+	<game crc32="0x11FF50AD" name="Take the money and run (PAL)" />
+	<game crc32="0x14B6CC76" name="Golf (PAL)" />
+	<game crc32="0x17BE749B" name="Laser War (PAL)" />
+	<game crc32="0x1931F5C5" name="Freedom Fighters+ (PAL)" />
+	<game crc32="0x1B188870" name="Popeye (BR)" />
+	<game crc32="0x1B9F2F16" name="Sid the Spellbinder (NTSC)" />
+	<game crc32="0x1C750349" name="Turtles (PAL)">
+		<option name="useforen" />
+	</game>
+	<game crc32="0x1C8368E7" name="Playschool Maths (PAL)" />
+	<game crc32="0x1EEB88F5" name="Air Battle (PAL)(unreleased)" />
+	<game crc32="0x202F2749" name="Q*bert (PAL)">
+		<option name="useforen" />
+		<option name="regionoff">0</option>
+	</game>
+	<game crc32="0x2038F56C" name="Neutron Star+ (PAL)(hack bug fix)" />
+	<game crc32="0x20E2F7BE" name="Killer Bees+ (FR)" />
+	<game crc32="0x2122012C" name="Morse (PAL)" />
+	<game crc32="0x2247405E" name="AMOK! (homebrew) (alt)" />
+	<game crc32="0x2391C2FB" name="Stone Sling+ (PAL)">
+		<option name="regionoff">11</option>
+	</game>
+	<game crc32="0x239DF97D" name="Basket Game (PAL)" />
+	<game crc32="0x245D3533" name="Pong (homebrew)(Rene van den Enden)" />
+	<game crc32="0x24D53E2C" name="Billard (PAL)" />
+	<game crc32="0x25057C11" name="Stone sling+ (PAL)(hack)(with voice sounds and scoring from Smithereens)">
+		<option name="regionoff">11</option>
+	</game>
+	<game crc32="0x25874B04" name="Neutron Star (BR)" />
+	<game crc32="0x26517E77" name="Commando Noturno (BR)">
+		<option name="regionoff">12</option>
+		<option name="euro" />
+		<option name="evblclock">61000</option>
+		<option name="draw_region_mode">3</option>
+	</game>
+	<game crc32="0x26B0FF5B" name="Nightmare+ (PAL)">
+			<option name="euro" />
+	</game>
+	<game crc32="0x280D08F4" name="Syracuse (Jopac)" />
+	<game crc32="0x2A5F0B2B" name="Cosmic Conflict (PAL) (alt)" />
+	<game crc32="0x2B1E9E19" name="UFO! (NTSC)" />
+	<game crc32="0x2C9D1715" name="Flipper Game (PAL)" />
+	<game crc32="0x2DA28C17" name="Speedway/Spinout/Crypto+ (PAL)(hack)(first line of +graphics visible on G7400)" />
+	<game crc32="0x2DCB77F0" name="Depth Charge/Marksman (PAL)">
+		<option name="euro" />
+		<option name="evblclock">8000</option>
+	</game>
+	<game crc32="0x2F6E4B46" name="Cosmic Conflict (FR)" />
+	<game crc32="0x2FCE9245" name="Flipper Game+ (PAL)(unreleased)" />
+	<game crc32="0x313547EB" name="Nightmare (PAL)(unreleased - phantom house)">
+		<option name="euro" />
+	</game>
+	<game crc32="0x32AAC006" name="Exojet+ (NTSC hack)" />
+	<game crc32="0x3351FEDA" name="Power Lords (NTSC)(alt)">
+		<option name="euro" />
+	</game>
+	<game crc32="0x35ACE4E8" name="Spiderman (unreleased)" />
+	<game crc32="0x395629E1" name="Satellite Attack (PAL)" />
+	<game crc32="0x39989464" name="Electronic Hockey/Electronic Soccer (PAL)">
+		<option name="euro" />
+	</game>
+	<game crc32="0x39E31BF0" name="Martian Threat (unreleased)">
+		<option name="euro" />
+	</game>
+	<game crc32="0x3B24E1EE" name="Speedway/Spinout/Crypto (FR)" />
+	<game crc32="0x3BFEF56B" name="Four in 1 Row (PAL)">
+		<option name="dishirq" />
+		<option name="regionoff">1</option>
+		<option name="mxsnap">6</option>
+		<option name="euro" />
+		<option name="exrom" />
+	</game>
+	<game crc32="0x3C949A57" name="Billard+ (PAL hack)" />
+	<game crc32="0x40AE062D" name="Power Lords (NTSC)">
+		<option name="euro" />
+	</game>
+	<game crc32="0x4103EE95" name="Air Battle (BR)" />
+	<game crc32="0x44D1A8A5" name="Stone Sling (PAL)">
+		<option name="regionoff">11</option>
+	</game>
+	<game crc32="0x45E62222" name="CSV1 - Verkehrsspiele (PAL)" />
+		<option name="mxsnap">6</option>
+	<game crc32="0x45EF459C" name="AMOK! (homebrew)" />
+	<game crc32="0x4663C4B6" name="Skiing (PAL)" />
+	<game crc32="0x4A3E2DC8" name="Munchkin (PAL)" />
+	<game crc32="0x4A578DFE" name="Restaurant (NTSC hack)">
+		<option name="ntsc" />
+	</game>
+	<game crc32="0x4A6963DE" name="Blobbers (NTSC hack)" />
+	<game crc32="0x4CEC1404" name="Billard+ (Jopac)" />
+	<game crc32="0x4E2CC6D3" name="Kill The Attacking Aliens (homebrew)" />
+	<game crc32="0x4EDA4917" name="Speedway/Spinball/Crypto (PAL)" />
+	<game crc32="0x4F73B44C" name="K.C. Pacman (hack)(different gfx)" />
+	<game crc32="0x50AF9D45" name="Demon Attack+ (Jopac)">
+		<option name="g7400" />
+		<option name="vppenable" />
+		<option name="ntsc" />
+	</game>
+	<game crc32="0x510416B7" name="Morse (FR)" />
+	<game crc32="0x5216771A" name="Popeye (PAL)">
+		<option name="regionoff">1</option>
+		<option name="tweakedaudio" />
+	</game>
+	<game crc32="0x54736B74" name="Freedom Fighters (PAL)" />
+	<game crc32="0x54BF4750" name="Flipper (FR)" />
+	<game crc32="0x551E38A2" name="Volleyball (FR)">
+		<option name="sproff">1</option>
+	</game>
+	<game crc32="0x569E4249" name="Neutron Star+ (PAL)(unknown hack)" />
+	<game crc32="0x58FA6766" name="Legion (PAL)">
+		<option name="euro" />
+	</game>
+	<game crc32="0x5AE57A8C" name="Air-Sea War (PAL)" />
+	<game crc32="0x5C02BEE6" name="Type &amp; Tell (PAL hack)">
+		<option name="regionoff">2</option>
+	</game>
+	<game crc32="0x5F663FFC" name="JG Munchkin (hack)(different gfx)" />
+	<game crc32="0x61A350E6" name="Mousing Cat (FR)">
+		<option name="regionoff">0</option>
+		<option name="euro" />
+		<option name="evblclock">7642</option>
+	</game>
+	<game crc32="0x6381E402" name="Black Jack (FR)" />
+	<game crc32="0x655FDF57" name="Mission-Impossible (BR)" />
+	<game crc32="0x65E5A779" name="Helicopter/Buzzword (homebrew)(hack of two Odyssey2 only games on one cart)" />
+	<game crc32="0x67069924" name="Smithereens! (NTSC)">
+		<option name="regionoff">11</option>
+	</game>
+	<game crc32="0x68560DC7" name="Moto Crash+ (Jopac)">
+		<option name="g7400" />
+		<option name="vppenable" />
+		<option name="euro" />
+	</game>
+	<game crc32="0x688FAD11" name="Keyboard Creations (NTSC)" />
+	<game crc32="0x69893F7F" name="CSV2 - Verkehrsspiele (PAL)" />
+	<game crc32="0x69D21F8F" name="Interpol (PAL)(unreleased)" />
+	<game crc32="0x6CB1DE16" name="Planet Lander (homebrew)" />
+	<game crc32="0x6CEBAB74" name="Jumping Acrobats (PAL)">
+		<option name="regionoff">12</option>
+	</game>
+	<game crc32="0x6EF2471A" name="Pinball (unreleased)" />
+	<game crc32="0x6F66B1F7" name="Black Jack (PAL)" />
+	<game crc32="0x6FABCB7E" name="Clay Pigeon+ (PAL)(unreleased)" />
+	<game crc32="0x7108E058" name="K.C. Munchkin (NTSC)" />
+	<game crc32="0x71AE8533" name="Space Monster (PAL)" />
+	<game crc32="0x7394E82C" name="Secret of the Pharaohs (PAL)" />
+	<game crc32="0x764894A1" name="Terrahawks+ (PAL)" />
+	<game crc32="0x77066338" name="C7010 Chess (PAL)" />
+	<game crc32="0x7810BAD5" name="Dynasty (PAL)">
+		<option name="regionoff">8</option>
+	</game>
+	<game crc32="0x7A006985" name="Cosmic Conflict+ (PAL)(hack)(enemies visible on G7400)" />
+	<game crc32="0x7C747245" name="Four in 1 Row! (PAL)(hack)(works on G7400)">
+		<option name="regionoff">1</option>
+		<option name="dishirq" />
+		<option name="euro" />
+		<option name="mxsnap">6</option>
+	</game>
+	<game crc32="0x81C20196" name="Pick Axe Pete+ (hack)(+gfx corrections)">
+		<option name="evblclk">12000</option>
+	</game>
+	<game crc32="0x825976A9" name="Mousing Cat (PAL)(8KB dump)">
+		<option name="regionoff">0</option>
+		<option name="euro" />
+		<option name="evblclk">7642</option>
+	</game>
+	<game crc32="0x82996B1F" name="Tenpin Bowling/Basketball+ (PAL)(unreleased)" />
+	<game crc32="0x85DFCDD7" name="Newscaster (PAL)" />
+	<game crc32="0x863D5E2D" name="Shark Hunter (unreleased) (NTSC hack)">
+		<option name="euro" />
+	</game>
+	<game crc32="0x874F36A4" name="PT Barnums Acrobats! (NTSC)" />
+	<game crc32="0x877B4109" name="Kill The Attacking Aliens (Demo2) (homebrew)" />
+	<game crc32="0x881CEAE4" name="Great Wall Street Fortune Hunt (PAL)">
+		<option name="pendirq" />
+		<option name="mxsnap">3</option>
+		<option name="euro" />
+		<option name="evblclock">61000</option>
+	</game>
+	<game crc32="0x89C6DE2C" name="Electronic Table Soccer (PAL)" />
+	<game crc32="0x91A85E7C" name="Moto Crash (NTSC hack)" />
+	<game crc32="0x92D0177B" name="Martian Threat (unreleased)(alt)">
+		<option name="euro" />
+	</game>
+	<game crc32="0x9451BE1E" name="Quest for the Rings (PAL)" />
+	<game crc32="0x9487C920" name="Showdown in 2100 A.D. (NTSC)" />
+	<game crc32="0x9585D511" name="Super Bee (PAL)">
+		<option name="euro" />
+	</game>
+	<game crc32="0x95936B07" name="Super Cobra (PAL)">
+		<option name="mxsnap">3</option>
+	</game>
+	<game crc32="0x95EFA98B" name="Computer Intro (NTSC)" />
+	<game crc32="0x96ADC96C" name="Speedway/Spinout/Crypto (PAL)(hack)(color)" />
+	<game crc32="0x9884EF36" name="Demon Attack+ (FR)(hack)(+gfx corrections)">
+		<option name="ntsc" />
+		<option name="g7400" />
+		<option name="vppenable" />
+	</game>
+	<game crc32="0x9B5E9356" name="Four in 1 Row (FR)">
+		<option name="dishirq" />
+		<option name="regionoff">1</option>
+		<option name="mxsnap">6</option>
+		<option name="euro" />
+		<option name="exrom" />
+	</game>
+	<game crc32="0x9BC04EBB" name="Speedway/Spinout/Cryptologic+ (FR)" />
+	<game crc32="0x9BFC3E01" name="Demon Attack (PAL)">
+		<option name="ntsc" />
+	</game>
+	<game crc32="0x9C9DDDF9" name="Kinder im Verkehr (PAL)">
+		<option name="mxsnap">3</option>
+	</game>
+	<game crc32="0x9D2C45DC" name="Backgammon (PAL)" />
+	<game crc32="0x9D72D4E9" name="Blobbers (PAL)" />
+	<game crc32="0x9E42E766" name="Turtles (NTSC)">
+		<option name="useforen" />
+	</game>
+	<game crc32="0xA030B990" name="Mr. Roboto (homebrew)" />
+	<game crc32="0xA0620082" name="Las Vegas Gambling (FR)" />
+	<game crc32="0xA21DA732" name="Quest for the Rings (FR)" />
+	<game crc32="0xA29F0FD4" name="Play Tag (unreleased)" />
+	<game crc32="0xA57D84F3" name="Frogger (BR)">
+		<option name="regionoff">8</option>
+		<option name="mxsnap">3</option>
+		<option name="tweakedaudio" />
+	</game>
+	<game crc32="0xA57E1724" name="Catch the Ball / Noughts and Crosses (PAL)">
+		<option name="regionoff">5</option>
+		<option name="mxsnap">12</option>
+		<option name="ntsc" />
+		<option name="drawregion">4</option>
+	</game>
+	<game crc32="0xA674EA27" name="Billard (FR)" />
+	<game crc32="0xA6909A8B" name="Crazy Chase (PAL)" />
+	<game crc32="0xA69C2C93" name="Pairs/Space Rendezvous/Logic (PAL)" />
+	<game crc32="0xA7344D1F" name="Atlantis (PAL)">
+		<option name="pendirq" />
+		<option name="regionoff">0</option>
+		<option name="euro" />
+		<option name="handleevbl" />
+		<option name="handleevbll" />
+		<option name="drawregion">1</option>
+	</game>
+	<game crc32="0xA75C42F8" name="Norseman+ (PAL)">
+		<option name="g7400" />
+		<option name="vppenable" />
+		<option name="euro" />
+	</game>
+	<game crc32="0xA767508B" name="Moto Crash (PAL)(non-vp+ hack)" />
+	<game crc32="0xA7E97958" name="Tenpin Bowling/Basketball (FR)" />
+	<game crc32="0xA8DBED92" name="Cosmic Conflict+ (PAL)" />
+	<game crc32="0xABE368BF" name="Gunfighter (PAL)" />
+	<game crc32="0xAC5C74E6" name="Flipper+ (Jopac)" />
+	<game crc32="0xAD7A9A11" name="Invaders from Hyperspace (NTSC)" />
+	<game crc32="0xAD89F799" name="Take the Money and Run (FR)" />
+	<game crc32="0xAD8B9AE0" name="Type &amp; Tell (NTSC)(hack)(unknown)">
+		<option name="regionoff">2</option>
+	</game>
+	<game crc32="0xAF307559" name="Super Bee (PAL)(8KB dump)">
+		<option name="euro" />
+	</game>
+	<game crc32="0xAFB23F89" name="Musician (PAL)">
+		<option name="tweakedaudio" />
+		<option name="exrom" />
+	</game>
+	<game crc32="0xAFC093FD" name="Conquest of the World (PAL)" />
+	<game crc32="0xB07748E7" name="Baseball (PAL)" />
+	<game crc32="0xB096654E" name="Killer Bees (NTSC)" />
+	<game crc32="0xB0A7D723" name="unknown+">
+		<option name="g7400" />
+		<option name="vppenable" />
+		<option name="euro" />
+	</game>
+	<game crc32="0xB2F0F0B4" name="Le Tresor Englouti+ (Jopac)">
+		<option name="g7400" />
+		<option name="vppenable" />
+		<option name="euro" />
+	</game>
+	<game crc32="0xB2FFB353" name="Pick Axe Pete+ (PAL)">
+		<option name="evblclk">12000</option>
+	</game>
+	<game crc32="0xB4735E6B" name="Satellite Attack+ (PAL)" />
+	<game crc32="0xB47F3E0B" name="Kill The Attacking Aliens (Demo1) (homebrew)" />
+	<game crc32="0xB590CF14" name="Computer Programmer (PAL)" />
+	<game crc32="0xB5FB1416" name="Basket/Bowling+ (Jopac)" />
+	<game crc32="0xB932D584" name="Looney Balloon+ (PAL)" />
+	<game crc32="0xB936BD78" name="Type &amp; Tell (NTSC)">
+		<option name="regionoff">12</option>
+	</game>
+	<game crc32="0xBB4AD548" name="Smithereens! (unknown hack)">
+		<option name="regionoff">11</option>
+	</game>
+	<game crc32="0xBB6E7135" name="Las Vegas Gambling (PAL)" />
+	<game crc32="0xBBF276A0" name="Matchmaker/Buzzword/Logix (NTSC)" />
+	<game crc32="0xBE11157C" name="Neutron Star+ (PAL)" />
+	<game crc32="0xBE4FF48E" name="Catch the Ball/Noughts and Crosses (PAL)(hack)(works on G7400)">
+		<option name="ntsc" />
+		<option name="mxsnap">12</option>
+	</game>
+	<game crc32="0xC049E79E" name="Cosmic Conflict! (NTSC)" />
+	<game crc32="0xC06A3880" name="Pong +extra features (homebrew)(Rene van den Enden)" />
+	<game crc32="0xC4134DF8" name="Helicopter Rescue+ (PAL)">
+		<option name="g7400" />
+		<option name="vppenable" />
+		<option name="euro" />
+		<option name="tweakedaudio" />
+	</game>
+	<game crc32="0xC8F36C28" name="Black Jack (PAL)(hack)(works on G7400)" />
+	<game crc32="0xC91DF148" name="Robot City (unreleased)(bad dump)" />
+	<game crc32="0xC97268DC" name="Musician (PAL)(hack)(works on G7400)" />
+	<game crc32="0xCA23F40C" name="Looney Balloon (PAL)(unreleased)" />
+	<game crc32="0xCA8AB259" name="Laser War (FR)" />
+	<game crc32="0xCF2F8E7A" name="Nimble Numbers Ned (NTSC)" />
+	<game crc32="0xCFCA6F39" name="Exojet+ (Jopac)" />
+	<game crc32="0xD03EFA86" name="Neutron Star (PAL)(unreleased - black hole)" />
+	<game crc32="0xD0BC4EE6" name="Frogger (PAL)">
+		<option name="regionoff">12</option>
+		<option name="mxsnap">3</option>
+		<option name="euro" />
+		<option name="evblclk">7642</option>
+		<option name="tweakedaudio" />
+		<option name="drawregion">2</option>
+	</game>
+	<game crc32="0xD158EEBA" name="Labyrinth (PAL)">
+		<option name="euro" />
+	</game>
+	<game crc32="0xD38153F6" name="Blockout (FR)">
+		<option name="pendirq" />
+		<option name="dishirq" />	
+		<option name="regionoff">1</option>
+		<option name="mxsnap">3</option>
+		<option name="ntsc" />
+	</game>
+	<game crc32="0xD3B09FEC" name="Volleyball (PAL)">
+		<option name="sproff">1</option>
+	</game>
+	<game crc32="0xD62814A3" name="Pick Axe Pete (PAL)">
+		<option name="evblclk">12000</option>
+	</game>
+	<game crc32="0xD7089068" name="unknown+">
+		<option name="g7400" />
+		<option name="vppenable" />
+		<option name="euro" />
+	</game>
+	<game crc32="0xD94D4109" name="Air Battle+ (PAL)" />
+	<game crc32="0xDAAE02DC" name="Nimble Numbers Ned (PAL hack)" />
+	<game crc32="0xDC30AD3D" name="Dynasty! (NTSC)">
+		<option name="regionoff">10</option>
+	</game>
+	<game crc32="0xDC5AFAA2" name="Mathematician (PAL)" />
+	<game crc32="0xDDBA0ED2" name="Space Monster (PAL)(color hack)" />
+	<game crc32="0xDEE70B33" name="Killer Bees+ (PAL)" />
+	<game crc32="0xDF36683F" name="Shark Hunter (PAL)(unreleased)">
+				<option name="euro" />
+	</game>
+	<game crc32="0xE129490D" name="Skiing (FR)" />
+	<game crc32="0xE58AA0AC" name="Super Cobra (BR)" />
+	<game crc32="0xE5FB4260" name="Tenpin Bowling/Basketball+ (PAL)(hack)(vp+ gfx corrections)" />
+	<game crc32="0xE7B26A56" name="Jumping Acrobats (PAL)(alt with extra keys)">
+		<option name="regionoff">12</option>
+	</game>
+	<game crc32="0xEB61888F" name="Acrobats (PAL hack)" />
+	<game crc32="0xEE3EE642" name="Speedway/Spinball/Cryptologic+ (PAL)" />
+	<game crc32="0xF00F9DBA" name="Electronic Soccer (FR)" />
+	<game crc32="0xF390BFEC" name="Mousing Cat (PAL)">
+		<option name="regionoff">0</option>
+		<option name="euro" />
+		<option name="evblclk">7642</option>
+	</game>
+	<game crc32="0xF4C2075E" name="Cosmic Conflict (PAL)" />
+	<game crc32="0xF6882734" name="Depth Charge/Marksman (PAL)(alt)">
+		<option name="euro" />
+		<option name="evblclk">8000</option>
+	</game>
+	<game crc32="0xF9084AA3" name="American Football (PAL)" />
+	<game crc32="0xFB83171E" name="Dam Buster (PAL)">
+		<option name="pendirq" />
+		<option name="dishirq" />
+		<option name="regionoff">1</option>
+		<option name="mxsnap">3</option>
+		<option name="ntsc" />
+	</game>
+	<game crc32="0xFC5A7F08" name="Attack of the Timelord (NTSC)" />
+	<game crc32="0xFD179F6D" name="Clay Pigeon (BR)">
+		<option name="mxsnap">3</option>
+	</game>
+	<game crc32="0xFEE664F3" name="Monkeyshines (PAL)" />
+	<game crc32="0xB1109A09" name="Depth Charge/Marksman (BR)" />
+	<game crc32="0x838A2D1E" name="Chinese Logic (BR)" />
+	<game crc32="0xE39500A6" name="Catch the Ball/Noughts and Crosses (BR)" />
+	<game crc32="0x16C574C8" name="Secret of the Pharaohs (BR)" />
+	<game crc32="0x228842DF" name="The Great Wall Street Fortune Hunt (BR)" />
+	<game crc32="0x02743352" name="Super Bee (BR)" />
+	<game crc32="0x5B6E741A" name="Loony Balloon (BR)" />
+	<game crc32="0x88D7CE72" name="Play Tag (unreleased)(hack) (voice hum fix)" />
+	<game crc32="0x0009965B" name="Tutankham (PAL)(unreleased)(hack)(voice hum fix)" />
+	<game crc32="0xBE26212B" name="Billard+ (PAL)(hack)(voice hum fix)" />
+	<game crc32="0xA2C6750E" name="Hockey/Soccer (PAL)(hack)(voice hum fix)" />
+	<game crc32="0x19947048" name="Secret of the Pharaohs (BR)(hack)(voice hum fix)" />
+	<game crc32="0x3B9D30C4" name="Musician (PAL)(hack)(includes examples)" />
+	<game crc32="0x193F3855" name="Computer Programmer (PAL)(hack)(includes examples)" />
+	<game crc32="0xECCD03BE" name="Calculator+ (homebrew)(Rene van den Enden)" />
+	<game crc32="0x798E10BB" name="Puzzle Piece Panic (homebrew) (o2em enabled version)">
+		<!-- programs needing this option enabled will not work on real hardware! -->
+		<option name="allowvdcalways" />
+	</game>
+	<game crc32="0x72674ADB" name="Puzzle Piece Panic (homebrew)" />
+	<game crc32="0xABE9B016" name="Route 66 (homebrew)" />
+	<game crc32="0xFDF0028F" name="Interpol (unreleased)(NTSC hack)" />
+	<game crc32="0xCC8BC68C" name="Tutankham (unreleased)(NTSC hack)" />
+	<game crc32="0x7C989567" name="Clay Pigeon+ (unreleased)(alt)" />
+	<game crc32="0x335481F1" name="Martian Threat (unreleased)" />
+	<game crc32="0x7BE6F1EF" name="Nightfighter (unreleased)" />
+	<game crc32="0x5C4F35D3" name="Red Baron (unreleased)(alt)" />
+	<game crc32="0xEF9E9C3B" name="Robot City (unreleased)(alt)" />
+	<game crc32="0x3E5F71F3" name="Spiderman (unreleased)(alt)" />
+	<game crc32="0x7F0E80C7" name="GridEdit (homebrew) (Manopac)" />
+	<game crc32="0x8FB50858" name="Manopac's Intro (homebrew)" />
+	<game crc32="0x11566368" name="SoundTest (homebrew) (Manopac" />
+	<game crc32="0xFEC328FE" name="SpriteBuilder (homebrew) (Manopac)" />
+	<game crc32="0x4CB71512" name="Keyboard Test for G7400 (homebrew) (Manopac)">
+		<option name="g7400" />
+		<option name="vppenable" />
+		<option name="euro" />
+	</game>
+	<game crc32="0x5C8708AC" name="Gunslinger (PAL)(hack)(voice hum fix)" />
+	<game crc32="0xA5ABFD39" name="Electronic Volleyball (PAL)(hack)(voice hum fix)" />
+	<game crc32="0x9E5EE195" name="K.C. Pacman (hack)(hack of hack)(different gfx)" />
+</o2emConfig>

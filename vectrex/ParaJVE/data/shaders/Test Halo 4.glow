@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<shader id="glow" active="true" passes="3" >
+	<bufferSize fixed="true" fixedWidth="320" fixedHeight="400" factor="1.0" />
+	<flickering enabled="true" factor="0.103" />
+	<attenuation enabled="true" factor="1.628" />
+	<gains>
+		<horizontal enabled="true" factor="1.15" />
+		<vertical enabled="true" factor="1.15" />
+	</gains>
+	<kernel id="horizontal" >
+		<value>1.0</value>
+		<value>2.0</value>
+		<value>3.0</value>
+		<value>4.0</value>
+		<value>5.0</value>
+		<value>6.0</value>
+		<value>10.0</value>
+		<value>15.0</value>
+		<value>20.0</value>
+		<value>25.0</value>
+	</kernel>
+	<kernel id="vertical" >
+		<value>1.0</value>
+		<value>2.0</value>
+		<value>3.0</value>
+		<value>4.0</value>
+		<value>5.0</value>
+		<value>6.0</value>
+		<value>10.0</value>
+		<value>15.0</value>
+		<value>20.0</value>
+		<value>25.0</value>
+	</kernel>
+	<info>
+		<author />
+		<description><![CDATA[For fun only ...
+
+An exagerated glow that creates a large halo around the vectors.
+
+Best used with "Vector Persistence" turned off in the Display options.]]></description>
+	</info>
+</shader>

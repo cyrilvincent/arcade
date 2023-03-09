@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<shader id="glow" active="true" passes="2" >
+	<bufferSize fixed="true" fixedWidth="400" fixedHeight="500" factor="1.0" />
+	<flickering enabled="false" factor="0.2" />
+	<attenuation enabled="true" factor="1.988" />
+	<gains>
+		<horizontal enabled="false" factor="1.0" />
+		<vertical enabled="false" factor="1.2" />
+	</gains>
+	<kernel id="horizontal" >
+		<value>1.0</value>
+		<value>2.4248533</value>
+		<value>4.1256914</value>
+		<value>4.925313</value>
+	</kernel>
+	<kernel id="vertical" >
+		<value>1.0</value>
+		<value>2.4248533</value>
+		<value>4.1256914</value>
+		<value>4.925313</value>
+	</kernel>
+	<info>
+		<author />
+		<description><![CDATA[A shader using the same kernel as "Gaussian_2", but that uses 2 passes with a buffer size that has been reduced.
+
+The result is much different that "Gaussian_1" but should also perform faster.]]></description>
+	</info>
+</shader>

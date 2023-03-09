@@ -1,0 +1,56 @@
+=====================================================
+ HOW TO ADD YOUR OWN OVERLAYS INTO PARAJVE EMULATION
+=====================================================
+
+The overlay files are standard image files that are loaded by ParaJVE to create
+an OpenGL texture used to render the vectrex overlay. The standard PNG, JPG and
+BMP formats are supported, and the alpha channel of the image (transparency) is
+used as is to define the transparent areas of the overlay.
+
+An overlay is split into 2 different images : One image for the 'opaque' areas
+of the overlay, and another for the 'transparent' areas. The transparent image 
+goes through the post-processing steps when it is displayed (color/brightness 
+blending using OpenGL shaders). On the other hand, the opaque image (whose name 
+is suffixed with a dollar character) is merely textured as is ( ithout any 
+special graphics processing) at the end of the rendering process , over the 
+resulting backbuffer image.
+
+If you want to design your own overlay for ParaJVE, you might want to work 
+with an additional black background layer, as it will give a good idea of 
+what the overlay will look like when rendered through the ParaJVE engine.
+
+If you want to add your own overlay for a game, all you have to do is copy 
+the image file(s) in this folder, and refer to it using a relative path in
+the associated game entry of the configuration file.
+
+Please note that overlay FILES take precedence over the overlays stored in 
+the PACK (overlays.jvepak), so your own files will be used even if their names
+are the same as the one of an overlay defined in the pack. This lets you change
+the default overlays if you want to.
+
+
+As an example, here is the steps that ParaJVE will perform to load an overlay
+that has been defined in the configuration file as :
+
+		<game id="MY_GAME" name="My Own Game">
+		  [...]
+			<overlay [...] path="data/packs/MyOverlay.png" />
+			[...]
+		</game>
+
+1. Try to load the image from the local file "data/packs/MyOverlay.png"
+   If successful, use this image as the overlay transparent texture (go to step 4)
+
+2. Try to load the image with the id "MYOVERLAY.PNG" from the pack file
+   If successful, use this image as the overlay transparent texture (go to step 4)
+
+3. No overlay image found, disable overlay for this gaming session (STOP).
+
+4. Try to load the image from the local file "data/packs/MyOverlay$.png"
+   If successful, use this image as the overlay opaque texture (STOP), otherwise, continue to 5.
+
+5. Try to load the image with the id "MYOVERLAY$.PNG" from the pack file
+   If successful, use this image as the overlay opaque texture (STOP), otherwise, continue to 6.
+
+3. No opaque overlay image found, just render the transparent overlay for this gaming session (STOP).
+

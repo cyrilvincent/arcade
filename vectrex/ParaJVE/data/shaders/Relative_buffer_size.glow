@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<shader id="glow" active="true" passes="2" >
+	<bufferSize fixed="false" fixedWidth="640" fixedHeight="800" factor="0.701" />
+	<flickering enabled="true" factor="0.2" />
+	<attenuation enabled="true" factor="2.5" />
+	<gains>
+		<horizontal enabled="false" factor="1.0" />
+		<vertical enabled="true" factor="1.35" />
+	</gains>
+	<kernel id="horizontal" >
+		<value>1.0</value>
+		<value>2.0</value>
+		<value>3.0</value>
+		<value>4.0</value>
+		<value>5.0</value>
+	</kernel>
+	<kernel id="vertical" >
+		<value>1.0</value>
+		<value>2.0</value>
+		<value>3.0</value>
+		<value>4.0</value>
+		<value>5.0</value>
+	</kernel>
+	<info>
+		<author />
+		<description><![CDATA[The only shader using a buffer with a size relative to the window size. This means that this shader execution time depends on the window size (it might run smoothly on a small window, but not on a maximized window).
+
+You can tweak the "relative size" factor to adjust it to your needs (you should select the greater value that makes the emulator run smoothly on a maximized window).
+
+Also, if you have a super-fast 3D card, you can keep a "relative size" of 1.0 and increase the number of passes to have better visuals.]]></description>
+	</info>
+</shader>

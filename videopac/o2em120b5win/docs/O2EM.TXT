@@ -1,0 +1,408 @@
+
+                     O2EM v1.20 (December/2011)
+
+                  an Odyssey 2 & Videopac+ emulator
+
+      copyright 1996/1998 by Daniel Boris <dboris@comcast.net>
+         
+ Developed by Daniel Boris, Andre de la Rocha and Arlindo Oliveira
+					this version was enhanced from 1.18 by manopac
+(lots of errors removed, new features and new in 1.20: C7420 Emulation)
+    
+                 This package is released under the 
+             Clarified Artistic License (see license.txt)
+ 
+			 Project Homepage
+                     http://o2em.sourceforge.net
+
+---------------------------------------------------------------------------
+
+
+O2EM is an open source Odyssey2 / Videopac console emulator, created by
+Daniel Boris in 1996. Since version 0.80 it has been developed by André de
+la Rocha and since version 1.16 it has been developed by Arlindo M. de Oliveira.
+This version is an unofficial release by manopac, who was not happy with the
+features that were missing and that o2em did not work properly on his Windows 7 
+notebook.
+
+This release includes the binaries for the Windows version of O2EM v1.20.
+The sources can also be compiled under other platforms that support the Allegro 
+game library. The binary versions for Linux/X11 and DOS continue to be available 
+just until version 1.16 on sourceforge.
+
+With the Windows binary, the necessary version of the Allegro DLL is also
+included. To use the Linux version you must get the Allegro library for Linux
+yourself and install it as root. The DOS version does not need additional
+files.
+
+O2EM is a command line based program, but there are several Windows frontends
+you can use. The "official" one is O2EM Launcher, created by Heitor
+Barcellos. (This unofficial version also has a built in fileselector if started 
+without a rom-file.)
+
+In order to build O2EM from its sources, you need either the MingW or Cygwin
+packages on Windows, DJGPP on DOS and GCC on Linux. See the links below.
+
+The latest official version of O2EM can be found at http://o2em.sourceforge.net 
+If you want to send bug reports, or be part of the O2EM development, go to the 
+O2EM project page at SourceForge : http://sourceforge.net/projects/o2em/
+
+
+Useful links:
+
+Dan Boris' home page: http://www.atarihq.com/danb/
+Allegro library: http://alleg.sourceforge.net/
+MingW C/C++ compiler: http://sourceforge.net/projects/mingw/
+Soeren Gust page : http://soeren.informationstheater.de/
+Odyssey2 Home: http://www.classicgaming.com/o2home/
+Odysseymania the brazilian webpage : http://odysseymania.classicgaming.com.br
+OdysseyBR Group: http://gamesource.groups.yahoo.com/group/OdysseyBR/
+Videopac Forum: http://www.videopac.nl/forum
+
+Acknowledgments:
+
+
+We wish to thank the following people:
+    
+	Keita Iida (Keita/Pooka/Fygar)
+	for his enthusiasm, for the O2EM beta testing, and general encouragement.
+
+	Marco Kerstens (MarcoK)
+	for providing Videopac schematics, and general support.
+
+	Matthew Pritchard
+	for sending some official O2 programming documents.
+
+	Bo Krogsgaard (Therion23)
+	for putting the idea of doing the emulator into my head to start with.
+
+	Jason F. Gohlke
+	for providing valuable Voice tech info as well as the voice samples.
+        
+	Soeren Gust : For sending his patches to O2EM and for technical
+	information about the console. Part of his technical document was
+	used to implement VP+ emulation.
+
+	René van den Enden : for providing information about several
+	unsupported games and other help.
+
+	Simon Scudder : for sending technical information about the O2
+	(including the datasheet of the VP+ gfx chipset), sampled sounds and
+	his nice O2 disassembler.
+
+	Heitor Barcellos : for creating the O2EM Launcher frontend.
+
+	Marcelo Ribeiro : for the icon used with the windows version of O2EM,
+	bug reports, and for information about O2 games.
+
+	Rafael : for compiling a big list of bugs present in O2EM v0.87.
+
+	Zimmerman : for sending his patch to add key customization, on which
+	v1.00 customization was based.
+	
+	Arlindo de Oliveira : for sending patches to fix bugs in O2EM and for
+	his interest in keeping the O2 emulation alive.
+	
+	The members of the OdysseyBR user group: for several bug reports, as
+	well for support in general.
+
+-----------------------------------------------------------------------------
+
+Quick Setup:
+
+To get O2EM up and running quickly follow these steps:
+
+1. Unzip the O2EM archive on your hard drive, that will create the necessary 
+   standard directories: ROMS, BIOS and VOICE into the main directory O2EM118.
+2. Download the bios ROM O2ROM.BIN (or G7400.BIN, or C52.BIN, or JOPAC.BIN) 
+   and put it into BIOS directory.
+3. Download one or more game ROMs, for example KCMUNCH.BIN for KC Munchkin and
+   put the ROM in ROMS directory.
+4. From the O2EM118 directory type: o2em KCMUNCH.BIN to start the game.If you want
+   to play KC Munchkin with VP+ BIOS, type: o2em KCMUNCH.BIN -g7400 
+   
+---------------------------------------------------------------------------
+Setup:
+
+    Before you can run O2EM you need a copy of the Odyssey2 or Videopac bios
+ROM. For copyright reasons, this ROM image can not be included in this
+archive. This ROM image is stored inside the 8048 processor and can be read
+out with the appropriate equipment. The image should be 1024 bytes long and
+should be in the BIOS directory in the main directory O2EM118.
+
+    You will also need cartridge images, but again for copyright reasons
+these can not be provided. PLEASE DO NOT E-mail us asking for ROM images! All
+messages asking for ROM images will be promptly deleted.
+
+    If you wish to use Voice emulation for games like KC's Krazy Chase. 
+Download the voice samples and unzip them into the VOICE directory
+into the main directory O2EM118. There are two sets of voice samples, 
+mainsamp.zip which is the main voice samples and sidsamp.zip which are the
+samples used by the game Sid the Spellbinder. You only need the Sid samples
+if you want voice in that game.
+
+---------------------------------------------------------------------------
+
+
+Usage:
+
+
+o2em [<file>/<path>] [options]
+
+<file> = file to load with extension
+	If the filename is omitted, the integrated file browser is started with the 
+	directory given as "romdir" (default directory "roms"). If a path is specified 
+	instead of a file, the file browser starts in this  directory
+
+options:
+
+-help	      Help display
+
+-wsize=n      Window size used by the emulator (1=original, 2=double size, etc.)
+
+-fullscreen   Use full screen mode
+
+-scanlines    Enable scanlines use by the video emulation. Scanlines are a
+              feature that makes your display look like a TV screen.
+
+-nosound      Turn off sound emulation
+
+-novoice      Turn off voice emulation
+
+-svolume=n    Set sound volume (0-100)
+
+-vvolume=n    Set voice volume (0-100)
+
+-debug        Start the emulator in debug mode
+
+-speed=n      Relative speed (100 = original speed)
+
+-nolimit      Turn off speed limiter
+
+-bios=file    Set the file name and directory to find the console
+	      bios. By default it looks for a file named o2rom.bin.
+       	      You can use a bios file from an Odyssey2, Videopac or
+       	      Videopac+ console. If you want to run VP+ games (in 
+	      VP+ mode) then you need a VP+ bios.
+
+-romdir=path  Set the directory to find the game rom. By default it
+	      looks for path named roms
+
+-biosdir=path Set the directory to find the console bios. By default it
+	      looks for path named bios
+
+-o2rom        Start the emulator with Odyssey 2 bios (default for most games).
+
+-c52          Start the emulator with french Odyssey 2 bios.
+
+-g7400        Start the emulator with VP+ bios (default for detected VP+ only games).
+
+-jopac        Start the emulator with french VP+ bios. 
+
+-euro         This option enables the use of European timing / 50Hz mode.
+
+-ntsc         This option enables the use of NTSC (US) timing / 60Hz mode.
+
+-filter       Enable the low-pass audio filter.
+
+-scshot=file  Set the screen shot file name or template. The screen shot
+              will be saved when you press the F8 key in the emulator.
+              The extension of the file you give will set the file type.
+              supported file types are bmp, pcx and tga. You can also give
+              a template to save several files, using the @ character.
+              Using an option like -scshot=dump@.bmp will save files with
+              names like dump00.bmp, dump01.bmp, etc. The pictures will
+              have a resolution of (320x240)*wsize.
+
+-exrom        Enable the use of an alternative ROM mapping for 4Kb games, to
+	      support some games that use a special 3kb program rom/1kb data
+	      ROM mode. The only known that use it are Four in 1 Row and
+	      Musician and both are detected by their CRC and set correctly.
+	      So this option is to be used only with games that are currently
+	      unknown to O2EM. Do not enable it as default, as it will make
+	      all the 4kb games that do not use this special mode crash.
+              
+-s0=QUIT,PAUSE,DEBUG,RESET,SCREENCAP,SAVE,LOAD,INJECT_HIGH,SWAP_JOYSTICKS,QUICKLOAD_BASIC,QUICKSAVE_BASIC,COPY_VPPCHARS
+	      These option defines which keys are used for some of the system 
+	      keys, if you use this option, you have to enter all 12 keys, to 
+	      override the original keys (ESC,F1,F4,F5,F8,F2,F3,F6,F7,F9,F10,F11)
+
+-joyautodetect	autodetect joysticks (real joysticks first, if not present 
+				fall back to keyboard emulation)
+
+-joydefaultoff	disable joysticks on startup (same as pressing SCROLL LOCK)
+				joysticks can be enabled again at any time using SCROLL LOCK again
+				(usefull if no real sticks are connected for all the games that do 
+				not require joysticks or for C7420 emulation - Joystick off and 
+				enabled only when needed)
+
+-s1=mode/keys Define stick 1 mode/keys
+-s2=mode/keys Define stick 2 mode/keys
+
+              These options define how the console joysticks are emulated.
+              For autodetection just use -joyautodetect.
+              You can use a joystick connected to your computer or use
+              the keyboard. You can specify a mode number (compatible with
+              previous versions of O2EM) to disable the joystick emulation,
+              to select an actual joystick or to set a default keyboard
+              emulation mode :
+                0=Disable,
+                1=Default Right keys (arrows keys and L)
+                2=Default Left keys (W,S,A,D,SPACE)
+                3=Joystick
+              Example: -s1=1 -s2=3
+                                 
+              You can also specify a list of 5 keyboard codes that will
+              be used to emulate the joystick, separated by comas
+              (without spaces), using this order : UP,DOWN,LEFT,RIGHT,FIRE.
+              The following codes are accepted (not case sensitive):
+                A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,
+                0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
+                0_PAD,1_PAD,2_PAD,3_PAD,4_PAD,5_PAD,6_PAD,7_PAD,8_PAD,9_PAD,
+                TILDE, MINUS, EQUALS, BACKSPACE, TAB, OPENBRACE, CLOSEBRACE,
+                ENTER, COLON, QUOTE, BACKSLASH, BACKSLASH2, COMMA, STOP,
+                SLASH, SPACE, INSERT, DEL, HOME, END, PGUP, PGDN, LEFT,
+                RIGHT, UP, DOWN, SLASH_PAD, ASTERISK, MINUS_PAD, PLUS_PAD,
+                DEL_PAD, ENTER_PAD, PRTSCR, PAUSE, ABNT_C1, YEN, KANA, AT,
+                CIRCUMFLEX, COLON2, KANJI, LSHIFT, RSHIFT, LCONTROL,
+                RCONTROL, ALT, ALTGR, LWIN, RWIN, MENU, SCRLOCK, NUMLOCK
+              Example: -s1=y,h,g,j,lcontrol -s2=8_PAD,5_PAD,4_PAD,6_PAD,RCONTROL
+
+-scoreadr=address     where the high-score is saved for specific rom
+-scoretype=type	      how the high-score is saved for specific rom
+-score=highscore      default highscore on launch ("inject" with F6)
+-scorefile=file	      file where the highscore is saved on exit
+
+-savefile=file	      filename for save/load state
+-vppenable						enables Videopac+ for unrecognized BIOS files
+-useforen							enables "no drawing of foreground characters if VDC foreground is on"
+-biosfile=file				sets the Bios to a specific file
+-crc									lets you specify a CRC (in hex, without leading 0x) to use for hacks
+											e.g. use "-crcA7344D1F" to use the same hacks as for Atlantis when O2EM 
+											starts using any other (or a modified Atlantis) ROM
+-disablebrowser				disables the file browser (if called without filename, O2EM will 
+											give an error message)
+-browsersortorder			sortorder in browser window, value can be either "filename" or "gamename"
+
+-c7420								emulate C7420 Microsoft BASIC cartridge (needs the correct cartridge as file for O2EM!)
+-c7420bios						filename for c7420bios (default is c7420_z80.bin in bios directory)
+-c7420dir							directory for saving/loading binary files using CLOAD/CSAVE
+-c7420savetext				CSAVE saves as text (defaults to save as Binarys)
+
+-config								Use this configuration when starting O2EM (see section config file)
+-----------------------------------------------------------------------------------------------
+Configuration file:
+
+O2EM uses a configuration file o2emcfg.xml that keeps the names of all games as well as the
+required settings/tweaks to get the game to run on O2EM. It also stores your private settings
+(e.g. keyboard or joystick settings). All the command line options listed above can be used
+in the configuration file. Take a look at the file and you will find 3 different important sections:
+
+Section 1: Header and Default Configuration to use
+<o2emConfig useConfig="myConfig">
+
+This is the main header of the file which tells that it is a config for O2EM and which configuration
+to use on default (optional). This part also contains Sections 2 and 3
+
+Section 2: Individual Configurations
+	<config name="myConfig">
+		<option name="joyautodetect" />
+		<option name="browsersortorder">gamename</option>
+	</config>
+
+This is an example configuration that specifies some of the options (as listed
+above) in XML format. In this example the option for detecting the joysticks 
+automatically and for changing the sortorder for the built in file browser to
+sort by filename is set. It can also include a default gamerom as in this example:
+
+	<config name="c7420" gamerom="videopac/vp_C7420.bin" />
+
+Using this configuration when starting o2em would work like this:
+
+o2em -config=c7420
+
+and this would automatically load the ROM for the c7420 emulation in the folder "videopac"
+(relative to the romdirectory, which is "roms/" by default)
+
+Section 3: Game Settings
+	<game crc32="0x0D2D721D" name="Trans American Rally+ (PAL)">
+		<option name="g7400" />
+		<option name="vppenable" />
+		<option name="euro" />
+		<option name="tweakedaudio" />
+	</game>
+
+In this section specific options for every game can be specified. It holds the
+games rom CRC (checksum) which is used to identify the game, as well as the games
+name (in this case "Trans American Rally+ (PAL)" used in the file browser.
+It also contains the same kind of option lines like in Section 2, only this
+time they are used when the game is loaded. In this case the BIOS of the
+G7400 is used, Videopac+ is enabled, timing is set european timing (50Hz) and
+the Tweak "tweakedaudio" is enabled.
+
+You can also e.g. disable the joysticks for specific games, or set fullscreen or
+do whatever else you like with it ...
+----------------------------------------------------------------------------
+
+Controls:
+
+    Arrow keys + L = Default joystick 1 emulation
+
+    W,D,S,A + Space  = Default joystick 2 emulation
+
+    F12 = Leave the emulator  (from Version 1.20 ESC only works if C7420-Emulation is not enabled)
+
+    F1  = Pause/Information
+
+    F2  = Save State-File
+
+    F3  = Load State-File
+
+    F4  = Enter debugger
+
+    F5  = Reset emulator (same as pressing the reset-key on the O2/Videopac keyboard)
+    Shift+F5 = Cold reset emulator (same as switching the power off and back on on your system)
+
+    F6  = Inject Highscore
+    
+    F7  = Swap Joysticks
+
+    F8  = Make a screen shot
+
+		F9  = QuickLoad Basic-Program (C7420 Emulation only)
+		
+		F10 = QuickSave Basic-Program (C7420 Emulation only)
+		
+		F11 = Copy Screencontent to Clipboard (C7420 Emulation only, Windows only)
+		Shift+F11 = Copy characters into keyboard buffer (C7420 Emulation only, Windows only)
+
+    SCROLL LOCK = Enables/Disables the O2 keyboard input of the keys used by joystick emulation
+----------------------------------------------------------------------------
+
+File Browser:
+
+use <arrow-up>/<arrow-down> and <page-up>/<page-down> or Joystick 1 to scroll 
+<arrow-right> sorts the list by gamename
+<arrow-left> sorts list by filename.
+<A> to <Z> jumps directly to the first filename/gamename (depending on sort
+order), pressing same letter again jumps to the next entry
+
+on MS Windows systems use <SHIFT>+<A> to <Z> to change to a different drive
+
+Use <Enter> or firebutton on Joystick 1 to select the game or change to the 
+selected directory.
+
+Gamenames shown are defined in o2emcfg.xml, if a name is longer than the space 
+on screen, the name scrolls if the entry is selected by the cursor.
+
+----------------------------------------------------------------------------
+
+Debugger:
+
+The emulator comes with a built in debugger that was used for development.
+The debugger is not very polished and fairly incomplete but it can be useful
+for single stepping through programs and watching their behavior.
+
+h = display help
+----------------------------------------------------------------------------
+

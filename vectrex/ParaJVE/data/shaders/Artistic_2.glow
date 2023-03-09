@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<shader id="glow" active="true" passes="3" >
+	<bufferSize fixed="true" fixedWidth="320" fixedHeight="400" factor="1.0" />
+	<flickering enabled="false" factor="0.2" />
+	<attenuation enabled="true" factor="1.988" />
+	<gains>
+		<horizontal enabled="false" factor="1.0" />
+		<vertical enabled="true" factor="1.4" />
+	</gains>
+	<kernel id="horizontal" >
+		<value>1.0</value>
+		<value>1.0</value>
+		<value>1.0</value>
+		<value>1.0</value>
+		<value>1.0</value>
+		<value>1.0</value>
+		<value>1.0</value>
+		<value>1.0</value>
+		<value>1.0</value>
+	</kernel>
+	<kernel id="vertical" >
+		<value>1.0</value>
+		<value>1.0</value>
+		<value>1.0</value>
+		<value>1.0</value>
+		<value>1.0</value>
+		<value>1.0</value>
+		<value>1.0</value>
+		<value>1.0</value>
+		<value>1.0</value>
+	</kernel>
+	<info>
+		<author />
+		<description><![CDATA[This is a funny shader rather than a realistic one. 
+
+It is also quite GPU intensive (although faster than "Artistic_1"), so don't bother trying in on older 3D cards! :)]]></description>
+	</info>
+</shader>

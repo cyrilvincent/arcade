@@ -1,0 +1,162 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+  <title>ParaJVE 0.7.0 Release Notes</title>
+  <meta http-equiv="expires" content="0">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#0000FF" VLINK="#800080">
+<CENTER>
+<TABLE CELLSPACING=0 CELLPADDING=0 WIDTH=575 BORDER=0>
+<TR>
+<TD WIDTH=575 ALIGN=LEFT VALIGN=TOP NOWRAP>
+<FONT FACE="Verdana, Arial, Geneva, Helvetica" SIZE=2>
+<!-- ------------------------------------ -->
+<TABLE><TR>
+<TD ALIGN=LEFT> <FONT SIZE=8><B><I>ParaJVE</I></B></FONT></TD>
+<TD ALIGN=RIGHT VALIGN=CENTER WIDTH=100%><FONT SIZE=3 COLOR=LIGHTGRAY><B>Release Notes</B></FONT>
+</TR></TABLE><HR>
+<FONT SIZE=3 COLOR=GRAY><B>Parabellum's Java Vectrex Emulator, version 0.7.0</B></FONT>
+<BR><BR><BR>
+<B><U>DESCRIPTION</U></B>
+<DIV align="justify"><ul>
+<B>ParaJVE</B> is an emulator for the <i>GCE Vectrex</i>, a game console created in 1982 by <i>General Consumer Electric</i>. This program is written in Java 1.5, and most parts are working nicely, so the emulation is complete enough for you to enjoy most of the original games set, as well as some extra homebrew roms!
+</ul></DIV><BR>
+<B><U>WHAT'S INCLUDED?</U></B>
+<DIV align="justify"><ul>
+The emulator packaging is self-sufficient : it contains all the files needed to run the whole set of original vectrex games (this includes roms and color overlays), and some additional homebrew games. Also included are the native libraries needed to use the JOGL and JInput APIs (JOGL is an OpenGL binding for java, JInput is a library to access connected joysticks). Unlike other java archives, these libraries are specific to the execution platform ; that's why you'll have to choose carefully when picking the packaging for download.
+</ul></DIV><BR>
+<B><U>REQUIREMENTS</U></B>
+<DIV align="justify"><ul>
+<li>An installed Java Runtime Environment, with a version greater or equal than <b>1.5</b> (it has been successfully tested with both 1.5 and 1.6 runtimes).</li><br>
+<li>A Windows Operating System <i>(tested on Windows XP only)</i>, or a Linux Operating System <i>(tested on Ubuntu only)</i>, or a Mac OS X 10.4 or greater <i>(still needs some more tests, please contact me if you can help on that matter)</i></li><br>
+<li>Although not strictly necessary, a processor running at 1GHz or more is strongly advised</i></li>
+</ul></DIV><BR>
+<B><U>IS IT 100% LEGAL?</U></B>
+<DIV align="justify"><ul>
+ParaJVE comes packed with a number of Original and Homebrew ROMs, so you could wonder about the legality of it all.<p>
+It is perfectly legal for anybody to download, install and run this software, since the embedded ROMs are either public domain (some homebrew games, as well as all the original 80's cartridges) or either Homebrews whose authors gave me the written permission to include in the ParaJVE package.
+</ul></DIV><BR>
+<B><U>DOWNLOADING & INSTALLATION</U></B>
+<DIV align="justify"><ul>
+Select and <a href="http://www.vectrex.fr/ParaJVE/" target="_top">download</a> the ZIP archive corresponding to your target system, and decompress it on your hard drive (your Operating System will usually do this part automatically).
+<BR><BR>
+To run the emulator, depending on the downloaded packaging, just double-click <b>"ParaJVE.exe"</b> (for <i>windows</i>), double-click the <b>ParaJVE icon</b> (for <i>Mac OS X</i>), or just run the <b>"ParaJVE"</b> shell (for <i>linux</i>).
+</ul></DIV><BR>
+<B><U>SO HOW MUCH DOES THIS THING COST?</U></B>
+<DIV align="justify"><ul>
+ParaJVE is <b>freeware</b> for personal use.
+<br><br>
+The only thing I'm asking for are comments about this program (bug reports, ideas, constructive criticism, ...). Even if you don't have anything special to say, just <A HREF="mailto:parajve@vectrex.fr">send me an email</A> or post a comment over at <A HREF="http://vectrex-emu.blogspot.com">ParaJVE's development blog</a> to tell me whether you like the emulator or not! ;)
+<br><br>
+Please note that <b>it is not public domain software</b> and may not be sold or used for commercial purposes without the express written permission of the author.
+</ul></DIV><BR>
+<B><U>KNOWN ISSUES</U></B>
+<DIV align="justify"><ul>
+The following bugs have been identified :<br>
+<ul><br>
+<li type=DISC>The timing method using nanoseconds resolution may not work well on the systems run by a multi-core CPU. This is a known java bug and there's no way to resolve it AFAIK. If you have this bug, just open the "Framerate" dialog through the menu, and switch to "Milliseconds" granularity.</li><br>
+<li type=DISC>The new <i>glow shader</i> has been reported to fail with some older 3D cards (due to a card driver fault). If this was to happen, restart ParaJVE, and just disable the "Vectors Glow" option.</li><br>
+<li type=DISC>Every text displayed in the emulator seem to be shifted a bit to the right. It's apparently due to the fact that ParaJVE does not implement any RAMP delay code yet. Many thanks to Chris Salomon for the tip!</li><br>
+<li type=DISC><b>Clean Sweep</b> cartridge : The graphics rendering of this game is a complete mess. Again, it's likely to be caused by the problem above. Will work on this later...</li>
+</ul>
+<br>Should you find any additional bugs, please <A HREF="mailto:parajve@vectrex.fr">let me know</A>, and I will add them to this (ever growing) list.
+</ul></DIV><BR>
+<B><U>VERSION HISTORY</U></B>
+<DIV align="justify"><ul>
+<b>09/10/2010 - Version 0.7.0</b><br><ul>
+  <li type=DISC>Added several command line parameters (described in the <a href="user_guide.html">User Guide</a>).</li>
+  <li type=DISC>Added a &quot;Welcome Dialog&quot; that pops up when the emulator is launched for the first time. It sums up the basic settings information, so that users don't have to go through the documentation (or configuration dialog) to discover the default key mappings.</li>
+  <li type=DISC>Implemented a mechanism to perform an automatic deployment of the native libraries, depending on the execution environment (32 or 64 bits JVM).</li>
+  <li type=DISC>Created two native executable launchers for <i>Windows</i> : One to launch the emulator in a console, the second to start it as a "windows" application.</li>
+  <li type=DISC>Better <i>Mac OS X</i> integration : added some callbacks to handle the <i>About/Preference/Quit</i> "system" menu items.</li>
+  <li type=DISC>Implemented a fallback method used when the fullscreen mode is reported not to be supported by the system (eg. Ubuntu 8.x with sun JRE).</li>
+  <li type=DISC>Added support for game saves (Standard Save and Quick-Saves).</li>
+  <li type=DISC>Upgraded the emulator memory model in order to support dual-banked and multi-banked games.</li>
+  <li type=DISC>Improved the configuration file handler so that it can fetch binaries from zipped files, and support multi-banked games (either as a big raw file, or as a list of 32K files) as well as crypted files (games that are theoretically not intended to be made publicly copyable).</li>
+  <li type=DISC>Included the freeware version of the games <i>"War of the Robots"</i> and <i>"Vector 21"</i> by <a href="http://www.furyunlimited.com" target="_blank">Fury Unlimited</a>, and created two <i>original</i> overlays for both games.</li>
+  <li type=DISC>Included the freeware version of the games <i>Protector</i> and <i>Y.A.S.I</i> by <a href="www.herbs64.com" target="_blank">Alex Herbert</a>, and created one <i>original</i> overlay for YASI.</li>
+  <li type=DISC>Included the 64K (dual-banked) versions of <a href="http://www.classicgamecreations.com" target="_blank">John Dondzila</a>'s cartridges <i>"VecMania"</i> and <i>"VecTopia"</i>.</li>
+  <li type=DISC>Implemented a special "interlaced" rendering mode, targeted at the so-called bitmap-vectors oriented games (eg. YASI).</li>
+  <li type=DISC>Corrected the emulation speed issues for all games ... hopefully :-).</li>
+  <li type=DISC>Fixed a bug that caused the shots sound in <i>Solar-Quest</i> to be silenced.</li>
+  <li type=DISC>Fixed another bug that caused the sound output in <i>Star-Hawk</i> to be totally inaudible.</li>
+  <li type=DISC>Fixed a crash that occurred when two different memory areas were accessed at the same time (by reading a 16 bits number at the end boundary of one memory area). For instance, <i>Polar Rescue</i> attempting to read 2 bytes at $FFFF with an "LDD 0,Y" instruction.</li>
+  <li type=DISC>The main window position/size is now persistent (including its maximized state) + added a window size optimisation feature.</li>
+  <li type=DISC>The vectors are now sorted by brightness, and the darkest ones are drawn first (to avoid that a dull vector darkens brighter ones).</li>
+  <li type=DISC>Created all the overlays pictures from scratch, and packed them in a single resource file.</li>
+  <li type=DISC>Better Overlay rendering : the transparent colors are now more visible (giving true colors to the vectors), and you can now select the overlay rendering method (8 choices) that best fits your monitor.</li>
+  <li type=DISC>The overlays are now loaded only when they are first displayed. If you play the games with the overlays disabled, the emulator starts much faster.</li>
+  <li type=DISC>Added an option to display a special overlay simulating a part of the Vectrex front frame (and its rounded screen, with a bit of refraction).</li>
+  <li type=DISC>Implemented an OpenGL glow Shader for a better simulation of the Vectrex screen properties (available only if your 3D card is not too old). A settings editor is also included so that you can create/save/load your own shader profiles.</li>
+  <li type=DISC>Added several user-editable settings for tweaking the monitor gamma correction, as well as the vectors brightness factor and thickness...</li>
+  <li type=DISC>Added two display options to simulate some common Vectrex defects (<i>Vectors Wobbling</i> and <i>Brightness Flickering</i>).</li>
+  <li type=DISC>A full core dump is now saved into a file when the engine raises a fatal error, thus allowing post-mortem diagnostics if you send me the file. </li>
+  <li type=DISC>Added an experimental debug menu called <i>"Inject RAM in cartridge"</i>. It generates a binary derived from the original cartridge, that embeds the current RAM & CPU registers. These values are restored whenever a button is pressed on the 2nd joystick. This works on a real Vectrex, too.</li>
+  <li type=DISC>Changed default keymaping for joystick #1 buttons (<i>AZER</i> for French/Belgium keyboards, or <i>QWER</i> for other countries). The mapping settings dialog now also detects and handles the duplicate keys correctly.</li>
+  <li type=DISC>Created a <a href="http://www.vectrex.fr/tracker/">public bug tracker</a> for ParaJVE & ParaJVD.</li>
+</ul><br>
+<b>01/11/2008 - Version 0.6.0</b><br><ul>
+  <li type=DISC>Added several command line switches &amp; parameters to ease offline invocation &amp; integration in third-party launchers.</li>
+  <li type=DISC>Fixed some errors in the 6809 CPU emulation core (flag V incorrectly computed by INC/DEC instructions)</li>
+  <li type=DISC>Added VecVoice emulation, as well as a vecvoice aware game (Verzerk).</li>
+  <li type=DISC>Added Lightpen emulation, and included the Lightpen enabled games (Animaction, Art Master, Melory Master, Engine Analyzer).</li>
+  <li type=DISC>Implemented support for cartridge's onboard RAM (For Animaction).</li>
+  <li type=DISC>Introduced automatic peripheral selection for games that have special requirements (lightpen, vecvoice).</li>
+  <li type=DISC>Fixed a major frame timing problem when T2 was used by the program for something else than the standard use (frame timing).</li>
+  <li type=DISC>Tweaked the rendering algorithm to reduce flicker in special cases (when frames are not T2-driven, like when Spike speaks for instance).</li>
+  <li type=DISC>Updated the third-party native libraries (JOGL and JInput).</li>
+  <li type=DISC>Written a basic <a href="user_guide.html">User Guide</a> documentation.</li>
+</ul><br>
+<b>13/04/2007 - Version 0.5.0</b><br><ul>
+  <li type=DISC>Rewritten and cleaned up the startup code, to reduce the odds of having the emulator hanging during initialisation.</li>
+  <li type=DISC>Now supports the mapping (in analog mode) of the connected physical control devices (joysticks, gamepads, trackballs...).</li>
+  <li type=DISC>Added a hot key for the <i>ScreenShot</i> feature (default is PRINTSCREEN).</li>
+  <li type=DISC>Changed the way ParaJVE is packaged for Mac OS X (now appears as a standard Mac application) and Linux.</li>
+</ul><br>
+<b>11/01/2007 - Version 0.4.0</b><br><ul>
+  <li type=DISC>Updated the embedded JOGL library, to make ParaJVE work with the latest 1.5 java runtime (update 10).</li>
+  <li type=DISC>Included the game <i>Star Sling 4K (Turbo Edition)</i>, by <a href="http://www.vectorzoa.com" target="_blank">Vectorzoa</a>.</li>
+  <li type=DISC>Changed the way the game ports are handled. Now you can plug/unplug different peripherals into both ports through a special menu.</li>
+  <li type=DISC>Added peripheral emulation : PS/2 Keyboard Adapter.</li>
+  <li type=DISC>Implemented direct DAC write to Sound Resistive Network. Now you can hear the CPU generated sounds (in <i>"Spike"</i>, for instance).</li>
+  <li type=DISC>Implemented VIA6522 SR Mode 101 (Shift Out Under T2 control).</li>
+  <li type=DISC>Fixed a regression introduced in 0.3.2 where the command line argument <i>-GAME=xxx</i> was not handled correctly.</li>
+</ul><br>
+<b>08/11/2006 - Version 0.3.2</b><br><ul><li type=DISC>Implemented the analog mode built in Vectrex joysticks,</li><li type=DISC>Parasite dots removal : tweaked the heuristics to remove even more dots,</li><li type=DISC>Added a feature to automatically build any ROM from its assembler sources (using AS09 by Frank A. Kingswood), before loading them. When the sources or binary are modified, the ROM can be rebuilt/reloaded without having to restart ParaJVE. <i>Feature not available under Linux yet.</i></li></ul><br>
+<b>24/10/2006 - Version 0.3.1</b><br><ul><li type=DISC>Included more homebrew game roms,</li><li type=DISC>Added a <i>"display rotation"</i> settings in the gfx menu (0°/90°/180°/270°),</li><li type=DISC>Implemented fullscreen support, selectable at startup (it looks like it won't be available under Linux, unless you use a 1.6 JRE),</li><li type=DISC>Fixed the annoying High-Frequency sound bug that could be heard in some games (Scramble, Pole Position and other homebrews).</li></ul><br>
+<b>18/10/2006 - Version 0.3.0</b><br><ul><li type=DISC>Added sound emulation,</li><li type=DISC>Added HTML documentation for included games,</li><li type=DISC>Embedded some extra homebrew game roms.</li><li type=DISC>Changed the game selector to display more information about the selected ROM,</li><li type=DISC>Coded debugging tools (execution backtracing, sound monitoring, rom reloading, ...)</li><li type=DISC>Also fixed several bugs (invalid memory accesses, keyboard focus, ...)</li></ul><br>
+<b>10/09/2006 - Version 0.2.0</b><br><ul><li type=DISC>Added overlays, rewritten GUI, added persistent configuration. Now embeds the game roms for easier installation.</li></ul><br>
+<b>18/07/2006 - Version 0.1.0</b><br><ul><li type=DISC>INITIAL PREVIEW RELEASE of ParaJVE</li></ul>
+</ul></DIV><BR>
+<B><U>LICENSE & DISCLAIMER</U></B>
+<DIV align="justify"><ul>
+<B>ParaJVE</B> is Copyright &copy;2006-2011 by Franck Chevassu.
+<BR><BR>
+Permission to use and copy this software for any non-commercial personal purpose, without fee, and without a written agreement is hereby granted, provided that this document appear in all copies, unmodified.
+<br><br>
+You are allowed to provide a direct link (or host a mirror) of any of this software's packages, as long as the download access remains free, AND ONLY IF you also exhibit a clear reference to ParaJVE's Development Blog URL <i>(http://vectrex-emu.blogspot.com)</i> somewhere on your pages.
+<br><br>
+Any commercial use or distribution of this software (on any media such as CD or DVD, or in software bundles, for instance) is explicitly forbidden without first getting the express written permission of the author (<A HREF="mailto:parajve@vectrex.fr">contact me</A>).
+<BR><BR>
+IN NO EVENT SHALL THE AUTHOR BE LIABLE TO ANY PARTY FOR DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, INCLUDING LOST PROFITS, ARISING OUT OF THE USE OF THIS SOFTWARE AND ITS DOCUMENTATION, EVEN IF THE AUTHOR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.<BR><BR>
+THE AUTHOR SPECIFICALLY DISCLAIMS ANY WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE SOFTWARE PROVIDED HEREUNDER IS ON AN "AS IS" BASIS, AND THE AUTHOR HAS NO OBLIGATIONS TO PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
+</ul></DIV><BR>
+<B><U>USEFUL LINKS</U></B>
+<ul>
+<li><A HREF="http://www.vectrex.fr/tracker/">ParaJVE / ParaJVD bugs tracker</a></li>
+<li><A HREF="http://vectrex-emu.blogspot.com">ParaJVE's development blog</a></li>
+<li><A HREF="http://parajvd.blogspot.com">ParaJVD's development blog</a></li>
+<li><A HREF="mailto:parajve@vectrex.fr">Contact the author</A></li>
+<br><br>
+</ul>
+</FONT>
+</TD>
+</TR>
+</TABLE>
+</CENTER>
+<hr>
+<div align=right><font color=#B0B0B0>Franck Chevassu, &copy;2010</font></div>
+</BODY>
+</HTML>

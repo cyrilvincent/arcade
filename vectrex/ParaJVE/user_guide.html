@@ -1,0 +1,722 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+  <title>ParaJVE 0.7.0 User Guide (incomplete)</title>
+  <meta http-equiv="expires" content="0">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+
+<style type="text/css">
+
+p.title1
+{
+margin-top: 50px;
+font-variant: small-caps;
+font-weight: bold;
+font-size: 110%;
+text-align: center;
+line-height: 200%;
+border-width: thin;
+border-style: solid;
+border-color: #000060;
+background-color: #D0D0FF
+}
+
+p.title2
+{
+margin-top: 35px;
+text-indent: 10px;
+line-height: 170%;
+font-weight: bold;
+font-style: italic;
+font-size: 110%;
+border-width: thin;
+border-style: dotted;
+border-color: #B0B0B0;
+background-color: #F0F0F0
+}
+
+table.special
+{
+border-width: thin;
+border-style: solid;
+border-color: #B0B0B0;
+}
+
+caption
+{
+color: #107020;
+}
+
+th
+{
+font-variant: small-caps;
+background-color: #D0E0D0;
+border-bottom: thin solid #FFFFFF;
+border-right: thin solid #FFFFFF;
+border-top: thin solid #FFFFFF;
+}
+
+th.sub
+{
+font-weight: normal;
+font-size: 75%;
+border-top-width: 0px;
+}
+
+td.id1
+{
+white-space: nowrap;
+text-align: center;
+background-color: #B0E0B0;
+border-bottom: thin solid #FFFFFF;
+border-right: thin solid #FFFFFF;
+border-left: thin solid #FFFFFF;
+}
+
+td.id1L
+{
+white-space: nowrap;
+text-align: left;
+text-indent: 10px;
+background-color: #B0E0B0;
+border-bottom: thin solid #FFFFFF;
+border-right: thin solid #FFFFFF;
+border-left: thin solid #FFFFFF;
+}
+
+td.id2
+{
+white-space: nowrap;
+text-align: center;
+background-color: #D0F0D0;
+border-bottom: thin solid #FFFFFF;
+border-right: thin solid #FFFFFF;
+}
+
+td.desc
+{
+text-align: justify;
+border-bottom: thin solid #D0E0D0;
+border-right: thin solid #FFFFFF;
+}
+
+td.desc0
+{
+text-align: justify;
+border-bottom: thin solid #D0E0D0;
+border-right: thin solid #D0E0D0;
+}
+
+p.FL
+{
+text-indent: 20px;
+}
+
+p.FL:first-letter 
+{
+font-size: 120%;
+font-weight: bold;
+}
+
+code
+{
+color: #107020;
+font-familly: monospace;
+font-size: medium;
+//font-size: larger;
+//font-variant: small-caps;
+}
+
+div.entry
+{
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+div.pad-right
+{
+  padding-right: 30px;
+}
+
+div.title
+{
+  padding-left: 30px;
+  padding-right: 0px;
+}
+
+</style>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#0000FF" VLINK="#800080">
+
+<center>
+<FONT FACE="Verdana, Arial, Geneva, Helvetica" SIZE=2>
+<FONT SIZE=8><B><I>&nbsp;ParaJVE&nbsp; <font color=#B0B0B0>User&nbsp;Guide</font>&nbsp;</I></B></FONT><BR><HR>
+<FONT SIZE=3 COLOR=GRAY><B>Parabellum's Java Vectrex Emulator, version&nbsp;0.7.0</B></FONT>
+</center><p>
+
+<div>
+<br>
+   <ul>
+      <li><a href="#launch">Launching ParaJVE</a>
+         <ul>
+            <li><a href="#launch_cmd">Command line parameters</a></li>
+            <li><a href="#launch_other">Alternate Launching methods</a>
+              <ul>
+                  <li><a href="#launch_cmd_path">Direct execution of an external ROM</a></li>
+                  <li><a href="#launch_binary">Executing an external ROM binary</a></li>
+                  <li><a href="#launch_asm">Executing an external ROM source</a></li>
+                  <li><a href="#launch_reload">Reloading or ReAssembling a loaded ROM</a></li>
+              </ul>
+            </li>
+            <li><a href="#launch_skip">Skipping the game selection dialog</a>
+         </ul>
+      </li>
+      <br>
+      <li><a href="#periphs">Emulated Peripherals</a>
+         <ul>
+            <li><a href="#periph_joystick">Vectrex Joystick Emulation</a></li>
+            <li><a href="#periph_lightpen">Lightpen Emulation</a></li>
+            <li><a href="#periph_keyboard">PS/2 Keyboard adapter Emulation</a></li>
+            <li><a href="#periph_vecvoice">VecVoice Emulation</a></li>
+         </ul>
+      </li>
+      <br>
+      <li><a href="#misc">Miscellaneous</a>
+         <ul>
+            <li><a href="#misc_window">Optimizing the emulator's window size</a></li>
+            <li><a href="#misc_saves">Saving and Loading the emulator state</a></li>
+            <li><a href="#misc_profiles">Selecting a different Glow Shader profile</a></li>
+            <li><a href="#misc_snapshot">Taking a snapshot</a></li>
+            <li><a href="#misc_checkver">Checking for new releases</a></li>
+            <li><a href="#misc_blog">Browsing the ParaJVE blog</a></li>
+         </ul>
+      </li>
+      <br>
+      <li><a href="#faq">Troubleshooting & Known Bugs</a>
+         <ul>
+            <li><a href="#faq_TODO">The emulator display is not bright enough</a></li>
+            <li><a href="#faq_TODO">The colors on the transparent areas of the overlays are barely visible</a></li>
+            <li><a href="#faq_TODO">The emulator doesn't seem to react to the keyboard hits</a></li>
+            <li><a href="#faq_TODO">The emulator runs too slowly on my computer</a></li>
+            <li><a href="#faq_TODO">The emulator's window is all black or empty on Windows Vista</a></li>
+         </ul>
+      </li>
+   </ul>
+</div>
+
+<DIV align="justify">
+
+<!-- ################################################################################ -->
+<p class="title1"><A name="launch"/>Launching</p><div class="title">
+    
+    <div class="pad-right">
+    <p class="FL">ParaJVE comes with a Graphical User Interface that makes it easy to select the game
+    to be ran&nbsp;; this is usually the preferred way to start a gaming session.
+    Some users, however, may have more specific needs (homebrew developers, or third party 
+    front-end users, for instance), that's why ParaJVE provides several different ways to 
+    tweak its launching. This section describes the different options available.
+    </div>
+
+    <!-- ---------------------------------------------------------------------------- -->
+    <p class="title2"><A name="launch_cmd"/>Command line parameters and switches</p><div class="entry">
+
+    <p class="FL">The emulator now supports a larger set of command line parameters. They can
+    be added at the end of the script line invoking the java runtime (by editing 
+    <code>ParaJVE.bat</code> on windows, or <code>ParaJVE</code> on other platforms).
+    Here is the list of supported parameters and switches&nbsp;:
+    <p>
+    <table class="special" cellpadding=8 cellspacing=0 border=0>  <!-- width=90% align=center  -->
+        <tr>
+            <th>&nbsp;Parameter&nbsp;</th>
+            <th>Value</th>
+            <th>&nbsp;Description&nbsp;</th>
+        </tr>
+        <tr><A name="launch_cmd_game"/>
+            <td class="id1">
+                <pre>-Game=...</pre>
+            </td><td class="id2">
+                <pre>SELECTED<br>&lt;<i>Game-ID</i>&gt;<br>&lt;<i>Path</i>&gt;</pre>
+            </td><td class="desc">
+                This optional parameter is used to bypass the game selector dialog. When it is present, ParaJVE will automatically load the specified game without opening the game selector dialog.  The value can take one of the three following forms&nbsp;:
+                <ul>
+                    <li><b>-game=SELECTED</b><br>to load the game that was last executed by ParaJVE.<p></li>
+                    <li><b>-game=&lt;&nbsp;<i>Game&nbsp;ID</i>&nbsp;&gt;</b><br>to load a specific game. Here, &lt;&nbsp;<i>Game&nbsp;ID</i>&nbsp;&gt; is the ID of the game ROM to be executed. (The available game IDs can be found in the configuration file).<p></li>
+                    <li><b>-game=&lt;&nbsp;<i>Path</i>&nbsp;&gt;</b><br>to load a specific ROM that's not included in ParaJVE. &lt;&nbsp;<i>Path</i>&nbsp;&gt; is the path to the ROM file to be used (either an absolute path, or relative to ParaJVE main folder). This path handling as been added in version <code>0.6.0</code>.</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td class="id1">
+                <pre>-Config=...</pre>
+            </td><td class="id2">
+                <pre>&lt;<i>Path</i>&gt;</pre>
+            </td><td class="desc">
+                An optional parameter that instructs ParaJVE to work with a specific configuration file, instead of the defaut one. If this parameter is used, the configuration will be loaded from the specified file, and any change will be saved into the same file.<br>The default configuration file is "<code>data/configuration.xml</code>"&nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td class="id1">
+                <pre>-Fullscreen=...</pre> 
+            </td><td class="id2">
+                <pre>TRUE<br>FALSE</pre>
+            </td><td class="desc">
+                When this parameter is specified, it forces the emulation renderer to use the fullscreen mode (TRUE) or the windowed mode (FALSE), no matter what was the fullscreen state when the emulator was last terminated.<br>If both "-fullscreen=TRUE" and "-menu=OFF" are set on the command line then the mouse cursor is automatically hidden at startup.
+            </td>
+        </tr>
+        <tr>
+            <td class="id1">
+                <pre>-Rotation=...</pre>
+            </td><td class="id2">
+                <pre>0<br>90<br>180<br>270</pre>
+            </td><td class="desc">
+                When this parameter is specified, it specifies the rotation applied to the screen (in degrees), no matter what was the rotation value when the emulator was last terminated. There are four valid values for this parameter (0 meaning "no rotation"). 
+            </td>
+        </tr>
+        <tr>
+            <td class="id1">
+                <pre>-Shader=...</pre>
+            </td><td class="id2">
+                <pre>ON<br>OFF</pre>
+            </td><td class="desc">
+                When this parameter is specified, it forces the glow shader to be enabled (ON) or disabled (OFF), no matter what was the shader activation state when the emulator was last terminated.
+            </td>
+        </tr>
+        <tr>
+            <td class="id1">
+                <pre>-Sound=...</pre>
+            </td><td class="id2">
+                <pre>ON<br>OFF</pre>
+            </td><td class="desc">
+                When this parameter is specified, it forces the sound emulation to be enabled (ON) or disabled (OFF), no matter what was the sound emulation state when the emulator was last terminated.
+            </td>
+        </tr>
+        <tr>
+            <td class="id1">
+                <pre>-Menu=...</pre> 
+            </td><td class="id2">
+                <pre>ON<br>OFF</pre>
+            </td><td class="desc">
+                When this parameter is specified, it forces the emulator's menu to be shown (ON) or hidden (OFF), no matter what was the menu state when the emulator was last terminated.
+            </td>
+        </tr>
+        <tr>
+            <td class="id1">
+                <pre>-Wobbling=...</pre>
+            </td><td class="id2">
+                <pre>ON<br>OFF</pre>
+            </td><td class="desc">
+                When this parameter is specified, it forces the vectors wobbling to be enabled (ON) or disabled (OFF), no matter what was the wobbling activation state when the emulator was last terminated.
+            </td>
+        </tr>
+        <tr>
+            <td class="id1">
+                <pre>-ResetBounds</pre>
+            </td><td class="id2">
+                <pre>---</pre>
+            </td><td class="desc">
+                This flag will reset the size, position and state of the emulator's window to the defaults.
+                If this parameter is not included in the command line, the window will open with the same settings that were last used (including the <i>maximized</i> state).
+            </td>
+        </tr>
+        <tr>
+            <td class="id1">
+                <pre>-NoDeployment</pre>
+            </td><td class="id2">
+                <pre>---</pre>
+            </td><td class="desc">
+                If this flag is present, ParaJVE will not check its libraries upon startup (and thus, will not try to re-deploy the right ones, if needed).<br>The deployment is usually only performed during the very first execution of ParaJVE (to select the 32 or 64 bits libraries depending on the execution environment), but you can disable it if for some reasons the emulator keeps on deploying the libraries after the first run...
+            </td>
+        </tr>
+        <tr>
+            <td class="id1">
+                <pre>-NoRedirect</pre>
+            </td><td class="id2">
+                <pre>---</pre>
+            </td><td class="desc">
+                When this parameter is present ParaJVE prints its log on the standard output/error streams (if -noredirect is not used, the output is logged into the file named at "data/temp/ParaJVE.log" instead).
+            </td>
+        </tr>
+        <tr>
+            <td class="id1">
+                <pre>-NoSplash</pre>
+            </td><td class="id2">
+                <pre>---</pre>
+            </td><td class="desc">
+                If this flag is present, ParaJVE starts without opening any splash-screen. Note that this option is only useful when the emulator is launched via the "<i>ParaJVE.exe</i>" <b>Windows executable</b> file (as there is not any splash screen in the other launchers anyway). Watch out, this parameter is case-sensitive.
+            </td>
+        </tr>
+        <tr>
+            <td class="id1">
+                <pre>-Debug</pre>
+            </td><td class="id2">
+                <pre>---</pre>
+            </td><td class="desc">
+                Adding this flag will activate verbose logs.
+            </td>
+        </tr>
+        <tr>
+            <td class="id1">
+                <pre>-PreloadLibs</pre>
+            </td><td class="id2">
+                <pre>---</pre>
+            </td><td class="desc">
+                You can try to use this switch if ParaJVE doesn't starts correctly (especially if you experience some kind of Unsatisfacted Link Error). This flag should not be used otherwise...
+            </td>
+        </tr>
+    </table>
+
+    </div>
+    <!-- ---------------------------------------------------------------------------- -->
+    <p class="title2"><A name="launch_other"/>Launching a game that is not included within the ParaJVE distribution</p><div class="entry">
+
+    <p class="FL">ParaJVE comes with a rather complete games bundle, but there will be occurrences
+    when you want to run an extra game that is not included within the original ROMs package, or 
+    when an homebrew developer would like to assemble and/or test his latest code in the emulator.
+    There are several ways to proceed (some are making use of the Graphical User Interface, others 
+    are Command-Line based).
+
+    <p>
+    <a name="launch_cmd_path">
+    <li><b>Direct execution of an external ROM binary</b> (command-line)&nbsp;:</li><ol>
+        This method can be used to instruct ParaJVE to directly load an <i>external</i> ROM 
+        binary without poping up the game selection dialog. This is especially geared towards 
+        homebrew developers as it will allow them to integrate the emulator more tightly in 
+        their development cycle. With this feature, they can invoke ParaJVE directly from 
+        within their preferred IDE and make it execute their current work (provided that their 
+        IDE can invoke external tools, for assembling the source then call ParaJVE).
+        <p>
+        All you have to do is setup your IDE so that it calls ParaJVE with the extra 
+        <code><nobr>-GAME</nobr></code> parameter whose value is the <i>path</i> of the binary ROM (that
+        should have been assembled prior by your IDE). For a complete description of the <code>GAME</code> parameter, you can further 
+        read <a href=#launch_cmd_game>this&nbsp;section</a>.
+    </ol>
+
+    <a name="launch_binary">
+    <li><b>Executing an external ROM binary</b> (GUI)&nbsp;:</li><ol>
+        This method can be used to run an <i>external</i> game ROM (downloaded from the internet,
+        for instance).
+        <p>
+        In the game selection dialog, click the <code>"Select another ROM"</code> button, and 
+        browse to the file containing the binary ROM to be ran. Once done, click the 
+        <code>"Run Game"</code> button, and ParaJVE will be launched with the specified binary.
+    </ol>
+
+    <a name="launch_asm">
+    <li><b>Executing an external ROM source</b> (GUI)&nbsp;:</li><ol>
+        This method is likely to be used by homebrew developers that use the AS09 assembler only&nbsp;:
+        it instructs ParaJVE to assemble some 6809 source code, and load the resulting binary
+        (rather than directly loading an already assembled ROM).
+        <p>
+        In the game selection dialog, click the <code>"Assemble Source"</code> button, and
+        browse to the <i>main</i> source file to be be assembled. Once done, click the
+        <code>"Build ROM &amp; Run Game"</code> button. The AS09 assembler is then invoked to
+        build the ROM, and if successful, the generated binary is loaded by ParaJVE. If an error
+        occurs during the assembly phase, an error dialog will notify you about the problem.
+    </ol>
+
+    <a name="launch_reload">
+    <li><b>Reloading or ReAssembling a loaded ROM</b> (GUI)&nbsp;:</li><ol>
+        This is not a Launching method per se, it is rather a trick to avoid the need for a
+        relaunch ; its purpose is to force ParaJVE to reload a ROM binary (or reassemble a 
+        source) if for some reasons its content changed since it was first loaded.
+        <p>
+        In the emulator menu, select the <code>[Debug<nobr>-&gt;</nobr> Reload Cartridge ROM]</code> 
+        menu item (or <code>[Debug<nobr>-&gt;</nobr> Rebuild Cartridge ROM]</code> if you started the 
+        emulator with some source code as described <a href=#launch_asm>here</a>). The ROM is
+        then reloaded (or rebuilt, displaying a message in case of assembly error), and a
+        dialog asks whether the emulator should be reset or not. Clicking the <code>YES</code>
+        button will <i>reboot</i> ParaJVE (ie. perform a <i>clean</i> restart), whereas clicking 
+        <code>NO</code> will let the emulation resume its execution without any reset.
+        <p> 
+        Unless you know exactly what you do, the <code>NO</code> option is usually discouraged, 
+        as it resumes execution in the same exact state as when it was suspended (excepting for 
+        the cartridge memory area that has just been reloaded or rebuilt), the other memory 
+        areas and sub-systems (CPU and chips) are left untouched... For instance, you could 
+        very well end up with the PC register pointing to a cartridge address that is not 
+        intended to be executed anymore - and this is only one funny scenario amongst many others!
+    </ol>
+
+    </div>
+    <!-- ---------------------------------------------------------------------------- -->
+    <p class="title2"><A name="launch_skip"/>Skipping the game selection dialog</p><div class="entry">
+
+    <p class="FL">For the users that launch the emulator through a third party front-end,
+    ParaJVE can easily be started directly (ie. without poping up the <i>game selection</i>
+    dialog). In order to do so, all you have to do is make use of the <code><nobr>-GAME</nobr>=&lt;<i>identifier</i>&gt;</code> 
+    command-line parameter (as described in <a href=#launch_cmd_game>here</a>).
+    <p>
+    Also, for the developers that seek a way to invoke ParaJVE with their assembled ROM
+    directly from within their IDE, have a look at <a href=#launch_cmd_path>this&nbsp;section</a>.
+
+    </div>
+
+</div>
+<!-- ################################################################################ -->
+<p class="title1"><A name="periphs"/>Emulated Peripherals</p><div class="title">
+
+    <div class="pad-right">
+    <p class="FL">ParaJVE emulates an ever-growing set of vectrex peripherals and devices,
+    that can be plugged in the first and/or the second gameport (depending on the peripheral 
+    type). To change the peripheral attached to one of the two gameport, select the new
+    device menu item in the gameport menu : either <code>[Controls<nobr>-&gt;</nobr> Game Port #1<nobr>-&gt;</nobr>...]</code>
+    or <code>[Controls<nobr>-&gt;</nobr> Game Port #2<nobr>-&gt;</nobr>...]</code>.
+    <p>
+    The devices currently attached to the two gameports will have a check mark before their
+    associated menu item. At any time, there can be only one device plugged into a gameport 
+    (attaching another device will unplug the old peripheral first)&nbsp; when a gameport has 
+    no device plugged-in, the <code>Empty</code> device (fake device place holder) is used. 
+    </div>
+
+    <!-- ---------------------------------------------------------------------------- -->
+    <p class="title2"><A name="periph_joystick"/>Vectrex Joystick Emulation</p><div class="entry">
+
+    <p class="FL">The basic peripheral for the vectrex is its joystick (made of two analog 
+    axis, along with four fire buttons). This device is of course emulated, and unless 
+    you change it, a joystick is plugged by default in each gameport. 
+    To support the joystick(s), ParaJVE maps some of your keyboard's keys (hitting these
+    keys will make the emulator act as if the corresponding joystick button/axis was operated).
+    <p>
+    To change the current key-mapping and tweak it to your needs, select the <code>[Controls<nobr>-&gt;</nobr>
+    Key Mapping]</code> menu item. Then, in the <code>Joystick#1</code> or <code>Joystick#2</code>
+    tabs, click on the buttons you want to configure, and simply hit the key you want to
+    be bound to that button.
+    <p>
+    <a name="mapping">
+    <table class="special" cellpadding=3 cellspacing=0 border=0 align=center>
+        <caption align=bottom>The default key-mapping (local sensitive)</caption>
+        <!-- table headers -->
+        <tr>
+            <th rowspan="2">&nbsp;Target Component&nbsp;</th>
+            <th colspan="2">&nbsp;Mapping for&nbsp;<br>&nbsp;&nbsp;&nbsp;GamePort #1&nbsp;&nbsp;&nbsp;</th>
+            <th rowspan="2">&nbsp;Mapping for&nbsp;<br>&nbsp;&nbsp;&nbsp;GamePort #2&nbsp;&nbsp;&nbsp;</th>
+        </tr>
+        <tr>
+            <th class="sub"> Belgium, <br> France </th>
+            <th class="sub"> Other<br>locales</th>
+        </tr>
+        <!-- table content -->
+        <tr><td class="id1L">Action : <b>Button 1</b>&nbsp;&nbsp;</td>
+            <td class="desc0"><center>A</td>
+            <td class="desc0"><center>Q</td>
+            <td class="desc"> <center>7</td>
+        </tr>
+        <tr><td class="id1L">Action : <b>Button 2</b>&nbsp;&nbsp;</td>
+            <td class="desc0"><center>Z</td>
+            <td class="desc0"><center>W</td>
+            <td class="desc"> <center>8</td>
+        </tr>
+        <tr><td class="id1L">Action : <b>Button 3</b>&nbsp;&nbsp;</td>
+            <td class="desc0" colspan="2"><center>E</td>
+            <td class="desc"> <center>9</td>
+        </tr>
+        <tr><td class="id1L">Action : <b>Button 4</b>&nbsp;&nbsp;</td>
+            <td class="desc0" colspan="2"><center>R</td>
+            <td class="desc"> <center>0</td>
+        </tr>
+        <tr><td class="id1L">X Axis : <b>LEFT</b>&nbsp;&nbsp;</td>
+            <td class="desc0" colspan="2"><center>LEFT</td>
+            <td class="desc"> <center>KEYPAD-4</td>
+        </tr>
+        <tr><td class="id1L">X Axis : <b>RIGHT</b>&nbsp;&nbsp;</td>
+            <td class="desc0" colspan="2"><center>RIGHT</td>
+            <td class="desc"> <center>KEYPAD-6</td>
+        </tr>
+        <tr><td class="id1L">Y Axis : <b>UP</b>&nbsp;&nbsp;</td>
+            <td class="desc0" colspan="2"><center>UP</td>
+            <td class="desc"> <center>KEYPAD-8</td>
+        </tr>
+        <tr><td class="id1L">Y Axis : <b>DOWN</b>&nbsp;&nbsp;</td>
+            <td class="desc0" colspan="2"><center>DOWN</td>
+            <td class="desc"> <center>KEYPAD-5</td>
+        </tr>
+    </table>
+
+    <p class="FL">ParaJVE can also handle any gamepad physically connected to your computer and map it 
+    to a virtual vectrex joystick (instead of using the keyboard). To use a physical controller 
+    within ParaJVE, it must have been connected <i>before</i> the emulator started (otherwise
+    ParaJVE will not see this controller as available). Every detected controller will be 
+    listed under the <code>[Controls<nobr>-&gt;</nobr> Game Port<nobr>-&gt;</nobr> Controller]</code> sub-menus.
+    <br>
+    To assign a physical controller to one of the two vectrex gameports, select the associated 
+    sub-menu entry. A dialog will then appear, letting you configure the mapping between 
+    the controller buttons/axis and the virtual joystick. Once validated, you can use your
+    controller to play in the emulator.
+    <p>
+    <p class="FL">The vectrex games can poll the joystick using two different modes : either <i>Digital</i>,
+    or <i>Analog</i>. These modes do not change the way the buttons work (they are always 
+    polled as being either pressed or released) ; the difference lies in  the way the axis 
+    coordinates are handled.
+    <p>
+    <li><b>Digital Mode</b> &nbsp;:</li><ol>
+        The <i>Digital</i> mode is the default one in ParaJVE, because it is the standard
+        used by most games. This mode does not take advantage of the (accurate) analog 
+        values of the joystick, it only cares for the general direction in which the axis
+        are oriented. 
+        For instance, it doesn't matter if you have the stick fully moved to the right or just half-way, 
+        as in both case the system will only note that the X axis is right-oriented.   
+        <p>
+        While operating in <i>Digital</i> mode, ParaJVE will use the four directions keys
+        to control the joystick axis (as defined in the <a href="#mapping">key mapping configuration</a>).  
+    </ol>
+    <p>
+    <li><b>Analog Mode</b> &nbsp;:</li><ol>
+        A few games make use of the vectrex joysticks analog capabilities (<i>Hyperchase</i>,
+        <i>Star Sling 4K</i> and <i>Patriots III</i> to mention a few). This means that 
+        these games will not only care about the direction of the joystick axis; they will
+        also look at <i>how far</i> the joystick moves along the axis, and will use this
+        value to adjust the actions taken.
+        ParaJVE cannot handle this mode with just four directions button (as it does in
+        <i>digital</i> mode) ; that's why it will use the Mouse moves to emulate this mode. 
+        <p>
+        To enter <i>Analog</i> mode, you must first have a (virtual) joystick plugged in 
+        the target gameport, and operating in <i>digital</i> mode (this is the case by 
+        default). Then, double-click anywhere in the emulator window. As a result, the 
+        <i>Analog</i> mode will be activated (the mouse cursor vanishing is an indication),
+        and from now on, every mouse move will be converted as an analog move in the 
+        corresponding virtual joystick. This will last until you switch back to <i>digital</i>
+        mode, by clicking any mouse button.
+        <br>
+        Note that double-clicking the left mouse button will enter <i>analog</i> mode for the
+        joystick plugged in the first gameport (if any), while double-clicking with the right
+        mouse button will operate on the joystick plugged in the second gameport, if any.
+    </ol>
+
+    </div>
+    <!-- ---------------------------------------------------------------------------- -->
+    <p class="title2"><A name="periph_lightpen"/>Lightpen Emulation</p><div class="entry">
+
+    <p class="FL">The lightpen is a legacy peripheral that was supported by a very small
+    set of original games. It is a kind of <i>pen</i>, dragged around 
+    the screen by the user, that detects the light emitted by the display beam. This 
+    device is emulated within ParaJVE (since version 0.6.0) by using the Mouse moves.
+    <p>
+    When starting one of the four embedded games that requires the lightpen, this device
+    is automatically assigned to the appropriate gameport, so it is immediately available.
+    If you <a href="#launch_binary">launch an external ROM</a> that makes use of the 
+    Lightpen <i><nobr>- MailPlane</nobr>, <nobr>anyone? ;) -</nobr></i>, you will have to
+    plug it manually (using the <code>[Controls<nobr>-&gt;</nobr> Game Port #2<nobr>-&gt;</nobr>
+    LightPen]</code> menu item) to activate its emulation.
+    <p>
+    When the lightpen is plugged in, the Mouse Pointer is replaced with a Cross that 
+    figures the position of the lightpen on the screen. By default, the lightpen is 
+    considered inactive (it cannot detect the light beam) as long as no mouse button is 
+    pressed. It becomes active when either (or both) the Left or Right mouse button(s)
+    is(are) pressed. If the Right mouse button is pressed, the lightpen operates in 
+    accurate mode (that means that its precision is greater than normal, but also that
+    it is likely to loose track of the light more easily if you move the mouse too fast).
+
+    </div>
+    <!-- ---------------------------------------------------------------------------- -->
+    <p class="title2"><A name="periph_keyboard"/>PS/2 Keyboard adapter Emulation</p><div class="entry">
+
+    <p class="FL">The PS/2 adapter is a connector (created in 2007) that provides a way to
+    connect a PS/2 keyboard into the vectrex second gameport (and let the vectrex program 
+    access the keyboard hits).
+    <p>
+    When the Keyboard Adapter is plugged into the game port, it remains <i>inactive</i> 
+    until you press the engagement key (<code>PAGE_UP</code> by default). Once the keyboard
+    has been activated, it will intercept any keypress (including the keys already mapped
+    to joysticks or the general keys) and forward them to the gameport. This will last 
+    until the keyboard is disengaged (by pressing <code>PAGE_DOWN</code> by default).
+    <p>
+    ParaJVE does not embed any game making use of this adapter so far, so its emulation
+    for the time being is aimed at homebrew developers that wish to write some code that
+    uses this adapter.
+
+    </div>
+    <!-- ---------------------------------------------------------------------------- -->
+    <p class="title2"><A name="periph_vecvoice"/>VecVoice Emulation</p><div class="entry">
+
+    <p class="FL">The VecVoice is a passive peripheral, as it does not require any user 
+    action to carry out its task (it is a sound synthesizer that is entirely driven by
+    the vectrex program, through the gameport signals). Therefore, 'using' the VecVoice
+    emulation is as simple as pluging it into the second gameport, and let the VecVoice-enabled
+    games operate it!
+    <p>
+    So far, the only embedded game that makes use of the VecVoice is <code>Verzerk</code>,
+    and launching this game automatically instructs ParaJVE to plug the VecVoice in the
+    gameport, so you don't even have to do anything to have it working. However, if you 
+    happen to <a href="#launch_binary">launch an external ROM</a> that makes use of the 
+    VecVoice, you will have to plug it manually (using the <code>[Controls<nobr>-&gt;</nobr> Game 
+    Port #2<nobr>-&gt;</nobr> VecVoice]</code> menu item) to enjoy its emulation.
+
+    </div>
+
+</div>
+<!-- ################################################################################ -->
+<p class="title1"><A name="misc"/>Miscellaneous</p><div class="title">
+
+    <!-- ---------------------------------------------------------------------------- -->
+    <p class="title2"><A name="misc_window"/>Optimizing the emulator's window size</p><div class="entry">
+TO DO ... 
+     </div>
+    <!-- ---------------------------------------------------------------------------- -->
+    <p class="title2"><A name="misc_saves"/>Saving and Loading the emulator state</p><div class="entry">
+TO DO ... 
+    </div>
+    <!-- ---------------------------------------------------------------------------- -->
+    <p class="title2"><A name="misc_profiles"/>Selecting a different Glow Shader profile</p><div class="entry">
+TO DO ... 
+     </div>
+    <!-- ---------------------------------------------------------------------------- -->
+    <p class="title2"><A name="misc_snapshot"/>Taking a snapshot of the current screen</p><div class="entry">
+
+    <p class="FL">If you want to save a picture of the current screen display, you can do
+    so, at any time, by hitting the <i>ScreenShot</i> shortcut key (which is <code>PRINTSCREEN</code>, 
+    by default). You can also get the job done via the <code>[File<nobr>-&gt;</nobr> Take ScreenShot]</code> 
+    menu item (but first pausing the emulation by hitting the <code>PAUSE</code> key might prove 
+    helpful in this scenario).
+    <p>
+    The emulation will then enter <i>paused</i> mode (if not already done), 
+    and a file requester will popup, waiting for you to enter the name of the file where to 
+    save the picture.
+    You can cancel the saving by hitting the <code>ESCAPE</code> key. The format used to 
+    encode the picture depends on the file extension you provided (the only supported file 
+    formats are <code>BMP</code>, <code>JPG</code> and <code>PNG</code>, this later being
+    the default if no extension was specified).
+
+    </div>
+    <!-- ---------------------------------------------------------------------------- -->
+    <p class="title2"><A name="misc_checkver"/>Checking for new releases of ParaJVE</p><div class="entry">
+
+    <p class="FL">ParaJVE comes with an integrated way to check if a newer version is
+    available for download. Whenever you want to check if a newer version is released,
+    select the <code>[Help<nobr>-&gt;</nobr> Check for new versions]</code> menu item. The emulator
+    will then gather information about the latest version over the internet , and open a
+    dialog telling whether a new version is available (providing a link to the download 
+    site, in that event).
+    <p>
+    If you are concerned about privacy, rest assured that ParaJVE will not
+    send any personal information of any sort on the internet (in fact, the emulator just
+    downloads a version manifest) ; also, rest assured that this check is never performed
+    without you asking for it to occur.
+
+    </div>
+    <!-- ---------------------------------------------------------------------------- -->
+    <p class="title2"><A name="misc_blog"/>Browsing the ParaJVE development blog</p><div class="entry">
+
+    <p class="FL">The emulator will open your preferred browser and automatically load the
+    <a href="http://vectrex-emu.blogspot.com"> ParaJVE development blog</a> for you if you 
+    select the <code>[Help<nobr>-&gt;</nobr> Open ParaJVE Blog]</code> menu item. In some (undefined) 
+    occurrences, the browser's page might only open after the emulator has been closed.
+
+    </div>
+
+</div>
+<!-- ################################################################################ -->
+<p class="title1"><A name="faq"/>Troubleshooting and Known Bugs</p><div class="title">
+
+    <!-- ---------------------------------------------------------------------------- -->
+    <p class="title2"><A name="faq_TODO"/>To Do ...</p><div class="entry">
+TO DO ... 
+     </div>
+
+</DIV>
+
+<p>&nbsp;
+<hr>
+<div align=right><font color=#B0B0B0>Franck Chevassu, &copy;2008</font></div>
+</BODY>
+</HTML>

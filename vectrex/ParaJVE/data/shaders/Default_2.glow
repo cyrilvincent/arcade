@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<shader id="glow" active="true" passes="2" >
+	<bufferSize fixed="true" fixedWidth="640" fixedHeight="800" factor="1.0" />
+	<flickering enabled="true" factor="0.2" />
+	<attenuation enabled="true" factor="2.5" />
+	<gains>
+		<horizontal enabled="false" factor="1.0" />
+		<vertical enabled="true" factor="1.35" />
+	</gains>
+	<kernel id="horizontal" >
+		<value>1.0</value>
+		<value>2.0</value>
+		<value>3.0</value>
+		<value>4.0</value>
+		<value>5.0</value>
+	</kernel>
+	<kernel id="vertical" >
+		<value>1.0</value>
+		<value>2.0</value>
+		<value>3.0</value>
+		<value>4.0</value>
+		<value>5.0</value>
+	</kernel>
+	<info>
+		<author />
+		<description><![CDATA[A shader with a linear kernel.
+
+Can be used as a fair default]]></description>
+	</info>
+</shader>
