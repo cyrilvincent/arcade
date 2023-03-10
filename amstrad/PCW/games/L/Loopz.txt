@@ -1,0 +1,13 @@
+ Estas son las claves para poder jugar en los diferentes niveles del modo C.
+
+   EASY
+   CUTE 
+   ARTY
+   FOXY
+   CRAS
+   WHET
+   POLL
+   ZUIS
+   VEST
+   EMMA
+

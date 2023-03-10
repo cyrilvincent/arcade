@@ -1,0 +1,20 @@
+    ** AMSTRAD CPC SOFTWARE AT FTP.NVG.NTNU.NO : file_id.diz FILE V 3.10 **
+-------------------------------------------------------------------------------
+TITLE:           Lords of Chaos
+YEAR:            1990
+PUBLISHER:       Blade
+PUBLICATION:     Commercial
+BARCODE:         5017898140157
+DEVELOPER:       Mythos Games
+AUTHOR:          Julian Gollop
+DESIGNER:        Julian Gollop
+LANGUAGE:        English, French
+MEMORY REQUIRED: 64K
+TYPE:            Strategy game
+SUBTYPE:         Turn-based strategy
+TITLE SCREEN:    Yes
+PROTECTION:      None
+RUN COMMAND:     RUN"LOC"
+UPLOADED:        26/11/2014 by Nicholas Campbell & Loïc Daneels
+COMMENTS:        The filenames of the scenarios are 1, 2 and 3. Games can be saved to disc, although a "Chaos formatted" disc is required. To format a disc to Chaos format, select the "Disk" option on the menu, then select the "Chaos format" option.
+-------------------------------------------------------------------------------

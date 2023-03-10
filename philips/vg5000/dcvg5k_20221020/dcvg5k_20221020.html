@@ -1,0 +1,363 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+ <title>DCVG5K - Notice</title>
+ <style type="text/css">
+  body {font-family: sans-serif; font-size: 80%; color: #000; background-color: #fff;}
+  h1,h2,h3 {font-family: sans-serif; color: #000; margin-top: 1em; margin-bottom: 0.5em;}
+  h1 {font-size: 180%; background-color: #4cf; padding-left: 0.2em;}
+  h2 {font-size: 140%; background-color: #cff; padding-left: 0.2em;}
+  h3 {font-size: 100%; border-style: none; border-bottom: solid 1px #ccc; margin-left: 0.8em;}
+  p  {margin-left: 1em; margin-top: 0em;}
+  ul {margin-left: 2em; margin-top: 0em;}
+ </style>
+ <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+ <meta name="description" content="DCVG5K - Notice">
+ <meta name="author" content="Daniel Coulom">
+ <meta name="keywords" content="dcalice, emulateur, vg5000, philips">
+</head>
+
+<body>
+<h1>DCVG5K - Notice</h1>
+<p>
+DCVG5K est un &eacute;mulateur pour Windows des ordinateurs VG5000µ de Philips, Radiola et Schneider.<br>
+<br>
+Version : <b>2022.10.20</b><br>
+Auteur : Daniel Coulom<br>
+Site web : <a href="http://dcvg5k.free.fr">dcvg5k.free.fr</a>
+</p>
+
+<h3>Avertissement</h3>  
+<p>
+Chaque nouvelle version apporte th&eacute;oriquement des améliorations et des corrections d'erreurs.<br>
+Elle peut aussi provoquer de nouvelles anomalies.<br>
+Le signalement de tout comportement anormal est important pour permettre les corrections.<br>
+En cas de probl&egrave;me majeur, vous pouvez toujours utiliser les versions pr&eacute;c&eacute;dentes de l'&eacute;mulateur.<br>
+</p>
+
+<h3>Anti-virus</h3>  
+<p>
+Certains anti-virus voient parfois des menaces dans des programmes parfaitement inoffensifs, en<br>
+particulier lorsque les ex&eacute;cutables sont compact&eacute;s avec UPX. Dans le cas de dcvg5k il n'y a strictement<br>
+rien &agrave; craindre : ni virus, ni cheval de Troie, ni logiciel espion, ni publicit&eacute;, ni appel de site internet.<br>
+Si votre anti-virus trouve le programme suspect, c'est un "faux positif". Dans ce cas, vous devez signaler<br>
+l'anomalie à votre fournisseur, pour qu'il puisse corriger ses r&egrave;gles de d&eacute;tection.
+</p>
+
+<h2>Installation</h2>
+
+<h3>Configuration requise</h3>
+<p>
+Processeur Pentium ou plus r&eacute;cent, fr&eacute;quence 300 MHz ou plus.<br>
+Windows 98/ME ou Windows 2000/XP/Vista/7 et suivants, 32 bits ou 64 bits.<br>
+Carte graphique avec r&eacute;solution minimum 640x480, 65536 couleurs ou plus.<br>
+Carte son obligatoire.
+</p>
+
+<h3>Proc&eacute;dure</h3>
+<p>
+D&eacute;compressez le fichier .zip dans un r&eacute;pertoire et cr&eacute;ez un raccourci vers dcvg5k.exe (facultatif).<br>
+DCVG5K ne copie aucun fichier en dehors de son r&eacute;pertoire. Il ne modifie pas la base de registre, ni aucun<br>
+fichier de votre ordinateur. C'est un programme portable, pouvant &ecirc;tre install&eacute; sur un support amovible, tel<br>
+un disque externe ou une cl&eacute; USB, et d&eacute;plac&eacute; d'un ordinateur &agrave; un autre sans aucune difficulté.
+</p>
+
+<h3>Utilisation</h3>
+<p>
+Lancez le programme dcvg5k.exe par un double-clic ou utilisez le raccourci.<br>
+Choisissez votre langue (Options/Paramètres...).<br>
+Consultez l'aide en ligne du programme et la documentation du site dcvg5k.<br>
+La configuration du clavier peut &ecirc;tre affich&eacute;e et modifi&eacute;e (Options/Clavier...).<br>
+L'outil "Clavier graphique" montre la disposition des touches et permet de les actionner avec la souris.
+</p>
+
+ 
+<h2>Historique</h2>
+
+<h3>Version 2022.10.20</h3>
+<ul>
+<li>Nouvelle fonction dans l'outil de mise au point pour modifier la valeur des registres du Z80.</li>
+<li>Ajout de l'affichage bit par bit des registres de flags du processeur Z80 (F et F').</li>
+</ul>
+
+<h3>Version 2022.08.02</h3>
+<ul>
+<li>Amélioration de la simulation du clavier pour éviter les pertes de caractères en saisie rapide.</li>
+<li>Initialisation de la RAM vidéo avec des séquences alternées de 0F et F0 (hexadécimal).</li>
+</ul>
+
+<h3>Version 2022.02.26</h3>
+<ul>
+<li>Correction du plantage de dcvg5k en cas d'appel de la fonction Fichier / Simuler le clavier...</li>
+<li>Mise à jour de l'émulation du contrôleur VY5040 avec la version 14/02/2022 de l'EPROM.</li>
+</ul>
+
+<h3>Version 2021.11.02</h3>
+<ul>
+<li>Nouvelle option de simulation du clavier sans rafraîchissement de l'écran (beaucoup plus rapide).</li>
+</ul>
+
+<h3>Version 2020.12.27</h3>
+<ul>
+<li>Compensation de l'erreur d'arrondi sur le calcul du nombre de cycles par période d'échantillonnage du son.</li>
+<li>Ajout d'un cycle pour le WAIT lors du "fetch" de chaque instruction (Merci à Mokona pour la suggestion).</li>
+</ul>
+
+<h3>Version 2020.11.14</h3>
+<ul>
+<li>Mise à jour de l'émulation du contrôleur VY5040 avec la version 13/11/2020 de l'EPROM.</li>
+<li>Modification du numéro de version des fichiers .mrx.</li>
+<li>Modification mineure de la présentation des instructions désassemblées dans l'outil de mise au point.</li>
+</ul>
+
+<h3>Version 2020.10.23</h3>
+<ul>
+<li>Programmation des commandes CLF et CLG du processeur vidéo EF9345.</li>
+</ul>
+
+<h3>Version 2020.09.27</h3>
+<ul>
+<li>Modification subtile de l'émulation Z80 pour éviter le blocage par boucle infinie dans le jeu "Le Monstre".</li>
+<li>Ajout de la fonction TRACE dans l'outil de mise au point.</li>
+</ul>
+
+<h3>Version 2020.04.10</h3>
+<ul>
+<li>Mise à jour de l'émulation du contrôleur VY5040 avec la dernière version de l'EPROM.</li>
+<li>Mise à jour automatique du fichier .sd quand on quitte l'émulateur.</li> 
+<li>Correction de l'erreur d'écriture de la carte SD avec le contrôleur VY5040.</li>
+<li>Amélioration des fonctions d'exécution de l'outil de mise au point.</li>
+<li>Correction d'une erreur dans la simulation du clavier par le presse-papier (caractères superflus en fin de texte).</li>
+</ul>
+
+<h3>Version 2020.01.18</h3>
+<ul>
+<li>Ajout de l'émulation du contrôleur VY5040 pour simuler des disquettes à partir d'images au format .sd sur carte SD.</li>
+</ul>
+
+<h3>Version 2019.11.23</h3>
+<ul>
+<li>Correction d'une erreur aléatoire, provoquant le plantage de l'émulateur, lors de la simulation du clavier avec un fichier texte.</li>
+</ul>
+
+<h3>Version 2018.05.15</h3>
+<ul>
+<li>Ajout des adresses des routines à détourner en fin du fichier dcvg5k.rom, pour permettre le développement de nouvelles version de ROM.</li>
+</ul>
+
+<h3>Version 2017.xx.xx</h3>
+<ul>
+<li>Modification possible de la ROM dans l'outil de mise au point.</li>
+<li>Initialisation par défaut de l'affichage par ligne pour la simulation du clavier.</li>
+<li>Ajout d'un message en cas d'&eacute;chec d'allocation dynamique de m&eacute;moire par la simulation du clavier.</li>
+<li>Nouvelle option pour initialiser la ROM avec le contenu du fichier dcvg5k.rom.</li>
+<li>Int&eacute;gration du niveau du buzzer sur la p&eacute;riode d'&eacute;chantillonnage.</li>
+</ul>
+
+<h3>Version 2015.03.30</h3>
+<ul>
+<li>Choix d'une police de taille fixe dans l'affichage des dumps de la bo&icirc;te de dialogue de mise au point.</li>
+<li>R&eacute;tablissement de la taille m&eacute;moire dans la barre de statut apr&egrave;s restauration de l'&eacute;tat de la machine.</li>
+</ul>
+
+<h3>Version 2012.04.13</h3>
+<ul>
+<li>Am&eacute;lioration de la pr&eacute;sentation de l'outil Magn&eacute;tophone.</li>
+<li>Correction du mauvais fonctionnement du point d'arrêt dans l'outil de mise au point.</li>
+</ul>
+
+<h3>Version 2012.02.01</h3>
+<ul>
+<li>Nouvelle fonction d'initialisation de 4Ko de ram avec une valeur fixe.</li>
+<li>Adresse de chargement d'un fichier en ram diff&eacute;rente de l'adresse du dump m&eacute;moire.</li>
+<li>Ajustement de la taille des zones de la barre d'&eacute;tat.</li>
+<li>Prise en compte des p&eacute;riph&eacute;riques HID (en particulier les joysticks USB).</li>
+<li>Ajout de l'outil "Clavier graphique" permettant d'actionner les touches avec la souris.</li>
+<li>Am&eacute;lioration de la bo&icirc;te de dialogue de configuration du clavier.</li>
+<li>Emulation de la touche Majuscule droite du VG5000 par la touche Majuscule droite du PC.</li>
+<li>Emulation de la touche DELTA du VG5000 par la touche BACKSPACE du PC.</li>
+<li>Correction du d&eacute;lai de r&eacute;p&eacute;tition des touches.</li>
+<li>Correction de quelques erreurs dans l'aide en fran&ccedil;ais et en anglais.</li>
+</ul>
+
+<h3>Version 2012.01.15</h3>
+<ul>
+<li>Correction d'une erreur de traitement des caract&egrave;res d&eacute;limiteurs.</li>
+<li>Correction d'une erreur de police pour l'affichage des caract&egrave;res spéciaux.</li>
+</ul>
+
+<h3>Version 2011.12.11</h3>
+<ul>
+<li>Nouvelle fonction de copie d'un fichier binaire en m&eacute;moire du VG5000</li>
+<li>Simulation des frappes au clavier avec le contenu d'un fichier ou du presse-papier</li>
+<li>Nouvelle fonction d'affichage de la disposition des touches du clavier VG5000</li>
+<li>Refonte compl&egrave;te de la g&eacute;n&eacute;ration du son</li>
+<li>Stockage en m&eacute;moire du PC de la cassette charg&eacute;e</li> 
+<li>Sauvegarde des adresses du point d'arr&ecirc;t et du dump m&eacute;moire dans le fichier .ini</li>
+<li>Fermeture automatique du fichier d'impression pour permettre sa consultation sans quitter dcvg5k</li>
+</ul>
+
+<h3>Version 2008.03.01 (v1.5 sr1)</h3>
+<ul>
+<li>Correction du blocage au lancement de Mission Omega : la lecture du status EF9345 ne renvoyait pas la bonne valeur.<br> L'emulateur EF9345 a ete corrige pour calculer le bit busy avant la reinitialisation du compteur de cycles par la commande.</li> 
+<li>Correction du bug dans Casse-Briques (cassette Divertissements).<br>
+Le registre R du Z80 est utilise par ce programme pour determiner la position initiale de la balle.<br>
+L'emulateur Z80 ne renvoyait pas la bonne valeur, il a ete corrige. Un rapport de bug a ete envoye a l'auteur.</li>
+<li>Dans Salut l'Artiste, le decalage d'une ligne lors de la modification d'un caractere utilisateur est provoque<br>
+par une erreur du programme. Le fichier .k7 a ete corrige et fonctionne desormais correctement.</li>
+<li>Nouvelle amelioration de l'emulation EF9345 pour resoudre un autre bug dans Salut l'Artiste.<br>
+Diffusion d'une nouvelle version de la cassette salut-l-artiste-dcvg5k.k7</li>
+</ul>
+
+<h3>Version 2008.01.24 (v1.4)</h3>
+<ul>
+<li>Ajout de deux nouvelles fonctions : sauver mrx et charger mrx<br>
+Sauvegarde et restauration de l'etat complet de la machine : registres + ram + rom du Z80 et de l'EF9345</li>
+<li>Refonte de l'emulation EF9345. Une dizaine de bugs sont corriges, et des modes nouveaux sont programmes.<br>
+Ces ameliorations sont peu visibles dans les programmes commerciaux car elles concernent des fonctions non utilisees.<br>
+La seule difference notable est le mode double hauteur, en particulier dans Glouton.</li>
+<li>Ajout de touches de raccourcis pour la sauvegarde et la restauration de l'etat de la memoire et des registres,<br>
+et pour la copie d'ecran.</li>
+<li>Mise a niveau de l'emulateur Z80 avec la version du 17/08/2007</li>
+</ul>
+
+<h3>Version 2006.08.27 (v1.3)</h3>
+<ul>
+<li>Extraction du contenu de la rom de l'EF9345 du VG5000 Philips</li>
+<li>Nouvelle version de l'emulateur EF9345 pour utiliser l'image de la rom en remplacement<br>
+des polices composees manuellement</li>
+<li>Programmation des polices accentuees G20 et G21. La conformite des polices en rom,<br>
+entre l'emulateur et l'EF9345, est verifiee grace a un programme specialement ecrit<br>
+pour l'occasion : affichagepolice-vg5000.k7</li>
+<li>Correction d'un bug d'affichage des caracteres quadrichromes. En version 1.2, ce bug est visible<br>
+dans la fenetre centrale de Mission Omega. Il a ete signale par Kurt en aout 2006.</li>
+</ul>
+
+<h3>Version 2006.03.27 (v1.2)</h3>
+<ul>
+<li>Test du mode 80 colonnes sur VG5000. La demonstration fonctionne dans l'emulateur et sur la "vraie" machine.</li>
+<li>Programmation du mode souligne dans l'emulateur EF9345.</li>
+<li>Mise a l'echelle des copies d'ecran en fonction du mode d'affichage (40 ou 80 colonnes),<br>
+suite a la remarque de TITAN dans le groupe usenet fr.comp.emulateurs</li>
+<li>Amelioration du mode plein ecran pour corriger deux defauts : Le menu de l'emulateur et la barre de taches de Windows<br>
+sont desactives pour eviter leur apparition furtive lors du passage de la souris.</li>
+<li>Amelioration de la boite de dialogue de personnalisation du clavier. Dorenavant la touche selectionnee reste enfonce.</li>
+<li>Suppression du menu systeme de la fenêtre en mode plein ecran.<br>
+(Le menu pouvait apparaître fugitivement en cas de clic droit,<br>
+et l'application etait mal fermee si on cliquait alors sur close).</li>
+<li>Dans la boite de dialogue de personnalisation du clavier, test du code retour de GetKeyNameText,<br>
+pour eviter un probleme avec les systemes ne supportant pas unicode (win95, 98, ME...).</li>
+<li>Correction d'un bug provoquant des plantages aleatoire lors de la redefinition d'une touche<br>
+(zone de travail trop petite pour la chaine de caracteres a afficher).</li>
+<li>Nombreuses ameliorations de l'emulation EF9345 grace a la mise au point des jeux Alice 32 dans l'emulateur DCAlice :<br>
+Police G11, commande KRL, caracteres double hauteur, acces a la memoire video, mode 80 colonnes, etc.</li>
+<li>Corrections de bugs mineurs de l'emulation EF9345, non detectables avec les programmes VG5000 existants.<br>
+En particulier la commande MVB et le contrôle de l'attribut d'insertion par le registre PAT.</li>  
+<li>Emulation de la commande SAVE permettant de sauver un programme Basic sur un fichier .k7 au format Basicode.</li>
+<li>Emulation de la commande LOAD permettant de charger un programme Basic d'un fichier .k7 au format Basicode.</li>
+<li>Diffusion de l'utilitaire DCToolBox version 1 pour les conversions de cassettes au format standard et au format Basicode</li>
+</ul>
+
+<h3>Version 2005.11.24 (v1.1)</h3>
+<ul>
+<li>Suppression du delai de generation des signaux de synchronisation lors de l'ecriture sur cassette.</li>
+<li>Affichage des registres EF9345 dans la boite de dialogue de mise au point.</li>
+<li>Programmation de la lecture memoire EF9345.</li>
+<li>Bug de sauvegarde du dessin resolu dans Salut l'Artiste.</li>
+<li>Amelioration de Salut l'Artiste version dcvg5k : suppression du delai de generation<br>
+des signaux de synchronisation lors de la sauvegarde d'un dessin.</li> 
+<li>Correction de Salut l'Artiste version dcvg5k. La sauvegarde de la creation prend maintenant<br>
+les 10 tranches de chaque caractere de la police, au lieu de 9 avec la version precedente.</li>
+<li>Resolution d'un bug de la commande MVB de l'EF9345.</li>
+<li>Autre bug dans "Le Monstre" : des commandes EF9345 invalides sont generees de facon aleatoire.</li>
+<li>Ce bug est masque en passant la periode de l'IRQ de 20 à 30 millisecondes.</li>
+<li>Meilleure precision dans le comptage des cycles du Z80 : prise en compte de la difference entre<br>
+le nombre de cycles demandes et le nombre de cycles reellement executes.</li>
+<li>Comptage exact des cycles de l'EF9345 pour ameliorer la synchronisation avec le Z80.</li>
+<li>Le bug constate dans Le Monstre est identifie et resolu. Le signal VBL (video blanking) de l'EF9345 etait mauvais.</li>
+<li>Le bit 2 du status etait positionne a un, alors qu'il doit etre mis a zero. En le retablissant dans le bon sens,<br>
+la periode de l'IRQ a pu etre ramenee a sa valeur nominale de 20 millisecondes, sans qu'aucune commande invalide<br>
+ne soit envoyee a l'EF9345.</li>
+<li>Lecture des joysticks sur les ports 0-1 en complement des ports 8-7, pour etre en conformite avec le comportement<br>
+du "vrai" VG5000 (merci a Carl pour son programme de test).</li>
+</ul>
+
+<h3>Version 2005.10.31 (v1.0)</h3>
+<ul>
+<li>Programmation de l'attribut couleur</li>
+<li>Amelioration de l'emulation EF9345</li>
+<li>Programmation de la personnalisation du clavier</li> 
+<li>Saisie de la police g10</li>
+<li>Programmation de l'ecriture dans un fichier .k7</li>
+<li>Nouvelle option "son audible" pour l'ecriture .k7</li>
+<li>Message d'erreur si cassette absente ou protegee</li>
+<li>Utilitaire de conversion VGWAV2K7 OK</li>
+<li>Diffusion fichiers .k7 de Fichier et Carnet d'Adresses</li>
+<li>Programmation du curseur en mode "video inverse"</li>
+<li>La lecture des fichiers .k7 fonctionne</li>
+<li>Programmation de la boite de dialogue "magnetophone"</li>
+<li>Programmation des screenshots au format bmp (x1 et x2)</li>
+<li>Correction de 3 erreurs dans la rom</li>
+<li>Quelques ameliorations de l'emulation EF9345</li>
+<li>Choix de la rom 1.0 ou 1.1 dans les options</li>
+<li>Correction du bug empechant parfois dcvg5k de se terminer normalement<br>
+(ajout d'une temporisation a la fermeture de directsound)</li> 
+<li>Programmation de la police utilisateur G'0 de l'EF9345 (chargement en memoire et utilisation)</li>
+<li>Programmation des caracteres graphiques bichromes</li>
+<li>Programmation des caracteres graphiques quadrichromes</li>
+<li>Amelioration du traitement des registres indirects</li>
+<li>Refonte emulation EF9345 pour simuler le "row-buffer" interne. Affichage de l'ecran ligne par ligne.</li>  
+<li>Pointeurs de fonctions pour ameliorer les performances.</li>
+<li>Plusieurs jeux fonctionnent bien. Des anomalies subsistent.</li>
+<li>L'emulation de l'EF9345 est difficile, mais s'etait prevu au depart. Un mois apres le debut du projet, le resultat<br>
+est au-dela des esperances. La reussite est due en partie a la fiabilite de l'emulateur Z80 de Marat Fayzullin.</li>
+<li>Ajout des extensions memoire de 16K et 32K</li>
+<li>Bug d'affichage des caracteres en rom corrige</li>
+<li>Amelioration de l'emulation du registre status EF9345. L'ecran de depart du simulateur de vol s'affiche.</li>
+<li>Programmation de l'emulation des joysticks. Le simulateur de vol semble bien fonctionner.</li>
+<li>Correction d'un bug dans le desassembleur</li>
+<li>Correction d'un bug du bouton Action du deuxieme joystick</li>
+<li>Le mode 80 colonnes de l'EF9345 fonctionne.</li>
+<li>De nombreux bugs d'affichage sont corriges : couleurs, police minitel, etc...</li>
+<li>Modification de Salut l'Artiste pour rendre le fichier .k7 compatible avec dcvg5k</li>
+<li>Correction d'un bug de la commande MVT de l'EF9345</li>
+</ul>
+
+<h3>Version 2005.08.03 (v0.0 preview 00)</h3>
+<ul>
+<li>2005-07-22<br>
+Debut du projet<br>
+Recuperation manuel VG5000 et Clefs pour VG5000 sur le site vg5k<br>
+Recuperation datasheet EF9345 et rom VG5000 sur le site de romu<br>
+Recuperation Z80 user manual (grace a Google)<br>
+Recuperation des sources de l'emulateur Z80 de Marat Fayzullin<br>
+</li>
+<li>2005-07-31<br>
+Mise en place des modules de l'emulateur<br>
+Programmation du debugger<br>
+Mise au point de l'emulation Z80<br>
+Determination frequence IRQs par approximations successives<br>
+</li>
+<li>2005-08-01<br>
+Saisie de la police g0<br>
+Emulation sommaire EF9345<br> 
+Le VG5000 s'initialise<br>
+Diffusion du premier screenshot<br>
+</li>
+<li>2005-08-02<br>
+Programmation de la scrutation du clavier<br>
+Programmation de la boite de dialogue Options<br> 
+Le Basic fonctionne<br>
+Diffusion du deuxieme screenshot<br>
+</li>
+<li>2005-08-03<br>
+Programmation du son<br>
+Ajout d'un curseur provisoire<br>
+</li>
+</ul>
+
+
+<hr><center>&copy; 2022 - Daniel Coulom</center>
+
+</body>
+</html>

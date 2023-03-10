@@ -1,0 +1,18 @@
+    ** AMSTRAD CPC SOFTWARE AT FTP.NVG.NTNU.NO : file_id.diz FILE V 3.10 **
+-------------------------------------------------------------------------------
+TITLE:           Pro-Design Master-Edition
+YEAR:            1996
+PUBLISHER:       Crusader Software
+PUBLICATION:     Commercial
+AUTHOR:          Axel Weber
+LANGUAGE:        German
+MEMORY REQUIRED: 128K
+TYPE:            Utility
+SUBTYPE:         Desktop publisher
+TITLE SCREEN:    Yes
+PROTECTION:      None
+PROBLEMS:        Only works on CPC6128 machines
+RUN COMMAND:     RUN"PRO" [prodemea.dsk]
+UPLOADED:        22/06/1997 by ?
+COMMENTS:        Version 4.0. This is a demo version; the save function ("Sichern") is disabled.
+-------------------------------------------------------------------------------

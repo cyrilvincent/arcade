@@ -1,0 +1,30 @@
+Index of games/cartridg/
+barbar2c.zip BARBARIAN II (CARTRIDGE)             Sword fighting/exploration
+batmamoc.zip BATMAN: THE MOVIE (CARTRIDGE)        Platform game
+bluea69c.zip BLUE ANGEL 69 (CARTRIDGE)            Board game
+burnrubb.zip Burnin' Rubber                       Car racing
+copte271.zip Copter 271                           Helicopter shoot-'em-up
+crazyc2c.zip CRAZY CARS II (CARTRIDGE)            Car racing
+dicktrcc.zip DICK TRACY (CARTRIDGE)               Beat-'em-up
+enforcer.zip Enforcer, The                        Target shooting
+epyxworl.zip EPYX WORLD OF SPORTS (CARTRIDGE)     Miscellaneous games
+firefo2c.zip FIRE AND FORGET II (CARTRIDGE)       Car shoot-'em-up
+klaxc.zip    KLAX (CARTRIDGE)                     Puzzle game
+mysticac.zip Mystical                             Shoot-'em-up
+navyseal.zip Navy SEALs                           Platform game/shoot-'em-up
+noexitc.zip  NO EXIT (CARTRIDGE)                  Beat-'em-up
+operthuc.zip Operation Thunderbolt                Target shooting
+pangc.zip    Pang                                 Arcade game
+panzakcc.zip Panza Kick Boxing                    Kick boxing
+pinbmagc.zip PINBALL MAGIC (SUPER) (CARTRIDGE)    Pinball
+plotting.zip Plotting                             Puzzle game
+protentc.zip PRO TENNIS TOUR (CARTRIDGE)          Tennis
+puzznicc.zip PUZZNIC (CARTRIDGE)                  Puzzle game
+robocop2.zip RoboCop 2                            Platform game/shoot-'em-up
+skeetsho.zip SKEET SHOOT                          Target shooting (Phazer)
+strykcrc.zip STRYKER IN THE CRYPTS OF TROGAN (CAR Platform game
+switchbc.zip SWITCHBLADE (CARTRIDGE)              Platform game
+tenncup2.zip Tennis Cup 2                         Tennis
+tintmooc.zip TINTIN ON THE MOON (CARTRIDGE)       Arcade game/platform game
+wildstrc.zip WILD STREETS (CARTRIDGE)             Beat-'em-up
+
