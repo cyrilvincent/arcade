@@ -1,0 +1,2 @@
+JOYCE PCW Emulator v2.4.1
+JOYCE will emulate a PCW 82048 (or 92048)

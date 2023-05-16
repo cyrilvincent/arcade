@@ -1,0 +1,42 @@
+10 MODE 2:posi=1:total=0:endline=0:page=1:delay=1500:keypress=0 
+15 folder=1
+16 CALL &2900
+20 DIM name$(25),startmem(50)
+25 FOR i=1 TO 50:startmem(i)=0:NEXT i               
+40 page=1:i=0:mem=&2B00:GOSUB 2000    
+100 CLS:posi=1:total=i:i=1:IF total<25 THEN endline=total-1 ELSE endline=25   
+105 PAPER 0:PEN 1
+110 WHILE (i<=endline)         
+120 PRINT name$(i):i=i+1
+130 WEND
+140 GOSUB 3005:LOCATE 70,1:IF folder<0 THEN PRINT"ALL DIRS!" ELSE PRINT"      
+145 FOR l=1 TO delay:NEXT l
+150 IF INKEY(0)=0 AND posi>1 THEN GOSUB 3000:posi=posi-1:GOSUB 3005:IF (keypress=1) THEN delay=1:GOTO 145 ELSE delay=1500:keypress=1:GOTO 145   
+160 IF INKEY(2)=0 AND posi<endline THEN GOSUB 3000:posi=posi+1:GOSUB 3005:IF (keypress=2) THEN delay=1:GOTO 145 ELSE delay=1500:keypress=2:GOTO 145          
+170 IF INKEY(8)=0 AND page>1 THEN page=page-1:posi=1:mem=startmem(page):GOTO 2000 
+180 IF INKEY(1)=0 AND b<>2 THEN page=page+1:posi=1:GOTO 2000 
+185 IF INKEY(64)=0 THEN folder=-folder:FOR k=1 TO 1500:NEXT k:LOCATE 70,1:IF folder<0 THEN PRINT"ALL DIRS!" ELSE PRINT"         "     
+190 IF INKEY(18)=0 THEN GOSUB 1000
+195 IF INKEY(47)=0 THEN |CD:CALL &2900:GOTO 40        
+196 keypress=0
+200 GOTO 145
+500 WHILE LEN(name$(i))>0:PRINT name$(i):i=i+1:WEND
+510 END
+1000 nlen=LEN(NAME$(POSI)):A$=RIGHT$(NAME$(POSI),3):IF (A$="IR>") THEN 1050   
+1005 IF folder<0 THEN |CD,@NAME$(POSI):GOTO 1060      
+1010 POKE &17F0,nlen
+1015 FOR i=0 TO nlen-1
+1020 POKE &17F1+i,ASC(MID$(name$(posi),i+1,1))
+1030 NEXT i:END            
+1050 IF LEFT$(name$(posi),1)="." THEN |CD ELSE A$=LEFT$(NAME$(POSI),(nlen-6)):|CD,@A$   
+1060 CALL &2900:GOTO 40      
+2000 i=0
+2005 IF startmem(page)=0 THEN startmem(page)=mem       
+2010 b=PEEK(mem)
+2020 IF (b=1) AND (i<25) THEN i=i+1:mem=mem+1:name$(i)="":GOTO 2010
+2030 IF (b=1) AND (i=25) THEN 100
+2040 IF b=2 THEN 100
+2050 name$(i)=name$(i)+CHR$(b):mem=mem+1:GOTO 2010       
+3000 PAPER 0:PEN 1:GOTO 3010   
+3005 PAPER 1:PEN 0
+3010 LOCATE 1,posi:PRINT name$(posi):PAPER 0:PEN 1:RETURN      
