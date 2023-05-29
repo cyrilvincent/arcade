@@ -1,0 +1,1 @@
+Place backdrop and logo files here in bmp, png or jpg format.

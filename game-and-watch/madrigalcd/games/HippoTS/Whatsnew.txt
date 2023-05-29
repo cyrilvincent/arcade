@@ -1,0 +1,44 @@
+4th December, 2017 - Release 5.00 (Standard 5, complete rewrite)
+Added a new option to the on-screen game menu, to enable the user to change
+from fullscreen to windowed (shaped) mode on the fly; minor tweakings.
+
+16th October, 2017 - Release 5.00 * PUBLIC BETA *
+Officially released through an "open beta testing" program.
+
+4th September, 2017 - Release 5.00 * PRIVATE BETA *
+Implemented new graphics system based on "skins" for both the game and the
+instructions manual; all of the skin options can be changed via the included
+"config.ini" file; the visualization mode can now be changed to "fullscreen";
+added a new key configurator panel (settings are saved into the system
+registry); all game buttons can now be operated via keyboard, mouse and touch
+screen; new splash screen; new "about" screen; minor fixes and optimizations to
+the source code; added support for .png images; added on-screen menu to the
+"fullscreen" mode; added option to the menu to allow the editing of the
+configuration file.
+
+14th April, 2014 - Release S4/1.07 (Standard 4, various optimizations)
+Fixed a bug which prevented the "Readme" and "Whatsnew" files from being
+opened in Windows 7+; minor fixes and optimizations to source code; normalized
+sound samples volume to a higher level; added the new "About" screen.
+
+17th September, 2012 - Release S4/1.06 (Standard 4, fixed game name)
+Changed the game series name from tooth-sporty to sporty.
+
+15th January, 2010 - S4/1.05 (Standard 4, graphics bug-fix)
+Minor graphics fix to main form.
+
+27th November, 2009 - Release S4/1.04 (Standard 4, more accuracy)
+All source code was tested again; found a few bugs and unaccuracies, which
+were fixed; totally redrawn graphics for LCD sprites, now featuring shadow.
+
+14th April, 2008 - Release S4/1.03 (Standard 4, update to new standard)
+Completely rewritten source code, added new graphics, embedded manual, etc.
+
+31st March, 2008 - Release S3/1.02 (Standard 3, more accuracy)
+More accuracy to input management routines; ingame sound enable/disable
+function implemented.
+
+17th September, 2007 - Release S3/1.01 (Standard 3, minor graphics update)
+Minor graphics changes to the splash-screen; changed source a bit to use
+FMod.dll 3.7.5; minor graphics changes to the "About..." window; changed
+program icons a bit; compiled with Delphi 6 for more stability.

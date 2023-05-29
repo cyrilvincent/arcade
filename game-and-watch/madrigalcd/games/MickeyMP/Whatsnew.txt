@@ -1,0 +1,35 @@
+4th December, 2017 - Release 5.00 (Standard 5, complete rewrite)
+Added a new option to the on-screen game menu, to enable the user to change
+from fullscreen to windowed (shaped) mode on the fly; minor tweakings.
+
+16th October, 2017 - Release 5.00 * PUBLIC BETA *
+Officially released through an "open beta testing" program.
+
+8th July, 2017 - Release 5.00 * PRIVATE BETA *
+Implemented new graphics system based on "skins" for both the game and the
+instructions manual; all of the skin options can be changed via the included
+"config.ini" file; the visualization mode can now be changed to "fullscreen";
+added a new key configurator panel (settings are saved into the system
+registry); all game buttons can now be operated via keyboard, mouse and touch
+screen; new splash screen; new "about" screen; minor fixes and optimizations to
+the source code; added support for .png images; added on-screen menu to the
+"fullscreen" mode; added option to the menu to allow the editing of the
+configuration file.
+
+14th March, 2016 - Release S4/1.03 (Standard 4, minor bug-fix)
+Fixed a bug that affected the animation of Mickey Mouse when raising his hand
+to juggle the batons. Thanks to Graham Gott for the bug report.
+
+22nd June, 2015 - Release S4/1.03 (Standard 4, major improvements)
+Enlarged game graphics in order to fit well on 1024x768 desktops; added larger
+instructions manual browser; several optimizations to the source code; added a
+brand new splash screen, allowing to hide/display it at the next startup.
+
+16th January, 2012 - Release S4/1.02 (Standard 4, complete rewrite)
+Completely rewritten source code for bug-fixing and making the game more
+accurate and stable; compiled with Delphi 7 for more stability; added missing
+pages to instructions manual browser; changed application name into MickeyMP.
+
+12th November, 2007 - Release S4/1.01 (Standard 4, MAME cabinets compatible)
+Added new options to completely operate the simulator through keyboard, as
+requested by MAME cabinets users.

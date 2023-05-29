@@ -1,0 +1,10 @@
+Place scans of the instructions manual here.
+
+Files must be in bmp format with filenames as indicated below:
+
+  1.bmp
+  2.bmp
+  (...)
+  n.bmp
+
+The number of images varies with the game.

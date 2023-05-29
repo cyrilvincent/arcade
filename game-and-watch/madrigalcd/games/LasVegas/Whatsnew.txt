@@ -1,0 +1,50 @@
+4th December, 2017 - Release 5.00 (Standard 5, complete rewrite)
+Added a new option to the on-screen game menu, to enable the user to change
+from fullscreen to windowed (shaped) mode on the fly; minor tweakings.
+
+16th October, 2017 - Release 5.00 * PUBLIC BETA *
+Officially released through an "open beta testing" program.
+
+8th August, 2017 - Release 5.00 * PRIVATE BETA *
+Implemented new graphics system based on "skins" for both the game and the
+instructions manual; all of the skin options can be changed via the included
+"config.ini" file; the visualization mode can now be changed to "fullscreen";
+added a new key configurator panel (settings are saved into the system
+registry); all game buttons can now be operated via keyboard, mouse and touch
+screen; new splash screen; new "about" screen; minor fixes and optimizations to
+the source code; added support for .png images; added on-screen menu to the
+"fullscreen" mode; added option to the menu to allow the editing of the
+configuration file.
+
+8th September, 2014 - Release S4/2.03 (Standard 4, minor fixes)
+Fixed missing focus to the combo box in splash screen; added the new "About"
+screen; added a brand new splash screen, allowing to hide/display it at the
+next startup.
+
+21st November, 2011 - Release S4/2.02 (Standard 4, complete rewrite + manual
+added)
+Completely rewritten source code in order to do major optimizazions, fix bugs,
+etc; designed new graphics; re-recorded sound samples at higher quality;
+instructions manual browser added.
+
+7th March, 2001 - Release S3/2.01 (Standard 3, final)
+New standard: totally rewritten sound routines; Fmod sound library 3.31 added;
+new splash-screen and minor updates.
+
+18th February, 2000 - Release 2.00 (final)
+New implementation for key routines: you can now use arrow keys to move your
+man; highest scores are now saved in the Windows registry; added the "About"
+form; popup menu added.
+
+28th January, 2000 - Release 1.03 (bugfix)
+Killed a small bug which affected score viewing.
+
+13th January, 2000 - Release 1.02 (bugfix)
+Killed a 'dangerous' bug which made the game crash when scoring 1000 points
+(tnx, Luciano for the report!); changed the "popup hints" on L & R buttons.
+
+6th January, 2000 - Release 1.01 (better simulation routine)
+Deleted the routine for the bonus life when catching the fourth bag at the
+'Gambling Game'; actually the original handheld has't this feature :(
+(tnx, Bruno for showing me that!)
+

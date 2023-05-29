@@ -1,0 +1,54 @@
+4th December, 2017 - Release 5.00 (Standard 5, complete rewrite)
+Added a new option to the on-screen game menu, to enable the user to change
+from fullscreen to windowed (shaped) mode on the fly; minor tweakings.
+
+16th October, 2017 - Release 5.00 * PUBLIC BETA *
+Officially released through an "open beta testing" program.
+
+3rd August, 2017 - Release 5.00 * PRIVATE BETA *
+Implemented new graphics system based on "skins" for both the game and the
+instructions manual; all of the skin options can be changed via the included
+"config.ini" file; the visualization mode can now be changed to "fullscreen";
+added a new key configurator panel (settings are saved into the system
+registry); all game buttons can now be operated via keyboard, mouse and touch
+screen; new splash screen; new "about" screen; minor fixes and optimizations to
+the source code; added support for .png images; added on-screen menu to the
+"fullscreen" mode; added option to the menu to allow the editing of the
+configuration file.
+
+13th April, 2015 - Release S4/2.05 (Standard 4, complete rewrite)
+Completely rewritten source code in order to do major optimizazions; designed
+new graphics; updated to the new standard "S4"; re-recorded sound samples
+to a higher volume level; fixed several bugs; added a brand new splash screen,
+allowing to hide/display it at the next startup.
+
+6th August, 2007 - Release S3/2.04 (Standard 3, XP-compatible sound update)
+Completely changed "bike engine" sound routines: now works perfectly on any
+Windows version; removed PC speaker workaround for Windows 9x users; changed
+source a bit to use FMod.dll 3.7.5; minor graphics changes to the "About..."
+window; changed program icon a bit; compiled with Delphi 6 for more stability.
+
+8th June, 2001 - Release S3/2.03 (Standard 3, fix for Win2000 users)
+Had to remove the PC speaker routines (to reproduce the cycle engine); now
+the game is playable in Windows 2000 OS too, even though cycles are silent! =(
+FMod.dll 3.33 and FAQ file added.
+
+7th March, 2001 - Release S3/2.02 (Standard 3, final)
+New standard: totally rewritten sound routines; Fmod sound library 3.31 added;
+new splash-screen and minor updates.
+
+28th October, 2000 - Release 2.01 (many updates)
+Shaped form added; new sound engine: now using wav samples + PC speaker sound;
+game can be closed by pressing the ESC key anytime; sound folder installation
+controller added; original graphic background added.
+
+18th February, 2000 - Release 2.00
+New implementation for key routines: you can now use arrow keys to move your
+motorbike, and control keys for ingame functions; "About" form added; popup
+menu added.
+
+11th December, 1999 - Release 1.01
+Added the form-dragger routine; set the "scaled" form property to false: now
+you can play both with small and big fonts viewing: the game form won't be
+resized!
+

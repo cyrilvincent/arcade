@@ -1,0 +1,37 @@
+4th December, 2017 - Release 5.00 (Standard 5, complete rewrite)
+Added a new option to the on-screen game menu, to enable the user to change
+from fullscreen to windowed (shaped) mode on the fly; minor tweakings.
+
+16th October, 2017 - Release 5.00 * PUBLIC BETA *
+Officially released through an "open beta testing" program.
+
+11th August, 2017 - Release 5.00 * PRIVATE BETA *
+Implemented new graphics system based on "skins" for both the game and the
+instructions manual; all of the skin options can be changed via the included
+"config.ini" file; the visualization mode can now be changed to "fullscreen";
+added a new key configurator panel (settings are saved into the system
+registry); all game buttons can now be operated via keyboard, mouse and touch
+screen; new splash screen; new "about" screen; minor fixes and optimizations to
+the source code; added support for .png images; added on-screen menu to the
+"fullscreen" mode; added option to the menu to allow the editing of the
+configuration file.
+
+22nd May, 2017 - Release S4/1.04 (Standard 4, complete rewrite)
+Completely rewritten source code in order to do major optimizazions; designed
+new graphics; updated to the new standard "S4"; re-recorded sound samples
+to a higher volume level; added one missing sound sample; fixed several bugs;
+added a brand new control panel to allow for the configuration of all game keys;
+added a new option to enable/disable the visualisation of the opponent's screen
+when in "1P mode vs CPU"; added a brand new splash screen, allowing to
+hide/display it at the next startup.
+
+9th August, 2001 - Release S3/1.03 (Standard 3, manual added)
+Added multi-lingual manual: English, French and Italian; Fmod 3.33a added;
+AI routines for seal and penguin now match the original tabletop game.
+
+14th March, 2001 - Release S3/1.02 (Standard 3, final)
+New standard: totally rewritten sound routines; Fmod sound library 3.31 added;
+new splash-screen and minor updates.
+
+5th April, 2000 - Release 1.01 (bug-fix)
+Killed a couple of bugs in the initialization routines.

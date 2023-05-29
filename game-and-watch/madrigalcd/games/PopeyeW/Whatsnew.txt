@@ -1,0 +1,7 @@
+24th December, 2021 - Release 1.01 (Standard 5, more accuracy)
+Rewritten a big chunk of the routines that control items generation and
+movement, aiming to make the simulation even more accurate. I believe it
+is now extremely accurate, almost identical to the real game.
+
+28th February, 2021 - Release 1.00 (Standard 1, final)
+First stable release.

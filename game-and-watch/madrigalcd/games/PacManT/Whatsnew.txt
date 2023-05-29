@@ -1,0 +1,48 @@
+4th December, 2017 - Release 5.00 (Standard 5, complete rewrite)
+Added a new option to the on-screen game menu, to enable the user to change
+from fullscreen to windowed (shaped) mode on the fly; minor tweakings.
+
+16th October, 2017 - Release 5.00 * PUBLIC BETA *
+Officially released through an "open beta testing" program.
+
+16th July, 2017 - Release 5.00 * PRIVATE BETA *
+Implemented new graphics system based on "skins" for both the game and the
+instructions manual; all of the skin options can be changed via the included
+"config.ini" file; the visualization mode can now be changed to "fullscreen";
+added a new key configurator panel (settings are saved into the system
+registry); all game buttons can now be operated via keyboard, mouse and touch
+screen; new splash screen; new "about" screen; minor fixes and optimizations to
+the source code; added support for .png images; added on-screen menu to the
+"fullscreen" mode; added option to the menu to allow the editing of the
+configuration file; added "halo" to sprites to replicate the glow of the VFD
+screen.
+
+26th January, 2015 - Release S4/2.04 (Standard 4, larger manual added)
+Added larger instructions manual browser; minor optimizations to the source
+code; added a brand new splash screen, allowing to hide/display it at the next
+startup.
+
+26th August, 2013 - Release S4/2.03 (Standard 4, complete rewrite)
+Completely rewritten source code in order to do major optimizazions; designed
+new graphics; updated to the new standard "S4"; fixed several bugs which made
+the application behave oddly when Pac Man ate ghosts.
+
+7th March, 2001 - Release S3/2.02 (Standard 3, final)
+New standard: totally rewritten sound routines; Fmod sound library 3.31 added;
+new splash-screen and minor updates.
+
+28th October, 2000 - Release 2.01 (shaped form, IA and manual)
+Shaped form added; game can be closed by pressing the ESC key anytime; sound
+folder installation controller added; implementation for the Artificial
+Intelligence of ghosts; manual application added (thanks to Jaro Gielens for
+providing those superb scans!)
+
+18th February, 2000 - Release 2.00 (new standard)
+New implementation for key routines: you can now use arrow keys to move PuckMan;
+"bonus life" routine now 100% accurate: one bonus life at 2000 points only;
+added the "About" form; popup menu added.
+
+28th January, 2000 - Release 1.01 (better simulation routine)
+Oops, I didn't notice that the original tabletop game allows you to have four
+lives... :( Modified the "bonus life" routine, so you can have a bonus life
+even if you have three left.

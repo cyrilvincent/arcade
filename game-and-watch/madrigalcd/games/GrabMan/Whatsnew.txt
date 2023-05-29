@@ -1,0 +1,61 @@
+4th December, 2017 - Release 5.00 (Standard 5, complete rewrite)
+Added a new option to the on-screen game menu, to enable the user to change
+from fullscreen to windowed (shaped) mode on the fly; minor tweakings.
+
+16th October, 2017 - Release 5.00 * PUBLIC BETA *
+Officially released through an "open beta testing" program.
+
+29th July, 2017 - Release 5.00 * PRIVATE BETA *
+Implemented new graphics system based on "skins" for both the game and the
+instructions manual; all of the skin options can be changed via the included
+"config.ini" file; the visualization mode can now be changed to "fullscreen";
+added a new key configurator panel (settings are saved into the system
+registry); all game buttons can now be operated via keyboard, mouse and touch
+screen; new splash screen; new "about" screen; minor fixes and optimizations to
+the source code; added support for .png images; added on-screen menu to the
+"fullscreen" mode; added option to the menu to allow the editing of the
+configuration file.
+
+23rd February, 2015 - Release S4/2.05 (Standard 4, minor fixes)
+Fixed a bug in the "drag and move the game" routine. 
+
+26th January, 2015 - Release S4/2.04 (Standard 4, complete rewrite)
+Completely rewritten source code in order to do major optimizazions; designed
+new graphics; updated to the new standard "S4"; added a brand new splash
+screen, allowing to hide/display it at the next startup; added instructions  
+manual browser.
+
+27th August, 2007 - Release S3/2.03 (Standard 3, minor graphics addition)
+Minor graphics changes to the splash-screen; changed source a bit to use  
+FMod.dll 3.7.5; minor graphics changes to the "About..." window; changed
+program icons a bit; compiled with Delphi 6 for more stability.
+
+7th March, 2001 - Release S3/2.02 (Standard 3, final)
+New standard: totally rewritten sound routines. Fmod sound library 3.31 added;
+new splash-screen and minor updates.
+
+28th October, 2000 - Release 2.01 (shaped form and IA)
+Shaped form added; game can be closed by pressing the ESC key anytime; sound
+folder installation controller added; implementation for the Artificial
+Intelligence of ghosts.
+
+18th February, 2000 - Release 2.00
+New implementation for key routines: you can now use arrow keys to move
+Grab Man; highest scores are now saved in the Windows registry; "About" form
+added; popup menu added.
+
+11th December, 1999 - Release 1.04
+Added the form-dragger routine; set the "scaled" form property to false: now
+you can play with either small or big fonts viewing: the game form won't be
+resized!
+
+20th November, 1999 - Release 1.03 (bugfix three)
+Killed another bug: this one affected the routine which set ghosts free.
+
+15th November, 1999 - Release 1.02 (bugfix two)
+Killed a minor bug in the clock routine: 10 was shown as 00; also changed some
+image priorities for time viewing.
+
+14th November, 1999 - Release 1.01 (bugfix)
+Killed a terrible bug which made the game crash every time PacMan ate two or
+more ghosts; splash-screen picture substituted.

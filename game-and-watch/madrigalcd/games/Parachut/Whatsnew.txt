@@ -1,0 +1,68 @@
+14th January, 2021 - Release 5.02 (Standard 5, more accuracy)
+Completely rewritten routines that calculate the maximum number of
+parachuters on screen simultaneously, and the game speed, thanks to the
+invaluable input and help from programmer Koby Goldberg. The game is now
+much more accurate than every previous version and it is extremely close
+to the original in terms of game difficulty.
+
+24th December, 2020 - Release 5.01 (Standard 5, bug-fix)
+Fixed a bug that caused the parachuter hanging from the palm tree to
+disappear in certain circumstances; minor improvements to the parachuter
+generation routine for Game B. Thanks to D. Yen for the bug report.
+
+4th December, 2017 - Release 5.00 (Standard 5, complete rewrite)
+Added a new option to the on-screen game menu, to enable the user to change
+from fullscreen to windowed (shaped) mode on the fly; minor tweakings.
+
+16th October, 2017 - Release 5.00 * PUBLIC BETA *
+Officially released through an "open beta testing" program.
+
+22nd June, 2017 - Release 5.00 * PRIVATE BETA *
+Implemented new graphics system based on "skins" for both the game and the
+instructions manual; all of the skin options can be changed via the included
+"config.ini" file; the visualization mode can now be changed to "fullscreen";
+added a new key configurator panel (settings are saved into the system
+registry); all game buttons can now be operated via keyboard, mouse and touch
+screen; new splash screen; new "about" screen; minor fixes and optimizations to
+the source code; added support for .png images; added on-screen menu to the
+"fullscreen" mode; added option to the menu to allow the editing of the
+configuration file.
+
+30th May, 2016 - Release S4/1.08 (Standard 4, minor bug-fix)
+Fixed a bug that caused the "misses" to continuously reset at 200 and 500
+points. Thanks to D. Yen for the bug report.
+
+9th June, 2015 - Release S4/1.07 (Standard 4, minor bug-fix)
+Fixed a bug that caused the "misses" not to reset properly at 500 points.
+Thanks to D. Yen for the bug report.
+
+13th October, 2014 - Release S4/1.06 (Standard 4, larger manual added)
+Added larger instructions manual browser; several optimizations to the source
+code; fixed a few bugs in the "game over" routines; added a brand new splash
+screen, allowing to hide/display it at the next startup.
+
+12th May, 2014 - Release S4/1.05 (Standard 4, various optimizations)
+Minor fixes and optimizations to source code; normalized sound samples volume
+to a higher level; added the new "About" screen; fixed a few bugs; made
+handheld game graphics more realistic (buttons).
+
+16th January, 2012 - Release S4/1.04 (Standard 4, major improvements and fixes)
+Fixed a few bugs in the score and clock rendering routines; fixed a bug that
+prevented "readme" and "whatsnew" files to be opened correctly in Windows 7;
+made background "shaped"; compiled with Delphi 7 for more stability; partially
+rewritten source code, making it more readable; added missing pages to
+instructions manual browser; changed application name into Parachut.
+
+15th September, 2008 - Release S4/1.03 (Standard 4, graphics improvement)
+Added "double buffering" to form rendering, in order to remove graphics
+flickering.
+
+31st December, 2007 - Release S4/1.02 (Standard 4, graphics improvement +
+hiscore save fix)
+Fixed a bug in the routine that saves hiscores to Windows registry; added
+shadows to sprites, to give a more realistic look; replaced a couple of wrong
+sprites.
+
+12th November, 2007 - Release S4/1.01 (Standard 4, MAME cabinets compatible)
+Added new options to completely operate the simulator through keyboard, as
+requested by MAME cabinets users.

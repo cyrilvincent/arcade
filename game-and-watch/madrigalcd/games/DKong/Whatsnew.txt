@@ -1,0 +1,68 @@
+14th March, 2022 - Release 5.01 (Standard 5, graphics improvements)
+Added directional cross graphics to simulate press in all four directions
+(thanks to Itizso for providing rendered 3D model of the cross)
+
+4th December, 2017 - Release 5.00 (Standard 5, complete rewrite)
+Added a new option to the on-screen game menu, to enable the user to change
+from fullscreen to windowed (shaped) mode on the fly; minor tweakings.
+
+16th October, 2017 - Release 5.00 * PUBLIC BETA *
+Officially released through an "open beta testing" program.
+
+24th June, 2017 - Release 5.00 * PRIVATE BETA *
+Implemented new graphics system based on "skins" for both the game and the
+instructions manual; all of the skin options can be changed via the included
+"config.ini" file; the visualization mode can now be changed to "fullscreen";
+added a new key configurator panel (settings are saved into the system
+registry); all game buttons can now be operated via keyboard, mouse and touch
+screen; new splash screen; new "about" screen; minor fixes and optimizations to
+the source code; added support for .png images; added on-screen menu to the
+"fullscreen" mode; added option to the menu to allow the editing of the
+configuration file.
+
+6th April, 2015 - Release S4/1.09 (Standard 4, larger manual added)
+Added larger instructions manual browser; several optimizations to the source
+code; added a brand new splash screen, allowing to hide/display it at the next
+startup.
+
+14th January, 2014 - Release S4/1.08 (Standard 4, major improvements)
+Enlarged game graphics in order to fit well on 1024x768 desktops; fixed
+foreground graphics priorities; fixed minor inaccuracies in display; minor
+optimizations to several routines; fixed mispelled game title on splash screen;
+updated "About" screen with new logo.
+
+21st November, 2011 - Release S4/1.07 (Standard 4, major bug-fixes)
+Fixed bugs in the routines concerning the "miss", barrels generation, score
+rendering when greater than 1000 points, hiscore save, clock calculation, etc.
+
+19th September, 2011 - Release S4/1.06 (Standard 4, minor bug-fix)
+Completely rewritten the routines that manage the score/hiscore display, which
+contained a few math mistakes.
+
+1st September, 2011 - Release S4/1.05 (Standard 4, complete rewrite)
+Completely rewritten source code in order to do major optimizazions, fix bugs,
+etc. Re-recorded original sound samples at higher quality. Included new
+much more detailed instructions manual than the previous one.
+
+3rd April, 2001 - Release S3/1.04a (Standard 3, minor bug-fix)
+Fixed a minor bug in the game speed routines (tx to James Wang for letting me
+know).
+
+21st March, 2001 - Release S3/1.04 (Standard 3, final)
+New standard: totally rewritten sound routines. Fmod sound library 3.31 added;
+new splash-screen and minor updates.
+
+5th February, 2001 - Release 1.03a (graphics bug-fixes)
+Damn! I forgot to change the digits bitmaps and the button-press images.
+
+26th January, 2001 - Release 1.03 (more accuracy and minor updates)
+Background graphics changed to the original game aspect; more accuracy in
+control methods and timing for the hook; changed "about" and "splash" screens;
+reset hiscores option added to the popup menu.
+
+27th May, 2000 - Release 1.02 (Bug-fixes and more)
+Fixed two small bugs in the watch routine.
+
+11th May, 2000 - Release 1.01 ("More accuracy" release)
+Mario's jump routines modified. Thanks to Werner Buttner from South Africa for
+infos about this!

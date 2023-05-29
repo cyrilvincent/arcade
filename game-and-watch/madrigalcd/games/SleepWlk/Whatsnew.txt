@@ -1,0 +1,36 @@
+4th December, 2017 - Release 5.00 (Standard 5, complete rewrite)
+Added a new option to the on-screen game menu, to enable the user to change
+from fullscreen to windowed (shaped) mode on the fly; minor tweakings.
+
+16th October, 2017 - Release 5.00 * PUBLIC BETA *
+Officially released through an "open beta testing" program.
+
+13th August, 2017 - Release 5.00 * PRIVATE BETA *
+Implemented new graphics system based on "skins" for both the game and the
+instructions manual; all of the skin options can be changed via the included
+"config.ini" file; the visualization mode can now be changed to "fullscreen";
+added a new key configurator panel (settings are saved into the system
+registry); all game buttons can now be operated via keyboard, mouse and touch
+screen; new splash screen; new "about" screen; minor fixes and optimizations to
+the source code; added support for .png images; added on-screen menu to the
+"fullscreen" mode; added option to the menu to allow the editing of the
+configuration file.
+
+14th April, 2014 - Release S4/1.04 (Standard 4, various optimizations)
+Fixed a bug which prevented the "Readme" and "Whatsnew" files from being
+opened in Windows 7+; minor fixes and optimizations to source code; normalized
+sound samples volume to a higher level; added the new "About" screen.
+
+December 20th, 2010 - Release S4/1.03 (Standard 4, English manual added)
+English manual added.
+
+January 15th, 2010 - Release S4/1.02 (Standard 4, complete rewrite + manual
+added)
+Completely rewritten source code in order to do major optimizazions, fix bugs,
+etc; re-recorded original sound samples at higher quality; manual added;
+source code released.
+
+January 7th, 2008 - Release S4/1.01 (Standard 4, graphics improvement +
+hiscore save fix)
+Fixed a bug in the routine that saves hiscores to Windows registry; added
+shadows to sprites to make them look more realistic.

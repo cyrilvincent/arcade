@@ -1,0 +1,42 @@
+26th September, 2022 - Release 5.01 (Standard 5, graphic improvements)
+Added graphics to simulate press of the "move" button-switch in all directions
+(thanks to Itizso for providing rendered 3D model of the button-switch)
+
+4th December, 2017 - Release 5.00 (Standard 5, complete rewrite)
+Added a new option to the on-screen game menu, to enable the user to change
+from fullscreen to windowed (shaped) mode on the fly; minor tweakings.
+
+16th October, 2017 - Release 5.00 * PUBLIC BETA *
+Officially released through an "open beta testing" program.
+
+8th July, 2017 - Release 5.00 * PRIVATE BETA *
+Implemented new graphics system based on "skins" for both the game and the
+instructions manual; all of the skin options can be changed via the included
+"config.ini" file; the visualization mode can now be changed to "fullscreen";
+added a new key configurator panel (settings are saved into the system
+registry); all game buttons can now be operated via keyboard, mouse and touch
+screen; new splash screen; new "about" screen; minor fixes and optimizations to
+the source code; added support for .png images; added on-screen menu to the
+"fullscreen" mode; added option to the menu to allow the editing of the
+configuration file.
+
+14th December, 2015 - Release S4/1.04 (Standard 4, complete rewrite)
+Completely rewritten source code in order to do major optimizazions; designed
+new graphics; updated to the new standard "S4"; re-recorded sound samples at
+higher quality; added a brand new splash screen, allowing to hide/display it
+at the next startup.
+
+19th July, 2007 - Release S3/1.03 (Standard 3, minor graphics fixes)
+Changed a few 2-bit colour images in order to make them correctly rendered on
+modern video cards; changed source a bit to use FMod.dll 3.7.5; minor graphics
+changes to the "About..." window; changed program icons a bit; compiled with
+Delphi 6 for more stability.
+
+28th March, 2001 - Release S3/1.02 (Standard 3, final)
+New standard: totally rewritten sound routines; Fmod sound library 3.31 added;
+new splash-screen and minor updates; small bug-fixes.
+
+17th November, 2000 - Release 1.01 (Manual release)
+Retouched all scanned images from the original booklet (thanks to Carlos
+Caldèron for sending me them). Built form, coded all routines for the "Manual"
+application.

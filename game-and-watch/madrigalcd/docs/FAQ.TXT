@@ -1,0 +1,120 @@
+MADrigal's Simulators - Frequently Asked Questions
+--------------------------------------------------
+V2013.09.30 - 30th September, 2013
+
+site URL: http://www.madrigaldesign.it/sim/
+
+email:    lucantignano@gmail.com
+
+Sections
+--------
+1. installation
+2. sound problems
+3. video problems
+4. application crashes or works oddly
+5. games requests
+
+
+
+1. installation
+---------------
+Q: I can't get the "xyz" simulator to work! It keeps on prompting "Sound folder
+   unproperly installed. Read instructions then reinstall."
+
+A: 1. All of my simulators executables search for sound samples into the
+      "gamename/sound" subfolder. If the directory isn't found, game can't be
+      played.
+      Install the game by simply right-clicking on the game icon and then
+      selecting the "extract to bla/bla/bla/gamename folder" option from
+      WinZip's menu.
+
+   2. Maybe you have no DirectX drivers installed. I've been told that my
+      simulators sometimes can't run on Win2000 or WinNT4 if there are no
+      DirectX drivers installed. This is due to a sort of problem with the
+      fmod.dll sound library.
+
+
+
+2. audio problems
+-----------------
+Q: My computer hangs as soon as I select audio output device, and I have to
+   reset it!
+
+A: 1. You may be experiencing some odd uncompatibility issue between fmod.dll
+      and your sound card.
+      This especially happens with Sound Blaster Live! cards.
+      I've been told that there's a way to solve this awful problem: go to the
+      "Sound Blaster panel" and lower the "hardware acceleration" spin by one
+      level. This should allow the game to run correctly.
+
+   2. You might also try downloading the latest release of the "fmod.dll" from
+      http://www.fmod.org
+
+
+Q: I'm asked to select "DirectSound" or "Windows MM" output. What should I do?
+
+A: DirectSound is faster and more stable if you're running the game in Windows
+   95, 98 or ME.  Windows MM is better in case you're using Windows NT4, 2000 or
+   XP (since DirectX is emulated by Multimedia devices driver in those OSes).
+
+
+
+3. video problems
+-----------------
+Q: I see uncomplete sprites or I can't see any! Why?
+
+A: 1. This might happen on some video cards (I've been told it from some G200
+      and TNT owners) and I suppose it's due to a sort of uncompatibility
+      between the 24-bit images (the game background) and the 1-bit images
+      (sprites) rendering.
+      This sometimes causes solid sprites to become "transparent" or eventually
+      transparent sprites to appear as solid (so they hide sprites behind them).
+      I still didn't manage to solve this problem, since I have very few
+      beta-testers and they all have similar video cards.
+
+   2. Try changing your desktop settings (colour depth to 16, 24 or 32 bits)
+
+   3. Eventually try installing the game on a different PC, and see what
+      happens.
+
+   4. Send me an email with a full bug-report.
+
+
+
+4. application crashes or works oddly
+-------------------------------------
+Q: The game sometimes crashes and prompts many error popup messages, such as
+   "canvas doesn't allow drawing" or something similar...
+
+A: Even though my games are quite small, they require a certain amount of system
+   resources (I don't mean RAM eh!), so I suggest you to execute them after
+   shutting all (or almost all) other applications.
+   If the system has no more resources when playing... well the game might
+   behave quite strangely: disappearing sprites, paused game and so on.
+   Sorry for such an inconvenient, but it's mainly due to a few bugs in Delphi
+   7, which I use to compile the games.
+
+
+
+5. games requests
+-----------------
+Q: I noticed that you didn't make the simulator of my favourite game, that is
+   "Bla bla bla". Why don't you make that simulator?
+
+A: Possible reasons:
+
+   1. I don't have that game in my hands. I can't even think of making a
+      simulator of a game I don't have access to or I've never seen before.
+      I need at least to play the actual game before starting the simulation
+      process, otherwise the simulator won't be accurate at all!
+      Also, I can't always afford the expense of buying games to be simulated.
+      Since I program "freeware" games, I don't get a single cent from my
+      products - and I don't even want to!
+
+   2. ...maybe I'm not interested into that game. =)
+      I'm mainly interested into Nintendo, Mattel, Tomy, Gakken, Bandai, Casio,
+      VTech and Coleco games.
+
+   3. If you're willing to contribute, you can lend/present me with your
+      favourite game, so I will study it and then code the simulator as accurate
+      as possible.

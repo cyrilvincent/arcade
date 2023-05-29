@@ -1,0 +1,39 @@
+4th December, 2017 - Release 5.00 (Standard 5, complete rewrite)
+Added a new option to the on-screen game menu, to enable the user to change
+from fullscreen to windowed (shaped) mode on the fly; minor tweakings.
+
+16th October, 2017 - Release 5.00 * PUBLIC BETA *
+Officially released through an "open beta testing" program.
+
+30th September, 2017 - Release 5.00 * PRIVATE BETA *
+Implemented new graphics system based on "skins" for both the game and the
+instructions manual; all of the skin options can be changed via the included
+"config.ini" file; the visualization mode can now be changed to "fullscreen";
+added a new key configurator panel (settings are saved into the system
+registry); all game buttons can now be operated via keyboard, mouse and touch
+screen; new splash screen; new "about" screen; minor fixes and optimizations to
+the source code; added support for .png images; added on-screen menu to the
+"fullscreen" mode; added option to the menu to allow the editing of the
+configuration file.
+
+28th April, 2014 - Release S4/1.05 (Standard 4, various optimizations)
+Fixed a bug which prevented the "Readme" and "Whatsnew" files from being
+opened in Windows 7+; minor fixes and optimizations to source code; normalized
+sound samples volume to a higher level; added the new "About" screen.
+
+31st January, 2010 - Release S4/1.04 (Standard 4, serious bug-fix)
+Fixed a nasty bug which caused the "powerup" item not to work at all.
+
+27th January, 2010 - Release S4/1.03 (Standard 4, complete rewrite + manual
+added)
+Completely rewritten source code in order to do major optimizazions, fix bugs,
+etc; re-recorded sound samples at higher quality; instructions manual browser
+added.
+
+6th August, 2007 - Release S3/1.02 (Standard 3, minor graphics update)
+Minor graphics changes to the splash-screen; changed source a bit to use
+FMod.dll 3.7.5; minor graphics changes to the "About..." window; changed
+program icons a bit; compiled with Delphi 6 for more stability.
+
+6th March, 2003 - Release S3/1.01 (Standard 3, bug-fix)
+Fixed a routine which caused rubbers not to provide points when jumped.

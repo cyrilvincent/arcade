@@ -1,0 +1,39 @@
+4th December, 2017 - Release 5.00 (Standard 5, complete rewrite)
+Added a new option to the on-screen game menu, to enable the user to change
+from fullscreen to windowed (shaped) mode on the fly; minor tweakings.
+
+16th October, 2017 - Release 5.00 * PUBLIC BETA *
+Officially released through an "open beta testing" program.
+
+29th June, 2017 - Release 5.00 * PRIVATE BETA *
+Implemented new graphics system based on "skins" for both the game and the
+instructions manual; all of the skin options can be changed via the included
+"config.ini" file; the visualization mode can now be changed to "fullscreen";
+added a new key configurator panel (settings are saved into the system
+registry); all game buttons can now be operated via keyboard, mouse and touch
+screen; new splash screen; new "about" screen; minor fixes and optimizations to
+the source code; added support for .png images; added on-screen menu to the
+"fullscreen" mode; added option to the menu to allow the editing of the
+configuration file.
+
+13th October, 2014 - Release S4/1.04 (Standard 4, larger manual added)
+Added larger instructions manual browser; several optimizations to the source
+code; added a brand new splash screen, allowing to hide/display it at the next
+startup.
+
+2nd June, 2014 - Release S4/1.02 (Standard 4, minir bug-fix)
+Fixed a silly bug which caused the game timers not being initialized when
+starting a game in Game A mode (thanks to Jose Antonio Argibay for the report).
+
+12th May, 2014 - Release S4/1.02 (Standard 4, complete rewrite)
+Completely rewritten source code in order to do major optimizazions; designed
+new graphics; updated to the new standard "S4"; normalized sound samples
+volume to a higher level; fixed several bugs; added the new "About" screen.
+
+March 21st, 2001 - Release S3/1.01 (Standard 3, final)
+New standard: totally rewritten sound routines; Fmod sound library 3.31 added;
+new splash-screen and minor updates.
+
+January 26th, 2001 - Release 1.00a (graphics retouch and minor updates)
+Background graphics changed to a sharper aspect; reset hiscores option added
+to the popup menu.

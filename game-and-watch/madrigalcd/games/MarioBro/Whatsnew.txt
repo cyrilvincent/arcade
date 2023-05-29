@@ -1,0 +1,44 @@
+26th September, 2022 - Release 5.01 (Standard 5, graphic improvements + minor fixes)
+Added graphics to simulate press of the button-switches in all directions
+(thanks to Itizso for providing rendered 3D model of the button-switches); also
+fixed a bug that caused the van smoke animation to not reprise after a "miss"
+
+4th December, 2017 - Release 5.00 (Standard 5, complete rewrite)
+Added a new option to the on-screen game menu, to enable the user to change
+from fullscreen to windowed (shaped) mode on the fly; minor tweakings.
+
+16th October, 2017 - Release 5.00 * PUBLIC BETA *
+Officially released through an "open beta testing" program.
+
+2nd July, 2017 - Release 5.00 * PRIVATE BETA *
+Implemented new graphics system based on "skins" for both the game and the
+instructions manual; all of the skin options can be changed via the included
+"config.ini" file; the visualization mode can now be changed to "fullscreen";
+added a new key configurator panel (settings are saved into the system
+registry); all game buttons can now be operated via keyboard, mouse and touch
+screen; new splash screen; new "about" screen; minor fixes and optimizations to
+the source code; added support for .png images; added on-screen menu to the
+"fullscreen" mode; added option to the menu to allow the editing of the
+configuration file.
+
+6th April, 2015 - Release S4/1.04 (Standard 4, larger manual added and fixes)
+Added larger instructions manual browser; several optimizations to the source
+code; fixed minor graphics glitch; added a brand new splash screen, allowing
+to hide/display it at the next startup.
+
+15th July, 2013 - Release S4/1.03 (Standard 4, enhancements and fixes)
+Fixed a bug occuring when displaying scores above 1000 points; fixed game
+executable infos; fixed hint over the graphics when game is closed; made
+lcd display brighter; re-recorded sound samples at higher quality.
+
+31st May, 2013 - Release S4/1.02 (Standard 4, complete rewrite)
+Completely rewritten source code in order to do major optimizazions; designed
+new graphics; updated to the new standard "S4".
+
+13th July, 2003 - Release S3/1.01 (Standard 3, minor bug fix)
+Very minor bug in the keysettings saving routine now fixed (thanks to Jerry
+Chan for letting me know); fmod 3.6 implemented.
+
+31st July, 2002 - Release S3/1.00a (Standard 3, minor bug fix)
+Very minor bug in the Game Over routine now fixed. Thanks to Hitman from
+www.remakes.org for letting me know.
