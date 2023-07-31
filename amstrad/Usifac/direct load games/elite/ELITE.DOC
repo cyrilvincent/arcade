@@ -1,0 +1,169 @@
+
+                             Documentation de Elite
+                             ----------------------
+
+    Bon, ce n'est pas la doc officielle, mais cela vous permettra  de  vous
+    lancer dans ce jeu ancien mais sympa ! Elite
+
+    Tu connais sans doute le principe du jeu. Au  depart,  tu  n'as  aucune
+    experience et tu ne possedes qu'un vaisseau faiblement equipe. Il y a 2
+    buts principaux : - s'enrichir par le commerce - monter dans  l'echelle
+    des valeurs pour, but ultime, devenir membre de l'ELITE
+
+    Il y a des commandes differentes selon que tu te trouves dans une  base
+    (ou une station Coriolis en orbite autour d'une planete) ou en vol.
+
+    Dans la station, touches du pave numerique :
+
+        1 - Partir
+        2 - Acheter des marchandises
+        3 - Vendre des marchandises
+        4 - Acheter des equipements
+        5 - Carte galactique (deplacement avec les fleches)
+        6 - Carte du systeme (meme chose)
+        7 - Renseignements sur la planete visee par le curseur
+        8 - Prix des marchandises de la station
+        9 - Statut et equipements
+        0 - Marchandises a bord du vaisseau
+        ^ - Sauvegarde / Chargement
+
+    En vol :
+
+        1 - Vue avant
+        2 - Vue arriere
+        3 - Vue gauche
+        4 - Vue droite
+
+        0,5,6,7,8 et 9 : meme chose que pour la station
+
+        Q - Tir
+        Espace / +  : augmente / diminue la vitesse
+        ; et /      : tourner gauche / droite
+        S / X       : haut / bas
+        J           : accelere temps
+        H           : Hyperespace (vers la planete selectionnee en mode carte)
+        T           : Arme missile
+        , ou M      : lancer missile
+        V           : desactiver missile
+        DEL/CLR     : Pause on / off
+
+    Commandes necessitant un equipement specifique :
+
+        E   - Brouillage CME anti-missile
+        C   - Ordinateur d'arrimage
+        Tab - bombe a energie
+        (G + H) - Hypersaut galactique ?
+        ESC - Capsule de secours
+        Y   - peut-etre un jour cette touche sera utile ?
+
+    En mode pause :
+
+        R - commutateur on/off manoeuvres haut/bas rapide/lente
+        D - recentrage automatique du vaisseau
+        A - ?
+        B - ?
+        Y - ?
+        1 - Quit game
+
+    Tableau de bord
+
+    Bouclier avant    Voyant d'alerte     Reperage     Vitesse
+    Bouclier arriere                                   Inclinaison H2
+    Fuel                                               Inclinaison V2
+    Temperature             Radar 3d                   Blocs d'energie
+    Laser temperature
+    Altitude             (E) temoin CME               (S) temoin Coriolis
+    Missiles restants     temoin missile
+
+                   violet = rien
+                   vert   = recherche cible
+                   rose   = pret a tirer
+
+    Voyant d'alerte :
+
+        Vert  : tout va bien
+        Jaune : Objet dans le secteur
+        Rouge : Alerte  =  boucliers neutralises
+                        ou temperature augmente (pres d'une etoile)
+                        ou altitude diminue (pres d'une planete)
+
+        Rouge clignotant :  Etat critique =  dernier bloc d'energie engage
+                                         ou Altitude / temperature critique
+
+    Reperage : Il indique la position de la station Coriolis.
+
+           - Point rouge au milieu du cercle : tu lui fais face
+           - Carre rouge au milieu du cercle : tu lui tournes le dos
+
+    En Vol :
+
+    Il faut se diriger vers la station Coriolis. En general, elle est assez
+    loin. S'il n'y a personne dans le secteur (temoin  d'alerte  vert),  tu
+    peux utiliser la touche 'J' pour accelerer le trajet (son  effet  cesse
+    des que quelque chose apparait).
+
+    En combat :
+
+    Utilisation des lasers (rien a faire !)
+
+    Utilisation des missiles : les armer avec 'T', puis  mettre  le  viseur
+    sur un ennemi suffisament proche : le voyant change alors  de  couleur,
+    l'on peut tirer le missile avec '?'.
+
+    Atterrisage dans la station (difficile) : Lorsque  la  station  est  en
+    vue, il faut reperer la face qui est dirigee vers la planete.
+
+    Il faut ensuite se mettre bien en face  de  l'ouverture  d'entree  pour
+    arriver droit. L'embetant, c'est que la station tourne sur elle-meme  !
+    Il faut donc tourner en meme temps  qu'elle  tout  en  restant  face  a
+    l'entree (la fente doit etre horizontale). Evidemment, la vitesse  doit
+    etre reduite. La moindre erreur et c'est le crash fatal.
+
+    Equipements supplementaires :
+
+    - Systeme CME : permet de brouiller les missiles adverses.
+    - Bombe a energie : detruit les vaisseaux ennemis autour de son  navire
+      (sauf s'il s'agit d'une station ou s'il y a beaucoup de navires).
+    - Hypersaut galactique : permet de changer de galaxie (8 en tout).
+    - Capsule de secours : en cas de survie, les assurances te redonnent un
+      vaisseau avec le meme equipement, mais sans cargaison.
+    - Unite d'energie : permet aux blocs d'energie de se reconstituer  plus
+      rapidement.
+    - Soute supplementaire : 15 tonnes de plus de chargement !
+    - Lasers : plus ils sont chers, plus ils sont efficaces.  Lorsque  l'on
+      installe un nouveau laser, l'ancien est  revendu automatiquement. Cas
+      particulier, le laser a miner sert a forer les meteorites (pas  super
+      utile).
+    - Ecopes a fuel : Permettent de recuperer du fuel si on s'approche pres
+      d'un soleil (mise en marche automatique), pas tres utile...
+                    : Permettent de recuperer les cargaisons des  vaisseaux
+                    detruits en passant au dessus, tres utile !
+
+    - Ordinateur d'arrimage :  permet  d'entrer  automatiquement  dans  une
+      station des que l'on se trouve dans sa sphere d'influence (temoin 'S'
+      allume). Utile !!
+
+    Quelques conseils :
+
+    Il faut commencer par se familiariser avec le  maniement  du  vaisseau,
+    qui est assez different d'un simulateur de vol classique).
+
+    Au debut, il  vaut  mieux  eviter  les  planetes  'chaudes'  (anarchie,
+    feodalite),  et  faire  gentiment  du  commerce  de  produits  de  base
+    (nourriture, matieres premieres) en sautant de  planetes  industrielles
+    en  planetes  agricoles  et  vice-versa...  jusqu'a  pouvoir  s'acheter
+    l'equipement indispensable. Encore un mot sur  le  statut  legal  :  tu
+    deviens delinquant ou fugitif si tu attaques des  vaisseaux  pacifiques
+    ou si tu transportes  des  marchandises  interdites  (armes,  esclaves,
+    stupefiants). Dans ce cas, tu peux etre attaque par les vaisseaux de la
+    police ! Pour ameliorer ton statut legal, trois solutions :
+        - se tenir a carreau pendant quelques temps
+        - changer de galaxie
+        - utiliser la capsule de secours !
+
+    Bon vent !
+
+    * Fin du texte (Merci a 0K FREE pour me l'avoir passe !) E/J
+        ----------------------
+
+    Bon, ce n'est 

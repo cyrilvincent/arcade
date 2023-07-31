@@ -1,0 +1,71 @@
+org &99fc
+nolist
+write"xyload"
+
+di
+ld (stack+1),sp
+ld sp,&c000
+ld bc,&7fc4
+out (c),c
+ld hl,&a800
+ld de,&4000
+ld bc,&1800
+ldir
+ld hl,&0000
+ld bc,&0040
+ldir
+exx
+ld bc,&7f00+%10001001
+out (c),c
+exx  
+ex af,af'
+xor a
+ex af,af'
+call &0044                  
+call &08bd                  
+call &bb00
+call &b909
+ld c,7
+ld de,&0040
+ld hl,&b0ff
+call &bcce
+xor a
+ld (&ac00),a
+ld a,&ff
+ld (&be78),a
+ld a,&c9
+ld (&bb5a),a
+ld b,end_filename-filename
+ld hl,filename
+ld de,&64
+push de
+call &bc77
+pop hl
+call &bc83
+call &bc7a
+di
+ld hl,&4000
+ld de,&a800
+ld bc,&1800
+ldir
+ld de,&0000
+ld bc,&0040
+ldir
+ld hl,end_filename-1
+inc (hl)
+ld bc,&7fc0
+out (c),c
+
+.stack ld sp,0              
+ret                         
+
+.filename
+defb "XYBOTS.A"
+.end_filename
+u &99fc
+
+org routine_address
+nolist
+write"xyload"
+
+let mode=1                          ;scre
