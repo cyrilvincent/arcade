@@ -1,0 +1,3 @@
+Program to check the working of the CPU 65(C)02 emulation.
+
+Load and start at $2000

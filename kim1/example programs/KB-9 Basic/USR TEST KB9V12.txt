@@ -1,0 +1,6 @@
+10 REM Demo of USR function
+20 POKE 8256,0 : REM lsb of usr subroutine at $0300
+30 POKE 8257,3 : REM msb
+40 POKE 768, 96 : REM 0300 60 RTS
+50 X=USR(1)
+  

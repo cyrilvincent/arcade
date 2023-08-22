@@ -1,0 +1,58 @@
+Global Change Log
+
+
+v3.34.0900
+ 8:37 PM 02/22/2016
+
+General
+=======
+1.	Altair metal nameplate graphic replaced with one provided by Mike Douglas
+
+2.	Minor change made to wincon_io to enable the MITS Programming System to work.
+	Help file provided by Mike (PDF located in the docs directory).
+
+3.	Added interrupt-driven ACIA code and fixed serial to prevent dropped characters.
+
+4. 	Added parity strip and port mirror.
+
+
+
+v3.33.2100
+11:01 PM 12/20/2013
+
+General
+=======
+1.	Mike Douglas made several changes to fix the non-existent hardware interrupt 
+	handling feature. Interrupts in AltairDOS now work and, if other HW is implemented,
+	Timeshare BASIC should work as well.
+
+2.	Changes acreen size of Altair...IMSAI in process.
+
+3.	Random changes in other modules; nothing significant.
+
+
+
+v3.32.1100
+10:05 AM 2/3/2013
+
+General
+=======
+1.	Regressed to a different build environment (VS2003.NET) because VS2008 is producing 
+	inconsistent results in which the object code won't work on various systems.
+
+88disk.c
+========
+1.	Mike Douglas suggested a change to the step_in code in support of Burcon CP/M 2.2.
+
+
+v3.31.1400
+2:27 PM 10/6/2012
+
+General
+=======
+1.	Minor fixes, including a screen redraw anomaly relating to recycling a device context
+	handle by mistake.
+2.	Fix regression error in cass.c. Version 3.30 contained a rebuilt cass.c file which
+	didn't work. I just replaced it with the old version and it works fine.
+
+

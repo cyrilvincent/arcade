@@ -1,0 +1,12 @@
+Install linux
+=============
+git clone https://github.com/anarkavre/pom1
+sudo apt-get install autotools-dev
+sudo apt-get install autoconf
+sudo apt-get install libsdl1.2-devc
+aclocal
+autoconf
+automake --add-missing
+./configure
+make
+sudo make install
