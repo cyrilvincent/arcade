@@ -1,0 +1,1 @@
+hatari -d partitions

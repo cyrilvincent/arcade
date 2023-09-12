@@ -1,0 +1,36 @@
+
+    Floppy Image Access
+
+Utility for accessing ST floppy image files on Atari ST and compatible
+machines equipped with mass storage - hard drives, Flash card adapters 
+and like.
+Purpose of this is not exactly same as with program
+Floppy Image Runner. This is not intended for running SW
+from images, especially not for games. Of course, some SW
+may work, but main goal is accessing files on images, adding,
+deleting files, copy, etc.
+Regular FAT12 floppy format is supported, up to 4MB capacity.
+
+Program needs about 160KB free RAM when mounting image, 
+and about 30 KB when exiting dialog. So, usable well on
+512KB machines too.
+
+Usage:
+After start select target logical drive for image mounting.
+It may be any of C-P, but don't try to select logical drive
+on which image is, or one from which run this PRG.
+When image file is selected, it will be checked and mounted.
+After that you may exit util, and accessing files on image.
+Of course, need to put icon of drive on Desktop. Will not
+go here in that basic thing.
+Can unmount image at any time later. But, because of way
+how TOS handles RAM allocation, it is best to restart Atari
+to perform full RAM freeing, when don't plan to use it more.
+
+Note: this is compatible with improved FAT16 TOS 1.04 and
+1.62 mods ( http://atari.8bitchip.info/tos105.html ), which 
+will be available soon, after some more testing.
+
+
+  PP, Febr 2018
+

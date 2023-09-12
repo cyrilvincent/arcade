@@ -1,0 +1,1229 @@
+These Docs were converted to the ST By Orinocho Of The Wombles
+
+          _______            ________   _______   ________   ________
+         /\_____/\ /\       /\_____ /\ /\______\ /\__/\__/\ /\______/\
+        /_/____/ // /      /_/_____/ //_/____   / / / / / //_/_____/ /
+       /\______\// /      /\______/ / \_____/\ / / / / / //\______/ /
+      / /       /_/_____ / /     / /_______/ // / / / / // /     / /
+      \/        \_______\\/      \/ \______\/ \/  \/  \/ \/      \/(C)THOR 92
+
+
+                FORMULA ONE GRAND PRIX BY MICROPROSE SOFTWARE
+
+                        DOX TYPED BY THOR OF PLASMA UK
+
+INTRODUCTION
+------------
+
+  You've watched the Formula One Grand Prix season on television.  You've 
+followed the Championship battle and the duel between the worlds top two 
+dozen drivers.  You've read the sports reports, the features in the glossies
+and gaped at glamourous lifestyle pictures in gossip magazines.  But you've 
+never known what it's like to strap yourself into that sleak cockpit, to put
+on the brightly coloured helmet and wait on the starting grid for the green 
+light to propel you into a full sixteen race Grand Prix season.  Now you can
+take the wheel for the challenge to your driving skills!
+
+  Microprose Formula One Grand Prix leaves nothing to your imagination.  The
+legendary Geoff Crammond, of Revs and Stunt Car Racer fame, has designed the
+simulation that puts you right in the driver's seat.  However, the simulation
+is not just about races, it's an attempt to show the complex decisions that 
+have to be made by teams when setting-up a car to race on a particular 
+circuit.  Can your car take more wing? Should you re-adjust the gear ratios?
+
+
+  What about the Rookie Driver who has never actually driven a car? We have 
+included a Quickstart Learner's First Lesson that guides the Rookie through 
+Several laps of the famous Monza circuit.
+
+  Unlike most racing games Microprose Formula One Grand Prix is packed full 
+of detailed scenary from the original 16 circuits.  If you have time, you can
+admire the yacht in the harbour at Monaco or the Dome at Mexico City!
+
+  Microprose Formula One Grand Prix gives you the complete racing driver 
+experience from the stormy start to the fiery finish!
+
+OVERVIEW
+--------
+
+  Microprose Formula One Grand Prix is a complete simulation of the full 
+Championship Season.  At the end of the 16 races there are two trophies to be
+won: the Drivers'and the Constructors'Championship. 
+
+  It's always tough to win even one Grand Prix race and, at the highest level
+we think you'll find it very difficult.  However, for less experienced 
+drivers we have included 5 levels of difficulty with 6 major driving aids 
+that, when fully implemented, will leave you free to race the car on a 
+previously defined ideal line.  You can even choose to re-distribute the 
+driving performance of all the other drivers.
+
+  You can win the Championship at the lowest level of difficulty but it will
+only be at the highest level that you will receive the ultimate accolade.
+  
+  The major elements of the simulation are:
+
+  Quickstart Driving Tutorial
+
+  A drive through of the Monza circuit for the Rookies.  The best way to get 
+to grips with controlling the F1 car and to get to know the circuit.
+
+  Cockpit and Car Controls
+
+  Understand and learn all cockpit controls until everything becomes second 
+nature to you.  Get used to looking in both mirrors and being aware of what 
+is Šgoing on behind you.
+
+  Car Set-up
+
+  You must find out how your car behaves on each circuit with various set-ups
+for the wings, tyres, brakes and gears.  Don't be afraid to experiment!  As 
+you improve and hone your driving skills, you will appreciate the value of 
+such things as the correct wing downforce.
+
+  Driving into the Pits 
+
+  It's essential to know where your Pits are on every circuit and be able to
+get in and out safely and quickly.
+
+  Practice any Circuit
+
+  Use these sessions to practise set-ups, driving styles and to get to know 
+all  the circuits.  You are alone on the circuit and there is no pressure to 
+get a fast time.  Get an impression of what should be a good lap time on every 
+circuit.
+
+  Free Practice 
+
+  Acquaint yourself with the way the other cars are performing and what the 
+tactics they use for overtaking. This practice is used for setting-up your 
+car before qualifying practice, and you will get an idea of what a circuit 
+is like with other cars roaring around it.
+
+  Problems with your car
+
+  A chance to review the way your car is handling around the circuit and be 
+directed towards possible solutions.
+
+  Qualifying/Timed Practice
+
+  Try to achieve a good grid placing.  There will be more pressure on you at
+this point.  Understand the limited life of qualifying tyres.
+
+  Pre-race practice
+
+  Your last chance to test and modify your chosen set-up before the race.
+
+  A Non Championship Race 
+
+  Compete in a full Grand Prix with all the drivers going flat out to win.  
+Learn how to make a good racing start when the green lights come on.  Keep an
+eye on the developing pattern of the race. Avoid shunts becoz they will 
+impair the car's handling and performance.
+
+  Pit Stops during a race 
+
+  Practice driving into the Pits quickly and effciently for a timed tyre 
+change and then straight out again on the circuit.
+
+  The Complete F1 Season 
+
+  If you are proffcient at all the above then you will be ready to undertake
+a full racing season at the level of your choice.  Can you survive sixteen 
+difficult races?
+
+  End of Season Championships
+
+  The tables in the driver's and constructor's Championship.
+
+  The Manual
+
+  For more background and imformation on the Grand Prix atmosphere.
+
+QUICKSTART DRIVING INSTRUCTIONS
+-------------------------------
+
+  This manual will refer to the Accelerator, the Brake, Changing Gear and 
+Steering.  You will be able to control these functions by keyboard and 
+joystick.  Key K toggles Keyboard/Joystick mode.  The simulation is initially
+in Joystick Mode; the recommended  method.
+
+  If you have a Joystick fitted on your computer study diagram 1 below
+         
+           ACCELERATE     
+                
+              /|\
+
+TURN LEFT   <- O ->  TURN RIGHT 
+
+              \|/   O - FIRE BUTTON / SELECTOR 
+
+             BRAKE
+
+Accelerate + select = change gear up
+
+Select while not accelerating = change gear down
+
+KEYBOARD CONTROLS
+-----------------
+
+    A = Accelerate          A + SPACE = Change Gear Up
+    Z = Brake               SPACE and not A = Change Gear Down
+    < = Turn left
+    > = Turn right
+
+    Space bar = Selector
+
+ The simulation does not support mouse control, except during menu selection.
+The keyboard cursor keys can also be used to highlight menu options.
+
+ONE LAP OF MONZA FOR ROOKIES
+----------------------------
+
+  Loading 
+
+  Install and/or load the simulation as explained in the Technical Supplement
+and follow any on-screen prompts until you see the main menu.
+
+  Choose Race set-up options.  Find Race Distance and reduce the figure to 
+10%
+
+Find Level of Difficulty and select Rookie.  Return to main menu.
+
+  Highlight the Driver Select Menu.
+
+  Select a driver and, if you wish, you may delete the name using  the 
+backspace key an d type in your own name.  Press the Selector again.  Then 
+select 'Driver Selection Complete'.
+
+  Highlight Practise any circuit with your Controller and press the selector.
+
+  Highlight the circuit select menu.
+
+  Select Monza.  You will see a view of the circuit.  Choose info.  This
+gives you the lap records and distance.  Select OK.
+
+  You will now find yourself in the Pits at Monza, Italy.
+
+  Look at the cockpit controls. Accelerate with the controller and listen to
+the engine noise.
+
+  Press the Function Keys F1, F2, F3, F4, F5 and check that each function key
+has illuminated 5 of the 6 symbols that appear on the dash board panel.  Each key turns on a driving aid to help you control the car.  Do not  press 
+function key F6.
+
+  You will not need to worry about changing gear or braking.  You may crash 
+if you stray from the racing line, but you will not be damaged by any shunt.
+If you should spin off, the car will right itself, once it has come to a 
+rest.  It will face the correct direction to continue the race.
+
+  Turn to page 90 in the manual.  You will see a diagram of the track at 
+Monza.  Find the start line then follow the circuit with your finger to the 
+finish line.  Keep a marker in the manual on this page.
+
+  Monza is an excellent circuit to practise on.  It's fast with some good 
+corners that let you get in a good driving rhythm.  It has also lots of open
+spaces where you can leave the track without crashing into concrete walls.
+
+  You are still in the Pits, on the jack.  Press the selector and when you 
+have been lowered accelerate using your controller. you will begin to move  
+forward.  If not then check that you have pressed Function key F2 and that 
+the symbol is lit on the display.
+
+  When you leave the pits you will then join the circuit by driving to one 
+side of a yellow dotted line.  Once you are on the circuit the yellow line 
+will disappear and you will see a white long dotted line; like the line that
+divides two-way traffic in a normal road.  Try to line up the middle of the 
+steering wheel with the dotted line as you move round the circuit.  This is 
+the best driving line; the ideal path to take so that you can go into bends 
+at the fastest possible speed.
+
+  The first bend at Monza turns to the left then quickly to the right 
+followed  by another left and right.  This is a double chicane called the 
+Variante Goodyear. 
+
+  If a joystick is being used, press 'space' to pause the simulation. 
+otherwise, press P.
+
+  Find the Variante Goodyear on your manual map and also examine the 
+following bend: the Curva Grande.
+
+  Now press the pause key again to re-start the game.
+
+  You should now see a white sign with a black arrow bending to the left.  
+Then countdown markers signs: 200 and 100.
+
+  These signs tell you how many meters to go before the approaching left hand 
+bend.
+
+  Steer carefully around the chicane.  Try to follow the dotted line, even 
+sometimes it appears to be aiming away from the track.
+
+  Continue along the short straight and steer around the long sweeping right-
+hander Curva Grande.  You will find  that you can drive through this corner 
+quite fast.
+
+  Just after the blue bridge you will see another sign warning you of a right
+turn.  Press the Pause key to pause the game and have another look at the map
+in the manual.
+
+  This is the Curva della roggia: another chicane.
+
+  Look ahead on the map to the next 3 bends.  Try to imagine what they look 
+like from your cockpit view.
+
+  Press the pause key to continue.
+
+  Steer through the chicane then carefully along the two right-hand curves.  You will then see a long downhill straight.
+
+  Accelerate on the straight.
+
+  Take time to glance at the red gear indicator on the right of the steering
+wheel at the car changes gear automatically.  listen to the sound of the 
+engine and watch the red power band on the rev counter move up and down the 
+scale.
+
+ At the end of the straight is an unusual chicane called the Variante Ascari.
+
+  Pause the simulation again and study it on the map.  Try to memorize the 
+shape of all the bends, then continue and try to drive through the series of
+bends.
+
+  Gradually, you will find that the more you know about the approaching 
+corner the easier they will be able to drive through at the the correct 
+speed.
+
+  Accelerate along the straight and see if the automatic gear change will put
+you into 6th gear before the auto-brakes slow you down for the Curva 
+Parabolica.  Don't worry if it doesn't.  Try to accelerate around this bend.
+As you come out of the corner you will see two granstands, the pits and a 
+yellow dotted line that marks the pit lane enterance.  Keep following the 
+white dotted line.
+
+  You are now on the finishing straight.
+
+  You will then see the Starting Grid, the 26 spaces where the cars are 
+placed to start the race and a thick solid white line across the track will
+mark the end of one lap.
+
+  Cross this line (the start/finish line).  This is the end of the first lap
+but you will not be given a lap time until you complete started from the 
+Start/Finish Line.
+
+  Continue into another lap.  Try to remember the corners and the straights.
+Glance at the map occasionally.  When you complete the lap you will be given
+a lap time.  Try another lap.  Try to be faster!
+
+CONTROLLING YOU'RE OWN BRAKES
+-----------------------------
+
+  When you feel confident of racing around the circuit.  Press Function Key 
+F1.  Check that the first symbol light has gone out. Now, you will have 
+control your own brakes.
+
+  Remember how brakes are operated by your controller.  Check the diagrams at
+the begining of this section.  This time you will have to cope wit braking 
+and steering round the same bends.
+  
+  Try another lap of Monza.  It will feel different this time but try to
+gauge the right moment to apply the brakes.
+
+CONTROLLING YOUR OWN GEARS
+--------------------------
+
+  Stop on a straight part of the circuit.
+
+  After coming to terms with using the brakes, press Function Key F2 once,
+and then press Function Key F6.  This will cancel the Auto Gear change and 
+switch Šon the suggested  gear indicator.  The 'Gate' symbol should go out 
+and a blue indicator will appear just below the red gear indicator.  Now you
+will be in control of all gear changes but when you see a number in the blue
+circle that will be the suggested gear to be in at the following corner.
+
+  Check the method of gear change for your controller (refer to the 
+quickstart diagrams).  Practise changing gear and watch the red gear 
+indicator.  Try to get N on the indicator.  When you are in Neutral, 
+accelerate.  The engine should rev and make a high pitch noise.  The red 
+indicator should move across the curved r.p.m. scale.  Don't worry about 
+damaging the engine.
+
+  Push the accelerator until the red band is around the 11 mark and then 
+press the selector to change gear but keep it pressed in.
+
+  You should have changed into 1st gear; shown by the 1 on the gear change 
+indicator. (If not then the controller was not pressed forward when you 
+pressed the selector, try it again).  You will not be moving forward becoz 
+you are holding the car on the clutch (the selector pressed and held).
+
+  Now, with the controller pressed forward.  Listen to the change of tone in
+the engine noise.  The mph indicator should show the speed you are travelling
+at.
+
+  Accelerate again and watch the red power band get to about 12 on the dial,
+then change up again in the same way as before.  The indicator will now 
+show 2.
+
+  Try to change up to at least fourth gear.
+
+  Then try changing down to take a bend by taking note of the suggested gear
+indicator (the number in the blue circle).  Note that is not necessary to 
+brake when changing down.
+
+  Gear changing is difficult to master even if you are a seasoned driver but
+try to experiment with the gear shift.  You have 6 foreward gears, Neutral, 
+Power Turn ( you can only change down to this gear) and Reverse.
+
+  When you are in reverse you will see R on the gear indicator.  Accelerate 
+with the controller, just like in a real car, to move backwards.
+
+DRIVING INTO THE PITS
+---------------------
+
+  When you are familiar with the Monza circuit and the basic car controls, 
+practise driving into the pits.  The Pits are where all repairs are carried 
+out and where you are fitted with new tyres.
+
+  You will have noticed the yellow dotted line just before the grandstand 
+straight .  This is the line leading into the pit lane.
+
+  Drive a complete circuit, during which at any time, you may press 'Return' 
+to inform your pit crew of your intention to stop.  You will see  the pit 
+signal on your instrument panel light up in yellow this enables you to enter 
+when you see the dotted line.  Drive slowly into the pit lane.  You may see 
+several pit crews waiting.  As you continue forward motion aim the car towards
+the pit bays. The programme will direct you into the correct bay but you must 
+brake just in front of the crewman directly ahead of you.
+
+  You will be jacked up and a sign placed in front of the car telling you to 
+keep your brakes on.  A selection of tyres appears on the digital display but
+don't worry about this for now.  Press the selector and you will be jacked 
+down.  You can now drive from the pits, weave through the pit lane, then 
+carefully re-join the circuit.
+
+A TIMED PRACTISE/QUALIFYING SESSION
+-----------------------------------
+
+  Press ESC to return to the main menu.  Choose Non Championship Race then 
+Qualifying/Timed Practise.  You will be placed back in the Pits, jacked up 
+but this time you will have a monitor appear in front of your car.  It will 
+list drivers in the Qualifying session including yourself (highlighted).  
+You will Šalso see the Tyre choice display A B C D Q W.
+
+ Q should be chosen but try to move the controller left/right to see the 
+effect.  Then back to Q.  You will be running on Qualifying tyres.  Good for
+about 3 fast laps.  You have four sets for this session but you can use other
+tyres if you wish.
+
+  You are still in rookie level.  If you want to drive with auto gears, auto
+brakes or any other driving aids on you can.
+
+  Press Selector.  The monitor will move out of your way and your car will be
+jacked down.
+
+  Drive away from the pits on to the circuit then complete one lap.  You will
+not be timed until you have passed the start/finish line.  The you will see 
+that the car timer has begun.  Race around the circuit for one lap then, as 
+you cross the line your lap time will be displayed.  You should return to the
+pits now, but if you were held up for some reason there may be enough time 
+left in your tyres for another fast lap.  Don't push your luck too soon, 
+unless you want to find out what its like to drive on bald tyres!
+
+  Drive to your bay, wait to be jacked up.  The monitor should reappear in 
+front of you with various times from other drivers in the Timed Practise 
+session.  The session lasts up to 2 hours.  To speed up the time, Accelerate 
+with the controller.  The other drivers times will  appear very quickly.  If
+Šyou want to go out and beat a particular fast time Accelerate with the 
+controller again to switch off Accelerated Time, then return to the circuit
+in the usual way.  If you want to leave the session press Esc, but all Non-
+selected drivers will complete at least 1 lap in Accelerated Time before the
+is implemented.
+
+  When the Qualifying session is over, you will be shown the results.  
+Select 'Continue' and you will be given the option of a Pre-Race Practise 
+Session.  Do not choose this but go straight to the race itself.
+
+A NON CHAMPIONSHIP RACE
+-----------------------
+
+  You will find yourself on the Starting Grid at Monza with 25 other cars. 
+If you have achieved a reasonable lap time you will be placed relative to 
+the other driver's performance.  If you failed to get a time, got a bad time,
+or have just jumped in at this stage, then you will begin from the rear of 
+the grid.
+
+  Wherever you are, you will see the starting gantry: a bank of 3 red lights
+and a bank of 3 green lights.  None should be alluminated.
+
+  Wait for the red lights to come on.  That is the warning that the start 
+will take place within 4 to 7 seconds.  Hold the car on the 'Clutch' with the
+1st gear engaged (see earlier).
+
+  When the green lights come on, accelerate!
+
+  Try to keep out of trouble for the first bend until the cars sort 
+themselves out.
+
+  Race around the circuit for the number of laps shown on the display but 
+keep an eye on the Pits indicator (bottom right in the cockpit).  If it turns
+yellow you are being called by radio to go into the Pits to change tyres, or
+repair damage.  Drive into the pits as soon as possible, you will loose 
+performance if you don't change your tyres.  The pit stop will be timed!  If
+you do not wish to pit inform the pit crew by pressing 'return', which 
+cancels the pit signal.
+
+  Complete the required number of laps.  When the race is over you will lose
+power and then will be shown the results screen.  If you wish to retire early
+from the race then press 'ESC'.  The race will then be completed for the 
+other drivers in accelerated time.
+
+QUICK GUIDE TO WINNING THE WORLD CHAMPIONSHIP
+---------------------------------------------
+
+  The other circuits
+
+  If you think you know Monza quite well, after following the Quickstart 
+tutorial, then you must study all other 15 tracks with the same equal 
+intensity to win the World Championship.  You can win the World Championship
+at the lower performance but you must know the courses like the back of your
+hand.
+  Making use of Driving Aids
+
+  You may find that you start the season off with all driving aids on but as
+you progress you might prefer to control your own brakes and gears.  If you
+win a World Championship, you will win only at the lowest level.  You cannot
+use any driving aids at ACE level.
+
+  Proberly the most difficult part of the simulation to master is the correct
+driving line.  To win the Championship at Ace level you'll have to get used
+to driving without it.  Press Function Key F5 to turn off the ideal line and
+try to drive around a circuit without it.  You will find that the most 
+important guide will be the colouered rumble strip kerbs that appear on the 
+approach of each corner.  Try to remember the places where you begin to 
+brake and turn on the approach to each bend and consult the manual Driving 
+Hints on pages 122-143.
+
+  Making use of the manual
+
+  The back pages of any computer simulation manual are sometimes seen as 
+unimportant to the winning of the game but it is recommended that you read 
+all of the manual.  It will give you a complete understanding of attitude, 
+general approach to races and other drivers on the circuit plus numerous 
+hints and tips to help you win.  Remember that Microprose Formula One Grand 
+Prix is a simulation not just a racing game.
+
+METHODS OF CONTROL
+------------------
+
+  This manual will refer to the Accelerator, the Brake, Changing Gear and 
+Steering.  You will be able to control these functions by keyboard and 
+joystick.
+
+  Keyboard/Joystick (Key K)
+
+  Key K toggles Keyboard/Joystick mode.
+
+  Joystick    = Controller
+
+  Fire button = Selector
+
+  A/Z         = Controller-Accelerate/Brake
+
+  </>         = Controller-Steer Left/Right
+
+  Spacebar    = Selector
+
+  NB In joystick mode all Keyboard Control buttons are disabled, except when
+the the menus are shown.
+
+  For imformation about the Controllers on your computer please refer to 
+tecnical supplement.
+
+  Microprose Formula One Grand Prix does not support mouse control, except 
+when the menus are shown.
+
+SOUND
+-----
+
+  The sound of the Formula One engine is very important in the simulation for, Šas in real racing, it is a good indication of when to change gear.
+
+  Sound (+/-)
+
+  Turn the sound level up and down with the +/- keys.
+
+BASIC DRIVING CONTROLS
+----------------------
+
+  Gear change: Up
+
+  The sequence is Reverse-Neutral-1st-2nd-3rd-4th-5th-6th.
+
+  Start in Neutral.  Accelerate with the controller and press the selector 
+once, the red gear indicator will show 1 and the car will begin to move.  
+Accelerate again until the red power band is between 11 and 12 then while 
+still accelerating, press the selector.  You will now have changed gear, the
+indicator shows the number 2 and the tone of the engine changes.  Accelerate
+again you have now changed up into third gear!
+
+  Gear change: Down
+
+  The sequence is 6th-5th-4th-3rd-2nd-1st-Power turn-Neutral-Reverse.
+
+  With the controller not accelerating, press the selector.  The number on 
+the gear indicator will change down.
+
+  Power turn
+
+  You can only change down into this gear.  If you have not implemented 
+Function key F3 or are on a racing level that does not allow you to use it, 
+you may recover from any spin by changing down to this gear.  The red 
+indicator will show;
+
+                                      __
+                                     /  \        
+                                     | \|/
+                                     |
+
+
+  To straighten out a spin, accelerate from rest, steering momentarily in the
+opposite direction to where you want to turn, before steering in the desired
+direction, keeping the accelerator depressed throughout, but change into 1st
+gear as soon as you are facing the right direction.
+
+  Reverse
+
+  You must change down into Reverse.  Once the R appears on the inicator 
+accelerate with the controller, as in a real car, to move backwards.
+
+COCKPIT CONTROLS
+----------------
+
+  Summary
+
+  Before you start any race, qualifying lap, or practise session you must 
+familiarise yourself with the Microprose Formula One car cockpit.  You must 
+be able to take in all the information presented to you at a glance, becoz 
+at the speeds you will be travelling on circuits such as Monza, a lost second
+is all it takes to making a difference between a devastating shunt and a 
+brilliant overtaking manoeurre.  At 200mph the car will travel 90 meters in
+that second!
+
+  Its very important to know who is behind you and who is trying to overtake.
+Some cars may weave from side to side looking for an opening at a crucial 
+corner, be concious of their presense.  They will try to pass, if you show 
+any weakness or leave a gap they might dart past.  Whilst not advocating a 
+breach of Racing Eiquette it is not unusual for drivers to 'shut the door' 
+on cars behind them.
+
+  Five levels of difficulty (Accessed from the main menu)
+
+  The difficulty level you have chosen is shown by five lights in a row on 
+the left of the steering wheel.  If the lowest green light is shining then 
+you are racing at Rookie level, if the highest light is on the you are 
+competing at Ace level.  The levels are related to and control the number of
+driving aids you can access.
+
+  The levels are:		Ace
+
+			        Pro
+
+				Semi-pro
+
+				Amateur
+
+				Rookie
+ 
+  Distribution of performance (Accessed from main menu)
+
+  Just below the difficulty level inicators there is a panel that shows your
+choice for the distribution of performance among the other drivers.
+
+	/  1991 performance for teams and drivers
+
+	-  All teams and drivers at the same potential performance
+
+      \/\/ Random distribution of performance throughout the grid
+
+  The rev Counter
+
+  In the center of the screen just below the top of the steering wheel you 
+will see the Rev Counter, along Sweeping dial that shows your engine's rpm 
+in 1000's from 7 to 14.  If you 'blip'the accelerator to rev the engine in 
+Neutral you will notice that a red band moves across the dial.  This is the 
+most important indicator of how fast your engine is running when in a 
+particular gear.
+
+  You must be aware of being in the right gear at the right moment.  
+The basic guideline is to try and keep the revs up between 10,000 and 12,000
+rpm.  Changing into a wrong gear will lose you power or you may overrev and 
+damage your engine.  You should always know the optimum point on the rev 
+counter for the gear changes in order to drop the engine back into the 
+meatiest part of its powerband.
+
+  Gear indicator
+
+  To the right of the steering wheels the Gear indicator.  This tells you 
+which gear you are in.  There are 6 forward gears, Neutral N, Reverse R, and
+a spin recovery gear.
+
+  Suggested gear indicator (Activated by F6)
+
+  If F6 driving aid is implemented you will see a blue indicator just below 
+the normal red gear indicator that tells you the suggested gear to be in at 
+the next corner.  This is an 'intelligent' aid that will vary depending on 
+the car set up;wings, brakes, gears and tyres.
+
+  Driver status indicator
+
+  On the right of the steering wheel there is another small LED.  If it is 
+green then you are currently in your own car cockpit.  If you choose to see 
+other drivers cockpit view by pressing the up/down arrows, the light will go
+off.  Unless you are in Replay mode,  use this facility at your peril for the
+car will not be controlled by the computer.
+
+  Detail on / off (ALT D)
+
+  Just below the gear indicator is the Detail On/Off indicator.  There are 
+three levels of detail and you may step between them by pressing alt/D.
+
+  At the highest level 2 green triangles are illuminated, and you will see 
+all the scenary, stands and spectators.
+
+  Press Alt/D Once and you remove all large buildings.
+
+  Press Alt/D again: smaller buildings, trees and bushes will disappear.
+
+  A further press will return all original track and landscape details.
+
+  0^0     Damage Indicator
+  /|\
+  0|0     Below the detail adjust indicator is the damage indicator operated
+          by radio telemtry from the pits.  This shows damage to front and/or
+          rear wings, and if lit, extreme caution is advised in driving.                                                       		          Returning to the pit
+s will repair any damage.
+
+  []      Pits Indicator
+
+          Below the damage Indicator is the pits indicator operated by radio
+          telemtry from the pits.
+          
+  There are three modes:
+
+  GREY	Pits are empty.  Call in any time.
+
+  YELLOW  You have been called in to the pits or have indicated an intention
+to call in.  
+
+  RED     Pits are occupied by your team car.  The pit crew is not available
+to you, so you may have to wait longer if you go in.
+
+  Driving aids
+
+  The Driving Aid panel is the bank of 6 boxes directly below the rev 
+counter.  Driving aids correspond directly to the difficulty level you have 
+chosen.
+
+  F1 Auto Brakes   ()	        The computer applies braking functions for 
+                                you suit the circuit, but will not brake 
+                                to avoid other cars
+
+  F2 Auto Gears    HH	        The computer changes all gears for you when it
+                                thinks it is the appropiate moment.
+
+  F3 Self correcting spin /|\   In the event of you spinning off the track,
+                                when you have come to rest, the computer
+                                will point you in the correct direction to
+                                continue the race, assuming you are in a fit
+                                state of repair.
+
+  F4 Indestructible mode /\     No damage will be sustained in this mode, no
+                         \/     matter how serious the shunt.
+
+  F5 Ideal line          --     This lays down a white striped line to show
+                                you the best line to drive on the circuit you
+                                have chosen.  Idealy, you must keep the line 
+                                on the centre point of the cockpit to get the
+                                benifit of the best driving line.
+
+  F6 Suggested gear     (      Indicates which gear to be in at the following
+                               corner.
+
+  The Driving Aids F1 to F6 can be turned on at any time from the cockpit if
+you are in the Rookie Mode.  However if you are racing at higher levels you 
+will have less help available to you.
+
+  Level of difficulty/Driving Aids Available Summary
+
+	ACE			No Driving Aids
+
+	PRO			F5, F6
+
+	SEMI-PRO		F3, F4, F5, F6
+
+	AMATEUR		        F2, F3, F4, F5, F6
+
+	ROOKIE		        F1, F2, F3, F4, F5, F6
+
+  When you are jacked up in the pits the top row on the digital readout panel
+will change to:
+
+  TYRES: A B C D Q W	Move the Controller left/right to select choice of 
+tyres from Wets, Compounds A (Hard) to D (Soft) and Qualifyers.
+
+  Qualifying/Practise Display:
+
+  KM/MPH			Your speed around the circuit.
+
+  CAR				Your team car number
+
+  POS				Your current position on the grid
+
+  LAPTIME			Your current laptime
+
+  BEST  			Your previous best laptime
+
+  Brake with the controller to access the car-set-up menus.
+  
+  Racing Display:
+
+  KM/MPH			Your speed
+
+  LAP/OF			Your current lap out of total
+
+  CAR				Your car number
+
+  POS				Your current position in the race.
+
+  Key N will display the name of the current car driver on the Digital 
+Display.
+
+THE PITS
+--------
+
+  You begin any practise or timed/qualifying session in the pit lane.  From 
+here you can choose to drive straight away with the current Set-Up, or change
+any of the car settings.  You can also drive into the pits at any time during
+a practise to change your car Set-Up.
+
+  For the Rookie Driver the car Set-Up will seem very complex at first.  Do 
+not worry!  Accept the current Set-Up, learn to drive fast around the 
+circuits, then return to this section and adjust the settings.  Do not adjust
+more than one setting at a time before trying it out on a practise session.
+That is when you will notice the difference in performance.
+
+  Each of the 16 circuits is unique so it's necessary to Set-Up your Formula
+One Car with the correct combination of Wing, Gear Ratios, Brake Balance and
+Tyres.  You are advised to study the track layouts in this manual and take not
+of all the track notes and summaries; these will give you an indication of 
+the type of car set-up required but there is no substitute for experience. 
+Try a few laps with the various settings , get an idea of how the car is
+running through corners and along straights.  Compare your performance with 
+other cars in practise go into the pits and adjust a setting then try again.
+
+  If you are having problems with your car set up and are finding it 
+difficult, for example to drive into corners please consult the set-up 
+problem chart at the end of this chapter.
+
+CAR SET UP OPTIONS
+------------------
+
+  Front/Rear Wing Downforce Adjust.
+
+  In general terms the wings on a formula one racer push the car down on the
+track.  This achieves more grip and less roll giving better control in the 
+corners but less speed on the straights because of more drag.
+
+  You can adjust the amount of front and rear wing used by the car.  This is
+on a scale from 1 to 64.  The higher the number, the more Downforce.  Adjust
+the wing front/back by selecting +/-.
+
+  Front/Rear Brake Balance.
+
+  Grand Prix cars have a low centre of gravity, centered just behind the 
+driver.  If you brake hard at speed the weight shifts onto the front of the 
+car.  Therefore brakes must be balanced to cope with the transfer of weight 
+during decelleration (slowing down).
+
+  You can change the brake balance of your car by altering the way in which 
+the front and rear brakes are applied.  It's best to have more brake bias at
+the front than the rear.  Idealy, as soon as the front wheels begin to feel 
+the effect of the brakes, the rear wheels should just be begining to slow 
+down.
+
+  The scale goes from 32 at the Rear to Zero in the middle to 32at the Front.
+Move the slider to give you the correct degree of balance.
+
+  Gear Ratios
+
+  You must set the gear ratios of your gearbox to suit each circuit.  This is
+usually done by setting 6th gear for the fastest possible speed along the 
+longest straight; then setting the lowest gear for the slowest corner.  The 
+rest of the gears are ranged somewhere between the two.
+
+  Gear ratio selection is very important.  Different cogs can be fitted to 
+the gearbox which can give a major effect on the car's acceleration, 
+peformance in the  bends and the top speed.
+
+  Twisty circuits with few long straights and plenty of chicanes demamnd 
+'short' gearing for quick acceleration.
+
+  Other circuits with longs straights require 'long' gearing to give the car the top speed it will need to keep up with opposition.
+
+  The gearbox has a range from 1 to 64.  Move the slider to set the ratio for
+each gear.
+
+  The nearer the cogs are to each other, the less work the lower gear has to
+do to get to the higher gear (short gearing).
+
+  The further away the cogs are from each other the more work it has to do to
+get up into the higher gear but the faster the speed at top gear (long 
+gearing).
+
+  Tyre Choice
+
+  You can choose from a variety of tyres when you are in racing trim and you
+can choose qualifying tyres when you are participating in timed practise/
+qualifying and when you are ready to do a 'hot lap', otherwise you can use 
+any of the other compounds.  Remember, you are limited to 4 sets of 
+Qualifyers.
+
+  To change tyres, enter the pits during a race/practise when the Pits 
+Indicator signals that your tyres need changing, or press Return to 
+indicate that you are coming in.  Or, if in practise mode, press Q to quit a
+timed lap Immediately.
+
+  When you are jacked up, move the controller left/right to make your tyre 
+selection.
+
+	'D' COMPOUND / VERY SOFT
+
+	Spongy tyres that give excellent dry condition grip but wear out
+quite rapidly and will not last the whole race.
+
+	'C' COMPOUND / SOFT
+
+	These provide slightly less grip than D's but are harder wearing. 
+You will probably need to change these at least once during a normal race.
+
+	'B' COMPOUND / MEDIUM
+
+	These provide less grip than C's on the track but they are quite hard
+wearing and will usually last for the whole race without needing to be 
+changed.
+
+	'A' COMPOUND / HARD
+
+	A hard tyre that will definitely last a complete race but with less 
+grip in the corners than B's.
+
+	Q-QUALIFYING TYRES
+
+	Good for aproximately THREE laps, including the starting and slowing
+down lap.  Ultra sticky therefore they lack durability.  You are limited to 4
+sets per qualifying period.  It's sometimes possible to squeeze and extra lap
+out of these tyres, if your careful.
+
+	W-WETS
+
+	These tyres have tread for wet weather driving.  If the race is in
+wet conditions, Wets are already fitted.
+
+  Quit session (ESC)
+
+  You can choose to the end of your current session by pressing ESC.
+
+  Save the Car Set-Up
+
+  You can save the Set-Up you have chosen for your car when you are in the 
+pits, by pulling back on the controller, to access the set-up options.
+  	
+
+----------------------------------------------------------------------------
+|   PROBLEM    |     CAUSE      |     REMEDY       |     FURTHER OPTIONS   |
+|--------------------------------------------------------------------------|
+| The car does |  Understeer    | Increase front   | Move brake balance    |
+| not want to  |                | wing/perhaps     | towards rear/install  |
+| steer into   |                | decrease rear    | softer tyres.         |
+| corners      |                | wing             |                       |
+----------------------------------------------------------------------------
+| The car wants|  Oversteer     | Decrease front   | Move brake balance to |
+| to turn into |                | wing/increase    | the front / fit harder|
+| the corners  |                | rear wing        | tyres                 |
+| too quickly  |                |                  |                       |
+| or spins too |                |		   |			   |
+| easily when  |	        | 		   |	                   |
+| cornering    |		|		   |			   |
+----------------------------------------------------------------------------
+| Other cars   | Too much down- | Reduce wings     | Fit softer compound   |
+| are much     | force/gear     | front and rear / | for quicker cornering/|
+| faster on the| ratio too short| space out higher | check driving line.   |
+| long straight| /not enough    | gear ratios/use  |                       |
+|              | speed through  | more throttle    | 		           |
+|	       | the previous   | 	           | 	                   |
+|	       | corner		|	           |		           |
+----------------------------------------------------------------------------
+| Car does not | Not enough down| Increase wing    | Select softer compound|
+| grip in the  | force/too high | front and back / | tyres                 |
+| corners other| a speed        | slow down        |		           |
+| cars are     |		|	           |		           |
+| faster in the|		|		   | 		           |
+| corners      |		|		   |		           |
+----------------------------------------------------------------------------
+| In wet race  | Lack of grip   | Fit wet tyres    |Adjust driving style to|
+| car loses all| from tyres     |		   | suit conditions       |
+| control      |	        |		   |		           |
+|--------------------------------------------------------------------------|
+| The car lacks| Gear ratios too| Close down gaps  | Fit softer tyre if    |
+| acceleration | long           | between gears    | wheelspin is apparent |
+| over short   |		|		   |		           |
+| distances    |		|		   | 		           |
+----------------------------------------------------------------------------
+| The car has a| Underbraking / | Move Brake	   | Softer tyres /increase|
+| tendancy to  | braking too    | balance towards  | wings		   |
+| spin off when| late 	        | the front/brake  | 		           |
+| braking into |                |                  |                       |
+| corners      |	        |	           |		           |
+----------------------------------------------------------------------------
+| The car is   | Gearing	| Lengthen the     | Reduce wing           |
+| slow in      |                | gears            |   			   |
+| corners or on|		| 	           |		           |
+| straights    |	        |		   |		           |
+----------------------------------------------------------------------------
+| Gradual loss | Tyres wearing  | Fit new set of   | None	           |
+|     of       | out            | tyres            |                       |
+| performance  | 	        |                  |			   |
+---------------------------------------------------------------------------| 
+| Tyres wearing| Wrong compound | Fit harder       | None		   |
+| out quickly  | tyres fitted   | compound tyres   |		           |
+|              | for car as     | / lessen wing    |		           |
+|              | currently set- | downforce        | 		           |
+|              | up             |                  |   			   |
+----------------------------------------------------------------------------
+
+CAMERAS, VIEWS AND ACTION REPLAYS
+---------------------------------
+
+  The camera can be moved around at any time by using the camera control 
+keys.  Some camera options are mainly suitable for reply or when you are out
+of a race and watching other cars.  It would be difficult to drive from those
+viewpoints.
+
+TRACKSIDE CAMERA VIEWS
+----------------------
+
+  (Left/Right Arrow Keys)
+
+  You can view all the action centered on any car at any time during a race 
+by pressing the Left Arrow Key.  The Right Arrow Key will return you to the 
+cockpit.
+
+CHASE VIEW
+----------
+
+  (Help Key)
+
+  You can view any car from just behind and above the cockpit.
+
+REVESE CHASE VIEW
+-----------------
+
+  (Undo Key)
+
+  View any car from the front with all the action behind it.
+
+OTHER CAR VIEWS
+---------------
+
+  (Up Arrow / Down Arrow / Home)
+
+  You can move forward into the cockpit of the car ahead by pressing the Up 
+Arrow Key.  Further presses will move forward one car per press.
+
+  Similarly, you can move back one back one car by pressing the Down Arrow 
+Key and further presses will move you further back.  Home will return you to
+your own car.  A small LED on the right of the control panel will light up 
+when you are in your own car but will go out when viewing from other
+cockpits.
+
+  Remember,  Your car is a risk if you use this option outside of replay
+mode.
+
+REPLAY MODE
+-----------
+  (Pause/replay (R))
+
+  The Pause button pauses the action and R replays the previous 20 seconds of
+action.  You can freely move the camera around during Replay.  At the end of
+Replay the game is left paused, ready to continue the race.  At this point,
+you can un pause the game and the camera will return to its original position
+, and you will be back in control of your car.  Or if you wish, press R for 
+another Replay with the camera starting from its current position.  There is 
+no limit to the number of times you can replay an event on the track.
+
+OTHER ACTION REPLAY MODE
+------------------------
+
+  (Insert)
+
+  After receiving a message that a car is out of the race, then if the action is 
+still recent, you can see a replay of the event by pressing pause the insert.
+This operates on a normal Replay, but the camera starts with the car in 
+question.  If the event is not recent enough, then 'Insert' will have no 
+effect.
+
+DEMO MODE
+---------
+
+  You can watch a race in demo mode from any circuit by deselecting all 
+drivers then entering any driving or race mode.  It's often a good way of see
+the circuit; how fast it is; how twisty.  It will also help if you have the
+manual open on the circuit diagram; follow the car as it races through the 
+straights and corners, watch where most drivers overtake and take note of 
+such features as 'slipstreaming'.  Press ESC to Return to main menu.
+
+WEATHER, CRASHES AND DISCIPLINE
+-------------------------------
+
+  Wet weather
+
+  Some races in the Grand Prix season may take place in rainy conditions.  
+The sky will be grey and your car will already be fitted with wet tyres. If
+you want to survive in the race you must drive carefully.  You will be 
+notified of impending danger by marshals waving a yellow flag.
+
+  Spinning off
+
+  The most common spin causing you to leave to circuit occurs when you take a
+bend too quickly.  You will find this will happen quite often at first.  If 
+the circuit is one with wide grassy areas and run off strips then you can 
+rejoin the race but will find it slow trying to accelerate smooth Grand Prix
+tyres on slippy surfaces.  You are advised to drop to the spin recovery gear,
+straighten up, then engage 1st gear.  Watch out for faster cars crossing your
+path, and get back to the track.  Your tyres might feel strange for a while.
+
+  Crashes
+
+ Crashing into other cars on the circuit may damage both vehicles, one of you
+may go into an uncontrollable spin.  If you can still race then the damage 
+will not be serious enough to stop you competing but you may enter the pits 
+as soon as possible for repairs.  Crashing into walls or barriers will have
+a simular effect.
+
+  There are 3 levels of crash that will put you out of the race.  If you have 
+crashed, you might be lifted off the track by the crane or pushed out of the
+way by marshals.
+
+  If you have substained a crash that has ended your chances in a 
+championship race you can choose to speed up the events and get the race 
+result or watch the race unfold from another drivers cockpit.  When you are 
+Practising any circuit you can start again with a spare car from the pits.
+
+  Race Circuit Disipline
+
+  You are warned of any dangerous incident such as a shunt by a yellow flag.
+
+  A green flag will inform you that all is clear.
+
+  Consult the Flags section in this manual for a full description of racing 
+flags.
+
+MULTI-PLAYER MODE
+-----------------
+
+  By selecting more than one driver you can implement Multi-player mode on 
+any race.
+
+ The programme will allocate equal time slots to each driver.  For example, 
+if two players wish to compete in a ten lap race, they each enter their 
+names at the driver selection menu, the computer then chooses one player to
+drive first and drives the other car as well as all the remaining cars on 
+the grid.
+
+  A 'programme manager' will allocate equal time for each driver and give a 
+warning of change over.  The single LED on the right of the steering wheel 
+will flash red for 15 seconds to warn the current player of change over. 
+Then a five second warning is given before the computer takes control of the
+current player's car.  The camera view then changes to the next player's car,
+which is being controlled by  the computer.  Another 5 second warning is 
+given before control passes to the next player.  The option to pause and 
+replay could be used during this period if the new player wishes to see more
+of his car's recent action.
+
+  The players can control the number of changeovers which occur during the 
+race by specifying the number of turns per player in the Game Options Menu.
+
+  Remember to set-up enough laps for each person to get a good drive.
+
+FLAGS
+-----
+
+RACE MARSHAL'S FLAGS
+--------------------
+
+	STARTING FLAG           This is usually the national flag of the 
+                                country hosting the Grand Prix but it must 
+				not be simular to any other flag used by the 
+				marshals.  The starting signal must be given 
+				by lowering the flag.
+
+	FINISHING FLAG		A black and white chequered flag waved at the
+				cars on the finishing line.
+
+	RED FLAG		Indicates that the race has been stopped by
+				the Clerk of the course.  It is displayed
+            			motionless.  all drivers must stop racing 
+				imediately and proceed to the pits.
+
+	BLACK N WHITE FLAG  (Divided diagonally) Shown motionless with a
+			        white number on the blackboard.  This is a 
+				warning to the driver of unsportmanlike 
+				behaviour.
+
+OBSERVATION POST FLAGS
+----------------------
+
+	BLACK FLAG		Shown motionless, together with a white 
+				number on a blackboard.  Informs the driver 
+ 				of the car that must stop at his pits on the
+				 next lap.
+
+	BLACK FLAG with a   	Shown with a white number on a black 
+	40cm diameter		signalling board.  Informs the driver that
+	orange disc	 	his car has mechanical problems, likely to 
+				endanger himself and others.  Driver must 
+				stop at his pit on the next lap.
+
+	YELLOW FLAG         	The Signal of danger or a situation of 
+				danger.  Slow down, prepare to stop.  Keep
+			 	your position and do not overtake until you 
+				see the green flag.
+
+	YELLOW FLAG		Deterioration of adhesion.  Tells the drivers
+	with red stripes	that the grip on the track surface has 
+				suddenly deteriorated in the area after the 
+				flag.  This is usually the flag used when oil
+ 				has been dropped on the track, a pool of 
+				water is causing aquaplaning or there is a 
+				sudden change from a dry to a slippery
+			        surface.
+
+	RED FLAG	        Stopping the race (see above)
+
+	GREEN FLAG		All clear.  This is used at the end of a 
+				danger area controlled by the yellow flags.
+
+	WHITE FLAG		Slow moving vehicle on track.  This tells the 
+				drivers that they are about to overtake a 
+				vehicle which is traveling at a much slower 
+				speed than the competing cars.
+
+	LIGHT BLUE FLAG		The overtaking signal.  Waved, it informs the
+			 	driver that he is going to be overtaken by 
+				one of the more faster cars.  Shown 
+				motionless means that the faster car is still
+ 				some distance away.
+
+
+                     ALL DOX TYPED BY THOR OF PLASMA UK.
+                     -----------------------------------
+
+                ALSO AVAILABLE THE FORMULA ONE QUICK KEY GUIDE
+                ----------------------------------------------

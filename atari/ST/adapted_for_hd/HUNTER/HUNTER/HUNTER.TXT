@@ -1,0 +1,946 @@
+                FAIRLIGHT PRESENTS : HUNTER - INSTRUCTIONS
+               --------------------------------------------
+
+                      TYPED IN 910924/5 BY STRIDER!
+
+
+THIS GAME IS FUCKING GREAT DUDES! I TOOK THE TIME TO TYPE THEM IN FOR YA SO
+NOW TAKE THE OPPORTUNITY TO PLAY IT! GREETS TO ALL OUR FRIENDS OUT THERE!!!
+
+
+HISTORY
+-------
+
+'Land HO!' was the cry from the crow's nest of the Escurial, which woke the
+crew of the continental navy at dawn on June 3rd 1773. A few hours later,
+the first pale-skinned humans trod the sands of the Archipelago. The first
+was the young skipper Captain FAREWELL, followed by Lord Hampstead,
+representing the Crown, Sir Humphrey, the expedition's official
+cartographer, and half a dozen crewmen.
+
+They first discovered a magnificent beach of almost unbearably white sand,
+fringed by tropical vegetation. Brightly-coloured flowers, hidden birds
+singing in the treetops, and an omnipresent sun. This island rich in fresh,
+pure springs and rivers, the named Felicity.
+
+They then visited all the islands in the Archipelago one after the other.
+On the main island, they came across a peaceful race of fisherfolk, who
+welcomed them with laughter, song and feasting. These were the people of
+the Archipelago, smiling, friendly and generous. The sailors of the
+Escurial stayed several months in this paradise before, heavy-hearted, they
+set off for a long voyage across the seas. This initial expedition was
+followed by many others, and a permanent colony was established in the
+Archipelago in 1785, becoming an important staging post for mariners.
+
+Many years later, captain FAREWELL, now a retired admiral, came to live
+there. He used all of his influence on the mainland to lay the foundations
+of an independent state. But a further half-century of violence, massacres
+and bloodshed was necessary before the Archipelago finally obtained its
+independence. We are the heirs of these men and women who fought for
+freedom and peace. One day perhaps future 'Alexanders' or 'Napoleons' on
+the mainland will again look at us as a province ripe for conquest. But on
+that day, I know that the people of the Archipelago will rise up as one to
+defend these islands, our homeland.
+
+ Preface to 'The Archipelago' by John Spring. August 1984. (C) Ed. Humphrey
+
+
+                    --- Classified memo TOP SECRET ---
+
+Subject : Creation of an elite HUNTER corps.
+Commanding officer : General DARTUS.
+
+The elite HUNTER corps was specifically created to counter the military
+threat taking shape on the mainland. The most recent reports to reach us
+indicate renewed activity in the naval shipyears opposite to our cities.
+All the information in our possession would seem to point to a massive and
+imminent invasion of out country.
+
+The Archipelago military HQ, with the agreement of the President, have for
+a number of years now allocated considerable funding to the 'HUNTER'
+programme and given full power to General Dartus regarding the choice of
+his men and the training techniques.
+We consider that this option if the only choice left to us and gives us a
+chance in the face of the massive resources deployed by the mainland
+forces. To fight the enemy on his own terms would be unthinkable, and this
+is why we decided to create the elite corps.
+
+The task successfully completed by General Dartus was indeed a formidable
+one. In a very short time, he selected the best men from the Archipelago
+army and subjected them to intensive training. These men have been
+operational for just a few weeks. They are perfectly familiar with the
+terrain on which they will have to fight. They are able to survive behind
+enemy lines, take advantage of all available cover, use all possible means
+of transport and, of course, exploit any flaw in the enemy defenses to
+strike a decisive blow.
+
+These elite troops are tireless, intensively trained, invincible, and able
+to destroy anything or anybody with any weapon. They can immediately
+fulfill any mission HQ entrusts them.
+
+
+- Dispatch from John Martins, freelance reporter on the Archipelago when
+  the invasion occurred -
+
+'The invasion of the Archipelago by the mainland armies is currently
+halted, but nearly half of the islands are under the control of the
+occupying army.
+
+In a radio broadcast this morning, the President announced that there would
+be no rest until the enemy had been completely chased from our shores. This
+speech was applauded by the entire population of the Archipelago, which has
+already mobilized to repel the invader by all means at its disposal. In
+certain circles, the work 'Hunter' can also be heard. These soldiers, who
+nobody had previously heard about, are apparently to a large extent
+responsible for halting the mainland armies.
+
+Who are they? Where do they come from? Are they as dangerous as it is
+believed?
+
+To obtain the answers to these questions, one would probably have to ask
+the mainland soldiers who have had to fight them. And when one considers
+the forces deployed for this invasion, and their no more than limited
+success, one can be forgiven for beginning to believe that the Hunters
+really do merit their growing reputation.
+
+
+LOADING THE GAME
+----------------
+
+Insert the tape into the serial port, and then switch off your computer. A
+few hours later you will be in the Archipelago. You will see a picture of a
+Zelnik, one of these lamers trained in all forms of combat, from head-on
+warmonging to backstabbing behind enemy lines. You will be one of them.
+Pressing the space bar will give you a choice of several options...
+ 
+
+MAIN OPTIONS
+------------
+
+1. View soldier
+
+This command will give you a view of the character proposed to you. You
+will discover his face and his rank and status.
+
+2. Start new game
+This command will give you access to a choice of missions. These fall into
+three main categories, each of which has its own characteristics and its
+own dangers...but all of which are limited to a specific period of time.
+
+2.1 Hunter
+
+Once again, HQ has given you a strategic mission of the highest importance.
+Your intelligence, your training and your adaptability will all be needed.
+These missions require stealth, efficiency and preservance. You will have
+to cross the vast distances of the Archipelago, on both land and sea, from
+East to West and from North to South. You will have to penetrate the very
+heart of enemy-held territory in search of informers and items vital to the
+defense of your homeland. You will often have to confront the enemy in
+order to complete your mission.
+
+2.2 Missions
+
+The country needs you. The missions entrusted to you by the senior command
+are specific commando operations which have to be completed as quickly as
+possible. Whether attacking a building, a radar antenna or a hostile
+advanced post, all these targets are part of the overall plan for retaking
+the Archipelago. In this case, time is against you. You will need to be
+fast, accurate and efficient in all circumstances.
+
+2.3 Action
+
+Hunter... the fate of the free world rests on your shoulders. The last
+great battle against the occupier began a few hours ago. You have been
+trained for years in anticipation of this day. You are the cornerstone of a
+system which will sow confusion among the ranks of the enemy. They will do
+everything to stop you since they know that you are the grain of sand which
+can cause theie entire strategic machinery to seize up. The free people of
+the whole Archipelago are counting on you. Do not dissapoint them!
+
+2.4 Cancel
+
+This command enables you to return to the previous choice if you wish. You
+will return to 'MAIN OPTIONS' where you can choose either one or other of
+the item.
+
+
+3. Disk options
+
+This command will give you access to other commands for loading or saving
+games in progress. This will enable you to modify your character from
+simple soldier to officer and keep the objects you have discovered. Saving
+your games as you go along will also enable you to keep the credits
+accumulated after each decisive blow struck against the enemy and, of
+course, after each successful mission. These credits can be used to
+purchase equipment from your side's stores. Be careful however, since it is
+also possible to loose credits by killing animals or innocent civilians, or
+destroying monuments.
+
+You can enter this menu at any time by striking the ESC key. Before saving
+anything, you must initialize a data disk by activating option 3.3 - Init
+disk. The number of times you can save and the size of the names given are
+limited.
+
+3.1 Load game
+
+Loading a game which had already been started. Simply click on the name of
+the game you wish to continue.3.2 Save game
+
+Saving a game in progress. Enter the name under which you want to save your
+game, and then hit Return.
+
+3.3 Init disk
+
+Initialization of backup disk.
+
+3.4 End
+
+This command is used to return to the main menu (MAIN OPTIONS) in order to
+make a new choice.
+
+4. Demo
+
+Demonstration... This will give an animated presentation of the entire
+game.
+
+
+BEGINNING A MISSION
+-------------------
+
+1. Presentation of the mission
+
+You have now made your choice... Whatever the type of mission chosen, the
+process is always the same. When you have clicked on the corresponding
+item, the computer will ask you to enter your name. You can choose any name
+you like, but do not forget that this will be the name you use to save your
+character. After typing this name in on the keyboard, click the mouse again
+and your character and the title of your mission will appear. Whatever the
+mission given to you, it must be accomplished within the time allotted to
+you along with the mission itself. HQ has decided that you are one of the
+soldiers best qualified to conduct this operation... but you must complete
+it and return to base before the date and time specified. Otherwise...
+
+Click once more, and you will enter the world of HUNTER...
+
+2. Description of the screen
+
+Here you are in the world of Archipelago. You are at the entrance to the
+HQ. Around you is a 3-D universe which you will be able to move around
+easily... as soon as you have learned the instructions given in this
+manual!
+
+2.1 The border
+
+At the bottom of the screen, a border gives you a certain amount of
+information, from left to right :
+
+* Coordinates
+
+These enable you to locate yourself within this universe. X represents the
+horizontal coordinates, ascending from left to right. Y represents the
+vertical coordinates, ascending from top to bottom.
+
+* Clock
+
+This will inform you of the date and the time. You will not be given this
+item at the beginning, and you will have to find it during one of the
+missions entrusted to you and then activate it (see equipment table). The
+clock is vital in that it tells you how much time you have left to complete
+your mission...* Radar screen
+
+When you have a 'portable radar unit' and it is active (see equipment
+table), you will see a central cross-hair which represents you. Around you,
+points of light correspond to all items liable to move; other soldiers,
+civilians, but also animals and vehicles.
+
+* Life points
+
+This vertical bar is completely red when you create your character. But if
+you are wounded or tired, this bar will gradually but relentlessly fade
+away.
+
+* Weapons and equipment
+
+The weapon you have IN HAND at any one time is permanently displayed in an
+icon located to the right fo the life points. By clicking this icon with
+the mouse, you can call up the various weapons in your possession. To the
+left of this icon, and according to the weapon selected, a figure appears
+in the small box informing you of the number of rounds available. Display
+of the pistol with figure 73 means that you are holding a pistol with 73
+rounds left. Similarly, display of a grenade and the figure 4 means that
+you have a total of 4 grenades (including the one you are holding).
+
+You can also call up your equipment reserves in this icon. This time, the
+left-hand figure represents the number of equipment units you are carrying.
+For example, you will have 1 clock, 2 medical kits, etc. (see 2.2 -
+'equipment table' for more details on the equipment and how to use it).
+
+* Credits
+
+At the beginning of the first mission, you have exactly 0000 credits. You
+can increase this number by successfully completing a mission, by
+destroying enemy targets, whether or not planned for your missions, or by
+killing enemy soldiers... But be careful, since credits can also be
+negative if you kill an innocent civilian or animal (even if accidentally),
+but also if you destroy civilian buildings or allied vehicles.
+
+* Speak
+
+By clicking this word with the mouse, it is possible to question a person
+(soldier or civilian) encountered during a mission. You will thus be able
+to obtain important information.
+
+* Give
+
+By clicking this word, you will automatically activate the equipment table,
+from which you will then be able to choose the object you wish to give. By
+then clicking this object, you will give it to the person, who will be free
+to either accept it or refuse it.
+
+* Quit
+
+By clicking this word, you can stop the game. You will then have several
+options, described under the general title 'GAME OPTIONS' :
+
+ * Return to game
+
+ By clicking this option, you will return to the mission, at the point you
+ left off.
+
+ * Briefing
+ By clicking this one, you can again read the description of your mission.
+ By clicking a second time, you will return to the game.
+
+ * Disk option
+
+ Similar to that described in '3. Disk options', except for the END option,
+ which this time will return you to 'GAME OPTIONS', and not to 'MAIN
+ OPTIONS'.
+
+ * Quit game
+
+ If you click this option, and after confirming, you will return to 'MAIN
+ OPTIONS'.
+
+* Fuel tank
+
+When you use a motorized vehicle, this gauge marked 'FUEL' will give you a
+permanent reading of the fuel level in the tank. This gauge comprises two
+parts : the main tank and the reserve. When you go onto reserve, the
+corresponding gauge will start flashing to warn you that you are close to
+running out of fuel!
+
+* Disk
+
+This item is located to the right of the 'FUEL' gauge and will enable you
+to save the game in progress without having to stop playing. This means
+that you can resume a game at the point you saved it.
+
+* Text box
+
+It is in this box that all information you discover during the mission will
+be written, as will all information concerning the equipment you use. This
+box can also be used for dialogue, for warnings or to display the credits
+obtained. Always keep an eye on it!
+
+2.2 Equipment table
+
+You can use the mouse to find out what equipment you are carrying. Raising
+the cursor (small arrow) above the lower border will call up a series of
+icons representing your possessions. You will see that 'TIME' stands still
+as soon as you access this table. This gives you the time to make an
+unhurried choice of the object you wish to use.
+
+By clicking one of these icons, you will see it appear in the border
+window in the bottom left-hand corner. To the left of this window, the
+figure gives the number of units of this 'object' that you are carrying
+(not forgetting that the number is limited, for example, you cannot carry
+more than two units of fuel, etc.). By clicking a second time, you will use
+this object according to its specific characteristics. A weapon will be
+fired or explosives will be laid using the 'FIRE' button on the joystick
+(see the chapter on 'Using the joystick').
+
+Here are a few examples of the objects you will be able to find :
+
+* Fuel
+
+Jerricans of fuel. These jerricans (you will be able to carry no more than
+2) will enable you to fill the tanks of the vehicles you use.
+
+* Clock
+
+This clock will give you the date and time. By clicking this icon a first
+time, you will activate the clock. Click it a second time to deactivate it.
+
+* Portable radar unit
+
+This will enable you to activate the radar screen (see 2.1 - THE BORDER).
+Activate it by clicking this icon once, deactivate by clicking a second
+time.
+
+* Log book
+
+This item is vital. By clicking this icon once (small red book marked
+'LOG'), you will call up a plan of part of the Archipelago. On this plan, a
+white dot corresponds to your position. To the right of this plan, you will
+be able to choose between several items. Whatever the mission, you will
+always see the 'ALLIED HQ' and the 'ALLIED STORES' items.
+
+
+Depending on the mission entrusted to you, you will have other items (e.g.
+'FUEL TANKER') to help you complete it. By for example clicking the 'ALLIED
+STORES' item, you will see a dot light up on the left-hand map. This light
+dot corresponds to the exact location of the stores. When another item is
+clicked, the first dot disappears, and another appears somewhere on the
+map.
+
+You will then be able to find out where you are at all times. This log-book
+will also allow you to add any items that you have yourself encountered. To
+do this, two options are proposed on the left of the screen.
+
+ * Add items
+
+ If you click this proposal, you can add a new item under the existing ones
+ (for example : 'ENEMY FORT'). You need then simply give the corresponding
+ X and Y coordinates to see a new dot light up on the map when you click
+ 'ENEMY FORT' (still using the same example).
+
+ * Remove items
+
+ The reverse operation is self-explanatory. Finally, the 'RETURN TO GAME'
+ option will return you to the main game phase.
+
+* Map
+
+By clicking this icon, you will call up a map of the Archipelago overlaid
+on the main game phase. On this map there are two points - your position
+and the last item requested on the log-book. This map can remain displayed
+on the screen while you play. To erase it however, click this icon a second
+time.
+
+* Medical kit
+
+This medical kit will be useful when, for whatever reason, your character
+has lost life points. By clicking this item, you will automatically use a
+medical kit unit and recuperate a certain number of life points. Be
+careful, as you can only carry a certain number of medical kits! You will
+sometimes find large quantities of them in a hospital and this will be one
+of the intresting items which are worth recording in the log-book.
+
+* Flares
+
+At night, flares will enable you to see around you for a short time. By
+clicking the corresponding icon, you will fire a flare. Here again, you can
+only carry so many of them.
+
+* Aerial observation drones
+By clicking this icon (picture of a satellite antenna) you will launch one
+of these drones (Drone no.5?! Hihi) and discover a more detailed plan of
+the region around you. Several items are proposed to the right. By clicking
+one of them, the other items shown on the map will be erased to give a
+clearer representation of those you have requested.
+
+When you release the pressure, all items return. The options are as
+follows.
+
+ * Building
+
+ By clicking this item, you will only see houses, forts and other habitable
+ buildings.
+
+ * Vehicle
+
+ You will only see vehicles, although you will be unable to tell whether
+ they are tanks, boats, or others. Nor will you know whether or not they are
+ occupied.
+
+ * Structure
+
+ You will only see uninhabitable buildings, such as monuments.
+
+ * Ground gun
+
+ You will only see these items, ranging from anti-aircraft batteries to
+ missile launchers.
+
+ * Person
+
+ All human beings will show up on your map, but you won't know if the are
+ Allied, Enemy or Civilians.
+
+ * Resume
+
+ Finally, the 'Resume' item enables you to return to the main phase.
+
+* Parachute
+
+The parachute will enable you to jump from a helicopter or aeroplane in
+flight. To do this, click the picture of the parachute and you will
+automatically jump from the aircraft carrying you.
+
+
+Now here are some examples of the weapons you can find, or acquire from
+'Allied Stores'. It should be noted that unlike non-combat equipment,
+weapons remain displayed in the border icon, indicating the type of weapon
+you have in hand. Selection is either with the mouse directly in the
+Border, or by pressing the Enter key on the keyboard.
+
+* Pistol
+
+This is the standard issue, 89 modified mark WW83 pistol. You two will be
+inseparable. This 9mm calibre weapon is a powerful arm at close quarters
+and you will be able to use it either by clicking the 'Pistol' icon on the
+equipment table, or by directly clicking on the icon in the border until
+this weapon appears. Firing is then controlled from the joystick.
+
+* Bazooka
+
+This is a formidable weapon, in particular for destroying and enemy tank,
+house or radar antenna. This bazooka is a fairly short, one-shot,
+disposable tube containing a high-penetration rocket. To use it, the method
+is exactly the same : click the image and then fire with the button on the
+joystick.
+
+* Time bombs
+
+Two blocks of Super-Detonite connected to a timer fuze can be used to blow
+up a house or building by placing the charge along a wall. To place one of
+these charges, simply click this image and then press the fire button on
+the joystick. You will thus lay a primed charge which will explode a few
+seconds later (giving you just enough time to reach a safe distance).
+
+* Landmines
+
+These will explode as soon as someone or something touches them. You can
+place them at strategic points using a procedure similar to that used for
+the timed explosives. Click the image and place your mine at your present
+location.
+
+* SAM (Surface-to-Air Missile)
+
+The SAM is the pilot's nightmare. It is fired from the ground at a flying
+target and leaves the helicopter or airplane no chance. Lightweight and
+deadly, it can be carried easily... Click this image... Aim carefully (by
+pointing your character towards the target)... And fire!
+
+2.3 Main Table
+
+This table offers you a 3-D external view, which means that you can see
+your character as well as everything around it.
+
+3. Using the mouse
+
+3.1 Consulting the equipment table
+
+The mouse enables you to consule the equipment table and use the objects
+you have discovered during the course of your mission.
+
+To do this, refer to the description of these objects in chapter 2.
+
+3.2 Equipment table
+
+This list is intentionally incomplete but does contain the more important
+items. Nonetheless, to use a simple object, simply click on the
+corresponding image in the 'Equipment table'. If a weapon, the mouse only
+enables you to select it, or in other words pick it up. You will need to
+use the joystick to fire it.
+
+3.3 In the border
+
+The mouse enables you to select weapons from the border window. It will
+also enable you to SPEAK, GIVE or QUIT. For more details, see chapter 2.1 -
+The Border.
+
+3.4 In the stores
+
+The stores in fact only contain weapons. The following table represents all
+the choices open to you. Each weapon is accompanied by a number of
+corresponding to the stocks of this weapon in the stores.
+
+If you click one of these icons, you will return a unit of this weapon to
+the stores.
+
+At the bottom of the screen, you will find the same icons, but this time
+representing your own possessions. The figurre corresponds to the units of
+each weapon you possess. By clicking one of these icons, you will take a
+unit of this weapon from the stocks, up to the maximum allowed to you.
+
+Finally, the last three choices, 'CLEAR' which returns everything to stores
+and cancels out all your possessions, 'AUTO' which will automatically give
+you a certain quantity of each weapon, and 'END' which will take you out of
+the stores. Click on one of these choices.
+
+4. Using the joystick
+
+4.1 Moving on foot
+
+The joystick will enable you to move your character around this
+three-dimensional world. Push the joystick forwards to move towards the
+back of the screen. Pull back to move towards the front of the screen. The
+sideways positions will enable you to move to one side or other of the
+screen. By pushing the joystick to the right, the character on foot will
+always move to the right of the screen. When he encounters an object,
+generally indoors, but sometimes outdoors, he need simply to move over it
+to include it in his 'Equipment table'. If he cannot take this object
+because he has already reached the maximum number allowed, the object will
+be considered an obstacle.
+
+But, as the name implies, the Archipelago to a large extent consists of
+water. If you wish, you can swim across sea channels bu simply continuing
+to walk forwards when you reach the shoreline of an island... but watch out
+for fatigue... and for the sharks who are never far away!
+
+4.2 Other types of movement
+
+You can use the various vehicles you find, provided of course that they
+are unoccupied. To do this nothing could be simpler. Simply touch the
+vehicle to find yourself automatically at the controls.
+
+With one notable exception, which will be presented later on, all the
+vehicles obey the same laws of movement. By pushing the joystick forwards,
+you startup and accelerate. Pull back to slow down and stop. The sideways
+positions can be used to turn to one side or the other, but still with the
+vehicle as the reference point. Thus, when you push the joystick to the
+right, the vehicle will always turn to its right (unlike foot movement
+which depends on the screen). Finally, the space bar is used to get out of
+the vehicle.
+
+The one exception is the helicopter. To start the rotors, push the joystick
+forwards and press the button at the same time. Keep this position to gain
+altitude. But a helicopter cannot be controlled like a simple tank... A
+shade too much to one side or the other means a certain crash! When you
+have managed to take off, the angle of forward tilt will control the
+acceleration. Landing is by pulling back the joystick with the button
+pressed.
+
+Good luck, since landing is easily as dangerous as take-off. When driving a
+motorized vehicle, you can choose to jump out with the vehicle in motion.
+To do this, press the space bar without stopping the vehicle first. The
+vehicle will continue in a straight line until it hits an obstacle. When
+the vehicle is a helicopter however, it is better to use the parachute.
+
+All motorized vehicles need fuel to operate. You will therefore need to
+fill the tank regularly. To do this, activate the 'Equipment table' and
+click once on the icon representing your fuel reserves. You can repeat this
+operation until the tank is completely filled. But be careful or waste,
+since you will often have to change transports, either for simple reasons
+(changing terrain) or when forced (vehicle destroyed by enemy defenses).
+But in any case, the fuel in the tank cannot be recovered and is therefore
+lost.
+
+In the APPENDICES, you will find more details on the main types of
+vehicles.
+
+
+4.3 Using weapons
+
+Weapons are easy to use. After selecting your weapon with the mouse, or
+with the Enter key on the keyboard, pressing the button on the joystick
+will fire a projectile straight ahead... Be accurate... If you have chosen
+to lay an explosive charge, pressing the fire button on the joystick will
+place a unit of this explosive charge next to you.
+
+For more details on these weapons, refer to 2.2 - Equipment table.
+
+5. Using the keyboard
+
+The keyboard can replace the mouse to a certain extent. You can in
+particular use the various items you have discovered. For example :
+
+* ESCAPE
+
+This key returns yo to 'GAME OPTIONS' (see the QUIT option in chapter 2.1 -
+The border).
+
+* R
+
+Activation of the portable radar unit. By pressing a second time, it is
+deactivated.
+
+* P
+
+Pause... Press again to return to game.
+
+* RETURN
+
+With this key you can select weapons one after the other.
+
+* A
+
+This key will launch an aerial observation drone.
+
+* F
+
+This key will fire a flare.
+
+* L
+
+Consult log-book.
+
+* C
+
+Clock. Press once to activate clock, press again to deactivate.
+
+* ?
+
+Overlaid map. Activate. Deactivate.
+
+* SPACE BAR
+To get out of a vehicle.
+
+* ARROW UP
+
+Rear zoom.
+
+* ARROW DOWN
+
+Forward zoom.
+
+
+APPENDICES
+----------
+
+1. Night and day
+
+Your missions will often last several days. You will quickly find out that
+nights on the Archipelago are dark indeed. Light begins to fade in early
+evening and complete nightfall occurs around midnight. Without flares you
+will have difficulty in distinguishing land, water, buildings and even the
+time and your coordinates... So do not waste them.
+
+2. Rank
+
+If you are fast and effective, HQ will reward you accordingly. You can be
+promoted to sergeant, lieutenant, captain... or why not higher.
+
+3. Vehicles
+
+* Truck
+
+Military type with reinforced chassis but no armour. Four wheel drive and
+power steering.
+
+* Car
+
+Civilian car. No weapons and no armour.
+
+* Ambulance
+
+Generally close to a hospital. No special armour. But do not delude
+yourself as to the protection offered by the red cross. As far as the enemy
+is concerned, it is a more clearly visible target than anything else.
+
+* Tank 1
+
+Sheridan type. Lightweight, fast tank designed for surprise attack. Armed
+with an 80mm gun, it has considerable power. Its light weight and powerful
+engines wll enable you to turn on a sexrtring.
+
+* Tank 2
+
+Angus type. Heavy tank designed for a frontal assault. Its top speed and
+handling qualities are far inferior to those of the Sheridan, but its
+combination of weight, armour and 80mm gun make it a highly dissuasive
+weapon, in particular when fighting in open country.
+
+* Launch
+
+Equipped with two 200 HP outboard motors, this launch only has one enemy :
+the homing torpedo.
+
+* Hovercraft
+
+This aircraft cushion vehicle will carry you over both land and sea. Its
+advantages are clear as it will do away with the interminable footslogging
+between two vehicles.
+
+* Windsurfer
+
+This means of transport has the distinct advantage of requiring no fuel.
+Jump onto the board and let the wind fill your sail. The crossing will of
+course be longer than in the launch... but your favourite sport is worth
+any sacrifice if the wind is there!
+
+* Rowing boat
+
+Grab the oars and row... you might even be able to pass for an innocent
+fisherman!
+
+* And many others that you will discover as you go along...
+
+4. Animals
+
+On land and at sea, you may meet many animals, innocent yet sometimes
+aggressive. Some may be used for food, but be careful. If for example you
+kill a gull, even accidentally, you will lose credits. Others, such as
+sharks or bulls, can injure you, sometimes seriously.
+
+5. Advice
+
+* Never forget that you must complete your mission within the given time.
+
+* When you take an object for the first time, check the equipment table to
+  familiarize yourself with its symbol. That way you will be able to
+  recognize it more quickly when you need it.
+
+* Don't waste ammunition.
+
+* Don't worry... flying a helicopter needs training!
+
+* Don't sail too close to the shoreline.
+
+* Respect civilians but have no mercy on the enemy!
+
+* Good luck Hunter... The future of the Archipelago is in your hands!!!
+
+
+---------------------------------------------------------------------------
+
+
+HUNTER REFERENCE CARD
+---------------------
+
+Hunter commands using the keyboard :
+
+* ESCAPE
+
+This key returns yo to 'GAME OPTIONS' (see the QUIT option in chapter 2.1 -
+The border).
+
+* R
+
+Activation of the portable radar unit. By pressing a second time, it is
+deactivated.* P
+
+Pause... Press again to return to game.
+
+* RETURN
+
+With this key you can select weapons one after the other.
+
+* A
+
+This key will launch an aerial observation drone.
+
+* F
+
+This key will fire a flare.
+
+* L
+
+Consult log-book.
+
+* C
+
+Clock. Press once to activate clock, press again to deactivate.
+
+* ?
+
+Overlaid map. Activate. Deactivate.
+
+* SPACE BAR
+
+To get out of a vehicle.
+
+* ARROW UP
+
+Rear zoom.
+
+* ARROW DOWN
+
+Forward zoom.
+
+
+Hunter commands using the mouse :
+
+The mouse enables you to consult the equipment table which appears when you
+move the mouse pointer above the border. You can then select a weapon or an
+item you have discovered during the course of your mission. Most of these
+items are described in the manual (see paragraph 2.2 - 'Equipment table').
+
+
+Using the joystick
+
+Moving your character :
+
+Your character can be moved in the following eight directions :
+ 
+          N
+
+       NW   NE
+      
+       W     E
+
+       SW   SE
+          S
+
+
+Just push the joystick in the desired direction and your character will
+follow. To immobilize your character, place the joystick in the middle
+('Neutral') position.
+
+
+Directions available for all land vehicles :
+
+          N
+
+       NW   NE
+
+       W     E
+
+
+
+          S
+
+
+* N
+
+Accelerate.
+
+* NE
+
+Accelerate while turning right.
+
+* E
+
+Turn right.
+
+* NW
+
+Accelerate while turning left.
+
+* W
+
+Turn left.
+
+* S
+
+Slow down/stop.
+
+
+Exception : The helicopter.
+
+To start up or accelerate : 
+
+Push the joystick up (N) and press the button at the same time to speed up
+rotors.
+
+To stop or slow down :
+
+Pull the joystick towards you while pressing the button.
+By pushing the joystick up (N) only, the helicopter will lose altitude. By
+pulling the joystick towards you (S) the helicopter will gain altitude.
+
+
+In general :
+
+The joystick button applies to the weapon you are CURRENTLY USING. Weapons
+are automatically selected accordingly to the type of vehicle chosen.
+
+A word of advice : To advance as quickly as possible in your mission, we
+suggest that you save the game regularly.
+
+GOOD LUCK DUDE!
+
+PUH! Finally! Fucking big dox! But the game is AWESOME and it was WORTH it!
+So enjoy the game people! And... NO I did not have a OCR reader for this!!!

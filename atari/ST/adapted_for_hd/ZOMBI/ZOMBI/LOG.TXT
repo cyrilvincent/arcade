@@ -1,0 +1,27 @@
+       Zombi     for Atari ST
+
+               
+Adapted for hard disk run, TT, Falcon .
+
+
+Used tools, SW :  STX image analyser (by me),
+STX to ST converter (by me), HxD - hex and file
+editor (freeware) . Steem Debugger (main tool).
+Modded Steem Debugger for finding stackframe
+related problems. PaintShopPro for cover scan
+conversion to TGA, Photochrome for converting
+to PCS, own simple SW to depacking it to PCH.
+Devpac 3 assembler. Total Commander. Drive
+Imager for writing onto CF, SD cards and hard
+disks. Video Dub for capturing and processing
+video from oldies > YouTube . 
+Some Html editors for WEB pages.
+
+Src: STX imgs of org. Deprot, fixes etc.
+
+Exit to Desktop, statesaves options.
+Translated to English from French
+by OBO and me.
+
+   PP, Aug.  23  2012.
+
