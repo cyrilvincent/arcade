@@ -1,0 +1,30 @@
+BubbleShooter - Full Version History
+------------------------------------
+
+v.1.06
+- game: crosshair rotation - second change
+
+v.1.05
+- atr:  360kB MyDos format, try two (thanks to Pigula)
+- atr:  experimentally 2x 180kB 
+- loader: no file - flip disc
+- game: second trajectory fixes
+- game: crosshair rotation - faster after a while
+
+v.1.04 only test
+
+v.1.03
+- atr:  360kB MyDos format
+- game: small trajectory corrections
+
+v.1.02
+- game: upper bubble color corrected (PAL blending)  
+- game: a change of some texts (thanks to JAC!)
+- game: replacing illegal jumps to ROM - about NTSC system detection
+
+v.1.01
+- loader: replacing illegal jumps to ROM (works with AltirraOS)
+
+
+v.1.00
+- premiere at the LOST PARTY 2022 event

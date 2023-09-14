@@ -1,0 +1,76 @@
+BubbleShooter for AtariXL/XE  v.1.0
+(c) MadTeam POLAND
+2020-2022 PAL version
+NTSC in progress
+
+Autors
+Code: Paweł 'Pajero' Nowak
+Gfx: Maciej 'Rocky' Hauke
+Sfx: Michał 'Miker' Szpilowki
+contact: pajero_atr@poczta.onet.pl
+
+
+Altirra emulator min. version 4.xx
+Version 4.0 does not emulate graphics from VBXE correctly.
+
+
+Minimum requirements:
+- stock computer (64kB RAM)
+- floppy drive or Sio2SD
+- color monitor LCD 
+
+Optimum requirements:
+- computer with additional memory +256kB RAM (no long reading, improved graphics)
+- PBI device (IDE+ or AVGcart with cables)
+- color monitor CRT (14-21")
+- joystick
+
+Recommended U1MB for full optimum.
+Checked for extension VBXE.
+
+
+Menu
+- Joystick: select up/down, fire for actions
+- Keyboard: console keys
+Game:
+- Joystick: left/right- sight rotation, up/down- swap bubble, fire to shoot
+- keyboard: cursor left/right- sight rotation; up/down (or space)- swap bubble, logo to shoot
+    Esc to exit
+
+Exit game: shift+Reset
+
+Video, help:
+#1 https://www.youtube.com/watch?v=rLVDJBrJPuE
+#2 https://www.youtube.com/watch?v=hLmiD7_FqO0 
+
+
+HI SCORE CAFÉ:
+https://xxl.atari.pl/hsc/hsc-bubble-shooter/
+
+
+Tested floppys:
+1. Floppy disk drives
+2. Sio2SD - ATR (also in turbo under QMEG)
+3. Sio2PC - ATR under Aspeqt (Sio x3) or R5 (normal)
+4. Side1/2/3 for U1MB (ATR mapped to drive)
+5. AVGcart
+    a) with cable SIO - ATR (normal or turbo: with ECI cable, patch for ROM with HSIO - index 0)
+    b) with cable ECI - ATR (shift+Return as new device)
+6. IDE+ 2.0
+   a) on the partition with the AtariDOS filesystem copied files in one directory extracted from ATR
+   b) interface loader, load ATR that is on any partition
+
+
+Will not work with:
+1. Side1/2/3 without U1MB
+2. AVGcart without SIO / ECI cable
+3. other cartridge 
+
+
+
+Configuration of LCD monitors:
+- brightness and contrast to low
+- high level of backlight and colors
+
+
+enjoy the fun...
