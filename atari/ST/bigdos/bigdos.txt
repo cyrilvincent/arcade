@@ -1,0 +1,348 @@
+                                Big-DOS
+
+
+Rechtliches
+-----------
+
+Copyright ½ 1995 by Rainer Seitel
+
+Big-DOS ist Freeware, d. h. das Programm darf ohne Zahlung von Lizenzgebhren 
+benutzt werden. Die Weitergabe dieser Dateien ist nur komplett und unver„ndert 
+erlaubt; dabei ist m”glichst das Original-LZH-Archiv weiterzugeben. Das 
+Hinzufgen von Werbung jeglicher Art ist verboten! Das Programm darf generell 
+nur kostenlos weitergegeben werden. Der Upload in gebhrenfreie Mailboxen und 
+FTP-Server ist erlaubt. Die Verbreitung auf PD-Serien und CD-ROM ist nur mit 
+meiner Erlaubnis und in der jeweils neuesten Version erlaubt. Wird Big-DOS 
+einem anderen Programm beigelegt, so ist mir eine Vollversion dieses Programmes 
+kostenfrei zu berlassen. Von allen hier oder an anderer Stelle erteilten 
+Besitz-, Nutzungs- und sonstigen Rechten ausgenommen sind die Dienstnummern 
+75029, 26795 und ein 3. Mitarbeiter des Karlsruher Verkehrsverbundes und der 
+Stadtwerke Karlsruhe Verkehrsbetriebe, da sie, nachdem sie zweimal ohne 
+Beanstandung meinen gltigen Fahrschein kontrolliert hatten - der 
+Landesbeauftragten fr den Datenschutz Baden-Wrttemberg haben die Stadtwerke 
+Karlsruhe Verkehrsbetriebe ausdrcklich best„tigt, da ich ihren Mitarbeitern 
+zuvor meinen gltigen Fahrausweis gezeigt hatte -, sich nach Aufforderung durch 
+75029 willkrlich, rechtswidrig und mit Gewalt den Quelltext von Big-DOS unter 
+den Nagel zu reien versuchten!
+
+Obwohl das Dateisystem bei mir und einigen Testern problemlos l„uft, kann ich 
+nicht dafr garantieren, da Big-DOS mit allen Plattentreibern, TOS- und 
+Rechnerkombinationen l„uft. Die Haftung fr durch Big-DOS entstandene Sch„den, 
+soweit sie nicht auf Vorsatz oder grober Fahrl„ssigkeit meinerseits beruhen, 
+bernehme ich nur bis zur an mich bezahlten Nutzungsgebhr. ;-)
+
+Vorsicht! Nach meinen Tests funktioniert Big-DOS bei MS-DOS-Medien nur 
+scheinbar mit dem ICD-Treiber!
+
+Dieses Paket enth„lt folgende Dateien:
+ahdi6061.bdf        2221  1995-07-02 22:22:04  Binary-Diff fr AHDI 6.061
+bigdos.prg         26915  1997-01-05 16:16:22  Das Programm fr den AUTO-Ordner
+bigdos-f.prg       26976  1997-01-05 16:22:46  Das Programm fr den Falcon
+bigdos.txt         17262  1997-01-05 16:30:00  Dieser Text
+bigdos.upl           342  1997-01-05 16:30:00  Upload-Text frs MausNet¾
+bigdos08.tic         458  1997-01-05 16:30:00  Upload-Text frs MausNet¾
+dateisys.txt       11130  1996-08-09 20:34:50
+dosmode.tos         8550  1996-12-22 22:00:00  Erlaubte Zeichen einstellen
+english.txt        11720  1997-01-05 16:30:00  Dieser Text auf englisch
+xhditest.c         10415  1996-12-22 22:00:00
+xhditest.prj         307  1996-12-22 22:00:00
+xhditest.ttp        8475  1996-12-22 22:00:00  Plattentreiber und BPB testen
+
+
+Features
+--------
+
+Big-DOS ist ein Dateisystem nach DIN EN 29293 = ISO 9293:1987. Es ersetzt das 
+GEMDOS des TOS (nicht KAOS und nicht ASH-MagiC!).
+
+ù GEMDOS- / ISO-9293:1987- / MS-DOS-Dateisystem
+ù 32 Laufwerke: A..Z1..6 oder A..Z[\]^_`
+ù Bis 65518 Cluster.
+ù 1 bis 64 Sektoren pro Cluster.
+ù Mehr als 65535 Sektoren und damit beliebige MS-DOS-Partitionen m”glich. Also 
+  auch solche mit mehr als 32 MByte.
+ù 1 oder 2 FAT.
+ù Die erlaubten Zeichen werden - fr jedes Laufwerk getrennt einstellbar - 
+  fr GEMDOS, d-Zeichen nach ISO 9293 bzw. ISO 9660 oder MS-DOS beschr„nkt. 
+  Damit wei man schon vorher, ob MS-DOS oder ein beschr„nktes 
+  CD-Brenner-Programm alles lesen kann. Mit setter.ttp aus dem HSModem-Paket 
+  oder dem setter.prg von Markus Kohm kann dies in Big-DOS gespeichert werden.
+ù Bei MS-DOS-Bootsektoren wird der Diskname auch dort hineingeschrieben.
+ù L„uft mit und ohne MiNT.
+ù Wenn m”glich, wird beim ™ffnen von Dateien ber XHDI der Auswurf von 
+  Wechselmedien gesperrt. (HDDRIVER, hdpSTACK, HuSHI)
+ù Fr TOS 1.04 und 1.06 wird kein POOLFIX3.PRG, PFIX_CB.PRG oder POOLFX92.PRG 
+  ben”tigt.
+ù Fr TOS 4 wird F030HFIX.PRG nicht ben”tigt.
+ù 94 Standard-Handles fr Dateien statt 75. Mit WINX und ohne MiNT lassen sich 
+  in CAT bis zu 31 Gruppen ”ffnen.
+ù Cookies ¯DATE® und ¯TIME® wie bei DTCOOKIE und LED-Panel.
+ù Die Namen der geladenen Accessories werden ausgegeben.
+ù Alle GEMDOS-Funktionen des TOS einschlielich Srealloc().
+  Srealloc() schreibt z. Z. Informationen auf den Bildschirm.
+ù Fr Uralt-Programme, wie sie bei ¯Alcyon C® dabei sind, wird Cconws() von 
+  CP/M-68K nach GEMDOS konvertiert.
+ù Programmabbruch mit Control-C ergibt wie bei KAOS und ASH-MagiC EBREAK (-68) 
+  statt EINVFN (-32).
+ù Mxalloc() ignoriert die Speicherschutz-Bits.
+ù Fr Maddalt() ist Speicher unterhalb 16$ 40 0000 ST-RAM.
+ù Sync() schreibt alle Puffer.
+ù Eigene Dcntl() wie in dateisys.txt und FUTIME und KER_DOSLIMITS. Mit 
+  Dcntl(FUTIME, ...) l„t sich (z. B. von Backup-Programmen) auch das Datum von 
+  Verzeichnissen „ndern.
+ù Mit Fattrib() l„t sich bei Disknamen ein von MS-DOS f„lschlich gesetztes 
+  Archiv-Bit l”schen und bei Verzeichnissen das Versteckt- oder System-Bit 
+  „ndern. Versteckte Ordner werden z. B. vom DESKTOP, Gemini oder Selectric nur 
+  dann gezeigt, wenn versteckte Dateien gewnscht werden.
+ù Dlock() ergibt momentan bei offenen Dateien EACCDN (-36), sonst EINVFN (-32).
+ù Dpathconf()
+ù Sysconf()
+ù Fxattr() liefert als ¯Inode® den Startcluster oder bei leeren Dateien den 
+  Startcluster des Verzeichnisses + Byte-Position im Verzeichnis * 2^11.
+ù Gro-/Kleinschreibung der Namen kann fr beliebige Laufwerke beibehalten 
+  werden. (--> Setter oder dosmode.tos) Das eignet sich gut zum Testen eigener 
+  Programme. Dpathconf(..., DP_TRUNC) kann so konfiguriert werden, da es 
+  DP_AUTOTRUNC statt DP_DOSTRUNC zurckgibt. Das ist fr Gemini sinnvoll. 
+  Da MiNT Dpathconf() selber bernimmt, funktioniert dies nicht mit MiNT.
+
+
+Installation
+------------
+
+BIGDOS.PRG (fr den Falcon z. Z. BIGDOS-F.PRG) kommt m”glichst als erstes 
+Programm nach dem Boot-Selektor in den AUTO-Ordner. Auf jeden Fall vor alle 
+Programme, die im GEMDOS-Trap h„ngen und kein XBRA benutzen. BIGDOS.PRG 
+installiert sich selber am Ende der XBRA-Kette. (Das klappt mindestens mit 
+MetaDOS¿, CHK_OFLS, NVDI, Overscan, AES-Font und HSModem.) Overscan mu nach 
+NVDI und vor Big-DOS stehen! LED-Panel mu nach Big-DOS gestartet werden, damit 
+die Zeit richtig angezeigt wird. Nach einem Reset sollte alles normal 
+funktionieren.
+
+Fr MS-DOS-Partitionen gr”er als 32 MByte wird auerdem ein Plattentreiber 
+ben”tigt, der groe MS-DOS-Partitionen (Typ 6) erkennt und ber Rwabs() mehr 
+als 65535 Sektoren ansprechen kann. Dafr kommen nur Treiber in Frage, die 
+mindestens XHDI 1.20 untersttzen, da ber XHDOSLimits() die 
+GEMDOS-Beschr„nkungen hochgesetzt werden. Diese Funktion l„t sich mit 
+XHDItest.ttp testen.
+
+Fr Ataris AHDI 6.061 liegt ein Binary Diff bei. (Ben”tigt ¯Binary Patch® von 
+Robert Federle. Zu finden als ¯bptch1??.*® oder ¯bdiff???.*®.) Dazu sollten 
+sich AHDI.PRG und BINPATCH.TTP im Big-DOS-Verzeichnis befinden und BINPATCH.TTP 
+wird mit dem Parameter ¯ahdi6061.bdf® gestartet. Wer nicht mit AHDI bootet, 
+kann zum Testen einfach das dabei entstandene AHDIBIGD.PRG in den AUTO-Ordner 
+kopieren. Wer mit AHDI bootet, mu auf der Boot-Partition SHDRIVER.SYS 
+umbenennen und dann AHDIBIGD.PRG dorthin kopieren und in SHDRIVER.SYS 
+umbenennen. Wenn Big-DOS entfernt wird, mu auch der gepatchte AHDI entfernt 
+werden, damit TOS keine zu groen Partitionen angeboten werden! AHDI 
+funktioniert nicht mit Platten mit 2^21 oder mehr Sektoren!
+
+Treiber, die ich getestet habe und Version ab der sie gut zusammenarbeiten:
+ù AHDI 6.061 mit dem Patch von mir, ¯AHDI6061.ZIP®
+  Prft keine DOS-Grenzen, sperrt nicht den Auswurf von Wechselmedien.
+ù HDDRIVER 4.51, aktuell 6.10, suchen nach Demo-Version ¯HDDRIV*.ZIP®
+  Prft DOS-Grenzen, sperrt Auswurf von Wechselmedien.
+  HDDRUTIL 6.00 kann beliebig groe MS-DOS-Medien partitionieren.
+ù CBHD 4.50, aktuell 5.02, suchen nach ¯CBHD???.TOS®
+  Prft DOS-Grenzen, sperrt nicht den Auswurf von Wechselmedien.
+
+hdpSTACK 2 soll laut ST-Computer 7/1996 Big-DOS untersttzen.
+
+
+Was tun, wenn's nicht geht
+--------------------------
+
+Big-DOS l„uft nicht, der Rechner strzt ab, usw.:
+ù Alle AUTO-Ordner-Programme und Accessories deaktivieren.
+  Wenn's dann l„uft: Mir schreiben, welches Programm den Absturz verursacht.
+  Wenn's nicht l„uft: Rechner? RAM? TOS-Version? Plattentreiber?
+                      Dessen Version? Big-DOS-Version?
+
+Big-DOS l„uft, greift aber nicht auf die Platte zu:
+ù Wird die Platte vom Treiber erkannt (ID und Name angezeigt)?
+  Wenn nicht: Da kann ich nichts machen. Hardware testen. (Terminierung,
+              Parity, nur mit SCSI-Bus ...)
+ù Bekommt die Platte eine Laufwerkskennung (bzw. mit Laufwerke anmelden
+  auf dem Desktop ein Icon)?
+  Wenn nicht: Keine Atari- oder MS-DOS-Partition.
+              Zu viele Sektoren fr ACSI-Bus. (1 GByte ohne ICD-Untersttzung)
+              Problem des Plattentreibers.
+ù Ist ein Medium im Laufwerk?
+  Wenn nicht: Tja.
+ù Wenn sich jetzt das Icon nicht ”ffnen l„t:
+  Big-DOS testet die Partitionierungsdaten, die der Plattentreiber liefert. 
+  Eventuell gibt es eine Kombination, die funktionieren wrde, aber bisher 
+  ignoriert wird. Mir die mit XHDItest.ttp erstellte Protokolldatei schicken.
+
+
+Sonstiges
+---------
+
+Mit DOSMODE.TOS lassen sich fr jedes Laufwerk die erlaubten Zeichen einstellen:
+    GEMDOS: A..Z0..9!#$%&'()-@^_`{}~"+,;<=>[]| und groe Umlaute
+    ISO:    A..Z0..9_
+    MS-DOS: A..Z0..9!#$%&'()-@^_`{}~ und groe Umlaute
+Mit setter.ttp aus dem HSModem-Paket oder der GEM-Version des Setter von 
+Markus Kohm kann dies dauerhaft in Big-DOS gespeichert werden.
+
+Mit XHDItest.ttp l„t sich fr alle oder das bergebene DOS-Laufwerk die 
+Partitionierung, unbrauchbare Werte im BPB, Name und XHDI-Version des Treibers 
+und die Funktion von XHDI-DOS-Limits anzeigen:
+    :-(  Funktion nicht vorhanden
+    :-/  Funktion vorhanden, aber Grenzen lassen sich nicht „ndern
+    :-)  Funktion vorhanden und Grenzen lassen sich „ndern
+Mit ¯>® als letztem Argument kann die Ausgabe in xhditest.log, mit ¯>Datei® in 
+eine beliebige Datei umgeleitet werden. Bei HDDRIVER auf eine Diskette 
+speichern! Bei Problemen mit Platten diese Datei mitschicken.
+
+
+Als Diskmonitor fr MS-DOS-Partitionen mit mehr als 65535 Sektoren empfehle ich 
+den SED 5.66 von Claus Brod und Anton Stepper. Mit den Patches von mir 
+(sed_566diff.zip) ist er der einzige mir bekannte Diskmonitor, der das kann.
+
+Diskus 3.4x kommt berwiegend mit groen MS-DOS-Partitionen zurecht. Probleme 
+bereiten haupts„chlich falsche Fehlermeldungen.
+
+
+Bekannte Probleme
+-----------------
+
+ù Big-DOS, NVDI und der Treiber fr Screenblaster funktionieren nicht zusammen. 
+  Eines der Programme weglassen.
+ù Die normale Version von Big-DOS 7 funktioniert nicht auf dem Falcon. Dafr 
+  liegt bigdos-f.prg bei. Hier mu Big-DOS weiterhin das erste Programm sein, 
+  welches sich im GEMDOS-Trap installiert!
+
+
+Bekannte Probleme anderer Programme
+-----------------------------------
+
+ù Getbpb() des TOS wertet im Bootsektor von Disketten das Feld mit den 
+  reservierten Sektoren nicht aus, sondern addiert dafr 1. Nur damit niemand 
+  meint, bei Big-DOS fehle ein ISO-9293-Feature. ;-)
+ù Nach meinen Tests funktioniert Big-DOS bei MS-DOS-Medien nur scheinbar mit 
+  dem ICD-Treiber!
+ù CHK_OFLS bis 1.02 strzt beim Start ab.
+ù Ddelete() ergibt beim aktuellen Verzeichnis ECWD (-47). Die Mupfel 1A 
+  ignoriert dies und ohne Big-DOS bleibt sogar das gel”schte Verzeichnis das 
+  aktuelle. Nur NEWDESK von TOS 2.05 bis TOS 4.04 kann seine aktuellen 
+  Verzeichnisse l”schen. Grrr!
+ù Fattrib(, , attrib) ist ein 16-Bit-Parameter! Sind undefinierte Bits gesetzt, 
+  gibt's gnadenlos EACCDN (-36).
+ù Programme, die mit Fcreate() Dateien oder mit Dcreate() Verzeichnisse mit 
+  z. B. ¯/® im Namen anlegen wollen, und die Fehlermeldung EBADRQ (-5) 
+  ignorieren, strzen unter Big-DOS wahrscheinlich ab. Selber schuld!
+ù Programme, die die Speicherverwaltung ber undokumentierte Adressen direkt 
+  manipulieren, machen bestimmt Probleme. (Bei mir l„uft Big-DOS als Patch fr 
+  TOS 1.04, dann funktionieren auch solche Programme.) Wer dies unbedingt 
+  ben”tigt, kann bei mir fragen.
+ù Mindestens mit einer alten Version von TSFM.CPX k”nnen ohne Warnung 
+  Disketten mit zu kurzer FAT formatiert werden. Diese werden von Big-DOS 
+  ignoriert.
+ù Bei HDDRIVER bis 4.50 werden nderungen der DOS-Limits erst wirksam, wenn der 
+  Treiber einen Medienwechsel erkannt hat. Meine Empfehlung: 
+  MS-DOS-Wechselmedien erst einlegen, wenn der Desktop aktiv ist oder auf 4.51 
+  updaten, damit stimmt beim Partitionieren auch das Mediabyte.
+ù Bei CBHD 4.53 ist XHDI funktionslos.
+ù CBHD bis 4.57 kann nach einlegen eines neuen Mediums dieses nicht mehr ber 
+  XHDI ansprechen. Deshalb klappt die Entnahmesperre nicht.
+
+Auerdem gibt es diverse Formatierprogramme und Platten-Utilities, die das 
+Dateisystem nicht richtig initialisieren. Wenn so ein Laufwerk das erste Mal 
+angesprochen wird und nach jedem Medienwechsel gibt es Fehlermeldungen. Tretet 
+dann die verantwortlichen Programmierer. ;-) (Dieser Test l„t sich mit dem 
+oben erw„hnten Setter inzwischen abstellen.)
+
+ Big-DOS: FAT-Anfang von ?: mu $F?, $FF, $FF [$FF] sein! Schreiben? [JN]
+ Big-DOS: FAT start of ?: shall be $F?, $FF, $FF [$FF]! Write? [YN]
+
+ Big-DOS: Media-Byte im Bootsektor von ?: ist $??, mu $F? sein! Schreiben? [JN]
+ Big-DOS: Media byte in boot sector of ?: is $??, shall be $F?! Write? [YN]
+
+
+Danksagung
+----------
+
+Ein besonderer Dank geht an Martin Drrschnabel und Norbert Fettig, die 
+entscheidend zum Beginn dieses Programmes beigetragen haben.
+
+
+Neue Versionen
+--------------
+
+Updates per Post gibt es nur gegen zusenden
+ù einer Diskette ISO Typ 301 oder 302 (90 mm, DD oder HD) mit ausreichend 
+  frankiertem und adressiertem Rckumschlag oder
+ù 5 DM fr eine Diskette ISO Typ 302 und das Rckporto oder
+ù aus dem Ausland fr das Rckporto 2 internationale Antwortscheine (en: reply 
+  coupon, fr: coupon-r‚ponse international) und fr eine Diskette ISO Typ 302 
+  zus„tzlich 1 internationalen Antwortschein beilegen.
+
+Postanschrift:
+Rainer Seitel
+Zaystrae 13
+D-76437 Rastatt
+
+E-Mail:
+MausNet:  Rainer Seitel @ KA
+Internet: Rainer_Seitel@ka.maus.de (bevorzugt, keine Mail > 16 KByte pro Tag!)
+          Rainer.Seitel@stud.uni-karlsruhe.de
+
+Bezugsadressen:
+MAUS Karlsruhe, +49 721 358887, 2400-28800 bps, 08:00/03:00.
+http://www.uni-karlsruhe.de/~Rainer.Seitel/bigdos.html
+http://wwwrzstud.rz.uni-karlsruhe.de/~ujo7/bigdos.html (fr Links diese nehmen)
+
+Aktuelle Version von CBHD in der MAUS SZ, +49 5341 852024, analog und ISDN X.75.
+
+
+Neuerungen
+----------
+
+In Big-DOS 2 vom 1995-10-10:
+ù Probleme mit TT und Falcon beseitigt.
+
+In Big-DOS 3 vom 1995-10-22:
+ù Partitionen mit BPB.numcl == 0 werden ignoriert.
+ù Kein Absturz, wenn HDDRIVER vor Big-DOS gestartet wird.
+ù XHDItest.ttp mit deutschem Text wenn _AKP = $??????01??, sonst englisch.
+
+In Big-DOS 4 vom 1995-11-09:
+ù Mshrink() mit Alternate-RAM funktioniert.
+
+In Big-DOS 5 vom 1995-12-03:
+ù Geschtzte Minix-Partitionen oder Disketten werden ignoriert.
+ù Laufwerksabfrage in Dpathconf() korrigiert. Mupfel ls ohne Pfad geht wieder.
+ù Fxattr() korrigiert.
+ù XHDItest.ttp kann in eine Datei umleiten und benutzt zus„tzlich Getbpb().
+ù XHDOSLimits() nur beim Start statt bei jedem Getbpb().
+
+In Big-DOS 6 vom 1996-01-14:
+ù NUM_FILEHANDLE -= 28, da MetaDOS¿ Handles ab 100 vergibt.
+ù Erlaubte Zeichen fr jedes Laufwerk mit Setter einstellbar.
+ù Fxattr("Ordner\") ist das gleiche wie Fxattr("Ordner").
+ù Peinlichen Fehler beseitigt, der bei Sektoren ab 2048 Byte auftreten konnte.
+ù Einige Diskettenformate wurden durch den FAT-Gr”entest ignoriert.
+ù XHDItest.ttp gibt an, warum Big-DOS ein Laufwerk trotz BPB ignoriert.
+
+In Big-DOS 7 vom 1996-09-25, Falcon-Version vom 1996-12-22:
+ù Sektorgr”e bei MS-DOS-Medien mu nicht mehr 512 Bytes betragen.
+ù Wird erst nach Big-DOS ein Plattentreiber mit XHDI gestartet, so werden 
+  einmal die DOS-Grenzen eingestellt.
+ù Vor jedem Gebrauch von XHDI wird der XHDI-Cookie neu gesucht.
+ù Entnahmesperre bei Wechselmedien wird wieder korrekt aufgehoben.
+ù Vom spanischen TOS 1.00 wird Pool-Erweiterung richtig bernomen.
+ù Big-DOS installiert sich am Ende der XBRA-Kette. (Overscan, s. Installation.)
+ù Statt einem OSHEADER mit Zeigern auf mifl und act_pd von Big-DOS werden die 
+  Variablen des ROM-GEMDOS benutzt.
+ù Nach einem Medienwechsel klappt das interne Wiederholen des Zugriffs wieder.
+ù Gro-/Kleinschreibung der Namen kann beibehalten werden.
+ù Fxattr() liefert fr Wurzelverzeichnisse von DOS-Medien die Erstellungszeit.
+ù Fclose() strzt mit XHDI-Treibern nach Fdup() nicht mehr ab.
+ù XHDItest.ttp ignoriert nicht vorhandenes Laufwerk B:. 
+
+In Big-DOS 8 vom 1997-01-05:
+ù Setter-Konfigurationsblock war in Version 7 defekt.
+
+Geplant:
+ù XHDItest.ttp klammert XHDOSLimits() mit Dlock(). Sind Dateien offen, dann 
+  werden die DOS-Grenzen nicht verstellt.
