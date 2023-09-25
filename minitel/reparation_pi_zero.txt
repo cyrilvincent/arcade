@@ -1,0 +1,5 @@
+So far my story. And now the good ending.
+I thought mmmh stability ...stability, volt Volt!. More Power!!!
+So i changed the config.txt and added:
+over_voltage=4
+force_turbo=1

@@ -1,0 +1,54 @@
+Linux : https://arduiblog.com/2019/04/29/ressuscitez-le-minitel/
+
+wget http://canal.chez.com/mntl.ti
+tic mntl.ti -o /etc/terminfo
+agetty -c ttyUSB0 4800 minitel1b-80 #FNCT+P puis 4 = 4800 bauds obligatoire
+sudo nano /etc/systemd/system/serial-getty\@.service
+
+copier/coller
+# This file is part of systemd.
+#
+# systemd is free software; you can redistribute it and/or modify it
+# under the terms of the GNU Lesser General Public License as published
+# by the Free Software Foundation; either version 2.1 of the License,
+# or (at your option) any later version.
+
+[Unit]
+Description=Serial Getty on %I
+Documentation=man:agetty(8) man:systemd-getty-generator(8)
+Documentation=http://0pointer.de/blog/projects/serial-console.html
+BindsTo=dev-%i.device
+After=dev-%i.device systemd-user-sessions.service plymouth-quit-wait.service
+After=rc-local.service
+# If additional gettys are spawned during boot then we should make
+# sure that this is synchronized before getty.target, even though
+# getty.target didn't actually pull it in.
+Before=getty.target
+IgnoreOnIsolate=yes
+[Service]
+ExecStart=-/sbin/agetty -L -i -I "\033\143" 1200 %I minitel1b-80
+Type=idle
+Restart=always
+UtmpIdentifier=%I
+TTYPath=/dev/%I
+TTYReset=yes
+TTYVHangup=yes
+KillMode=process
+IgnoreSIGPIPE=no
+SendSIGHUP=yes
+[Install]
+WantedBy=getty.target
+
+sudo ln -s /etc/systemd/system/serial-getty@.service /etc/systemd/system/getty.target.wants/serial-getty@ttyUSB0.service
+# La ligne précédente peut être remplacée par sudo systemctl enable serial-getty@.service
+sudo systemctl daemon-reload
+sudo systemctl start serial-getty@ttyUSB0.service
+sudo reboot
+
+# Pour stopper
+sudo systemctl stop serial-getty@ttyUSB0.service
+sudo systemctl disable serial-getty@ttyUSB0.service
+
+La touche return = CTRL+J
+Ca doit venir de ce minitel particulier
+
