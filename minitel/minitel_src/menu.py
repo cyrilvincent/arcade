@@ -69,7 +69,9 @@ class MinitelMenu:
         time.sleep(5)
         os.chdir("/home/pi/pynitel")
         os.system("python annu.py")
-        sys.exit()
+        time.sleep(1)
+        self.connect()
+        self.writeln(b"\n\n")
 
     def linux(self):
         print("Linux")
@@ -112,19 +114,26 @@ class MinitelMenu:
         time.sleep(5)
         os.chdir("/home/pi/pynitel")
         os.system("python ulla.py")
-        sys.exit()
+        time.sleep(1)
+        self.connect()
 
     def ascii(self):
-        print("Ascii")
-        # https://github.com/ligurio/awesome-ttygames # Pas sur assez rapide
-        # https://www.asciiart.eu/computers
-        # Faire historique année 80 politique & info depuis 77
         print("Ascii")
         self.mode_ta()
         self.close()
         time.sleep(5)
         os.chdir("/home/pi")
         os.system("python ascii.py")
+        time.sleep(1)
+        self.connect()
+
+    def history(self):
+        print("History")
+        self.mode_ta()
+        self.close()
+        time.sleep(5)
+        os.chdir("/home/pi")
+        os.system("python history.py")
         time.sleep(1)
         self.connect()
 
@@ -135,7 +144,7 @@ class MinitelMenu:
             self.writeln(b"Minitel 2023 par Cyril")
             self.writeln(b"======================")
             self.writeln(b"")
-            self.writeln(b"Services disponibles : 3611, 3615 LINUX HELLO STARWARS ULLA ASCII")
+            self.writeln(b"Services disponibles : 3611, 3615 LINUX HELLO STARWARS ULLA ASCII HISTORY")
             self.write(b"Numero : ")
             s = self.read_envoi().upper()
             if s.__contains__("EXI") or s == "":
@@ -159,6 +168,8 @@ class MinitelMenu:
                     self.ulla()
                 elif s.__contains__("ASC"):
                     self.ascii()
+                elif s.__contains__("HIS"):
+                    self.history()
             self.writeln(b"")
 
 if __name__ == '__main__':
