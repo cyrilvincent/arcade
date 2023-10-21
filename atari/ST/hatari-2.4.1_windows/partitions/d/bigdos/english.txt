@@ -1,0 +1,261 @@
+                                Big-DOS
+
+
+Copyright ½ 1995 by Rainer Seitel
+
+Big-DOS is freeware. For details and the content of this package refer to 
+bigdos.txt!
+
+
+Features
+--------
+
+Big-DOS is an ISO 9293 filesystem that replaces the GEMDOS of TOS (not KAOS and 
+not ASH-MagiC!).
+
+ù GEMDOS / ISO 9293:1987 / MS-DOS filesystem
+ù 32 Drives: A..Z1..6 or A..Z[\]^_`
+ù Up to 65518 cluster.
+ù 1 to 64 sectors per cluster.
+ù More than 65535 sectors and therefore every MS-DOS partition possible. That 
+  means also more than 32 Mbyte.
+ù 1 or 2 FAT.
+ù The legal characters are - configurable for each drive - resticted for 
+  GEMDOS, d-characters as in ISO 9293 resp. ISO 9660 or MS-DOS. You know in 
+  advance, that a MS-DOS computer or a restictive CD writing software can read 
+  all files. With setter.ttp from the HSModem archive, or the GEM version of 
+  Setter, from Markus Kohm, this can be permanently set in Big-DOS.
+ù The disk label will also be written to an MS-DOS boot sector.
+ù Works with or without MiNT.
+ù Big-DOS tries to lock removable cartridges using XHDI, if there were open 
+  files on it. (HDDRIVER, hdpSTACK, HuSHI)
+ù For TOS 1.04 and 1.06 no POOLFIX3.PRG, PFIX_CB.PRG or POOLFX92.PRG is needed.
+ù For TOS 4 no F030HFIX.PRG is needed.
+ù 94 standard handles fore open files, instead of 75.
+ù Cookies ¯DATE® and ¯TIME® as in DTCOOKIE and LED-Panel.
+ù Shows names of the loaded accessories.
+ù All GEMDOS Functions of TOS including Srealloc().
+  Srealloc() at present shows debug informationen.
+ù For very old programms, as ¯Alcyon C®, Cconws() is converted from CP/M-68K to 
+  GEMDOS.
+ù Aborting a tos programm by Control-C returns EBREAK (-68) instead of 
+  EINVFN (-32) like KAOS and ASH-MagiC.
+ù Mxalloc() ignoreres memory protection bits.
+ù Maddalt() takes memory with address below 16$ 40 0000 as ST-RAM.
+ù Sync() writes all buffers.
+ù Own Dcntl() opcodes as shown in dateisys.txt and FUTIME and KER_DOSLIMITS. 
+  With Dcntl(FUTIME, ...) date and time of a directory could be changed (e. g. 
+  by a backup program).
+ù Fattrib() can clear a from MS-DOS wrongly set archiv bit of disk labels. You 
+  can also change hidden and system bits of directories. DESKTOP, Gemini or 
+  Selectric, e. g. shows them only if you wish hidden files.
+ù Dlock() at present returns EACCDN (-36) if there are open files, EINVFN else.
+ù Dpathconf()
+ù Sysconf()
+ù Fxattr() returns as ¯Inode® the start cluster or - for an empty file - 
+  start cluster of directory + byte-position in the directory * 2^11.
+ù Drives can be configured for upper/lower case names. (--> Setter or 
+  dosmode.tos) That's a good test for own programs. Dpathconf(..., DP_TRUNC) 
+  can be configured returning DP_AUTOTRUNC instead of DP_DOSTRUNC. That is 
+  e. g. usefull for Gemini. Since MiNT handles Dpathconf() itself, this 
+  feature won't work with MiNT.
+
+
+Installing Big-DOS
+------------------
+
+BIGDOS.PRG (for the Falcon at present BIGDOS-F.PRG) should be the first program 
+in your AUTO folder after the boot selector. In any case before every program 
+in the GEMDOS trap which not use XBRA. BIGDOS.PRG installs itself at the end of 
+the XBRA chain. (This works at least with MetaDOS¿, CHK_OFLS, NVDI, Overscan, 
+AES-Font and HSModem.) Overscan must be placed after NVDI and before Big-DOS! 
+LED-Panel must start after Big-DOS for a correct display of time. After 
+rebooting, all should work normal.
+
+For MS-DOS partitions bigger than 32 Mbyte, you also need a hard disk driver 
+which can handle big MS-DOS partitions (type 6) and allows access to more than 
+65535 sectors via Rwabs(). This should be a driver with XHDI 1.20, because 
+Big-DOS tries to change the DOS limits via XHDOSLimits(). This function could 
+be checked with XHDItest.ttp.
+
+For Atari's AHDI 6.061 a binary diff is included. (You need `Binary Patch' from 
+Robert Federle. Search for `bptch1??.*' or `bdiff???.*'.) Place AHDI.PRG and 
+BINPATCH.TTP in the directory of Big-DOS. Then start BINPATCH.TTP with the 
+parameter `ahdi6061.bdf'. If you don't boot with AHDI, you can copy 
+AHDIBIGD.PRG to your AUTO-Folder for testing. If you boot AHDI, you have to 
+rename SHDRIVER.SYS on your boot partition and then copy AHDIBIGD.PRG to the 
+root directory and rename it to SHDRIVER.SYS. If you don't use Big-DOS further, 
+you have to remove the patched AHDI, avoiding that incompatible partitions were 
+offered to TOS! You have been warned! AHDI doesn't work with hard disks with 
+2^21 sectors or more (1 Gbyte)!
+
+For bug reports see XHDItest.ttp below!
+
+Drivers, I had tested and the least version for good co-working:
+ù AHDI 6.061 with my patch, AHDI6061.ZIP
+  Doesn't check DOS limits, doesn't lock removable cartridges.
+ù HDDRIVER 4.51, actual 6.10, search for demo HDDRIV*.ZIP
+  Checks DOS limits, locks removable cartridges.
+ù CBHD 4.50, actual 5.02, search for CBHD???.TOS
+  Checks DOS limits, doesn't lock removable cartridges.
+
+
+Sundries
+--------
+
+DOSMODE.TOS shows and alter the legal characters for filenames on each drive:
+GEMDOS: A..Z0..9!#$%&'()-@^_`{}~"+,;<=>[]| and capital umlauts
+ISO:    A..Z0..9_
+MS-DOS: A..Z0..9!#$%&'()-@^_`{}~ and capital umlauts
+With setter.ttp from the HSModem archive, or the GEM version of Setter, from 
+Markus Kohm, this can be permanently set in Big-DOS.
+
+XHDITEST.TTP shows for all or a given drive letter the partition size, bad 
+values in the BPB, name and XHDI version of the hard disk driver and tests the 
+DOS-limits function:
+:-(  not available
+:-/  available, but could not change the limits
+:-)  available and could change the limits
+With ¯>® as last argument, the standard output will be stored in xhditest.log. 
+With ¯>file® in the given file. With HDDRIVER save to a floppy! Please include 
+this file in your bug report.
+
+
+The only disk monitor for Atari's I know, that can handle MS-DOS partitions 
+bigger than 32 Mbyte is the SED 5.66 from Anton Stepper and Claus Brod. It was 
+selled with the german book ¯Scheibenkleister - Massenspeicher am ST®. And even 
+this one needs a patch. You need the original source code, a GFA-BASIC 
+interpreter 3.5 or 3.6 and the second version of my ¯sed_566diffs.zip®.
+
+Diskus 3.4x mainly works with big MS-DOS partitions. Problems were mainly 
+caused by wrong error alert boxes.
+
+
+Known problems
+--------------
+
+ù Big-DOS, NVDI and the Screenblaster driver doesn't work together. Omit one 
+  of them.
+
+
+Known problems of other programs
+--------------------------------
+
+ù Getbpb() of TOS doesn't use the value ¯reserved sectors including boot 
+  sector® from the boot sector of floppy disks, but adding 1. So don't blame 
+  Big-DOS for the miss of this ISO 9293 feature. ;-)
+ù During my tests, the ICD driver only pretend to work with MS-DOS media, but 
+  it doesn't work!
+ù CHK_OFLS up to 1.02 crashes.
+ù Ddelete() cannot delete a current directory, but returns ECWD (-47) instead. 
+  Geminis Mupfel 1A ignores this, and without Big-DOS the deleted directory 
+  still is its current one. Only NEWDESK of TOS 2.05 to TOS 4.04 is alowed to 
+  delete its current directorys. Grrr!
+ù Fattrib(, , attrib) is a 16-bit parameter! If undefined bits were set, 
+  EACCDN (-36) is returend.
+ù If a program tries to create a file or directory with an illegal character, 
+  and ignores EBADRQ (-5), it probably crashes.
+ù Applications, which manipulate the memory management using undocumented 
+  variables, won't work.
+ù At least with an old version from TSFM.CPX, diskettes can be formatted with 
+  a too short FAT. Big-DOS ignores them.
+ù With HDDRIVER up to 4.50, changes of the XHDI DOS limits works only after a 
+  media change. So insert MS-DOS media after the Desktop has started or update 
+  to 4.51. The new version also set the correct media byte.
+ù In CBHD 4.53 XHDI is useless.
+ù With CBHD at least up to 4.57, after inserting a new disk, this disk cannot 
+  accessed by XHDI. That's why the disk lock doesn't work.
+
+There are several Programs that initialize the filesystem not correct. By the 
+first access or after a media change, an error message is printed on the 
+screen. If you type J or Y for yes the correct value will be written on disk. 
+Contact the responsible programmer and tell him about the bug. (Now you 
+can switch off this check with Setter.)
+
+ BigDOS: FAT start of ?: shall be $F?, $FF, $FF [$FF]! Write? [YN]
+ BigDOS: Media byte in boot sector of ?: is $??, shall be $F?! Write? [YN]
+
+
+Expression of thanks
+--------------------
+
+Special thanks to Martin Drrschnabel and Norbert Fettig, for their 
+contribution to the start of this program.
+
+
+New versions
+------------
+
+Updates by post are available from foreign countries against 2 reply coupon 
+(fr: coupon-r‚ponse international) for postage and 1 reply coupon for a floppy 
+disk ISO type 302 (90 mm [÷ 3.5 in], HD).
+
+Postal address:
+Rainer Seitel
+Zaystraže 13
+D-76437 Rastatt
+Germany
+
+e-mail:
+MausNet:  Rainer Seitel @ KA
+Internet: Rainer_Seitel@ka.maus.de (prefered, no mail > 16 Kbyte per day!)
+          Rainer.Seitel@stud.uni-karlsruhe.de
+
+Source of supply:
+BBS MAUS Karlsruhe, +49 721 358887, 2400-28800 bps, public access 08:00Z/03:00, 
+german menu.
+http://www.uni-karlsruhe.de/~Rainer.Seitel/bigdos.html
+http://wwwrzstud.rz.uni-karlsruhe.de/~ujo7/bigdos.html (use this one for links)
+
+The actual version of CBHD is first at BBS MAUS Salzgitter, +49 5341 852024, 
+analog and ISDN X.75.
+
+
+News
+----
+
+In Big-DOS 2 from 1995-10-10:
+ù Problems with TT and Falcon fixed.
+
+In Big-DOS 3 from 1995-10-22:
+ù Partitions whith BPB.numcl == 0 will be ignored.
+ù No crash if HDDRIVER is started before Big-DOS.
+ù XHDItest.ttp with german text if _AKP = $??????01??, else english.
+
+In Big-DOS 4 from 1995-11-09:
+ù Mshrink() works with Alternate-RAM.
+
+In Big-DOS 5 from 1995-12-03:
+ù Protected Minix partitions or disks will be ignored.
+ù Drive checking in Dpathconf() corrected. Mupfel ls without path works.
+ù Fxattr() correded.
+ù XHDItest.ttp can store to a file and use also Getbpb().
+ù XHDOSLimits() only at start, instead before every Getbpb().
+
+In Big-DOS 6 from 1996-01-14:
+ù NUM_FILEHANDLE -= 28, since MetaDOS¿ uses handles from 100 to 199.
+ù The legal characters can permanently set for each drive with setter.ttp from 
+  the RS232 driver HSModem oder the GEM version from Markus Kohm.
+ù Fxattr("subdirectory\") is the same as Fxattr("subdirectory").
+ù Bug fixed, that could occur with sectors ò 2048 byte.
+ù Some floppy disks were ignored because of a wrong test for the FAT size.
+ù XHDItest.ttp says, why Big-DOS ignores a drive in spite of a valid BPB.
+
+In Big-DOS 7 from 1996-09-25, Falcon version from 1996-12-22:
+ù The sector size of MS-DOS disks is no longer fixed to 512 bytes.
+ù If a hard disk driver with XHDI is started after Big-DOS, the DOS limits were 
+  changed by the next access.
+ù The XHDI cookie is checked before every XHDI call.
+ù Freeing a locked removable disk works again.
+ù The pool extension is correctly taken from spanish TOS 1.00.
+ù Big-DOS installs itself at the end of the XBRA chain. (Overscan, see above)
+ù Instead of an OSHEADER with pointers to mifl and act_pd of Big-DOS, the 
+  variables of the ROM GEMDOS were used.
+ù After a media change, the internal repeat of the access is back.
+ù Drives can be configured for upper/lower case names.
+ù Fxattr() returns for root directories of DOS media the creation time.
+ù Fclose() doesn't bomb with XHDI drivers after a Fdup().
+ù XHDItest.ttp ignores a not connected drive B:. 
+
+In Big-DOS 8 from 1997-01-05:
+ù Setter configuration block was defect in version 7.

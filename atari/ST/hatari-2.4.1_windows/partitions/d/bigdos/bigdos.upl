@@ -1,0 +1,5 @@
+Big-DOS 8 (1997-01-05), Autor: Rainer Seitel @ KA.
+GEMDOS- / ISO 9293- / MS-DOS-Dateisystem fÅr Atari ST/TT/Falcon mit TOS.
+Bis zu 32 MS-DOS-kompartible Laufwerke bis 2 GByte. Also auch Partitionen
+mit mehr als 65535 Sektoren oder 32767 Clustern. LÑuft mit und ohne MiNT.
+Bei offenen Dateien wird der Auswurf von Wechselmedien gesperrt.

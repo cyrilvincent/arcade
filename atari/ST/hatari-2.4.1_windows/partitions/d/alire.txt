@@ -1,0 +1,17 @@
+Sdextjoy.prg est le driver 1.2c
+Il n'est pas très stable
+Bug de la souris et de bip aléatoire
+Bug de non détections des partitions autres que c
+A mettre dans le dossier auto pour un démarrage automatique : fait par défaut
+
+Bigdos.prg est le driver permettant d'avoir des partitions > 32Mo
+Assez instable
+A mettre dans le dossier auto pour un démarrage automatique
+A démarrer en 1er
+
+Le dossier old contient l'ancien driver sdextjoy.prg
+Me semble plus stable
+Uniquement 1 seule partitions possible
+A mettre dans le dossier auto pour un démarrage automatique
+
+Lire sdextjoy.txt pour la documentation officielle

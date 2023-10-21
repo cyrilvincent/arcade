@@ -1,0 +1,12 @@
+Area JAMESTIC
+File BIGDOS08.LZH
+Origin Rainer Seitel @ KA
+Desc
+Big-DOS 8 (1997-01-05), Autor: Rainer Seitel @ KA.
+GEMDOS- / ISO 9293- / MS-DOS-Dateisystem fÅr Atari ST/TT/Falcon mit TOS.
+Bis zu 32 MS-DOS-kompartible Laufwerke bis 2 GByte. Also auch Partitionen
+mit mehr als 65535 Sektoren oder 32767 Clustern. LÑuft mit und ohne MiNT.
+Bei offenen Dateien wird der Auswurf von Wechselmedien gesperrt.
+Enddesc
+Replaces BIGDOS07.LZH
+Pkrits 4 21 0 1

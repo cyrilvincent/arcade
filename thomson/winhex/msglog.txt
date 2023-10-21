@@ -1,0 +1,7 @@
+﻿WinHex 20.9 x86, Utilisateur: conta
+08/10/2023  21:13:48  1 sur 30
+08/10/2023  21:14:32  Vous n'avez pas les droits administrateur. Il faut lancer le programme en tant qu'administrateur p. e. to have sector-level access to storage devices. (p.e. clic droit sur le fichier .exe)
+
+Solution: Redémarrer winhex.exe maintenant ? | Non
+08/10/2023  21:15:39  Voulez-vous vraiment abandonner l'action? | Oui
+08/10/2023  21:16:01  WinHex | Only with admin rights you can see process names and loaded modules. Only with the 64-bit edition you can see 64-bit processes.

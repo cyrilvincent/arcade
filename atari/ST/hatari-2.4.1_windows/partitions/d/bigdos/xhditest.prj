@@ -1,0 +1,14 @@
+; @(#)XHDItest.prj
+; 1995-05-27 von Rainer Seitel
+
+xhditest.ttp       ; name of executable program
+
+=                  ; list of modules follows ...
+
+pcstart.o          ; startup code
+
+xhditest.c (xhdi.h)
+xhdi.c (xhdi.h)
+
+pcstdlib.lib       ; standard library
+pctoslib.lib       ; TOS library

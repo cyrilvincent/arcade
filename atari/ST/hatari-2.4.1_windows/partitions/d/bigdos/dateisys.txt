@@ -1,0 +1,236 @@
+        Dies und das zu den Dateisystemen ISO 9293, GEMDOS und MS-DOS
+
+
+Copyright Ω 1995-07-02/1996-08-09 by Rainer Seitel
+
+Diese Datei darf mit Quellenangabe ganz oder teilweise zitiert werden.
+
+
+Bootsektor
+----------
+
+Aufbau eines Bootsektors nach Atari, MS-DOS und ISO 9293:
+  $00-$02  00-02        M68000- oder I8086-Sprungbefehl
+                        MS-DOS will ab Laufwerk C: hier $EB $3C $90!
+  $03-$0A  03-10        Name des Initialisierungsprogrammes
+                        Erlaubte Zeichen: Ø !"%&'()*+,-./0..9:;<=>?A..Z_Æ
+  $08-$0A  08-10        TOS erwartet hier eine Seriennummer zur
+                        Diskwechselerkennung! Ab TOS 2 wird auch die
+                        von MS-DOS geschriebene Seriennummer beachtet.
+  $0B-$0C  11-12        SektorlÑnge
+  $0D      13           Sektoren je Cluster
+  $0E-$0F  14-15        Anzahl reservierter Sektoren einschlieûlich Bootsektor
+  $10      16           Anzahl der FATs (nach ISO immer 2)
+  $11-$12  17-18        EintrÑge im Wurzelverzeichnis
+  $13-$14  19-20        Gesamtzahl der Sektoren oder 0 bei mehr als 65535
+  $15      21           DatentrÑger-Kennzeichen, Media-Byte
+  $16-$17  22-23        Sektoren je FAT
+  $18-$19  24-25        Sektoren je Spur
+  $1A-$1B  26-27        Anzahl der Seiten
+  $1C-$1D  28-29        Anzahl versteckter Sektoren vor dem Bootsektor
+Ab MS-DOS 4.0 gibt es den erweiterten BPB:
+  $1C-$1F  28-31        Anzahl versteckter Sektoren vor dem Bootsektor
+  $20-$23  32-35        Gesamtzahl der Sektoren wenn mehr als 65535
+  $24      36           physikalische Laufwerksnummer fÅr MS-DOS
+  $25      37           fÅr MS-DOS reserviert
+  $26      38           $29 kennzeichnet den erweiterten BPB
+  $27-$2A  39-42        Seriennummer, Zeitpunkt der Initialisierung
+  $2B-$35  43-53        Diskname wie im Wurzelverzeichnis
+  $36-$3D  54-61        Dateisystem: ØFAT12   Æ, ØFAT16   Æ
+  $3E-$FD  62-253       Boot-Programm
+  $FE-$FF  254-255      Atari: Ausgleich fÅr PrÅfsumme $1234 wenn bootfÑhig
+                        MS-DOS: $55 $AA wenn bootfÑhig
+                        Mac: muû bei Disketten $55 $AA sein, das ist ein Fehler!
+
+
+/* Media-Byte und Format-Parameter fÅr MS-DOS, Atari und DIN EN 29293 =
+   ISO 9293:1987. Nach ISO bedeutet das Media-Byte $FD Werte aus der Tabelle
+   benutzen und $F9 Werte aus dem Bootsektor lesen. Wenn 40-Spur-Disketten von
+   der Tabelle abweichen, dann ist das Media-Byte also $F9.
+   "ISO Typ ..." nach DIN EN 29983 = ISO/IEC 9983:1989.
+
+Media-Byte   Diskette  Grîûe       Formatierung        Initialisierung
+MS Atar ISO  ISO Typ   in mm (in)  CYL NSIDES SPT BPS  RES  SPF  SPR  SPC  Clust
+$F0 $F0 $F9   303       90 (3,5 )   80    2   36  512    1    9   15    2  2863
+$F0     $F9   302       90 (3,5 )   80    2   18  512    1    9   14    1  2847
+    $F0       302       90 (3,5 )   80    2   18  512    1    6   14    2  1426
+$F8 $F8      Festplatte
+$F9     $F9   301       90 (3,5 )   80    2    9  512    1    3    7    2   713
+    $F9       301       90 (3,5 )   80    2    9  512    1    5    7    2   711
+    $F9      (301)      90 (3,5 )   80    1    9  512    1    5    7    2   351
+        $F9   203      130 (5,25)   80    2    9  512    1    3   11    2   711
+$F9     $F9   204      130 (5,25)   80    2   15  512    1    7   14    1  2371
+$FC $FC      (202)     130 (5,25)   40    1    9  512    1    2    4    1   351
+$FD $FD $FD   202      130 (5,25)   40    2    9  512    1    2    7    2   354
+$FE          (202)     130 (5,25)   40    1    8  512    1    1    4    1   313
+$FF          (202)     130 (5,25)   40    2    8  512    1    1    7    2   315
+ */
+
+
+FATs
+----
+
+Die EintrÑge 0 und 1 enhalten das Media-Byte und $FF.
+Die Werte in den EintrÑgen 2 bis Clusterzahl + 1 bedeuten:
+$0000                        freier Cluster
+$0001                        nicht mîglich
+$0002 bis (Clusterzahl + 1)  nÑchster Cluster
+(Clusterzahl + 2) bis $FFEF  reserviert
+$FFF0 bis $FFF6              verboten!
+$FFF7                        defekter Cluster
+$FFF8 bis $FFFF              Dateiende
+
+
+BeschrÑnkungen auf TOS-kompatiblen Rechnern
+-------------------------------------------
+
+DL_SECSIZ     $4000   $4000   $4000   $8000?  $8000   $8000   $8000
+DL_MINFAT         2       2       1       1       1       2
+DL_MAXFAT         2       2       2       2       2       2       2
+DL_MINSPC         1       1       1       1       1       1       1
+DL_MAXSPC         2      32      32      64      64      64
+DL_CLUSTS     $7FFE   $7FFE   $7FFE   $7FFE   $FFEE   $7FFD
+DL_MAXSEC     $7FFF   $FFFF   $FFFF   $FFFF $FFFFFF   $FFFF   $FFFF
+DL_DRIVES        16      16      16      16      32      16      26
+DL_CLSIZB     $4000   $4000   $4000  $10000?  $8000   $8000
+DL_RDLEN       1008    1008    1008    1008?   2032       ?
+DL_FSIZ         128     256     256     256     256     128     256
+DL_FATREC         ?       ?       ?       ?     512       ?
+DL_CLUSTS12    $7FE    $FEE    $FEE    $FEE    $FEE    $FEE    $FEE
+DL_CLUSTS32       0       0       0       0       0       0       0
+DL_BFLAGS         1       1       3       3       3       1
+DL_FILESYS   '_DOS'  '_DOS'  '_DOS'  '_DOS'  'BDOS'  'MAGX'  'MAGX'
+DL_VERSION                                 19950401       2       3
+Sversion()     0.13    0.15    0.20    0.30    0.20
+Ab TOS         1.00    1.04    2.06    4.04
+
+Die Tabelle ist noch nicht vollstÑndig. öber ErgÑnzungen freue ich mich.
+
+Ab GEMDOS 0.15 (TOS 1.04) sind Partitionen mit mehr als 32767 Sektoren bzw. 
+32766 Cluster mîglich. Wegen eines vorzeichenbehafteten Vergleichs in Ataris 
+GEMDOS < 0.30 ist es ratsam, einen bestimmten Cluster als defekt zu markieren:
+Bei  1 Sektor   pro Cluster den Cluster $7FFF = 32767.
+Bei  2 Sektoren pro Cluster den Cluster $3FFF = 16383.
+Bei  4 Sektoren pro Cluster den Cluster $1FFF =  8191.
+Bei  8 Sektoren pro Cluster den Cluster  $7FF =  4095.
+Bei 16 Sektoren pro Cluster den Cluster  $3FF =  2047.
+Bei 32 Sektoren pro Cluster den Cluster  $1FF =  1023.
+Bei 64 Sektoren pro Cluster den Cluster   $7F =   511.
+
+
+Getbpb() (BIOS 7)
+-----------------
+
+Die Elemente ØrecsizÆ, ØclsizbÆ und ØnumclÆ des BPB sind vorzeichenlose 
+16-Bit-Werte! ØclsizbÆ nicht benutzen, sondern das 32-Bit-Ergebnis von
+Ørecsiz * clsizÆ.
+
+
+Dcntl() von Big-DOS
+-------------------
+
+#define FUTIME    (('F' << 8) | 3)  /* Zeit des Verzeichnisses setzen */
+/* Die Bezeichnungen XH_DL_... sind die der DOS-Limits aus xhdi.h (0 bis 7). */
+#define DL_SECSIZ ('D' << 8 | XH_DL_SECSIZ)  /* max. bpb->recsiz */
+    /* in Big-DOS z. Z.: 32768 = 16$8000 */
+#define DL_MINFAT ('D' << 8 | XH_DL_MINFAT)  /* min. Anzahl FATs */
+    /* in Big-DOS z. Z.: 1 */
+#define DL_MAXFAT ('D' << 8 | XH_DL_MAXFAT)  /* max. Anzahl FATs */
+    /* in Big-DOS z. Z.: 2 */
+#define DL_MINSPC ('D' << 8 | XH_DL_MINSPC)  /* min. bpb->clsiz */
+    /* in Big-DOS z. Z.: 1 */
+#define DL_MAXSPC ('D' << 8 | XH_DL_MAXSPC)  /* max. bpb->clsiz */
+    /* in Big-DOS z. Z.: 64 */
+#define DL_CLUSTS ('D' << 8 | XH_DL_CLUSTS)  /* max. bpb->numcl 16-Bit-FAT */
+    /* in Big-DOS z. Z.: 65518 = 16$FFEE */
+#define DL_MAXSEC ('D' << 8 | XH_DL_MAXSEC)  /* max. Anzahl Sektoren */
+    /* in Big-DOS z. Z.: 16$FFFFFF */
+#define DL_DRIVES ('D' << 8 | XH_DL_DRIVES)  /* max. Anzahl Laufwerke */
+    /* in Big-DOS z. Z.: 32 */
+#define DL_CLSIZB ('D' << 8 | 8)  /* max. bpb->clsizb */
+    /* in Big-DOS z. Z.: 32768 = 16$8000 */
+#define DL_RDLEN  ('D' << 8 | 9)  /* max. (bpb->rdlen * bpb->recsiz / 32) */
+    /* in Big-DOS z. Z.: 2032 */
+#define DL_FSIZ   ('D' << 8 | 10)  /* max. bpb->fsiz */
+    /* in Big-DOS z. Z.: 256 */
+#define DL_FATREC ('D' << 8 | 11)  /* max. bpb->fatrec */
+    /* in Big-DOS z. Z.: 512 */
+#define DL_CLUSTS12 ('D' << 8 | 12)  /* max. bpb->numcl 12-Bit-FAT */
+    /* in Big-DOS z. Z.: 4078 = 16$FEE */
+#define DL_CLUSTS32 ('D' << 8 | 13)  /* max. bpb->numcl 32-Bit-FAT */
+    /* in Big-DOS z. Z.: 0 */
+#define DL_BFLAGS ('D' << 8 | 14)  /* unterstÅtzte Bits in bpb->bflags */
+    /* in Big-DOS z. Z.: 2$11 */
+#define DL_FILESYS ('D' << 8 | 15)  /* (XBRA-)Kennung des Dateisystems */
+    /* in Big-DOS: 'BDOS' */
+#define DL_VERSION ('D' << 8 | 16)  /* Version des Dateisystems */
+    /* in Big-DOS z. Z.: 19950401 */
+#define DL_CHAR ('D' << 8 | 17)  /* Zeiger auf String mit erlaubten Zeichen */
+    /* Erlaubte Namen auf GEMDOS: */
+    /* Ø!\"#$%&'()+,-0..9;<=>@A..Z[]^_`{|}~Äéèêíôöõúù•¶ß®™´¨≠ÆØ·ÊÒˆ¯˙˝Æ */
+    /* Erlaubte Namen auf ISO 9293: */
+    /* Ø0..9A..Z_Æ */
+    /* Erlaubte Namen auf MS-DOS: */
+    /* Ø!#$%&'()-0..9@A..Z^_`{}~Äéèêíôöõúù•¶ß®™´¨≠ÆØ·ÊÒˆ¯˙˝Æ */
+    /* Erlaubte Namen auf GEMDOS und Kleinbuchstaben: */
+    /* Ø!\"#$%&'()+,-0..9;<=>@A..Z[]^_`a..z{|}~Äéèêíôöõúù•¶ß®™´¨≠ÆØ·ÊÒˆ¯˙˝Æ */
+#define DL_SETCHAR ('D' << 8 | 18)  /* Erlaubte Namen setzen oder abfragen */
+    /* arg = -1: Erlaubte Namen abfragen */
+    /* arg = 0: Erlaubte Namen auf GEMDOS setzen */
+    /* arg = 1: Erlaubte Namen auf ISO 9293 (oder 9660) d-Zeichen setzen */
+    /* arg = 2: Erlaubte Namen auf MS-DOS setzen */
+    /* arg = 3: Erlaubte Namen auf GEMDOS und Kleinbuchstaben setzen */
+    /* arg = 4: Erlaubte Namen auf VFAT setzen, reserviert */
+
+
+Dcntl(KER_DOSLIMITS, ...) aus MagiC 3
+-------------------------------------
+
+#define KER_DOSLIMITS 0x101  /* Kernel: Limits fÅr FAT-Dateisysteme */
+
+Big-DOS kennt diese Funktion auch.
+
+Mîgliche Probleme (auch bei MagiC!):
+˘ MetaDOS greift bei Dcntl() _immer_ auf den Pfad zu! Daher muû auf jeden Fall 
+  ein gÅltiger Zeiger auf einen Pfad Åbergeben werden!
+˘ Da das Minix-Dateisystem schon lÑnger eine Unterfunktion mit der gleichen 
+  Nummer kennt, muû dies ein Pfad sein, bei dem das Minix-Dateisystem 
+  garantiert nicht angesprochen wird. Das ist der Kernel-Pfad "U:\". 
+  (Minix-Pfade beginnen mit "#:\" oder "U:\#\", dabei ist # eine 
+  Laufwerkskennung ungleich "U".)
+˘ Wenn MiNT aktiv ist, dann ist es mîglich, daû Dcntl() eine andere 
+  Fehlermeldung als EINVFN zurÅckgibt. Daher nicht auf ungleich EINVFN testen!
+
+    MX_DOSLIMITS *p_DOS_limits;
+
+    p_DOS_limits = (MX_DOSLIMITS *)Dcntl(KER_DOSLIMITS, "U:\", 0L);
+        if ((ULONG)p_DOS_limits < 0xFFFFFF00UL) {
+            /* Zeiger ist gÅltig */
+            ...
+        }
+
+        clr.l   -(SP)
+        pea     Kernelpfad
+        move.w  #$101
+        move.w  #$130
+        trap    #1
+        lea     12(SP),SP
+        ; Vorzeichenlos grîûer als (unsigned long)(-256L) kann keine
+        ; gÅltige Adresse sein, sondern ist eine Fehlermeldung.
+        cmp.l   #$FFFFFF00,D0
+        bhs     kein_KER_DOSLIMITS
+        ...
+kein_KER_DOSLIMITS:
+
+Kernelpfad: dc.b "U:\", 0
+
+
+Autor, Adresse
+--------------
+
+MausNet:  Rainer Seitel @ KA
+Internet: Rainer_Seitel@ka.maus.de (bevorzugt, keine Mail > 16 KByte pro Tag!)
+          Rainer.Seitel@stud.uni-karlsruhe.de
+http://www.uni-karlsruhe.de/~Rainer.Seitel/bigdos.html
+http://wwwrzstud.rz.uni-karlsruhe.de/~ujo7/bigdos.html (fÅr Links diese nehmen)
+(http://129.13.95.1/~ujo7/bigdos.html)
