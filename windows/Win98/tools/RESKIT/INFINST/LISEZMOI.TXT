@@ -1,0 +1,80 @@
+Infinst.exe
+
+Fonction de Infinst.Exe :
+Infinst.exe ajoute un fichier .inf et les pilotes associés à un partage 
+d'installation de Windows 98.  
+Lorsque Windows 98 est installé sur d'autres ordinateurs à partir du partage, 
+les pilotes ajoutés sont installés comme s'ils faisaient partie de l'installation 
+d'origine de Windows 98. Ces pilotes peuvent être destinés à n'importe quel 
+type de matériel ou à des clients, protocoles ou services réseau supplémentaires.  
+Pour installer automatiquement des clients, protocoles ou services réseau, vous 
+devez les ajouter à votre fichier msbatch.inf, ce que vous pouvez faire à l'aide de 
+Microsoft Batch 98.
+
+Utilisation de Infinst :
+Remarque : cet outil nécessite un partage d'installation de Windows 98 doté 
+de permissions d'écriture.
+Il n'ajoute pas de fichiers sur un CD-ROM.
+1.  Démarrez l'outil en double-cliquant dessus. 
+2.  Entrez le chemin d'accès et le nom du fichier .inf que vous souhaitez 
+    ajouter à l'installation de Windows 98.
+3.  Entrez le chemin d'accès et le nom de fichier Install.exe sur le partage
+    d'installation Windows 98 auquel vous souhaitez ajouter le fichier .inf.
+4.  Cliquez sur Ajouter l'Inf.
+
+Infinst effectue les tâches suivantes lors de l'ajout d'un fichier .inf :
+*  Il copie le fichier inf et les pilotes nécessaires (répertoriés dans la section 
+   CopyFiles= du fichier .inf) dans le partage d'installation de Windows 98. 
+   Si un fichier catalogue (.cat) ou un fichier de disposition (.inf) est 
+   spécifié dans le fichier inf, Infinst l'ajoute également.
+*  Il ajoute les entrées appropriées dans les fichiers suivants : tous les fichiers
+   inf précédents dont les identificateurs Plug-and-Play correspondent, Custom.inf
+   et Infinst.log. Ces fichiers sont modifiés comme indiqué plus loin.  
+   Remarque : Infinst copie tous les fichiers répertoriés dans la section CopyFiles= 
+   du fichier .inf dans le partage d'installation. Toutefois, il ne traite pas
+   automatiquement tous les fichiers .inf répertoriés dans la section CopyFiles=,
+   lesquels peuvent nécessiter un ajout manuel pour que l'installation s'exécute
+   normalement. 
+
+Fonctionnement de Infinst.Exe :
+1.  Infinst.exe crée deux répertoires dans le partage d'installation de Windows 98,
+    l'un (Oldinf) destiné aux fichiers .inf remplacés par de nouvelles versions de
+    même nom, l'autre (Wininf) servant à stocker les fichiers .inf compris dans Windows 98. 
+2.  Infinst.exe vérifie les versions des fichiers .inf à ajouter (seuls les fichiers .inf
+    de version $CHICAGO$ doivent être ajoutés, mais Infinst.Exe corrige automatiquement
+    certaines versions en $CHICAGO$).
+3.  Infinst.exe recherche les identificateurs Plug-and-Play dans le fichier .inf à ajouter.
+4.  Infinst.exe compare les identificateurs Plug-and-Play trouvés dans le nouveau fichier
+    .inf avec ceux figurant dans tous les fichiers .inf du répertoire Wininf.
+5.  S'il trouve un fichier .inf de même identificateur Plug-and-Play, Infinst.Exe le copie
+    dans le répertoire contenant les fichiers d'installation de Windows 98, sauf si ce
+    dernier contient déjà un fichier .inf du même nom.
+6.  Infinst.Exe compare les identificateurs Plug-and-Play du nouveau fichier .inf avec
+    ceux contenus dans tous les fichiers .inf du partage d'installation de Windows 98.
+7.  S'il trouve un fichier .inf de même identificateur Plug-and-Play, tous les
+    identificateurs Plug-and-Play identiques sont isolés en commentaire. 
+8.  Infinst.Exe copie le nouveau fichier .inf et tous les pilotes nécessaires dans le
+    répertoire où se trouvent les fichiers d'installation de Windows 98.
+9.  Infinst.Exe modifie le fichier Custom.inf. Remarque : les fichiers .inf et les pilotes
+    d'installation des classes media (comme net) sont ajoutés dans un plus grand nombre
+    de sections du fichier Custom.inf que ceux des autres classes, car ils peuvent s'avérer
+    être nécessaires à un stade antérieur de l'installation. 
+10. Infinst.Exe renseigne le journal Infinst.log.
+
+Infinst.Exe peut ajouter des fichiers .inf pour un ou plusieurs périphériques Plug-and-Play,
+que ces derniers soient ou non pris en charge par Windows 98. Les pilotes ajoutés par
+Infinst.Exe devraient s'installer correctement, que Windows 98 soit installé localement
+ou à travers un réseau, qu'il s'agisse d'une nouvelle installation ou d'une mise à niveau.
+En d'autres termes, vous pouvez installer tous les .inf et exécuter le programme
+d'installation autant de fois que vous le souhaitez. 
+
+Limites liées à la conception :
+1.  Si vous ajoutez un fichier .inf de même nom qu'un autre compris dans Windows 98 ou 
+    ajouté précédemment, vous supprimez la fonctionnalité du fichier .inf existant, quels
+    que soient les identificateurs Plug-and-Play.
+2.  Vous devez avoir l'accès en écriture sur l'emplacement des fichiers d'installation de 
+    Windows 98 pour que Infinst.Exe puisse fonctionner (autrement dit, Infinst.Exe ne
+    fonctionne pas sur un CD-ROM).
+3.  L'ajout d'un fichier .inf contenant les mêmes identificateurs Plug-and-Play qu'un
+    autre fichier .inf déjà présent dans le partage d'installation entraîne la suppression
+    des identificateurs Plug-and-Play de l'ancien fichier .inf.

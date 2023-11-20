@@ -1,0 +1,249 @@
+
+;
+; INF file for STB Windows 98 Display Support.
+;
+; Copyright 1994-1998 STB Systems, Inc.
+;
+
+; GATEWAY is defined
+
+[Version]
+Class=DISPLAY
+Signature="$Windows95$"
+Provider=%STB%
+
+;
+; Manufacturer section
+;
+
+[Manufacturer]
+%STB%=Mfg.STB
+
+[Mfg.STB]
+%NV3T_GATEWAY_TOLSTOY%=STB.Install,,PCI\VEN_12D2&DEV_0018&SUBSYS_8030107B
+%NV3T_GENERIC_NOTV%=STB.Install,,PCI\VEN_12D2&DEV_0018&SUBSYS_1B2010B4
+%NV3T_GENERIC_AGP_NOTV%=STB.Install,,PCI\VEN_12D2&DEV_0018&SUBSYS_222A10B4
+%NV3T_GENERIC_PCI_NOTV%=STB.Install,,PCI\VEN_12D2&DEV_0018&SUBSYS_223010B4
+%NV3T_AGP_NOTV%=STB.Install,,PCI\VEN_12D2&DEV_0018&SUBSYS_223510B4
+%NV3T_OEM7_AGP_NOTV%=STB.Install,,PCI\VEN_12D2&DEV_0018&SUBSYS_223510B4
+%NV3_GENERIC_NOTV%=STB.Install,,PCI\VEN_12D2&DEV_0018&SUBSYS_1B1B10B4
+%NV3_NOTV%=STB.Install,,PCI\VEN_12D2&DEV_0018&SUBSYS_1B2110B4
+%NV3_OEM7_PCI_NOTV%=STB.Install,,PCI\VEN_12D2&DEV_0018&SUBSYS_1B2110B4
+%NV3_OEM7_AGP_NOTV%=STB.Install,,PCI\VEN_12D2&DEV_0018&SUBSYS_1B2110B4
+%NV3_OEM7_NTSC_AGP_TV%=STB.Install,,PCI\VEN_12D2&DEV_0018&SUBSYS_1B2210B4
+%NV3_OEM7_PAL_AGP_TV%=STB.Install,,PCI\VEN_12D2&DEV_0018&SUBSYS_1B2310B4
+%NV3_GENERIC_DVD%=STB.Install,,PCI\VEN_12D2&DEV_0018&SUBSYS_1B2710B4
+
+; *****************************************************************************
+;
+; STB Strings section
+;
+; *****************************************************************************
+
+[Strings]
+
+STB = "STB Systems, Inc. (OEM)"
+
+PRODUCT = "STB Velocity 128"
+
+NV3T_GENERIC_NOTV= "STB Velocity 128"
+NV3T_GENERIC_AGP_NOTV= "STB Velocity 128"
+NV3T_GENERIC_PCI_NOTV= "STB Velocity 128"
+NV3T_AGP_NOTV= "STB Velocity 128"
+NV3T_OEM7_AGP_NOTV= "STB Velocity 128"
+NV3_GENERIC_NOTV= "STB Velocity 128"
+NV3_NOTV= "STB Velocity 128"
+NV3_OEM7_PCI_NOTV= "STB Velocity 128"
+NV3_OEM7_AGP_NOTV= "STB Velocity 128"
+NV3_OEM7_NTSC_AGP_TV= "STB Velocity 128"
+NV3_OEM7_PAL_AGP_TV= "STB Velocity 128"
+NV3_GENERIC_DVD= "STB Velocity 128"
+NV3T_GATEWAY_TOLSTOY= "STB Velocity 128"
+
+ThisGUID="{110AED10-388C-11D0-8EBD-00A024D29F34}"
+Nv3TweakName="Nv3Tweak"
+HandlerKey="Software\Microsoft\Windows\CurrentVersion\Controls Folder\Display\shellex\PropertySheetHandlers"
+
+; Registry key paths
+
+Root = "SOFTWARE\STB Systems\STB Vision"
+Gen  = "SOFTWARE\STB Systems\STB Vision\General"
+Dsp  = "SOFTWARE\STB Systems\STB Vision\Display"
+Usr  = "Software\STB Systems\STB Vision"
+GUsr = "Software\STB Systems\STB Vision\General"
+DUsr = "Software\STB Systems\STB Vision\Display"
+Win  = "SOFTWARE\Microsoft\Windows\CurrentVersion"
+
+; CLSID definitions
+Misc = "{1F0358A0-DAAF-11d1-86E7-00A02494E5A1}"
+
+; *****************************************************************************
+;
+; Install section
+;
+; *****************************************************************************
+
+[STB.Install]
+DelFiles=DelVisn
+CopyFiles=CopySys, CopyWin
+DelReg=DelReg
+AddReg=AddReg
+UpdateInis=ProdINI
+UpdateIniFields=UpdateINI
+
+; *****************************************************************************
+;
+; Source disk names section
+;
+; *****************************************************************************
+
+[SourceDisksNames]
+51="STB Windows Display Support",,
+
+; *****************************************************************************
+;
+; Destination directories section
+;
+; *****************************************************************************
+
+[DestinationDirs]
+DefaultDestDir=11
+DelVisn=11
+CopySys=11
+CopyWin=10
+
+; *****************************************************************************
+;
+; Source disk files section
+;
+; *****************************************************************************
+
+[SourceDisksFiles]
+
+stbv128d.dll=51
+stbv128.drv=51
+stbv128.vxd=51
+v128mni2.vxd=51
+v128rm.vxd=51
+v128api.dll=51
+v128sys.dll=51
+vgartd.vxd=51
+v128ogl.dll=51
+
+; *****************************************************************************
+;
+; Product registry editing section
+;
+; *****************************************************************************
+
+[AddReg]
+HKLM,System\CurrentControlSet\Services\VxD\VGARTD,StaticVxD,2,"VGARTD.VXD"
+
+HKLM,SOFTWARE\STBSystems\STBV128,STBOPT1-640,0x10001,f
+HKLM,SOFTWARE\STBSystems\STBV128,STBOPT1-800,0x10001,10
+HKLM,SOFTWARE\STBSystems\STBV128,STBOPT1-HBTDH,0x10001,0
+HKLM,"Software\NV3D3D","AAMETHOD",65537,2,0,0,0
+HKLM,"Software\NV3D3D","LODMETHOD",65537,3,0,0,0
+
+HKLM,"Software\NVIDIA Corporation\OpenGL","GammaTimes1000",,1400
+HKCU,"Software\STB Systems\STB Vision\Display\Monitor","DDC",,"Strict"
+
+HKR,,Ver,,4.0
+HKR,,DevLoader,,*vdd
+HKR,DEFAULT,DDC,,1
+HKR,DEFAULT,defaultdrv,,stbv128.drv
+HKR,DEFAULT,drv,,stbv128.drv
+HKR,DEFAULT,drv2,,stbv128.drv
+HKR,DEFAULT,minivdd,,stbv128.vxd
+HKR,DEFAULT,minivdd2,,v128mni2.vxd
+HKR,DEFAULT,Mode,,"8,640,480"
+HKR,DEFAULT,vdd,,"*vdd"
+HKR,DEFAULT,RefreshRate,,-1
+HKR,DEFAULT,OptimalRefreshLimit,,75
+
+HKR,"MODES\4\640,480",drv,,vga.drv
+HKR,"MODES\4\640,480",vdd,,*vdd
+HKR,"MODES\8\640,480",,,"60,72,75,85,100,120,140,160"
+HKR,"MODES\8\800,600",,,"56,60,72,75,85,100,120,140"
+HKR,"MODES\8\1024,768",,,"43,60,70,75,85,100,120"
+
+HKR,"MODES\8\1280,1024",,,"43,60,75,85"
+HKR,"MODES\8\1600,1200",,,"48,60,65,70,75,80,85"
+HKR,"MODES\8\1920,1200",,,"76"
+HKR,"MODES\16\640,480"
+HKR,"MODES\16\800,600"
+HKR,"MODES\16\1024,768"
+
+HKR,"MODES\16\1280,1024"
+HKR,"MODES\16\1600,1200"
+HKR,"MODES\16\1920,1200"
+HKR,"MODES\32\640,480"
+HKR,"MODES\32\800,600"
+HKR,"MODES\32\1024,768"
+
+HKR,"MODES\32\1280,1024",,,"43,60,75"
+HKR,"MODES\32\1600,1200",,,"60"
+
+HKLM,Software\Microsoft\Windows\CurrentVersion\OpenGLdrivers,STBV128,2,"v128ogl.dll"
+
+; *****************************************************************************
+;
+;Product CopyFiles sections
+;
+; *****************************************************************************
+
+[CopySys]
+stbv128.drv,stbv128.drv
+stbv128d.dll,stbv128d.dll
+stbv128.vxd,stbv128.vxd
+v128mni2.vxd,v128mni2.vxd
+v128rm.vxd,v128rm.vxd
+v128ogl.dll,v128ogl.dll
+v128api.dll=v128api.dll
+v128sys.dll=v128sys.dll
+vgartd.vxd=vgartd.vxd,,32
+;tvo16.dll=tvo16.dll
+;tvo32.dll=tvo32.dll
+;tvoutPg.dll=tvoutPg.dll
+
+[CopyWin]
+
+; *****************************************************************************
+;
+; Common registry editing sections
+;
+; *****************************************************************************
+
+[DelReg]
+
+HKR,, DevLoader
+HKR,, Ver
+HKR,  DEFAULT
+HKR,  MODES
+HKR,  CURRENT
+HKLM, System\CurrentControlSet\Services\VxD\NV3RM
+HKLM, System\CurrentControlSet\Services\VxD\V128RM
+HKLM, SOFTWARE\STBSystems\STBV128, MaxRefreshRate
+
+HKLM, SOFTWARE\STBSystems\STBVision
+HKLM, SOFTWARE\STBSystems
+HKLM, SOFTWARE\Microsoft\Windows\CurrentVersion\Run, STBVision
+
+HKLM,"Software\Microsoft\Windows\CurrentVersion\Controls Folder\Display\Shellex\PropertySheetHandlers\TV Out"
+
+HKLM,Software\Microsoft\Windows\CurrentVersion\OpenGLdrivers,RIVA128
+HKLM,Software\Microsoft\Windows\CurrentVersion\OpenGLdrivers,STBV128
+
+HKLM,%HandlerKey%\%Nv3TweakName%,,,%ThisGUID%
+
+HKLM,"%Root%"
+
+;
+; Vision INI file editing sections
+;
+
+[UpdateINI]
+
+; Delete Vision 95
+
+win.ini, windows, load, *stbvisn.exe, , 1

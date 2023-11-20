@@ -1,0 +1,33 @@
+---------------------------------------------------
+         Microsoft Windows 98 Second Edition
+  README for restoring the MSN icon to the desktop
+                   April 1999
+---------------------------------------------------
+
+(c) Copyright Microsoft Corporation, 1999
+
+This document provides complementary or late-breaking
+information to supplement the Microsoft Windows 98
+Second Edition documentation.
+
+----------------------------------------------------------
+Using RstorMSN.exe to restore the MSN installation icon
+----------------------------------------------------------
+
+To install MSN if the Setup MSN Internet Access icon has been removed
+from your desktop, follow the below procedure to restore the icon.
+You can then double-click the icon to start the MSN installation
+process.
+
+Note: If MSN is already installed on your computer, you do not need
+to use this utility.
+
+To restore the MSN Internet Access desktop icon:
+
+1. On the Windows 98 CD, in the \Tools\MTSutil\Rstormsn folder,
+   double-click RSTORMSN.EXE.
+
+2. Click OK.
+
+You can now double-click the MSN icon on your desktop to
+install MSN Internet Access.

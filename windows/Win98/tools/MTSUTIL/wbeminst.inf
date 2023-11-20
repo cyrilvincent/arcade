@@ -1,0 +1,174 @@
+; WBEM.INF
+;
+; This is the Setup information file to install Web-based Enterprise Management (WBEM).
+;
+; Copyright (c) 1997, Microsoft Corporation
+
+[version]
+signature  = "$CHICAGO$"
+SetupClass = BASE
+LayoutFile = layout.inf, layout1.inf, layout2.inf
+
+[DefaultInstall]
+CopyFiles   = WBEM.CoreFiles, WBEM.WBEMAdmin, WBEM.Security
+AddReg      = WBEM.AddReg, WBEM.Register, WBEM.installed
+DelReg      = WBEM.DelOldReg ; Remove Beta Registry entries
+DelFiles    = Core.DelFiles, Security.DelFiles, DB.DelFiles
+ValidateProc= SETUPX.DLL, P_WBEMOC
+
+[WBEM_remove]
+DelFiles    = WBEM.CoreFiles, WBEM.WBEMAdmin, WBEM.Security, Core.DelFiles, DB.DelFiles, Security.DelFiles
+DelReg      = WBEM.DelReg
+AddReg      = WBEM.notinstalled
+
+[WBEM.installed]
+HKLM,%KEY_OPTIONAL%\%WBEM_section%,Installed,,"1"
+
+[Core.DelFiles]
+frahmmod.dll,,,1
+hmmcli.dll,,,1
+hmmdeftr.dll,,,1
+hmmsvc.dll,,,1
+hmmsvc.tlb,,,1
+hmmwin32.dll,,,1
+hmmwin32.mof,,,1
+hmom.exe,,,1
+hmomcore.dll,,,1
+hmomess.dll,,,1
+server2.dll,,,1
+wbemcpl.dll,,,1
+wbemstub.dll,,,1
+wbemcpl.exe,,,32
+CIMOM.EXE,,,32
+wbemuser.exe,,,32
+
+[DB.DelFiles]
+cim.rep,,,1
+
+[security.DelFiles]
+CIMApp.cpl,,,1
+CIMEdit.exe,,,1
+CIMUsers.ocx,,,1
+WBEMCPL.CPL,,,1
+
+
+;
+; Set the destination directory under the windows system directory
+;
+[DestinationDirs]
+WBEM.InfFiles     = 17                 ; LDID_INF
+WBEM.Security     = 11                 ; LDID_SYS
+WBEM.CoreFiles    = 11,WBEM
+WBEM.WBEMAdmin    = 11,WBEM
+Core.DelFiles     = 11,WBEM
+DB.DelFiles	  = 11,WBEM\DATABASE
+Security.DelFiles = 11
+
+[WBEM.Security]
+
+[WBEM.WBEMAdmin]
+WBEMPERM.EXE,,,32
+
+[WBEM.CoreFiles]
+MOFCOMP.EXE,,,32
+CIM16NET.DLL,,,32
+CIM32NET.DLL,,,32
+CIMWIN32.MOF,,,32
+FASTPROX.dll,,,32
+FRAMEDYN.dll,,,32
+MOFD.DLL,,,32
+REGEVENT.MOF,,,32
+STDPROV.dll,,,32
+UNSECAPP.EXE,,,32
+WBEMCOMN.DLL,,,32
+WBEMCORE.dll,,,32
+WBEMDISP.DLL,,,32
+WBEMDISP.TLB,,,32
+WBEMESS.dll,,,32
+WBEMPROX.dll,,,32
+WBEMSVC.dll,,,32
+WMI.MOF,,,32
+WMIPROV.dll,,,32
+CIMWin32.dll,,,32
+CIMW32ex.dll,,,32
+WinMgmtR.dll,,,32
+WinMgmt.exe,,,32
+wbemcntl.exe,,,32
+wbemperm.exe,,,32
+wbemstop.exe,,,32
+wmimofck.exe,,,32
+wbemupgd.dll,,,32
+
+[WBEM.AddReg]
+HKLM,%WBEM_REG%,"Installation Directory",0x00020000,"%11%\WBEM"
+HKLM,%WBEM_REG%,"Build",0,"%WBEM_BUILD%"
+HKLM,%WBEM_REG%,"MOF Self-Install Directory",0x00020000,"%11%\WBEM\MOF"
+HKLM,%WBEM_REG%,"Installed Components",0,"CORE"
+HKLM,%WBEM_REG%\CIMOM,"Autorecover MOFs (empty)",0,""
+HKLM,%WBEM_REG%\CIMOM,"EnableEvents",0,"1"
+HKLM,%WBEM_REG%\CIMOM,"EnableDefaultRemoting",0,"0"
+HKLM,%WBEM_REG%\CIMOM,"Grow Db By",0,"81920"
+HKLM,%WBEM_REG%\CIMOM,"Max Db Size",0,"0"
+HKLM,%WBEM_REG%\CIMOM,"Starting Db Size",0,"245760"
+HKLM,%WBEM_REG%\CIMOM,Logging,0,"1"
+HKLM,%WBEM_REG%\CIMOM,TimeOutMs,0,"20000"
+HKLM,%WBEM_REG%\CIMOM,SetupForDCOM,0,"1"
+HKLM,%WBEM_REG%\CIMOM,"Repository Directory",0x00020000,"%11%\WBEM\REPOSITORY"
+HKLM,%WBEM_REG%\CIMOM,"Working Directory",0x00020000,"%11%\WBEM"
+;
+HKCR,CLSID\%INPSERVCLSID%,,0,"Microsoft WBEM Server"
+HKCR,CLSID\%INPSERVCLSID%,AppId,0,"%INPSERVCLSID%"
+;
+;
+HKCR,CLSID\%CIMWIN32CLSID%,,0,"Microsoft WBEM Managed Object Provider"
+HKCR,CLSID\%CIMWIN32CLSID%\InprocServer32,,0,"%11%\WBEM\CIMWIN32.dll"
+HKCR,CLSID\%CIMWIN32CLSID%\InprocServer32,ThreadingModel,0,"Both"
+
+
+[WBEM.DelReg]
+HKLM,%WBEM_REG%
+HKCR,AppId\CIMOM.EXE
+HKCR,AppId\%INPSERVCLSID%
+HKCR,CLSID\%INPSERVCLSID%
+HKCR,CLSID\%MAILCLSID%
+HKCR,CLSID\%PIPECLSID%
+HKCR,CLSID\%CIMWIN32CLSID%
+
+
+[WBEM.DelOldReg]
+HKLM,%WBEM_REG%\CIMOM,"Database Directory"
+HKLM,%WBEM_REG%\CIMOM,"LocalProtocolPref"
+HKLM,%WBEM_REG%\CIMOM,"RemoteProtocolPref"
+
+[WBEM.Register]
+HKLM,%KEY_RUNONCE%,RegUNSECAPP,0,"%11%\WBEM\UNSECAPP.EXE /regserver"
+HKLM,%KEY_RUNONCE%,Regwinmgmt,0,"%11%\WBEM\winmgmt.EXE /regserver"
+HKLM,%KEY_RUNONCE%,RegFASTPROX,0,"%11%\regsvr32 /s %11%\WBEM\fastprox.dll"
+HKLM,%KEY_RUNONCE%,RegWMIPROV,0,"%11%\regsvr32 /s %11%\WBEM\wmiprov.dll"
+HKLM,%KEY_RUNONCE%,RegSTDPROV,0,"%11%\regsvr32 /s %11%\WBEM\stdprov.dll"
+HKLM,%KEY_RUNONCE%,RegWBEMCORE,0,"%11%\regsvr32 /s %11%\WBEM\WBEMcore.dll"
+HKLM,%KEY_RUNONCE%,RegWBEMDISP,0,"%11%\regsvr32 /s %11%\WBEM\WBEMDISP.dll"
+HKLM,%KEY_RUNONCE%,RegWBEMESS,0,"%11%\regsvr32 /s %11%\WBEM\WBEMESS.dll"
+HKLM,%KEY_RUNONCE%,RegWBEMPROX,0,"%11%\regsvr32 /s %11%\WBEM\WBEMPROX.dll"
+HKLM,%KEY_RUNONCE%,RegWBEMSVC,0,"%11%\regsvr32 /s %11%\WBEM\WBEMSVC.dll"
+HKLM,%KEY_RUNONCE%,RegCIMWIN32,0,"%11%\regsvr32 /s %11%\WBEM\CIMWIN32.dll"
+HKLM,%KEY_RUNONCE%,RegCIMW32EX,0,"%11%\regsvr32 /s %11%\WBEM\CIMW32EX.dll"
+HKLM,%KEY_RUNONCE%,RegWinMgmtr,0,"%11%\regsvr32 /s %11%\WBEM\WinMgmtr.dll"
+HKLM,%KEY_RUNONCE%,RegWBEMComn,0,"%11%\regsvr32 /s %11%\WBEM\wbemcomn.dll"
+HKLM,%KEY_RUNONCE%,Regmofd,0,"%11%\regsvr32 /s %11%\WBEM\mofd.dll"
+HKLM,%KEY_RUNONCE%,WBEMUpgd,0,"rundll32.exe %11%\WBEM\wbemupgd.dll,RUNDLLENTRY"
+
+[Strings]
+;Non-Localizable strings:
+KEY_OPTIONAL = "SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents"
+KEY_RUNONCE = "SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce"
+WBEM_REG = "SOFTWARE\Microsoft\WBEM"
+WBEM_BUILD = "698"
+INPSERVCLSID = "{74864DA1-0630-11D0-A5B6-00AA00680C3F}"
+CIMWIN32CLSID = "{d63a5850-8f16-11cf-9f47-00aa00bf345c}"
+
+;Localizable strings:
+WBEM_section = "WBEM"
+WBEM_DESC = "Gestion système par interface Web"
+WBEM_TIP = "Composants nécessaires aux administrateurs système et aux techniciens de support permettant de détecter des problèmes et d'administrer des systèmes à distance (WBEM)."
+WBEMUSERMGR = "Gestionnaire d'utilisateurs WBEM"

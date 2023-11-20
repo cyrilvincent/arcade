@@ -1,0 +1,25 @@
+value:string
+La rédaction de documents, la gestion d'un compte bancaire et l'envoi de courrier n'ont déjà plus beaucoup de secrets pour vous.@
+Pour toutes ces tâches et bien d'autres, à la maison ou au bureau, votre ordinateur peut devenir un outil très utile.@
+Votre ordinateur se compose de plusieurs éléments matériels. L'un des plus importants est l'unité centrale, ou UC.@
+Ce composant abrite le processeur central, qui est en quelque sorte le cerveau de votre ordinateur.@
+Votre ordinateur comporte également un moniteur, qui ressemble un peu à un écran de téléviseur.@
+C'est sur l'écran de ce moniteur que s'affichent le texte et les images générés par votre ordinateur.@
+Pour communiquer avec votre ordinateur, vous disposez de deux solutions.@
+Vous pouvez taper les informations et instructions que vous destinez à votre ordinateur en utilisant un clavier, qui ressemble à un jeu de touches de machine à écrire.@
+L'autre solution consiste à utiliser un dispositif de pointage, tel qu'une souris, pour sélectionner et déplacer les éléments apparaissant sur l'écran du moniteur.@
+Il existe d'autres composants matériels, qui se connectent pour la plupart à l'arrière de votre ordinateur.@
+Parmi ces composants, on trouve par exemple les imprimantes, les modems et les haut-parleurs.@
+Une imprimante permet d'obtenir une version papier des informations affichées sur votre écran ou contenues dans un document.@
+Un modem connecte votre ordinateur à Internet par l'intermédiaire d'une ligne téléphonique.@
+Les sons peuvent être entendus à l'aide de haut-parleurs intégrés ou externes.@
+Revenons maintenant sur ce que vous avez appris.@
+Vous rappelez-vous quels sont les différents composants matériels de votre ordinateur&nbsp;?@
+Pour revoir la fonction de chaque composant, appuyez sur la touche correspondante de votre clavier.@
+<IMG SRC="images/Num1.gif" align=bottom> L'unité centrale abrite divers composants matériels, parmi lesquels le processeur central, qui est le cerveau de votre ordinateur.@
+<IMG SRC="images/Num2.gif" align=bottom> Voici le moniteur, qui ressemble à un écran de téléviseur et qui affiche le texte et les images générés par votre ordinateur.@
+<IMG SRC="images/Num3.gif" align=bottom> Le clavier est le dispositif qui vous permet de transmettre des informations et instructions à votre ordinateur en les tapant.@
+<IMG SRC="images/Num4.gif" align=bottom> Vous utilisez la souris pour sélectionner et déplacer des éléments à l'écran.@
+Dans cette section, vous vous êtes familiarisé avec votre ordinateur.@
+La prochaine leçon de ce didacticiel, intitulée <B>Utilisation du clavier,</B> va vous apprendre à donner des instructions à votre ordinateur.@
+Appuyez sur <B>GAUCHE</B> <IMG class="always" id=backarr SRC="images/bkbtn.gif" style="cursor:hand" ALIGN=MIDDLE onclick="prevseq()"> pour revenir en arrière&nbsp;; <B>DROITE</B> <IMG class="always" id=frwdarr SRC="images/fwdbtn.gif" style="cursor:hand" ALIGN=MIDDLE onclick="nextseq()"> pour continuer.

@@ -1,0 +1,194 @@
+-----------------------------------------------------
+            LISEZ-MOI Microsoft Windows 98 
+     pour le répertoire ICS du CD-ROM Windows 98
+                    
+-----------------------------------------------------
+
+(c) Copyright Microsoft Corporation, 1999
+
+
+Ce document contient des informations supplémentaires
+ou de dernière minute qui complètent la documentation
+de Microsoft Windows 98.
+
+----------------------------
+Comment utiliser ce document
+----------------------------
+
+Pour visualiser ce document dans le Bloc-notes, 
+agrandissez la fenêtre du Bloc-notes.
+
+Pour l'imprimer, ouvrez-le avec le Bloc-notes ou un autre
+traitement de texte, puis cliquez sur la commande Imprimer
+du menu Fichier.
+
+--------
+SOMMAIRE
+--------
+DHCP_OFF.INF - DÉSACTIVATION DU SERVICE DHCP POUR LE 
+               PARTAGE DE CONNEXION INTERNET
+ DHCP_ON.INF - ACTIVATION DU SERVICE DHCP POUR LE 
+               PARTAGE DE CONNEXION INTERNET
+ DNS_OFF.INF - DÉSACTIVATION DU SERVICE DE TRANSFERT DNS
+               POUR LE PARTAGE DE CONNEXION INTERNET
+  DNS_ON.INF - ACTIVATION DU SERVICE DE TRANSFERT DNS
+               POUR LE PARTAGE DE CONNEXION INTERNET
+     ICS.ADM - MODÈLE POUR L'ÉDITEUR DE STRATÉGIE SYSTÈME
+               QUI PERMET AUX ADMINISTRATEURS DE DÉSACTIVER
+               LE PARTAGE DE CONNEXION INTERNET À L'AIDE 
+               D'UNE STRATÉGIE
+
+
+====================================================
+DHCP_OFF.INF - DÉSACTIVATION DU SERVICE DHCP POUR LE 
+               PARTAGE DE CONNEXION INTERNET
+====================================================
+
+Le fichier DHCP_OFF.INF peut être utilisé pour désactiver
+la partie serveur DHCP du Partage de connexion Internet
+lorsque celui-ci n'est pas nécessaire.
+
+DHCP est activé par défaut lorsque le Partage de connexion
+Internet est installé.
+DHCP peut être contrôlé par l'intermédiaire du paramètre 
+EnableDHCP (type DWORD) dans la clé du Registre :
+HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\ICSharing\Settings\General
+
+Lorsque la valeur du paramètre EnableDHCP est égale à zéro, 
+la fonctionnalité EnableDHCP est désactivée. 
+
+
+-------------------------------------------------------------
+Pour affecter au paramètre EnableDHCP du Registre la valeur 0
+-------------------------------------------------------------
+
+1. Sélectionnez DHCP_OFF.INF dans le dossier \Tools\MTSutil\ICS 
+   du CD-ROM Windows 98.
+
+2. Cliquez avec le bouton droit sur DHCP_OFF.INF.
+	- ou -
+   Maintenez la touche MAJ enfoncée et appuyez sur F10.
+
+3. Cliquez sur INSTALLER pour modifier la valeur du paramètre 
+   EnableDHCP.
+
+
+========================================================
+DHCP_ON.INF - ACTIVATION DU SERVICE DHCP POUR LE PARTAGE 
+              DE CONNEXION INTERNET
+========================================================
+
+DHCP_ON.INF peut être utilisé pour activer la partie serveur 
+DHCP du Partage de connexion Internet lorsque celui-ci est 
+nécessaire.
+
+DHCP est activé par défaut lorsque le Partage de connexion 
+Internet est installé.
+DHCP peut être contrôlé par l'intermédiaire du paramètre 
+EnableDHCP (type DWORD) dans la clé du Registre :
+HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\ICSharing\Settings\General
+
+Lorsque la valeur du paramètre EnableDHCP est égale à 1, 
+la fonctionnalité EnableDHCP est activée. 
+
+-------------------------------------------------------------
+Pour affecter au paramètre EnableDHCP du Registre la valeur 1
+-------------------------------------------------------------
+1. Sélectionnez DHCP_ON.INF dans le dossier \Tools\MTSutil\ICS 
+   du CD-ROM Windows 98.
+
+2. Cliquez avec le bouton droit sur DHCP_ON.INF.
+	- ou -
+   Maintenez la touche MAJ enfoncée et appuyez sur F10.
+
+3. Cliquez sur INSTALLER pour modifier la valeur du paramètre 
+   EnableDHCP.
+
+
+=======================================================
+DNS_OFF.INF - DÉSACTIVATION DU SERVICE DE TRANSFERT DNS
+              POUR LE PARTAGE DE CONNEXION INTERNET
+=======================================================
+
+DNS_OFF.INF peut être utilisé pour désactiver la partie serveur 
+DNS du Partage de connexion Internet lorsque celui-ci n'est pas 
+nécessaire.
+
+DNS est activé par défaut lorsque le Partage de connexion Internet 
+est installé.
+DNS peut être contrôlé par l'intermédiaire du paramètre 
+EnableDNS (type DWORD) dans la clé du Registre :
+HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\ICSharing\Settings\General
+
+Lorsque la valeur du paramètre EnableDNS est égale à 0, 
+la fonctionnalité EnableDNS est désactivée. 
+
+
+------------------------------------------------------------
+Pour affecter au paramètre EnableDNS du Registre la valeur 0
+------------------------------------------------------------
+
+1. Sélectionnez DNS_OFF.INF dans le dossier \Tools\MTSutil\ICS 
+   du CD-ROM Windows 98.
+
+2. Cliquez avec le bouton droit sur DNS_OFF.INF.
+	- ou -
+   Maintenez la touche MAJ enfoncée et appuyez sur F10.
+
+3. Cliquez sur INSTALLER pour modifier la valeur du paramètre 
+   EnableDNS.
+
+
+===================================================
+DNS_ON.INF - ACTIVATION DU SERVICE DE TRANSFERT DNS
+             POUR LE PARTAGE DE CONNEXION INTERNET
+===================================================
+
+DNS_ON.INF peut être utilisé pour activer la partie serveur 
+DNS du Partage de connexion Internet lorsque celui-ci est 
+nécessaire.
+
+DNS est activé par défaut lorsque le Partage de connexion 
+Internet est installé.
+DNS peut être contrôlé par l'intermédiaire du paramètre 
+EnableDNS (type DWORD) dans la clé du Registre :
+HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\ICSharing\Settings\General
+
+Lorsque la valeur du paramètre EnableDNS est égale à 1, 
+la fonctionnalité EnableDNS est activée. 
+
+
+------------------------------------------------------------
+Pour affecter au paramètre EnableDNS du Registre la valeur 1
+------------------------------------------------------------
+
+1. Sélectionnez DNS_OFF.INF dans le dossier \Tools\MTSutil\ICS
+   du CD-ROM Windows 98.
+
+2. Cliquez avec le bouton droit sur DNS_OFF.INF.
+	- ou -
+   Maintenez la touche MAJ enfoncée et appuyez sur F10.
+
+3. Cliquez sur INSTALLER pour modifier la valeur du paramètre 
+   EnableDNS.
+
+
+========================================================
+ICS.ADM - MODÈLE POUR L'ÉDITEUR DE STRATÉGIE SYSTÈME QUI 
+          PERMET AUX ADMINISTRATEURS DE DÉSACTIVER LE 
+          PARTAGE DE CONNEXION INTERNET À L'AIDE D'UNE
+          STRATÉGIE
+========================================================
+
+Le fichier ICS.ADM peut être chargé en tant que modèle 
+dans l'éditeur de stratégie système lorsque l'administrateur 
+réseau ne souhaite pas offrir aux utilisateurs la possibilité 
+d'utiliser le Partage de connexion Internet.
+
+Une option s'affiche qui permet à l'administrateur réseau 
+de définir une stratégie qui désactive le Partage de connexion 
+Internet pour les utilisateurs qui ouvrent une session sur 
+le réseau.
+
+Pour plus d'informations sur les stratégies système, consultez 
+le chapitre 8 du Kit des Ressources Techniques de Windows 98.

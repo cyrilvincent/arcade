@@ -1,0 +1,97 @@
+; oe.adm
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+CLASS USER ;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+
+CATEGORY !!OutlookExpress
+	KEYNAME "Software\Microsoft\Outlook Express"
+	POLICY !!Zones
+		PART !!RestSite CHECKBOX 
+		VALUENAME "Security Zone"
+		VALUEON NUMERIC 4 
+		VALUEOFF NUMERIC 3
+		END PART
+		PART !!RestSite1 TEXT END PART
+	END POLICY
+
+	POLICY !!HTMLMail
+		PART !!DisableHTMLinMail CHECKBOX 
+		KEYNAME "Software\Microsoft\Outlook Express\Mail"
+		VALUENAME "Message Send HTML"
+		VALUEON NUMERIC 0 
+		VALUEOFF NUMERIC 1
+		END PART
+		PART !!DisableHTMLinMail1 TEXT END PART
+
+		PART !!DisablePlaininNews CHECKBOX 
+	  	KEYNAME "Software\Microsoft\Outlook Express\News"
+		VALUENAME "Message Send HTML"
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+		END PART
+		PART !!DisablePlaininNews1 TEXT END PART
+	END POLICY
+END CATEGORY
+
+CATEGORY !!OENav
+	KEYNAME "Software\Microsoft\Outlook Express\"
+	POLICY !!Navigation
+		PART !!OutlookBar CHECKBOX 
+		VALUENAME "OutBar"
+		VALUEON NUMERIC 1 
+		VALUEOFF NUMERIC 0
+		END PART
+
+		PART !!FolderView CHECKBOX 
+		VALUENAME "Tree"
+		VALUEON NUMERIC 0 
+		VALUEOFF NUMERIC 1
+		END PART
+
+		PART !!FolderBar CHECKBOX 
+		VALUENAME "FolderBar"
+		VALUEON NUMERIC 1 
+		VALUEOFF NUMERIC 0
+		END PART
+		PART !!FolderBar1 TEXT END PART
+
+		PART !!TipofDay CHECKBOX 
+		VALUENAME "Tip of the Day"
+		VALUEON NUMERIC 0 
+		VALUEOFF NUMERIC 1
+		END PART
+	END POLICY
+END CATEGORY
+
+[strings]
+OutlookExpress="Paramètres généraux"
+OENav="Afficher les paramètres personnalisés"
+ServerSettings="Paramètres du courrier, des news et des services d'annuaire"
+Zones="Zones de sécurité pour le courrier et les news"
+RestSite="Placer le courrier et les news dans la zone de sites sensibles"
+RestSite1="      (plutôt que dans la zone Internet)"
+HTMLMail="Paramètres de composition HTML pour le courrier et les news"
+DisableHTMLinMail="Courrier : utiliser la composition en texte normal par défaut"
+DisableHTMLinMail1="      pour les messages courrier (plutôt que le courrier HTML)"
+DisablePlaininNews="News : utiliser la composition HTML par défaut dans les messages"
+DisablePlaininNews1="      pour la publication de news (plutôt que le texte normal)"
+Navigation="Éléments de navigation pour dossiers et messages"
+OutlookBar="Activer la barre Outlook"
+FolderView="Désactiver la liste des dossiers (affichage de l'arborescence des dossiers)"
+FolderBar="Activer la barre des dossiers"
+FolderBar1="      (ligne horizontale affichant le nom du dossier sélectionné)"
+TipofDay="Désactiver l'Astuce du jour"
+
+IEAK_Title=Outlook Express
+IEAK_DescriptionTitle=Paramètres de stratégie et restrictions de Outlook Express
+IEAK_Description1=Outlook Express fournit des stratégies système destinées à réduire le coût de la prise en charge du courrier et des news.
+IEAK_Description2=Outlook Express utilise les zones de sécurité de Internet Explorer 4.0. Normalement, tout le courrier des utilisateurs est placé dans la zone Internet, où les utilisateurs reçoivent une demande de confirmation avant d'exécuter un contenu actif pouvant être dangereux. Cependant, vous pouvez placer le courrier et les news Outlook Express dans la zone des sites sensibles. Les paramètres par défaut pour la zone des sites sensibles interdit l'exécution de la quasi-totalité du contenu actif (l'utilisateur est protégé du contenu sans recevoir de demandes de confirmation).
+IEAK_Description3=Par défaut, Outlook Express compose les messages de courrier en HTML et les messages de news en texte normal. Il est fortement recommandé de conserver ces paramètres.
+IEAK_Description4=Outlook Express vous permet de personnaliser votre affichage par défaut afin d'être cohérent avec la configuration d'autres programmes bien connus des utilisateurs.
+
+[IEAK]
+Lock=1
+Roles=011
+NumOfDescLines=4
+Platform=111

@@ -1,0 +1,220 @@
+ep32 1.20 - enteprise számítógép emulációja
+
+az "ep32" a kevin thacker (amstrad@aiind.upv.es) féle "enter" 
+emulátor alaposan módosított verziója. készítette vincze béla györgy, másnéven egzo 
+(ex-exosworm - egzo@freemail.hu)
+
+az "enter", teljes forrással gnu nyilvános licensz alatt jelent meg. további
+részletekért nézd meg az eredeti "doc.txt"-t.
+
+újdonságok az 1.20 verzióban:
+
+- szegmens is megadható töréspontokhoz a debuggerben
+- kis módosítás a NICK emulációban hogy mûködjön a VENUS
+- VS 2005-tel fordítva
+
+újdonságok az 1.19 verzióban:
+
+- javítás a nick portok olvasásánál hogy a renegade mûködjön
+
+újdonságok az 1.18 verzióban:
+
+- talán már nem akad többé a hang egyik gépen sem...
+
+újdonságok az 1.17 verzióban:
+
+- Varró György konfigurátora a hardware menüben
+- winimage fájlok kezelése (szintén Varró Györgytõl)
+- logó jól jelenik meg xp-ben is
+- néhány apróbb javítás
+
+újdonságok az 1.16 verzióban:
+
+- kisebb javítások a hangkezelõben
+- magyar gyik.txt 
+- módosítások a súgóban
+
+újdonságok az 1.15 verzióban:
+
+- kezelõfelület javításai (javított teljes képernyõs/ablakos váltás)
+- pár gyorsítás
+- jobb idõzítés a nasa guy demókhoz (némelyik használja a "várakozás minden memóriahozzáférésnél" flaget)
+  (az idõzítés lehetne még pontosabb, de az már nagyon az emulátor sebességének rovására menne)
+- integráció a windows shell-be. (a snapshot fájlok az ep32-hez vannak rendelve, így akár dupla kattintással is indíthatóak)
+- javíott ikonok
+- változott az ep32 webcíme (http://web.axelero.hu/egzo/ep)
+
+újdonságok az 1.14 verzióban:
+
+- néhány kisebb gyorsítás
+- nincs többé lefagyás képernyõ mentésekor teljes képernyõs módban
+- waveout interfész (mostantól ez az alapértelmezett) a jobb hang kompatibilitásért
+- direct-x 8-ra nincs többé szükség. direct-x 7-nek elégnek kell lennie.
+
+újdonságok az 1.13 verzióban:
+
+- módosítások a képernyõfrissítõ és idõzítõ rutinokban, hogy néhány
+ különleges program is mûködjön (pl. joe rockmonitora)
+- változtatások a hangrendszerben, hogy a magnetron hangja is hallható legyen
+
+újdonságok az 1.12 verzióban:
+
+- még jobb videó memória idõzítés
+- gyorsabb betöltés magnóról
+- a felsõ nyolc szín beállítása képernyõ üzemmódváltás után javítva
+- az lpt animációk jól mûködnek (pl. a scroll demo-ban, az antiriadban és
+  a tilitoli-ban)
+- változtatható idõzítési pontosság a z80 menüben (ez gyorsítja az emulációt)
+
+újdonságok az 1.11 verzióban:
+
+- végre mûködik a dave hanggenerátor osztója
+- dave állapotának helyreállítása snapshot betöltésekor javítva
+- javított videó memória idõzítés
+- magyar nyelvû súgó (egyelõre az ep32-hu.chm nevû fájlban található, amit
+  bármikor meg lehet nyitni.)
+
+újdonságok az 1.1 verzióban:
+
+- 4,5,7 és 17 bites polinom számlálós torzítás a hangcsatornákon (a "nodes of yesod"
+  hangeffektjei így már jók)
+- nagyon magas hanggenerátor frekvenciák helyes kezelése (a 48k-s zx 
+  spectrum programokhoz)
+- bias beállítása snapshot betöltésekor javítva
+- hangrendszer javításai (100 ms-nál rövidebb buffert is be lehet állítani)
+- programozható külsõ joystick emuláció
+- új z80 idõzítés várakozási állapotokkal M1-nél és videómemória hozzáférésnél
+  (ez egy kissé lassítja az emulációt)
+- javítások a z80 emulációban. nincs többé összekuszálódott képernyõ a chase 
+  h.q.-ban és a wec le mans-ban.
+
+újdonságok az 1.0 verzióban:
+
+- új, optimalizált nick rutinok. mostantól az ep32 csak 16 és 32 bites képernyõmódokban
+  fut. a kép generálása sokkal (2-5-szeresen) gyorsabb lett.
+- ALTIND0 és ALTIND0 karaktermódokban javítva. (így már a tekercsek jól jelennek meg
+  a cauldronban)
+- kezelõfelület javításai
+- win98 támogatás feljavítva
+
+újdonságok az 1.0beta verzióban:
+
+- snapshot mentés/töltés (zip támogatással)
+- directinput változtatások, a jobb kompatibilitásért
+- teljesen újraírt billentyûzet kezelõ
+- billentyûzet beállítás 
+- a nem dokumentált nick portok emulálva vannak (minden nick regiszter elérhetõ a 84-8f 
+  portokon is !!!) így már fut a "nautilus".
+- külsõ joystick emuláció eltávolítva (sok különös gondot okozott :)
+
+újdonságok az 1.0alpha rc5 verzióban:
+
+- konfigurációs fájl betöltõ
+- átrendezett menük
+- magnó betöltõ fájlnév problémái javítva
+- érvénytelen registry értékek ellenõrzése 
+- egyéb apró javítások
+
+újdonságok az 1.0alpha rc4 verzióban:
+
+- képernyõmentés
+- a tape patch visszatért...
+- ha nincs fájlnév megadva magnóról töltéshez (pl. 'load "tape:"' parancs basic-ben, vagy "start"),
+  az emulátor megjelenít egy ablakot, ahol ki lehet választani a betöltendõ fájlt
+- ep32 mostantól emlékszik bizonyos beállításokra (registry használatával)
+- javítások a megszakításrendszerben (az 1Hz megszakítás már megy)
+- cmos óra emuláció (zozotools-al mûködik)
+
+újdonságok az 1.0alpha rc3 verzióban:
+
+- jobb DAC kimenet javítva
+- color bias javítva (még van mit javítani rajta)
+- exos nn mnemonik a deubuggerben
+- rengeteg javítás a debuggerben és a kezelõfelületben
+- step over ar call, djnz, exos, ldir/lddr, stb. utasításokhoz a debuggerben
+- port i/o
+- gyûrû modulator és alulátersztõ szûrõ a zajcsatornán
+- a hiányzó "^" billentyû javítva
+- elkezdtem dolgozni a help-en
+- teljesen új megszakításrendszer, jobb videó megszakítások stb. már fut a pddemo :)
+- "run to address" visszatért
+- függõleges visszafutás idõzítése javítva
+
+újdonságok az 1.0alpha rc2 verzióban:
+
+- a lemezmeghajtó interfész mûködik win9x/me alatt is
+- lefagyás, ha nincs a meghajtóban lemez win2k/xp-ben javítva
+- floppy lemez írás
+- képernyõ mérete változott
+- "pause" a fõmenüben javítva
+- hangerõ csuszka pozíciója javítva
+- hangkimenet mentése javítva
+- érvénytelen margók már jól jelennek meg
+
+újdonságok az 1.0alpha rc1 verzióban:
+
+- rettenetes lelassulás win9x alatt javítva (xp alatt dolgozom :)
+- új lemezmeghajtó interfész. az emulált enterprise meghajtóinak a pc-ben taláható floppy
+  meghajtók vannak megfeletetve, így az eredeti enterprise lemezek használhatók az emulátoron :)
+  (ehhez nt/2k/xp oprendszereken adminisztrátor jogok szükségesek)
+  hd-s (1.2, 1.44 mb vagy nagyobb kapacitású) lemezekhez a turbo-exdos 1.3 szükséges !
+- néhány javítás a debuggerben
+- hang javítva szüneteltetés közben
+
+fõbb módosítások kevin (2001.aug.26) emulátorához képes az 1.0-ás verzióban:
+
+- billentyûzet leolvasás sûrûsége megnöveleve (így sokkal könnyebb gépelni)
+- billentyûzet kezelõ javítva (többé nem hal el a billentyûzet, ha a REM1 vagy REM2 be van állítva)
+- F6 javítva (numerikus billentyûzet "6" gombjára került)
+- állítható processzor órajel
+- programozható frekvenciájú idõzítõ megszakítások javítva (most már jó a frekvencia)
+- teljesen újraírt directsound kezelõ és dave hang emuláció
+- teljesen újraírt direcrdraw kezelõ (teljes képernyõs/ablakos mód mûködik)
+- jobb színek, állítható fényerõ
+- debugger megváltozott
+- hang kimenet mentése .wav fájlba
+- új idõzítõ rutinok a nagyobb pontosság és kisebb processzor terhelés érdekében
+
+minimális konfiguráció:
+
+pentium-2 300 MHz
+agp videó kártya 
+windows 9x/me/2k/xp satöbbi
+direct-x 7
+hangkártya
+
+nick grafikai chip emulációja:
+
+- minden dokumentált videómód
+- videó megszkítások
+- néhány interlace mód
+- vres mûködése pixel és lpixel módokban
+
+dave hang chip emulációja:
+
+- 3 hanggenerátor + 1 zajgenerátor 7,9,11,15 vagy 17 bites polinom számlálokkal
+- 4,5,7 és 17 bites polinom torzítók a tiszta hang csatornákon
+- gyûrû moduláció
+- aluláteresztõ szûrõ a zajcsatornán
+- programozható zaj frekvencia
+- direkt kimenet a DAC-ra (digitalizált hanghoz)
+
+hiányzik még:
+
+- felüláteresztõ szûrõk (ezekrõl nincs információ)
+
+tervezett új funkciók:
+
+- soros interész (egérhez)
+
+ha bármilyen információd van a hiányzó dolgokról, nem mûködõ programokról, stb:
+
+egzo@freemail.hu 
+
+a legújabb verzió mindig letölthetõ a 
+
+http://web.axelero.hu/egzo "enterprise" részérõl
+(http://web.axelero.hu/egzo/ep)
+
+Köszönet Varró Györgynek,  Miklán Attilának (The Art of Code) és Pertik Lászlónak (Garfield) az 
+emulátor elkészítésében nyújtott segítségért.

@@ -1,0 +1,24 @@
+%<a id=a1 href="http://www.microsoft.com/isapi/redir.dll?prd=mspress&clcid=0x0407&olcid=0x0407&plcid=0x0407" target="_blank" onmouseover="over(1)" onmouseout="out(1)" onfocus="over(1)" onblur="out(1)">Vous trouverez auprès de Microsoft<sup>&#174;</sup> Press</a> une liste d'ouvrages et de supports de formation récents et techniquement à jour concernant les produits Microsoft.<br>
+<span style="line-height:6pt;">&nbsp;<br></span>
+
+Comme pour <i>Démarrer avec Microsoft Windows&nbsp;98</i>, tous les titres de la collection <b>Démarrer avec</b> de Microsoft Press offrent la solution interactive idéale pour l'apprentissage des produits Microsoft Press, notamment Microsoft Windows&nbsp;95, Microsoft Windows NT<sup>&#174;</sup> Workstation&nbsp;4.0 et Microsoft Office&nbsp;97.<br>
+<span style="line-height:6pt;">&nbsp;<br></span>
+
+<i>Microsoft Windows&nbsp;98 au Quotidien</i> apporte des réponses claires et détaillées concernant Windows 98.<br>
+<span style="line-height:6pt;">&nbsp;<br></span>
+
+<i>Microsoft Windows&nbsp;98 en un Clic de Souris</i> est un guide de référence illustré qui montre comment trouver tout de suite la bonne réponse pour effectuer diverses tâches.<br>
+<span style="line-height:6pt;">&nbsp;<br></span>
+
+<i>Microsoft Windows&nbsp;98 Etape par Etape</i> constitue une méthode d'autoformation comprenant des leçons, des exercices et des fichiers d'entraînement fournis sur CD-ROM.<br>
+<span style="line-height:6pt;">&nbsp;<br></span>
+
+<i>Microsoft Windows&nbsp;98 Field Guide</i> est un guide pratique et synthétique qui permet d'accéder très vite à l'information recherchée.<br>
+<span style="line-height:6pt;">&nbsp;<br></span>
+
+Pour obtenir une liste détaillée de revendeurs, visitez le site Web ou contactez la filiale Microsoft de votre pays.
+%|%
+Précédent
+%|%
+Fermer
+%|%Découvrez Windows 98%

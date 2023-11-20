@@ -1,0 +1,28 @@
+%<!-- version 7.13.6 -->
+<!-- updated localized version of Starts Here 11/18/97 -->
+Démarrer avec Microsoft Windows&nbsp;98
+%|%
+Le compagnon officiel d'apprentissage interactif de Microsoft Windows&nbsp;98
+%|%
+Si vous avez exploré <i>Présentation Windows&nbsp;98</i> ou <i>Notions fondamentales de l'informatique</i>, vous pouvez maintenant poursuivre votre apprentissage avec <b><i>Démarrer avec Microsoft Windows&nbsp;98,</i></b> un didacticiel instructif et facile à utiliser. Chacun de ces didacticiels est disponible auprès de Microsoft<SUP>&#174;</SUP> Press.<br>
+<span style="line-height:6pt;">&nbsp;<br></span>
+
+Le CD-ROM <i>Démarrer avec Microsoft Windows&nbsp;98</i> est un produit multimédia complet pour vous former à Microsoft Windows&nbsp;98. Grâce aux exercices par étapes et aux modules d'évaluation, vous apprenez à travailler dans l'environnement réel de Windows.<br>
+<span style="line-height:6pt;">&nbsp;<br></span>
+
+Cliquez sur <a id=a1 href="http://www.microsoft.com/isapi/redir.dll?prd=mspress&ar=win98tour&sba=win98demo" target="_blank" onmouseover="over(1)" onmouseout="out(1)" onfocus="over(1)" onblur="out(1)"><i>Démarrer avec Microsoft
+Windows&nbsp;98</i></a> pour afficher une vue d'ensemble complète et une brève démonstration (site en anglais).<br>
+<span style="line-height:6pt;">&nbsp;<br></span>
+
+Pour connaître la liste des distributeurs de la collection <b>Démarrer avec</b> de Microsoft Press dans votre pays, cliquez <a id=a2 href="http://www.microsoft.com/isapi/redir.dll?prd=mspress&ar=win98tour&sba=shintl" target="_blank" onmouseover="over(2)" onmouseout="out(2)" onfocus="over(2)" onblur="out(2)">ici.</a>
+%|%
+Précédent
+%|%
+Fermer
+%|%Découvrez Windows 98%
+
+
+
+
+
+

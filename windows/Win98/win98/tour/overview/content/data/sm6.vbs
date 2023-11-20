@@ -1,0 +1,78 @@
+' DATA FOR MOUSE MOVEMENT X AND Y POSITIONS IN LESSON 6 SHOW ME STEPS :
+
+xy = Array(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)
+
+' Step 3: MOUSE TO RIGHT CLICK POSITION
+' starting X & Y coordinates:
+xy(0) = 220
+xy(1) = 250
+' ending X & Y coordinates:
+xy(2) = 237
+xy(3) = 129
+
+' Step 3: MOUSE TO VIEW AS WEB
+xy(4) = 380
+xy(5) = 126
+
+
+' Step 4: MOUSE TO RIGHT CLICK POSITION
+xy(6) = 237
+xy(7) = 129
+
+' Step 4: MOUSE TO 'VIEW AS WEB PAGE'
+xy(8) = 380
+xy(9) = 126
+
+
+' Step 7: MOUSE TO IE QUICK LAUNCH
+xy(10) = 151
+xy(11) = 386
+
+
+' Step 8: MOUSE TO IE CLOSE
+xy(12) = 508
+xy(13) = 33
+
+
+' Step 9: MOUSE TO CHANNELS QUICK LAUNCH
+xy(14) = 126
+xy(15) = 386
+
+' Step 9: MOUSE TO RIGHT EDGE OF WINDOW
+xy(16) = 380
+xy(17) = 256
+
+' Step 9: WIDTH OF CHANNEL BAR (SLIDES OFF LEFT EDGE OF SCREEN)
+xy(18) = -231
+
+
+' Step 10: MOUSE TO LEFT EDGE OF WINDOW
+xy(19) = 0
+xy(20) = 217
+
+' Step 10: MOUSE TO PUSHPIN
+xy(21) = 198
+xy(22) = 35
+
+
+' Step 11: MOUSE TO MSNBC CHANNEL
+xy(23) = 116
+xy(24) = 99
+
+' Step 11: MOUSE TO 'ADD ACTIVE CHANNEL' BUTTON
+xy(25) = 419
+xy(26) = 359
+
+
+' Step 12: MOVE TO 'ONLY TELL ME WHEN UPDATES OCCUR'
+xy(27) = 131
+xy(28) = 271
+
+' Step 12: MOUSE TO 'OK'
+xy(29) = 445
+xy(30) = 192
+
+
+' Step 13: MOUSE TO CHANNEL CLOSE BUTTON
+xy(31) = 530
+xy(32) = 7

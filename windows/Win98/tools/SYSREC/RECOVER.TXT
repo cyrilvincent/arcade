@@ -1,0 +1,160 @@
+--------------------------------------------------
+  LISEZ-MOI à propos de la restauration système
+	    dans Microsoft Windows 98
+                   Mars 1998            
+--------------------------------------------------
+
+(c) Copyright Microsoft Corporation, 1998
+
+
+Ce document contient des informations supplémentaires
+ou de dernière minute qui complètent la documentation
+de Microsoft Windows 98.
+
+----------------------------
+Comment utiliser ce document
+----------------------------
+
+Pour visualiser ce document dans le Bloc-notes, 
+agrandissez la fenêtre du Bloc-notes.
+
+Pour l'imprimer, ouvrez-le avec le Bloc-notes ou un autre 
+traitement de texte, puis cliquez sur la commande Imprimer
+du menu Fichier.
+
+
+-------
+CONTENU
+-------
+
+RESTAURATION DU SYSTÈME À L'AIDE DE LA RESTAURATION SYSTÈME
+
+RÉSOLUTION DES PROBLÈMES
+------------------------
+
+
+RESTAURATION DU SYSTÈME À L'AIDE DE LA RESTAURATION SYSTÈME
+===========================================================
+
+Le programme Restauration système restaure votre système 
+Windows 98 en utilisant la sauvegarde complète que vous avez 
+créée à l'aide de Microsoft Backup. Pour utiliser la Restauration 
+système en vue de restaurer votre système, il vous faut :
+
+- le CD-ROM Windows 98 ;
+
+- un périphérique de sauvegarde connecté à votre ordinateur ;
+
+- une sauvegarde complète de votre système créée à l'aide de 
+  Microsoft Backup.
+
+
+>>>Pour restaurer Windows 98 sur votre ordinateur
+
+1. Insérez la disquette de démarrage Windows dans votre lecteur 
+   de disquettes, puis démarrez l'ordinateur.
+
+2. Dans le menu de démarrage, choisissez Démarrer avec prise en
+   charge du CD-ROM.
+
+3. À l'invite de commande MS-DOS, tapez
+       
+	n:
+	(N étant la lettre désignant votre lecteur de CD-ROM)
+
+   puis appuyez sur ENTRÉE.
+	
+4. À l'invite de commande MS-DOS, tapez
+
+	CD tools\sysrec
+
+   puis appuyez sur ENTRÉE.
+
+5. À l'invite de commande MS-DOS, tapez
+ 
+	pcrestor
+
+   puis appuyez sur ENTRÉE.
+
+6. Suivez les instructions qui s'affichent à l'écran.
+
+   Cette procédure réinstalle Windows 98 sur votre ordinateur. 
+   Lorsque l'exécution du programme d'installation est terminée, 
+   l'Assistant Restauration système démarre. 
+
+>>>Pour utiliser l'Assistant Restauration système en vue de 
+   restaurer vos fichiers
+
+1. Dans l'Assistant Restauration système, cliquez sur Suivant.
+
+2. Tapez votre nom et celui de votre société, puis cliquez sur Suivant. 
+
+3. Cliquez sur Détails.
+
+4. Dans la fenêtre d'aide, lisez en entier la rubrique Backup. 
+   Elle explique toute la procédure de restauration.
+
+5. Lorsque vous avez terminé la lecture de la rubrique d'aide, 
+   cliquez sur le bouton Fermer.
+
+6. Dans l'Assistant Restauration système, cliquez sur Terminer. 
+   L'écran de bienvenue de Microsoft Backup apparaît.
+
+IMPORTANT : si vous cliquez sur Annuler, cliquez sur Oui, 
+puis redémarrez votre système. L'Assistant Restauration système 
+démarre automatiquement. 
+
+
+7. Dans la boîte de dialogue Microsoft Backup, cliquez sur Restaurer 
+   les fichiers sauvegardés. 
+
+8. Suivez les instructions qui s'affichent à l'écran.
+
+   IMPORTANT : vous avez intérêt à restaurer UNIQUEMENT les 
+   paramètres matériels si votre matériel n'a pas changé depuis 
+   la date de la sauvegarde. 
+
+   La sauvegarde du Registre est restaurée en totalité, de même que 
+   tous les lecteurs locaux sélectionnés.
+
+
+   - ou -
+
+
+   Si vous ne choisissez pas l'option de restauration des paramètres
+   matériels et système dans le Registre mais poursuivez l'opération, vos 
+   paramètres logiciels et votre configuration seront restaurés ainsi que 
+   tous les lecteurs locaux sélectionnés. 
+
+   Restaurez toutes les sauvegardes de fichiers nouveaux et modifiés 
+   (incrémentielles). Commencez par la sauvegarde incrémentielle la plus 
+   ancienne et continuez jusqu'à la plus récente. 
+
+
+RÉSOLUTION DES PROBLÈMES
+========================
+
+Périphérique de sauvegarde inaccessible
+---------------------------------------
+
+Si vous ne parvenez pas à accéder à votre périphérique de 
+sauvegarde pendant l'exécution de l'Assistant Restauration système, 
+cela signifie probablement que le pilote du périphérique de 
+sauvegarde n'est pas installé.  
+
+>>>Pour installer le pilote approprié à votre périphérique de sauvegarde
+
+1. Cliquez sur Démarrer, pointez sur Paramètres, cliquez sur Panneau 
+   de configuration, puis double-cliquez sur Système.
+
+2. Cliquez sur Gestionnaire de périphériques, double-cliquez sur 
+   votre périphérique de sauvegarde, puis cliquez sur Pilote.
+
+3. Cliquez sur Mise à jour du pilote, puis suivez les instructions 
+   qui s'affichent à l'écran. Lorsque le système vous demande 
+   une disquette, insérez la disquette fournie avec votre périphérique 
+   de sauvegarde.
+
+
+
+

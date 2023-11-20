@@ -1,0 +1,33 @@
+value:string
+Lorsque vous démarrez un programme ou une application, une zone de travail définie apparaît à l'écran. Cette zone de travail définie est appelée fenêtre.@
+Une fenêtre est une zone interactive pouvant être déplacée et redimensionnée, dans laquelle des informations sont affichées.@
+La barre de titre apparaît en haut de chaque fenêtre. Elle affiche le nom de l'application ou du logiciel ouvert.@
+Vous pouvez déplacer une fenêtre d'un endroit à un autre en pointant sur la barre de titre et en faisant glisser la fenêtre à un autre endroit.@
+Une barre de défilement est une barre qui peut apparaître sur le bord inférieur ou le bord droit d'une fenêtre.@
+Vous pouvez utiliser les barres de défilement lorsque la quantité d'informations contenues dans une fenêtre dépasse celle que peut raisonnablement contenir une simple fenêtre.@
+Étant donné que la fenêtre est un objet flexible (redimensionnable), vous pouvez facilement modifier sa taille.@
+Trois boutons importants se trouvent à l'extrême droite de la barre de titre&nbsp;: <B>Réduire,</B> <B>Agrandir</B> et <B>Fermer.</B>@
+Vous pouvez utiliser ces boutons pour augmenter ou réduire la taille d'une fenêtre, ou pour fermer la fenêtre.@
+Maintenant que vous avez appris à travailler avec les fenêtres, il est temps pour vous d'identifier les parties d'une fenêtre.@
+Répondez aux questions suivantes en appuyant sur le nombre approprié de votre clavier.@
+Pointez sur la barre de titre dans la fenêtre ouverte de votre écran.@
+<IMG SRC="images/num1.gif" align="bottom"> Bonne réponse&nbsp;! La barre de titre affiche le nom de l'application ou du document ouvert. @
+Les boutons <B>Réduire,</B> <B>Agrandir</B> et <B>Fermer</B> font partie de la barre de titre. Réessayez de sélectionner la barre de titre dans sa totalité.@
+Voici les barres de défilement. Vous pouvez utiliser les barres de défilement lorsqu'un document contient plus d'informations qu'il n'est possible d'en afficher dans une simple fenêtre. Réessayez de sélectionner la barre de titre.@
+Vous avez sélectionné un élément qui ne fait pas partie d'une fenêtre. Réessayez de sélectionner la barre de titre.@
+La barre de titre, qui affiche le nom d'une fenêtre, apparaît sur le bord supérieur de toutes les fenêtres ouvertes.@
+Où se trouvent les boutons <B>Réduire,</B> <B>Agrandir</B> et <B>Fermer&nbsp;?</B>@
+Voici la barre de titre, qui affiche le nom de l'application ou du document sur lequel vous travaillez. Faites un nouvel essai.@
+<IMG SRC="images/num2.gif" align="bottom"> Bonne réponse&nbsp;! Les boutons <B>Réduire,</B> <B>Agrandir</B> et <B>Fermer</B> se trouvent à l'extrémité droite de la barre de titre.@
+Voici les barres de défilement qui sont utilisées lorsqu'un document contient plus d'informations qu'il n'est possible d'en afficher dans une simple fenêtre. Faites un nouvel essai.@
+Vous avez sélectionné un élément qui ne fait pas partie d'une fenêtre. Faites un nouvel essai.@
+Les boutons <B>Réduire,</B> <B>Agrandir</B> et <B>Fermer</B> se trouvent à l'extrémité droite de la barre de titre.@
+Où se trouvent les barres de défilement&nbsp;?@
+Voici la barre de titre, qui affiche le nom de l'application ou du document sur lequel vous travaillez. Faites un nouvel essai.@
+Les boutons <B>Réduire,</B> <B>Agrandir</B> et <B>Fermer</B> se trouvent à l'extrémité droite de la barre de titre. Réessayez de sélectionner les barres de défilement.@
+<IMG SRC="images/num3.gif" align="bottom"> C'est cela&nbsp;! Vous pouvez utiliser les barres de défilement lorsqu'un document contient plus d'informations qu'il n'est possible d'en afficher dans une simple fenêtre.@
+Vous avez sélectionné un élément qui ne fait pas partie d'une fenêtre. Réessayez de sélectionner les barres de défilement.@
+Vous pouvez utiliser les barres de défilement lorsqu'un document contient plus d'informations qu'il n'est possible d'en afficher dans une simple fenêtre.@
+Vous pouvez facilement vous déplacer autour et entre les fenêtres en utilisant la barre de titre, les barres de défilement et les boutons <B>Réduire,</B> <B>Agrandir</B> et <B>Fermer.</B>@
+Dans la prochaine leçon, <B>Obtention d'aide,</B> vous allez apprendre à utiliser une précieuse ressource dans Windows.@
+Appuyez sur <B>GAUCHE</B> <IMG class="always" id=backarr SRC="images/bkbtn.gif" style="cursor:hand" ALIGN=MIDDLE onclick="prevseq()"> pour revenir en arrière&nbsp;; <B>DROITE</B> <IMG class="always" id=frwdarr SRC="images/fwdbtn.gif" style="cursor:hand" ALIGN=MIDDLE onclick="nextseq()"> pour continuer.

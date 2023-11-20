@@ -1,0 +1,22 @@
+Éditeur de stratégies système
+
+Utilisez cet outil pour créer ou pour modifier les stratégies système 
+afin d'uniformiser l'aspect et les fonctions de Windows 95 ou 
+Windows 98 pour un utilisateur donné, un groupe d'utilisateurs, ou 
+pour l'ensemble de votre réseau. 
+
+Vous pouvez créer des fichiers de stratégies ou bien utiliser les 
+exemples (fichiers .POL) qui vous sont fournis dans le dossier 
+TOOLS\RESKIT\NETADMIN\POLEDIT sur le support d'installation.
+
+Pour installer cet outil sur votre disque dur local, ou pour installer le 
+support pour les stratégies de groupe, utilisez l'option Ajout/Suppression 
+de programmes du Panneau de configuration, sélectionnez l'onglet 
+Installation de Windows, cliquez sur le bouton Disquette fournie, et 
+procédez à l'installation à partir du répertoire TOOLS\RESKIT\NETADMIN\POLEDIT
+situé sur le support d'installation.
+
+Pour plus d'informations sur les stratégies système et sur cet éditeur, 
+consultez les rubriques correspondantes dans le Kit de ressources 
+Windows 95 (WIN95RK.HLP) ou dans le Kit de Ressources techniques 
+Windows 98 (WIN98RK.HLP).

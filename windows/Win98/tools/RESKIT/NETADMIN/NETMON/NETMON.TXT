@@ -1,0 +1,40 @@
+Agent moniteur du réseau (NMAGENT.* et fichiers connexes)
+
+Vous trouverez dans le dossier NETMON le logiciel d'un agent et d'un 
+pilote de protocole pour le moniteur du réseau Microsoft. Le pilote de 
+protocole fournit des compteurs de performances qui peuvent être 
+visualisés à l'aide du moniteur système et qui vous permettront de 
+connaître certaines statistiques concernant le trafic sur le réseau pour 
+les cartes réseau NDIS 3.1 en mode protégé. 
+
+L'agent moniteur du réseau Microsoft, qui peut opérer soit comme un 
+service Windows 95 soit comme un service Windows 98, fonctionne avec 
+le pilote de protocole utilisé par l'application Moniteur du réseau 
+Microsoft. Cette application permet de détecter les incidents sur les 
+connexions LAN, WAN et Microsoft Remote Access Service (RAS) et d'y 
+remédier.
+
+REMARQUE : l'application Moniteur du réseau est fournie avec Serveur de 
+gestion systèmes Microsoft. Ce système client-serveur permet aux 
+administrateurs d'exécuter, à partir d'un site central, les principales 
+opérations de gestion d'ordinateurs distribués. 
+
+Pour utiliser Agent moniteur du réseau dans le but de détecter les 
+incidents, vous devez l'installer (NMAGENT.EXE) sur chaque ordinateur du 
+réseau à surveiller. 
+
+Pour installer Agent moniteur du réseau sur un ordinateur fonctionnant 
+déjà sous Windows 95 ou Windows 98, utilisez l'icône Réseau du Panneau 
+de configuration, cliquez sur le bouton Ajouter, sélectionnez Service 
+comme étant le type de composant réseau à installer, cliquez sur le 
+bouton Ajouter, puis sur le bouton Disquette fournie, et procédez à 
+l'installation à partir du répertoire TOOLS\RESKIT\NETADMIN\NETMON.
+ 
+Vous pouvez également installer Agent moniteur du réseau en plaçant des 
+instructions spécifiques dans les scripts d'installation. Pour plus 
+d'informations sur Agent moniteur du réseau, consultez la rubrique 
+correspondante dans le Kit de Ressources techniques Windows 98 ou 
+dans l'aide en ligne des outils de ce kit (WIN98RK.HLP). Vous pouvez 
+accéder à cette aide en installant le sampler d'outils du Kit de 
+Ressources techniques Windows 98 à partir du répertoire TOOLS\RESKIT 
+du CD Windows 98.

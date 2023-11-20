@@ -1,0 +1,31 @@
+value:string
+Vous pouvez taper des informations et des instructions dans votre ordinateur à l'aide d'un clavier.@
+Voici la zone de frappe principale de votre clavier. Cette partie ressemble aux touches d'une machine à écrire classique.@
+Il vous suffit d'appuyer sur les touches et de les relâcher pour faire apparaître les lettres et chiffres correspondants sur l'écran de votre moniteur.@
+Une autre partie de votre clavier s'appelle le pavé numérique. Sachez toutefois que les claviers ne possèdent pas tous de pavé numérique.@
+Cette partie du clavier vous permet d'entrer des nombres avec une main, comme si vous utilisiez une machine à calculer.@
+Ces touches sont appelées touches de fonction (F1, F2, F3). Elles sont utilisées pour réaliser rapidement des tâches précises dans vos applications.@
+Votre clavier possède d'autres touches spéciales qui exécutent des fonctions spécifiques. Par exemple, la touche ÉCHAPPEMENT (ECHAP) peut être parfois utilisée pour interrompre une tâche.@
+Vous pouvez utiliser la touche ALT et la touche CONTRÔLE (CTRL) individuellement ou en combinaison avec d'autres touches pour réaliser des raccourcis clavier. @
+Voici une occasion de faire une démonstration de ce que vous avez appris. Répondez aux questions suivantes en appuyant sur le chiffre approprié de votre clavier.@
+Où se trouve la zone de frappe principale de votre clavier&nbsp;?@
+<IMG SRC="images/num1.gif" align="bottom"> C'est exact&nbsp;! Vous avez correctement sélectionné la zone de frappe principale. Cette partie ressemble aux touches alphanumériques d'une machine à écrire classique.@
+Voici le pavé numérique, qui s'utilise comme une machine à calculer. La prochaine fois, choisissez la zone de frappe principale.@
+Vous avez sélectionné les touches de fonction au lieu de la zone de frappe principale. Les touches de fonction vous permettent d'effectuer rapidement des tâches spécifiques. Réessayez de sélectionner la zone de frappe principale.@
+Vous avez sélectionné une zone en dehors du clavier. Réessayez de sélectionner la zone de frappe principale.@
+La zone de frappe principale est la partie de votre clavier qui ressemble aux touches d'une machine à écrire.@
+Quelles touches s'utilisent comme celles d'une machine à calculer&nbsp;?@
+Vous avez sélectionné la zone de frappe principale au lieu du pavé numérique. La zone de frappe principale est la partie de votre clavier qui ressemble aux touches d'une machine à écrire.@ Faites un nouvel essai.@
+<IMG SRC="images/num2.gif" align="bottom"> C'est exact&nbsp;! Vous avez sélectionné le pavé numérique, un ensemble de touches qui s'utilisent comme une machine à calculer.@
+Voici les touches de fonction qui vous permettent d'effectuer rapidement des tâches spécifiques. Réessayez de sélectionner le pavé numérique.@
+Vous avez sélectionné une zone en dehors du clavier. Réessayez de sélectionner le pavé numérique.@
+Vous pouvez utiliser le pavé numérique pour entrer des nombres de la même façon que vous le feriez avec une machine à calculer.@
+Quelles touches vous permettent de réaliser des raccourcis ou autres fonctions spéciales&nbsp;?@
+Vous avez sélectionné la zone de frappe principale au lieu des touches de fonction. La zone de frappe principale est la partie de votre clavier qui ressemble aux touches d'une machine à écrire. Faites un nouvel essai.@
+Voici le pavé numérique qui s'utilise comme une machine à calculer. La prochaine fois, choisissez les touches de fonction.@
+<IMG SRC="images/num3.gif" align="bottom"> C'est exact&nbsp;! Les touches de fonction vous permettent de réaliser des raccourcis et des fonctions spéciales.@
+Vous avez sélectionné une zone en dehors du clavier. Réessayez de sélectionner les touches de fonction.@
+Les touches de fonction sont utilisées pour réaliser des raccourcis et autres fonctions spécifiques, selon le logiciel que vous utilisez.@
+Plus vous travaillerez avec votre ordinateur, plus vous serez à l'aise en ce qui concerne l'utilisation des différentes touches de votre clavier.@
+Dans la prochaine leçon <B>Utilisation de la souris,</B> vous allez apprendre une autre façon de donner des instructions à votre ordinateur.@
+Appuyez sur <B>GAUCHE</B> <IMG class="always" id=backarr SRC="images/bkbtn.gif" style="cursor:hand" ALIGN=MIDDLE onclick="prevseq()"> pour revenir en arrière&nbsp;; <B>DROITE</B> <IMG class="always" id=frwdarr SRC="images/fwdbtn.gif" style="cursor:hand" ALIGN=MIDDLE onclick="nextseq()"> pour continuer.

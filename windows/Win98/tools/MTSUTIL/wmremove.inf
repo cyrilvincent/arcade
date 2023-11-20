@@ -1,0 +1,44 @@
+[version]
+signature="$CHICAGO$"
+SetupClass=BASE
+
+[DefaultInstall]
+DelReg=delete.s4
+RenFiles=ren.s4.wm,ren.ur.wm
+
+[DestinationDirs]
+ren.s4.wm = 17
+ren.ur.wm = 17,Other
+
+[delete.s4]
+;Aztec, Nec and PBL Sound4Winmodems
+HKLM,"ENUM\ISAPNP\AZT3011_DEV0004"
+;USR 33.6 Winmodem
+HKLM,"ENUM\ISAPNP\USR1001"
+;USR?
+HKLM,"ENUM\ISAPNP\USR1002"
+;USR 56K X2 Winmodem
+HKLM,"ENUM\ISAPNP\USR1003"
+;USR 56K Winmodem INT V.90
+Hklm,"ENUM\ISAPNP\USR1004"
+;LTWinmodem MDL 4219,5719
+HKLM,"ENUM\ISAPNP\GVC5719"
+HKLM,"ENUM\ISAPNP\HSM4219"
+;Common
+HKLM,"ENUM\ROOT\WINMODEM"
+HKLM,"ENUM\ROOT\MODEM"
+;[sourceDisksFiles]
+;winmodem.inf=17
+
+[ren.s4.wm]
+;Sound4Winmodem
+winmodem.old,winmodem.inf
+;LTWinmodem(4219,5719)
+Ltmodem.old,Ltmodem.inf
+;Common
+DRVIDX.OLD,DRVIDX.BIN
+DRVDATA.OLD,DRVDATA.BIN
+[ren.ur.wm]
+;USR X2,V.90 Winmodem
+usrobo~1.old,usrobo~1.inf
+

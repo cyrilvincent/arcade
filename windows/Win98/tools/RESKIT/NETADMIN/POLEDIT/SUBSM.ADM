@@ -1,0 +1,89 @@
+; subs.adm
+;
+;;;;;;;;;;;;;;;;;;;;;;
+CLASS USER ;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;
+
+CATEGORY !!sz_Channels
+KEYNAME "Software\Policies\Microsoft\Internet Explorer\Infodelivery\Restrictions"
+    POLICY !!sz_Channels
+        PART !!MaxSubscriptionSize TEXT END PART
+	PART !!MaxSubscriptionSize1 NUMERIC SPIN 250
+        VALUENAME MaxSubscriptionSize
+        END PART
+        
+        PART !!MaxChannelSize TEXT END PART
+        PART !!MaxChannelSize1 NUMERIC SPIN 250
+        VALUENAME MaxChannelSize
+        END PART
+        
+        PART !!MaxSubscriptionCount TEXT END PART
+	PART !!MaxSubscriptionCount1 NUMERIC SPIN 5
+        VALUENAME MaxSubscriptionCount
+        END PART
+        
+        PART !!MinUpdateInterval TEXT END PART
+        PART !!MinUpdateInterval1 NUMERIC SPIN 60
+        VALUENAME MinUpdateInterval
+        END PART
+        
+        PART !!UpdateExcludeBegin TEXT END PART
+        PART !!UpdateExcludeBegin1 TEXT END PART
+        PART !!UpdateExcludeBegin2 NUMERIC SPIN 60
+        MAX 1440
+        VALUENAME UpdateExcludeBegin
+        END PART
+        
+        PART !!UpdateExcludeEnd TEXT END PART
+        PART !!UpdateExcludeEnd1 TEXT END PART
+        PART !!UpdateExcludeEnd2 NUMERIC SPIN 60
+        MAX 1440
+        VALUENAME UpdateExcludeEnd
+        END PART
+
+        PART !!MaxWebcrawlLevels DROPDOWNLIST
+        VALUENAME MaxWebcrawlLevels
+        ITEMLIST
+        	NAME !!MaxWebcrawlDepth0 VALUE NUMERIC 1
+        	NAME !!MaxWebcrawlDepth1 VALUE NUMERIC 2
+        	NAME !!MaxWebcrawlDepth2 VALUE NUMERIC 3
+        	NAME !!MaxWebcrawlDepth3 VALUE NUMERIC 4
+        END ITEMLIST
+        END PART
+
+    END POLICY
+END CATEGORY
+
+[strings]
+sz_Channels="Abonnements"
+
+MaxSubscriptionSize="Maximum d'abonnements à des sites en Ko"
+MaxSubscriptionSize1="               (zéro désactive la restriction)"
+MaxChannelSize="Maximum d'abonnements à des chaînes en Ko"
+MaxChannelSize1="               (zéro désactive la restriction)"
+MaxSubscriptionCount="Nombre maximum d'abonnements à des sites installés"
+MaxSubscriptionCount1="               (zéro désactive la restriction)"
+MinUpdateInterval="Nombre maximal de minutes entre les mises à jour planifiées"
+MinUpdateInterval1="des abonnements. (zéro désactive la restriction)"
+UpdateExcludeBegin="Début de la plage d'exclusion des mises à jour planifiées des"
+UpdateExcludeBegin1="abonnements. Mesuré en minutes à partir de minuit"
+UpdateExcludeBegin2="               (zéro désactive la restriction)"
+UpdateExcludeEnd="Fin de la plage d'exclusion des mises à jour planifiées des abonnements."
+UpdateExcludeEnd1="Mesuré en minutes à partir de minuit"
+UpdateExcludeEnd2="               (zéro désactive la restriction)"
+MaxWebcrawlLevels="Profondeur maximale de recherche d'abonnements à des sites ."
+MaxWebcrawlDepth0="0"
+MaxWebcrawlDepth1="1"
+MaxWebcrawlDepth2="2"
+MaxWebcrawlDepth3="3"
+
+IEAK_Title=Abonnements
+IEAK_DescriptionTitle=Paramètres d'abonnement
+IEAK_Description1=Les restrictions sur les paramètres d'abonnement vous permettent de contrôler le volume d'informations téléchargées. Ces paramètres vous permettent de diminuer la largeur de bande de différentes façons. Ils peuvent vous être utiles si vous craignez qu'un serveur soit surchargé.
+IEAK_Description2=La profondeur maximale de recherche d'abonnements à des sites contrôle le nombre de niveaux dans lesquels l'utilitaire de mise à jour de diffusion Web cherchera de nouvelles informations. Ce paramètre est à utiliser avec précaution car une valeur élevée pourrait permettre le téléchargement d'un très gros volumes d'informations.
+
+[IEAK]
+Lock=1
+Roles=001
+NumOfDescLines=2
+Platform=111

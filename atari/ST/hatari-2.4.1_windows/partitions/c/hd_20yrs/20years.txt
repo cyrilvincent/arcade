@@ -1,0 +1,71 @@
+  _______________    _____.___.___________   _____ __________  _________
+  \_____  \   _  \   \__  |   |\_   _____/  /  _  \\______   \/   _____/
+   /  ____/  /_\  \   /   |   | |    __)_  /  /_\  \|       _/\_____  \ 
+  /       \  \_/   \  \____   | |        \/    |    \    |   \/        \
+  \_______ \_____  /  / ______|/_______  /\____|__  /____|_  /_______  /
+          \/     \/   \/               \/         \/       \/        \/ 
+  
+        B Y   T H E   A T A R I   S C E N E   C O L L E C T I V E
+
+
+            AN ATARI ST MEGADEMO RELEASED DECEMBER 10TH 2005
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% BUGS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+01) Only change floppy when the demo ask you to, if you do it
+    on your own, TOS will say oink! and be confused..
+
+02) The Paradox screen sometimes does not start and hangs.
+
+03) The reset screen overscan flips out on Mega STe in certain
+    places.
+
+04) On STe, seldomly there can be bitplane errors when entering
+    a screen. Exit and re-load..
+
+05) There are probably a few dozen more bugs that we have not
+    discovered. Sorry!
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ABOUT%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+What you have here is the result of 2005's atari demoscene online
+competition. It's been a really good compo, with a lot of contribtions
+in all categories. Two full disks of demos, music and graphics.
+Everything running on a standard Atari 1040 ST.
+
+This is our tribute to twenty years of Atari ST!
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% COMPATIBILITY %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The demo was designed for 1MB ST, so you will not be able to start
+about half the screens on TT and Falcon machines. Get an ST for this
+one, please. The harddisk version of the demo requires >1MB memory,
+yet we still recomend that version, as screens load faster and there
+is no disk swapping required.
+
+We've tested the demo on various machines;
+
+STm       - OK!
+STf       - OK!
+STe       - OK!
+Mega STe  - OK! Run with 8MHz !!
+TT        - NOT OK. About half the screens work. Start from ST-LOW!
+Falcon    - NOT OK. About half the screens work. Start from ST-LOW!
+
+
+
+
+eof

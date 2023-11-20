@@ -1,0 +1,62 @@
+------------------------------------------------------
+            LISEZ-MOI Microsoft Windows 98
+    pour le répertoire Fixspkr du CD-ROM Windows 98
+                    
+------------------------------------------------------
+
+(c) Copyright Microsoft Corporation, 1999
+
+
+Ce document contient des informations supplémentaires
+ou de dernière minute qui complètent la documentation
+de Microsoft Windows 98.
+
+----------------------------
+Comment utiliser ce document
+----------------------------
+
+Pour visualiser ce document dans le Bloc-notes, 
+agrandissez la fenêtre du Bloc-notes.
+
+Pour l'imprimer, ouvrez-le avec le Bloc-notes ou un autre
+traitement de texte, puis cliquez sur la commande Imprimer
+du menu Fichier.
+
+
+================================================
+FIXSPKR.INF - Activation de la notification par 
+haut-parleur des touches bascules
+================================================
+
+Les touches bascules sont une fonctionnalité 
+d'accessibilité qui indique à votre ordinateur d'émettre
+un son aigu lorsque les touches VERR.MAJ, ///ARRÊT DÉFIL ou 
+VERR.NUM sont activées et un son grave lorsque l'une de
+ces touches est désactivée.  
+
+Sur certains ordinateurs, les sons des touches bascules
+peuvent être émis trop faiblement pour être entendus.
+L'installation de Fixspkr.inf devrait résoudre ce problème.
+
+-----------------------------------------------------
+Pour activer la notification par haut-parleur lors de 
+l'utilisation des touches bascules
+-----------------------------------------------------
+
+1. Sélectionnez FIXSPKR.INF dans le dossier 
+   \Tools\MTSutil\Fixspkr du CD-ROM Windows 98.
+
+2. Cliquez avec le bouton droit sur FIXSPKR.INF.
+	- ou -
+   Maintenez la touche MAJ enfoncée et appuyez sur F10.
+
+3. Cliquez sur INSTALLER pour installer FIXSPKR.INF.
+
+4. Redémarrez votre ordinateur.
+
+
+Remarque : une fois Fixspkr.inf installé, le fichier 
+Fixspkr.exe est exécuté à partir de la clé RunServices 
+du Registre à chaque amorçage de l'ordinateur. Lorsque cela
+se produit, une fenêtre MS-DOS s'ouvre, un signal sonore 
+est émis, puis la fenêtre est fermée.

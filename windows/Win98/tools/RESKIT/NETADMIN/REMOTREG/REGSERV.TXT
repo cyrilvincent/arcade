@@ -1,0 +1,25 @@
+Service Microsoft Base de registres distante (REGSERV.EXE et fichiers 
+connexes)
+
+Lorsqu'il est installé sur un ordinateur fonctionnant sous Windows 95 
+ou Windows 98, ce logiciel permet aux administrateurs de modifier 
+des entrées de Registre sur d'autres ordinateurs reliés au réseau.
+
+Le Service Base de registres distante doit être installé à la fois sur les 
+ordinateurs locaux et distants. De plus, la sécurité au niveau utilisateur 
+doit être active sur l'ordinateur que vous administrez. Pour modifier la 
+Base de registres, utilisez l'Éditeur de la base de registres ou l'Éditeur 
+de stratégie système.
+
+Pour installer ce service, utilisez l'option Réseau du Panneau de 
+configuration, cliquez sur le bouton Ajouter, sélectionnez Service comme 
+étant le type de composant réseau à installer, cliquez sur le bouton 
+Ajouter, puis sur le bouton Disquette fournie, et procédez à 
+l'installation à partir du répertoire TOOLS\RESKIT\NETADMIN\REMOTREG.
+
+Pour plus d'informations sur le service Base de registres distante, 
+consultez la rubrique correspondante dans le Kit de Ressources 
+techniques Windows 98 ou dans l'aide en ligne des outils de ce kit 
+(WIN98RK.HLP). Vous pouvez accéder à cette aide en installant le sampler 
+d'outils du Kit de Ressources techniques Windows 98 à partir du 
+répertoire TOOLS\RESKIT du CD Windows 98.

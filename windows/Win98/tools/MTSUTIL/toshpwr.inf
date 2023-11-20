@@ -1,0 +1,23 @@
+;
+; Remove "Toshiba Power Management Utilities"
+;
+; Copyright 1992-1998 Microsoft Corporation
+;
+[version]
+signature="$CHICAGO$"
+
+[DefaultInstall]
+DelReg     = Del_ToshPwr.Reg
+UpdateInis = Del_ToshPwr.Ini
+
+[Del_ToshPwr.Reg]
+HKLM,"%Location_run_DESC%",PowerTray
+HKLM,"%Location_pwr_DESC%"
+
+[Del_ToshPwr.Ini]
+system.ini,386Enh,"%Pwrsave_DESC%"
+
+[Strings]
+Location_run_DESC = "Software\Microsoft\Windows\CurrentVersion\Run"
+Location_pwr_DESC = "Software\Microsoft\Windows\CurrentVersion\Controls Folder\Power"
+Pwrsave_DESC = "device=pwrsave.vxd"

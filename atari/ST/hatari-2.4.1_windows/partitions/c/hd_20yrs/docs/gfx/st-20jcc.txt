@@ -1,0 +1,7 @@
+20 years of Atari ST celebration compo 2005
+
+Graphics contribution
+
+Author: ST / BBO
+Title:  20 years of Atari ST
+Format: Neochrome .NEO (320x200x16col) 512col ST-palette

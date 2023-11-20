@@ -1,0 +1,96 @@
+' DATA FOR MOUSE MOVEMENT X AND Y POSITIONS IN LESSON 4 SHOW ME STEPS :
+
+xy = Array(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)
+
+' Step 3:  Mouse moves to start button
+' starting X & Y coordinates:
+xy(0) = 220
+xy(1) = 250
+
+' Step 3:  Ending X & Y coordinates:
+xy(2) = 46
+xy(3) = 385
+
+' Step 3:  MOUSE MOVES TO PROGRAMS ON START MENU
+xy(4) = 91
+xy(5) = 58
+
+' Step 3:  MOUSE MOVES ACROSS PROGRAMS
+xy(6) = 223
+xy(7) = 100
+
+' Step 3:  MOUSE MOVES DOWN TO WINDOWS EXPLORER
+xy(8) = 226
+xy(9) = 149
+
+
+' Step 4:  MOUSE MOVES TO TITLE BAR OF EXPLORER
+xy(10) = 246
+xy(11) = 26
+
+' Step 4:  DRAGGING EXPLORER WINDOW
+xy(12) = 60
+xy(13) = 74
+
+
+' Step 5:  MOUSE MOVES TO MY COMPUTER
+' Starting X & Y coordinates:
+xy(14) = 125
+xy(15) = 155
+' Ending X & Y coordinates:
+xy(16) = 46
+xy(17) = 30
+
+
+' Step 6:  MOUSE MOVES TO NETWORK NEIGHBORHOOD
+xy(22) = 45
+xy(23) = 251
+
+
+' Step 7:  MOUSE MOVES TO MYCOMP TASKBAR BUTTON
+xy(24) = 336
+xy(25) = 387
+
+
+' Step 8:  MOUSE MOVES TO EXPLORER TASKBAR BUTTON
+xy(26) = 243
+xy(27) = 387
+
+
+' Step 9:  MOUSE MOVES TO NETWORK NEIGHBORHOOD TASKBAR BUTTON
+xy(28) = 416
+xy(29) = 387
+
+
+' Step 11:  MOUSE MOVES TO MINIMIZE NETWORK NEIGHBORHOOD
+xy(30) = 445
+xy(31) = 72
+
+
+' Step 12:  MOUSE MOVES TO MAXIMIZE EXPLORER
+xy(32) = 442
+xy(33) = 31
+
+
+' Step 13:  MOUSE MOVES TO RESTORE EXPLORER
+xy(34) = 509
+xy(35) = 8
+
+
+' Step 14:  MOUSE MOVES TO EXPLORER CLOSE BUTTON
+xy(36) = 461
+xy(37) = 31
+
+' Step 14:  MOUSE MOVES TO MY COMPUTER CLOSE BUTTON
+xy(38) = 523
+xy(39) = 31
+
+
+' Step 15:  MOUSE MOVES TO NETWORK NEIGHBORHOOD TASKBAR BUTTON
+xy(40) = 251
+xy(41) = 388
+
+' Step 15:  MOUSE MOVES TO NN CLOSE BUTTON
+xy(42) = 481
+xy(43) = 72
+

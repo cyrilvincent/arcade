@@ -1,0 +1,222 @@
+[Brazil Portuguese]
+PAGE_TITLE = Bus Config.
+HBC_GROUP = Host Bus Configuration
+USB_FIX = Increase Non-AGP Bus Priority
+BURST = Enable PCI Bursting
+STR_RESTART = The new settings have been updated to Windows registry.  You need to restart Windows in order to take effect.
+STR_RESTARTNOW = You need to restart your system before the new settings to take effect.  Do you want to restart now?
+STR_RESTARTFAIL = Can not shut down and restart Windows at this time.  You need to manually restart Windows later.
+
+[Czech]
+PAGE_TITLE = Bus Config.
+HBC_GROUP = Host Bus Configuration
+USB_FIX = Increase Non-AGP Bus Priority
+BURST = Enable PCI Bursting
+STR_RESTART = The new settings have been updated to Windows registry.  You need to restart Windows in order to take effect.
+STR_RESTARTNOW = You need to restart your system before the new settings to take effect.  Do you want to restart now?
+STR_RESTARTFAIL = Can not shut down and restart Windows at this time.  You need to manually restart Windows later.
+
+[Danish]
+PAGE_TITLE = Bus Config.
+HBC_GROUP = Host Bus Configuration
+USB_FIX = Increase Non-AGP Bus Priority
+BURST = Enable PCI Bursting
+STR_RESTART = The new settings have been updated to Windows registry.  You need to restart Windows in order to take effect.
+STR_RESTARTNOW = You need to restart your system before the new settings to take effect.  Do you want to restart now?
+STR_RESTARTFAIL = Can not shut down and restart Windows at this time.  You need to manually restart Windows later.
+
+[Dutch]
+PAGE_TITLE = Bus Config.
+HBC_GROUP = Host Bus Configuration
+USB_FIX = Increase Non-AGP Bus Priority
+BURST = Enable PCI Bursting
+STR_RESTART = The new settings have been updated to Windows registry.  You need to restart Windows in order to take effect.
+STR_RESTARTNOW = You need to restart your system before the new settings to take effect.  Do you want to restart now?
+STR_RESTARTFAIL = Can not shut down and restart Windows at this time.  You need to manually restart Windows later.
+
+[English]
+PAGE_TITLE = Bus Config.
+HBC_GROUP = Host Bus Configuration
+USB_FIX = Increase Non-AGP Bus Priority
+BURST = Enable PCI Bursting
+STR_RESTART = The new settings have been updated to Windows registry.  You need to restart Windows in order to take effect.
+STR_RESTARTNOW = You need to restart your system before the new settings to take effect.  Do you want to restart now?
+STR_RESTARTFAIL = Can not shut down and restart Windows at this time.  You need to manually restart Windows later.
+
+[Finnish]
+PAGE_TITLE = Bus Config.
+HBC_GROUP = Host Bus Configuration
+USB_FIX = Increase Non-AGP Bus Priority
+BURST = Enable PCI Bursting
+
+[French]
+PAGE_TITLE = Bus Config.
+HBC_GROUP = Host Bus Configuration
+USB_FIX = Increase Non-AGP Bus Priority
+BURST = Enable PCI Bursting
+STR_RESTART = The new settings have been updated to Windows registry.  You need to restart Windows in order to take effect.
+STR_RESTARTNOW = You need to restart your system before the new settings to take effect.  Do you want to restart now?
+STR_RESTARTFAIL = Can not shut down and restart Windows at this time.  You need to manually restart Windows later.
+
+[German]
+PAGE_TITLE = Bus Config.
+HBC_GROUP = Host Bus Configuration
+USB_FIX = Increase Non-AGP Bus Priority
+BURST = Enable PCI Bursting
+STR_RESTART = The new settings have been updated to Windows registry.  You need to restart Windows in order to take effect.
+STR_RESTARTNOW = You need to restart your system before the new settings to take effect.  Do you want to restart now?
+STR_RESTARTFAIL = Can not shut down and restart Windows at this time.  You need to manually restart Windows later.
+
+[Hungarian]
+PAGE_TITLE = Bus Config.
+HBC_GROUP = Host Bus Configuration
+USB_FIX = Increase Non-AGP Bus Priority
+BURST = Enable PCI Bursting
+STR_RESTART = The new settings have been updated to Windows registry.  You need to restart Windows in order to take effect.
+STR_RESTARTNOW = You need to restart your system before the new settings to take effect.  Do you want to restart now?
+STR_RESTARTFAIL = Can not shut down and restart Windows at this time.  You need to manually restart Windows later.
+
+[Italian]
+PAGE_TITLE = Bus Config.
+HBC_GROUP = Host Bus Configuration
+USB_FIX = Increase Non-AGP Bus Priority
+BURST = Enable PCI Bursting
+STR_RESTART = The new settings have been updated to Windows registry.  You need to restart Windows in order to take effect.
+STR_RESTARTNOW = You need to restart your system before the new settings to take effect.  Do you want to restart now?
+STR_RESTARTFAIL = Can not shut down and restart Windows at this time.  You need to manually restart Windows later.
+
+[Japanese]
+PAGE_TITLE = バスの設定
+HBC_GROUP = ホストバスの設定
+USB_FIX = ＡＧＰ以外のバスを優先
+BURST = ＰＣＩバースト有効
+DIALOG_FONT = ＭＳ Ｐゴシック
+FONT_SIZE = 12
+STR_RESTART = 新しい設定は、Ｗｉｎｄｏｗｓのレジストリに記録されました。新しい設定を有効にするには、Ｗｉｎｄｏｗｓの再起動が必要です。
+STR_RESTARTNOW = 新しい設定を有効にするには、Ｗｉｎｄｏｗｓの再起動が必要です。今、再起動してよろしいですか？
+STR_RESTARTFAIL = Ｗｉｎｄｏｗｓを再起動できませんでした。あとで再起動してください。
+
+[Korean]
+PAGE_TITLE = Bus Config.
+HBC_GROUP = Host Bus Configuration
+USB_FIX = Increase Non-AGP Bus Priority
+BURST = Enable PCI Bursting
+DIALOG_FONT = ｱｼｸｲ
+FONT_SIZE = 12
+STR_RESTART = The new settings have been updated to Windows registry.  You need to restart Windows in order to take effect.
+STR_RESTARTNOW = You need to restart your system before the new settings to take effect.  Do you want to restart now?
+STR_RESTARTFAIL = Can not shut down and restart Windows at this time.  You need to manually restart Windows later.
+
+[Latin Spanish]
+PAGE_TITLE = Bus Config.
+HBC_GROUP = Host Bus Configuration
+USB_FIX = Increase Non-AGP Bus Priority
+BURST = Enable PCI Bursting
+STR_RESTART = The new settings have been updated to Windows registry.  You need to restart Windows in order to take effect.
+STR_RESTARTNOW = You need to restart your system before the new settings to take effect.  Do you want to restart now?
+STR_RESTARTFAIL = Can not shut down and restart Windows at this time.  You need to manually restart Windows later.
+
+[Modern Spanish]
+PAGE_TITLE = Bus Config.
+HBC_GROUP = Host Bus Configuration
+USB_FIX = Increase Non-AGP Bus Priority
+BURST = Enable PCI Bursting
+STR_RESTART = The new settings have been updated to Windows registry.  You need to restart Windows in order to take effect.
+STR_RESTARTNOW = You need to restart your system before the new settings to take effect.  Do you want to restart now?
+STR_RESTARTFAIL = Can not shut down and restart Windows at this time.  You need to manually restart Windows later.
+
+[Norwegian]
+PAGE_TITLE = Bus Config.
+HBC_GROUP = Host Bus Configuration
+USB_FIX = Increase Non-AGP Bus Priority
+BURST = Enable PCI Bursting
+STR_RESTART = The new settings have been updated to Windows registry.  You need to restart Windows in order to take effect.
+STR_RESTARTNOW = You need to restart your system before the new settings to take effect.  Do you want to restart now?
+STR_RESTARTFAIL = Can not shut down and restart Windows at this time.  You need to manually restart Windows later.
+
+[Polish]
+PAGE_TITLE = Bus Config.
+HBC_GROUP = Host Bus Configuration
+USB_FIX = Increase Non-AGP Bus Priority
+BURST = Enable PCI Bursting
+STR_RESTART = The new settings have been updated to Windows registry.  You need to restart Windows in order to take effect.
+STR_RESTARTNOW = You need to restart your system before the new settings to take effect.  Do you want to restart now?
+STR_RESTARTFAIL = Can not shut down and restart Windows at this time.  You need to manually restart Windows later.
+
+[Portuguese]
+PAGE_TITLE = Bus Config.
+HBC_GROUP = Host Bus Configuration
+USB_FIX = Increase Non-AGP Bus Priority
+BURST = Enable PCI Bursting
+STR_RESTART = The new settings have been updated to Windows registry.  You need to restart Windows in order to take effect.
+STR_RESTARTNOW = You need to restart your system before the new settings to take effect.  Do you want to restart now?
+STR_RESTARTFAIL = Can not shut down and restart Windows at this time.  You need to manually restart Windows later.
+
+[Russian]
+PAGE_TITLE = Bus Config.
+HBC_GROUP = Host Bus Configuration
+USB_FIX = Increase Non-AGP Bus Priority
+BURST = Enable PCI Bursting
+STR_RESTART = The new settings have been updated to Windows registry.  You need to restart Windows in order to take effect.
+STR_RESTARTNOW = You need to restart your system before the new settings to take effect.  Do you want to restart now?
+STR_RESTARTFAIL = Can not shut down and restart Windows at this time.  You need to manually restart Windows later.
+
+[Swedish]
+PAGE_TITLE = Bus Config.
+HBC_GROUP = Host Bus Configuration
+USB_FIX = Increase Non-AGP Bus Priority
+BURST = Enable PCI Bursting
+STR_RESTART = The new settings have been updated to Windows registry.  You need to restart Windows in order to take effect.
+STR_RESTARTNOW = You need to restart your system before the new settings to take effect.  Do you want to restart now?
+STR_RESTARTFAIL = Can not shut down and restart Windows at this time.  You need to manually restart Windows later.
+
+[SChinese]
+PAGE_TITLE = Bus Config.
+HBC_GROUP = Host Bus Configuration
+USB_FIX = Increase Non-AGP Bus Priority
+BURST = Enable PCI Bursting
+DIALOG_FONT = ﾋﾎﾌ
+FONT_SIZE = 12
+STR_RESTART = The new settings have been updated to Windows registry.  You need to restart Windows in order to take effect.
+STR_RESTARTNOW = You need to restart your system before the new settings to take effect.  Do you want to restart now?
+STR_RESTARTFAIL = Can not shut down and restart Windows at this time.  You need to manually restart Windows later.
+
+[Spanish]
+PAGE_TITLE = Bus Config.
+HBC_GROUP = Host Bus Configuration
+USB_FIX = Increase Non-AGP Bus Priority
+BURST = Enable PCI Bursting
+STR_RESTART = The new settings have been updated to Windows registry.  You need to restart Windows in order to take effect.
+STR_RESTARTNOW = You need to restart your system before the new settings to take effect.  Do you want to restart now?
+STR_RESTARTFAIL = Can not shut down and restart Windows at this time.  You need to manually restart Windows later.
+
+[TChinese]
+PAGE_TITLE = Bus Config.
+HBC_GROUP = Host Bus Configuration
+USB_FIX = Increase Non-AGP Bus Priority
+BURST = Enable PCI Bursting
+DIALOG_FONT = ｲﾓｩ愰
+FONT_SIZE = 12
+STR_RESTART = The new settings have been updated to Windows registry.  You need to restart Windows in order to take effect.
+STR_RESTARTNOW = You need to restart your system before the new settings to take effect.  Do you want to restart now?
+STR_RESTARTFAIL = Can not shut down and restart Windows at this time.  You need to manually restart Windows later.
+
+[Thai]
+PAGE_TITLE = Bus Config.
+HBC_GROUP = Host Bus Configuration
+USB_FIX = Increase Non-AGP Bus Priority
+BURST = Enable PCI Bursting
+STR_RESTART = The new settings have been updated to Windows registry.  You need to restart Windows in order to take effect.
+STR_RESTARTNOW = You need to restart your system before the new settings to take effect.  Do you want to restart now?
+STR_RESTARTFAIL = Can not shut down and restart Windows at this time.  You need to manually restart Windows later.
+
+[UK English]
+PAGE_TITLE = Bus Config.
+HBC_GROUP = Host Bus Configuration
+USB_FIX = Increase Non-AGP Bus Priority
+BURST = Enable PCI Bursting
+STR_RESTART = The new settings have been updated to Windows registry.  You need to restart Windows in order to take effect.
+STR_RESTARTNOW = You need to restart your system before the new settings to take effect.  Do you want to restart now?
+STR_RESTARTFAIL = Can not shut down and restart Windows at this time.  You need to manually restart Windows later.
+
+

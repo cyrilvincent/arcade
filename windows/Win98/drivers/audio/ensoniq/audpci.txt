@@ -1,0 +1,22 @@
+This file describes a possible issue with certain audio devices and steps to correct the
+problem.
+
+Some users of Ensoniq and Creative Labs PCI audio devices, when combined with other 
+combinations of hardware in the PC, may experience random changes in the current system 
+date setting.  This problem may occur with any of the following audio devices:
+
+- Ensoniq AudioPCI
+- Creative Labs Sound Blaster PCI64
+- Creative Labs Sound Blaster PCI128
+
+You can verify which device you have by checking in Device Manager located in the Control
+Panel's System applet.
+
+If you are experiencing this problem, it can be corrected with newer drivers from
+one of the following web sites:
+ 
+- http://www.ensoniq.com
+- http://www.soundblaster.com
+
+Newer drivers are generally located in either a Support or Download area of a web site.
+

@@ -1,0 +1,10 @@
+value:string
+Introduction@
+1. Découverte de votre ordinateur@
+   Utilisation du clavier@
+2. Utilisation de la souris@
+3. Découverte du Bureau Windows@
+Utilisation du menu Démarrer@
+Utilisation de Windows@
+Obtention d'aide@
+Sommaire@

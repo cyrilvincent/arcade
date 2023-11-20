@@ -1,0 +1,25 @@
+%open001.gif%|%Bienvenue dans la <I>Présentation Windows.</I> En l'espace de quelques minutes, vous allez apprendre comment tirer le meilleur parti de ce didacticiel novateur.%|%10750%
+%open002.gif%|%Contrairement à d'autres programmes de formation, la <I>Présentation Windows</I> présente l'avantage de vous permettre de travailler avec une vraie version de Windows, et non une simulation.%|%20450%
+%open001.gif%|%Vous pouvez consulter les leçons dans n'importe quel ordre. Lorsque la liste des leçons s'affiche, il vous suffit de cliquer sur l'un des titres pour commencer.%|%28850%
+%open003.gif%|%Lorsque vous sélectionnez une leçon, la fenêtre dans laquelle s'affiche cette leçon se réduit pour vous laisser voir la plus grande partie possible du Bureau Windows.%|%36550%
+%open002.gif%|%Vous allez en réalité exécuter deux programmes distincts&nbsp;: Windows en arrière-plan et le didacticiel Windows au premier plan.%|%38850%
+%open004.gif%|%Vous allez en réalité exécuter deux programmes distincts&nbsp;: Windows en arrière-plan et le didacticiel Windows au premier plan.%|%40350%
+%open005.gif%|%Vous allez en réalité exécuter deux programmes distincts&nbsp;: Windows en arrière-plan et le didacticiel Windows au premier plan.%|%44350%
+%open006.gif%|%Les instructions pas à pas s'affichent dans une fenêtre pas à pas.%|%48350%
+%open006.gif%|%La fenêtre pas à pas contient des outils qui vous aident à vous déplacer à votre guise dans chaque leçon.%|%55150%
+%open007.gif%|%En cliquant sur le bouton <B>Suivant,</B> vous passez à l'étape suivante.%|%59350%
+%open008.gif%|%En cliquant sur le bouton <B>Précédent,</B> vous revenez à l'étape précédente. Chaque étape découlant directement de celle qui la précède, il est conseillé de n'en sauter aucune.%|%70100%
+%open009.gif%|%Cliquez sur le bouton <B>Leçons</B> pour retourner à la liste des leçons.%|%75900%
+%open010.gif%|%Le Compteur d'étapes vous permet de savoir à quel stade de la leçon vous vous trouvez.%|%80700%
+%open011.gif%|%Si vous ne savez pas comment vous y prendre ou que les instructions ne vous paraissent pas claires, pensez à cliquer sur le bouton <B>Démonstration</B> pour visualiser une démonstration de l'étape concernée.%|%85200%
+%open012.gif%|%Si vous ne savez pas comment vous y prendre ou que les instructions ne vous paraissent pas claires, pensez à cliquer sur le bouton <B>Démonstration</B> pour visualiser une démonstration de l'étape concernée.%|%90000%
+%open006.gif%|%En cliquant à n'importe quel endroit de l'écran, vous fermez la fenêtre Démonstration. Vous pouvez ensuite essayer d'exécuter à votre tour l'opération qui vient de vous être présentée.%|%96700%
+%open013.gif%|%Vous ne pouvez pas cliquer sur les images à l'intérieur du texte de l'étape démontrée. Ces images sont destinées à vous aider à localiser le bouton ou l'objet Windows réel.%|%106300%
+%open014.gif%|%Vous pouvez cliquer sur un mot bleu souligné pour voir s'afficher sa définition. La fenêtre dans laquelle apparaît la définition se ferme lorsque vous cliquez à n'importe quel endroit de l'écran.%|%108300%
+%open015.gif%|%Vous pouvez cliquer sur un mot bleu souligné pour voir s'afficher sa définition. La fenêtre dans laquelle apparaît la définition se ferme lorsque vous cliquez à n'importe quel endroit de l'écran.%|%111800%
+%open006.gif%|%Vous pouvez cliquer sur un mot bleu souligné pour voir s'afficher sa définition. La fenêtre dans laquelle apparaît la définition se ferme lorsque vous cliquez à n'importe quel endroit de l'écran.%|%113800%
+%open016.gif%|%En cliquant sur un conseil, vous accédez à des informations utiles supplémentaires. La fenêtre dans laquelle apparaît le conseil se ferme lorsque vous cliquez à n'importe quel endroit de l'écran.%|%117400%
+%open017.gif%|%En cliquant sur un conseil, vous accédez à des informations utiles supplémentaires. La fenêtre dans laquelle apparaît le conseil se ferme lorsque vous cliquez à n'importe quel endroit de l'écran.%|%121200%
+%open006.gif%|%En cliquant sur un conseil, vous accédez à des informations utiles supplémentaires. La fenêtre dans laquelle apparaît le conseil se ferme lorsque vous cliquez à n'importe quel endroit de l'écran.%|%124400%
+%open018.gif%|%Lorsque vous avez terminé une leçon, une coche apparaît à côté du titre de la leçon.%|%130400%
+%open001.gif%|%Et voilà&nbsp;! Vous êtes prêt à aborder les notions fondamentales de Windows&nbsp;!%|%138400%

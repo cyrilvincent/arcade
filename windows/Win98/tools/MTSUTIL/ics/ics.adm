@@ -1,0 +1,38 @@
+CLASS MACHINE
+
+	CATEGORY !!ICS
+        POLICY  !!DisableICS
+        KEYNAME System\CurrentControlSet\Services\VxD\MSTCP
+            VALUENAME EnableRouting
+	    VALUEON "0" VALUEOFF "1"
+        END POLICY
+	END CATEGORY
+
+CLASS MACHINE
+
+	CATEGORY !!DHCP
+        POLICY  !!DisableDHCP
+        KEYNAME System\CurrentControlSet\Services\ICSharing\Settings\General
+            VALUENAME EnableDHCP
+	    VALUEON "0" VALUEOFF "1"
+        END POLICY
+	END CATEGORY
+
+
+CLASS MACHINE
+
+	CATEGORY !!DNS
+        POLICY  !!DisableDNS
+        KEYNAME System\CurrentControlSet\Services\ICSharing\Settings\General
+            VALUENAME EnableDNS
+	    VALUEON "0" VALUEOFF "1"
+        END POLICY
+	END CATEGORY
+
+[strings]
+ICS="Services de routage (NAT) pour le Partage de connexion Internet"
+DisableICS="Désactiver les services de routage (NAT) pour le Partage de connexion Internet"
+DHCP="Services DHCP pour le Partage de connexion Internet"
+DisableDHCP="Désactiver les services DHCP pour le Partage de connexion Internet"
+Dns="Services DNS pour le Partage de connexion Internet"
+DisableDNS="Désactiver les services DNS pour le Partage de connexion Internet"

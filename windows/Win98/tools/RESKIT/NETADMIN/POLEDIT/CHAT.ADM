@@ -1,0 +1,102 @@
+; chat.adm
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+CLASS USER   ;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+CATEGORY !!Chat
+KEYNAME "Software\Microsoft\Microsoft Comic Chat"
+
+	POLICY !!ServerList
+		PART !!ServerListName EDITTEXT REQUIRED
+			DEFAULT !!ServerListDefault
+			VALUENAME "ServerList"
+		END PART
+	END POLICY
+
+	POLICY !!IRCServer
+		PART !!IRCServerText EDITTEXT  REQUIRED
+			DEFAULT !!IRCServerTextDefault
+			VALUENAME "IRCServer"
+		END PART
+	END POLICY
+
+	POLICY !!IRCChannel
+		PART !!IRCChannelText EDITTEXT  REQUIRED
+			DEFAULT !!IRCChannelTextDefault
+			VALUENAME "IRCChannel"
+		END PART
+	END POLICY
+
+	POLICY !!Character
+		PART !!CharacterText EDITTEXT  REQUIRED
+			DEFAULT !!CharacterTextDefault
+			VALUENAME "Character"
+		END PART
+	END POLICY
+
+	POLICY !!Backdrop
+		PART !!BackdropText EDITTEXT  REQUIRED
+			DEFAULT !!BackdropTextDefault
+			VALUENAME "Backdrop"
+		END PART
+	END POLICY
+
+	POLICY !!Profile
+		PART !!ProfileText EDITTEXT  REQUIRED
+			DEFAULT !!ProfileTextDefault
+			VALUENAME "Profile"
+		END PART
+	END POLICY
+
+	POLICY !!ListRegistered
+		PART !!ListRegisteredText CHECKBOX
+			VALUENAME "ListRegistered"
+			DEFCHECKED
+			VALUEON NUMERIC 1
+			VALUEOFF NUMERIC 0
+		END PART
+	END POLICY
+END CATEGORY
+
+
+[strings]
+
+Chat="Microsoft Chat"
+ServerList="Changer la liste de serveurs de conversation"
+ServerListName="Liste de serveurs"
+ServerListDefault="comicsrv1.microsoft.com;comisrv2.microsoft.com;comicsrv3.microsoft.com"
+
+IRCServer="Changer de serveur de conversation par défaut"
+IRCServerText="Serveur de conversation par défaut"
+IRCServerTextDefault="comicsrv.microsoft.com"
+
+IRCChannel="Changer de salle de conversation par défaut"
+IRCChannelText="Salle de conversation par défaut"
+IRCChannelTextDefault="#Comic_Chat"
+
+Character="Changer de personnage par défaut"
+CharacterText="Personnage par défaut"
+CharacterTextDefault="TIKI"
+
+Backdrop="Changer d'image d'arrière-plan par défaut"
+BackdropText="Image d'arrière-plan par défaut"
+BackdropTextDefault="Field"
+
+Profile="Changer le profil utilisateur pour Microsoft Chat"
+ProfileText="Chaîne du profil utilisateur"
+ProfileTextDefault="Cette personne est trop paresseuse pour créer un profil."
+
+ListRegistered="Activer l'option permettant de n'afficher que les salles de conversation inscrites dans la liste des salles"
+ListRegisteredText="N'afficher que les salles de conversation inscrites dans la liste des salles"
+
+IEAK_Title=Microsoft Chat
+IEAK_DescriptionTitle=Paramètres Microsoft Chat
+IEAK_Description1=Microsoft Chat, précédemment appelé Comic Chat, est un nouveau type de programme de conversation qui combine le mode de conversation conventionnel basé sur du texte avec des caractéristiques graphiques hors du commun. Microsoft Chat vous offre une multitude de manières de communiquer, de partager des idées et de vous amuser en vous faisant de nouveaux amis.
+IEAK_Description2=Grâce à ces paramètres, vous pouvez prédéfinir des valeurs par défaut pour vos utilisateurs. Ces paramètres comprennent le serveur par défaut, le personnage et les paramètres de profil. Référez-vous à la documentation Microsoft Chat pour obtenir des informations sur ces paramètres.
+
+[IEAK]
+Lock=1
+Roles=111
+NumOfDescLines=2
+Platform=010

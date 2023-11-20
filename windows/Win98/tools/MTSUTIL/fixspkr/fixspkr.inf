@@ -1,0 +1,19 @@
+; Created to add FIXSPKR to the windows and add the startup settings to the registry
+[Version]
+Signature="$Chicago$"
+
+[DefaultInstall]
+CopyFiles=CopyFixSpkr
+AddReg=AddFixSpkr
+
+[DestinationDirs]
+DestinationDir=10
+
+[AddFixSpkr]
+HKLM,"Software\Microsoft\Windows\CurrentVersion\RunServices","FixSpkr",,"%10%\fixspkr.exe"
+
+[CopyFixSpkr]
+FIXSPKR.EXE
+
+[Strings]
+===========

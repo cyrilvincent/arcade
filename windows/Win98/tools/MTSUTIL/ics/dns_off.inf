@@ -1,0 +1,12 @@
+; dns_Off.INF
+; This file will disable the dns services in ics.
+; Copyright (c) 1993-1998, Microsoft Corporation
+
+[version]
+signature="$CHICAGO$"
+
+[DefaultInstall]
+AddReg=Disable.MapCache
+
+[Disable.MapCache]
+HKLM,System\CurrentControlSet\Services\ICSharing\Settings\General,EnableDNS,0,"0"

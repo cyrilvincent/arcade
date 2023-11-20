@@ -1,0 +1,23 @@
+Fournisseur d'impression Microsoft RPC (RPCPP)
+
+Le Fournisseur d'impression Microsoft RPC (Remote Procedure Call) améliore
+la gestion des impressions sur le réseau et l'administration à distance en 
+mettant à votre disposition l'ensemble des API Win32 nécessaires à un 
+ordinateur client Windows 95 ou Windows 98 pour suspendre et arrêter à 
+distance les travaux d'impression sur les serveurs Windows NT. En utilisant 
+ce fournisseur d'impression, un client Windows 95 ou Windows 98 peut obtenir 
+des statistiques et des informations complètes sur l'état des travaux à 
+partir du serveur Windows NT. 
+
+Pour installer ce logiciel sur votre ordinateur, utilisez l'option Réseau 
+du Panneau de configuration, cliquez sur le bouton Ajouter, sélectionnez 
+Service comme étant le type de composant réseau à installer, cliquez sur 
+le bouton Ajouter, puis sur le bouton Disquette fournie et procédez à 
+l'installation à partir du répertoire TOOLS\RESKIT\NETADMIN\RPCPP.
+
+Pour plus d'informations sur RPCPP, consultez la rubrique 
+correspondante dans le Kit de Ressources techniques Windows 98 ou 
+dans l'aide en ligne des outils de ce kit (WIN98RK.HLP). Vous pouvez 
+accéder à cette aide en installant le sampler d'outils du Kit de 
+Ressources techniques Windows 98 à partir du répertoire TOOLS\RESKIT 
+du CD Windows 98.

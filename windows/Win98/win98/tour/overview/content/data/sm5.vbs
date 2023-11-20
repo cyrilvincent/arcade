@@ -1,0 +1,92 @@
+' DATA FOR MOUSE MOVEMENT X AND Y POSITIONS IN LESSON 5 SHOW ME STEPS :
+
+xy = Array(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)
+
+' Step 3: MOUSE MOVES TO ONLINE SERVICES ICON
+xy(0) = 220
+xy(1) = 250
+xy(2) = 146
+xy(3) = 26
+
+
+' Step 5: MOUSE MOVES TO CLOSE ONLINE SERVICES
+xy(4) = 401
+xy(5) = 30
+
+
+' Step 6: MOUSE MOVES TO 'THE INTERNET'
+xy(6) = 46
+xy(7) = 174
+
+
+' Step 7: MOUSE MOVES TO ADDRESS BOX
+xy(8) = 183
+xy(9) = 129
+
+
+' Step 8: MOUSE MOVES TO 'TODAY'S LINKS'
+xy(10) = 426
+xy(11) = 155
+
+
+' Step 9: MOUSE MOVES TO 'PRODUCT NEWS'
+xy(12) = 315
+xy(13) = 115
+
+
+' Step 10: MOUSE MOVES TO BACK BUTTON
+xy(14) = 86
+xy(15) = 87
+
+' Step 10: MOUSE MOVES TO FORWARD BUTTON
+xy(16) = 161
+xy(17) = 87
+
+
+' Step 11: MOUSE MOVES TO 'BEST OF THE WEB' BUTTON
+xy(18) = 309
+xy(19) = 155
+
+
+' Step 12: MOUSE MOVES TO SCROLLBAR
+xy(20) = 507
+xy(21) = 252
+
+' Step 12: MOUSE MOVES TO LINK1
+xy(22) = 215
+xy(23) = 218
+
+' Step 12: MOUSE MOVES TO LINK2
+xy(24) = 419
+xy(25) = 238
+
+' Step 12: MOUSE MOVES TO LINK3
+xy(26) = 423
+xy(27) = 258
+
+' Step 12: MOUSE MOVES TO LINK3
+xy(28) = 281
+xy(29) = 237
+
+' Step 12: MOUSE MOVES TO LINK2
+xy(30) = 280
+xy(31) = 254
+
+' Step 12: MOUSE MOVES TO LINK1
+xy(32) = 286
+xy(33) = 270
+
+' Step 12: MOUSE MOVES TO LINK4
+xy(34) = 281
+xy(35) = 237
+
+
+' Step 13: MOUSE MOVES TO HOME BUTTON
+xy(36) = 343
+xy(37) = 90
+
+
+' Step 14: MOUSE MOVES TO IE CLOSE BUTTON
+xy(38) = 508
+xy(39) = 33
+

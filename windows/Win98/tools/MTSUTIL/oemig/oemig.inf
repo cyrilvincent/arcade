@@ -1,0 +1,35 @@
+; oemig.inf
+; Copyright (c) 1993-1999, Microsoft Corporation
+
+
+[Version]
+Signature="$Chicago$"
+
+[DefaultInstall]
+CopyFiles=CopyOEFile, Motor
+AddReg=AddRegSec
+
+[DestinationDirs]
+CopyOEFile       = 30000
+Motor       	 = 28730,%STR_SYSTEM_DIR%
+
+[AddRegSec]
+HKLM,"Software\Microsoft\Windows\CurrentVersion\RunOnce","RegOEMig",,"%11%\regsvr32.exe  %30000%\oemiglib.dll /s"
+HKLM,"Software\Microsoft\Windows\CurrentVersion\RunOnceEx\OEWAB OS Setup","OE5_1",0,"%28732%\%STR_SYSTEM_DIR%\directdb.dll|DllRegisterServer"
+
+
+[CopyOEFile]
+oemiglib.dll
+
+[Motor]
+directdb.dll
+
+
+[SourceDisksNames]
+1="OE MIG","",1
+
+[SourceDisksFiles]
+oemiglib.dll=1
+
+[Strings]
+STR_SYSTEM_DIR          = "System"

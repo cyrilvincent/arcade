@@ -1,0 +1,288 @@
+------------------------------------------------------------
+            Éditeur des Règles de Numérotation 
+                           des 
+         Opérateurs de Télécommunication en France
+                     pour Windows 98
+
+                      editopfr.exe
+                      LISEZMOI.TXT
+------------------------------------------------------------
+
+Cette application vous permet de définir vos propres règles 
+de numérotation en fonction des opérateurs téléphoniques 
+proposant leurs services en France. 
+
+ATTENTION : Ne pas utiliser cet outil sur d'autres systèmes
+            que Microsoft Windows 98.
+
+
+------------------------------------------------
+Numérotation téléphonique et nouveaux opérateurs
+de télécommunication en France.
+------------------------------------------------
+
+
+Avant d'expliquer le fonctionnement de l'outil, voici
+quelques rappels sur les règles de numérotation téléphonique
+en vigueur en France :
+
+Depuis le 1er janvier 1998, de nouveaux opérateurs de
+télécommunication pour les appels locaux, longue distance 
+et internationaux existent en France. Un organisme, 
+l'Autorité de Régulation des Télécommunications (ART) a 
+notamment pour rôle de gérer l'arrivée de ces nouveaux
+opérateurs. Pour permettre l'apparition de ces nouveaux
+opérateurs, les règles de numérotation ont été adaptées.
+
+TYPES D'APPELS
+
+3 types d'appels existent à ce jour :
+- les appels locaux
+- les appels longue distance
+- les appels internationaux
+
+Pour distinguer les appels locaux des appels 
+longue distance, l'ART a choisi le département 
+(appelé par l'ART zone locale de tri). 
+Quelques exceptions existent néanmoins :
+- Paris et la petite couronne (départements 75, 92, 93
+  et 94) qui ne forment qu'une zone locale.
+- La Haute Corse et la Corse du Sud (départements 2A et 2B)
+  qui ne forment également qu'une seule zone locale.
+
+Exemples :
+
+Vous appelez de chez vous dans le département de l'Essonne 
+(91) un correspondant qui habite également dans le 
+département de l'Essonne, vous passez un appel local :
+(0)1 69 86 11 11
+
+Vous appelez de chez vous dans le département de l'Ain (01) 
+un correspondant qui habite dans le département 
+de l'Essonne (91), vous passez un appel longue distance :
+(0)1 69 86 11 11
+
+Vous appelez de chez vous depuis la France métropolitaine 
+un correspondant qui habite aux États-Unis d'Amérique, 
+vous passez un appel international :
+(0) 0 1 425 70 456 78
+
+NB : dans tous les cas, le premier chiffre entre parenthèse
+correspond au préfixe de l'opérateur. Pour l'appel aux
+Etats-Unis, le format est le suivant :
+(Préfixe op.) + 0 + Code pays + Indicatif zone + numéro
+(0)             0   1           425              70 456 78
+
+
+PREFIXES
+
+Pour permettre le choix entre les différents opérateurs,
+de nouveaux numéros de préfixe sont attribués.
+Les préfixes possibles ont été définis comme suit :
+
+Préfixes à un chiffre :
+- 0, 1 et 3 : préfixes réservés
+- 2,4,5,6,7,8,9 : préfixes disponibles
+
+Préfixes à 4 chiffres :
+- 16 xx 
+  (xx est un chiffre pouvant être compris entre 00 et 99)
+
+
+Un numéro de téléphone en France métropolitaine est composé
+de 10 chiffres. Par exemple, le numéro de télephone du
+service client de Microsoft est le (0)1 69 29 11 11
+
+Exemples d'appel avec un nouveau préfixe :
+
+Préfixe à un chiffre :
+Votre nouvel opérateur pour les appels locaux et 
+longue distance a le préfixe 4. Si vous souhaitez appeler
+de France métropolitaine le service client de Microsoft, 
+composez le 4 1 69 86 11 11
+
+Préfixe à 4 chiffres :
+Votre nouvel opérateur pour les appels locaux et 
+longue distance a le préfixe 1647. Si vous souhaitez 
+appeler de France métropolitaine le service client de
+Microsoft, composez le 16 47 1 69 86 11 11
+
+
+Pour plus d'informations sur l'ART, son rôle, les lois et
+les décrets, vous pouvez vous connecter sur le site Internet
+à l'adresse http://www.art-telecom.fr
+
+
+
+----------------------------------
+Conseils d'utilisation d'Editopfr.
+----------------------------------
+
+
+Avant de lancer cet outil pour la première fois, vous devez 
+tout d'abord installer un modem sur votre ordinateur et le 
+configurer avec Windows 98 (à partir du Panneau de 
+configuration par exemple).
+
+
+Vous devez avoir quitté le Panneau de configuration avant de
+pouvoir exécuter editopfr.
+
+
+La fenêtre d'accueil d'editopfr liste les cartes d'appel 
+et les opérateurs configurés sur votre ordinateur. 
+Vous avez 3 possibilités :
+
+
+1. Créer une nouvelle carte ou un nouvel opérateur
+
+Cliquez sur le bouton Nouveau. Saisissez le nom de la carte
+ou de l'opérateur à créer et cliquez sur le bouton OK.
+Pour chaque type d'appel, vous allez définir la règle 
+permettant de numéroter.
+
+
+2. Modifier une carte ou un nouvel opérateur
+
+Vous devez tout d'abord sélectionner la carte ou 
+l'opérateur que vous souhaitez modifier. Cliquez ensuite
+sur le bouton Modifier. 
+
+Si la carte sélectionnée fait partie des cartes installées 
+automatiquement par Windows 98, vous ne pouvez que consulter
+les règles de numérotation pour les appels locaux, longue 
+distance et internationaux.
+
+Si la carte ou l'opérateur sélectionné a préalablement été
+défini par vous ou un utilisateur de cet ordinateur, vous 
+pouvez alors changer le préfixe de numérotation pour les
+3 types d'appels existants (locaux, longue distance et 
+internationaux). Vous pouvez également cocher la case 
+Modifier les règles si vous souhaitez mettre à jour les
+règles de numérotation d'un ou de plusieurs type d'appels.
+
+
+3. Supprimer une carte ou un nouvel opérateur
+
+Vous devez tout d'abord sélectionner la carte ou l'opérateur
+que vous souhaitez supprimer. Cliquez ensuite sur le
+bouton Supprimer et confirmez la suppression. Attention,
+cette opération n'est pas réversible, la suppression est
+définitve.
+
+
+
+-------------------
+Règles et Préfixes.
+-------------------
+
+
+Dans Windows 98, les principes de définition des règles 
+associées aux appels locaux, longue distance et 
+internationaux sont les suivants :
+
+0-9 : chiffres des numéros à composer
+E : code pays pour les appels internationaux 
+(exemple : 33 pour la France).
+F : Indicatif.
+G : Numéro de téléphone.
+
+Exemple : le numéro du Service clients de Microsoft est le 
+33 (0)1 69 29 11 11. 
+
+Dans ce cas, le numéro se décompose comme suit :
+E = 33
+F = 1
+G = 69 29 11 11
+
+POINT IMPORTANT :
+
+Les définitions F et G dépendent de la saisie effectuée
+par l'utilisateur lorsqu'il définit le numéro 
+à composer. En effet, Windows 98 décompose le numéro
+en Indicatif de la zone et Numéro de téléphone. 
+F correspond à l'indicatif de la zone et 
+G au numéro de téléphone à appeler. 
+
+Comme indiqué précédemment, l'ART a défini la zone locale 
+(appelée par l'ART zone locale de tri) comme étant le 
+département. 
+
+Au niveau de la définition de la connexion,
+l'indicatif de zone correspond par conséquent aux 3 premiers
+chiffres (sans compter le premier chiffre qui lui correspond
+à l'opérateur) et les 6 derniers représentent le numéro de 
+téléphone proprement dit. En suivant ces règles, le numéro 
+exemple choisi précédemment 33 (0)1 69 29 11 11 
+se décomposerait donc en :
+- E = 33
+- F = 169
+- G = 291111
+
+La différence entre un appel local et un appel 
+longue distance en France est basée sur le fait que le
+numéro appelé ne se trouve pas dans le même département 
+que le numéro appelant (hors exception, voir ci-dessus). 
+En général cette différence peut être faite sur 
+l'examen de la partie F (l'indicatif de zone) du numéro 
+de téléphone.
+
+Exemples :
+
+L'opérateur de télécommunication X vous propose de prendre
+en charge vos appels locaux, longue distance et 
+internationaux. Le Préfixe qui lui est attribué est le 4.
+Vous devrez donc définir les règles :
+
+Appels locaux (même département) :
+Préfixe   Règle
+4         FG
+
+Appels longue distance :
+Préfixe   Règle
+4         FG
+
+Appels internationaux
+Préfixe   Règle
+4         0EFG
+
+L'opérateur de télécommunication Y vous propose de prendre
+en charge vos appels internationaux. Le préfixe qui lui est
+attribué est le 1647.
+
+Vous devrez donc définir les règles :
+
+Appels locaux (même département) :
+Préfixe   Règle
+0         FG
+
+Appels longue distance :
+Préfixe   Règle
+0         FG
+
+Appels internationaux
+Préfixe   Règle
+1647      0EFG
+
+
+NOTA BENE : 
+
+Bien que spécifiquement prévu pour définir les règles 
+de numérotation pour les nouveaux opérateurs, editopfr 
+peut également être utilisé pour gérer des cartes d'appels.
+
+Certaines cartes d'appels ou opérateurs nécessitent la 
+saisie d'un numéro d'identification personnel. Ce numéro
+qui est transmis lors de chaque appel peut être défini
+dans zone de texte présente dans les écrans de création
+et de modification des Règles. La zone s'appelle
+Numéro d'Identification Personnel (NIP).
+
+Enfin certaines cartes d'appel ou opérateurs nécessitent 
+plusieurs étapes pour appeler un numéro de téléphone. Vous 
+pouvez définir ces étapes en sélectionnant dans le Panneau
+de configuration, l'icône Modems et en cliquant sur le 
+bouton Propriétés de numérotation. Cochez ensuite la case 
+Utiliser un opérateur de télécommunication ou une 
+carte d'appel, sélectionnez la carte d'appel ou 
+l'opérateur et cliquez sur le bouton Configuration.

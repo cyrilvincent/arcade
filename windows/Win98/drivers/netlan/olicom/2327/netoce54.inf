@@ -1,0 +1,156 @@
+;
+; NETOCE54.INF 
+;
+; Version 1.01
+;
+; Olicom Network Interface Card
+; Olicom RapidFire Ethernet 10/100 PCI Adapters
+;
+; Copyright 1998, Olicom A/S
+
+[version]
+signature="$CHICAGO$"
+Class=Net
+ClassGUID={4d36e972-e325-11ce-bfc1-08002be10318}
+provider=%V_OLICOM%
+
+[Manufacturer]
+%V_OLICOM%=Olicom
+
+[Olicom]
+%oc2327.DeviceDesc%=oc2327.ndi,	   PCI\VEN_1011&DEV_0019&SUBSYS_0016108D  ;Olicom 2327
+
+
+;***************************************************************************
+; Olicom OC-2327
+;****************************************************************************
+
+[oc2327.ndi]
+AddReg=oc2327.ndi.reg,ocdriver.ndi.reg,oc2327.pci.reg
+
+[oc2327.ndi.reg]
+HKR,Ndi,DeviceID,,"PCI\VEN_1011&DEV_0019&SUBSYS_0016108D"
+HKR,,AdapterCFID,,00191011
+
+;****************************************************************************
+; Driver parameters
+;****************************************************************************
+
+[ocdriver.ndi.reg]
+; key,subkey,valuname,type,value
+HKR,,DevLoader,,*ndis
+HKR,,DeviceVxDs,,oce5xnd4.sys
+
+; NDIS Info
+HKR,NDIS,MajorNdisVersion,1,04
+HKR,NDIS,MinorNdisVersion,1,00
+HKR,NDIS,LogDriverName,,"OC2327"
+HKR,NDIS,MajorDriverVersion,1,1
+HKR,NDIS,MinorDriverVersion,1,1
+; Help text
+HKR,Ndi,HelpText,,"An Olicom Ethernet Adapter is a hardware device that physically connects you to a ethernet network. The enhanced mode driver for this device supports the NDIS 4 interface."
+;
+; Interfaces
+HKR,Ndi\Interfaces,DefLower,,"ethernet"
+HKR,Ndi\Interfaces,LowerRange,,"ethernet"
+HKR,Ndi\Interfaces,DefUpper,,"ndis3,ndis4"
+HKR,Ndi\Interfaces,UpperRange,,"ndis3,ndis4"
+
+; Install sections
+HKR,Ndi\Install,ndis3,,"oc2327.ndis4"
+HKR,Ndi\Install,ndis4,,"oc2327.ndis4"
+HKR,Ndi\Install,inf,,"oc2327.inf"
+
+;params
+HKR,,MediaType,,1
+HKR,,OSType,,7
+
+
+;****************************************************************************
+; PCI common parameters
+;****************************************************************************
+[oc2327.pci.reg]
+;params
+HKR,,AdapterType,,5
+HKR,,BusType,,5
+
+;Receive Buffers
+HKR,Ndi\params\ReceiveBuffers,ParamDesc,,"Receive Buffers"
+HKR,Ndi\params\ReceiveBuffers,default,,16
+HKR,Ndi\params\ReceiveBuffers,type,,enum
+HKR,Ndi\params\ReceiveBuffers\enum,8,," 8"
+HKR,Ndi\params\ReceiveBuffers\enum,16,,"16"
+HKR,Ndi\params\ReceiveBuffers\enum,32,,"32"
+HKR,Ndi\params\ReceiveBuffers\enum,48,,"48"
+HKR,Ndi\params\ReceiveBuffers\enum,64,,"64"
+HKR,NDI\params\ReceiveBuffers,flag,1,20,00,00,00
+;Use Extended PCI Commands
+HKR,Ndi\params\ExtendedPCI,ParamDesc,,"Extended PCI Commands"
+HKR,Ndi\params\ExtendedPCI,default,,1
+HKR,Ndi\params\ExtendedPCI,type,,enum
+HKR,Ndi\params\ExtendedPCI\enum,0,,"No"
+HKR,Ndi\params\ExtendedPCI\enum,1,,"Yes"
+HKR,NDI\params\ExtendedPCI,flag,1,20,00,00,00
+;ConnectionType
+HKR,Ndi\params\ConnectionType,ParamDesc,,"Connection Type"
+HKR,Ndi\params\ConnectionType,default,,0
+HKR,Ndi\params\ConnectionType,type,,enum
+HKR,Ndi\params\ConnectionType\enum,0,,"Auto negotiate"
+HKR,Ndi\params\ConnectionType\enum,8,,"100 Mbps Half Duplex"
+HKR,Ndi\params\ConnectionType\enum,9,,"100 Mbps Full Duplex"
+HKR,Ndi\params\ConnectionType\enum,2,,"10 Mbps Half Duplex"
+HKR,Ndi\params\ConnectionType\enum,3,,"10 Mbps Full Duplex"
+HKR,NDI\params\ConnectionType,flag,1,20,00,00,00
+; NetworkAddress
+HKR,NDI\params\NetworkAddress,ParamDesc,,"Network Address"
+HKR,NDI\params\NetworkAddress,type,,edit
+HKR,NDI\params\NetworkAddress,LimitText,,19
+HKR,NDI\params\NetworkAddress,UpperCase,,1
+HKR,Ndi\params\NetworkAddress,default,,""
+HKR,NDI\params\NetworkAddress,flag,1,30,00,00,00
+HKR,Ndi\params\NetworkAddress,optional,,1
+
+
+;****************************************************************************
+; Drivers
+;****************************************************************************
+; Install NDIS4
+[oc2327.ndis4]
+CopyFiles=oc2327.ndis4.CopyFiles, oc2327.inf.CopyFiles
+
+[oc2327.ndis4.CopyFiles]
+oce5xnd4.sys
+
+; Install inf
+[oc2327.inf]
+CopyFiles=oc2327.inf.CopyFiles
+
+[oc2327.inf.CopyFiles]
+netoce54.inf
+
+;****************************************************************************
+; Destination Directories
+;****************************************************************************
+[DestinationDirs]
+DefaultDestDir			=11 ; LDID_SYS
+oc2327.ndis4.CopyFiles		=11 ; LDID_SYS
+oc2327.inf.CopyFiles		=17 ; LDID_INF
+
+[SourceDisksNames]
+50="Olicom Driver Disk","netoce54.inf",0
+
+[SourceDisksFiles]
+oce5xnd4.sys=50,,oce5xnd4.sys,10000
+netoce54.inf=50,,netoce54.inf,10000
+
+
+;****************************************************************************
+; Localizable Strings
+;****************************************************************************
+[strings]
+; Provider
+; Manufacturers
+V_OLICOM="Olicom"
+
+; PNP Devices
+oc2327.DeviceDesc = "Olicom RapidFire 2327 Ethernet 10/100 PCI Adapter"

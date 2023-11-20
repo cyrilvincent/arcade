@@ -1,0 +1,105 @@
+		   ------------------------------------------
+			     LISEZ-MOI À propos de 
+                      Microsoft Windows 98 Deuxième Édition
+                             pour Microsoft Windows  
+		    (c) Copyright Microsoft Corporation, 1999
+		   ------------------------------------------
+
+
+
+----------------------------
+Comment utiliser ce document
+----------------------------
+
+Pour visualiser ce document dans le Bloc-notes, 
+agrandissez la fenêtre du Bloc-notes.
+
+Pour l'imprimer, ouvrez-le avec le Bloc-notes ou 
+un autre traitement de texte, puis cliquez sur la 
+commande Imprimer du menu Fichier.
+
+
+--------
+SOMMAIRE
+--------
+
+LISTE DES FICHIERS LISEZ-MOI WINDOWS 98 DEUXIÈME ÉDITION
+========================================================
+
+Outre ce fichier (Readme.txt), Windows 98 Deuxième Édition 
+fournit les fichiers Lisez-moi suivants dans C:\Windows :
+	
+
+Config.txt      Contient des informations de syntaxe 
+                sur les commandes utilisées avec le 
+                fichier Config.sys.
+
+Display.txt     Fournit des informations sur la 
+                configuration des pilotes disponibles, 
+		sur la résolution des problèmes et sur  
+		l'obtention de pilotes d'affichage 
+                supplémentaires. 
+
+
+Faq.txt         Répond aux questions fréquemment posées 
+		sur Windows 98 Deuxième Édition.
+
+General.txt     Fournit des informations sur les problèmes 
+                de démarrage, les programmes accompagnant 
+	        Windows 98, les outils disque, les 
+                disquettes et CD-ROM, les pilotes et les 
+                supports amovibles.           
+
+		Ce fichier contient également des 
+                informations de dernière minute reçues 
+                trop tard pour être intégrées aux autres 
+                fichiers Lisez-moi. Par exemple, si vous 
+                vous posez une question sur une imprimante, 
+                il peut être aussi utile de consulter 
+                General.txt que Printers.txt.
+	
+Hardware.txt    Vous fournit des informations sur les  
+		problèmes matériels. Vous pouvez également 
+                vous reporter au fichier Printers.txt ou 
+                Mouse.txt pour des problèmes spécifiques.
+
+Install.txt	Vous fournit des informations concernant 
+		l'installation de Windows 98 Deuxième 
+		Édition, comprenant notamment la 
+		configuration matérielle requise et des 
+		conseils de dépannage.
+	
+Mouse.txt       Vous fournit des informations sur la 
+                résolution des problèmes de souris et 
+                de clavier.
+
+Msdosdrv.txt    Fournit des informations de syntaxe pour 
+                les pilotes de périphériques MS-DOS. Pour 
+                obtenir davantage d'aide sur les commandes 
+		MS-DOS, consultez Config.txt. Vous pouvez 
+                également utiliser l'aide de la ligne de 
+                commandes à l'invite de commande en tapant
+                /? à la suite du nom de la commande.
+
+Printers.txt    Fournit des informations sur la résolution  
+		des problèmes d'imprimante.
+
+Programs.txt    Fournit des informations sur l'exécution 
+                de certains programmes basés sur Windows 
+                et MS-DOS avec Windows 98 Deuxième Édition.
+	
+Resaux.txt      Fournit des informations sur l'installation 
+                et l'utilisation de serveurs réseau.
+
+Support.txt     Fournit des informations sur les différents 
+                types d'assistance dont vous pouvez bénéficier  
+		pour Windows 98 Deuxième Édition.
+
+Tips.txt        Contient des conseils et des astuces pour 
+                l'utilisation de Windows 98 Deuxième Édition, 
+                dont la plupart ne sont pas consignés dans 
+                l'aide en ligne, ni dans le manuel imprimé.
+
+
+Certaines portions de PCCard sont protégées par Copyright 1993 
+de SystemSoft Corporation. Tous droits réservés.

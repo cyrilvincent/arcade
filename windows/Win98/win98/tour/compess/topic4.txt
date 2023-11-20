@@ -1,0 +1,33 @@
+value:string
+Votre ordinateur est composé de deux parties principales&nbsp;: le matériel et le logiciel.@
+Les instructions qui indiquent à votre ordinateur ce qu'il doit faire constituent le logiciel.@
+Votre logiciel principal, appelé système d'exploitation, contrôle et gère votre ordinateur en traduisant vos instructions en un langage que seul le matériel peut comprendre.@
+Voici le Bureau Windows. C'est un espace de travail de votre écran sur lequel se trouvent des icônes, des composants du bureau, des fenêtres d'applications et des boîtes de dialogue.@
+La barre des tâches est l'un des éléments du Bureau Windows. La barre des tâches est une barre rectangulaire grise située, par défaut, tout en bas du Bureau Windows.@
+La barre des tâches comprend le bouton <B>Démarrer,</B> un bouton pour chaque programme ouvert et l'horloge système.@
+Le bouton <B>Démarrer</B> est l'un des éléments les plus utiles dans la barre des tâches.@
+À partir de là, vous pouvez rapidement démarrer un programme, trouver ou ouvrir un document, changer les paramètres de votre ordinateur, arrêter l'ordinateur, etc.@
+Votre Bureau Windows comporte plusieurs petites images. Ce sont des icônes.@
+Les icônes offrent un moyen très simple d'ouvrir les programmes ou les documents que vous utilisez tous les jours.@
+Êtes-vous prêt à faire la démonstration de ce que vous avez appris sur votre Bureau Windows&nbsp;? Appuyez sur le nombre approprié en réponse aux questions.@
+Pouvez-vous trouver la barre des tâches&nbsp;?@
+<IMG SRC="images/num1.gif" align="bottom"> Super&nbsp;! Vous avez sélectionné la barre des tâches, la barre rectangulaire qui se trouve normalement en bas du Bureau Windows.@
+Vous avez sélectionné le bouton <B>Démarrer,</B> l'un des éléments de la barre des tâches. Essayez maintenant de sélectionner la barre des tâches dans sa totalité.@
+Voici une icône&nbsp;: une représentation graphique d'un programme, d'une commande ou d'une page Web. Sélectionnez maintenant la barre des tâches.@
+Vous avez sélectionné une zone différente du Bureau Windows. Faites un nouvel essai.@
+La barre des tâches est normalement située tout en bas du Bureau Windows. Elle comprend le bouton <B>Démarrer,</B> un bouton pour chaque programme ouvert et l'horloge système.@
+Où se trouve le bouton <B>Démarrer&nbsp;?</B>@
+Vous avez sélectionné la barre des tâches, qui comprend le bouton <B>Démarrer,</B> un bouton pour chaque programme ouvert et l'horloge système. Sélectionnez maintenant le bouton <b>Démarrer.</b>@
+<IMG SRC="images/num2.gif" align="bottom"> C'est cela&nbsp;! Vous avez sélectionné le bouton <B>Démarrer.</B> Lorsque vous cliquez sur ce bouton, une liste de logiciels et de documents que vous pouvez ouvrir apparaît.@
+Voici une icône&nbsp;: une représentation graphique d'un programme, d'une commande ou d'une page Web. Sélectionnez maintenant le bouton <B>Démarrer.</B>@
+Vous avez sélectionné une zone différente du Bureau Windows. Faites un nouvel essai.@
+Lorsque vous cliquez sur ce bouton, une liste de logiciels et de documents que vous pouvez ouvrir apparaît, de même que les tâches que vous pouvez accomplir.@
+Trouvez une icône sur votre Bureau Windows.@
+Vous avez sélectionné la barre des tâches, qui comprend le bouton <B>Démarrer,</B> un bouton pour chaque programme ouvert et l'horloge système. Sélectionnez maintenant une icône.@
+Vous avez sélectionné le bouton <B>Démarrer,</B> l'un des éléments de la barre des tâches. Sélectionnez maintenant une icône.@
+<IMG SRC="images/num3.gif" align="bottom"> Exact&nbsp;! Voici une icône, une représentation graphique d'un programme, d'une commande ou d'une page Web.@
+Vous avez sélectionné une zone différente du Bureau Windows. Faites un nouvel essai.@
+Il existe différents types d'icônes. Les icônes sont des images graphiques représentant un programme, une commande ou une page Web.@
+Comme vous l'avez appris, le Bureau est l'écran de base Microsoft Windows.@
+La rubrique suivante décrit l'endroit à partir duquel vous démarrez habituellement n'importe quelle activité&nbsp;: le menu <B>Démarrer.</B>@
+Appuyez sur <B>GAUCHE</B> <IMG class="always" id=backarr SRC="images/bkbtn.gif" style="cursor:hand" ALIGN=MIDDLE onclick="prevseq()"> pour revenir en arrière&nbsp;; <B>DROITE</B> <IMG class="always" id=frwdarr SRC="images/fwdbtn.gif" style="cursor:hand" ALIGN=MIDDLE onclick="nextseq()"> pour continuer.

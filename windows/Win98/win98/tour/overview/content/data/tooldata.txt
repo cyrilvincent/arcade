@@ -1,0 +1,20 @@
+%
+Leçons
+%|%
+Précédent
+%|%
+Suivant
+%|%
+Démonstration
+%|%
+
+%|%
+de
+%|%Présentation Windows 98%|%
+Tapez le numéro correspondant sur votre clavier ou cliquez sur un titre de leçon pour commencer.
+%|%
+Sommaire
+%|%Démarrage d'un programme%|%Connexion à Internet%|%Exploration d'Active Desktop%|%Exploration de fichiers et de dossiers%|%Recherche d'informations%|%Gestion de fenêtres ouvertes%|% %|%
+Fermer
+%|%Ceci est une démonstration. Cliquez n'importe où pour la quitter, puis essayez vous-même.
+%

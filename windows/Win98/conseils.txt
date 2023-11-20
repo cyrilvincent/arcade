@@ -1,0 +1,90 @@
+-------------------------------------------------
+     LISEZ-MOI à propos de la préinstallation 
+             et de l'installation de
+       Microsoft Windows 98 Deuxième Édition
+                    Avril 1999           
+-------------------------------------------------
+
+(c) Copyright Microsoft Corporation, 1999
+
+Ce document contient des informations supplémentaires
+ou de dernière minute qui complètent la documentation
+de Microsoft Windows 98 Deuxième Édition.
+
+===========================================================
+Liste de contrôle pour la préinstallation et l'installation
+de Microsoft Windows 98 Deuxième Édition 
+===========================================================
+
+L'installation de Windows 98 étant plus simple que jamais, 
+Microsoft vous recommande de suivre les consignes de base
+suivantes avant d'installer tout système d'exploitation. 
+
+* Vérifiez que votre ordinateur est assez puissant. Vous devez disposer au 
+  moins d'un 486DX ou d'un processeur 66 mégahertz (MHz) et de 
+  24 méga-octets (Mo) de mémoire vive (RAM). 
+
+* Vérifiez que vous disposez d'un espace disque suffisant. Une installation 
+  par défaut exige de 205 à 260 Mo d'espace disque, mais cette plage peut 
+  s'étendre de 190 à 400 Mo en fonction de la configuration de votre 
+  système et des options que vous décidez d'installer, mais aussi
+  selon que vous installez la version complète ou la mise à niveau de
+  Windows 98. Pour plus d'informations sur l'espace disque nécessaire,
+  lisez le fichier Setup.txt situé dans le dossier Win98 de votre CD-ROM
+  Windows 98 Deuxième Édition.
+
+* Procurez-vous les derniers pilotes disponibles pour tous les scanneurs, 
+  modems ou périphériques connectés à votre ordinateur. Consultez la 
+  documentation de votre matériel ou visitez le site Web du constructeur 
+  pour plus d'informations à ce sujet. 
+
+* Effectuez une analyse de votre ordinateur pour vous assurer qu'il n'est 
+  pas infecté par des virus. Exécutez un programme antivirus comportant 
+  les dernières signatures de virus et autorisez la suppression des virus 
+  détectés. Consultez la documentation de votre logiciel antivirus pour 
+  plus d'informations sur la manière d'obtenir des fichiers de signature
+  de virus mis à jour. 
+
+* Après avoir terminé l'analyse antivirus, désactivez toutes les 
+  applications antivirus logicielles et matérielles avant d'exécuter le 
+  programme d'installation de Windows. Réactivez les applications 
+  antivirus une fois l'installation terminée. Consultez la documentation 
+  de votre logiciel antivirus pour plus d'instructions à ce sujet. 
+
+* Sauvegardez toutes les données vitales de votre disque dur en utilisant 
+  un utilitaire de sauvegarde d'un autre fabricant ou en enregistrant
+  manuellement les fichiers importants sur des disquettes ou autres
+  supports. 
+
+* Fermez tous les programmes ouverts et déconnectez-vous d'Internet
+  avant d'exécuter le programme d'installation de Windows.
+
+* Consultez le fichier Setup.txt situé dans le dossier Win98 de votre CD-ROM 
+  Windows 98 Deuxième Édition ; il contient des informations de dernière
+  minute qui peuvent concerner des configurations matérielles particulières.
+
+* Si vous effectuez une mise à niveau à partir de Windows 95 et que vous 
+  désiriez conserver vos paramètres actuels, exécutez le programme 
+  d'installation de Windows 98 depuis Windows 95 et effectuez l'installation 
+  dans le même répertoire Windows de votre disque dur.
+
+* Si vous installez la version de mise à niveau commercialisée de Windows 98 
+  sur un nouveau disque ou un disque reformaté, vous devez avoir sous la
+  main les disquettes ou le CD de votre ancienne version de Windows. Le
+  programme d'installation vous les demandera pour vérifier la version de
+  votre système d'exploitation précédent.
+
+* Si vous avez prévu un scénario de double amorçage avec Windows NT, 
+  installez Windows 98 en premier.
+
+* Créez la disquette de démarrage Windows lorsque le programme d'installation 
+  vous y invite. Cette disquette possède bien plus de fonctionnalités par 
+  rapport aux versions précédentes de Windows. Outre divers utilitaires, 
+  elle contient des pilotes MS-DOS pour la plupart des unités de CD-ROM, 
+  de sorte que vous pouvez accéder à votre CD-ROM depuis MS-DOS lorsque 
+  vous effectuez un amorçage à partir de la disquette de démarrage. 
+
+* Il est fortement conseillé d'enregistrer vos fichiers système, lorsque vous 
+  y êtes invité par le programme d'installation de Windows, pour le cas 
+  où vous devriez revenir à votre ancienne version de Windows. Pour ce
+  faire, il vous faut jusqu'à 110 Mo d'espace disque.

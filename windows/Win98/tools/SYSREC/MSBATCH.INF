@@ -1,0 +1,149 @@
+; MSBATCH.INF
+;
+; Copyright (c) 1995-1998 Microsoft Corporation.
+; All rights reserved.
+;
+
+[BatchSetup]
+Version=3.0 (32-bit)
+SaveDate=05/21/98
+
+[Version]
+Signature = "$CHICAGO$"
+LayoutFile=layout.inf
+
+[Setup]
+Express=1
+InstallDir="c:\windows"
+InstallType=3
+EBD=0
+ShowEula=0
+ChangeDir=0
+OptionalComponents=1
+Network=1
+System=0
+CCP=0
+CleanBoot=0
+Display=0
+DevicePath=0
+NoDirWarn=1
+TimeZone="Romance"
+Uninstall=0
+NoPrompt2Boot=1
+
+[System]
+Locale=L040C
+SelectedKeyboard=KEYBOARD_0000040C
+
+[NameAndOrg]
+Name="System Recovery"
+Org="Preferred Customer"
+Display=0
+
+[Network]
+ComputerName="Windows 98 User"
+Workgroup="WORKGROUP"
+Description="System Recovery"
+Display=0
+
+[VREDIR]
+LogonDomain="WORKGROUP"
+ValidatedLogon=1
+
+[OptionalComponents]
+"Options d'accessibilité"=1
+"Outils d'accessibilité"=0
+"Porte-documents"=0
+"Calculatrice"=1
+"Papiers peints du bureau"=0
+"Modèles de documents"=1
+"Jeux"=0
+"Imaging"=1
+"Pointeurs de souris"=0
+"Paint"=1
+"Aperçu rapide"=0
+"Exécution de scripts"=1
+"WordPad"=1
+"Accès réseau à distance"=0
+"Serveur d'accès réseau à dist."=0
+"Connexion directe par câble"=0
+"HyperTerminal"=0
+"Microsoft Chat 2.1"=0
+"Microsoft NetMeeting"=1
+"Numéroteur téléphonique"=1
+"Réseau privé virtuel (VPN)"=0
+"Baseball"=0
+"Les animaux dangereux"=0
+"Au coeur de l'ordinateur"=0
+"Jungle"=0
+"Léonard de Vinci"=0
+"Autres fenêtres"=0
+"Mystère"=0
+"Nature"=0
+"Science"=0
+"Espace"=0
+"Sports"=0
+"Les années 60 américaines"=0
+"L'âge d'or"=0
+"Voyages"=0
+"Fonds marins"=0
+"Windows 98"=0
+"Microsoft FrontPage Express"=1
+"Visionneuse VRML 2.0 Microsoft"=0
+"Microsoft Wallet"=0
+"Serveur Web personnel "=1
+"Real Audio Player 4.0"=0
+"Assistant Publication de sites Web"=0
+"Gestion système par interface Web"=0
+"Microsoft Outlook Express"=1
+"Baltique"=0
+"Europe centrale"=0
+"Cyrillique"=0
+"Grec"=0
+"Turc"=0
+"Compression audio"=1
+"Lecteur CD"=1
+"Macromedia Shockwave Director"=1
+"Macromedia Shockwave Flash"=1
+"Lecteur multimédia"=1
+"Microsoft NetShow Player 2.0"=0
+"Modèles de sons multimédias"=0
+"Exemples de sons"=0
+"Magnétophone"=1
+"Compression vidéo"=1
+"Contrôle du volume"=1
+"AOL"=1
+"CompuServe"=1
+"France Telecom"=1
+"The Microsoft Network"=1
+"Écrans de veille supplémentaires"=0
+"Fenêtres volantes"=1
+"Écrans de veille OpenGL"=0
+"Sauvegarde"=1
+"Table de caractères"=0
+"Presse-papiers"=0
+"Outils de compression disque"=1
+"Convertisseur de lecteur (FAT32)"=1
+"Stratégies de groupe"=0
+"Observateur réseau"=0
+"Moniteur système"=0
+"Vumètre ressources système"=0
+
+[Printers]
+
+[InstallLocationsMRU]
+
+[Install]
+AddReg=RegistrySettings
+DelReg=DelRegistrySettings
+
+[RegistrySettings]
+HKLM,%KEY_RUN%,BatchReg1,,"%11%\srw.exe"
+
+[DelRegistrySettings]
+HKLM,%KEY_RUN%,Welcome
+
+[Strings]
+KEY_RUN="SOFTWARE\Microsoft\Windows\CurrentVersion\Run"
+
+

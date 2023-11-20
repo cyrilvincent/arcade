@@ -1,0 +1,21 @@
+
+here is a brief list of "problematic" enterprise programs i've found so far:
+
+# get dexter (novosoft)
+# defender of the crown show (joe)
+  all ram extensions must be disabled. runs only in 128k mode.
+
+# strider-2
+# enterball ('a' studio)
+  lpt gets corrupted with EXOS 2.3, use EXOS 2.1 !
+
+# mirror world ('a' studio / entersoft)
+  some graphics are corrupted in disk configurations. apart from this,
+  the game runs perfectly. to fix the problem, use tape configs. 
+
+# sorcery (entersoft)
+  disable all memory extensions. some versions fail to work with EXDOS.
+
+# wizard's lair (entersoft)
+  runs only on english machines, without memory extensions and EXDOS. 
+  (use "original ep128 with tape" config)

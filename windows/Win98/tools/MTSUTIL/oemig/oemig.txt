@@ -1,0 +1,87 @@
+------------------------------------------------------
+            LISEZ-MOI Microsoft Windows 98
+     pour le répertoire OEMIG du CD-ROM Windows 98        
+                    
+------------------------------------------------------
+
+(c) Copyright Microsoft Corporation, 1999
+
+
+Ce document contient des informations supplémentaires
+ou de dernière minute qui complètent la documentation
+de Microsoft Windows 98.
+
+----------------------------
+Comment utiliser ce document
+----------------------------
+
+Pour visualiser ce document dans le Bloc-notes, 
+agrandissez la fenêtre du Bloc-notes.
+
+Pour l'imprimer, ouvrez-le avec le Bloc-notes ou un autre
+traitement de texte, puis cliquez sur la commande Imprimer
+du menu Fichier.
+
+--------
+SOMMAIRE
+--------
+   OEMIG.INF - Le fichier d'installation.
+DIRECTDB.DLL - Le moteur d'importation utilisé pour lire 
+               les messages Outlook Express 5 et les 
+               importer.
+OEMIGLIB.DLL - Le fichier d'interface utilisateur pour 
+               l'importation des messages Outlook Express 5.
+   OEMIG.TXT - Le fichier que vous lisez.
+
+
+
+Ces fichiers sont utilisés après la désinstallation de Windows 98 
+Deuxième Édition pour permettre à Outlook Express 4 d'importer 
+des messages électroniques reçus pendant l'exécution de Outlook 
+Express 5.
+
+===========================================================
+OEMIG.INF - AUTORISATION D'IMPORTER PAR OUTLOOK EXPRESS 4.0 
+            DES MESSAGES REÇUS PENDANT L'EXÉCUTION DE OUTLOOK 
+	    EXPRESS 5
+==========================================================
+
+
+Pour installer cette mise à jour, procédez comme suit :
+
+1: Fermez Outlook Express 4.
+2: Sélectionnez OEMIG.INF dans le dossier \Tools\MTSutil\OEMIG
+   du CD-ROM Windows 98.
+3: Cliquez avec le bouton droit sur OEMIG.INF.
+	- ou -
+   Maintenez la touche MAJ enfoncée et appuyez sur F10.
+4: Redémarrez le système.
+5: Ouvrez Outlook Express 4 et importez les messages en 
+   cliquant dans le menu Fichier sur Importer, sur Messages, 
+   puis en suivant les instructions qui s'affichent à l'écran.
+
+Vous avez besoin de Outlook Express 4.0 ou 4.01 et d'un compte 
+de messagerie configuré.
+
+
+Sous Windows 95, il peut être nécessaire d'installer ce fichier 
+manuellement.
+Pour ce faire, suivez les instructions décrites ci-dessous.
+
+Remarque : <lecteur> représente la lettre du lecteur sur lequel 
+Outlook Express est installé. 
+
+1: Copiez le fichier OEMIGLIB.DLL sur <Lecteur>:\Program 
+   Files\Outlook Express\
+2: Copiez le fichier DIRECTDB.DLL sur <Lecteur>:\Program 
+   Files\Common Files\System\
+3: Cliquez sur Démarrer, puis sur Exécuter et tapez la commande 
+   suivante "regsvr32 <Lecteur>:\Progra~1\Outloo~1\oemiglib.dll", 
+   puis cliquez sur OK.
+4: Cliquez sur Démarrer, puis sur Exécuter et tapez la commande 
+   suivante "regsvr32 <Lecteur>:\Progra~1\common~1\system\oemiglib.dll",
+   puis cliquez sur OK.
+5: Redémarrez le système.
+6: Ouvrez Outlook Express 4 et importez les messages en cliquant 
+   dans le menu Fichier sur Importer, puis sur Messages et en 
+   suivant les instructions qui s'affichent à l'écran.

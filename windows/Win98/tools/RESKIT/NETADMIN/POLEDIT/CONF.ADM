@@ -1,0 +1,233 @@
+; conf.adm
+;
+;;;;;;;;;;;;;;;;;;;;;
+CLASS USER   ;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;
+
+CATEGORY !!NetMeeting
+KEYNAME "Software\Microsoft\Conferencing\Policies"
+
+	POLICY !!RestrictFileTransfer
+	VALUENAME "RestrictFileTransfer"
+		PART !!PreventSendingFiles CHECKBOX
+			VALUENAME "NoSendingFiles"
+		END PART
+
+		PART !!PreventReceivingFiles CHECKBOX
+			VALUENAME "NoReceivingFiles"
+		END PART
+	END POLICY
+
+	POLICY !!RestrictAppSharing
+	VALUENAME "RestrictAppSharing"
+		PART !!PreventAppSharing CHECKBOX
+			VALUENAME "NoAppSharing"
+		END PART
+		PART !!PreventSharedClip CHECKBOX
+			VALUENAME "NoSharedClip"
+		END PART
+		PART !!PreventSharingMSDOS CHECKBOX
+			VALUENAME "NoSharingDosWindows"
+		END PART
+		PART !!PreventSharingExplorer CHECKBOX
+			VALUENAME "NoSharingExplorer"
+		END PART
+		PART !!PreventGrantingControl CHECKBOX
+			VALUENAME "WorkAloneOnly"
+		END PART
+	END POLICY
+
+	POLICY !!RestrictOptionsDialog
+	VALUENAME "OptionsDialogRestricted"
+		PART !!DisableGeneralPage CHECKBOX
+			VALUENAME "NoGeneralPage"
+		END PART
+		PART !!DisableMyInfoPage CHECKBOX
+			VALUENAME "NoMyInformationPage"
+		END PART
+		PART !!DisableSDDirPage CHECKBOX
+			VALUENAME "NoSDDirPage"
+		END PART
+		PART !!DisableAudioPage CHECKBOX
+			VALUENAME "NoAudioPage"
+		END PART
+		PART !!DisableVideoPage CHECKBOX
+			VALUENAME "NoVideoPage"
+		END PART
+		PART !!DisableProtocolsPage CHECKBOX
+			VALUENAME "NoProtocolsPage"
+		END PART
+	END POLICY
+
+	POLICY !!PreventAnswering
+	VALUENAME "NoAnswering"
+	END POLICY
+
+	POLICY !!PreventAudio
+	VALUENAME "NoAudio"
+	END POLICY
+
+	POLICY !!RestrictVideo
+	VALUENAME "RestrictVideo"
+		PART !!PreventSendingVideo CHECKBOX
+			VALUENAME "NoSendingVideo"
+		END PART
+		PART !!PreventReceivingVideo CHECKBOX
+			VALUENAME "NoReceivingVideo"
+		END PART
+	END POLICY
+
+	POLICY !!PreventDirectoryServices
+	VALUENAME "NoDirectoryServices"
+	END POLICY
+
+	POLICY !!SetULSServer
+		PART !!UlsServer EDITTEXT
+			KEYNAME "Software\Microsoft\User Location Service\Client"
+			VALUENAME "Server Name"
+		END PART
+	END POLICY
+
+	POLICY !!SetExchangeProperty
+			PART !!ExchangePropertyID DROPDOWNLIST
+			KEYNAME "Software\Microsoft\Conferencing\Policies"
+			VALUENAME "NetMeeting Address Property"
+			ITEMLIST
+				NAME !!Extension-Attribute-1 VALUE NUMERIC 32813
+				NAME !!Extension-Attribute-2 VALUE NUMERIC 32814
+				NAME !!Extension-Attribute-3 VALUE NUMERIC 32815
+				NAME !!Extension-Attribute-4 VALUE NUMERIC 32816
+				NAME !!Extension-Attribute-5 VALUE NUMERIC 32817
+				NAME !!Extension-Attribute-6 VALUE NUMERIC 32818
+				NAME !!Extension-Attribute-7 VALUE NUMERIC 32819
+				NAME !!Extension-Attribute-8 VALUE NUMERIC 32820
+				NAME !!Extension-Attribute-9 VALUE NUMERIC 32821
+				NAME !!Extension-Attribute-10 VALUE NUMERIC 32822
+			END ITEMLIST
+			END PART	
+		END POLICY
+
+	POLICY !!SetUserInfoClass
+		PART !!UserInfoClassID DROPDOWNLIST
+		KEYNAME "Software\Microsoft\Conferencing\Policies"
+		VALUENAME "RestrictedULS"
+		ITEMLIST
+			NAME !!UserInfoPersonal			VALUE NUMERIC 1
+			NAME !!UserInfoBusiness			VALUE NUMERIC 2
+			NAME !!UserInfoAdult			VALUE NUMERIC 4
+		END ITEMLIST
+		END PART	
+	END POLICY
+
+	POLICY !!NetMeetingHomePage		
+		PART !!HomePage EDITTEXT
+			KEYNAME "Software\Microsoft\Conferencing"
+			VALUENAME "NetMeeting Home Page"
+		END PART
+	END POLICY
+
+	POLICY !!SetAVThroughput
+		PART !!AVThroughput EDITTEXT
+			KEYNAME "Software\Microsoft\Conferencing\QoS\Resources\1"
+			VALUENAME "MaxUnits"
+		END PART
+	END POLICY
+END CATEGORY	; NetMeeting
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+CLASS MACHINE   ;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+CATEGORY !!NetMeeting2
+KEYNAME "Software\Microsoft\Conferencing"
+	POLICY !!NetMeeting2
+		PART !!EnableTCPIP CHECKBOX
+		KEYNAME "Software\Microsoft\Conferencing\Transports\TCPIP"
+		VALUENAME Disabled
+		END PART
+
+		PART !!EnableNullModem CHECKBOX
+		KEYNAME "Software\Microsoft\Conferencing\Transports\DIRCB"
+		VALUENAME Disabled
+		DEFCHECKED
+		END PART
+	END POLICY
+END CATEGORY
+
+[strings]
+Y="O"
+N="N"
+
+NetMeeting="Paramètres NetMeeting"
+NetMeeting2="Protocoles NetMeeting"
+
+PreventAnswering="Empêcher l'utilisateur de répondre aux appels"
+
+RestrictFileTransfer="Restreindre l'utilisation de transfert de fichiers"
+PreventSendingFiles="Empêcher l'utilisateur d'envoyer des fichiers"
+PreventReceivingFiles="Empêcher l'utilisateur de recevoir des fichiers"
+
+PreventAudio="Empêcher l'utilisateur d'utiliser les fonctionnalités audio"
+
+PreventDirectoryServices="Empêcher l'utilisateur d'utiliser les services d'annuaire"
+
+RestrictVideo="Restreindre l'utilisation vidéo"
+PreventSendingVideo="Empêcher l'utilisateur d'envoyer des données vidéo"
+PreventReceivingVideo="Empêcher l'utilisateur de recevoir des données vidéo"
+
+NetMeetingHomePage="Définir la page d'accueil NetMeeting"
+SetULSServer="Définir le serveur d'annuaire par défaut"
+HomePage="URL de la page d'accueil NetMeeting :"
+UlsServer="Serveur d'annuaire :"
+
+SetExchangeProperty="Définir la propriété Exchange Server pour l'adresse NetMeeting"
+ExchangePropertyID="Propriété Exchange Server :"
+Extension-Attribute-1="Attribut d'extension  1"
+Extension-Attribute-2="Attribut d'extension  2"
+Extension-Attribute-3="Attribut d'extension  3"
+Extension-Attribute-4="Attribut d'extension  4"
+Extension-Attribute-5="Attribut d'extension  5"
+Extension-Attribute-6="Attribut d'extension  6"
+Extension-Attribute-7="Attribut d'extension  7"
+Extension-Attribute-8="Attribut d'extension  8"
+Extension-Attribute-9="Attribut d'extension  9"
+Extension-Attribute-10="Attribut d'extension 10"
+
+SetUserInfoClass="Prédéfinir la catégorie des informations utilisateur"
+UserInfoClassID="Remarque : ne s'applique qu'aux installations automatisées"
+UserInfoPersonal="Privé"
+UserInfoBusiness="Professionnel"
+UserInfoAdult="Adultes"
+
+RestrictAppSharing="Restreindre l'utilisation de partage d'informations"
+PreventAppSharing="Désactiver toutes les fonctionnalités de partage d'applications"
+PreventSharedClip="Empêcher l'utilisateur de partager le presse-papiers"
+PreventSharingMSDOS="Empêcher l'utilisateur de partager les fenêtres MS-DOS"
+PreventSharingExplorer="Empêcher l'utilisateur de partager les fenêtres de l'explorateur"
+PreventGrantingControl="Empêcher l'utilisateur de collaborer"
+
+RestrictOptionsDialog="Restreindre l'utilisation de la boîte de dialogue des options"
+DisableGeneralPage="Désactiver la page d'options 'Générales'"
+DisableProtocolsPage="Désactiver la page d'options 'Protocoles'"
+DisableAudioPage="Désactiver la page d'options 'Audio'"
+DisableVideoPage="Désactiver la page d'options 'Vidéo'"
+DisableMyInfoPage="Désactiver la page d'options 'Informations personnelles'"
+DisableSDDirPage="Désactiver la page d'options 'Appel'"
+
+EnableTCPIP="Désactiver TCP/IP"
+EnableNullModem="Désactiver un modem inexistant"
+
+SetAVThroughput="Définir une limite pour le débit audio/vidéo"
+AVThroughput="Limite du débit moyen audio/vidéo (en bps) :"
+
+IEAK_Title=Microsoft NetMeeting
+IEAK_DescriptionTitle=Paramètres et restrictions NetMeeting
+IEAK_Description1=Microsoft NetMeeting vous permet d'effectuer des appels audio et vidéo et de partager des données avec Internet ou l'intranet. Avec NetMeeting, deux personnes ou plus peuvent partager des applications, transférer des fichiers, visualiser et dessiner sur un tableau blanc partagé et discuter. Tout ceci fonctionne en utilisant une connexion standard à Internet par modem, ainsi que via une connexion RNIS ou un réseau local.
+IEAK_Description2=Les stratégies système pour NetMeeting 2.0 représentent un mécanisme puissant permettant d'accroître le contrôle et la gestion d'ordinateurs sur un réseau. Les stratégies système définies dans ce fichier permettent d'appliquer des paramètres d'utilisateur et de l'ordinateur en remplaçant les valeurs par défaut du Registre. En utilisant cet éditeur, vous pouvez implémenter des stratégies permettant de contrôler les privilèges d'accès de l'utilisateur et de l'ordinateur ainsi que de standardiser les configurations pour votre communauté d'utilisateurs de NetMeeting 2.0.
+IEAK_Description3=Les paramètres de stratégie système pour les utilisateurs peuvent s'appliquer à un utilisateur en particulier, un groupe d'utilisateurs ou à tous les utilisateurs. Les paramètres de stratégie système pour les ordinateurs peuvent s'appliquer à un ordinateur en particulier ou à tous les utilisateurs. 
+
+[IEAK]
+Lock=1
+Roles=011
+NumOfDescLines=3
+Platform=010

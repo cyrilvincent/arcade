@@ -1,0 +1,35 @@
+; String file for disk imaging tool
+
+
+[strings]
+
+st00="Cet utilitaire cr‚e une disquette de d‚marrage FAT32"
+st01="Ins‚rez une disquette 1.44 Mo dans le lecteur A:."
+st02="Avertissement : Tous les fichiers de la disquette seront supprim‚s !"
+st03="Appuyez sur 'Y' pour continuer, ou sur toute autre touche pour quitter :"
+
+
+st04="Impossible d'ouvrir le fichier image."
+st05="V‚rifiez que le CD est dans le lecteur et r‚essayez."
+st06="Impossible de lire l'image du CD correctement !"
+st07="Erreur lors de l'‚criture d'une piste."
+st08="Erreurs lors de l'‚criture sur la disquette !"
+st09="Veuillez cr‚er une autre disquette."
+st10="Impossible d'allouer suffisamment de m‚moire pour cette application."
+st11="Lib‚rez de la m‚moire conventionnelle et r‚essayez."
+
+st12="criture de la piste"
+st13="Image de d‚marrage transf‚r‚e."
+
+st14="Pr‚paration de l'extraction des fichiers de l'utilitaire."
+st15="Extraction en cours."
+st16="Erreur lors de la cr‚ation du fichier temporaire."
+
+st17="Ce programme n'a d‚tect‚ aucun gestionnaire de m‚moire haute."
+st18="Un tel gestionnaire est n‚cessaire … son ex‚cution."
+st19="Ajoutez la ligne 'device=<chemin>\himem.sys' dans votre fichier"
+st20="CONFIG.SYS et red‚marrez votre ordinateur."
+st21="Op‚ration termin‚e."
+st22="Ce lecteur semble ˆtre un disque dur."
+st23="Ce disque est prot‚g‚ en ‚criture."
+st24="Ins‚rez un disque non prot‚g‚ en ‚criture et appuyez sur ENTRE."

@@ -1,0 +1,75 @@
+Gyakran feltett kérdések és válaszok az ep32-vel kapcsolatban:
+
+K: Nem tudok .TAP fájlokat betölteni. Egyáltalán mik ezek !?
+
+V: A .TAP fájlokat Stocker Dániel EPTE nevû magnó-emulátor
+    programja használja. Ezek egyfajta "archív" fájlok, melyek
+    egyben tartalmazzák egy adott program összes szükséges
+    fájlát olyan sorrendben, ahogyan magnóról kell betöleni.
+    Az ep32 ezeket a .TAP fájlokat *nem* kezeli. Az EPTE-vel 
+    a .TAP fájlból az egyes programfájlokat ki lehet szedni, majd
+    ezután a magnó emulációval be lehet tölteni.
+
+
+K: Letöltöttem az ep32-t, de nem tudom elindítani. Sehol nem 
+    találok végrehajtható fájlt.
+
+V: Vélhetõleg az ep32 forrását ("ep32 with sources") töltötted le, a bináris 
+    verzió helyett. A letöltés oldalon a felsõ linkre kattints !
+
+
+K: Nem fut az ep32. Amikor elindítom, "Egy szükséges DLL 
+    fájl, a DINPUT.DLL nem található." üzenet jelenik meg.
+
+V: Nincs Direct-X telepítve a gépre. Installáld fel, és futni fog, meglásd !
+
+
+K: Hogyan tudok .com fájlokat betölteni ?
+
+V: Programok betöltéséhez használhatod a magnó emulációt vagy a 
+    direkt floppy hozzáférést. Mindkettõ mûködése le van írva az ep32 
+    súgójában.  A magyar nyelvû súgót az ep32-hu.chm fájlban találod, 
+    ezt akár explorerbõl is meg lehet nyitni.
+
+
+K: Miért nem tudok progamot betölteni a magnó emulációval ? A 
+    magnó könyvtárat beállítottam, beírtam hogy "start", de az ep32 
+    folyton csak a floppyt kerregteti és nem történik semmi.
+
+V: A magnó emuláció csak akkor használható, ha a rendszerben nincs 
+    EXDOS. Tölts be a "hardware/load memory config" menüponttal egy
+    EXDOS nélküli konfigurációt (például "original  EP128 with tape.cfg".)
+
+
+K: Honnan tudom letölteni a Wriggler címû (vagy akármi más) játékot ?
+
+V: Látogasd meg Kiss László v. Garfield weblapját:
+
+    http://www.dsgstudios.cjb.net/z80
+    http://www.esnet.hu/~enterprise/
+
+K: Miért nem fut a Wriggler (vagy akármi más program) ? 
+
+V: Az esetek 99% százalékában ennek az az oka, hogy a program hiányos. 
+    Ellenõrizd, hogy minden fájl megvan-e ? Ha minden rendben, de a 
+    program mégsem fut, próbáld meg más konfiguráció alatt is elindítani 
+    (pl. 128k RAM-mal, EXDOS nélkül stb.) Ha ez sem segít, küldd el nekem 
+    (egzo@freemail.hu) a programot, hogy megnézzem.
+
+
+K: Miért szaggat a programok hangja Windows XP alatt ? Elég 
+    gyors a gépem...
+
+V: Ha a buffer méretének növelésére sem múlik el a hiba, akkor fogalmam 
+    sincs... Nekem mindkét gépemen,  XP és 98 alatt is jól megy, 3-féle 
+    hangkártyával. Azért próbálok utánanézni... 
+
+
+K: Hogyan tudom elérni az ENTERPRISE (kék) funkcióbillentyûit ?
+
+V: Alaphelyzetben a funkcióbillentyûk a numerikus billentyûzetre vannak 
+    címezve. Ha ez a kiosztás nem tetszik, a "hardware/control setup"-ban  
+    tetszõlegesen átdefiniálhatod a billentyûzetet. Sõt, ha "load layout" 
+    opcióval betöltöd az "ep function keys.kbd" nevû fájlt, az EP 
+    funkcióbillentyûi a PC billentyûzet F1-F8 gombjaira kerülnek. 
+

@@ -1,0 +1,12 @@
+; dhcp_on.INF
+; This file will re-enable dhcp services for ics
+; Copyright (c) 1993-1998, Microsoft Corporation
+
+[version]
+signature="$CHICAGO$"
+
+[DefaultInstall]
+AddReg=Disable.MapCache
+
+[Disable.MapCache]
+HKLM,System\CurrentControlSet\Services\ICSharing\Settings\General,EnableDHCP,0,"1"

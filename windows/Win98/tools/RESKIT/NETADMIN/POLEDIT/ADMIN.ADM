@@ -1,0 +1,1122 @@
+CLASS MACHINE
+
+CATEGORY !!Network
+KEYNAME Software\Microsoft\Windows\CurrentVersion\Policies\Network
+
+	CATEGORY !!AccessControl
+		POLICY !!AccessControl_User
+		
+		KEYNAME System\CurrentControlSet\Services\VxD\FILESEC
+		VALUENAME Start
+		VALUEON NUMERIC 0 VALUEOFF DELETE
+
+		ACTIONLISTON
+			KEYNAME System\CurrentControlSet\Services\VxD\FILESEC
+			VALUENAME StaticVxD VALUE filesec.vxd
+		END ACTIONLISTON
+		ACTIONLISTOFF
+			KEYNAME Security\Provider
+			VALUENAME Platform_Type  VALUE NUMERIC 0
+			KEYNAME System\CurrentControlSet\Services\VxD\FILESEC
+			VALUENAME StaticVxD VALUE DELETE
+			KEYNAME System\CurrentControlSet\Services\VxD\NWSP
+			VALUENAME Start		VALUE DELETE
+			VALUENAME StaticVxD VALUE DELETE
+			KEYNAME System\CurrentControlSet\Services\VxD\MSSP
+			VALUENAME Start		VALUE DELETE
+			VALUENAME StaticVxD VALUE DELETE
+		END ACTIONLISTOFF
+
+			PART !!AuthenticatorName EDITTEXT
+			KEYNAME Security\Provider
+			VALUENAME Container
+			END PART
+
+			PART !!AuthenticatorType DROPDOWNLIST
+			KEYNAME Security\Provider
+			VALUENAME Platform_Type REQUIRED
+			ITEMLIST
+				NAME !!AT_NetWare VALUE NUMERIC 3
+				ACTIONLIST
+					KEYNAME System\CurrentControlSet\Services\VxD\NWSP
+					VALUENAME StaticVxD VALUE nwsp.vxd
+					VALUENAME Start		VALUE NUMERIC 0
+					KEYNAME Security\Provider
+					VALUENAME Address_Book  VALUE nwab32.dll
+				END ACTIONLIST
+
+				NAME !!AT_NTAS  VALUE NUMERIC 2
+				ACTIONLIST
+					KEYNAME System\CurrentControlSet\Services\VxD\MSSP
+					VALUENAME StaticVxD VALUE mssp.vxd
+					VALUENAME Start		VALUE NUMERIC 0
+					KEYNAME Security\Provider
+					VALUENAME Address_Book  VALUE msab32.dll
+				END ACTIONLIST
+
+				NAME !!AT_NT  VALUE NUMERIC 1
+				ACTIONLIST
+					KEYNAME System\CurrentControlSet\Services\VxD\MSSP
+					VALUENAME StaticVxD VALUE mssp.vxd
+					VALUENAME Start		VALUE NUMERIC 0
+					KEYNAME Security\Provider
+					VALUENAME Address_Book  VALUE msab32.dll
+				END ACTIONLIST
+			END ITEMLIST
+			END PART
+		END POLICY
+	END CATEGORY  ; User-Level Security
+
+	CATEGORY !!Logon
+		POLICY !!LogonBanner
+		KEYNAME Software\Microsoft\Windows\CurrentVersion\Winlogon
+			PART !!LogonBanner_Caption EDITTEXT
+			VALUENAME "LegalNoticeCaption"
+			MAXLEN 255
+			DEFAULT !!LogonBanner_DefCaption
+			END PART
+
+			PART !!LogonBanner_Text EDITTEXT
+			VALUENAME "LegalNoticeText"
+ 			MAXLEN 255
+			DEFAULT !!LogonBanner_DefText
+			END PART
+		END POLICY
+
+		POLICY !!ValidatedLogon
+		KEYNAME Network\Logon
+		VALUENAME "MustBeValidated"
+		END POLICY
+	END CATEGORY
+
+	CATEGORY !!NWClient
+	KEYNAME System\CurrentControlSet\Services\VxD\NWREDIR
+		POLICY !!PrefServer
+		KEYNAME System\CurrentControlSet\Services\NWNP32\NetworkProvider
+			PART !!PrefServerName EDITTEXT REQUIRED
+			VALUENAME "AuthenticatingAgent"
+			MAXLEN 48
+			END PART
+		END POLICY
+
+		POLICY !!SupportLFN
+			PART !!SupportLFNsOn DROPDOWNLIST REQUIRED
+			VALUENAME "SupportLFN"
+			ITEMLIST
+				NAME !!LFN_No311	VALUE NUMERIC 1
+				NAME !!LFN_All		VALUE NUMERIC 2
+			END ITEMLIST
+
+			END PART
+		END POLICY
+
+		POLICY !!SearchMode
+			PART !!SearchMode1 NUMERIC
+			VALUENAME SearchMode
+			MIN 0 MAX 7 DEFAULT 0 
+			END PART	
+		END POLICY
+
+		POLICY !!DisableAutoNWLogin
+			KEYNAME System\CurrentControlSet\Services\NWNP32\NetworkProvider
+			VALUENAME DisableDefaultPasswords		
+		END POLICY
+
+	END CATEGORY	; Microsoft Netware-Compatible Network
+
+	CATEGORY !!MSClient
+		POLICY !!LogonDomain
+		KEYNAME Network\Logon
+		VALUENAME "LMLogon"
+			PART !!DomainName	EDITTEXT REQUIRED
+			MAXLEN 15
+			KEYNAME System\CurrentControlSet\Services\MSNP32\NetworkProvider
+			VALUENAME AuthenticatingAgent
+			END PART
+
+			PART !!DomainLogonConfirmation CHECKBOX
+			KEYNAME Network\Logon
+			VALUENAME DomainLogonMessage
+			END PART
+
+			PART !!NoDomainPwdCaching CHECKBOX
+			KEYNAME Network\Logon
+			VALUENAME NoDomainPwdCaching
+			END PART
+		END POLICY
+
+		POLICY !!Workgroup
+		KEYNAME System\CurrentControlSet\Services\VxD\VNETSUP
+			PART !!WorkgroupName EDITTEXT REQUIRED
+			VALUENAME "Workgroup"
+			MAXLEN 15
+			END PART
+		END POLICY
+
+		POLICY !!AlternateWorkgroup
+		KEYNAME System\CurrentControlSet\Services\VxD\VREDIR
+			PART !!WorkgroupName EDITTEXT REQUIRED
+			VALUENAME "Workgroup"
+			MAXLEN 15
+			END PART
+		END POLICY
+
+	END CATEGORY	; Microsoft Network
+
+	CATEGORY !!NWServer
+		POLICY !!DisableSAP
+			KEYNAME System\CurrentControlSet\Services\NcpServer\Parameters
+			VALUENAME Use_Sap
+			VALUEON "0" VALUEOFF "1"
+			ACTIONLISTON
+				KEYNAME System\CurrentControlSet\Services\NcpServer\Parameters\Ndi\Params\Use_Sap
+				VALUENAME "" VALUE "0"
+			END ACTIONLISTON
+			ACTIONLISTOFF
+				KEYNAME System\CurrentControlSet\Services\NcpServer\Parameters\Ndi\Params\Use_Sap
+				VALUENAME "" VALUE "1"
+			END ACTIONLISTOFF
+		END POLICY
+	END CATEGORY
+
+	CATEGORY !!Passwords
+		POLICY !!HideSharePasswords
+		VALUENAME "HideSharePwds"
+		END POLICY
+
+		POLICY !!DisablePasswordCaching
+		VALUENAME "DisablePwdCaching"
+		END POLICY
+
+		POLICY !!RequireAlphaNum
+		VALUENAME "AlphanumPwds"
+		END POLICY
+
+		POLICY !!MinimumPwdLen
+			PART !!MPL_Length NUMERIC REQUIRED
+			MIN 1 MAX 8 DEFAULT 3
+			VALUENAME MinPwdLen
+			END PART
+		END POLICY
+	END CATEGORY	; Passwords
+
+	CATEGORY !!RemoteAccess
+		POLICY !!RemoteAccess_Disable
+		VALUENAME "NoDialIn"
+		END POLICY
+	END CATEGORY	; Remote Access
+
+	CATEGORY !!Sharing
+		POLICY !!DisableFileSharing
+		VALUENAME "NoFileSharing"
+		END POLICY
+
+		POLICY !!DisablePrintSharing
+		VALUENAME "NoPrintSharing"
+		END POLICY
+    END CATEGORY
+
+	CATEGORY !!SNMP
+		POLICY !!Communities
+		KEYNAME System\CurrentControlSet\Services\SNMP\Parameters\ValidCommunities
+			PART !!CommunitiesListbox LISTBOX
+				VALUEPREFIX ""
+			END PART
+		END POLICY
+
+		POLICY !!PermittedManagers
+		KEYNAME System\CurrentControlSet\Services\SNMP\Parameters\PermittedManagers
+			PART !!PermittedManagersListbox LISTBOX
+				VALUEPREFIX ""
+			END PART
+		END POLICY
+
+		POLICY !!Traps_Public
+		KEYNAME System\CurrentControlSet\Services\SNMP\Parameters\TrapConfiguration\Public
+			PART !!Traps_PublicListbox LISTBOX
+				VALUEPREFIX ""
+			END PART
+		END POLICY
+
+		POLICY !!InternetMIB
+		KEYNAME System\CurrentControlSet\Services\SNMP\Parameters\RFC1156Agent
+			PART !!ContactName EDITTEXT REQUIRED
+			VALUENAME sysContact			
+			END PART
+
+			PART !!Location EDITTEXT REQUIRED
+			VALUENAME sysLocation
+			END PART
+		END POLICY
+
+	END CATEGORY
+
+	CATEGORY !!Update
+		POLICY !!RemoteUpdate
+		KEYNAME System\CurrentControlSet\Control\Update
+		ACTIONLISTOFF
+			VALUENAME "UpdateMode" VALUE NUMERIC 0
+		END ACTIONLISTOFF
+
+			PART !!UpdateMode DROPDOWNLIST REQUIRED
+			VALUENAME "UpdateMode"
+			ITEMLIST
+				NAME !!UM_Automatic VALUE NUMERIC 1
+				NAME !!UM_Manual	VALUE NUMERIC 2
+			END ITEMLIST
+			END PART
+
+			PART !!UM_Manual_Path EDITTEXT
+			VALUENAME "NetworkPath"
+			END PART
+
+			PART !!DisplayErrors CHECKBOX
+			VALUENAME "Verbose"
+			END PART
+		
+			PART !!LoadBalance CHECKBOX
+			VALUENAME "LoadBalance"
+			END PART
+		END POLICY
+
+	END CATEGORY	; Update
+
+END CATEGORY	; Network
+CATEGORY !!System
+KEYNAME Software\Microsoft\Windows\CurrentVersion\Setup
+	POLICY !!EnableUserProfiles
+		KEYNAME Network\Logon
+		VALUENAME UserProfiles
+	END POLICY
+
+	POLICY !!NetworkSetupPath
+		PART !!NetworkSetupPath_Path EDITTEXT REQUIRED
+		VALUENAME "SourcePath"
+		END PART
+	END POLICY
+
+	POLICY !!NetworkTourPath
+		PART !!NetworkTourPath_Path EDITTEXT REQUIRED
+		VALUENAME "TourPath"
+		END PART
+		PART !!NetworkTourPath_TIP TEXT END PART
+	END POLICY
+
+	POLICY !!Run
+		KEYNAME Software\Microsoft\Windows\CurrentVersion\Run
+		PART !!RunListbox LISTBOX EXPLICITVALUE
+		END PART
+	END POLICY
+
+	POLICY !!RunOnce
+		KEYNAME Software\Microsoft\Windows\CurrentVersion\RunOnce
+		PART !!RunOnceListbox LISTBOX EXPLICITVALUE
+		END PART
+	END POLICY
+
+	POLICY !!RunServices
+		KEYNAME Software\Microsoft\Windows\CurrentVersion\RunServices
+		PART !!RunServicesListbox LISTBOX EXPLICITVALUE
+		END PART
+	END POLICY
+END CATEGORY
+
+CLASS USER
+
+CATEGORY !!ControlPanel
+	CATEGORY !!CPL_Display
+		POLICY !!CPL_Display_Restrict
+		KEYNAME Software\Microsoft\Windows\CurrentVersion\Policies\System
+			PART !!CPL_Display_Disable CHECKBOX
+			VALUENAME NoDispCPL
+			END PART
+
+			PART !!CPL_Display_HideBkgnd CHECKBOX
+			VALUENAME NoDispBackgroundPage
+			END PART
+
+			PART !!CPL_Display_HideScrsav CHECKBOX
+			VALUENAME NoDispScrSavPage
+			END PART
+
+			PART !!CPL_Display_HideAppearance CHECKBOX
+			VALUENAME NoDispAppearancePage
+			END PART
+
+			PART !!CPL_Display_HideSettings CHECKBOX
+			VALUENAME NoDispSettingsPage
+			END PART
+		END POLICY
+	END CATEGORY	; Display
+
+	CATEGORY !!CPL_Network
+		POLICY !!CPL_Network_Restrict
+		KEYNAME Software\Microsoft\Windows\CurrentVersion\Policies\Network
+			PART !!CPL_Network_Disable CHECKBOX
+			VALUENAME NoNetSetup
+			END PART
+	
+			PART !!CPL_Network_HideID CHECKBOX
+			VALUENAME NoNetSetupIDPage
+			END PART
+
+			PART !!CPL_Network_HideAccessCtrl CHECKBOX
+			VALUENAME NoNetSetupSecurityPage
+			END PART
+		END POLICY
+	END CATEGORY	; Network
+
+	CATEGORY !!CPL_Security
+		POLICY !!CPL_Security_Restrict
+		KEYNAME Software\Microsoft\Windows\CurrentVersion\Policies\System
+			PART !!CPL_Security_Disable CHECKBOX
+			VALUENAME NoSecCPL
+			END PART
+
+			PART !!CPL_Security_HideSetPwds CHECKBOX
+			VALUENAME NoPwdPage
+			END PART
+
+			PART !!CPL_Security_HideRemoteAdmin CHECKBOX
+			VALUENAME NoAdminPage
+			END PART
+
+			PART !!CPL_Security_HideProfiles CHECKBOX
+			VALUENAME NoProfilePage
+			END PART
+		END POLICY
+	END CATEGORY	; Security
+
+	CATEGORY !!CPL_Printers
+		POLICY !!CPL_Printers_Restrict
+		KEYNAME Software\Microsoft\Windows\CurrentVersion\Policies\Explorer
+			PART !!CPL_Printers_HidePages CHECKBOX
+			VALUENAME NoPrinterTabs
+			END PART
+
+			PART !!CPL_Printers_DisableRemoval CHECKBOX
+			VALUENAME NoDeletePrinter
+			END PART
+
+			PART !!CPL_Printers_DisableAdd CHECKBOX
+			VALUENAME NoAddPrinter
+			END PART
+		END POLICY
+	END CATEGORY	; Printers
+
+	CATEGORY !!CPL_System
+		POLICY !!CPL_System_Restrict
+		KEYNAME Software\Microsoft\Windows\CurrentVersion\Policies\System
+			PART !!CPL_System_HideDevMgr CHECKBOX
+			VALUENAME NoDevMgrPage
+			END PART
+
+			PART !!CPL_System_HideConfig CHECKBOX
+			VALUENAME NoConfigPage
+			END PART
+
+			PART !!CPL_System_NoFileSys CHECKBOX
+			VALUENAME NoFileSysPage
+			END PART
+
+			PART !!CPL_System_NoVirtMem CHECKBOX
+			VALUENAME NoVirtMemPage
+			END PART
+
+		END POLICY
+	END CATEGORY	; System
+
+END CATEGORY	; Control Panel
+
+CATEGORY !!Desktop
+KEYNAME "Control Panel\Desktop"
+	POLICY !!Wallpaper
+		PART !!WallpaperName COMBOBOX REQUIRED
+		SUGGESTIONS
+			!!Wallpaper1 !!Wallpaper2 !!Wallpaper3 !!Wallpaper4 !!Wallpaper5
+			!!Wallpaper6 !!Wallpaper7 !!Wallpaper8 !!Wallpaper9 !!Wallpaper10
+		END SUGGESTIONS
+		VALUENAME "Wallpaper"
+		END PART
+
+		PART !!TileWallpaper CHECKBOX DEFCHECKED
+		VALUENAME "TileWallpaper"
+		VALUEON "1" VALUEOFF "0"
+		END PART
+	END POLICY
+
+	POLICY !!ColorScheme
+		PART !!SchemeName DROPDOWNLIST
+		KEYNAME "Control Panel\Appearance"
+		VALUENAME Current REQUIRED
+		ITEMLIST
+			NAME !!Lavender VALUE !!Lavender
+			ACTIONLIST
+				KEYNAME "Control Panel\Colors"
+				VALUENAME ActiveBorder   VALUE "174 168 217"
+				VALUENAME ActiveTitle    VALUE "128 128 128"
+				VALUENAME AppWorkspace   VALUE "90 78 177"
+				VALUENAME Background     VALUE "128 128 192"
+				VALUENAME ButtonDkShadow VALUE "0 0 0"
+				VALUENAME ButtonFace     VALUE "174 168 217"
+				VALUENAME ButtonHilight  VALUE "216 213 236"
+				VALUENAME ButtonLight	 VALUE "174 168 217"
+				VALUENAME ButtonShadow   VALUE "90 78 177"
+				VALUENAME ButtonText     VALUE "0 0 0"
+				VALUENAME GrayText       VALUE "90 78 177"
+				VALUENAME Hilight        VALUE "128 128 128"
+				VALUENAME HilightText    VALUE "255 255 255"
+				VALUENAME InactiveBorder VALUE "174 168 217"
+				VALUENAME InactiveTitle  VALUE "90 78 177"
+				VALUENAME InactiveTitleText VALUE "0 0 0"
+				VALUENAME Menu           VALUE "174 168 217"
+				VALUENAME MenuText       VALUE "0 0 0"
+				VALUENAME InfoText       VALUE "174 168 217"
+				VALUENAME InfoWindow     VALUE "0 0 0"
+				VALUENAME Scrollbar      VALUE "174 168 217"
+				VALUENAME TitleText      VALUE "255 255 255"
+				VALUENAME Window         VALUE "255 255 255"
+				VALUENAME WindowFrame    VALUE "0 0 0"
+				VALUENAME WindowText     VALUE "0 0 0"
+			END ACTIONLIST
+
+			NAME !!Tan256 VALUE !!Tan256
+			ACTIONLIST
+				KEYNAME "Control Panel\Colors"
+				VALUENAME ActiveBorder   VALUE "202 184 149"
+				VALUENAME ActiveTitle    VALUE "0 0 0"
+				VALUENAME AppWorkspace   VALUE "156 129 78"
+				VALUENAME Background     VALUE "128 64 64"
+				VALUENAME ButtonDkShadow VALUE "0 0 0"
+				VALUENAME ButtonFace     VALUE "202 184 149"
+				VALUENAME ButtonHilight  VALUE "228 220 203"
+				VALUENAME ButtonLight	 VALUE "202 184 149"
+				VALUENAME ButtonShadow   VALUE "156 129 78"
+				VALUENAME ButtonText     VALUE "0 0 0"
+				VALUENAME GrayText       VALUE "156 129 78"
+				VALUENAME Hilight        VALUE "0 0 0"
+				VALUENAME HilightText    VALUE "255 255 255"
+				VALUENAME InactiveBorder VALUE "202 184 149"
+				VALUENAME InactiveTitle  VALUE "156 129 78"
+				VALUENAME InactiveTitleText VALUE "0 0 0"
+				VALUENAME Menu           VALUE "202 184 149"
+				VALUENAME MenuText       VALUE "0 0 0"
+				VALUENAME InfoText       VALUE "202 184 149"
+				VALUENAME InfoWindow     VALUE "0 0 0"
+				VALUENAME Scrollbar      VALUE "202 184 149"
+				VALUENAME TitleText      VALUE "255 255 255"
+				VALUENAME Window         VALUE "255 255 255"
+				VALUENAME WindowFrame    VALUE "0 0 0"
+				VALUENAME WindowText     VALUE "0 0 0"
+			END ACTIONLIST
+
+			NAME !!Wheat256 VALUE !!Wheat256
+			ACTIONLIST
+				KEYNAME "Control Panel\Colors"
+				VALUENAME ActiveBorder   VALUE "215 213 170"
+				VALUENAME ActiveTitle    VALUE "0 0 0"
+				VALUENAME AppWorkspace   VALUE "173 169 82"
+				VALUENAME Background     VALUE "0 64 64"
+				VALUENAME ButtonDkShadow VALUE "0 0 0"
+				VALUENAME ButtonFace     VALUE "215 213 170"
+				VALUENAME ButtonHilight  VALUE "235 234 214"
+				VALUENAME ButtonLight	 VALUE "215 213 170"
+				VALUENAME ButtonShadow   VALUE "173 169 82"
+				VALUENAME ButtonText     VALUE "0 0 0"
+				VALUENAME GrayText       VALUE "173 169 82"
+				VALUENAME Hilight        VALUE "0 0 0"
+				VALUENAME HilightText    VALUE "255 255 255"
+				VALUENAME InactiveBorder VALUE "215 213 170"
+				VALUENAME InactiveTitle  VALUE "173 169 82"
+				VALUENAME InactiveTitleText VALUE "0 0 0"
+				VALUENAME Menu           VALUE "215 213 170"
+				VALUENAME MenuText       VALUE "0 0 0"
+				VALUENAME InfoText       VALUE "215 213 170"
+				VALUENAME InfoWindow     VALUE "0 0 0"
+				VALUENAME Scrollbar      VALUE "215 213 170"
+				VALUENAME TitleText      VALUE "255 255 255"
+				VALUENAME Window         VALUE "255 255 255"
+				VALUENAME WindowFrame    VALUE "0 0 0"
+				VALUENAME WindowText     VALUE "0 0 0"
+			END ACTIONLIST
+
+			NAME !!Celery VALUE !!Celery
+			ACTIONLIST
+				KEYNAME "Control Panel\Colors"
+				VALUENAME ActiveBorder   VALUE "168 215 170"
+				VALUENAME ActiveTitle    VALUE "0 0 0"
+				VALUENAME AppWorkspace   VALUE "80 175 85"
+				VALUENAME Background     VALUE "32 18 46"
+				VALUENAME ButtonDkShadow VALUE "0 0 0"
+				VALUENAME ButtonFace     VALUE "168 215 170"
+				VALUENAME ButtonHilight  VALUE "211 235 213"
+				VALUENAME ButtonLight	 VALUE "168 215 170"
+				VALUENAME ButtonShadow   VALUE "85 175 85"
+				VALUENAME ButtonText     VALUE "0 0 0"
+				VALUENAME GrayText       VALUE "80 175 85"
+				VALUENAME Hilight        VALUE "0 0 0"
+				VALUENAME HilightText    VALUE "255 255 255"
+				VALUENAME InactiveBorder VALUE "168 215 170"
+				VALUENAME InactiveTitle  VALUE "80 175 75"
+				VALUENAME InactiveTitleText VALUE "0 0 0"
+				VALUENAME Menu           VALUE "168 215 170"
+				VALUENAME MenuText       VALUE "0 0 0"
+				VALUENAME InfoText       VALUE "168 215 170"
+				VALUENAME InfoWindow     VALUE "0 0 0"
+				VALUENAME Scrollbar      VALUE "168 215 170"
+				VALUENAME TitleText      VALUE "255 255 255"
+				VALUENAME Window         VALUE "255 255 255"
+				VALUENAME WindowFrame    VALUE "0 0 0"
+				VALUENAME WindowText     VALUE "0 0 0"
+			END ACTIONLIST
+
+			NAME !!Rose VALUE !!Rose
+			ACTIONLIST
+				KEYNAME "Control Panel\Colors"
+				VALUENAME ActiveBorder   VALUE "207 175 183"
+				VALUENAME ActiveTitle    VALUE "128 128 128"
+				VALUENAME AppWorkspace   VALUE "159 96 112"
+				VALUENAME Background     VALUE "128 64 64"
+				VALUENAME ButtonDkShadow VALUE "0 0 0"
+				VALUENAME ButtonFace     VALUE "207 175 183"
+				VALUENAME ButtonHilight  VALUE "231 216 220"
+				VALUENAME ButtonLight	 VALUE "207 175 183"
+				VALUENAME ButtonShadow   VALUE "159 96 112"		
+				VALUENAME ButtonText     VALUE "0 0 0"
+				VALUENAME GrayText       VALUE "159 96 112"
+				VALUENAME Hilight        VALUE "128 128 128"
+				VALUENAME HilightText    VALUE "255 255 255"
+				VALUENAME InactiveBorder VALUE "207 175 183"
+				VALUENAME InactiveTitle  VALUE "159 96 112"
+				VALUENAME InactiveTitleText VALUE "0 0 0"
+				VALUENAME Menu           VALUE "207 175 183"
+				VALUENAME MenuText       VALUE "0 0 0"
+				VALUENAME InfoText       VALUE "207 175 183"
+				VALUENAME InfoWindow     VALUE "0 0 0"
+				VALUENAME Scrollbar      VALUE "207 175 183"
+				VALUENAME TitleText      VALUE "255 255 255"
+				VALUENAME Window         VALUE "255 255 255"
+				VALUENAME WindowFrame    VALUE "0 0 0"
+				VALUENAME WindowText     VALUE "0 0 0"
+			END ACTIONLIST
+
+			NAME !!Evergreen VALUE !!Evergreen
+			ACTIONLIST
+				KEYNAME "Control Panel\Colors"
+			    VALUENAME ActiveBorder   VALUE "47 151 109"
+			    VALUENAME ActiveTitle    VALUE "0 0 0"
+			    VALUENAME AppWorkspace   VALUE "31 101 73"
+			    VALUENAME Background     VALUE "48 63 48"
+			    VALUENAME ButtonDkShadow VALUE "0 0 0"
+			    VALUENAME ButtonFace     VALUE "47 151 109"
+			    VALUENAME ButtonHilight  VALUE "137 218 186"
+			    VALUENAME ButtonLight	 VALUE "47 151 109"
+			    VALUENAME ButtonShadow   VALUE "31 101 73"
+			    VALUENAME ButtonText     VALUE "0 0 0"
+			    VALUENAME GrayText       VALUE "31 101 73"
+			    VALUENAME Hilight        VALUE "0 0 0"
+			    VALUENAME HilightText    VALUE "255 255 255"
+			    VALUENAME InactiveBorder VALUE "47 151 109"
+				VALUENAME InactiveTitle  VALUE "31 101 73"
+			    VALUENAME InactiveTitleText VALUE "0 0 0"
+			    VALUENAME Menu           VALUE "47 151 109"
+			    VALUENAME MenuText       VALUE "0 0 0"
+			    VALUENAME InfoText       VALUE "47 151 109"
+			    VALUENAME InfoWindow     VALUE "0 0 0"
+			    VALUENAME Scrollbar      VALUE "47 151 109"
+			    VALUENAME TitleText      VALUE "255 255 255"
+			    VALUENAME Window         VALUE "255 255 255"
+			    VALUENAME WindowFrame    VALUE "0 0 0"
+			    VALUENAME WindowText     VALUE "0 0 0"
+			END ACTIONLIST
+		
+			NAME !!Blues VALUE !!Blues
+			ACTIONLIST
+				KEYNAME "Control Panel\Colors"
+			    VALUENAME ActiveBorder   VALUE "161 198 221"
+			    VALUENAME ActiveTitle    VALUE "0 0 0"
+			    VALUENAME AppWorkspace   VALUE "69 139 186"
+			    VALUENAME Background     VALUE "0 0 64"
+			    VALUENAME ButtonDkShadow VALUE "0 0 0"
+			    VALUENAME ButtonFace     VALUE "164 198 221"
+			    VALUENAME ButtonHilight  VALUE "210 227 238"
+			    VALUENAME ButtonLight	 VALUE "164 198 221"
+			    VALUENAME ButtonShadow   VALUE "69 139 186"
+			    VALUENAME ButtonText     VALUE "0 0 0"
+			    VALUENAME GrayText       VALUE "69 139 186"
+			    VALUENAME Hilight        VALUE "0 0 0"
+			    VALUENAME HilightText    VALUE "255 255 255"
+			    VALUENAME InactiveBorder VALUE "164 198 221"
+				VALUENAME InactiveTitle  VALUE "69 139 186"
+			    VALUENAME InactiveTitleText VALUE "0 0 0"
+			    VALUENAME Menu           VALUE "164 198 221"
+			    VALUENAME MenuText       VALUE "0 0 0"
+			    VALUENAME InfoText       VALUE "164 198 221"
+			    VALUENAME InfoWindow     VALUE "0 0 0"
+			    VALUENAME Scrollbar      VALUE "164 198 221"
+			    VALUENAME TitleText      VALUE "255 255 255"
+			    VALUENAME Window         VALUE "255 255 255"
+			    VALUENAME WindowFrame    VALUE "0 0 0"
+			    VALUENAME WindowText     VALUE "0 0 0"
+			END ACTIONLIST
+
+			NAME !!Teal VALUE !!Teal
+			ACTIONLIST
+				KEYNAME "Control Panel\Colors"
+			    VALUENAME ActiveBorder   VALUE "192 192 192"
+			    VALUENAME ActiveTitle    VALUE "0 128 128"
+			    VALUENAME AppWorkspace   VALUE "128 128 128"
+			    VALUENAME Background     VALUE "0 64 64"
+			    VALUENAME ButtonDkShadow VALUE "0 0 0"
+			    VALUENAME ButtonFace     VALUE "192 192 192"
+			    VALUENAME ButtonHilight  VALUE "255 255 255"
+			    VALUENAME ButtonLight	 VALUE "192 192 192"
+			    VALUENAME ButtonShadow   VALUE "128 128 128"
+			    VALUENAME ButtonText     VALUE "0 0 0"
+			    VALUENAME GrayText       VALUE "128 128 128"
+			    VALUENAME Hilight        VALUE "0 128 128"
+			    VALUENAME HilightText    VALUE "255 255 255"
+			    VALUENAME InactiveBorder VALUE "192 192 192"
+				VALUENAME InactiveTitle  VALUE "192 192 192"
+			    VALUENAME InactiveTitleText VALUE "0 0 0"
+			    VALUENAME Menu           VALUE "192 192 192"
+			    VALUENAME MenuText       VALUE "0 0 0"
+			    VALUENAME InfoText       VALUE "192 192 192"
+			    VALUENAME InfoWindow     VALUE "0 0 0"
+			    VALUENAME Scrollbar      VALUE "192 192 192"
+			    VALUENAME TitleText      VALUE "0 0 0"
+			    VALUENAME Window         VALUE "255 255 255"
+			    VALUENAME WindowFrame    VALUE "0 0 0"
+			    VALUENAME WindowText     VALUE "0 0 0"
+			END ACTIONLIST
+
+			NAME !!TheReds VALUE !!TheReds
+			ACTIONLIST
+				KEYNAME "Control Panel\Colors"
+			    VALUENAME ActiveBorder   VALUE "192 192 192"
+			    VALUENAME ActiveTitle    VALUE "128 0 0"
+			    VALUENAME AppWorkspace   VALUE "128 128 128"
+			    VALUENAME Background     VALUE "64 0 0"
+			    VALUENAME ButtonDkShadow VALUE "0 0 0"
+			    VALUENAME ButtonFace     VALUE "192 192 192"
+			    VALUENAME ButtonHilight  VALUE "255 255 255"
+			    VALUENAME ButtonLight	 VALUE "192 192 192"
+			    VALUENAME ButtonShadow   VALUE "128 128 128"
+			    VALUENAME ButtonText     VALUE "0 0 0"
+			    VALUENAME GrayText       VALUE "128 128 128"
+			    VALUENAME Hilight        VALUE "128 0 0"
+			    VALUENAME HilightText    VALUE "255 255 255"
+			    VALUENAME InactiveBorder VALUE "192 192 192"
+				VALUENAME InactiveTitle  VALUE "192 192 192"
+			    VALUENAME InactiveTitleText VALUE "0 0 0"
+			    VALUENAME Menu           VALUE "192 192 192"
+			    VALUENAME MenuText       VALUE "0 0 0"
+			    VALUENAME InfoText       VALUE "192 192 192"
+			    VALUENAME InfoWindow     VALUE "0 0 0"
+			    VALUENAME Scrollbar      VALUE "192 192 192"
+			    VALUENAME TitleText      VALUE "255 255 255"
+			    VALUENAME Window         VALUE "255 255 255"
+			    VALUENAME WindowFrame    VALUE "0 0 0"
+			    VALUENAME WindowText     VALUE "0 0 0"
+			END ACTIONLIST
+
+			NAME !!WindowsDefault VALUE !!WindowsDefault
+			ACTIONLIST
+				KEYNAME "Control Panel\Colors"
+			    VALUENAME ActiveBorder   VALUE "192 192 192"
+			    VALUENAME ActiveTitle    VALUE "0 0 128"
+			    VALUENAME AppWorkspace   VALUE "128 128 128"
+			    VALUENAME Background     VALUE "0 128 128"
+			    VALUENAME ButtonDkShadow VALUE "0 0 0"
+			    VALUENAME ButtonFace     VALUE "192 192 192"
+			    VALUENAME ButtonHilight  VALUE "255 255 255"
+			    VALUENAME ButtonLight	 VALUE "192 192 192"
+			    VALUENAME ButtonShadow   VALUE "128 128 128"
+			    VALUENAME ButtonText     VALUE "0 0 0"
+			    VALUENAME GrayText       VALUE "128 128 128"
+			    VALUENAME Hilight        VALUE "0 0 128"
+			    VALUENAME HilightText    VALUE "255 255 255"
+			    VALUENAME InactiveBorder VALUE "192 192 192"
+				VALUENAME InactiveTitle  VALUE "192 192 192"
+			    VALUENAME InactiveTitleText VALUE "0 0 0"
+			    VALUENAME Menu           VALUE "192 192 192"
+			    VALUENAME MenuText       VALUE "0 0 0"
+			    VALUENAME InfoText       VALUE "192 192 192"
+			    VALUENAME InfoWindow     VALUE "0 0 0"
+			    VALUENAME Scrollbar      VALUE "192 192 192"
+			    VALUENAME TitleText      VALUE "255 255 255"
+			    VALUENAME Window         VALUE "255 255 255"
+			    VALUENAME WindowFrame    VALUE "0 0 0"
+			    VALUENAME WindowText     VALUE "0 0 0"
+			END ACTIONLIST
+
+			NAME !!BlueAndBlack VALUE !!BlueAndBlack
+			ACTIONLIST
+				KEYNAME "Control Panel\Colors"
+			    VALUENAME ActiveBorder   VALUE "192 192 192"
+			    VALUENAME ActiveTitle    VALUE "0 0 0"
+			    VALUENAME AppWorkspace   VALUE "128 128 128"
+			    VALUENAME Background     VALUE "0 0 128"
+			    VALUENAME ButtonDkShadow VALUE "0 0 0"
+			    VALUENAME ButtonFace     VALUE "192 192 192"
+			    VALUENAME ButtonHilight  VALUE "255 255 255"
+			    VALUENAME ButtonLight	 VALUE "192 192 192"
+			    VALUENAME ButtonShadow   VALUE "128 128 128"
+			    VALUENAME ButtonText     VALUE "0 0 0"
+			    VALUENAME GrayText       VALUE "128 128 128"
+			    VALUENAME Hilight        VALUE "255 255 0"
+			    VALUENAME HilightText    VALUE "0 0 0"
+			    VALUENAME InactiveBorder VALUE "192 192 192"
+				VALUENAME InactiveTitle  VALUE "192 192 192"
+			    VALUENAME InactiveTitleText VALUE "0 0 0"
+			    VALUENAME Menu           VALUE "192 192 192"
+			    VALUENAME MenuText       VALUE "0 0 0"
+			    VALUENAME InfoText       VALUE "192 192 192"
+			    VALUENAME InfoWindow     VALUE "0 0 0"
+			    VALUENAME Scrollbar      VALUE "192 192 192"
+			    VALUENAME TitleText      VALUE "255 255 255"
+			    VALUENAME Window         VALUE "255 255 255"
+			    VALUENAME WindowFrame    VALUE "0 0 0"
+			    VALUENAME WindowText     VALUE "0 0 0"
+			END ACTIONLIST
+
+			NAME !!Wheat VALUE !!Wheat
+			ACTIONLIST
+				KEYNAME "Control Panel\Colors"
+			    VALUENAME ActiveBorder   VALUE "192 192 192"
+			    VALUENAME ActiveTitle    VALUE "128 128 0"
+			    VALUENAME AppWorkspace   VALUE "128 128 128"
+			    VALUENAME Background     VALUE "128 128 64"
+			    VALUENAME ButtonDkShadow VALUE "0 0 0"
+			    VALUENAME ButtonFace     VALUE "192 192 192"
+			    VALUENAME ButtonHilight  VALUE "255 255 255"
+			    VALUENAME ButtonLight	 VALUE "192 192 192"
+			    VALUENAME ButtonShadow   VALUE "128 128 128"
+			    VALUENAME ButtonText     VALUE "0 0 0"
+			    VALUENAME GrayText       VALUE "128 128 128"
+			    VALUENAME Hilight        VALUE "128 128 0"
+			    VALUENAME HilightText    VALUE "0 0 0"
+			    VALUENAME InactiveBorder VALUE "192 192 192"
+				VALUENAME InactiveTitle  VALUE "192 192 192"
+			    VALUENAME InactiveTitleText VALUE "0 0 0"
+			    VALUENAME Menu           VALUE "192 192 192"
+			    VALUENAME MenuText       VALUE "0 0 0"
+			    VALUENAME InfoText       VALUE "192 192 192"
+			    VALUENAME InfoWindow     VALUE "0 0 0"
+			    VALUENAME Scrollbar      VALUE "192 192 192"
+			    VALUENAME TitleText      VALUE "0 0 0"
+			    VALUENAME Window         VALUE "255 255 255"
+			    VALUENAME WindowFrame    VALUE "0 0 0"
+			    VALUENAME WindowText     VALUE "0 0 0"
+			END ACTIONLIST
+
+		END ITEMLIST
+		END PART
+	END POLICY
+END CATEGORY	; desktop
+
+CATEGORY !!Network
+KEYNAME Software\Microsoft\Windows\CurrentVersion\Policies\Network
+	CATEGORY !!Sharing
+		POLICY !!DisableFileSharingCtrl
+		VALUENAME NoFileSharingControl
+		END POLICY
+
+		POLICY !!DisablePrintSharingCtrl
+		VALUENAME NoPrintSharingControl
+		END POLICY
+	END CATEGORY  ; Sharing
+END CATEGORY  ; Network
+
+CATEGORY !!Shell
+KEYNAME "Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders"
+	CATEGORY !!CustomFolders
+		POLICY !!CustomFolders_Programs
+			PART !!CustomFolders_ProgramsPath EDITTEXT REQUIRED
+			VALUENAME "Programs"
+			END PART
+		END POLICY
+
+		POLICY !!CustomFolders_Desktop
+			PART !!CustomFolders_DesktopPath EDITTEXT REQUIRED
+			VALUENAME "Desktop"
+			END PART
+		END POLICY
+
+		POLICY !!HideStartMenuSubfolders
+			KEYNAME Software\Microsoft\Windows\CurrentVersion\Policies\Explorer
+			VALUENAME NoStartMenuSubFolders
+			PART !!HideStartMenuSubfolders_Tip1 TEXT  END PART
+			PART !!HideStartMenuSubfolders_Tip2 TEXT  END PART
+		END POLICY
+
+		POLICY !!CustomFolders_Startup
+			PART !!CustomFolders_StartupPath EDITTEXT REQUIRED
+			VALUENAME "Startup"
+			END PART
+		END POLICY
+
+		POLICY !!CustomFolders_NetHood
+			PART !!CustomFolders_NetHoodPath EDITTEXT REQUIRED
+			VALUENAME "NetHood"
+			END PART
+		END POLICY
+	
+		POLICY !!CustomFolders_StartMenu
+			PART !!CustomFolders_StartMenuPath EDITTEXT REQUIRED
+			VALUENAME "Start Menu"
+			END PART
+		END POLICY
+	END CATEGORY
+
+	CATEGORY !!Restrictions
+		KEYNAME Software\Microsoft\Windows\CurrentVersion\Policies\Explorer
+			POLICY !!RemoveRun
+			VALUENAME "NoRun"
+			END POLICY
+
+			POLICY !!RemoveFolders
+			VALUENAME "NoSetFolders"
+			END POLICY
+
+			POLICY !!RemoveTaskbar
+			VALUENAME "NoSetTaskbar"
+			END POLICY
+
+			POLICY !!RemoveFind
+			VALUENAME "NoFind"
+			END POLICY
+
+			POLICY !!HideDrives
+			VALUENAME "NoDrives"
+			VALUEON NUMERIC 67108863	; low 26 bits on (1 bit per drive)
+			END POLICY
+
+			POLICY !!HideNetHood
+			VALUENAME "NoNetHood"
+			END POLICY
+
+			POLICY !!NoEntireNetwork
+				KEYNAME Software\Microsoft\Windows\CurrentVersion\Policies\Network
+				VALUENAME "NoEntireNetwork"
+			END POLICY
+
+			POLICY !!NoWorkgroupContents
+				KEYNAME Software\Microsoft\Windows\CurrentVersion\Policies\Network
+				VALUENAME "NoWorkgroupContents"
+			END POLICY
+
+			POLICY !!HideDesktop
+			VALUENAME "NoDesktop"
+			END POLICY
+
+			POLICY !!DisableClose
+			VALUENAME "NoClose"
+			END POLICY
+
+			POLICY !!NoSaveSettings
+			VALUENAME "NoSaveSettings"
+			END POLICY
+
+	END CATEGORY													   
+END CATEGORY	; Shell
+
+CATEGORY !!System
+KEYNAME Software\Microsoft\Windows\CurrentVersion\Policies\System
+	CATEGORY !!Restrictions
+  		POLICY !!DisableRegedit
+		VALUENAME DisableRegistryTools
+		END POLICY
+
+		POLICY !!RestrictApps
+		KEYNAME Software\Microsoft\Windows\CurrentVersion\Policies\Explorer
+		VALUENAME RestrictRun
+			PART !!RestrictAppsList LISTBOX
+			KEYNAME Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\RestrictRun
+				VALUEPREFIX ""
+			END PART
+		END POLICY
+
+		POLICY !!DisableMSDOS
+		KEYNAME Software\Microsoft\Windows\CurrentVersion\Policies\WinOldApp
+		VALUENAME Disabled
+		END POLICY
+
+		POLICY !!DisableSingleMSDOS
+		KEYNAME Software\Microsoft\Windows\CurrentVersion\Policies\WinOldApp
+		VALUENAME NoRealMode
+		END POLICY
+
+	END CATEGORY
+END CATEGORY
+
+[strings]
+System="Système"
+NetworkSetupPath="Chemin réseau pour l'installation de Windows"
+NetworkSetupPath_Path="Chemin d'accès :"
+NetworkTourPath="Chemin d'accès réseau pour Windows Tour"
+NetworkTourPath_Path="Chemin :"
+NetworkTourPath_Tip="Attention : le chemin doit s'achever par TOUR.EXE"
+EnableUserProfiles="Activer les profils d'utilisateurs"
+Network="Réseau"
+Logon="Ouverture de session"
+LogonBanner="Bannière d'ouverture de session"
+LogonBanner_Caption="Légende :"
+LogonBanner_Text="Texte :"
+LogonBanner_DefCaption="Remarque importante :"
+LogonBanner_DefText="Ne tentez pas de vous connecter à moins que vous soyez un utilisateur autorisé."
+ValidatedLogon="Nécessite une validation par réseau pour l'accès Windows"
+Sharing="Partage"
+DisableFileSharing="Désactiver le partage de fichiers"
+DisablePrintSharing="Désactiver le partage d'imprimante"
+AccessControl="Contrôle d'accès"
+AccessControl_User="Contrôle d'accès au niveau utilisateur"
+AuthenticatorName="Nom d'authentificateur :"
+AuthenticatorType="Type d'authentificateur :"
+AT_NetWare="NetWare 3.x ou 4.x"
+AT_NT="Serveur ou station de travail Windows NT"
+AT_NTAS="Domaine Windows NT "
+Passwords="Mots de passe"
+HideSharePasswords="Masquer les mots de passe de partage par des astérisques"
+DisablePasswordCaching="Désactiver la mise en antémémoire du mot de passe"
+RequireAlphaNum="Nécessite un mot de passe alphanumérique d'ouverture de session "
+MinimumPwdLen="Longueur minimale du mot de passe Windows"
+MPL_Length="Longueur :"
+RemoteAccess="Accès réseau à distance"
+RemoteAccess_Disable="Désactiver la réception d'appel"
+Update="Mettre à jour"
+RemoteUpdate="Mise à jour distante"
+UpdateMode="Mode de mise à jour :"
+UM_Automatic="Automatique (utilisez le chemin par défaut)"
+UM_Manual="Manuel (utilisez le chemin spécifique)"
+UM_Manual_Path="Chemin pour la mise à jour manuelle :"
+DisplayErrors="Afficher les messages d'erreur"
+LoadBalance="Répartition des charges"
+MSClient="Client Microsoft pour réseaux Windows"
+NWServer="Imprimante et fichier partagés pour les réseaux NetWare"
+LogonDomain="Ouverture de session sur Windows NT"
+DomainName="Nom de domaine :"
+Workgroup="Groupe de travail"
+AlternateWorkgroup="Autre groupe de travail"
+WorkgroupName="Nom de groupe de travail :"
+NWClient="Client Microsoft pour réseaux NetWare"
+PrefServer="Serveur par défaut "
+PrefServerName="Nom de serveur :"
+SupportLFN="Prend en charge des noms longs de fichiers"
+SupportLFNsOn="Support des noms de fichiers longs sur :"
+LFN_No311="NetWare 3.12 et supérieur"
+LFN_All="tous les serveurs NetWare qui supportent les LFN"
+SearchMode="Mode de recherche"
+SearchMode1="Mode de recherche :"
+DisableAutoNWLogin="Désactiver l'ouverture automatique de session NetWare"
+DisableSAP="Désactiver annonce SAP"
+ControlPanel="Panneau de configuration"
+CPL_Display="Afficher"
+CPL_Display_Restrict="Restreindre le panneau de configuration Affichage"
+CPL_Display_Disable="Désactiver l'affichage du panneau de configuration"
+CPL_Display_HideBkgnd="Masquer la page Arrière-plan"
+CPL_Display_HideScrsav="Masquer la page Ecran de veille"
+CPL_Display_HideAppearance="Masquer la page Apparence"
+CPL_Display_HideSettings="Masquer la page Configuration"
+CPL_Network="Réseau"
+CPL_Network_Restrict="Restreindre le panneau de configuration Réseau"
+CPL_Network_Disable="Désactiver le panneau de configuration Réseau"
+CPL_Network_HideID="Masquer la page Identification"
+CPL_Network_HideAccessCtrl="Masquer la page Contrôle d'accès "
+CPL_Printers="Imprimantes"
+CPL_Printers_Restrict="Restreindre les paramètres d'imprimante"
+CPL_Printers_HidePages="Masquer les pages Détails et Général"
+CPL_Printers_DisableRemoval="Désactiver la suppression d'imprimantes"
+CPL_Printers_DisableAdd="Désactiver l'ajout d'imprimante"
+CPL_System="Système"
+CPL_System_Restrict="Restreindre le panneau de configuration Système"
+CPL_System_HideDevMgr="Masquer la page Gestionnaire de périphériques"
+CPL_System_HideConfig="Masquer la page Profils matériels"
+CPL_System_NoFileSys="Masquer le bouton Système de fichiers"
+CPL_System_NoVirtMem="Masquer le bouton Mémoire virtuelle"
+CPL_Security="Mots de passe"
+CPL_Security_Restrict="Restreindre le panneau de configuration Mots de passe"
+CPL_Security_Disable="Désactiver le panneau de configuration Mots de passe"
+CPL_Security_HideSetPwds="Masquer la page Changement des mots de passe"
+CPL_Security_HideRemoteAdmin="Masquer la page Administration distante"
+CPL_Security_HideProfiles="Masquer la page Profils utilisateurs"
+Desktop="Bureau"
+Wallpaper="Papier peint"
+WallpaperName="Nom de papier peint :"
+Wallpaper1="Chaume noir.bmp"
+Wallpaper2="Rivets bleus.bmp"
+Wallpaper3="Champagne.bmp"
+Wallpaper4="Aquarium.bmp"
+Wallpaper5="Egypte.bmp"
+Wallpaper6="Tricot.bmp"
+Wallpaper7="Point d'aiguille.bmp"
+Wallpaper8="Paillasse.bmp"
+Wallpaper9="Nuages.bmp"
+Wallpaper10="Forêt.bmp"
+TileWallpaper="Afficher le papier peint en mosaïque"
+ColorScheme="Modèle de couleurs"
+SchemeName="Nom du modèle :"
+Lavender="Rose"
+Celery="Erable"
+Rose="Rose (grande police)"
+Evergreen="Epicéa"
+Blues="Désert"
+WindowsDefault="Windows Standard"
+BlueAndBlack="Ardoise"
+Teal="Sarcelle"
+TheReds="Jour pluvieux"
+Wheat="Blé"
+Wheat256="Brique"
+Tan256="Aubergine"
+DisableFileSharingCtrl="Désactiver les contrôles de partage de fichiers"
+DisablePrintSharingCtrl="Désactiver les contrôles de partage d'imprimante"
+Shell="Environnement"
+CustomFolders="Dossiers personnalisés"
+CustomFolders_Programs="Dossier programmes personnalisé"
+CustomFolders_ProgramsPath="Chemin à partir duquel obtenir les éléments de Programmes :"
+CustomFolders_Desktop="Icônes personnalisées du bureau"
+CustomFolders_DesktopPath="Chemin à partir duquel obtenir des icônes du bureau :"
+HideStartMenuSubfolders="Masquer les sous-dossiers du Menu Démarrer"
+HideStartMenuSubfolders_Tip1="Vérifiez ceci si vous utilisez un dossier Programmes"
+HideStartMenuSubfolders_Tip2="icônes personalisées pour le Bureau."
+CustomFolders_Startup="Dossier démarrage personnalisé"
+CustomFolders_StartupPath="Chemin pour obtenir les éléments de Démarrage :"
+CustomFolders_NetHood="Voisinage réseau personnalisé"
+CustomFolders_NetHoodPath="Chemin à partir duquel obtenir les éléments de Voisinage réseau :"
+CustomFolders_StartMenu="Menu démarrage personnalisé"
+CustomFolders_StartMenuPath="Chemin à partir duquel obtenir les éléments du Menu démarrer :"
+Restrictions="Restrictions"
+RemoveRun="Supprimer la commande 'Exécuter'"
+RemoveFolders="Supprimer les dossiers de 'Paramètres' dans le Menu Démarrer"
+RemoveTaskbar="Supprimer la Barre des tâches de 'Paramètres' dans le Menu Démarrer"
+RemoveFind="Supprimer la commande 'Rechercher'"
+HideDrives="Masquer les lecteurs du 'Poste de travail'"
+HideNetHood="Masquer Voisinage réseau"
+HideDesktop="Masquer tous les éléments sur le bureau"
+DisableClose="Désactiver la commande Arrêter"
+NoSaveSettings="Ne pas enregistrer les paramètres à la sortie"
+DisableRegedit="Désactiver les outils d'édition de la base de registres"
+DisableMSDOS="Désactiver les Commandes MS-DOS"
+DisableSingleMSDOS="Désactiver les applications en mode MS-DOS exclusif"
+Run="Exécuter"
+RunOnce="Exécuter une fois"
+RunServices="Exécuter les Services"
+RunListbox="Eléments à exécuter au démarrage :"
+RunOnceListbox="Eléments à exécuter une fois au démarrage :"
+RunServicesListbox="Services à exécuter au démarrage :"
+SNMP="SNMP"
+Communities="Communautés"
+CommunitiesListbox="Communautés :"
+PermittedManagers="Gestionnaires permis"
+PermittedManagersListbox="Gestionnaires permis :"
+Traps_Public="Intercepte communauté 'Publique'"
+Traps_PublicListbox="Intercepter la configuration :"
+NoEntireNetwork="Pas de 'Réseau global' dans Voisinage réseau"
+NoWorkgroupContents="Aucun sommaire groupe de travail dans Voisinage réseau"
+RestrictApps="N'exécuter que les applications Windows autorisées"
+RestrictAppsList="Liste des applications autorisées :"
+DomainLogonConfirmation="Afficher la confirmation d'ouverture de session de domaine"
+InternetMIB="Internet MIB (RFC1156)"
+ContactName="Nom de contact :"
+Location="Emplacement :"
+NoDomainPwdCaching="Désactiver la mise en antémémoire de mot de passe de domaine"

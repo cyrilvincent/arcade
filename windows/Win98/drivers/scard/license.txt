@@ -1,0 +1,145 @@
+Composants de base Microsoft Smart Card
+
+CONTRAT DE LICENCE UTILISATEUR FINAL POUR LOGICIEL MICROSOFT
+
+
+IMPORTANT - A LIRE ATTENTIVEMENT : Le présent Contrat de 
+Licence Utilisateur Final Microsoft ("CLUF") constitue un 
+contrat entre vous (personne physique ou personne morale 
+unique) et Microsoft Corporation portant sur le produit 
+logiciel Microsoft identifié ci-dessus, qui inclut des 
+programmes d'ordinateur, des supports associés et des 
+documents imprimés et qui est susceptible de contenir de la 
+documentation "en ligne" ou sous format électronique (le 
+"PRODUIT LOGICIEL"). En installant, en copiant ou en utilisant 
+le PRODUIT LOGICIEL de quelque manière que ce soit, vous 
+reconnaissez être lié par les termes du présent CLUF. Si vous 
+êtes en désaccord avec les termes de ce CLUF, vous ne devez 
+pas installer ni utiliser le PRODUIT LOGICIEL ; vous pouvez 
+toutefois le retourner à votre fournisseur afin d'en obtenir 
+le remboursement intégral.
+
+LICENCE DE PRODUIT LOGICIEL
+
+Le PRODUIT LOGICIEL est protégé par les lois et les traités 
+internationaux en matière de droit d’auteur, ainsi que par les 
+autres lois et traités en matière de propriété intellectuelle. 
+Le PRODUIT LOGICIEL n'est pas vendu mais concédé sous licence.
+
+1. CONCESSION DE LICENCE.
+
+  Ce CLUF vous concède les droits suivants :
+
+  - Installation et utilisation. Vous êtes autorisé à installer 
+    et à utiliser un nombre illimité d'exemplaires du PRODUIT 
+    LOGICIEL sur tous les ordinateurs qui fonctionnent avec des 
+    exemplaires sous licence d’un produit système d’exploitation 
+    Microsoft Windows (par exemple, Windows 95, Windows NT).
+
+  - Reproduction et distribution. Vous êtes autorisé à 
+    reproduire et à distribuer un nombre illimité d'exemplaires 
+    du PRODUIT LOGICIEL, à condition que :
+    (a)  chaque exemplaire soit conforme et complet, qu'il 
+         comporte toutes les mentions de droits d'auteur et de 
+         marques
+    (b)  que le PRODUIT LOGICIEL soit distribué non en 
+         tant que produit indépendant mais en tant qu’élément de 
+         votre propre produit logiciel qui fonctionne avec Microsoft 
+         Windows ou qu’il soit distribué sur un matériel informatique 
+         qui fonctionne avec Microsoft Windows et (c) que vous ne 
+         permettiez pas de distribution ultérieure du PRODUIT 
+         LOGICIEL. 
+
+  - Microsoft réserve tous les droits qui ne vous ont pas été 
+    expressément concédés.
+
+2. DESCRIPTION DES AUTRES DROITS ET LIMITATIONS
+
+  - Limitations relatives à l'ingénierie à rebours, à la 
+    décompilation et au désassemblage. Vous n'êtes pas autorisé 
+    à reconstituer la logique du PRODUIT LOGICIEL, à le 
+    décompiler ou à le désassembler, sauf dans la mesure où ces 
+    opérations seraient expressément permises par la 
+    réglementation applicable nonobstant la présente limitation.
+
+  - Dissociation de composants. Le PRODUIT LOGICIEL est concédé 
+    sous licence en tant que produit unique. Il n'est pas permis 
+    de dissocier ses composants pour les utiliser sur plus d'un 
+    ordinateur.
+
+  - Services d’assistance. Microsoft peut, le cas échéant, vous 
+    fournir des services d’assistance relatifs au PRODUIT 
+    LOGICIEL (les "Services d’Assistance"). L'utilisation des 
+    Services d’Assistance est régie par les règles et programmes 
+    de Microsoft décrits dans le manuel de l’utilisateur, dans 
+    la documentation "en ligne" et/ou dans d’autres documents 
+    fournis par Microsoft. Tout code logiciel supplémentaire qui 
+    vous serait fourni dans le cadre des Services d’Assistance 
+    doit être considéré comme un élément du PRODUIT LOGICIEL et 
+    est soumis aux termes de ce CLUF. En ce qui concerne les 
+    informations techniques que vous fournissez à Microsoft dans 
+    le cadre des Services d’Assistance, Microsoft pourra 
+    utiliser ces informations pour les besoins de son activité 
+    commerciale, notamment pour l’assistance sur des produits et 
+    le développement de produits. Microsoft n’utilisera pas ces 
+    informations techniques sous une forme qui vous 
+    identifierait personnellement.
+
+  - Transfert de logiciel. Vous êtes autorisé à transférer 
+    l'ensemble de vos droits prévus par ce CLUF à titre 
+    permanent, à condition que le bénéficiaire du transfert 
+    accepte les termes de ce CLUF.
+
+  - Résiliation. Sans préjudice de tous autres droits, Microsoft 
+    pourra résilier ce CLUF si vous n’en respectez pas les 
+    termes. Dans ce cas, vous devrez détruire tous les 
+    exemplaires du PRODUIT LOGICIEL et tous ses composants.
+
+3. DROITS D'AUTEUR. Tous les droits de propriété et droits 
+d'auteur relatifs au PRODUIT LOGICIEL (notamment ceux 
+afférents à toute image, mini-application, photographie, 
+animation, musique, tout élément vidéo ou sonore et tout 
+texte intégrés au PRODUIT LOGICIEL), à la documentation 
+imprimée qui l'accompagne et à toute copie du PRODUIT 
+LOGICIEL, sont détenus par Microsoft ou par ses 
+fournisseurs. Le PRODUIT LOGICIEL est protégé par les lois 
+et les traités internationaux en matière de droit d’auteur. 
+Par conséquent, vous devez traiter le PRODUIT LOGICIEL comme 
+tout autre élément protégé par le droit d'auteur.
+
+-----------------------------------------------------------
+DISPOSITIONS DIVERSES
+
+Si vous avez acquis ce produit aux États-Unis, ce CLUF est 
+régi par les lois de l'État de Washington, U.S.A.
+Si ce produit a été acquis en dehors des États-Unis, le droit 
+local pourra s'appliquer.
+Pour toute question concernant le présent CLUF, ou si vous 
+souhaitez contacter Microsoft pour quelque raison que ce soit, 
+veuillez contacter la filiale Microsoft qui dessert votre 
+pays, ou écrire à Microsoft Sales Information Center/One 
+Microsoft Way/Redmond, WA 98052-6399, U.S.A.
+
+-----------------------------------------------------------
+GARANTIE LIMITÉE
+
+EXCLUSION DE GARANTIE. Microsoft exclut expressément toute 
+garantie relative au PRODUIT LOGICIEL. Le PRODUIT LOGICIEL et 
+la documentation y afférente sont fournis "en l'état", sans 
+garantie d'aucune sorte, expresse ou implicite, notamment sans 
+aucune garantie de qualité, d'adéquation à un usage 
+particulier ou d'absence de contrefaçon. Vous assumez 
+l'ensemble des risques découlant de l'utilisation ou des 
+performances du PRODUIT LOGICIEL.
+
+ABSENCE DE RESPONSABILITÉ POUR LES DOMMAGES. En aucun cas, 
+Microsoft ou ses fournisseurs ne pourront être tenus pour 
+responsables de quelque dommage que ce soit (notamment les 
+pertes de bénéfices, interruptions d'activité, pertes 
+d'informations commerciales ou autres pertes pécuniaires) 
+résultant de l'utilisation ou de l'impossibilité d'utiliser ce 
+produit Microsoft, même si Microsoft a été prévenue de 
+l'éventualité de tels dommages. Certains pays ou certaines 
+juridictions n'autorisent pas l'exclusion ou la limitation de 
+responsabilité pour les dommages indirects, de sorte que la 
+limitation ci-dessus peut ne pas vous être applicable.

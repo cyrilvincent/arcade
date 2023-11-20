@@ -1,0 +1,92 @@
+%<!-- version 8.14.7 --><!--lesson3.htm--><!-- Finding Information -->
+Dans cette leçon, vous allez apprendre à utiliser la commande <b>Rechercher</b> pour localiser un fichier sur votre ordinateur.
+<p>
+<br>
+<p>
+Cliquez sur le bouton <b>Suivant,</b> situé ci-dessus, pour continuer.
+%~%
+Si vous ne vous souvenez plus de l'endroit où vous avez enregistré un document, sachez qu'il est très simple, avec Windows, de trouver un <a id=a1 href="javascript:;" onclick="javascript:popup('Column4', window.event.x, window.event.y+65);" class=glossary onfocus="this.style.color='red'" onblur="this.style.color='blue'"
+>fichier</a> ou un <a id=a2 href="javascript:;" onclick="javascript:popup('Column5', window.event.x, window.event.y+65);" class=glossary onfocus="this.style.color='red'" onblur="this.style.color='blue'"
+>dossier.</a>
+%~%
+Pour créer un nouveau fichier, cliquez sur le bouton <b>Démarrer</b> <img src="images/Stdstart.gif" align=absmiddle>
+dans la <a id=a1 href="javascript:;" onclick="javascript:popup('Column2', window.event.x, window.event.y+65);" class=glossary onfocus="this.style.color='red'" onblur="this.style.color='blue'"
+>barre des tâches</a> <b>Windows,</b> pointez sur <b>Programmes,</b> sur <b>Accessoires,</b> puis cliquez sur <b>WordPad.</b>
+<p>
+<a id=a2 href="javascript:;" onclick="javascript:LaunchShowMe();" onfocus="showmelabel.style.color='red';showmegif.src='images/show_ovr.gif'" onblur="showmelabel.style.color='black';showmegif.src='images/show_def.gif'" onkeypress="showmegif.src='images/show_dep.gif'" onmouseover="showmelabel.style.color='red';showmegif.src='images/show_ovr.gif'" onmouseout="showmelabel.style.color='black';showmegif.src='images/show_def.gif'" onmousedown="showmegif.src='images/show_dep.gif'" onmouseup="showmegif.src='images/show_def.gif'"><img src="images/show_def.gif" name="showmegif" border=0 align=absmiddle hspace=0><span class=Select id="showmelabel">
+Démonstration</span></a>
+%~%
+Cliquez dans la grande zone vide de la fenêtre WordPad et tapez <i>Compte rendu de lecture.</i>
+<p>
+<a id=a1 href="javascript:;" onclick="javascript:LaunchShowMe();" onfocus="showmelabel.style.color='red';showmegif.src='images/show_ovr.gif'" onblur="showmelabel.style.color='black';showmegif.src='images/show_def.gif'" onkeypress="showmegif.src='images/show_dep.gif'" onmouseover="showmelabel.style.color='red';showmegif.src='images/show_ovr.gif'" onmouseout="showmelabel.style.color='black';showmegif.src='images/show_def.gif'" onmousedown="showmegif.src='images/show_dep.gif'" onmouseup="showmegif.src='images/show_def.gif'"><img src="images/show_def.gif" name="showmegif" border=0 align=absmiddle hspace=0><span class=Select id="showmelabel">
+Démonstration</span></a>
+%~%
+Dans la fenêtre WordPad, cliquez sur le menu <b>Fichier,</b> puis sur <b>Enregistrer sous</b> pour enregistrer votre nouveau fichier.
+<p>
+<a id=a1 href="javascript:;" onclick="javascript:LaunchShowMe();" onfocus="showmelabel.style.color='red';showmegif.src='images/show_ovr.gif'" onblur="showmelabel.style.color='black';showmegif.src='images/show_def.gif'" onkeypress="showmegif.src='images/show_dep.gif'" onmouseover="showmelabel.style.color='red';showmegif.src='images/show_ovr.gif'" onmouseout="showmelabel.style.color='black';showmegif.src='images/show_def.gif'" onmousedown="showmegif.src='images/show_dep.gif'" onmouseup="showmegif.src='images/show_def.gif'"><img src="images/show_def.gif" name="showmegif" border=0 align=absmiddle hspace=0><span class=Select id="showmelabel">
+Démonstration</span></a>
+%~%
+Cliquez dans la <a id=a1 href="javascript:;" onclick="javascript:popup('Column3', window.event.x, window.event.y+65);" class=glossary onfocus="this.style.color='red'" onblur="this.style.color='blue'"
+>barre de titre</a> de la <a id=a2 href="javascript:;" onclick="javascript:popup('Column11', window.event.x, window.event.y+65);" class=glossary onfocus="this.style.color='red'" onblur="this.style.color='blue'"
+>boîte de dialogue</a> <b>Enregistrer sous</b> pour l'<a id=a3 href="javascript:;" onclick="javascript:popup('Column12', window.event.x, window.event.y);" class=glossary onfocus="this.style.color='red'" onblur="this.style.color='blue'"
+>activer.</a> Dans la zone <b>Nom de fichier,</b> double-cliquez sur le nom de fichier <a id=a4 href="javascript:;" onclick="javascript:popup('Column13', window.event.x, window.event.y+65);" class=glossary onfocus="this.style.color='red'" onblur="this.style.color='blue'"
+>par défaut,</a> <b>Document,</b> et tapez un autre nom de fichier, <i>Honoré de Balzac.</i>
+<br><a id=a5 id="tiplink" href="javascript:;" onClick="javascript:popup('Column15', window.event.x, window.event.y+65);" onmouseOver="tip.style.borderColor='#000099'" onmouseOut="tip.style.borderColor='white'" onfocus="tip.style.borderColor='#000099'" onblur="tip.style.borderColor='white'"><span id="tip" class=tip>
+Conseil&nbsp;!</span></a>
+<p>
+<a id=a6 href="javascript:;" onclick="javascript:LaunchShowMe();" onfocus="showmelabel.style.color='red';showmegif.src='images/show_ovr.gif'" onblur="showmelabel.style.color='black';showmegif.src='images/show_def.gif'" onkeypress="showmegif.src='images/show_dep.gif'" onmouseover="showmelabel.style.color='red';showmegif.src='images/show_ovr.gif'" onmouseout="showmelabel.style.color='black';showmegif.src='images/show_def.gif'" onmousedown="showmegif.src='images/show_dep.gif'" onmouseup="showmegif.src='images/show_def.gif'"><img src="images/show_def.gif" name="showmegif" border=0 align=absmiddle hspace=0><span class=Select id="showmelabel">
+Démonstration</span></a>
+%~%
+Cliquez sur <b>Enregistrer</b> pour enregistrer le document <B>WordPad</B> que vous venez de créer et qui s'appelle maintenant <B>Honoré de Balzac.</B>
+<br><a id=a1 id="tiplink" href="javascript:;" onClick="javascript:popup('Column68', window.event.x, window.event.y+65);" onmouseOver="tip.style.borderColor='#000099'" onmouseOut="tip.style.borderColor='white'" onfocus="tip.style.borderColor='#000099'" onblur="tip.style.borderColor='white'"><span id="tip" class=tip>
+Conseil&nbsp;!</span></a>
+<p>
+<a id=a2 href="javascript:;" onclick="javascript:LaunchShowMe();" onfocus="showmelabel.style.color='red';showmegif.src='images/show_ovr.gif'" onblur="showmelabel.style.color='black';showmegif.src='images/show_def.gif'" onkeypress="showmegif.src='images/show_dep.gif'" onmouseover="showmelabel.style.color='red';showmegif.src='images/show_ovr.gif'" onmouseout="showmelabel.style.color='black';showmegif.src='images/show_def.gif'" onmousedown="showmegif.src='images/show_dep.gif'" onmouseup="showmegif.src='images/show_def.gif'"><img src="images/show_def.gif" name="showmegif" border=0 align=absmiddle hspace=0><span class=Select id="showmelabel">
+Démonstration</span></a>
+%~%
+Pour fermer le document, cliquez sur le bouton <b>Fermer</b> <img src="images/stdclose.gif"> dans la barre de titre de la fenêtre WordPad.
+<p>
+<a id=a1 href="javascript:;" onclick="javascript:LaunchShowMe();" onfocus="showmelabel.style.color='red';showmegif.src='images/show_ovr.gif'" onblur="showmelabel.style.color='black';showmegif.src='images/show_def.gif'" onkeypress="showmegif.src='images/show_dep.gif'" onmouseover="showmelabel.style.color='red';showmegif.src='images/show_ovr.gif'" onmouseout="showmelabel.style.color='black';showmegif.src='images/show_def.gif'" onmousedown="showmegif.src='images/show_dep.gif'" onmouseup="showmegif.src='images/show_def.gif'"><img src="images/show_def.gif" name="showmegif" border=0 align=absmiddle hspace=0><span class=Select id="showmelabel">
+Démonstration</span></a>
+%~%
+Pour retrouver le document que vous venez d'enregistrer, cliquez sur le bouton <b>Démarrer</b> <img src="images/stdstart.gif" align=absmiddle> dans la barre des tâches Windows, pointez sur <b>Rechercher,</b> puis cliquez sur <b>Fichiers ou dossiers.</b>
+<p>
+<a id=a1 href="javascript:;" onclick="javascript:LaunchShowMe();" onfocus="showmelabel.style.color='red';showmegif.src='images/show_ovr.gif'" onblur="showmelabel.style.color='black';showmegif.src='images/show_def.gif'" onkeypress="showmegif.src='images/show_dep.gif'" onmouseover="showmelabel.style.color='red';showmegif.src='images/show_ovr.gif'" onmouseout="showmelabel.style.color='black';showmegif.src='images/show_def.gif'" onmousedown="showmegif.src='images/show_dep.gif'" onmouseup="showmegif.src='images/show_def.gif'"><img src="images/show_def.gif" name="showmegif" border=0 align=absmiddle hspace=0><span class=Select id="showmelabel">
+Démonstration</span></a>
+%~%
+Cliquez sur l'<a id=a1 href="javascript:;" onclick="javascript:popup('Column77', window.event.x, window.event.y+65);" class=glossary onfocus="this.style.color='red'" onblur="this.style.color='blue'">onglet</a> <b>Nom et emplacement</b> pour l'activer. Cliquez dans la zone <b>Nommé</b> et tapez <i>Honoré de Balzac.</i>
+<p>
+<a id=a2 href="javascript:;" onclick="javascript:LaunchShowMe();" onfocus="showmelabel.style.color='red';showmegif.src='images/show_ovr.gif'" onblur="showmelabel.style.color='black';showmegif.src='images/show_def.gif'" onkeypress="showmegif.src='images/show_dep.gif'" onmouseover="showmelabel.style.color='red';showmegif.src='images/show_ovr.gif'" onmouseout="showmelabel.style.color='black';showmegif.src='images/show_def.gif'" onmousedown="showmegif.src='images/show_dep.gif'" onmouseup="showmegif.src='images/show_def.gif'"><img src="images/show_def.gif" name="showmegif" border=0 align=absmiddle hspace=0><span class=Select id="showmelabel">
+Démonstration</span></a>
+%~%
+Cliquez sur la flèche située à droite de la zone <b>Rechercher dans</b> et sélectionnez <b>(C:)</b> si cette option n'est pas déjà proposée.
+<p>
+Vous allez peut-être devoir <a id=a1 href="javascript:;" onclick="javascript:popup('Column57', window.event.x, window.event.y+65);" class=glossary onfocus="this.style.color='red'" onblur="this.style.color='blue'">
+faire glisser</a> la boîte de dialogue <b>Rechercher&nbsp;: Tous les fichiers</b> pour faire apparaître la flèche de la zone <b>Rechercher dans.</b>
+<p>
+<a id=a2 href="javascript:;" onclick="javascript:LaunchShowMe();" onfocus="showmelabel.style.color='red';showmegif.src='images/show_ovr.gif'" onblur="showmelabel.style.color='black';showmegif.src='images/show_def.gif'" onkeypress="showmegif.src='images/show_dep.gif'" onmouseover="showmelabel.style.color='red';showmegif.src='images/show_ovr.gif'" onmouseout="showmelabel.style.color='black';showmegif.src='images/show_def.gif'" onmousedown="showmegif.src='images/show_dep.gif'" onmouseup="showmegif.src='images/show_def.gif'"><img src="images/show_def.gif" name="showmegif" border=0 align=absmiddle hspace=0><span class=Select id="showmelabel">
+Démonstration</span></a>
+%~%
+Cliquez sur <b>Rechercher maintenant.</b> Votre ordinateur se met alors à passer en revue le contenu de votre <a id=a1 href="javascript:;" onclick="javascript:popup('Column66', window.event.x, window.event.y+65);" class=glossary onfocus="this.style.color='red'" onblur="this.style.color='blue'"
+>disque dur</a> pour retrouver le document que vous venez d'enregistrer,
+<B>Honoré de Balzac.</B>
+<br><a id=a2 id="tiplink" href="javascript:;" onClick="javascript:popup('Column16', window.event.x, window.event.y+65);" onmouseOver="tip.style.borderColor='#000099'" onmouseOut="tip.style.borderColor='white'" onfocus="tip.style.borderColor='#000099'" onblur="tip.style.borderColor='white'"><span id="tip" class=tip>
+Conseil&nbsp;!</span></a>
+<p>
+<a id=a3 href="javascript:;" onclick="javascript:LaunchShowMe();" onfocus="showmelabel.style.color='red';showmegif.src='images/show_ovr.gif'" onblur="showmelabel.style.color='black';showmegif.src='images/show_def.gif'" onkeypress="showmegif.src='images/show_dep.gif'" onmouseover="showmelabel.style.color='red';showmegif.src='images/show_ovr.gif'" onmouseout="showmelabel.style.color='black';showmegif.src='images/show_def.gif'" onmousedown="showmegif.src='images/show_dep.gif'" onmouseup="showmegif.src='images/show_def.gif'"><img src="images/show_def.gif" name="showmegif" border=0 align=absmiddle hspace=0><span class=Select id="showmelabel">
+Démonstration</span></a>
+%~%
+Votre document WordPad, <b>Honoré de Balzac,</b> s'affiche dans la partie inférieure de la fenêtre Rechercher.
+Double-cliquez sur <b>Honoré de Balzac</b> pour ouvrir le document.
+<br><a id=a1 id="tiplink" href="javascript:;" onClick="javascript:popup('Column69', window.event.x, window.event.y+65);" onmouseOver="tip.style.borderColor='#000099'" onmouseOut="tip.style.borderColor='white'" onfocus="tip.style.borderColor='#000099'" onblur="tip.style.borderColor='white'"><span id="tip" class=tip>
+Conseil&nbsp;!</span></a>
+<p>
+<a id=a2 href="javascript:;" onclick="javascript:LaunchShowMe();" onfocus="showmelabel.style.color='red';showmegif.src='images/show_ovr.gif'" onblur="showmelabel.style.color='black';showmegif.src='images/show_def.gif'" onkeypress="showmegif.src='images/show_dep.gif'" onmouseover="showmelabel.style.color='red';showmegif.src='images/show_ovr.gif'" onmouseout="showmelabel.style.color='black';showmegif.src='images/show_def.gif'" onmousedown="showmegif.src='images/show_dep.gif'" onmouseup="showmegif.src='images/show_def.gif'"><img src="images/show_def.gif" name="showmegif" border=0 align=absmiddle hspace=0><span class=Select id="showmelabel">
+Démonstration</span></a>
+%~%
+Cliquez sur le bouton <b>Fermer</b> <img src="images/stdclose.gif"> des barres de titre respectives de la fenêtre Honoré de Balzac et de la boîte de dialogue <b>Rechercher</b> pour fermer cette fenêtre et cette boîte de dialogue.
+<p>Vous savez maintenant comment créer et rechercher des fichiers.
+<p>
+<a id=a1 href="javascript:;" onclick="javascript:LaunchShowMe();" onfocus="showmelabel.style.color='red';showmegif.src='images/show_ovr.gif'" onblur="showmelabel.style.color='black';showmegif.src='images/show_def.gif'" onkeypress="showmegif.src='images/show_dep.gif'" onmouseover="showmelabel.style.color='red';showmegif.src='images/show_ovr.gif'" onmouseout="showmelabel.style.color='black';showmegif.src='images/show_def.gif'" onmousedown="showmegif.src='images/show_dep.gif'" onmouseup="showmegif.src='images/show_def.gif'"><img src="images/show_def.gif" name="showmegif" border=0 align=absmiddle hspace=0><span class=Select id="showmelabel">
+Démonstration</span></a>
+%

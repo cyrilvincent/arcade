@@ -1,0 +1,282 @@
+---------------------------------------------
+  Fichier LISEZMOI de Microsoft Windows 98
+ pour la disquette d'amorçage d'urgence FAT32 
+                Avril 1998
+---------------------------------------------
+
+(c) Copyright Microsoft Corporation, 1998
+
+
+Ce document fournit des informations complémentaires ou de
+dernière minute afin de compléter la documentation de
+Microsoft Windows 98.
+
+----------------------------
+Comment utiliser ce document
+----------------------------
+
+Pour afficher FAT32EBD.txt dans le Bloc-notes, agrandissez
+la fenêtre du Bloc-notes.
+
+Pour imprimer FAT32EBD.txt, ouvrez le fichier dans le Bloc-notes 
+ou dans une autre application de traitement de texte, puis dans le menu
+Fichier, cliquez sur Imprimer.
+
+--------
+SOMMAIRE
+--------
+
+INTRODUCTION
+COMMENT CRÉER UNE DISQUETTE D'AMORÇAGE D'URGENCE FAT32
+CRÉATION DE LECTEURS FAT32
+PROBLÈMES CONNUS
+INFORMATIONS COMPLÉMENTAIRES
+
+
+============
+INTRODUCTION
+============
+
+La disquette d'amorçage d'urgence FAT32 (EBD, Emergency Boot Disk)
+offre un moyen exempt de virus pour le démarrage et le dépannage d'un
+ordinateur, ainsi qu'un moyen de partitionner des lecteurs de taille
+importante avec le système de fichiers FAT32.
+
+L'utilitaire qui crée l'EBD, à savoir FAT32EBD.EXE, écrit l'image d'un
+secteur d'amorçage réputé bon, dans lequel une recherche de virus a été effectuée.
+Une disquette d'amorçage sans virus peut être utilisée pour dépanner des systèmes
+dont vous supposez qu'ils sont infectés par un virus, ou pour créer une partition
+de taille importante pour Windows 98.
+
+
+======================================================
+COMMENT CRÉER UNE DISQUETTE D'AMORÇAGE D'URGENCE FAT32
+======================================================
+
+L'utilitaire qui crée l'EBD FAT32, à savoir FAT32EBD.EXE, peut être
+exécuté à partir de MS-DOS ou dans Windows. Il vous invite à insérer une
+disquette de 1,44 Mo dans le lecteur A:\, puis vous invite à continuer.
+FAT32EBD.EXE transfère le secteur d'amorçage sur la disquette afin de
+garantir l'absence de virus. Les fichiers destinés à la disquette sont ensuite
+extraits des fichiers WIN98*.CAB et transférés sur la disquette.
+
+-------------------
+Conditions requises
+-------------------
+
+ - Accès au CD-ROM Windows 98
+ - Accès à un lecteur de disquettes 1,44 Mo sur A:\
+ - Une disquette 1,44 Mo
+
+-------------------------------------------------------------------------
+Procédure de création de l'EBD FAT32 à l'aide de Windows 95 ou Windows 98
+-------------------------------------------------------------------------
+
+1. Cliquez sur le bouton Démarrer et sélectionnez Explorateur Windows
+   dans le menu Programmes.
+
+2. Sélectionnez le lecteur de CD-ROM contenant le CD-ROM de Windows 98.
+
+3. Sélectionnez et double-cliquez sur le dossier \Tools afin de le développer.
+   Développez le sous-répertoire \MTSutil, puis son sous-répertoire, \FAT32EBD. 
+ 
+4. Double-cliquez sur FAT32EBD.EXE et suivez les indications pour créer
+   une EBD FAT32.
+
+5. Protégez la disquette en écriture lorsque la création de l'EBD est terminée,
+   afin de vous assurer qu'aucun virus ne puisse infecter la disquette.
+
+6. Redémarrez l'ordinateur avec l'EBD FAT32.
+
+------------------------------------------------------------
+Procédure de création de l'EBD FAT32 à l'aide de Windows 3.x
+------------------------------------------------------------
+
+Pour obtenir les meilleurs résultats, quittez Windows et créez l'EBD FAT32
+sous MS-DOS. Reportez-vous à la section suivante après avoir quitté Windows.
+
+-------------------------------------------------------
+Procédure de création de l'EBD FAT32 à l'aide de MS-DOS
+-------------------------------------------------------
+
+1. À l'invite de commande en dehors de Windows, sélectionnez le lecteur de
+   CD-ROM contenant le CD-ROM de Windows 98. Par exemple, si votre lecteur
+   de CD-ROM est D:\, tapez : 
+
+	D:\    [appuyez sur la touche ENTRÉE]
+
+2. Basculez vers le répertoire FAT32EBD en tapant la commande suivante :
+
+	CD\TOOLS\MTSUTIL\FAT32EBD    [appuyez sur la touche ENTRÉE]
+
+3. Exécutez FAT32EBD.EXE et suivez les indications afin de créer une EBD FAT32.
+   Exécutez l'utilitaire en tapant :
+
+	FAT32EBD.EXE    [appuyez sur la touche ENTRÉE]
+
+4. Protégez la disquette en écriture lorsque la création de l'EBD est terminée,
+   afin de vous assurer qu'aucun virus ne puisse infecter la disquette.
+
+5. Redémarrez l'ordinateur avec l'EBD FAT32.
+
+
+==========================
+CRÉATION DE LECTEURS FAT32
+==========================
+
+Sous Windows 98, si vous exécutez l'outil FDISK sur un système équipé d'un
+lecteur d'une capacité supérieure à 512 Mo, vous devez préciser si vous souhaitez
+activer ou non la prise en charge des disques de taille importante. Si vous
+répondez Oui, toute partition créée d'une taille supérieure à 512 Mo est
+marquée comme une partition FAT32.
+
+   REMARQUE : le convertisseur de lecteur (FAT32) peut être exécuté si Windows 98
+              est installé. Consultez l'aide en ligne pour plus d'informations.
+
+
+================
+PROBLÈMES CONNUS
+================
+
+Si vous rencontrez des problèmes lors de l'exécution de FAT32EBD.EXE,
+reportez-vous ci-dessous à la liste des problèmes connus relatifs à cet outil.
+
+------------------------------------
+Fichiers invalides copiés vers l'EBD
+------------------------------------
+
+Si les fichiers de l'EBD FAT32 ont une taille de 0 (zéro) octet, cela peut être
+dû à la variable d'environnement définie sur le lecteur de disquettes, ou à une
+quantité de mémoire conventionnelle insuffisante.
+
+Variable d'environnement TMP définie sur le lecteur de disquettes
+-----------------------------------------------------------------
+
+L'amorçage avec une disquette peut définir la variable d'environnement TMP sur le
+lecteur de disquettes. FAT32EBD.EXE nécessite que la variable d'environnement TMP
+soit définie sur un disque dur. Si TMP est défini sur le lecteur de disquettes,
+FAT32EBD.EXE peut créer une disquette d'amorçage avec des fichiers comportant
+zéro octet. 
+
+Déterminez l'état actuel du TMP en tapant :
+
+	SET	[appuyez sur la touche ENTRÉE]
+
+Définissez la variable d'environnement TMP sur le disque dur en tapant :
+
+	SET TMP=C:\	[appuyez sur la touche ENTRÉE]
+
+Mémoire conventionnelle insuffisante
+------------------------------------
+
+FAT32EBD.EXE repose sur l'utilitaire Windows 98 EXTRACT.EXE.
+EXTRACT nécessite une mémoire conventionnelle de 520 Ko environ.
+Le chargement de pilotes de CD-ROM en mode réel et de pilotes de compression
+DriveSpace/DoubleSpace peut réduire la quantité de mémoire conventionnelle.
+Pour contourner ce problème, modifiez les fichiers CONFIG.SYS et
+AUTOEXEC.BAT afin de charger les périphériques en mémoire haute.
+
+   ---- Exemple de fichier CONFIG.SYS ----
+
+   Device=C:\windows\himem.sys
+   Device=C:\windows\Emm386.exe noems
+   Dos=high,umb
+   Devicehigh=C:\CDROM\oakcdrom.sys /d:mscd001
+   Devicehigh=C:\Windows\drvspace.sys /move
+
+   ---- Exemple de fichier AUTOEXEC.BAT ----
+
+   LH C:\CDROM\mscdex.exe /d:mscd001
+
+----------------------------------
+Disquette incorrecte ou endommagée
+----------------------------------
+
+Si FAT32EBD.EXE génère une erreur du type « Erreur d'écriture » ou
+« Impossible d'écrire sur la disquette du lecteur A:\ », il se peut que vous
+utilisiez une disquette endommagée. 
+
+------------------------------------------------------
+Lenteur lors de la création de la disquette d'amorçage
+------------------------------------------------------
+
+FAT32EBD.EXE extrait les fichiers de l'EBD FAT32 à partir du CD-ROM
+de Windows 98. Il se peut qu'EXTRACT.EXE s'exécute lentement en dehors
+de Windows. Pour améliorer les performances de FAT32EBD.EXE en dehors
+de Windows, chargez SMARTDRV.EXE. 
+
+   REMARQUE : l'utilitaire Windows 98 SMARTDRV.EXE peut être chargé à
+              partir du dossier \TOOLS\OLDMSDOS du CD-ROM de Windows 98.
+
+---------------------------------
+Disquette de démarrage Windows 98
+---------------------------------
+
+L'EBD FAT32 n'inclut pas tous les outils de dépannage que comprend la disquette
+de démarrage de Windows 98. Microsoft recommande la création d'une disquette
+de démarrage de Windows 98 lors de l'installation de Windows 98, ou à partir de
+l'onglet Disquette de démarrage de la commande Ajout/Suppression de programmes
+du Panneau de configuration. 
+
+
+============================
+INFORMATIONS COMPLÉMENTAIRES
+============================
+
+Un virus informatique est un fichier exécutable conçu pour se multiplier
+et éviter toute détection. Un virus peut tenter d'éviter la détection en se
+déguisant en un programme légitime. Les virus sont souvent réécrits
+et ajustés de façon à ne pas être détectés. Les programmes anti-virus doivent
+être mis à jour en permanence afin de permettre la recherche des nouveaux virus
+ou des virus modifiés.
+
+Lorsqu'un ordinateur est réamorcé (ou redémarré), il accède au secteur
+d'amorçage du disque dur avant de charger le système d'exploitation ou
+tout autre fichier de démarrage. Un virus du secteur d'amorçage est conçu
+pour remplacer les informations des secteurs d'amorçage du disque dur
+par son propre code. Lorsqu'un ordinateur est infecté par un tel virus, le
+code du virus est lu en mémoire avant toute autre chose. Une fois en
+mémoire, il peut se multiplier sur les autres disques utilisés dans
+l'ordinateur infecté.
+
+--------------------
+Description de FAT32
+--------------------
+
+Windows 98 offre une version mise à jour du système de fichiers FAT
+(File Allocation Table), appelée FAT32. Ce système de fichiers mis à jour
+autorise une taille minimale de cluster par défaut de 4 Ko, ainsi que la prise
+en charge des disques durs d'une taille supérieure à 2 Go.
+
+ - Un volume FAT32 ne peut pas être compressé à l'aide de Microsoft DriveSpace 
+   ou DriveSpace 3.
+
+ - Les volumes FAT32 ne sont pas accessibles si l'ordinateur est démarré
+   avec un autre système d'exploitation. 
+
+ - MS-DOS, Windows NT 3.x et 4.x, Windows 1.x, 2.x et 3.x, ainsi que 
+   Windows 95 (950) peuvent ne pas reconnaître un volume FAT32.
+
+   REMARQUE : Windows 95 OEM Service Version 2 (1111) prend en charge FAT32.
+
+FAT32 offre les améliorations suivantes par rapport aux versions précédentes
+du système de fichiers FAT :
+
+ - Prise en charge de lecteurs d'une taille pouvant aller jusqu'à 2 téra-octets.
+
+ - FAT32 utilise des clusters plus petits (c'est-à-dire, des clusters de 4 Ko pour
+   des lecteurs jusqu'à 8 Go), permettant une amélioration de 10 à 15 pour-cent de
+   l'efficacité de l'utilisation de l'espace disque par rapport aux lecteurs FAT16
+   de grande taille.
+
+ - FAT32 permet de relocaliser le répertoire racine et d'utiliser la copie de
+   sauvegarde de FAT plutôt que la copie par défaut. En outre, l'enregistrement
+   d'amorçage sur les lecteurs FAT32 a été développé afin d'inclure une
+   sauvegarde des structures de données critiques. Cela signifie que les
+   lecteurs FAT32 sont moins sujets à une défaillance unique que les volumes
+   FAT16 existants.
+
+ - Le répertoire racine d'un lecteur FAT32 est désormais une chaîne de clusters
+   ordinaire, de sorte qu'il peut se situer n'importe où dans le lecteur. Pour
+   cette raison, les limitations précédentes du nombre d'entrées du répertoire
+   racine n'existent plus.

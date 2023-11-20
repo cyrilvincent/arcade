@@ -1,0 +1,121 @@
+; ///////////////////////////////////////////////////////////////////////
+; //                      NeoMagic Corporation                         //
+; //                       Copyright protected                         //
+; //                         MagicGraph128XD                           //
+; //                    Windows 95/98 Drivers Disk                     //
+; //                Inf Version 4.10.01.0014-Q6.20.00                  //
+; //                           PACKAGE 6.20.00                         //
+; ///////////////////////////////////////////////////////////////////////
+
+[version]
+Class=DISPLAY
+signature="$CHICAGO$"
+Provider=%Mfg%
+
+[DestinationDirs]
+DefaultDestDir  = 11   
+Driver.Copy = 11
+
+
+[SourceDisksNames]
+1="Win95/98 NeoMagic Driver Disk",,0
+
+[SourceDisksFiles]
+NeoMagic.dll
+Vpmdd32.dll
+Vpmdd16.dll
+Nmgc.drv
+NmgcVdd.vxd
+NmgcVdd2.vxd
+NmgcDD.dll
+NmgcVpm.drv
+NmgcVp32.dll
+
+[Manufacturer]
+%Mfg%=Mfg
+
+[Mfg]
+%NMX.DeviceDescNM4%=Driver.Install_NM4,PCI\VEN_10C8&DEV_0004
+%NMX.DeviceDescNM4%=Driver.Install_NM4,PCI\VEN_10C8&DEV_0004&SUBSYS_000410C8
+%NMX.DeviceDescNM4%=Driver.Install_NM4,PCI\VEN_10C8&DEV_0004&SUBSYS_10071025
+%NMX.DeviceDescNM4%=Driver.Install_NM4,PCI\VEN_10C8&DEV_0004&SUBSYS_007D1028
+%NMX.DeviceDescNM4%=Driver.Install_NM4,PCI\VEN_10C8&DEV_0004&SUBSYS_007E1028
+%NMX.DeviceDescNM4%=Driver.Install_NM4,PCI\VEN_10C8&DEV_0004&SUBSYS_00741028
+%NMX.DeviceDescNM4%=Driver.Install_NM4,PCI\VEN_10C8&DEV_0004&SUBSYS_00751028
+%NMX.DeviceDescNM4%=Driver.Install_NM4,PCI\VEN_10C8&DEV_0004&SUBSYS_102910CF
+%NMX.DeviceDescNM4%=Driver.Install_NM4,PCI\VEN_10C8&DEV_0004&SUBSYS_00BA1014
+%NMX.DeviceDescNM4%=Driver.Install_NM4,PCI\VEN_10C8&DEV_0004&SUBSYS_0E0010BA
+%NMX.DeviceDescNM4%=Driver.Install_NM4,PCI\VEN_10C8&DEV_0004&SUBSYS_802F1033
+%NMX.DeviceDescNM4%=Driver.Install_NM4,PCI\VEN_10C8&DEV_0004&SUBSYS_830B10F7
+%NMX.DeviceDescNM4%=Driver.Install_NM4,PCI\VEN_10C8&DEV_0004&SUBSYS_830D10F7
+%NMX.DeviceDescNM4%=Driver.Install_NM4,PCI\VEN_10C8&DEV_0004&SUBSYS_830810F7
+%NMX.DeviceDescNM4%=Driver.Install_NM4,PCI\VEN_10C8&DEV_0004&SUBSYS_830910F7
+%NMX.DeviceDescNM4%=Driver.Install_NM4,PCI\VEN_10C8&DEV_0004&SUBSYS_831210F7
+%NMX.DeviceDescNM4%=Driver.Install_NM4,PCI\VEN_10C8&DEV_0004&SUBSYS_803B104D
+%NMX.DeviceDescNM4%=Driver.Install_NM4,PCI\VEN_10C8&DEV_0004&SUBSYS_802F104D
+%NMX.DeviceDescNM4%=Driver.Install_NM4,PCI\VEN_10C8&DEV_0004&SUBSYS_801B104D
+
+[Driver.Install_NM4]
+CopyFiles=Driver.Copy, VPM.Copy
+DelReg=Prev.DelReg
+AddReg=Driver.AddReg_NM4
+UpdateInis=VPM.Ini
+
+[Driver.Copy]
+Nmgc.drv
+NmgcVdd.vxd
+NmgcVdd2.vxd
+NmgcDD.dll
+NeoMagic.dll
+
+[VPM.Copy]
+Vpmdd32.dll
+Vpmdd16.dll
+NmgcVpm.drv
+NmgcVp32.dll
+
+[VPM.Ini]
+system.ini,drivers,,"VPM=NMGCVPM.DRV"
+system.ini,drivers32,,"VPM=NMGCVP32.DLL"
+
+[Prev.DelReg]
+HKR,,Ver
+HKR,,DevLoader
+HKR,DEFAULT
+HKR,MODES
+HKR,CURRENT
+
+
+[Driver.AddReg_NM4]
+HKR,,Ver,,4.10.01.0014-Q6.20.00
+HKR,,DevLoader,,*vdd
+HKR,DEFAULT,Mode,,"8,800,600"
+HKR,DEFAULT,drv,,Nmgc.drv
+HKR,DEFAULT,drv2,,Nmgc.drv
+HKR,DEFAULT,vdd,,*vdd
+HKR,DEFAULT,minivdd,,NmgcVdd.vxd
+HKR,DEFAULT,minivdd2,,NmgcVdd2.vxd
+HKR,DEFAULT,RefreshRate,,-1
+HKR,DEFAULT,DDC,,1
+HKR,"MODES\4\640,480",drv,,vga.drv
+HKR,"MODES\4\640,480",vdd,,*vdd
+HKR,"MODES\8\640,480",,,"60,75,85"
+HKR,"MODES\8\640,400",,,"70"
+HKR,"MODES\8\800,600",,,"60,75,85"
+HKR,"MODES\8\1024,768",,,"60,70,75"
+HKR,"MODES\16\640,480"
+HKR,"MODES\16\640,400"
+HKR,"MODES\16\800,600"
+HKR,"MODES\16\1024,768"
+HKR,"MODES\24\640,480"
+HKR,"MODES\24\640,400"
+HKR,"MODES\24\800,600"
+HKCR,"CLSID\{6643A3A0-7C15-11cf-913C-0020AFE4E9D7}\InProcServer32",,,"NeoMagic.dll"
+HKCR,"CLSID\{6643A3A0-7C15-11cf-913C-0020AFE4E9D7}\InProcServer32",ThreadingModel,,"Apartment"
+HKLM,"Software\Microsoft\Windows\CurrentVersion\Controls Folder\Display\Shellex\PropertySheetHandlers\NeoMagic Display CPL Shell Extension",,,"{6643A3A0-7C15-11cf-913C-0020AFE4E9D7}"
+HKLM,"Software\NeoMagic\PropertySheet",PackageVersion,,"4.10.01.0014-Q6.20.00"
+
+
+[Strings]
+Mfg="NeoMagic Corporation"
+NMX.DeviceDescNM4="NeoMagic MagicGraph 128XD"

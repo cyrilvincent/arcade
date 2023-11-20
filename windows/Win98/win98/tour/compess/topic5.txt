@@ -1,0 +1,33 @@
+value:string
+Lorsque vous cliquez sur le bouton <B>Démarrer,</B> Microsoft Windows affiche le menu <B>Démarrer.</B>@
+Un menu est une liste d'applications logicielles, de documents et d'autres options disponibles sur votre ordinateur.@
+Le menu <B>Démarrer</B> se divise en trois parties. La partie inférieure contient les tâches ou commandes d'exploitation de base, comme <b>Arrêter...</b>@
+La partie médiane propose une façon d'ouvrir des applications et de personnaliser des options.@
+La partie supérieure est personnalisée à l'aide de fonctions que vous pouvez ajouter au menu <B>Démarrer.</B>@
+À droite de certains éléments du menu <B>Démarrer,</B> vous verrez un triangle noir dont la pointe est dirigée vers le bord droit du menu.@
+Vous pouvez pointer sur l'une de ces flèches avec votre souris pour faire apparaître un sous-menu (également appelé menu en cascade).@
+Vous allez maintenant apprendre à ouvrir un programme à partir du menu <B>Démarrer.</B>@
+Cliquez sur le bouton <B>Démarrer</B> pour afficher le menu <B>Démarrer.</B> Lorsque vous pointez sur <B>Programmes,</B> le menu <B>Programmes</B> en cascade apparaît.@
+Dans le menu <B>Programmes,</B> pointez sur <B>Accessoires</B> pour faire apparaître un autre menu en cascade. Cliquez sur <B>WordPad,</B> en bas de la liste, pour voir s'ouvrir l'application.@
+Vous êtes prêt à revoir ce que vous avez appris&nbsp;? Comme vous l'avez déjà fait, appuyez sur le numéro correspondant aux réponses aux questions.@
+Quelle est la partie du menu <B>Démarrer</B> qui contient les commandes d'arrêt de votre ordinateur&nbsp;?@
+<IMG SRC="images/num1.gif" align="bottom"> Bonne réponse&nbsp;! La partie inférieure du menu <B>Démarrer</B> est réservée aux commandes d'exploitation de base, comme celle qui permet l'arrêt de votre ordinateur.@
+Vous avez choisi la partie médiane, qui permet de sélectionner des applications et des options. Faites un nouvel essai.@
+Voici la partie supérieure, qui peut être personnalisée à l'aide de fonctions que vous pouvez choisir d'ajouter. Faites un nouvel essai.@
+Vous avez sélectionné une autre zone du Bureau Microsoft Windows. Faites un nouvel essai.@
+La partie inférieure du menu <B>Démarrer</B> est réservée aux tâches ou commandes d'exploitation de base, comme celle qui permet d'arrêter votre ordinateur.@
+Quelle partie du menu <B>Démarrer</B> permet d'ouvrir des applications et d'accéder à des options&nbsp;?@
+Vous avez sélectionné la partie inférieure, qui est réservée aux tâches d'exploitation de base, comme l'arrêt de votre ordinateur. Faites un nouvel essai.@
+<IMG SRC="images/num2.gif" align="bottom"> C'est exact&nbsp;! La partie médiane contient des programmes, documents et autres options que vous pouvez choisir.@
+Voici la partie supérieure, qui peut être personnalisée à l'aide de fonctions que vous pouvez choisir d'ajouter. Faites un nouvel essai.@
+Vous avez sélectionné une autre zone du Bureau Microsoft Windows. Faites un nouvel essai.@
+Dans la partie médiane du menu <B>Démarrer</B> figurent les programmes, documents et autres options à votre disposition.@
+Quelle est la partie du menu <B>Démarrer</B> que vous pouvez personnaliser avec des fonctions de votre choix&nbsp;?@
+Vous avez sélectionné la partie inférieure, qui est réservée aux tâches d'exploitation de base, comme l'arrêt de votre ordinateur. Faites un nouvel essai.@
+Vous avez sélectionné la partie médiane, qui permet de sélectionner des applications et des options. Faites un nouvel essai.@
+<IMG SRC="images/num3.gif" align="bottom"> C'est cela&nbsp;! Vous avez sélectionné la partie supérieure du menu <B>Démarrer,</B> que vous pouvez personnaliser en ajoutant différents logiciels, documents et fonctions.@
+Vous avez sélectionné une autre zone du Bureau Microsoft Windows. Faites un nouvel essai.@
+Vous pouvez personnaliser la partie supérieure du menu <B>Démarrer</B> avec tous les logiciels, documents et fonctions que vous souhaitez ajouter.@
+Le menu <B>Démarrer</B> vous permet d'ouvrir rapidement des applications logicielles, documents et fonctions que vous utilisez souvent.@
+Dans la prochaine leçon, intitulée <B>Utilisation de Windows,</B> vous allez apprendre à utiliser les programmes que vous avez ouverts à partir du menu <B>Démarrer.</B>@
+Appuyez sur <B>GAUCHE</B> <IMG class="always" id=backarr SRC="images/bkbtn.gif" style="cursor:hand" ALIGN=MIDDLE onclick="prevseq()"> pour revenir en arrière&nbsp;; <B>DROITE</B> <IMG class="always" id=frwdarr SRC="images/fwdbtn.gif" style="cursor:hand" ALIGN=MIDDLE onclick="nextseq()"> pour continuer.

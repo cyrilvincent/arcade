@@ -1,0 +1,24 @@
+%<!-- version 7.13.6 -->
+Ressources de Microsoft<SUP>&#174;</SUP> Windows<SUP>&#174;</SUP>&nbsp;98 <!-- note to the localizers:  the string &#174; is the html symbol for the registered symbol.  you may need to move or delete it.-->
+%|%
+Développez vos connaissances de Windows grâce aux supports de formation de Microsoft<SUP>&#174;</SUP> Press.
+<p>
+<b>Vous êtes connecté à Internet&nbsp;?</b><br>
+Cliquez sur l'un des liens suivants pour visiter les sites relatifs à Windows&nbsp;:
+<p><font size=2>
+<b><a id=a3 onmouseover="over(3)" onmouseout="out(3)" onfocus="over(3)" onblur="out(3)" href="http://www.microsoft.com/isapi/redir.dll?prd=msft&clcid=0x040C&ar=home" target="_blank">Microsoft Corporation</a></b><br>
+
+<b><a id=a4 onmouseover="over(4)" onmouseout="out(4)" onfocus="over(4)" onblur="out(4)" href="http://www.microsoft.com/isapi/redir.dll?prd=ie&ar=inews&clcid=0x040C&pver=5.0" target="_blank">Microsoft Internet Explorer</a></b><br>
+
+<b><a id=a5 onmouseover="over(5)" onmouseout="out(5)" onfocus="over(5)" onblur="out(5)" href="http://www.microsoft.com/isapi/redir.dll?prd=support&ar=w98&olcid=0x040C" target="_blank">Support Technique Microsoft</a></b><br>
+</font>
+%|%
+&nbsp;<br><i>Démarrer avec Microsoft Windows&nbsp;98</i>, le didacticiel multimédia par étapes de Windows&nbsp;98&nbsp;!
+%|%
+&nbsp;<br><b>Microsoft Press</b>&nbsp;: des sources d'information et des publications répondant aux besoins de tous les utilisateurs&nbsp;!
+%|%
+Sommaire
+%|%
+Fermer
+%|%Découvrez Windows 98%
+

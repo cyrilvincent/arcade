@@ -1,0 +1,19 @@
+                BITS         
+              INTRO 22       
+
+        "waved rectangles"   
+       |~~~~~~~~~~~~~~~~~~~~|
+       | bits bits bits bits|
+       |      #######       |
+       | b++++##XXX##++++its|
+       |  ++++##XXX##++++   |
+       | b++++##XXX##++++its|
+       |      #######       |
+       | bits bits bits bits|
+       |BITS Club 20051122  |
+       |BITS Club 20051122  |
+       |____________________|
+
+             Visit BITS      
+             ~~~~~~~~~~      
+        http://bits.atari.org

@@ -1,0 +1,17 @@
+SPOT LIGHT ON THE 520ST
+-----------------------
+
+a lame demo screen for the 20 years
+anniversary compo in 2005
+
+a prod by Paradize in GFABASIC
+
+code & main pic: Simon Sunnyboy
+     chip music: Marcer
+      nice font: Minz
+
+The interlace effect runs with a
+fixed frequency of 60 Hz!
+Run on real hardware as emus do a
+very bad job at interlacing effects!
+

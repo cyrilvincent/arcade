@@ -1,0 +1,123 @@
+[Version]
+Signature = $CHICAGO$
+LayoutFile=Layout.inf, Layout1.inf, Layout2.inf
+SetupClass=BASE
+
+[BaseWinOptions]
+ConnMgr
+
+[DestinationDirs]
+Remove.DelFiles=11
+Remove.Readme=11
+Remove.10.Sys=11
+Xnstall.CopyFiles.ICMFILES=11
+Xnstall.CopyFiles.W95.ICMFILES=11
+Xnstall.CopyFiles.NT.ICMFILES=11
+Xnstall.WinInet=11
+Xnstall.Win9x=11
+Xnstall.Inf=17
+
+[DefaultInstall]
+CopyFiles=Xnstall.CopyFiles.ICMFILES, Xnstall.CopyFiles.W95.ICMFILES, Xnstall.Inf
+AddReg=Xnstall.AddReg.ICM
+DelFiles = Remove.DelFiles, Remove.Readme, Remove.10.Sys
+DelReg = Remove.DelReg
+
+; -------------------------------------------------------------------
+; These are the files which are deleted during uninstall.
+; -------------------------------------------------------------------
+[Remove.DelFiles]
+cmmgr32.exe
+cmmgr32.hlp
+cmpbk32.dll
+cmdial32.dll
+cmdl32.exe
+mbslgn32.dll
+icwscrpt.exe
+cmmgr32.gid
+msdun12.exe
+cnet16.dll
+cnetcfg.dll
+ccfg95.dll
+ccfgnt.dll
+cmcfg32.dll
+cmmon32.exe
+cmutil.dll
+addconn.dll
+remconn.exe
+cmstats.dll
+
+[Remove.10.Sys]
+uninstcm.inf
+showicon.exe
+
+[Remove.Readme]
+readme.txt
+
+; -------------------------------------------------------------------
+; These are the registry delete sections.
+; -------------------------------------------------------------------
+[Remove.DelReg]
+HKLM, "%UninstallPath%\%AppTitle%"
+
+; -------------------------------------------------------------------
+; These are the install file copy sections.
+; -------------------------------------------------------------------
+[Xnstall.CopyFiles.ICMFILES]
+cmmgr32.exe,,,32
+cmmgr32.hlp,,,32
+cmpbk32.dll,,,32
+cmdial32.dll,,,32
+cmdl32.exe,,,32
+mbslgn32.dll,,,32
+cnetcfg.dll,,,32
+cmmon32.exe,,,32
+cmutil.dll,,,32
+instcm.inf,instcm.inx,,32
+cmcfg32.dll,,,32
+cmstp.exe,,,32
+
+[Xnstall.Inf]
+instcm16.inf
+
+[Xnstall.CopyFiles.W95.ICMFILES]
+cnet16.dll,,,32
+ccfg95.dll,,,32
+
+; -------------------------------------------------------------------
+; These are the install registry sections
+; -------------------------------------------------------------------
+
+[Xnstall.AddReg.ICM]
+HKCR, ".pbk", "", "", "%PhoneName%"
+HKCR, ".pbr", "", "", "%RegionName%"
+HKLM, "%AppPath%", "", "", "%11%\CMMGR32.EXE"
+HKLM, "%AppPath%", "Path", "", "%11%"
+HKLM, "%AppPath%", "CMInternalVersion", 0, "1.2"
+HKLM, "Software\Microsoft\Windows\CurrentVersion\App Paths\cmmgr32.exe", "CmNative", 0x10001, 0x1
+HKCR, "%CmDefaultCmdKeyName%", "", 0, "%AppName%"
+HKCR, "%CmDefaultCmdKeyName%\DefaultIcon", "", 0, "%11%\CMMGR32.EXE,1"
+HKCR, "%CmDefaultCmdKeyName%\shell\open\command", "", 0, "%11%\CMMGR32.EXE ""%1"""
+HKCR, "%CmDefaultCmdKeyName%\shell\Settings...\command", "", 0, "%11%\CMMGR32.EXE /settings ""%1"""
+HKLM, "Software\Microsoft\Windows\CurrentVersion\RunOnce","Connection_Manager_Mig",, "%11%\cmstp.exe /mp"
+
+; ==================
+; These are strings.
+; ==================
+
+[Strings]
+; These are the non-localizable strings...
+cmPath = "SOFTWARE\Microsoft\Connection Manager"
+CompChecked = "ComponentsChecked"
+AppPath = "SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\CMMGR32.EXE"
+AppTitle = "Connection Manager"
+UninstallPath = "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall"
+CmDefaultCmdKeyName = "Connection Manager Profile"
+
+; ------------------------------------
+; These are the localizable strings...
+; ------------------------------------
+
+PhoneName = "Annuaire téléphonique"
+RegionName = "Fichier de régions"
+AppName = "Profil du Gestionnaire de connexion"

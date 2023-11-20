@@ -1,0 +1,117 @@
+
+        Composants de base de Microsoft Win32 Smart Card
+
+                        Version 1.0
+
+------------
+Sommaire :
+------------
+
+    1. Introduction
+    2. Composants
+    3. Installation
+    4. Désinstallation
+
+
+----------------
+1. Introduction
+----------------
+
+Cette version 1.0 des composants de base de Microsoft Smart Card fournit
+les fichiers nécessaires à l'activation des applications ou des
+fournisseurs de service détectant les cartes à puce pour communiquer
+avec une carte à puce via un lecteur attaché au PC et ses pilotes
+de périphérique correspondant.
+
+Ce logiciel ne fournit pas le matériel de lecture de cartes à puce, ni les
+pilotes. Pour obtenir des lecteurs de cartes à puce, veuillez contacter
+les fabricants directement et leur demander un lecteur compatible
+PC/SC et les pilotes pour Windows.
+
+
+----------------------------------------------
+2. Composants système de base Smart Card
+----------------------------------------------
+
+Les composants suivants sont inclus dans cette version.
+
+Pour Windows NT :
+
+    %WINDIR%\system32\scardsvr.exe
+    %WINDIR%\system32\scarddat.dll
+    %WINDIR%\system32\scarddlg.dll
+    %WINDIR%\system32\scardmgr.dll
+    %WINDIR%\system32\scardsrv.dll
+    %WINDIR%\system32\scntvssp.dll
+    %WINDIR%\system32\winscard.dll
+    %WINDIR%\system32\drivers\smclib.sys
+
+Pour Windows 95/98 :
+
+    %WINDIR%\system\scardsvr.exe
+    %WINDIR%\system\scarddat.dll
+    %WINDIR%\system\scarddlg.dll
+    %WINDIR%\system\scardmgr.dll
+    %WINDIR%\system\scardsrv.dll
+    %WINDIR%\system\scntvssp.dll
+    %WINDIR%\system\winscard.dll
+    %WINDIR%\system\smclib.vxd
+    %WINDIR%\system32\drivers\smclib.sys
+
+Les fichiers de prise en charge suivants peuvent aussi être ajoutés
+au répertoire système si nécessaire :
+
+    msvcrt.dll
+    mfc42.dll
+    advpack.dll
+
+
+---------------
+3. Installation
+---------------
+
+Pour installer les composants de base Microsoft Smart Card sur la machine
+cible, exécutez SETUP.EXE à partir de la racine du disque 1 du support de
+distribution. Après l'installation des composants de base Microsoft Smart
+Card et d'au moins un pilote de lecteur de cartes, l’ordinateur doit être
+redémarré.
+
+    Remarques:
+
+    Cet utilitaire d'installation installe smclib.sys dans
+    %WINDIR%\system32\drivers sur Windows 95 et Windows 98.
+    Ce fichier n'est pas utilisé sur Windows 95, et peut être ignoré sans
+    affecter l'exécution du système. Il est nécessaire au fonctionnement
+    correct de Windows 98.
+
+
+------------------
+4. Désinstallation
+------------------
+
+Pour désinstaller les composants de base de Microsoft Smart Card, allez dans
+le Panneau de configuration (sous "Paramètres" dans le menu Démarrer) et
+démarrez l'application "Ajout/Suppression de programmes". Sélectionnez
+"Composants de base de Microsoft Smart Card" dans la liste des programmes
+affichée dans la boîte et cliquez ensuite sur le bouton "Ajouter/Supprimer".
+Après avoir désinstallé les composants de base Microsoft Smart Card et un
+pilote de lecteur de cartes, la machine doit être redémarrée.
+
+    Remarques:
+
+    Les bibliothèques smclib.sys et/ou smclib.vxd utilisées par les pilotes
+    de lecteur de cartes à puce ne sont pas supprimées lors de la
+    désinstallation. Cela est dû au fait que des pilotes de périphériques
+    sont toujours susceptibles d'être installés sur le système et qu'ils
+    ont peut-être besoin de celles-ci pour démarrer et s'exécuter.
+    Les fichiers smclib.sys et/ou smclib.vxd peuvent être supprimés
+    sans problème après la suppression de tous les pilotes de lecteur
+    de cartes à puce.
+
+    Les fichiers d'exécution C et de Microsoft Foundation Class,
+    msvcrt.dll et mfc42.dll, ne sont pas supprimés par l'utilitaire de
+    désinstallation, puisqu'il s'agit de ressources partagées.
+
+    L'utilitaire d'installation peut remplacer votre fichier système
+    advpack.dll. Le fichier mis à jour n'est pas supprimé par l'utilitaire
+    de désinstallation.

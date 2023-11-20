@@ -1,0 +1,44 @@
+value:string
+Outre le clavier, vous pouvez utiliser un dispositif de pointage pour donner des instructions à votre ordinateur.@
+Le plus utilisé des dispositifs de pointage est la souris.@
+Cette section vous montre comment exécuter les quatre actions principales que vous devez connaître&nbsp;: pointer, cliquer, double-cliquer et faire glisser.@
+La souris contrôle un pointeur qui identifie votre emplacement sur l'écran.@
+Considérez la souris comme une extension de votre main.@
+Lorsque vous déplacez la souris sur votre bureau, le pointeur se déplace très exactement en fonction de votre mouvement.@
+Certains objets changent lorsque votre pointeur passe dessus.@
+C'est ce que nous allons voir maintenant. Le rond rouge uni que vous voyez ici va ainsi devenir bleu avec des motifs lorsque vous allez faire passer la souris dessus.@
+Maintenant, c'est à vous&nbsp;! Posez votre main sur le dessus de la souris et déplacez-la jusqu'à ce que la pointe du pointeur passe sur le rond rouge uni sur l'écran.@
+Félicitations&nbsp;! Vous avez pointé comme il fallait sur le rond rouge en plaçant dessus le pointeur de la souris.@
+Vous avez pointé sur un autre endroit de l'écran. Faites un nouvel essai. Déplacez la souris en même temps que votre main jusqu'à ce que le pointeur se trouve sur le rond rouge uni.@
+Vous avez pointé correctement en déplaçant le pointeur de la souris sur le rond rouge uni, mais vous avez également appuyé sur l'un des boutons de la souris. Réessayez de pointer sans appuyer sur aucun bouton.@
+À l'aide de votre main, déplacez la souris jusqu'à ce que le pointeur se trouve sur le rond rouge uni.@
+Vous pouvez sélectionner et déplacer des éléments sur l'écran en utilisant l'un des boutons de votre souris. La première action que vous allez apprendre est ce que l'on appelle «&nbsp;cliquer&nbsp;».@
+Cliquer consiste à appuyer à une seule reprise sur un bouton de la souris, puis à le relâcher.@
+Le résultat de cette action diffère selon le logiciel que vous utilisez et le bouton avec lequel vous cliquez.@
+Prenons un exemple. En cliquant sur le rond rouge uni, vous allez le transformer en un carré bleu uni.
+Vous êtes prêt à essayer&nbsp;? Vérifiez que votre pointeur se trouve sur le rond rouge uni à l'écran. Ensuite, avec votre index, appuyez rapidement une fois sur le bouton gauche de la souris en le relâchant immédiatement pour sélectionner le rond.@
+C'est cela&nbsp;! Vous avez correctement sélectionné le rond rouge uni en pointant dessus puis en cliquant une seule fois avec le bouton gauche de la souris.@ 
+Vous avez pointé sur un autre endroit de l'écran. Faites un nouvel essai. Déplacez la souris jusqu'à ce que le pointeur se trouve sur le rond rouge uni et cliquez une fois avec le bouton gauche de la souris.@
+Vous avez pointé correctement en plaçant le pointeur de la souris sur le rond rouge uni. Il vous suffit maintenant de cliquer une fois rapidement avec le bouton gauche de la souris et de le relâcher.@
+Pour cliquer votre souris, vous appuyez et relâchez rapidement et une seule fois le bouton gauche de la souris.@
+Maintenant que vous savez comment cliquer, vous pouvez choisir de cliquer soit sur le bouton <B>Gauche</B> pour revenir en arrière, soit sur le bouton <B>Droite</B> pour continuer. Vous pouvez également appuyer sur les touches <B>GAUCHE</B> ou <B>DROITE</B> de votre clavier.@
+L'une des autres actions que vous pouvez effectuer avec une souris se nomme &#171;&nbsp;double-cliquer&nbsp;&#187;.@
+Double-cliquer consiste à appuyer sur le bouton gauche de la souris puis à le relâcher, ce à deux reprises et à intervalle de temps très court.@
+Lorsque vous double-cliquez, le rond rouge uni se transforme en carré bleu à motifs.@
+Il est temps de vous entraîner à double-cliquer. Déplacez le pointeur de votre souris sur le rond rouge uni, puis appuyez sur le bouton gauche de la souris et relâchez-le rapidement à deux reprises.@
+Très bien&nbsp;! Vous avez réussi à double-cliquer sur le rond rouge uni en appuyant rapidement sur le bouton gauche de la souris et en le relâchant.@
+Vous avez appuyé une seule fois au lieu de deux sur le bouton de la souris. Vous avez donc cliqué. Réessayez de double-cliquer sur le rond rouge uni.@ 
+Vous avez double-cliqué correctement, mais vous avez utilisé le bouton droit de la souris. Double-cliquer consiste à appuyer sur le bouton gauche de la souris puis à le relâcher rapidement deux fois successivement. Faites un nouvel essai.@
+Double-cliquer consiste à appuyer sur le bouton gauche de la souris puis à le relâcher, ce à deux reprises et à intervalle très rapproché.@
+&#171;&nbsp;Faire glisser&nbsp;&#187; est une autre action que vous pouvez effectuer à l'aide du bouton gauche de la souris. Cela consiste à déplacer les éléments sur l'écran.@
+Pour ce faire, placez le pointeur sur un objet, appuyez sur le bouton gauche de la souris et maintenez-le enfoncé, amenez la souris à l'endroit désiré sur l'écran, puis relâchez le bouton.@
+Maintenant, c'est à vous. Placez le pointeur sur le rond rouge uni, appuyez sur le bouton gauche de la souris et maintenez-le enfoncé, puis déplacez le rond bleu à motifs en le faisant glisser jusqu'à l'extrême droite de l'écran. Relâchez le bouton.@
+C'est parfait&nbsp;! Pour faire glisser un élément, positionnez votre souris dessus, appuyez sur son bouton gauche en le maintenant enfoncé, déplacez la souris jusqu'à un autre endroit, puis relâchez le bouton. @
+Vous avez pointé sur un autre endroit de l'écran. Pointer consiste à placer le pointeur de la souris sur un élément particulier. Réessayez de pointer sur le rond rouge uni.@
+Vous avez pointé correctement en plaçant le pointeur de la souris sur le rond rouge uni. Il s'agit maintenant de le déplacer jusqu'à l'extrême droite de l'écran. Faites un nouvel essai.@
+Vous avez pointé correctement sur le rond rouge uni et vous l'avez fait glisser, mais vous avez relâché le bouton trop tôt. Faites un nouvel essai.@
+Pour faire glisser un élément, commencez par pointer dessus, maintenez le bouton gauche de la souris enfoncé, déplacez le bouton vers un autre endroit, puis relâchez le bouton de la souris. @
+Dans cette section, vous vous êtes familiarisé avec votre souris et les quatre actions principales qu'elle permet de réaliser&nbsp;: pointer, cliquer, double-cliquer et faire glisser.@
+Lorsque vous travaillez avec votre ordinateur, vous faites sans arrêt appel à ces techniques.@
+Maintenant que vous connaissez les principaux composants matériels de votre ordinateur, vous êtes prêt pour une présentation de votre système d'exploitation dans <B>Découverte du Bureau Windows.</B>@
+Appuyez sur <B>GAUCHE</B> <IMG class="always" id=backarr SRC="images/bkbtn.gif" style="cursor:hand" ALIGN=MIDDLE onclick="prevseq()"> pour revenir en arrière&nbsp;; <B>DROITE</B> <IMG class="always" id=frwdarr SRC="images/fwdbtn.gif" style="cursor:hand" ALIGN=MIDDLE onclick="nextseq()"> pour continuer.@

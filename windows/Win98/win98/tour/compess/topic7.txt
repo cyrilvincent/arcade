@@ -1,0 +1,8 @@
+value:string
+Si vous avez une question concernant le fonctionnement d'une opération, la plupart des applications logicielles contiennent une fonctionnalité d'aide intégrée qui fournit des informations et des suggestions.@
+Sur le Bureau Windows, l'Aide est disponible à partir du menu <B>Démarrer.</B>@
+La majorité des applications possèdent un bouton Aide ou une icône Aide sur la barre d'outils. Ce bouton ressemble habituellement à un point d'interrogation&nbsp;(?).@
+Dans la plupart des logiciels, la touche de fonction F1 permet d'accéder à la fonctionnalité d'aide.@
+Quel que soit l'endroit où vous travaillez dans Windows, l'Aide n'est jamais loin.@
+<P><BR><P>Félicitations&nbsp;! Vous venez de terminer avec succès le didacticiel <B>Notions fondamentales de l'informatique.</B> <P>Si vous souhaitez revoir l'un des écrans de ce didacticiel, cliquez sur l'une des rubriques dans la liste située sur le côté gauche de votre fenêtre.<P>Pour en savoir plus sur Microsoft Windows, cliquez sur le bouton <B>Sommaire</B> et suivez le didacticiel <B>Présentation Microsoft Windows&nbsp;98.</B>@
+Appuyez sur <B>GAUCHE</B> <IMG class="always" id=backarr SRC="images/bkbtn.gif" style="cursor:hand" ALIGN=MIDDLE onclick="prevseq()"> pour revenir en arrière&nbsp;; <B>DROITE</B> <IMG class="always" id=frwdarr SRC="images/fwdbtn.gif" style="cursor:hand" ALIGN=MIDDLE onclick="nextseq()"> pour continuer.
