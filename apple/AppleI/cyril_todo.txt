@@ -1,0 +1,7 @@
+Cf pom1_master
+Voir surtout : https://wiki.reactivemicro.com/POM1_Raspberrypi
+Image rom dans téléchargement : POM1rpi2.rar
+Fabriquer la structure en bois
+Adapter un clavier Apple II : https://www.tindie.com/products/option8/retroconnector-keyboard-shield-for-apple-iie/
+Buy: https://adwaterandstir.com/product/openac1-assembled/
+

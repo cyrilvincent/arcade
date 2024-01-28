@@ -1,0 +1,149 @@
+Transferts de disquettes Thomson - Daniel Coulom - 2 avril 2006
+web: http://dcmoto.free.fr - messagerie: danielcoulom@gmail.com
+---------------------------------------------------------------
+
+
+Les contraintes techniques
+--------------------------
+
+Les disquettes Thomson peuvent être formatées, lues et écrites sur PC
+par les utilitaires dcfdutil et saptools. Ils fonctionnent avec MS-DOS,
+Windows 95, 98 et ME, mais ils ne peuvent lire et écrire que la face 0
+d'une disquette TO8. Saptools existe aussi en version Linux, pouvant
+lire les deux faces. A ce jour, aucun programme connu ne sait lire ou
+écrire les disquettes Thomson avec Windows NT, 2000 ou XP. De plus,
+avec les machines "modernes", les évolutions du bios et/ou des
+contrôleurs de disquette rendent les transferts au format Thomson de
+plus en plus difficiles, voire impossibles.
+
+Les disquettes PC 3"1/2 720 Ko (80 pistes, double face, 9 secteurs par
+piste) peuvent être formatées, lues et écrites sur les machines Thomson
+(TO8, TO8D, TO9+). Les utilitaires nécessaires ont été créés en 1989
+par BC 109 soft (Toussaint Ottavi). Ils sont sur la disquette DOS720,
+disponible à la page Programmes du site dcmoto.
+  
+
+
+Les formats d'images binaires de disquette
+------------------------------------------
+
+- Les fichiers .fd sont composés de blocs de 256 octets. Chaque bloc
+contient les données d'un secteur de la disquette. Les secteurs sont
+ordonnés selon la numérotation logique, commençant par le secteur 1
+de la piste 0 de la face 0, et finissant par le secteur 16 de la der-
+nière piste de la disquette. Dans le cas d'une disquette double face,
+la face 1 est à la suite de la face 0. Par extension, on peut aussi
+concaténer deux disquettes double face, pour simuler la présence des
+unités 0 à 3 dans l'émulateur dcmoto. Pour les transferts on utilise
+uniquement des fichiers .fd simple ou double face.
+Leur longueur en octets peut être :
+163840= 5"1/4 double densité simple face
+327680= 5"1/4 double densité double face
+327680= 3"1/2 double densité simple face
+655360= 3"1/2 double densité double face
+La distinction entre les deux formats 327680 octets est faite en
+analysant le contenu de la table d'allocation des fichiers.   
+
+- Les fichiers .sap (système d'archivage Alexandre Pukall) contien-
+nent également les données des secteurs d'une disquette Thomson, mais
+ce contenu est crypté (par XOR avec une valeur fixe). Chaque secteur
+est précédé d'une en-tête et suivi d'une checksum. Le fichier .sap
+commence par un header de longueur fixe, et ne contient qu'une seule
+face de disquette. Il faut donc deux fichiers .sap pour une disquette
+double face. La description précise de ce format se trouve sur le site
+Nostalgies Thomsonistes: http://nostalgies.thomsonistes.org/index.html
+Les utilitaires permettant de manipuler et transférer les fichiers sap
+sont également disponibles à la même adresse, avec leur documentation.
+
+
+Les méthodes de transfert au format .fd
+---------------------------------------
+
+On peut utiliser pour le transfert des fichiers .fd :
+1) une disquette Thomson
+2) une disquette DOS 720 Ko 
+
+La première méthode n'est pas compatible avec tous les PC et tous les
+systèmes d'exploitation, et ne permet de transférer que la face 0 des
+disquettes TO8. L'utilitaire de transfert s'appelle dcfdutil.
+
+La seconde méthode est compatible avec tous les systèmes d'exploitation
+du PC : MS-DOS, OS/2, Linux, Windows (y compris NT, 2000 et XP), etc.
+Elle permet de transférer une ou deux faces sans aucune restriction.
+Les utilitaires sont pc-to et to-pc de la disquette dctransferts.
+
+
+Utilisation de dctransferts
+---------------------------
+
+dctransferts nécessite 3 disquettes :
+- la disquette Thomson dctransferts (voir page Programmes du site dcmoto)
+  Elle contient tous les programmes TO8 nécessaires pour lire et écrire
+  les fichiers .fd d'une disquette au format MS-DOS 720K
+- la disquette au format Thomson
+  Dans le sens TO8 -> PC, c'est la disquette à transformer en fichier .fd
+  Dans le sens PC -> TO8, c'est la disquette recevant le contenu du fichier .fd
+- la disquette 720K utilisée pour le transfert
+  Elle contient les fichiers .fd à transférer dans un sens ou dans l'autre.
+
+La disquette 720K peut être une disquette 3"1/2 double densité,
+ou haute densité avec le trou de droite obturé par du ruban adhésif.
+Elle est formatée sur PC par l'une ou l'autre des commandes suivantes :
+>format a: /t:80 /n:9  (tous systèmes)
+>format a: /f:720      (tous systèmes sauf Windows XP)
+NB : A ma connaissance, les lecteurs de disquette externes connectés sur
+un port USB ne reconnaissent pas le format DOS 720K. Il faut donc disposer
+d'un lecteur interne classique.
+
+Il est possible de transférer en une seule opération :
+- la face 0 de la disquette Thomson
+  (nécessite deux passes pour copier le fichier .fd de 320 Ko)
+- les 2 faces de la disquette Thomson
+  (nécessite quatre passes pour copier le fichier .fd de 640 Ko)
+
+Lancement du programme sur TO8 :
+- Insérer la disquette dctransferts
+- Appuyez sur B pour lancer l'auto.bat
+- Se laisser guider par les messages affichés 
+
+
+
+===================================================================
+IMPORTANT : Complément d'information du 4 mars 2011
+===================================================================
+
+1) Il existe maintenant une solution pour lire et écrire les disquettes Thomson
+avec un PC sous Windows XP ou plus récent : le driver Omniflop de Jason Watton
+http://www.shlock.co.uk/Utils/OmniFlop/OmniFlop.htm
+
+2) Contrairement à ce qui est écrit plus haut, il y a des lecteurs externes USB
+permettant de lire et d'écrire le format MS-DOS 720K. Toutefois ils ne permettent
+pas tous de formater. Le driver Omniflop ne fonctionne pas avec ces lecteurs USB,
+par contre ils sont utilisables avec dctransferts.
+
+3) Pour permettre de créer la disquette Omniflop sans aucun moyen de transfert de
+disquette, il existe maintenant une version cassette de dctransferts, sous forme
+de fichier .k7, et aussi de fichier .wav à recopier sur une cassette audio et à
+lire avec le Lecteur Enregistreur de Programmes du TO8, TO8D ou TO9+.
+
+Création de la disquette à partir de la cassette :
+- Mettre la cassette dans le lecteur Thomson et appuyer sur Play
+- Mettre une disquette formatée dans le lecteur Thomson
+- Lancer le Basic 512
+- Taper les commandes suivantes :
+
+LOAD"CASS:AUTO.BAT"
+SAVE"AUTO.BAT"
+LOAD"CASS:LOADER.BAS"
+SAVE"LOADER.BAS"
+LOAD"CASS:TOPC.BAS"
+SAVE"TOPC.BAS"
+LOAD"CASS:PCTO.BAS"
+SAVE"PCTO.BAS"
+LOADM"CASS:DOS720.BIN"
+SAVEM"DOS720.BIN",&H8C00,&H8C3C,0
+LOADM"CASS:DKCO720.BIN"
+SAVEM"DKCO720.BIN",&H7800,&H7EDF,0
+
+Remarque : pour les commandes LOAD et LOADM le nom de fichier est facultatif.
+Il suffit de taper LOAD"CASS: et LOADM"CASS: pour lire en séquence sur la cassette.

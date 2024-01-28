@@ -137,14 +137,23 @@ class MinitelMenu:
         time.sleep(1)
         self.connect()
 
+    def gpt(self):
+        print("GPT")
+        self.close()
+        time.sleep(1)
+        os.chdir("/home/pi")
+        os.system("python minitelgpt.py")
+        time.sleep(1)
+        self.connect()
+
     def start(self):
         print("Start minitel menu")
         self.clear()
         while True:
-            self.writeln(b"Minitel 2023 par Cyril")
+            self.writeln(b"Minitel 2024 par Cyril")
             self.writeln(b"======================")
             self.writeln(b"")
-            self.writeln(b"Services disponibles : 3611, 3615 LINUX HELLO STARWARS ULLA ASCII HISTORY")
+            self.writeln(b"Services disponibles : 3611, 3615 LINUX HELLO STARWARS ULLA ASCII HISTORY GPT")
             self.write(b"Numero : ")
             s = self.read_envoi().upper()
             if s.__contains__("EXI") or s == "":
@@ -170,6 +179,8 @@ class MinitelMenu:
                     self.ascii()
                 elif s.__contains__("HIS"):
                     self.history()
+                elif s.__contains__("GPT"):
+                    self.gpt()
             self.writeln(b"")
 
 if __name__ == '__main__':
