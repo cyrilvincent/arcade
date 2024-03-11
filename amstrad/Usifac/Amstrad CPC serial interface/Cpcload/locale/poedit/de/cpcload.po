@@ -1,0 +1,1470 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2009-06-17 12:45+0100\n"
+"Last-Translator: Manfred Meyerle <nightblade@t-online.de>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: GERMANY\n"
+
+#: temp\xrc.cpp:1
+msgid "test"
+msgstr "test"
+
+#: temp\xrc.cpp:2
+msgid "DSK Output Folder"
+msgstr "DSK Zielordner"
+
+#: temp\xrc.cpp:3
+#: temp\xrc.cpp:41
+#: temp\xrc.cpp:44
+#: temp\xrc.cpp:94
+#: temp\xrc.cpp:110
+#: temp\xrc.cpp:117
+#: temp\xrc.cpp:119
+#: temp\xrc.cpp:121
+#: temp\xrc.cpp:123
+#: temp\xrc.cpp:137
+#: temp\xrc.cpp:139
+#: temp\xrc.cpp:141
+#: temp\xrc.cpp:143
+#: temp\xrc.cpp:144
+#: temp\xrc.cpp:146
+#: temp\xrc.cpp:148
+#: temp\xrc.cpp:150
+#: temp\xrc.cpp:152
+#: temp\xrc.cpp:157
+#: temp\xrc.cpp:160
+#: temp\xrc.cpp:162
+#: temp\xrc.cpp:213
+#: temp\xrc.cpp:214
+msgid "..."
+msgstr "..."
+
+#: temp\xrc.cpp:4
+msgid "Joystick on numeric keypad (NumLock off)"
+msgstr "Joystick auf Nummernblock (NumLock aus)"
+
+#: temp\xrc.cpp:5
+msgid "%"
+msgstr "%"
+
+#: temp\xrc.cpp:6
+msgid "Download version information"
+msgstr "Download version information"
+
+#: temp\xrc.cpp:7
+#: temp\xrc.cpp:124
+msgid "Customize Fields"
+msgstr "Felder anpassen"
+
+#: temp\xrc.cpp:8
+msgid "Available fields:"
+msgstr "Verfügbare Felder:"
+
+#: temp\xrc.cpp:9
+msgid "A&dd"
+msgstr "&Hinzufügen"
+
+#: temp\xrc.cpp:10
+msgid "&Remove"
+msgstr "&Entfernen"
+
+#: temp\xrc.cpp:11
+msgid "Add A&ll"
+msgstr "&Alle hinzufügen"
+
+#: temp\xrc.cpp:12
+msgid "Remo&ve All"
+msgstr "Alle ent&fernen"
+
+#: temp\xrc.cpp:13
+msgid "Defaul&t"
+msgstr "&Standard"
+
+#: temp\xrc.cpp:14
+msgid "Selection:"
+msgstr "Auswahl:"
+
+#: temp\xrc.cpp:15
+#: temp\xrc.cpp:49
+msgid "&File"
+msgstr "&Datei"
+
+#: temp\xrc.cpp:16
+#: temp\xrc.cpp:114
+msgid "&Open..."
+msgstr "Ö&ffnen"
+
+#: temp\xrc.cpp:17
+msgid "Drive A"
+msgstr "Laufwerk A"
+
+#: temp\xrc.cpp:18
+#: temp\xrc.cpp:56
+#: temp\xrc.cpp:177
+#: temp\xrc.cpp:200
+msgid "&Properties..."
+msgstr "&Eigenschaften..."
+
+#: temp\xrc.cpp:19
+#: temp\xrc.cpp:57
+msgid "&Print..."
+msgstr "Dr&ucken"
+
+#: temp\xrc.cpp:20
+#: temp\xrc.cpp:58
+msgid "Print Pre&view"
+msgstr "Druck&vorschau"
+
+#: temp\xrc.cpp:21
+#: temp\xrc.cpp:59
+msgid "Print &Setup..."
+msgstr "Druckeinstellun&g"
+
+#: temp\xrc.cpp:22
+#: temp\xrc.cpp:60
+msgid "&Exit"
+msgstr "E&xit"
+
+#: temp\xrc.cpp:23
+#: temp\xrc.cpp:61
+msgid "&Edit"
+msgstr "&Bearbeiten"
+
+#: temp\xrc.cpp:24
+#: temp\xrc.cpp:62
+#: temp\xrc.cpp:180
+msgid "&Copy"
+msgstr "&Kopieren"
+
+#: temp\xrc.cpp:25
+msgid "&Cut"
+msgstr "A&usschneiden"
+
+#: temp\xrc.cpp:26
+msgid "&Paste"
+msgstr "E&infügen"
+
+#: temp\xrc.cpp:27
+#: temp\xrc.cpp:63
+msgid "&View"
+msgstr "Ansich&t"
+
+#: temp\xrc.cpp:28
+#: temp\xrc.cpp:64
+msgid "&Fullscreen"
+msgstr "&Ganzer Bildschirm"
+
+#: temp\xrc.cpp:29
+#: temp\xrc.cpp:65
+msgid "&Toolbar"
+msgstr "Symbolleis&te"
+
+#: temp\xrc.cpp:30
+#: temp\xrc.cpp:70
+msgid "&Statusbar"
+msgstr "&Statusleiste"
+
+#: temp\xrc.cpp:31
+msgid "&Large icons"
+msgstr "&Große Bilder"
+
+#: temp\xrc.cpp:32
+#: temp\xrc.cpp:34
+#: temp\xrc.cpp:81
+#: temp\xrc.cpp:83
+msgid "&Help"
+msgstr "&Hilfe"
+
+#: temp\xrc.cpp:33
+#: temp\xrc.cpp:82
+msgid "Comp&uter"
+msgstr "Com&puter"
+
+#: temp\xrc.cpp:35
+#: temp\xrc.cpp:84
+#, c-format
+msgid "&Go to the %s Web Site"
+msgstr "&Gehe zur %s Website"
+
+#: temp\xrc.cpp:36
+#: temp\xrc.cpp:85
+msgid "&Check for updates..."
+msgstr "Nach &Updates suchen"
+
+#: temp\xrc.cpp:37
+#: temp\xrc.cpp:86
+#, c-format
+msgid "Check for updates on the %s website"
+msgstr "Nach Updates auf der %s Website suchen"
+
+#: temp\xrc.cpp:38
+#: temp\xrc.cpp:87
+msgid "Change&log"
+msgstr "Versi&onshistorie"
+
+#: temp\xrc.cpp:39
+#: temp\xrc.cpp:88
+#: ..\..\code\wx\wxcode.cpp:2179
+msgid "&About..."
+msgstr "Ü&ber..."
+
+#: temp\xrc.cpp:40
+msgid "Drive &A:"
+msgstr "Laufwerk &A:"
+
+#: temp\xrc.cpp:42
+#: temp\xrc.cpp:45
+#: temp\xrc.cpp:47
+msgid "&Info..."
+msgstr "&Info"
+
+#: temp\xrc.cpp:43
+msgid "Drive &B:"
+msgstr "Laufwerk &B:"
+
+#: temp\xrc.cpp:46
+msgid "Program"
+msgstr "Programm"
+
+#: temp\xrc.cpp:48
+msgid "Tool"
+msgstr "Werkzeug"
+
+#: temp\xrc.cpp:50
+#: temp\xrc.cpp:169
+msgid "&Run..."
+msgstr "&Starte..."
+
+#: temp\xrc.cpp:51
+#: temp\xrc.cpp:170
+msgid "Load and run disk"
+msgstr "Lade und starte Disk"
+
+#: temp\xrc.cpp:52
+#: temp\xrc.cpp:171
+msgid "Open &Disk"
+msgstr "Öffne &Disk"
+
+#: temp\xrc.cpp:53
+#: temp\xrc.cpp:172
+msgid "Load disk"
+msgstr "Lade Disk"
+
+#: temp\xrc.cpp:54
+#: temp\xrc.cpp:173
+msgid "Open Memory &Snapshot"
+msgstr "Öffne &Speicherabbild"
+
+#: temp\xrc.cpp:55
+#: temp\xrc.cpp:174
+msgid "Load memory snapshot"
+msgstr "Lade Speicherabbild"
+
+#: temp\xrc.cpp:66
+msgid "T&ree"
+msgstr "&Verzeichnisstruktur"
+
+#: temp\xrc.cpp:67
+msgid "&Images"
+msgstr "&Bilder"
+
+#: temp\xrc.cpp:68
+msgid "Scr&eenshot"
+msgstr "Scr&eenshots"
+
+#: temp\xrc.cpp:69
+msgid "Inf&o"
+msgstr "Inf&o"
+
+#: temp\xrc.cpp:71
+msgid "Reset la&yout"
+msgstr "La&yout zurücksetzen"
+
+#: temp\xrc.cpp:72
+msgid "Default positioning of toolbars"
+msgstr "Werkzeug Standardpositionen"
+
+#: temp\xrc.cpp:73
+#: temp\xrc.cpp:196
+msgid "&Large Icons"
+msgstr "Gr&oße Bilder"
+
+#: temp\xrc.cpp:74
+#: temp\xrc.cpp:197
+msgid "S&mall Icons"
+msgstr "K&leine Bilder"
+
+#: temp\xrc.cpp:75
+#: temp\xrc.cpp:198
+msgid "Lis&t"
+msgstr "Lis&te"
+
+#: temp\xrc.cpp:76
+#: temp\xrc.cpp:199
+msgid "&Details"
+msgstr "&Details"
+
+#: temp\xrc.cpp:77
+msgid "E&mulator"
+msgstr "E&mulator"
+
+#: temp\xrc.cpp:78
+msgid "emu"
+msgstr "emu"
+
+#: temp\xrc.cpp:79
+msgid "&Tools"
+msgstr "&Werkzeuge"
+
+#: temp\xrc.cpp:80
+msgid "&Options..."
+msgstr "O&ptionen"
+
+#: temp\xrc.cpp:89
+msgid "About"
+msgstr "Über..."
+
+#: temp\xrc.cpp:90
+msgid "Cl&ose"
+msgstr "Sch&liessen"
+
+#: temp\xrc.cpp:91
+#: temp\xrc.cpp:115
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: temp\xrc.cpp:92
+#: temp\xrc.cpp:108
+msgid "Enable"
+msgstr "Aktivieren"
+
+#: temp\xrc.cpp:93
+msgid "Path"
+msgstr "Pfad"
+
+#: temp\xrc.cpp:95
+msgid "Video"
+msgstr "Video"
+
+#: temp\xrc.cpp:96
+#: ..\..\cpcloadwx\src\cpctext.cpp:27
+msgid "Fullscreen"
+msgstr "Ganzer Bildschirm"
+
+#: temp\xrc.cpp:97
+msgid "Resolution"
+msgstr "Auflösung"
+
+#: temp\xrc.cpp:98
+msgid "Model"
+msgstr "Modell"
+
+#: temp\xrc.cpp:99
+#: temp\xrc.cpp:208
+msgid "Keyboard"
+msgstr "Tastatur"
+
+#: temp\xrc.cpp:100
+msgid "Text mode"
+msgstr "Text Modus"
+
+#: temp\xrc.cpp:101
+msgid "20x25"
+msgstr "20x25"
+
+#: temp\xrc.cpp:102
+msgid "40x25 (default)"
+msgstr "40x25 (standard)"
+
+#: temp\xrc.cpp:103
+msgid "80x25"
+msgstr "80x25"
+
+#: temp\xrc.cpp:104
+msgid "Color scheme"
+msgstr "Farbschema"
+
+#: temp\xrc.cpp:105
+msgid "Default"
+msgstr "Standard"
+
+#: temp\xrc.cpp:106
+msgid "CPC Loader"
+msgstr "CPC Loader"
+
+#: temp\xrc.cpp:107
+msgid "Print Screen key"
+msgstr "Druck Taste"
+
+#: temp\xrc.cpp:109
+msgid "Folder:"
+msgstr "Verzeichnis:"
+
+#: temp\xrc.cpp:111
+msgid "Author:"
+msgstr "Author:"
+
+#: temp\xrc.cpp:112
+msgid "&Roms"
+msgstr "&Roms"
+
+#: temp\xrc.cpp:113
+msgid "Roms"
+msgstr "Roms"
+
+#: temp\xrc.cpp:116
+msgid "&Screenshot folder"
+msgstr "S&creenshot Verzeichnis"
+
+#: temp\xrc.cpp:118
+msgid "&Maps folder"
+msgstr "&Kartenverzeichnis"
+
+#: temp\xrc.cpp:120
+msgid "&Memory snapshot folder"
+msgstr "Speichera&bbildverzeichnis"
+
+#: temp\xrc.cpp:122
+msgid "S&kin"
+msgstr "Benut&zeroberfläche"
+
+#: temp\xrc.cpp:125
+#: temp\xrc.cpp:126
+msgid "Advanced"
+msgstr "Fortgeschritten"
+
+#: temp\xrc.cpp:127
+msgid "&Options"
+msgstr "Op&tionen"
+
+#: temp\xrc.cpp:128
+msgid "Split screenshots"
+msgstr "Teile Screenshots auf"
+
+#: temp\xrc.cpp:129
+msgid "Show tooltips"
+msgstr "Zeige Werkzeughilfen an"
+
+#: temp\xrc.cpp:130
+msgid "Put title on clipboard"
+msgstr "Setze Titel in Zwischenablage"
+
+#: temp\xrc.cpp:131
+msgid "&Confirmation"
+msgstr "Bestäti&gung"
+
+#: temp\xrc.cpp:132
+msgid "Show pick dialog"
+msgstr "Zeige Auswahldialog"
+
+#: temp\xrc.cpp:133
+msgid "Show exit dialog"
+msgstr "Zeige Beendendialog"
+
+#: temp\xrc.cpp:134
+msgid "&Test"
+msgstr "&Test"
+
+#: temp\xrc.cpp:135
+msgid "Test screenshot"
+msgstr "Teste Screenshot"
+
+#: temp\xrc.cpp:136
+msgid "Input files:"
+msgstr "Eingangsdateien:"
+
+#: temp\xrc.cpp:138
+#: temp\xrc.cpp:151
+#: temp\xrc.cpp:156
+#: temp\xrc.cpp:161
+msgid "Output file:"
+msgstr "Zieldatei:"
+
+#: temp\xrc.cpp:140
+#: temp\xrc.cpp:159
+msgid "Input file:"
+msgstr "Eingangsdatei:"
+
+#: temp\xrc.cpp:142
+#: temp\xrc.cpp:147
+msgid "Output folder:"
+msgstr "Zielverzeichnis:"
+
+#: temp\xrc.cpp:145
+#: temp\xrc.cpp:149
+msgid "Input folder:"
+msgstr "Eingangsverzeichnis:"
+
+#: temp\xrc.cpp:153
+msgid "Download"
+msgstr "Download"
+
+#: temp\xrc.cpp:154
+msgid "Location:"
+msgstr "Ort:"
+
+#: temp\xrc.cpp:155
+msgid "Record range:"
+msgstr "Aufzeichnungsbereich:"
+
+#: temp\xrc.cpp:158
+msgid "Merge"
+msgstr "Verbinde"
+
+#: temp\xrc.cpp:163
+msgid "Sort &Ascending"
+msgstr "Sortiere &Aufsteigend"
+
+#: temp\xrc.cpp:164
+msgid "Sort &Descending"
+msgstr "Sortiere A&bsteigend"
+
+#: temp\xrc.cpp:165
+msgid "Sort"
+msgstr "Sortiere"
+
+#: temp\xrc.cpp:166
+msgid "Customize Fields..."
+msgstr "Felder einrichten..."
+
+#: temp\xrc.cpp:167
+#: temp\xrc.cpp:178
+msgid "&Copy Row"
+msgstr "Kopiere &Reihe"
+
+#: temp\xrc.cpp:168
+#: temp\xrc.cpp:179
+msgid "Cop&y Cell"
+msgstr "Kopiere &Zelle"
+
+#: temp\xrc.cpp:175
+msgid "&Weblink"
+msgstr "&Weblink"
+
+#: temp\xrc.cpp:176
+msgid "&Map..."
+msgstr "&Karte..."
+
+#: temp\xrc.cpp:181
+msgid "&Properties"
+msgstr "Ei&genschaften"
+
+#: temp\xrc.cpp:182
+msgid "Zoom &In"
+msgstr "Verg&rößern"
+
+#: temp\xrc.cpp:183
+msgid "&Zoom..."
+msgstr "&Zoom..."
+
+#: temp\xrc.cpp:184
+msgid "Zoom &Out"
+msgstr "Ver&kleinern"
+
+#: temp\xrc.cpp:185
+msgid "Actual size"
+msgstr "Aktuelle Größe"
+
+#: temp\xrc.cpp:186
+msgid "Protext suite"
+msgstr "Protext Suite"
+
+#: temp\xrc.cpp:187
+msgid "Amsdos"
+msgstr "Amsdos"
+
+#: temp\xrc.cpp:188
+#: ..\..\cpcloadwx\src\cpctext.cpp:21
+msgid "Map"
+msgstr "Karte"
+
+#: temp\xrc.cpp:189
+msgid "Show only games with maps"
+msgstr "Zeige nur Spiele mit Karte"
+
+#: temp\xrc.cpp:190
+msgid "Screen Snapshot"
+msgstr "Bildschirmfoto"
+
+#: temp\xrc.cpp:191
+msgid "Show only games with screenshots"
+msgstr "Zeige nur Spiele mit Bildschirmfotos"
+
+#: temp\xrc.cpp:192
+msgid "Link"
+msgstr "Link"
+
+#: temp\xrc.cpp:193
+msgid "Show only games with web links"
+msgstr "Zeige nur Spiele mit Weblinks"
+
+#: temp\xrc.cpp:194
+msgid "Memory Snapshot"
+msgstr "Speicherabbild"
+
+#: temp\xrc.cpp:195
+msgid "Show only games with memory snapshots"
+msgstr "Zeige nur Spiele mit Speicherabbildern"
+
+#: temp\xrc.cpp:201
+msgid "&More..."
+msgstr "&Mehr..."
+
+#: temp\xrc.cpp:202
+#: temp\xrc.cpp:205
+msgid "Run"
+msgstr "Start"
+
+#: temp\xrc.cpp:203
+msgid "Executable files"
+msgstr "Ausführbare Dateien"
+
+#: temp\xrc.cpp:204
+msgid "Startup command"
+msgstr "Startup Befehl"
+
+#: temp\xrc.cpp:206
+#, c-format
+msgid ""
+"To run \"%s\", type this in the emulator window:\n"
+"|or"
+msgstr ""
+"Um \"%s\" zu starten, geben sie \n"
+"|or in das Emulatorfenster ein"
+
+#: temp\xrc.cpp:207
+#: ..\..\cpcloadwx\src\cpctext.cpp:29
+msgid "Info"
+msgstr "Info"
+
+#: temp\xrc.cpp:209
+msgid "More"
+msgstr "Mehr"
+
+#: temp\xrc.cpp:210
+#: ..\..\cpcloadwx\src\cpctext.cpp:37
+msgid "Screenshot"
+msgstr "Bildschirmfoto"
+
+#: temp\xrc.cpp:211
+msgid "Dir"
+msgstr "Dir"
+
+#: temp\xrc.cpp:212
+msgid "Always show this dialog"
+msgstr "Zeige immer diesen Dialog"
+
+#: temp\xrc.cpp:215
+msgid "Text"
+msgstr "Text"
+
+#: temp\xrc.cpp:216
+msgid "Windows"
+msgstr "Windows"
+
+#: ..\..\code\wx\wxtext.cpp:20
+#: ..\..\code\wx\wxcode.cpp:8426
+#, c-format
+msgid "Do you want to save changes to %s?"
+msgstr "Wollen sie die Änderungen nach %s speichern?"
+
+#: ..\..\code\wx\wxtext.cpp:21
+msgid "Search"
+msgstr "Suche"
+
+#: ..\..\code\wx\wxtext.cpp:22
+msgid "Please type text"
+msgstr "Bitte geben sie Text ein"
+
+#: ..\..\code\wx\wxtext.cpp:23
+#: ..\..\code\wx\wxcode.cpp:3083
+#, c-format
+msgid "Please enter at least %d characters"
+msgstr "Bitte geben sie mindestens %d Zeichen ein"
+
+#: ..\..\code\wx\wxtext.cpp:24
+#: ..\..\code\wx\wxcode.cpp:3084
+#, c-format
+msgid "Please enter no more than %d characters"
+msgstr "Bitte geben sie nicht mehr als %d Zeichen ein"
+
+#: ..\..\code\wx\wxtext.cpp:25
+#, c-format
+msgid ""
+"ERROR:\n"
+"%s requires a more recent version of %s\n"
+"\n"
+"Installed version %d.%02d, required version %d.%02d"
+msgstr ""
+"FEHLER:\n"
+"%s benötigt eine neuere Version von %s\n"
+"\n"
+"Installierte Version %d.%02d, benötigte Version %d.%02d"
+
+#: ..\..\code\wx\wxtext.cpp:26
+#: ..\..\code\wx\wxcode.cpp:2957
+#, c-format
+msgid "Please enter a number between %g and %g"
+msgstr "Bitte geben sie eine Nummer zwischen  %g und %g ein"
+
+#: ..\..\code\wx\wxtext.cpp:27
+#: ..\..\code\wx\wxcode.cpp:2961
+#, c-format
+msgid "Please enter a number greater than %g"
+msgstr "Bitte geben sie eine Zahl größer als %g ein"
+
+#: ..\..\code\wx\wxtext.cpp:28
+#: ..\..\code\wx\wxcode.cpp:2965
+#, c-format
+msgid "Please enter a number less than %g"
+msgstr "Bitte geben sie eine Zahl kleiner als %g ein"
+
+#: ..\..\code\wx\wxtext.cpp:29
+#: ..\..\code\wx\wxcode.cpp:3294
+#, c-format
+msgid "Maximum length is %d"
+msgstr "Maximale Länge ist %d"
+
+#: ..\..\code\wx\wxtext.cpp:31
+msgid "{about}Acknowledgements"
+msgstr "{about}Danksagungen"
+
+#: ..\..\code\wx\wxtext.cpp:32
+msgid "{about}License agreement"
+msgstr "{about}Lizenzabkommen"
+
+#: ..\..\code\wx\wxtext.cpp:33
+msgid "Network Computers"
+msgstr "Netzwerk Computer"
+
+#: ..\..\code\wx\wxtext.cpp:34
+#: ..\..\code\wx\wxcode.cpp:5169
+#, c-format
+msgid "%s: Not implemented"
+msgstr "%s: Nicht Impelementiert"
+
+#: ..\..\code\wx\wxtext.cpp:35
+msgid "True"
+msgstr "Wahr"
+
+#: ..\..\code\wx\wxtext.cpp:36
+msgid "False"
+msgstr "Falsch"
+
+#: ..\..\code\wx\wxtext.cpp:50
+msgid "{key}Up"
+msgstr "{key}Up"
+
+#: ..\..\code\wx\wxtext.cpp:51
+msgid "{key}Down"
+msgstr "{key}Down"
+
+#: ..\..\code\wx\wxtext.cpp:52
+msgid "{key}Left"
+msgstr "{key}Left"
+
+#: ..\..\code\wx\wxtext.cpp:53
+msgid "{key}Right"
+msgstr "{key}Right"
+
+#: ..\..\code\wx\wxtext.cpp:54
+msgid "{key}Escape"
+msgstr "{key}Escape"
+
+#: ..\..\code\wx\wxtext.cpp:55
+msgid "{key}Ctrl"
+msgstr "{key}Ctrl"
+
+#: ..\..\code\wx\wxtext.cpp:56
+msgid "{key}Alt"
+msgstr "{key}Alt"
+
+#: ..\..\code\wx\wxtext.cpp:57
+msgid "{key}Shift"
+msgstr "{key}Shift"
+
+#: ..\..\code\wx\wxtext.cpp:58
+msgid "{key}Space"
+msgstr "{key}Space"
+
+#: ..\..\code\wx\wxtext.cpp:59
+msgid "{key}Insert"
+msgstr "{key}Insert"
+
+#: ..\..\code\wx\wxtext.cpp:60
+#: ..\..\code\wx\wxtext.cpp:71
+msgid "{key}PgUp"
+msgstr "{key}PgUp"
+
+#: ..\..\code\wx\wxtext.cpp:61
+#: ..\..\code\wx\wxtext.cpp:72
+msgid "{key}PgDn"
+msgstr "{key}PgDn"
+
+#: ..\..\code\wx\wxtext.cpp:62
+#: ..\..\code\wx\wxtext.cpp:73
+msgid "{key}Home"
+msgstr "{key}Home"
+
+#: ..\..\code\wx\wxtext.cpp:63
+#: ..\..\code\wx\wxtext.cpp:74
+msgid "{key}End"
+msgstr "{key}End"
+
+#: ..\..\code\wx\wxtext.cpp:64
+msgid "{key}Enter"
+msgstr "{key}Enter"
+
+#: ..\..\code\wx\wxtext.cpp:65
+msgid "{key}Delete"
+msgstr "{key}Delete"
+
+#: ..\..\code\wx\wxtext.cpp:66
+msgid "{key}Back"
+msgstr "{key}Back"
+
+#: ..\..\code\wx\wxtext.cpp:67
+msgid "{key}Num*"
+msgstr "{key}Num*"
+
+#: ..\..\code\wx\wxtext.cpp:68
+msgid "{key}Num+"
+msgstr "{key}Num+"
+
+#: ..\..\code\wx\wxtext.cpp:69
+msgid "{key}Num-"
+msgstr "{key}Num-"
+
+#: ..\..\code\wx\wxtext.cpp:70
+msgid "{key}Num/"
+msgstr "{key}Num/"
+
+#: ..\..\code\wx\wxtext.cpp:75
+msgid "{key}NumEnter"
+msgstr "{key}NumEnter"
+
+#: ..\..\code\wx\wxtext.cpp:125
+msgid "Yesterday|Today|Tomorrow"
+msgstr "Gestern|Heute|Morgen"
+
+#: ..\..\code\wx\wxtext.cpp:148
+msgid "&Minimize"
+msgstr "&Minimieren"
+
+#: ..\..\code\wx\wxtext.cpp:149
+msgid "&Sort by name"
+msgstr "&Nach Namen sortieren"
+
+#: ..\..\code\wx\wxtext.cpp:150
+msgid "&Sort by type"
+msgstr "&Nach Typ sortieren"
+
+#: ..\..\code\wx\wxtext.cpp:151
+msgid "&Sort by date"
+msgstr "&Nach Datum sortieren"
+
+#: ..\..\code\wx\wxtext.cpp:152
+msgid "&Sort by size"
+msgstr "&Nach Größe sortieren"
+
+#: ..\..\code\wx\wxtext.cpp:153
+#: ..\..\code\wx\wxtext.cpp:183
+msgid "&List mode"
+msgstr "&Listenmodus"
+
+#: ..\..\code\wx\wxtext.cpp:154
+msgid "&Details mode"
+msgstr "&Detailmodus"
+
+#: ..\..\code\wx\wxtext.cpp:155
+msgid "&Large icons mode"
+msgstr "&Große Bildermodus"
+
+#: ..\..\code\wx\wxtext.cpp:156
+msgid "&Small icons mode"
+msgstr "&Kleiner Bildermodus"
+
+#: ..\..\code\wx\wxtext.cpp:157
+msgid "&Setup..."
+msgstr "&Einstellungen..."
+
+#: ..\..\code\wx\wxtext.cpp:159
+msgid "&Goto..."
+msgstr "&Gehe zu..."
+
+#: ..\..\code\wx\wxtext.cpp:160
+#: ..\..\cpcloadwx\src\cpctext.cpp:18
+msgid "&Run"
+msgstr "&Start"
+
+#: ..\..\code\wx\wxtext.cpp:185
+#, c-format
+msgid "{filter}%s Files"
+msgstr "{filter}%s Dateien"
+
+#: ..\..\code\wx\wxtext.cpp:186
+msgid "{filter}All Files"
+msgstr "{filter}Alle Dateien"
+
+#: ..\..\code\wx\wxtext.cpp:187
+#: ..\..\cpcloadwx\src\cpctext.cpp:71
+msgid "{filter}Image Files"
+msgstr "{filter}Image Dateien"
+
+#: ..\..\code\wx\wxtext.cpp:188
+msgid "&Always show this dialog"
+msgstr "Zeige immer diesen &Dialog"
+
+#: ..\..\code\wx\wxtext.cpp:189
+msgid "Percent"
+msgstr "Prozent"
+
+#: ..\..\code\wx\wxtext.cpp:190
+msgid "Ready"
+msgstr "Bereit"
+
+#: ..\..\code\wx\wxtext.cpp:191
+msgid "&Zoom"
+msgstr "&Zoom"
+
+#: ..\..\code\wx\wxtext.cpp:192
+msgid "&Font"
+msgstr "&Schriftart"
+
+#: ..\..\code\wx\wxtext.cpp:193
+msgid "&Color"
+msgstr "&Farbe"
+
+#: ..\..\code\wx\wxtext.cpp:194
+msgid "Status"
+msgstr "Status"
+
+#: ..\..\code\wx\wxtext.cpp:195
+msgid "&Website"
+msgstr "&Website"
+
+#: ..\..\code\wx\wxtext.cpp:196
+msgid "{document}untitled"
+msgstr "{document}unbenannt"
+
+#: ..\..\code\wx\wxtext.cpp:197
+#, c-format
+msgid "{confirm}Close %s now?"
+msgstr "{confirm} %s jetzt schliessen ?"
+
+#: ..\..\code\wx\wxtext.cpp:198
+msgid "n/a"
+msgstr "n/a"
+
+#: ..\..\code\wx\wxtext.cpp:200
+msgid "Select a file"
+msgstr "Datei auswählen"
+
+#: ..\..\code\wx\wxtext.cpp:201
+msgid "Select a directory"
+msgstr "Verzeichnis auswählen"
+
+#: ..\..\code\wx\wxtext.cpp:202
+msgid "Choose colour"
+msgstr "Farbe auswählen"
+
+#: ..\..\code\wx\wxtext.cpp:203
+msgid "Choose font"
+msgstr "Schriftart auswählen"
+
+#: ..\..\code\wx\wxtext.cpp:204
+msgid "Input Text"
+msgstr "Text eingeben"
+
+#: ..\..\code\wx\wxtext.cpp:206
+#, c-format
+msgid "Launching %s"
+msgstr "Starte %s"
+
+#: ..\..\code\wx\wxtext.cpp:207
+msgid "Software Update"
+msgstr "Software Update"
+
+#: ..\..\code\wx\wxtext.cpp:208
+msgid "{softwareupdate}Platform|Version|Release|Date||Download"
+msgstr "{softwareupdate}Platform|Version|Release|Datum||Download"
+
+#: ..\..\code\wx\wxtext.cpp:209
+msgid "{softwareupdate}Stable|Beta|Preview|Beta/preview"
+msgstr "{softwareupdate}Stable|Beta|Preview|Beta/preview"
+
+#: ..\..\code\wx\wxtext.cpp:211
+msgid "Newer|Older|Same"
+msgstr "Neuer|Älter|Gleich"
+
+#: ..\..\code\wx\wxtext.cpp:212
+msgid "Failed"
+msgstr "Fehlgeschlagen"
+
+#: ..\..\code\wx\wxtext.cpp:213
+#, c-format
+msgid ""
+"Bad path:\n"
+"\n"
+"%s\n"
+msgstr ""
+"Ungültiger Pfad:\n"
+"\n"
+"%s\n"
+
+#: ..\..\code\wx\wxtext.cpp:214
+msgid "Bad file format"
+msgstr "Ungültiges Dateiformat"
+
+#: ..\..\code\wx\wxtext.cpp:215
+msgid "File not found"
+msgstr "Datei nicht gefunden"
+
+#: ..\..\code\wx\wxcode.cpp:109
+#, c-format
+msgid ""
+"%s requires a more recent version of %s\n"
+"\n"
+"Installed version %d.%02d, required version %d.%02d"
+msgstr ""
+"%s benötigt eine neuere Version von %s\n"
+"\n"
+"Installierte Version %d.%02d, benötigte Version %d.%02d"
+
+#: ..\..\code\wx\wxcode.cpp:2621
+#: ..\..\code\wx\wxcode.cpp:2651
+#: ..\..\code\wx\wxcode.cpp:2657
+#, c-format
+msgid "'%s' is invalid"
+msgstr "'%s' ist ungültig"
+
+#: ..\..\code\wx\wxcode.cpp:2628
+#, c-format
+msgid "'%s' should only contain ASCII characters."
+msgstr "'%s' sollte nur ASCII Zeichen enthalten."
+
+#: ..\..\code\wx\wxcode.cpp:2634
+#, c-format
+msgid "'%s' should only contain alphabetic characters."
+msgstr "'%s' sollte nur Alphabetische Zeichen enthalten."
+
+#: ..\..\code\wx\wxcode.cpp:2640
+#, c-format
+msgid "'%s' should only contain alphabetic or numeric characters."
+msgstr "'%s' sollte nur Alphabetische Zeichen oder Zahlen enthalten."
+
+#: ..\..\code\wx\wxcode.cpp:2646
+#, c-format
+msgid "'%s' should be numeric."
+msgstr "'%s' sollte numerisch sein."
+
+#: ..\..\code\wx\wxcode.cpp:2670
+msgid "Validation conflict"
+msgstr "Überprüfungskonflikt"
+
+#: ..\..\code\wx\wxcode.cpp:4300
+msgid "Please choose language:"
+msgstr "Bitte Sprache wählen:"
+
+#: ..\..\code\wx\wxcode.cpp:7035
+msgid "Unknown"
+msgstr "Unbekannt"
+
+#: ..\..\code\wx\wxcode.cpp:7096
+msgid "Elapsed time:"
+msgstr "Vergangene Zeit:"
+
+#: ..\..\code\wx\wxcode.cpp:7101
+msgid "Estimated time:"
+msgstr "Geschätzte Zeit:"
+
+#: ..\..\code\wx\wxcode.cpp:7106
+msgid "Remaining time:"
+msgstr "Verbleibende Zeit:"
+
+#: ..\..\code\wx\wxcode.cpp:7125
+msgid "unknown"
+msgstr "unbekannt"
+
+#: ..\..\code\wx\wxcode.cpp:7244
+msgid "Done."
+msgstr "Fertig."
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:19
+msgid "Open &Snapshot"
+msgstr "Öffne &Abbild"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:20
+msgid "Web link"
+msgstr "Weblink"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:22
+msgid "{Filter}Filter"
+msgstr "{Filter}Filter"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:23
+msgid "{Filter}Title filter"
+msgstr "{Filter}Title filter"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:24
+msgid "{Filter}Map"
+msgstr "{Filter}Karte"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:25
+msgid "{Filter}Snap"
+msgstr "{Filter}Snap"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:26
+msgid "{Filter}Link"
+msgstr "{Filter}Link"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:28
+msgid "Tree"
+msgstr "Verzeichnisstuktir"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:30
+msgid "Version"
+msgstr "Version"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:31
+#, c-format
+msgid "%s bytes"
+msgstr "%s bytes"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:32
+msgid "All games"
+msgstr "Alle Spiele"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:33
+msgid "Yes|No"
+msgstr "Ja|Nein"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:34
+msgid "Options"
+msgstr "Optionen"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:38
+msgid "{profile}None|File|Registry"
+msgstr "{profile}Keine|Datei|Registrierung"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:41
+msgid "{fmt}Name|Dimension|Modified|Size|Palette|Mask|Alpha channel|Tags|Type"
+msgstr "{fmt}Name|Dimension|Bearbeitet|Größe|Palette|Maske|Alphakanal|Tags|Typ"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:42
+#, c-format
+msgid "{image}%d colors"
+msgstr "{image}%d Farben"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:43
+#, c-format
+msgid "{uploaded}%s by %s"
+msgstr "{uploaded}%s von %s"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:44
+#, c-format
+msgid "{emu}Internal %s"
+msgstr "{emu}(Intern) %s"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:45
+#, c-format
+msgid "Exit to %s ?"
+msgstr "Verlassen und zu %s wechseln?"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:47
+msgid "{col}Title|Company|Year|Language|Type|Subtype|Size|Disks|Files|Title screen|Cheat mode|Protected|CPC Loader format|Problems|Created|Uploaded|Upload date|Upload name|Comments|Short name|Screenshot|Snapshot|Map|Run|Emulator|Weblink|System disk|Author"
+msgstr "{col}Titel|Firma|Jahr|Sprache|Typ|Untertyp|Größe|Disks|Dateien|Titelbildschirm|Cheatmodus|Geschützt|CPC Loaderformat|Probleme|Erstellt|Uploaded|Uploaddatum|Uploadname|Kommentare|Kurzname|Screenshot|Snapshot|Karte|Run|Emulator|Weblink|Systemdisk|Author"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:49
+msgid "{col}Title|Author|Description|Copyright|Comment|Creation Time|Software|File|File time|Format|Size"
+msgstr "{col}Title|Autor|Beschreibung|Copyright|Kommentar|Erstellungszeit|Software|Datei|Dateizeit|Format|Größe"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:50
+msgid "{skin}On|Off|Browse..."
+msgstr "{skin}An|Aus|Blättern..."
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:51
+msgid "{res}Low|High|Higher|Console"
+msgstr "{res}Niedrig|Hoch|Höher|Konsole"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:52
+msgid "{lang}English|French|Spanish|Danish"
+msgstr "{lang}Englisch|Französisch|Spanisch|Dänisch"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:53
+msgid "{dir}Filename|Size|Time"
+msgstr "{dir}Dateiname|Größe|Zeit"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:54
+msgid "{tools}&Go|&Back"
+msgstr "{tools}&Gehe|&Zurück"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:55
+#, c-format
+msgid "{tabs}&Run|T&ools|Pick|Output|Drive %c|Info|Keyboard|More"
+msgstr "{tabs}Start|Werkzeuge|Auswahl|Output|Laufwerk %c|Info|Tastatur|Mehr"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:56
+msgid "{tabs}Screenshot|Loading screen|Map"
+msgstr "{tabs}Screenshot|Ladebildschirm|Karte"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:57
+#, c-format
+msgid "{info}Display name|Internal name|Version|Company|autorun|sna|Drive %c|Fullscreen|Textmode|Model|Keyboard|Video|Profile"
+msgstr "{info}Angezeigter Name|Interner Name|Version|Firma|Autorun|Sna|Laufwerk %c|Vollbildschirm|Textmodus|Modell|Tastatur|Video|Profil"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:59
+#, c-format
+msgid "{tools}Extract %s image|Create %s image|Convert NVG games|Convert NVG maps|Merge TACGR|Explore"
+msgstr "{tools}Extrahiere %s image|Erstelle %s image|Konvertiere NVG Spiele|Konvertiere NVG Karten|Verbinde TACGR|Suche"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:61
+msgid "Text|Background 1|Background 2"
+msgstr "Text|Hintergrund 1|Hintergrund 2"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:62
+msgid "Default|System colors|B/W|White|Custom"
+msgstr "Standard|Systemfarben|S/W|Weiss|Eigene"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:63
+msgid "Default|System|Small|Custom"
+msgstr "Standard|System|Klein|Eigene"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:65
+#, c-format
+msgid "{caption}Categories|Games|%s - Images|%s - Screenshot|%s - Info"
+msgstr "{caption}Kategorien|Spiele|%s - Bilder|%s - Screenshot|%s - Info"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:66
+msgid "{caption}Toolbar"
+msgstr "{caption}Werkzeugleiste"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:67
+msgid "{caption}Internal"
+msgstr "{caption}(Intern)"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:69
+#, c-format
+msgid "The file %s already exists. Overwrite ?"
+msgstr "Datei %s existiert bereits. Überschreiben ?"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:72
+msgid "{filter}Rom Files"
+msgstr "{filter}Rom Files"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:73
+msgid "{filter}CP/M Image Files"
+msgstr "{filter}CP/M Image Files"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:74
+msgid "{filter}Zipped CP/M Image Files"
+msgstr "{filter}Zipped CP/M Image Files"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:75
+msgid "{filter}Zip Archives"
+msgstr "{filter}Zip Archive"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:76
+msgid "{filter}Snapshots"
+msgstr "{filter}Snapshots"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:77
+msgid "{filter}XML Files"
+msgstr "{filter}XML Dateien"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:78
+msgid "{filter}Database Files"
+msgstr "{filter}Datenbank Dateien"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:80
+msgid "{about}Translation"
+msgstr "{about}Übersetzung"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:81
+msgid "{about}Translator"
+msgstr "{about}Übersetzer"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:82
+msgid "{about}Build"
+msgstr "{about}Build"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:83
+msgid "{about}Built"
+msgstr "{about}Built"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:84
+msgid "{about}Compiler"
+msgstr "{about}Compiler"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:85
+msgid "{about}Instance"
+msgstr "{about}Instanz"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:86
+msgid "{about}Installed"
+msgstr "{about}Installiert"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:87
+msgid "{about}File size"
+msgstr "{about}Dateigröße"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:88
+msgid "{about}Roadmap"
+msgstr "{about}Roadmap"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:89
+msgid "{about}Session time"
+msgstr "{about}Sessionszeit"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:91
+#, c-format
+msgid "{error}Internal disk <%s> not found"
+msgstr "{error}Interne Disk <%s> nicht gefunden"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:92
+#, c-format
+msgid "{error}%s requires %s"
+msgstr "{error}%s benötigt %s"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:93
+#, c-format
+msgid "{error}Failed to run %s"
+msgstr "{error}Start von %s fehlgeschlagen"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:94
+#, c-format
+msgid ""
+"{error}Failed to set drive to\n"
+"%s"
+msgstr ""
+"{error}Fehler Laufwerk zu \n"
+" zu setzen%s"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:95
+#, c-format
+msgid ""
+"{error}File is read-only|File not found|Failed to update\n"
+"%s\n"
+"%s"
+msgstr ""
+"{error}Datei ist schreibgeschützt|Datei nicht gefunden|Konnte nicht updaten\n"
+"%s\n"
+"%s"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:96
+msgid "{error}Bad image"
+msgstr "{error}Schlechtes image"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:97
+msgid "{error}Syntax error detected on command line."
+msgstr "{error}Syntaktischer Fehler in Kommandozeile."
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:98
+#, c-format
+msgid "{error}Failed to open folder %s"
+msgstr "{error}Konnte Ordner %s nicht öffnen"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:99
+#, c-format
+msgid "{error}Failed to open file %s"
+msgstr "{error}Konnte Datei %s nicht öffnen"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:100
+#, c-format
+msgid "{error}Failed to create temp dir %s"
+msgstr "{error}Konnte das tempöräre Verzeichnis %s nicht erstellen"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:101
+msgid "{error}There was a problem with printing."
+msgstr "{error}Fehler beim Ausdrucken."
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:102
+msgid "{error}There was a problem with previewing."
+msgstr "{error}Fehler bei der Vorschau."
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:103
+#, c-format
+msgid "{error}Failed to create file %s"
+msgstr "{error}Konnte Datei %s nicht erstellen"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:104
+msgid "{error}Not implemented yet"
+msgstr "{error}Noch nicht implementiert"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:105
+msgid "Failed to launch browser"
+msgstr "Konnte Browser nicht starten"
+
+#: ..\..\cpcloadwx\src\cpctext.cpp:106
+#, c-format
+msgid "{error}%s not supported"
+msgstr "{error}%s nicht unterstützt"
+
+#: ..\..\caprice\src\contrib\src\emuimpl.c:668
+msgid ""
+"{caprice}F1\tToggle Fullscreen\n"
+"F2\tLoad Snapshot\n"
+"F4\tSave Snapshot\n"
+"F5\tReset\n"
+"F6\tLoad Drive A\n"
+"F7\tLoad Drive B\n"
+"F10\tExit\n"
+"PrtScr\tScreenshot\n"
+"Pause\tPause"
+msgstr ""
+"{caprice}F1\tUmschalten Vollbildschirm\n"
+"F2\tLade Snapshot\n"
+"F4\tSpeichere Snapshot\n"
+"F5\tReset\n"
+"F6\tLade Laufwerk A\n"
+"F7\tLade Laufwerk B\n"
+"F10\tExit\n"
+"PrtScr\tScreenshot\n"
+"Pause\tPause"
+
+#: ..\..\cpcloadwx\src\cmdline.cpp:32
+msgid "{cmdline}Show this help message"
+msgstr "{cmdline}Zeige diese Hilfe an"
+
+#: ..\..\cpcloadwx\src\cmdline.cpp:33
+msgid "{cmdline}Tools page"
+msgstr "{cmdline}Werkzeug Seite"
+
+#: ..\..\cpcloadwx\src\cmdline.cpp:34
+msgid "{cmdline}Settings page"
+msgstr "{cmdline}Einstellungsseite"
+
+#: ..\..\cpcloadwx\src\cmdline.cpp:35
+msgid "{cmdline}Menu"
+msgstr "{cmdline}Menu"
+
+#: ..\..\cpcloadwx\src\cmdline.cpp:36
+msgid "{cmdline}CPC Explorer"
+msgstr "{cmdline}CPC Explorer"
+
+#: ..\..\cpcloadwx\src\cmdline.cpp:37
+msgid "{cmdline}Maximize"
+msgstr "{cmdline}Maximiere"
+
+#: ..\..\cpcloadwx\src\cmdline.cpp:38
+msgid "{cmdline}Debug"
+msgstr "{cmdline}Fehlersuche"
+
+#: ..\..\cpcloadwx\src\cmdline.cpp:39
+msgid "{cmdline}Language"
+msgstr "{cmdline}Sprache"
+
+#: ..\..\cpcloadwx\src\cmdline.cpp:40
+msgid "{cmdline}Translate word"
+msgstr "{cmdline}Übersetze Wort"
+
+#: ..\..\cpcloadwx\src\cmdline.cpp:42
+msgid "{cmdline}Input file"
+msgstr "{cmdline}Input Datei"
+

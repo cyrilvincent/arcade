@@ -1,0 +1,53 @@
+2010-06-4 /XavSnap/
+* 2.1.6.1 Windows 32 released.
+* Added the drag'n drop functions.
+* Added the Z81 memory snapshot format. (CTRL+L [load] & CTRL+S[save])
+* Added a sound icon to switch sound card.
+* Added an help icon reminder.
+* Added Bmp printer file support. (1 and 24bits)
+  (refreshed while closing emulator)
+ 
+2010-04-27
+* 2.1.6.1 released
+* Fixed a few issues with the joystick configurator
+
+2010-04-26
+* 2.1.6 released
+* Added a joystick configurator
+* Added fg/bg colour adjustment
+* Added joystick dead zone adjustment
+* Added volume control adjustment
+* Added key repeat delay/interval adjustment
+* Added a runtime options system
+* Replaced the Open Sound System (OSS) code with the SDL API
+* Fixed a couple of bugs
+
+2010-03-24
+* 2.1-5 released
+* Added joystick support throughout with runtime control remapping
+* Added a configuration file to accommodate reconfigurable properties
+* Added control delay/repeating for selected GUI features
+* Applied several graphical and usability tweaks
+
+2010-03-08
+* 2.1-4 released
+* Converted non OSS timing to use a more portable SDL timer
+* Added an icon based control bar with several useful options
+* Added ZX bitmap fonts and a bitmap font engine for future use within
+  the GUI
+* Added Chris Young's AmigaOS4 specific code
+
+2010-02-27
+* 2.1-3 released
+* Added mouse/stylus interactivity to the keyboard with adjustable
+  opacity and autohide on newline
+
+2010-02-17
+* 2.1-2 released
+* Added new keyboard images
+* The renderer now centres the emulator regardless of resolution
+
+2010-02-14
+* 2.1-1 released
+* Initial stable and fully functioning (except OSS sound) SDL port
+  of z81

@@ -80,7 +80,7 @@ class MinitelMenu:
         self.writeln(b"Login : pi")
         self.writeln(b"Mot de passe : raspberry")
         self.close()
-        time.sleep(10)
+        time.sleep(15)
         os.chdir("/home/pi")
         print("Start Linux")
         os.system("bash linux.sh")
@@ -100,11 +100,22 @@ class MinitelMenu:
         print("StarWars")
         self.mode_ta(mode_p=4)
         self.writeln(b"bash starwars.sh")
-        time.sleep(10)
+        time.sleep(15)
         self.close()
         os.chdir("/home/pi")
         print("Start Linux")
         os.system("bash linux.sh")
+        sys.exit()
+
+    def google(self):
+        print("Google")
+        self.mode_ta(mode_p=4)
+        self.writeln(b"Lynx")
+        time.sleep(15)
+        self.close()
+        os.chdir("/home/pi")
+        print("Start Lynx")
+        os.system("./lynx www.google.fr")
         sys.exit()
 
     def ulla(self):
@@ -153,7 +164,7 @@ class MinitelMenu:
             self.writeln(b"Minitel 2024 par Cyril")
             self.writeln(b"======================")
             self.writeln(b"")
-            self.writeln(b"Services disponibles : 3611, 3615 LINUX HELLO STARWARS ULLA ASCII HISTORY GPT")
+            self.writeln(b"Services disponibles : 3611, 3615 LINUX HELLO STARWARS ULLA ASCII HISTORY GPT GOOGLE")
             self.write(b"Numero : ")
             s = self.read_envoi().upper()
             if s.__contains__("EXI") or s == "":
@@ -181,6 +192,8 @@ class MinitelMenu:
                     self.history()
                 elif s.__contains__("GPT"):
                     self.gpt()
+                elif s.__contains__("GOO"):
+                    self.google()
             self.writeln(b"")
 
 if __name__ == '__main__':

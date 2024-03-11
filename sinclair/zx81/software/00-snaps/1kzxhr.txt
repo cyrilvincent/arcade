@@ -1,0 +1,4 @@
+
+1kzxhr.p is a "true" hires demo program for a 1K or 2K ZX81.
+It does not run under the Xtender emulator but it is short
+enough to load into Xtender, LIST and type into to a ZX81. 

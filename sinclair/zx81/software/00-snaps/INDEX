@@ -1,0 +1,103 @@
+
+   *** TSLIB v 1.01 Program info ***
+
+		Note: none of these is copied from Carlo Delhex's
+		library, so please don't think they were, ok?
+		I didn't get his REGISTERED VERSION until about
+		3/27/1994. I may have a couple he has, but I had
+		typed them ALL in. Please see README.NOW for more
+		details and information.				
+
+	These are the programs within this library as of now:
+
+	[File        :  description]
+
+	3WAYPEEK.P	Machine Code viewer in 3 cols. Decimal Values
+	ALLCHG.P	small utility to change screen characters
+	ARTIST.P	lo-res artist (VERY simple)
+	AVOIDER1.P	Avoider v1 - (modified) avoid rubble and get home
+	AVOIDER2.P   	Avoider v2 -     "      same as above, but harder
+	AVOIDER3.P  	Avoider v3 - "    "   " plus ending AND HARDER
+	B-O-T.P   	base of triangle - simple stacks calculator
+	BASE.P   	base, converts numbers from decimal to base #
+	BATLSHIP.P  	Battleship (modified) sink then before they sink you
+	BIGCHAR.P 	produces LARGE type from string input, sample given
+	BIKERIDE.P  	(broken) a bike ride thru twists and turns
+	BILLBORD.P	produces a 'scrolling sign' effect from input text
+	BINGO.P      	Bingo Number Generator (modified)
+	BIO.P     	Biorhythm, 'ups and downs of life' chart
+	BLAKJACK.P   	The game of Black Jack! (modified)
+	BOARD.P      	a sample game board, for kicks
+	BOWL.P       	TS-Bowl, - Bowling with scoring
+	BRKOUT.P    	Break Out, the 4K version
+	CAL-PRT.P   	Calendar Printer, not perfect at all
+	CARPET.P     	a pattern generator, weave patterns
+	CHAIR.P   	an example of simple graphics
+	CHI.P     	One of the three programs from STATISTICS tape
+	CHKBK.P  	Simple checkbook program
+	CHOPPER.P  	hidden 'chopper', Where is he?
+	CHR.P      	character effects
+	CLR-TEST.P   	an example of shading
+	DOTGAME.P    	'just for kicks' piece of programming
+	CONCEN.P     	Concentration, a game of memory ...
+	DECP.P       	DECIMAL POINT utility to line up numbers
+	DEPREC.P    	Money Analyser II, Depreciation program
+	DOGS.P     	Bet on the Dogs! 
+	DOLIVES.P    	Days of our lives (how long do we have?)
+	DOT.P       	a 'rendom' screen display 
+	DOTS3.P     	another 'random' display
+	DOTS2.P      	another 'random' display
+	DOTS1.P      	and still another 'random' display
+	DOTPTN.P     	a screenful of reverse dots 'instantly'
+	ENIGMA.P    	The Enigma Coder, a cipher program
+	EXAM.P      	Exam Analysis program for teachers or students
+	GDHABITS.P  	Good Habits text
+	GRAPH.P     	a scientific/statistical graph program STATISTICS
+	GREYS.P     	another 'shading' example
+	HANGMAN.P   	a TWO player Hangman game
+	HORSES.P    	A Day at the Horseraces: which will win - SCORING
+	HOMEACCT.P  	a Home Accounting/Budgeting program
+	HEXPEEKR.P  	Hex Peeker, machine code 'viewing' program
+	HEXENTRY.P  	M/C entry program in DECIMAL with REM statement
+	HAYDN.P     	Don't get trampled on game
+	KALEIDO.P   	a kaleidoscope-like display
+	LABELS.P    	simple labels for envelopes (printer doesn't work w/xtender)
+	LANDER.P 	Lunar Lander, test your skill in landing a LEM on the moon
+	MLIFE.P    	Mirror Life, Conway's game of life with 'mirrored' cells
+	MENACE.P    	'avoid the nasties' game, collision detect doesn't work
+	MEMORY.P   	a memory game, seems too fast for me ... (U-FIX)
+	MEMLEFT.P   	use to keep track of memory left in computer
+	MEM-TEST.P  	test to see how much RAM you have
+	MAZE.P      	3-d Maze by J.K. Grey - find the GOLD and the EXIT
+	LIFE.P      	Conway's game of life, randomized
+	PRESENT.P    	Present Worth Comparison, something from Money Analyser II
+	PLOT1.P     	another 'screen display' 
+	PERPETUA.P   	still another 'screen display'
+	PATTERNS.P   	random 'wall-to-wall' carpets
+	MOUNTNS.P    	mountain peaks
+	PYRAMID.P    	pyramid and a SURPRISE
+	RANK.P        	a Banking program
+	RENUMBER.P  	'renumber' your programs without tedious retyping
+	RETURN.P    	Rate of Return Analasys (Money Analyser II)
+	SCROLLX.P   	example of scrolling for display
+	SCRLTEST.P   	another 'scrolling' display
+	RVRSSTR.P    	a way to print a 'reverse video string'
+	RUNTEST.P    	simple test for your emulator/T/S-1000
+	ROULETTE.P   	Russian Roulette, Hartnell (modified)
+	SHUTTLE.P    	simple space shuttle with 'ARTIST' program
+	SINEWAVE.P  	sinewave display - a bit rough
+	SLOT.P        	Slot MAchine from The Gambler tape
+	SOLIDSIN.P  	a solid sinewave plot - rough but useful
+	SPC-TAXI.P   	Space-Taxi, GREAT GAME (MUCHO modified!) Try it!!!
+	TEST-KBD.P   	Keyboard read/test via peek
+	T2.P         	simple 'fill screen'
+	SUPRMIND.P   	Supermind, match wits with computer. Game Bag II
+	STAT.P       	Statistics program STATISTICS
+	STARS.P    	random stars display/clears randomly FULL SCREEN 24lns
+	SQUARES.P    	random squares plot, kinda slow
+	TEST.P       	'just a test' ...
+	TRAPPED.P   	destroy the wall or be crushed to death, like newotnik
+	TUGBOAT.P  	a simple tugboat drawing
+	TWISTER.P       stay on the track and keep driving
+	UFO.P         	blow away the UFO's ...
+	WUMPUS.P	Hunt the Wumpus (modified) Don't fall down the pit ...

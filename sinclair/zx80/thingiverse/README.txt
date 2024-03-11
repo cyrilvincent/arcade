@@ -1,0 +1,1 @@
+Sinclair ZX80 Case by alvaroalea on Thingiverse: https://www.thingiverse.com/thing:1880449

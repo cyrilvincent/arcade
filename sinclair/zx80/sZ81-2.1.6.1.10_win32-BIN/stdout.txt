@@ -1,0 +1,1 @@
+Reading from C:/Users/conta/git-CVC/Retro/git-retro/sinclair/zx80/sZ81-2.1.6.1.10_win32-BIN/data/sz81rc.txt

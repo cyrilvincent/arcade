@@ -1,0 +1,30 @@
+CPC Loader. The CPC emulator frontend. Version 2.6
+Copyright © 2003-2010 Troels K
+This program is freeware. See license agreement below.
+
+Abstract: 
+---------
+1. CPC Loader serves as a user-friendly frontend for a number of Amstrad CPC emulators
+2. It also introduces a new method of storing CPC programs that makes using them easier for the end user
+3. It provides a special explorer view of CPC programs, inspired by the MAME32 frontend
+
+Requirements: Runs on Windows® NT/2000/XP/Vista/7.
+
+Website: http://cpcloader.trak.dk
+
+License agreement
+-----------------
+
+By running the cpcload.exe file you, the user, agree to the following terms 
+and conditions as layed out by me, the author:
+
+1) Copying the software: The software, as freeware, maybe reproduced,
+copied, uploaded, e-mailed and redistributed for non-commercial 
+purposes.
+
+2) Warranty: This software comes with no warranty of any kind and is
+provided as is. In the unlikely event of any damage caused to either
+software or hardware the author cannot claim any responsibility nor
+is he obliged to provide any support in the case of such an incident.
+
+2010-03-11

@@ -1,0 +1,4 @@
+For submission to pub/sinclair/snaps/zx81
+Here's a program I wrote long ago...a typical shoot-em-up game
+Zipped with PKZIP 1.1
+David Gonzales (dgonzal@microsoft.com)

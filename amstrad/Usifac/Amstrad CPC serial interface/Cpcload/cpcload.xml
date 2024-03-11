@@ -1,0 +1,69 @@
+<!--
+CPCLOAD.XML
+===========
+
+CPCLOADER VERSION 2 STATIC READONLY PROFILE FILE. 
+CPCLOADER NEVER WRITES TO THIS FILE.
+EDIT WITH TEXT EDITOR. 
+
+Supported emulators:
+arnold   
+caprice (not running off cdrom)
+cpce
+javacpc (not running off cdrom)
+cpcemu
+winape (not running off cdrom)
+wincpc (not running off cdrom)
+caprice-int
+arnold-int
+
+-->
+
+<cpcload version="1.0">
+
+<computer name="Amstrad CPC464" image="cpc464.jpg" link="http://en.wikipedia.org/wiki/CPC_464"/>
+
+<default>
+   <emulator default="caprice-int">
+      <arnold  path="..\emulator\arnold\arnold.exe"      />
+      <caprice path="..\emulator\caprice\caprice32.exe"  />
+      <cpcemu  path="..\emulator\cpcemu\cpcemu.exe"    />
+      <cpce    path="..\emulator\cpce\cpce95.exe"        />
+      <javacpc path="..\emulator\javacpc\javacpc.exe"    />
+      <winape  path="..\emulator\winape\winape.exe"      />
+      <wincpc  path="..\emulator\wincpc\wincpc.exe"      />
+   </emulator>
+   <drive>
+      <a path="..\"     />
+      <b path="..\disc" />
+   </drive>
+   <explorer
+      path     ="..\"
+      snappath ="..\snap"
+      mappath  ="..\maps"
+      path_sna ="..\sta"
+      title    ="CPCGamesCD"
+      website  ="http://cpcgamescd.amstrad.es"
+      skin     ="skin.png"
+      split    ="2"
+   />
+</default>
+
+<map>
+<type>
+Text Adventure Game=Text Adventure
+</type>
+</map>
+
+<menu caption="Amstrad CPC">
+<!-- not implemented in cpcloader2 yet -->
+   <item label="CPC Explorer"  path="cpcexplorer"              />
+   <item label="CPC Loader"    path="cpcloader"                />
+   <item label="CPCEMU"        path="..\cpcemu\cpcemu.exe"   />
+   <item label="Arnold"        path="..\arnold\arnold.exe"     />
+   <item label="WinAPE"        path="..\winape\winape32.exe"   />
+   <item label="CPCE"          path="..\cpce\cpce95.exe"       />
+   <item label="Caprice"       path="..\caprice\caprice32.exe" />
+</menu>
+
+</cpcload>

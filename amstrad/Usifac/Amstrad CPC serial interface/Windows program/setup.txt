@@ -1,0 +1,6 @@
+
+115200
+192.168.1.37
+1000
+C:\Users\conta\git-CVC\Retro\git-retro\amstrad\Usifac\Amstrad CPC serial interface\Windows program
+C:\Users\conta\git-CVC\Retro\git-retro\amstrad\Usifac\Amstrad CPC serial interface\Windows program
