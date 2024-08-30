@@ -107,6 +107,17 @@ class MinitelMenu:
         os.system("bash linux.sh")
         sys.exit()
 
+    def badapple(self):
+        print("Bad Apple")
+        self.mode_ta(mode_p=4)
+        self.writeln(b"bash badapple.sh")
+        time.sleep(15)
+        self.close()
+        os.chdir("/home/pi")
+        print("Start Linux")
+        os.system("bash linux.sh")
+        sys.exit()
+
     def google(self):
         print("Google")
         self.mode_ta(mode_p=4)

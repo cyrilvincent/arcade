@@ -1,0 +1,3 @@
+zpmsys : boot CPM + rapide mais non original
+cpmadd et cpmxtra : disk non bootable
+c128-cpm.system..622* : cpm 3 bootable

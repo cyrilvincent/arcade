@@ -1,0 +1,2 @@
+castool fonctionne en 2400 bauds
+caslink fonctionne en 112 uniquement pour les .bas
