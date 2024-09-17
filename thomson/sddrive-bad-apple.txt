@@ -1,0 +1,11 @@
+============================
+BAD APPLE pour SDDRIVE
+by Samuel Devulder
+============================
+
+Sddrive-bad-apple-2018 fonctionne avec les premières versions de SDDRIVE jusqu'à décembte 2020.
+Sddrive-bad-apple-2021 fonctionne avec les dernières versions de SDDRIVE depuis juillet 2018.
+ 
+
+
+

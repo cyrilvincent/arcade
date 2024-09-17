@@ -1,0 +1,145 @@
+    
+     SWIV - MANUAL
+
+
+ SCENARIO
+
+SWIV - Choose between a Helicopter Gunship or an armoured jeep and prepare
+to enter enemy territory as part of the elite assault team of SPECIAL
+WEAPONS INTERDICTION VEHICLES. Battle against enemy copters, tanks,
+submarines, hovercraft, snowmobiles, mechanised flying fish, giant weapons
+installations and much more in this vertically scrolling shoot 'em up.
+But beware, the enemy are armed with the latest deadly weaponry including
+the lethal SILKWORM IV homing missile.
+
+S.W.I.V. - SECRET WEAPONS INSTALLATION VERIFICATION
+Primary objective: Verify existence of the enemy's secret weapons
+installations and destroy them.
+
+S.W.I.V. - SPECIAL WEAPONS INTERDICTION VEHICLES
+Secondary objective: Interdiction mission: the destruction by military
+forces of all enemy units.
+
+S.W.I.V. - SILKWORM IV
+Mission warning: Use extreme caution. Enemy units are armed with deadly
+weaponry, including the enhanced SILKWORM IV homing missile.
+
+
+STATUS LINE
+
+The status line on the top of the screen will show you the following:
+- number of lives remaining (in front of the heart symbol)
+- number of bullets fired with each shot (in front of the star symbol)
+- your current score
+
+
+LIVES, CREDITS, TOKENS, SHIELDS
+
+You start the game with 4 lives. A new life will be awarded when your score
+breaks the 100,000 mark and at several score marks later on in the game.
+
+You have 2 credits when you start a new game. When you loose all your lives
+you may press fire to continue the game from where you just died. Note that
+your score will be reset to zero when you do so. You may repeat this
+procedure one more time until it's "Game Over".
+
+Destroy the "Goose Copter" and collect the tokens it drops after it has
+been destroyed. Shoot the tokens to transform them into weapon upgrades.
+For each 5 tokens you collect your vehicle will be upgraded to give you
+more firepower, i.e. the default number of bullets fired with each shot
+will increase.
+Note: if you shoot long enough on a token, it will transform into a star
+symbol. Pick it up for a surprise.
+
+There's a special enemy installation that will release a shield when you
+destroy it. Either pick up the the shield and use it to protect yourself
+from enemy fire for some time, or shoot repeatedly at the shield bubble for
+a smart bomb.
+
+
+CONTROLS
+
+SWIV can be played using Joystick or Keyboard. The standard settings are:
+
+Helicopter:     Joystick Port 2
+Jeep:           Keyboard
+
+To change the standard settings press the 'HELP' key to go to the control
+selection screen. Use F1 to F3 to change Helicopter controls. Use F6 to F8
+to change Jeep controls.
+
+JOYSTICK
+Move joystick to control vehicle, button to fire. Hold down fire to lock
+Jeep gun in the direction it is facing.
+
+KEYBOARD
+CURSOR keys - control vehicle
+SHIFT       - fire
+              Hold down fire to lock Jeep gun in the direction it's facing.
+ALT         - jump (Jeep only).
+
+
+GENERAL CONTROLS:
+P    - Pause/Unpause game
+ESC  - Abort game
+HELP - Control selection screen
+
+
+
+
+SWIV - HINTS
+
+
+GOOD GOODIES
+
+The only source of upgrades is the giant Goose Copter. Unfortunately it
+doesn't give them up without a fight. It can only be destroyed by pumping
+its body full of plasma - but because the head and side-wings are in the
+way this can ce rather tricky. Having wide-beam fire helps, but probably
+the best way to deal with the Goose is to collect a shield (assuming
+there's one nearby) and just plonk yourself inside its body, all guns
+blazing.
+Of the two beam adjuster upgrades, the wide-beam one is the best -
+especially for shooting ships that fire down screen because it means you
+don't have to get in line with them to kill them.
+
+
+MESSING WITH THE BIG BOYS
+
+They are four major guardians at various points in the game. Here's how to
+deal with them:
+
+GIANT PULSE LASER
+This monster appears towards the end of the desert stage. Assuming you've
+got wide-beam fire, position yourself to the left of the laser barrel so
+your missiles are hitting both the gun and the small doorway beside it.
+Pump away, destroying the missile-firing tank that trundles out of the
+doorway. The laser fires three times then pauses. Use this time to move to
+the right-hand side of the laser and continue blasting away. Repeat until
+the cannon erupts in flames!
+
+SHIELDED LASER EMPLACEMENT
+This Mother of all lasers is made up of three individual turrets, and turns
+up towards the end of the dead forest. The lasers are only vulnerable when
+the glass domes over them peel back - trouble is, this only accures when
+they're about to fire! On top of that there are two small turrets that
+periodically spew tiny bullets in the players direction. Concentrate on
+destroying these first. The big lasers themselves are not actually the
+problem. Again, wide-beam firing is vital here.
+
+SLIDE LASER
+This, the hardest guardian, crops up near the end of the ice zone. It
+trundles left and right - fast - and rains the plasma down the screen. In
+addition, green blobs leach out from the walls and head in the players
+direction. The trick is to keep moving horizontally so that you're always
+either just ahead or just behind the laser turret. Keep firing - with
+wide-beam you should hit it, and the firing also destroys any approaching
+blobs. Eventually the laser should give up the ghost.
+
+THE FINAL GUARDIAN
+This big fella appears towards the end of final stage of the game, but
+doesn't actually cause the player any trouble until it has docked with its
+main body. There are no hard and fast rules for dealing with this one -
+just keep blasting away, dodging the myriad bullets until the inevitable
+happens. But the game's not over yet - you'll see why when you get there!
+

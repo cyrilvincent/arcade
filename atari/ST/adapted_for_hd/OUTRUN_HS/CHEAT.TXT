@@ -1,8 +1,0 @@
-Type in STARION whilst playing the game then select any of the following codes:
-
-B - Gives extended play
-Q - Gives you info about the program
-T - Adds ten seconds to your time
-S - Takes you through the locations
-D - Saves the screen in DEGAS format
-x - crashes the computer!

@@ -5,9 +5,6 @@ Cyril Vincent : un GRAND BRAVO à OrionSoft pour avoir créer cette carte et sur
 Driver v1.2c by OrionSoft 2020
 http://orionsoft.free.fr/
 
-This driver will hook up to the Xbios hard disk drive routines to simulate a GEMDOS drive showing the content of an SD Card.
-So you can read and write the SD card from the GEM desktop.
-
 This driver will let the TOS process the file system, so you will be restricted to TOS limits with a FAT16 file system of less than 32 Mbytes.
 If you want to use a bigger partition on your SD card up to 2Gbytes, you need to start the utility "bigdos.prg" before the SD driver.
 
