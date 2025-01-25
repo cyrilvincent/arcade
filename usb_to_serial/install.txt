@@ -1,0 +1,15 @@
+Prolific PL2303TA USB to Serial Windows 11 Problem
+First, uninstall the driver that you have installed now. Right-click the PL2303TA DO NOT SUPPORT WINDOWS 11 OR LATER, PLEASE CONTACT YOUR SUPPLIER and click Uninstall device.
+Then check the box “Attempt to remove the driver for this device” and click Uninstall. Please refer to the below image.
+PL2303TA Windows 11 Problem Solution
+PL2303TA Windows 11 Problem
+Once you uninstall the driver, now download the file PL2303_Prolific_DriverInstaller_v1_12_0.zip and extract it.
+Right-click the PL2303_Prolific_DriverInstaller_v1.12.0.exe and Run as administrator. Please refer to the below image.
+PL2303TA Windows 11 Driver
+PL2303TA Windows 11 Driver
+After the installation, now you can see the COM port number in the device manager. Please refer to the below image.
+Prolific USB-to-Serial Communication Port
+
+Now you are good to go. You can use the USB-to-Serial converter for your project now.
+
+Please refer to the below video explanation for a better understanding-

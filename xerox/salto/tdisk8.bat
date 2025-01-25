@@ -1,0 +1,1 @@
+@salto disks\tdisk8c.dsk

@@ -1,0 +1,3 @@
+SDL_SetVideoMode(614,842,32,0x11) ok
+select unit:1 head:0
+select unit:0 head:0

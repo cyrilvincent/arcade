@@ -1,0 +1,5 @@
+login:raspberry
+pwd:pi
+Installation pcem : https://doc.ubuntu-fr.org/pcem
+Nécessite un GUI
+CTRL-ALT-PAGE DOWN pour sortir de fullscreen

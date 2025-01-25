@@ -1,0 +1,27 @@
+Emulation notes:
+
+Executive:
+? - lists all files in the directory.
+*.run? - lists all run files (executable) in the directory.
+type [filename] - types a text file to the screen.
+filestat [filename or wildcard] - shows file attribute details.
+copy [destination] [source] - note that source/dest are reversed!
+release - prints the executive release date. 
+bootfrom [filename] - runs .boot files.
+
+Bugs:
+The mouse cursor shakes.
+Garbage sometimes appears on the screen.
+Does not write back to the disk images.
+Ethernet emulation is not implemented.
+
+Requirements:
+Requires a three button mouse. 
+Mouse buttons are referred to as 1:Red 2:Yellow 3:Blue.
+Needs a screen resolution that is more than 800 pixels tall. 
+Requires Windows 95, Windows NT, or higher.
+
+Note: Run Astro-roids and Glaxian using the "bootfrom" command. 
+
+Note: Changed the keymap file so the "-" key works.
+Note: Converted tdisk8 image to work with SALTO. SALTO disks use reverse words.

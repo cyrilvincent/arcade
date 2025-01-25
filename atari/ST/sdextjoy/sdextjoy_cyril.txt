@@ -1,9 +1,7 @@
 SD card driver for the Atari STe extended Joystick Port A
 
 Cyril Vincent : un GRAND BRAVO à OrionSoft pour avoir créer cette carte et surtout le driver
-
-Driver v1.2c by OrionSoft 2020
-http://orionsoft.free.fr/
+Driver v1.2c by OrionSoft 2020 : http://orionsoft.free.fr/
 
 This driver will let the TOS process the file system, so you will be restricted to TOS limits with a FAT16 file system of less than 32 Mbytes.
 If you want to use a bigger partition on your SD card up to 2Gbytes, you need to start the utility "bigdos.prg" before the SD driver.
@@ -32,16 +30,6 @@ Joystick Port Pin | SD card breakout board Pin
 The speed of this driver on a standard Atari STe 8mhz is about 20kbytes/s.
 It's not possible to go higher than 26kbytes/s due to the fact that we retrieve the data from the SD card bit per bit
 
-Disque Dur Atari STE / Falcon basé sur une carte SD : SDExtJoy
-Permet d'avoir 4 partitions de 32Mo
-Permet d'avoir 1 partition de 2Go avec Bigdos (fourni)
-D'après l'énorme travail de Cédric Orion (orionsoft.free.fr) qui a créé le driver
-Cet émulateur de disque dur pour Atari STE / Falcon contient :
-- Un lecteur SD
-- 1 câble de connexion à connecter au port Joystick A par 6 pins dupont
-- 1 carte sd partitionnée et formatée remplie de jeux optimisé pour les HD (3 x 32Mo) et le .st du driver pour les goteks
-- 1 disquette driver
-- 1 documentation papier
 Attention ne fonctionne que sur STE et Falcon, ne fonctionne pas sur STF, TT
 Testé personnellement sur 2 STE 1Mo et 2 STE 4mo, jamais testé sur Falcon, je n'en ai hélas pas!
 Voici la liste des bugs que j'ai pu découvrir (en + de ceux du forum):
@@ -50,7 +38,4 @@ Voici la liste des bugs que j'ai pu découvrir (en + de ceux du forum):
 - Lors d'un hard reboot : erreur, fonctionne ensuite lors du soft reboot suivant : systématiquement sur 1 STE / 4 et souvent sur un autre
 - Avec le driver disquette, sur certains vieux lecteurs, le driver est corrompu et ne boot pas, ce bug n'existe pas en version gotek ni sur des lecteurs de PC modifiés pour ST
 - Apparition de l'abeille : après quelques lectures, l'icône abeille apparait et il faut rebooter : sur 1 STE sur 4 aléatoirement
-Comme vous pouvez le voir, il faut un peu s'y connaitre pour l'utiliser
-C'est un produit en développement, qui m'a demandé des heures de tests et ce n'est rien par rapport au travail d'OrionSoft, il n'y a donc aucune garantie, mais j'accepte les retours
-Toute la documentation est sur le forum SDExtJoy : www.atari-forum.com/viewtopic.php?t=39022
 
