@@ -1,0 +1,13 @@
+Microsoft MS-DOS 3.30 [Amstrad PPC512] (3.5-720k)
+Released in 1988 by Amstrad
+For the Amstrad PPC512/PPC640 Computers
+
+This archive contains images of the two system disks that were
+originally supplied with the PPC 512 and PPC640. Disk 1 contains MS-DOS
+3.3 and a copy of the "Organizer" program while disk 2 contains the
+"Mirror" communication software that was designed for use with the modem
+built into the PPC640.
+
+Source: http://oldcomputer.info/portables/ppc512/index.htm
+
+

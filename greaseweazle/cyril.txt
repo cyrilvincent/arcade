@@ -1,0 +1,8 @@
+Tuto : https://github.com/keirf/greaseweazle/wiki/Yann-Serra-Tutorial
+Utilisation de HxCFloppyEmulator / Analyze pour déterminer le décalage entre les 2 têtes
+	Il faut lire le disque et l'éditer avec HxCFloppyEmulator, puis aller dans Analyzer puis sélectionner 	une piste par exemple la 20, il faut sur chaque face que le trackId==20
+Les lecteurs 3" nécessitent 12v ainsi que la majorité des 5.25 et un ampérage > 2A
+Ouvrir le jumper 5v si alim externe
+Les vieux 5.25 et 8" RPM=360, Atari 810 ou 1050 RPM=288 sinon 300
+
+
