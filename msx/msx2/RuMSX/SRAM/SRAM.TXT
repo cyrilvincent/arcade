@@ -1,0 +1,22 @@
+This directory is intended to store persistent data like:
+
+GMASTER2.DAT => Konami Game-Master 2 SRAM
+PAC.DAT      => Panasonic (FM-)PAC SRAM
+KOEI.DAT     => Koei games SRAM
+
+
+Notes:
+
+If the "My MSX" folder is not installed this data is
+located in "%APPDATA%\Lex Lechz\RuMSX\SRAM"
+(applies to RuMSX v0.80 and later versions).
+
+If the "My MSX" folder is installed this data is located
+within "My MSX\Settings and data\RuMSX SRAM".
+
+Windows 9x: this data is located in the "SRAM"
+subdirectory of the RuMSX-installation folder.
+
+Windows Vista / Server 2008 and later:
+if file-system virtualization is disabled and "My MSX"
+is not enabled attempts to save SRAM data may fail!

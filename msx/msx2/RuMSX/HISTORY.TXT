@@ -1,0 +1,1143 @@
+RuMSX history:
+--------------
+
+V0.84: (WIP)
+- Background color 0 on MSX1 was mistakenly adjusted
+  for (unavailable) superimpose.
+- CAS: Debug output improved
+- Fixed ROM-Type detection for ROMs < 64KB (8K-48K).
+  E.g. "Star Blazer" was recognized as "Chakkari Copy"
+- Arabic layout of toolbar and statusbar was incorrect.
+- Disk-, Tape- and Rom-Images can now also be changed
+  using drag & drop, in the "Change Media" dialog tabs.
+- Added write-byte command to debugger (for cheat, ...)
+- Fixed POINT operation in V9938 specific screen modes.
+  (returned color was previously always 0)
+- Extended FullScreen-Zoom modes with "stretch".
+- Added a "Edit" -> "Paste" function for text.
+  Because "Edit" uses the shortcut "E" the
+  "Emulation" menu now uses the shortcut "M".
+  Paste is usually available, except
+  in the following cases:
+  + RuMSX is paused (e.g. for debugging)
+  + The clipboard does not contain text
+  + Paste of large content is still in progress - or
+    a program (e.g. a game) does not process the text.
+  + The MSX keyboard-buffer is invalid
+    (e.g. during boot or corrupted by some programs)
+- Video Computer did not display the error for the
+  "Microsoft WDM Image Capture (Win32)" driver.
+- SET SCREEN and SET BEEP documentation was missing
+  in help index (could only be found in search tab)
+- Optimization of internal debugger (write to file)
+
+V0.83:
+- HALTED RuMSX instances did not immediately stop,
+  if termination was attempted by using Windows TaskBar.
+- Accessing missing A: or B: drive now results in the correct error
+  "The system cannot find the drive specified."
+- Fix for ASCII16-Mapper:
+  "Vaxol" writes to invalid memory locations, which are now excluded.
+- Added new "ASCII MegaROM (ASCII/16 KByte) V2" ROM-type.
+  Most copies of the "Andorogynus" ROM are using the ASCII/16K-mapper.
+  But a few copy copies require this special ROM-type, with switching
+  address &H8000.
+- Added new "ObsoNET" ROM-type (experimental)
+- TMS9918A EC bit was mistakenly ignored
+  (MSX1 could not shift sprites 32 pixels to the left)
+  (e.g. affected "Actman" in MSX1-mode)
+- Fixed incorrect debug-message "Virtual error reading drive",
+  even if there was no read-error (but an error-file is present)
+- VDP IE1 interrupt-flag is reset on read, even if IE1 is disabled
+  Working (again): F-Nano 2, The Haunted Demo, ...
+  (Bug was new since RuMSX v0.41)
+- YM3802 operations always wrote debug-output to the console.
+  (Fix improves performance of MIDI commands)
+- Philips Music Composer was frozen in main-menu,
+  due to missing ADPCM-interrupt.
+- Added experimental support for extended DSK file format
+  (using 128 Byte header and additional ending-block,
+  often used in games from www.msxgamesbox.com)
+- Improved support for DDI-images.
+  (now more DDI file-formats are supported)
+- Fixed SCC+ ROM/RAM mapper.
+- Fixed "Tape", "A:" and "B:" buttons:
+  Incorrect Tab was selected if number of disk-drives was not 2.
+  Example, if a 2nd DISK.ROM was mounted.
+- Improved autodetect for many classic Konami games with SCC/SCC+
+  with size of 40KB
+  (e.g. Antarctic Adventure SCC/SCC+)
+- Improved autodetect for Disk-To-ROM games with size of 48KB
+  (e.g. Confused?, Donkey Kong, Spy Vs Spy II)
+- Fixed autodetect of Zoids [ASCII/16 KByte, switch address $77F8]
+- Extended ROM-Database:
+  + Alien Syndrome [ASCII/16 KByte]
+  + Andorogynus [ASCII MegaROM (ASCII/16 KByte) V2]
+  + Harry Fox MSX Special [Hydlide 2]
+  + Harry Fox Yki No Maoh [Snow Demon King + patched ASCII/16 KByte]
+- Improved autodect for some versions of the following ROMs:
+  + Aliens 2 (Zemina)
+  + Barbarian
+  + Bat Man
+  + Darwin 4078
+  + Druid
+  + Fishing Freak
+  + Humphrey
+  + Mon Mon Monster
+  + ObsoNET (experimental)
+  + Strategic Mars
+  + Syougun
+  + XYZ / Zukkoke Yajikita Onmitsudoutyuu
+- Added experimental Dir-as-Disk feature (for MSX-DOS 1).
+  Do not (yet) use together with SCSI or IDE controllers.
+- When restoring a save-state "Sprites disabled" mode
+  was sometimes not restored.
+- When switching to MSX1 configuration sprites were
+  sometimes permanently invisible.
+- Pending SCSI configuration changes were not fully applied on reboot.
+- Detection of transparent sprites was mistakenly detected.
+  "Labirint" is now working (without cheat).
+- Fixed bug in debug-log of memory mapper,
+  sometimes refering to the wrong slot.
+
+V0.82:
+- Improved Epson printer emulation. Chakkari Copy can now
+  print on emulated Epson JP-80 and SP-80 printers.
+- SRAM of "Koei" and "ASCII/8k" cartridges was not saved
+  in SaveState file.
+- Added "Hydlide 2" ROM-type and ROM-database entry.
+- Internal build error in V0.81 may have caused load-errors
+  of resource libraries (e.g. Spanish translation).
+- Missing Control-Panel label in Chinese translation.
+- Minor updates in Help (Error-codes, CALL BC)
+- MSX Control-Panel activation mistakenly paused RuMSX if
+  "Save CPU" option was enabled.
+- Added "Printer form feed" command in menu,
+  to flush pending print-pages without need to change
+  the printer or close RuMSX.
+- Added PI-40 (color)printer emulation for use with
+  "Game Master" and "Chakkari Copy".
+- Improved rendering-speed of printed PDF documents.
+  Note: "Microsoft Print to PDF" should prefered to
+  "FreePDF", because FreePDF reports a too small printing
+  area (this is why pages are printed smaller than on
+  real printers).
+- Fixed MSX2+ SoftBoot (includes unpatch of MSX2PEXT.ROM)
+- Fixed help for "Chakkari Copy" CALL statements:
+  BPRINT, PAUSE, SCHANGE
+- Added exclusive command-line parameters BoostCount and
+  BoostSeconds to temporary boost the MSX startup process.
+  Examples: /BoostSeconds:5 or /BoostCount:250
+- Added documentation of MSX TAPE I/O, thanks to Jose Manuel
+- Bugfixes and improvements in "MSX-host demo.dsk"
+- Improved MSX-HOST interface:
+  Interface version 1.1 now supports profiling and shutdown.
+  Full featuring ROM is the MSX-HOST.ROM version 1.2
+  See "Interface-ROM for the host operating-system" in Help
+  for more information.
+- Known issue: Hires-timer is not 100% exact
+
+V0.81:
+- Added "Chakkari Copy" ROM-type and documentation,
+  introduced a new "Control Panel" to support cartridges
+  with additional controls on them.
+  Thanks to Enrico Barbisan for support on this ROM-type.
+- Fixed several problems and errors in printer emulation
+  (later printer-changes had no effect, MSX-printer sequence
+  ESC+"S" was improperly handled and produced garbage,
+  adjusted incorrect linefeed, ...)
+  Programs like "Dynamic Publisher", "Game Master" and
+  "Chakkari Copy" are now printing in the expected layout.
+- Tapes were mistakenly always forwarded to the end,
+  even if "Automatically seek to start" was specified
+  in the Options.
+- Disk error information (if any) was improperly displayed
+- Fixed MSX-Audio interrupts (audio still unsupported)
+  and freezes in MSX-Audio and Philips Music-Module.
+  Now the Music Module can play music on the MIDI port.
+- Updated MSXtra documenation
+  Thanks to Manuel Bilderbeek for the 1st part of the
+  re-translation from dutch to english.
+
+V0.80:
+- Time synchronization did not work properly
+  (only with option "Use multimedia timer" selected,
+  but switched to fastest speed after several minutes
+  depending on the used hardware)
+- Saving SRAM often failed if "My MSX" folder was not
+  configured. To fix this issue the new SRAM location
+  is now moved to "%APPDATA%\Lex Lechz\RuMSX\SRAM".
+  Already existing SRAM is not preserved and must be
+  copied manually.
+- Updated to C-BIOS 0.27, including configuration-fixes
+  that prevented the display of the C-BIOS MSX logo
+- When loading corrupted/truncated save-state files
+  displayed error-messages were not always correct.
+- RuMSX crashed when saving "Base MSX" memory-state
+  (in fact always, when RAM did not start in page 0)
+- Restoring an MSX1 save-state toggled to 60Hz (NTSC)
+  video-frequency, which resulted in too fast execution
+- Added support for 3rd cartridge-slot
+  (previously only up to 2 could be used)
+- Added MSX-HOST interface 1.0 (supporting Windows keyboard)
+  see "Interface-ROM for the host operating-system" in Help
+  for more information. Additional files:
+  ROM\MSX-host.rom (source: MSX-host.asm)
+  DSK\MSX-host demo.dsk
+- Improvements in Help-Documentation
+- added "MSXtra" ROM-type (incl. ROM-database entry)
+  and "MSX-Host Interface" ROM-type
+- added KMARESCC.ROM to ROM-database and fixed autodetect
+- Minor updates
+  enabled DataExecutionPrevention (on XP/SP3, Vista/SP1,
+  Win7, 8.x, 10) for MSX.exe and SETUP.exe
+- Failed switch to FullScreen mode resulted in permanent
+  loss of the toolbar (until restart of RuMSX)
+- Fixed an inconsistency in the BIOS MainROM documentation
+  of the character-set information (thanks to Ruijter, RJ de)
+- Configuration->Memory Add/Edit incorrectly recognized
+  expanded slots (other corrupted data was also possible)
+- Improved debug-information for tape-operations
+- Added experimental lightpen support (and documentation)
+  Sanyo Lightpen Interface ROM does not work yet,
+  where MSX2 BIOS Lightpen support does
+- Removed unsupported languages
+  (Because of missing webspace for deployment and reduced
+  translation efforts now English, Japanese and German are
+  supported only)
+- Windows PAUSE key now also corresponds to MSX STOP key
+- Windowed mode: press SHIFT during resize to keep aspect-ratio,
+  press SHIFT+CTRL during resize to adjust aspect-ratio to PAL
+- Installer: completed list of RuMSX file-associations,
+  that are available in "Default Programs"
+
+V0.41:
+- Win95/WinNT4 is no longer supported, new minimum requirement
+  is Windows 98 / Windows 2000 and Internet Explorer 4
+- Disk drive letters have been assigned incorrectly
+  for rare configurations (e.g. HB-F1XDJ) where the
+  Disk-ROM was located in an expanded slot with
+  secondary slot-id different than 3.
+  E.g. FILES accessed drive "C:" instead of "A:"
+  (this bug was new since RuMSX v0.31)
+- Added "CAS" motor indicator
+  (in addition to FDD, HDD, CD)
+- Added "Preview" support for .RuMSX save-state files
+- Some interlaced modes were not rendered correctly
+- Fully implemented scanline interrupt handling
+  "F1 Spirit 3D special", "Golvelious 2", "Bombaman"
+  and many more games are working now!
+
+- Fixed incomplete detection of 5th/9th sprite,
+  so WAVES.ROM does also work now!
+- Fixed behavior of VDP TransferReady flag, so
+  "Andorogynus" does no longer have defective graphics
+- Fixed Printer-emulation: subscript is now correct,
+  printing with resolutions > 300dpi is better sized
+- Added display of print-progress to statusbar
+  (at least for emulated MSX/Epson printers)
+- Fixed problems when RuMSX is started for the 1st time
+  (MSX2: logo rendered incorrectly, ...)
+- Default-directory for print-file and debug-output file
+  is no longer %TEMP%, "%TMP% or C:\
+  but "My MSX" or "My Documents"
+- Fixed autodetection of "64 in 1" ROM, which was
+  unfortunately ignored in the ROM-database.
+- Corrected floppy-emulation to MSX Disk-BIOS semantic
+  (all memory-aras except page 1 are unchanged during PHYDIO)
+- Keyboard click is now shorter (better match to real MSX)
+- Options "Use OPLL" and "Use multimedia timer"
+  are now selected by default
+- Removed several hardcoded english texts
+  (startup, shutdown, disk properties, ...)
+- Added option to remember last used Joystick
+- Many fixes to the configuration editor:
+  Configurations with an "Unknown" locale were not correctly
+   saved in prior versions;
+  Configuration is handled readonly if no change-permissions
+   are given (Vista/XP/2000/NT4);
+  Readonly-configurations are displayed with disabled controls;
+  New configurations will be saved into
+   "My MSX\MSX computers\RuMSX configurations" (if available);
+  New configurations are automatically added to the list and
+   selected by default
+- No "Choose configuration" (initial) in case of
+  read SaveState or Preview
+- supplemental SETUP.EXE is now fully supporting Windows Vista
+- A lot of internal changes for WIN64 compatibility
+- Added italian localization
+- Added support for "Playball" samples. If available they
+  should be provided as samples\playball\playball_*.wav files
+  in the RuMSX folder.
+- Warning for overriding sensitive data applies to
+  Win95/98/ME only (volume tracking driver) and is
+  therefore displayed on such systems only!
+- Moved documentation of R800 extensions from the WebPage
+  into the manuals, where it should be persisted.
+- Added SPLITROM.exe command-line utility
+- Added disclaimer as requested by
+  http://www.bazix.nl/msx-logo-policy.html
+- BugFix: number of CPU cycles per screen-refresh was
+  reversed for 50Hz and 60Hz (noticable with NEMESIS1)
+- Known bug: Interrupt timed games such as "Nemesis1" might
+  accidentally speed up for some duration.
+  Workaround: see "Known Problems" in RuMSX-help.
+
+V0.40:
+- Display driver (normal and hires) are completely
+  rewritten. The new sprite-renderer includes also
+  a completely changed coincidence detection.
+  Games such as "Hydefos" or "Psycho World" are now
+  running properly!
+- Added "MSX2[b]" configuration with 256KB RAM in
+  Slot 3-3, which is required by many disk-images.
+  This is compatible to the Sony (HB-F700D) layout,
+  that supports POKE-1,255 for running many games.
+- Code is now optimized for Pentium Pro and higher.
+- Major enhancements of the RuMSX core do now require
+  at least a processor with 1 GHz (1.5GHz recommended)
+- Added support for ROM-database including the
+  RUMSXROM.EXE command-line utility for database
+  maintenance. The initial database contains more
+  than 500 known ROMs.
+- "Harry Fox with Snow Demonking" did not run on MSX 2+
+  and MSX Turbo-R machines. This is now fixed!
+- Incorrectly selected 16KB ROM-types (e.g. ASCII/16K)
+  sometimes caused RuMSX to crash!
+- Support of OPLL audio (MSX-Music, FM-PAC) slightly
+  improved (notes should no longer 'hang').
+- Support of video capture hardware slightly improved
+  (video display is now scaled).
+- Switched I/O (ports &H40-&H4F) did not work fully
+  correct, therefore Kanji-modes 1+3 displayed filled
+  blocks instead of proper characters
+  (this bug was new since RuMSX v0.32).
+- SCC+ access is now recognized (played as SCC sound).
+- Added previously removed Hangul ROMs again.
+- Added '/NoSoundOut' command-line option to disable
+  annoying MSX sounds.
+- Added "International (DIN)" font to locale settings.
+  (provides the DIN "0" character)
+
+V0.33:
+- Many problems since V0.32 fixed: conceptual bugs in the
+  interrupt handling are now solved!
+  "Zanac", "Zanac 3", "Super Laydock Last Attack 2" and
+  "F1 Spirit 3D Special" are working again (at least as
+  good as before).
+- The ROM-type "Generic MegaROM (with SCC, KONAMI 8 KByte)"
+  was defined incorrectly. Bank 1 (&H4000-5FFF) is now
+  fixed, otherwise it would not work on MSX2+ and TurboR.
+  Also: no Konami-ROM is of this type: detection corrected!
+- One display frame has been skipped always,
+  even if 0-Skip has been configured
+- Screen 8 had wrong colors in HiRes-mode
+
+V0.32:
+- Creation of new configurations created invalid paths to
+  standard ROM images. This bug was new since V0.31.
+- New introduced V9948 video processor was mistakenly
+  assigned to MSX2+ and TurboR configurations.
+- The VDP version number of the V9958 was incorrect (=1)
+  since the beginning of RuMSX. This is now fixed (=2).
+- VDP supports the native modes only (TMS9918A does no
+  longer support SCREEN 4 and higher modes, V9938 does
+  no longer support SCREEN 10 and higher modes). Prior
+  versions reported only the correct VDP version number,
+  but enabled all valid modes and command for every
+  Video-Processor.
+- When creating a new disk-image it's now possible to
+  select between MSX-DOS1 and MSX-DOS2 boot-sectors.
+- Using TrueColor RuMSX-logo from Marc Donkers in the
+  AboutBox.
+- Fixing repaint problems. If RuMSX was running or halted
+  in background not all parts of the MSX display have been
+  properly repainted.
+- Extended advanced options to prevent entering of
+  monitor power low/off modes (not recommended for
+  laptops).
+- Initial number of 5th/9th sprite is 0 (rather than 31
+  used until RuMSX V0.31), indicating that there are no
+  hidden sprite lines.
+- Minor fix of the Z80 RETI command (should not affect
+  normal MSX programs)
+- Pending VDP interrupts (signaled while interrupts disabled)
+  were mistakenly discarded. This is now fixed and corrects
+  (a) the slowdown of games such as
+  "Track & Field" and "Hyper Sports",
+  (b) flickering display in games using scanline interrupts
+  such as "Zanac Ex" and "Aleste 2"
+- Added support for Z80B CPU.
+- Added CYRILLIC (russian) and ARABIC font to the
+  "Locale" dialog.
+- Updated MSX-locale and initial VDP-frequency of the
+  CBIOS configurations according to the design-
+  specifications. (RuMSX V0.31 did not contain the
+  specified changes, even if listed).
+- ROM cartridges with MSX-Basic programs were not
+  detected properly.
+  
+
+V0.31:
+- Added SCSI-Support for the WD33C93A controller,
+  which enables use of HSH and NOVAXIS ROMs with
+  harddisk-images (with NOVAXIS CD-ROM ISO-images
+  can be accessed too)
+- Support for multiple Disk-ROMs added
+  (now up to 8 floppy-drives can be used, in theory)
+- Screen 8 colors have been fixed, display is now
+  much brighter (4 grey tones are available too)
+- SaveState files with more than 1 ROM-cartridge have
+  been improperly saved and loaded.
+- Temporarily fixed potential crashes in highres-modes
+  when the Adjust-register uses excessive values.
+  The adjust-register Y value is ignored for now.
+  (as result the NOVAXIS NFDISK-utility does no longer
+  crash if running in high-resolution mode)
+- HtmlHelp updated (V0.30 did unfortunately not contain
+  the described help update). Added SCREEN 9 information.
+- Added extensions to the MSX-Configuration dialog
+  (changed TR-DefaultConfig, implemented missing features, ...)
+- Added read-only support for the personal folder
+  "My MSX\MSX computers\RuMSX configurations"
+  (reads *.CFG and explicitly defined ROMs from here)
+  IMPORTANT: the "My MSX" folder must be enabled for this!
+- MSXDOS1 boot-sector has been slightly modified
+  (removed random bytes to get compact code+data)
+- Updated MSX-locale and initial VDP-frequency
+  of the CBIOS configurations according to the
+  design-specifications.
+- Made a few improvements in ROM-type detection
+- Language selection now allows to include value-formatting too
+- Added option to decrease CPU-load while running at same
+  speed. Added "inactive mode" option in case RuMSX is running
+  in background.
+- Added experimental emulation of Epson printers,
+  "Print-X-press" is at least partially working now.
+- Fixed a bug in the "Generic 8KB ROM mapper",
+  which prevented Parodius from being played until the end
+  (copyprotection caused random stop at the last end-monster)
+- ROM\SCCPLUS.TXT added. This file describes the
+  "SCC+ dummy" ROM-image format and handling.
+- Some more minor updates...
+
+V0.30:
+- MSX 2+ configuration failed to boot
+  (this bug was new since RuMSX V0.29)
+- MSX[1] configuration did not have an SRAM,
+  therefore the DiskROM prompted for system-date
+  (this configuration-bug was new since RuMSX V0.29)
+- Reported VDP-Version number of V9938 (MSX2 video)
+  was incorrect.
+- Added support for true MSX1 color-palette,
+  this does also affect loaded MSX1 save-state files.
+- Screen 8 sprite colors were incorrect,
+  fix uses nearest color of the used renderer.
+- Updated MSX-Help: color-palette(s), C-BIOS,
+  added missing "COLOR SPRITE" and "COLOR SPRITE$"
+- Fixed VDP-command 0 (ABRT), which has been refused
+  in non-bitmap mode. This command is now properly
+  processed.
+- Updated C-BIOS to V0.20 and license-agreement
+- Rewritten debug-console, which supports more
+  output-data (up to 32KB are now buffered).
+- Added 'dw' (dump word) command for the debugger
+- Renamed title from "MSX-Emulator" to "RuMSX"
+
+V0.29:
+- RuMSX now supports a "My MSX" folder. This feature
+  is disabled by default and has to be enabled by
+  separate tools!
+- ROM-type detection failed for some types if
+  *.ROM file was launched from the Explorer
+- Added ROM-type for "Holy Quran"
+- Added ROM-type for "Zombie Hunter"
+- Added ROM-type for "IDE-Interface"
+  (currently non-functional).
+- Added experimental support for SCSI-Interfaces
+  (currently non-functional).
+- Fixed "FM-PAC" and "Halnote" ROM-layout
+- Fixed (FM-)PAC SRAM mapper, so that it now
+  works with "Laydock2 - Last Attack" too.
+- Fixed detection of "SCC+ dummy" ROM
+- Fixed "Generic MegaROM (KONAMI4/8 KByte)" mapper
+  (caused problems with 'Metal Gear' on MSX2+)
+- BugFix: invalid display mode results in 16KB
+  VRAM only (overflow after adress-increment does
+  not enter a new VRAM-page, also the VRAM layout
+  matches screen modes 0(40), 1, 2 and 3).
+  "Hunchback" displays its graphic properly now.
+- Supporting FS-A1ST Turbo R configuration too
+  (here the MSX-Logo is part of MSX-Music)
+- Added C-BIOS configuration
+  (see http://cbios.sourceforge.net/)
+- Significantly improved MSX-Help
+  (MSX-Basic core documentation completed,
+  many other topics are updated and extended)
+- Added support for "My MSX" folder
+- MSX1 machines usually don't have a CMOS-RAM:
+  added "Base MSX" configuration without CMOS,
+  without Disk-ROM and 32KB RAM only
+  (Note: 16KB RAM does not work with all System-ROMs)
+- SETUP added additional information for the
+  Add/remove "Software" control panel applet
+- New tiny SETUP.EXE uses an Install/Uninstall wizard
+  and adds support for the "My MSX" folder
+- SETUP.EXE renamed "RuMSXrom" and "RuMSXtape" keys
+  in the registry to neutral values
+- Stabilized debugger (sometimes crashed) and added
+  the 'RF' (full register output) command.
+
+V0.28:
+- Windows XP styles are supported automatically,
+  without need to copy a separate manifest-file.
+- Failed attempts to switch into fullscreen mode
+  caused drawing problems. This is now fixed!
+- FMPAC SRAM was improperly saved to state-files
+- MSX-Audio ROM mapper fixed
+- The following ROM-types have been added:
+  + MSX-DOS 2, release 3
+  + Crossblaim
+  + 64 in 1, 80 in 1
+  + 90 in 1
+  + 126 in 1
+  + Super Loderunner
+  + Konami's Synthesizer
+  + Majutsushi (Mah-Jong 2)
+  + SCC+ (faked ROM included)
+  + Koei (Genghis Khan can save now)
+  + Playball
+- New SETUP.EXE now supports Windows XP styles and
+  arabic systems too.
+- Added FIXROM command-line utility to adjust
+  incorrectly sized ROM images
+
+Version 0.27:
+- MSX-Printer emulation did not print special characters
+  (preceded by CHR$(1)) properly
+- Some Konami ROM's were not properly mapped,
+  so e.g. the translated "Parodius" was garbled.
+- Highest sprite-number was improperly calculated
+  in some cases. "Andorogynus" uses proper sprites now.
+- Location and size of ROMs - started by double-clicking
+  the file - were not always recogized properly. RuMSX
+  can now run much more games by double-clicking the ROM
+  within the Windows Explorer.
+- RuMSX saved states might have failed to load because
+  the stream "CONFIG(0)" was complained.
+- DiskROM call PHYDIO (4010h) returned the number of
+  read/written sectors instead of the number of remaining
+  sectors (discovered by Maarten ter Huurne).
+- Fixed memory leak while RuMSX was running in
+  FullScreen mode (HDC's have been exhausted since V0.26)
+
+Version 0.26:
+- Fixed Z80-commands: IND, INI, OUTD and OUTI and related
+  (modifications by Kefkef)
+- Fixed bug in IM0 handling
+  (as identified by NYYRIKKI)
+- Fixed configuration-dialog error for unicode build
+- Improved support for internationalization
+  (especially for arabic and multilingual versions of windows)
+- Fixed incorrect center-position of joystick on Windows XP
+- RuMSX crashed on Windows NT/2000/XP,
+  if closed while running in fullscreen-mode (final fix)
+- Fixed internal sound-queue errors
+- Fixed memory-leak in SendMail and HomePage options
+
+Version 0.25:
+- MSX-Printer emulation improved (subscript+superscript added,
+  graphics printing in Dynamic-Publisher works now too)
+- "Harry Fox Yki" renamed to "Harry Fox with Snow Demonking"
+  to avoid confusion between different versions of the game.
+- System-Info property-page: increased size of processor info
+  because some translations have been truncated
+- Removed Windows Help from menu
+- Changed helpfile from *.HLP to *.CHM format
+  (requires Internet-Explorer 4 or HHUPD.EXE to be installed)
+  and provided new MSDN-like help with Full-Text-Search index.
+- Fixed MSX Turbo-R configurations for improved compatibility
+  + Moved MSXTRMUS.ROM into Slot 0-2
+  + Added MSXTROPT.ROM into Slot 0-3
+  Slot 0 is now expanded and TR-logo is displayed
+- Added new RuMSX-icons
+- Configuration-editor corrupted RuMSX configurations
+  if a memory-block exceeded 4 pages (i.e. as MSX1 RAM)
+- Added "Hangul" key-support in addition to "Kana"
+  (requires presence of native MSX language information
+  in RuMSX configuration files)
+- DISK.ROM can now be inserted into any available slot
+  if the MSX configuration does not provide disk-support
+  (previous versions did not patch the BIOS entries)
+- Added support for concatenated disk-images
+- Locale-Dialog could failed to restore default keyboard-layout
+  (if changed), a valid driver-file have had to be selected.
+
+Version 0.24:
+- Selected joystick was not remembered if DirectX drivers only
+  were present on the system (i.e. if using Windows 2000)
+- Minor changes in SOFTWARE.HLP and MSX.HLP
+- Added fMSX compatible ROM-Type 6 for Konami Game-Master 2
+  (previous value 127 is still supported and should be used
+  within RuMSX, new value is supported for compatibility only)
+- GameMaster 2 Mapper changed (SRAM fixed)
+- Multiple SlotExpanders caused conflicts and
+  unpredictable results
+- ROM-Type detection enhanced: PAINTER.ROM, LOTLOT.ROM and
+  MSXAUDIO.ROM, RTYPE.ROM and HALNOTE.ROM are now handled
+  even better (and more compatible)
+- Apply button was not always enabled after device-properties
+  have been changed: available mouse-devices, Disk, Keyboard
+  and Video properties could be changed without apply enabled.
+- Color-Palette was not correct if MSX1 configuration used
+- New ROM-Type for "Harry Fox Yki" added (now working)
+- Loadable keyboard-driver added
+- Fixed VDP-Statusregister mismatch
+  (Penguin Kun Wars 2 is working now)
+- Added a Device/Setup button to set-up selected DirectInput
+  devices (most likely used to calibrate joysticks)
+- Added option to disable screensaver while RuMSX
+  is running (for presentations and demonstrations)
+- Fixed Mouse-support (button-clicks are now also recognized,
+  even if mouse-movement is not queried).
+- Fixed SETUP.EXE for long pathnames containing spaces
+- Added MSX-Printer emulation (BETA, for evaluation)
+  Windows-Printer works now like a MSX-Printer,
+  Evaluation version recommends 300dpi printer (laser or ink)
+
+Version 0.23:
+- Activation of different Desktop-Themes or the
+  "high-contrast" option could result in a strange
+  layout and required RuMSX to be restarted.
+- Last-error field in Video-tab of the "Devices"
+  property-sheet did not have a word-break (single line)
+- Locale-option "Windows keyboard" is now disabled,
+  because still not implemented yet!
+- KEYBOARD.ZIP updated with old keyboard-layouts and
+  replaced *.KBD files with new ones. Please note that
+  the 1digit MSX-locale within the new files is for
+  information only.
+- In some cases RuMSX V0.22 corrupted savestate-files.
+  This occured if saving a new state-file where the state
+  was restored from a previous RuMSX-version (i.e. V0.21).
+  Message "ERROR: stream VIDEOA(0) has an illegal size!"
+- Added QuickSave- and QuickLoad-Option
+  (for evaluation only, hotkeys may change)
+- RuMSX crashed on Windows NT/2000,
+  if closed while running in fullscreen-mode
+- Tape forward/rewind-buttons changed
+- Propietary configuration files failed to load Kanji-ROM
+  (also happened to the outdated file MSXTRold.cfg)
+- Updated MSX2P.ROM with 2nd release of ROM
+  (Thanks to Jirou Kaneda, ATARULUM@hitel.net)
+- Dialog Options/Media enhanced to configure
+  behaviour of used tape-images. Tape-support improved.
+- Minor corrections in support of new medias (tape, disk)
+  which discarded previously choosen files, if canceled
+- Minor corrections in localized dialogs to
+  improve national language support
+- InstallShield remembers directory of previous installation
+  (useful if default-directory was changed to another one)
+
+Version 0.22:
+- MSX-DOS 2.31 (CALL) FORMAT fixed (CHOICE call was not patched)
+  (thanks to Kazuhiro Tsujikawa for patching the ROM once more)
+- MSX 2+ configuration enhanced:
+  Slot 2 is now extended, Kanji-driver added
+- SKR Painter in arabic configuration is working now
+  "Arabic MSX2.cfg" and PAINTER.ROM updated
+  (thanks to Husni Lutfi for updated arabic ROM)
+- logical VDP-operations OR, TOR, XOR, TXOR, NOT, TNOT
+  caused incorrect results
+  (MSX2 stragegy game "Risk" is working now)
+- VDP-Operations using invalid coordinates sometimes
+  resulted in incorrect output or crashes
+  ("Super Rambo Special" is working now)
+- RuMSX failed to use multiple DirectX-devices
+  (Joystick, Mouse, ...) at the same time
+- Updated SETUP.EXE, which associates changed icons
+  since RuMSX V0.21 correctly (no icon for MemoryImage).
+  Windows 95 now also can handle saved *.RuM files
+  (which is truncated extension of *.RuMSX)
+- Updated MSX-WebLinks
+  (moved links to the WWW to be more up-to-date)
+- Improved MSX-BIOS MainROM documentation
+  and added/changed a few other topics
+- Windowed mode supports now the commonly used 3D look
+- Added one more new RuMSX icon (by Higaki)
+- Created new/empty disk-images were too large
+  if "Format disk" checkbox was selected (default)
+- Formatted disk-sectors were always initialized with $FF
+  byte-values, where MSX-Computers do use $40 to init them.
+- Changed Kazuhiro Tsujikawa's e-Mail address in AboutBox
+
+Version 0.21:
+- Palette warning, Load/Save-state warnings are
+  now persistent (saved after terminating RuMSX)
+- Cheat-dialog updated (displayed percent-value
+  changes according to currently set CPU-speed)
+- Reorganized Performance- and Cheat-Dialog
+  (coincidence-check and VDP-frequency moved)
+- State-information dialog added
+- Every(!) failed attempt to restore a saved
+  RuMSX memory-state was reported as fatal error
+  (typically this is non-fatal, old state unchanged)
+- Reboot behaviour changed, if restored memory-image
+  is executed in RuMSX (normal state as previously)
+- Permanently suspended PSG/SCC played sound
+  after closing and restarting RuMSX (temporary)
+- Added VDP-debugging capabilities
+- improved FM-music emulation (default is still OFF)
+  Thanks to hQ for the source-code from his MSXSO-emu!
+- Fixed color-palette handling:
+  half-finished palette is aborted, if palette-register
+  (VDP-register 16) is written.
+  "Kyokugen" and "Ys" should work properly now.
+- Restoring a saved state in HiRes-mode
+  did not restore original colors
+- Added support for localized RuMSX versions (plug-ins)
+- Add/Edit configuration: VRAM-size combobox was
+  right-aligned on some eastern-europe windows versions
+  and all versions of Windows 2000
+- RuMSX uses now different fullscreen-resolutions
+  for different display-resolutions (normal, hires)
+- SYSTEM.INI renamed to  MSXSYS.INI  because
+  contents appeared to be merged if read on
+  Windows NT systems (including Windows 2000)
+- LOCALE.INI renamed to MSXLOCAL.INI accordingly
+- Added MSX2PMUS.ROM (MSX Music of MSX 2+ computers)
+
+Version 0.20:
+- InstallShield-installations added a "RuMSX [Debug]"
+  icon with an incorrect filename (link).
+- RuMSX.TXT of V0.19 reported an incorrect version
+- RuMSX sometimes caused lockup of Windows NT/2000
+  shell - or applications. 2nd fix for this problem!
+  (Problem was related to the used sound-driver)
+- Rapidly toggling between windowed mode and
+  fullscreen generated strange display within
+  Windows NT
+- RuMSX displays now the last used filename if saving
+  or loading state-images. This makes use of saved
+  states more easily (during hang in a game :-) 
+- Saving/loading RuMSX-state always showed a nasty
+  warning message. Beta-state is now finished!
+  Also: restoring a saved image zeroed the number
+  of skipped frames (RuMSX runs slower after that).
+- Restoring RuMSX-images destroyed persistent settings
+  (CMOS-ROM, SRAM, ...)
+- Accessing real floppy-disks might cause corruption
+  of copy-protected MSX-software. Warning added!
+- Added help for usage of "Metal Gear" saved games
+- RuMSX crashed if booted using "SexBunny" disk/image
+  (high-frequently toggling between 192 and 212 lines)
+- Fixing of VDP-emulation
+  (i.e. "Emerald Dragon" and "Painter" are working now)
+- Heavy performance-problems with Turbo-R software
+  can be worked around by using the new "Cheat"-option
+- Result of RuMSX restore did not display an icon
+  (so error, warning, info was not directly visible)
+- Minor enhancements to MSX-Basic help
+  (improved details/index for Joystick/Mouse/Lightpen)
+- RuMSX saved state could not be restored by
+  (a) dropping the file on it
+  (b) selecting "Open with RuMSX" in context-menu
+- Version number resource is now real version-number
+  (instead of "1.00 Beta")
+- Improved Z80-debugger (added Register-Dump, ...)
+
+Build 19:
+- Write to physical disk failed on Windows NT
+- "phantom" frame remained on screen,
+  if RuMSX was closed while running in
+  fullscreen-mode (by pressing Alt+F4)
+- RuMSX crashed if closed while DirectInput-device
+  (mouse, joystick, ...) was active
+- Some incorrect links in MSX-Basic documentation
+  corrected
+- Physical disks can now be really formatted
+  (previously only sector-data was written)
+- QuickFix for incorrect VDP-behaviour if
+  X-coordinates and sizes are out of range
+  (SD-Snatcher is fully working now;
+  thanks to okei, okei@mvi.biglobe.ne.jp)
+- Fixed VDP-commands YMMM and HMMM, which
+  incorrectly moved memory-blocks to the left
+  and/or upper direction, (bug was new since V0.17)
+  "Emerald Dragon" works better now.
+- Fixed handling of VDP read/write-adresses
+  (Fony Demo-Disk 1 is fully working now),
+  updated VDP-documentation accordingly
+- Failed to change default disk-format for
+  corrupted or copy-protected disk-images or
+  floppy-disks (in "Devices" property-page)
+- If keys are used for Joystick-emulation,
+  these keys were not pre-selected if "Devices"
+  property-page was opened again
+- Internal changes in VDP and debugger-routines,
+  unassemble-command fixed, dump-command added,
+  Z80-exceptionhandler fixed
+- Minor corrections in handling of system-errors
+  (text-buffers were too short)
+- Documentation for UZIX added (operating system),
+  corresponding URL added to MSXLINKS.HTM
+- Fixed incorrect handling of IM2,
+  which prevented UZIX from being running
+- MSX2TXT-filter added, to be used for conversion
+  of MSX-specific text to DOS-text or Windows-Text
+- Arnaud's (TFH) E-mail address & homepage changed
+- MSX-DOS 2.31 is working now!
+  (thanks to Kazuhiro Tsujikawa for patching the ROM)
+  Note: MSXDOS23.ROM is updated. If InstallShield is
+  not used RUMSXIMG.ZIP must(!) be downloaded for use,
+  otherwise MSX-Turbo R configuration does not work!
+  MSXTROLD-configuration contains previous slot-layout.
+- RuMSX sometimes freezes if rebooted while
+  (any) verbose debug-output was active.
+- Requesting new configuration in troubleshoot-dialog
+  sometimes caused removal of last saved setting.
+- SaveState/LoadState support is working now
+
+Build 18:
+- RuMSX was not able to find required files,
+  if started from Windows NT command-prompt.
+- RuMSX caused lockup of the Windows NT shell (SP4),
+  if new instance was started after 1st one closed
+  (problem was related to the used sound-driver).
+- VDP processes now also commands in screens-modes
+  less than screen 5 (only if CMD bit set).
+- FullScreen display sometimes used an incorrect
+  aspect-ratio if zooming is active.
+  (depending on the currently used resolution)
+- VDP failed to switch to PAL (50Hz)
+  (this bug was new since RuMSX V0.15)
+- Fixed problems during large debug-output
+  (i.e. disassembly is performed)
+  + Could not interrupt: Ctrl+C for break added
+  + RuMSX did not terminate if closed during output
+- HiRes drivers for Screen 5, 6, 7 and 8 added
+  (drivers do currently not support sprites)
+- MouseEmulation required DirectX 5.0,
+  even if DirectX 3.0 would be enough!
+- "MSX web links..." added to the help-menu
+- KANA-LED did not work since RuMSX V0.16,
+  fix includes general improvement of KANA-LED
+- New topic "VDP behavior added" to the RuMSX help
+  documentation. Changes of this documentation are
+  still not implemented yet.
+  Thanks to Alex Wulms for this VDP description!
+- Compiler changed from Visual C++ 5.0 to 6.0a
+- Added autofire if using Joysticks,
+  Button 3 is autofire MSX-Joystick button 1
+  Button 4 is autofire MSX-Joystick button 2
+- increased sound-buffer for proper playback on
+  SoundBlaster Live! and other new soundcards
+- added beta-support for DirectX-Joysticks
+- TMS9918A (MSX1) used always the previously
+  set screen-refresh rate. This value is now
+  fixed in the configuration-files (50Hz)
+- Concatenated tape-images might fail to load
+- updated SETUP.EXE-utility for registration of
+  additional extensions (*.ds1, *.ds2, *.ri)
+- MSX-Basic documentation updated (PAD, PDL, ...)
+- Sprites in mode 1 (SCREEN 0-3) were incorrectly
+  affected by the VDP horizontal-adjustment setting
+
+Build 17:
+- Extended trouble-shooting dialog to startup
+  RuMSX without default-configuration.
+- VRAM layout fixed and documented in MSXBIOS.HLP
+  ("Breaker" and intro's of "F1 Spirit 3D special",
+  "Laydock Last Attack 2" are working now).
+  Thanks to Jan Wilmans for info's about correct
+  layout of the MSX VRAM.
+- VDP SRCH-command fixed (search to left failed)
+  This bug was new since RuMSX V0.13!
+- Mouse-driver fixed again; buttons are working
+  and movement is smooth now (no loss of moves)
+- Joystick-emulation via keyboard added
+- Checkbox "Write protected" was always disabled
+  if disk-image created using "New..." button
+- Tape: failed to apply "New..." tape, if there
+  was a previous tape-image open
+  (no error-message was displayed, fixed now)
+- New "SysInfo" tab added to "Performance" property
+  sheet (for better info and tech-support)
+- DebugOutput of screenmode-change fixed
+  (was incorrectly traced for screen 5-12)
+- Technical documentation about V9990 (GFX9000)
+  added to MSXBIOS.HLP
+- Takamichi's E-Mail address has beed changed
+- A lot of internal changes for partial release
+  of source-codes (1st time of source-release)
+
+Build 16:
+- New options "/NoMMWaveOut" and "/NoMMMidiOut"
+  added for trouble-shooting. Where "/NoMMMidiOut"
+  is not functional yet, "/NoMMWaveOut" can be
+  used to disable Wave-Audio.
+- RuMSX hangs if clicking on menu, toolbar or if
+  trying to move window. Problem was detected on
+  some Windows NT installations and depends on the
+  used sound-driver.
+  This bug (new since Build 13c) is fixed now!
+- Errors during sound-init or strange coding may
+  cause slowdown because of rapid output to
+  debug-window.
+  New debug-option "Verbose"/"Silent errors" added
+  to avoid slow-down if monitoring not requested.
+- Enhanced trouble-shooting dialog for better
+  problem resolution (start with MSX.EXE /SOS)
+
+Build 15:
+- Optional zooming for FullScreen added,
+  this is useful if FullScreen display is too small
+- Documentation for Printer ESC-sequences added
+- Applied changes were not saved on logoff
+  and/or shutdown
+- Configurable confirmation of close, logoff
+  and/or shutdown added
+- MSX.EXE did not terminate under some strange
+  conditions (likely complex debug-sessions)
+- Icons added to several property-pages
+- "Pause"-mode (F11) works now without messagebox
+  (does not prevent configuration changes)
+- Added file-selection dialog for debug-output
+- change of my E-mail and HomePage- address
+- improved errorhandling and error-details
+- Internal changes in VDP-Emulation to enable
+  SaveState/LoadState support
+- Inifinite tape-access fixed,
+  which occured if incorrect load-filename specified
+- new VIEWTAPE utility added to
+  review contents of tape-images (*.cas files)
+
+Build 14:
+- MSX.EXE did not terminate fully if running
+  on Windows NT, wave-device still occupied!
+  KillProcess/Logoff/ShutDown hangs system
+- PSG/SCC now clean resetted if MSX is restarted
+  (sometimes sounds are played too long
+  or infinite, even if MSX was restarted)
+- Marcel's E-Mail address has been changed
+
+Build 13c (MAiN special version):
+- PSG/SCC sound-quality improved!!
+  (DirectSound no longer required)
+- ROM-Type was not correctly detected if ROM-image
+  was launched by double-clicking it!
+  I.e. it was not possible to start MetalGear2 by
+  double-clicking the icon (hang during startup).
+- Bug in memory-manager fixed (in some cases
+  an incorrect memory-type was assumed, this
+  may also have caused memory-manager to fail)
+- Hardboot deactivated floppy disk-access
+  (resetted to disk-image usage)
+- Copy Disk-to-Image crashes,
+  if drive is already locked
+  (i.e. disk is being formatted)
+- Data-changes on floppy disk were not
+  automatically applied in the explorer
+  (must be refreshed manually)
+- Win95: changed data on floppy disk
+  may be corrupted if simultaneous
+  changes are made from other programs
+  (Windows NT implementation worked fine)
+- Window-size description was reverse of the
+  technical correct (i.e. 1:3 instead of 3:1)
+- Portability-fixup for Alpha-Workstations
+  running Windows NT
+
+Build 13:
+- double-clicked disk- or tape-image inherits
+  the configured (default) write-protect setting
+  (previously always write-enabled)
+- Media read-only change did not enable the
+  apply button
+- Inactive emulator-window does no longer
+  accept device-input (keyboard, joystick)
+- Support for real floppy-disks added
+- Errorhandling during startup improved
+- Minor support for Philips Music-Module
+  external MIDI added (I/O port &H01 used)
+- random error-message if DSOUND.DLL not found
+- Command switches for troubleshooting added:
+  /SOS, /NoDDraw, /NoDInput, /NoDSound
+- GET TIME returns correct time now
+  (previously always GMT/UTC time!)
+- Colored Screen 12 mode, if hires driver used
+  (emulation runs very slow in this mode,
+  also no sprites are displayed yet!!!!!)
+- Help for MSX2 Basic improved
+- Manual for memory-mapper (DOS2) added
+- SETUP.EXE is now compatible with Disk-Manager
+  (also FreeWare by Lex Lechz)
+- Support for *.IMG disk-images added
+
+Build 12:
+- renamed FreeMSX to RuMSX, because of a
+  name-conflict with FreeMSX for macintosh
+- Extended features in debugger-window
+- Changed Turbo-R memory layout because
+  of crashes with MSXDOS 2.20 disk
+- fixed loss of CMOS changes after reboot
+- fixed endless-loop if RuMSX-configuration
+  is invalid (no *.cfg files in CONFIG-dir)
+- changed Kanji-Basic ROM (added 2nd version)
+- added XBasic(1) ROM
+- added R800BAS.DSK and R800DOS.DSK
+  (allows explicit CPU-mode switch)
+- Improved "Developer information" screen
+- support for PPI-click added
+- removed default-filenames in media-dialogs
+  (default-values confused some users)
+- added soft-scroll support for screen 8
+  ("MegaDOOM" is running now)
+- Support for MSX 2+ reset-status added
+- Turbo-R MIDI bit is always removed
+  in BIOS-ROM's (more stable programs)
+- MSX Turbo-R Pause function added (Alt+F11)
+  This implementation is not very stable...
+- Fixed CPU-query/change behaviour (S1990)
+- fixup of Turbo-R MIDI interface emulation
+  (not very useful, but avoids software hangs)
+- Updated BIN2ROM-utility to V1.01
+  (converted files are no longer read-only)
+
+Build 11:
+- Z80/R800 switching changed from BIOS-trap to
+  I/O register processing (S1990),
+  therefore more programs are running now
+- Pause-LED added to statusbar
+- Deselecting a port-device (using "no device
+  attached" again) was not possible.
+  This caused problems in multiplayer-games.
+- Description of S1990 added to MSX.HLP
+- Description of configuration-files added (help)
+- Window-activation using mouse failed,
+  while popup-windows are displayed
+- FullScreen: black border not always repainted
+- HiRes: Screen 1 and Screen 2 problems fixed
+- LoRes: zoomed sprites are supported now
+- Debug-output is now routable to file also
+- Minimum support for disk-errors added
+- MSX-Basic help updated (Kanji, ...)
+
+Build 10:
+- Fixed VDP-Command bug (thanks to Newf Kobayashi),
+  which prevented some GigaMix games from running
+- Game Master 2 SRAM support added (help updated)
+  (GM2 SRAM save/load currently crashes MSX-Games)
+  SRAM is saved in FreeMSX\SRAM directory (must exist)
+- hangs of Turbo-R MUSBASIC.ROM fixed
+  CALL PCMREC and CALL PCMPLAY works now,
+  even if PCM-Sound is not supported yet!
+- View- and Media/ReadOnly-settings are saved now
+- Locale/Keyboard patch is enabled now
+  (works currently for european ROM's only)
+- sometimes failed to use 'new' tape-images
+- incorrect 'write protected' state for tape-images
+- static configuration no longer used
+  you MUST select a MSX configuration on FreeMSX-startup,
+  on the next start the last used configuration is loaded.
+  You can also modify and/or create new *.CFG files!
+- MSXTR800 memory layout changed to fix problems
+  with some software (GigaMix games using DM2, ...)
+- SoftBoot in R800 mode resetted Turbo led,
+  but kept turbo-mode on (enabled R800 caused
+  strange behaviour of next started programs)
+- MoonSound documentation updated
+
+Build 09, 1998-02-21, 1st release:
+- locale settings cannot be read on all windows-builds,
+  several times read fails on Windows 95 and Windows NT
+- help updated (description of memory-layouts, ...)
+- pause mode added (F11)
+- Keyboard driver and Device-page enhanced
+  (additional keys: Grp=LeftAlt, Kana/Code=ApplKey)
+- superimpose mode enhanced (SET VIDEO is working now)
+- pre-beta implementation of Mouse-driver added
+  (requires DirectX 3, DirectInput2), still non-functional
+- incorrect displayed mouse-pointers fixed
+  (reset in fullscreen, ... caused incorrect pointer to be displayed)
+- common non system ROM's moved from SYSTEM- to ROM-directory
+  MSXDOS22.ROM, RS232.ROM, PAINTER.ROM
+- MUSBASIC.ROM (Turbo MSX-Music) added to SYSTEM-directory
+- FMPAC.ROM added to ROM-directory
+- new ROM-type "PAC or FM-PAC (SRAM)" added
+- pre-beta implementation of MSX-Music (FM) added
+  (sounds strange, therefore disabled by default)
+- SoftBoot fixed (not all components were resetted correctly)
+- several bugs in Screen 12 (B/W) conversion fixed, which caused
+  + incorrect grayscale-mapping
+  + corrupted display because of bad sprite-mapping
+  + crash of Golvelius 2
+  + too slow screen-updates
+- ToolBar-button color-mismatch fixed
+  (transparent bitmaps for safe syscolor-change)
+
+Build 08:
+- Video frequencies of 60Hz and 50Hz are now generating
+  a different number of CPU-cycles between VDP-interrupts
+- Reported videoprocessor-version depends
+  on the active configuration (no longer max.),
+  which causes programs to work now different
+- Updated help: Emulator, Z80 manual
+- RomType autodetect fixed
+  (incorrect result using XBASIC,
+  which has no init-routine)
+- Added locale support (different fonts)
+- Keyboard driver fixed
+  (Code/Kana-keys are identical, merged)
+- Removing cartridges was not possible,
+  OK/Apply-buttons accepts this change now
+- MSX-Turbo R emulation uses now
+  Disk Basic 2.01 + MSXDOS 2.20 in Slot 2
+  (this is until MSXDOS 2.30 works!)
+- added toolbutton for RS232
+- added tooltips
+- added dialog(s) for creating new disk/tape-medias
+- fixed 720KB diskette format bug (media was 360KB)
+- palette colors fine-tuned (now REAL colors)
+- missing toolbutton-bitmaps in IE40/Win98-Shell
+- DirectDraw FullScreen-mode can now be configured
+  default-setting changed from 16bpp to 24bpp (640x480)
+- Added beta-implementation of high-resolution
+  display modes (Screen's 0/40, 0/80, 1)
+- DirectX produced noisy sound in Windows 95,
+  where it worked as expected within Windows NT
+- New RAM-mapper bug fixed
+  (Port-IN from &HFC-&HFF returned incorrect values,
+  which caused a lot of mapper-programs to crash)
+- Transparent color handling fixed
+- Performance settings enhanced and now saved
+- Test-implementation of new device for 'superimpose'
+  (MSX-Video computer, requires capture-card)
+  Currently disabled because of increased
+  MSX-Emulator initialisation time, therefore
+  this feature will be added to the MSX-configuration
+
+Build 07:
+- Kanji-ROM emulation fixed,
+  CALL KANJI works properly now and
+  characters are no longer garbaged
+- Z80-Emulation V1.1 updated to V1.2
+  (refer to Marcel de Kogels Z80-page for fix-details)
+- R800-instruction set added
+  (Marcel de Kogel agreed required changes)
+- MSX 2+ memory increased from 128KB to 512KB
+- Bug using DirectDraw/DirectSound fixed
+  (caused unexpected window-minimize/maximize
+  of window if switching between window and fullscreen)
+
+Build 06:
+- SoftBoot and HardBoot supported
+  (HardBoot reloads system-ROM's,
+  configuration change possible)
+- missing TRKANJI.ROM added
+- default-values DRIVEA.DSK, DRIVEB.DSK, DEFAULT.CAS,
+  CARTA.ROM and CARTB.ROM removed
+- improved RAM-Mapper and MegaROM-Mapper
+
+Build 01-05:
+- Internal pre-builds

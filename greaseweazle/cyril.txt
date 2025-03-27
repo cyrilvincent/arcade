@@ -1,8 +1,17 @@
 Tuto : https://github.com/keirf/greaseweazle/wiki/Yann-Serra-Tutorial
-Utilisation de HxCFloppyEmulator / Analyze pour déterminer le décalage entre les 2 têtes
-	Il faut lire le disque et l'éditer avec HxCFloppyEmulator, puis aller dans Analyzer puis sélectionner 	une piste par exemple la 20, il faut sur chaque face que le trackId==20
-Les lecteurs 3" nécessitent 12v ainsi que la majorité des 5.25 et un ampérage > 2A
-Ouvrir le jumper 5v si alim externe
+
+Atari si ca ne marche pas cocher la case RAW et Il faut lire le disque et l'éditer avec HxCFloppyEmulator, puis aller dans Analyzer puis sélectionner une piste par exemple la 20, il faut sur chaque face que le trackId==20
+	
 Les vieux 5.25 et 8" RPM=360, Atari 810 ou 1050 RPM=288 sinon 300
 
+Pour Ecrire PoP 720Ko : gw write D:\Git\Retro\git-retro\amstrad\PC\PCemV17Win\discs\000732_prince_of_persia\disk1.img --drive=A --format=ibm.1440
+Bizarrement le format est le format du lecteur et non de l'image
+
+Si je branche le lecteur USB il sera en A, il faut mettre GW en B
+
+Amstrad Lecteur 5.25 : Sankyo F2SPR69 A 80205 5.25 360Ko
+Selection Drive 0 + IBM.360
+#2 et #3 Fonctionnent
+
+Atari RAW dans tuto : To archive an Atari ST 3.5-inch disk, that has two sides formatted at double density, into a “MyAtariSTdisk.hfe” file suitable for a HxC drive emulator, using any 3.5-inch drive: gw read MyAtariSTdisk.hfe::bitrate=250
 

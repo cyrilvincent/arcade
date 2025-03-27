@@ -1,0 +1,11 @@
+Le 14/02/2025
+Je branche l'adapteur clavier, l'écran, j'allume et 1s ca pète assez fort avec une forte odeur
+Je présent que l'odeur est dans l'alim
+Cependant c'est très long à démonter
+Quand je démonte l'alim il me semble que l'odeur y est toujours
+Après verif rien ne semble grillé
+J'ai vérifier toutes les cartes et la CM rien d'anormal
+Il semble que ce soit un RIFA : rien ne dramatique
+
+J'ai vérifié les tensions à vide : ok
+

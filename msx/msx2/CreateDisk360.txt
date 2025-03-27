@@ -1,0 +1,6 @@
+Format360 Linux : sudo mkdosfs /dev/fd0D360
+sudo dd if=filename.dsk of=/dev/fd0
+
+
+https://msx4ever.com/disk-manager/disk-manager003.htm
+

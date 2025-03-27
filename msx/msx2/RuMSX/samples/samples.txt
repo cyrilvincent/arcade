@@ -1,0 +1,19 @@
+This directory is intended to store wave samples:
+
+Sony Playball:
+
+playball\playball_0.wav
+playball\playball_1.wav
+playball\playball_2.wav
+playball\playball_3.wav
+playball\playball_4.wav
+playball\playball_5.wav
+playball\playball_6.wav
+playball\playball_7.wav
+playball\playball_8.wav
+playball\playball_9.wav
+playball\playball_10.wav
+playball\playball_11.wav
+playball\playball_12.wav
+playball\playball_13.wav
+playball\playball_14.wav

@@ -1,0 +1,31 @@
+The SCCPLUS.ROM file is a dummy file, that enables to load the
+SCC+ cartridge and it's RAM into any Slot. It it also intended
+to support auto-detection for MSX-emulations.
+
+The layout of the image is as following:
+- Only the first 16 bytes are checked
+- 4000 => 41 42 indicates a valid MSX-cartridge
+- 4002 => 10 40 module resides is in page 1 (entry at 4010)
+- 4004 => 00 00 00 00 00 00 00 00 00 00 00 00 (ROM header)
+- 4010 => C9 (RET) 
+ROM code returns immediately
+
+- 4011 => "SCC+ dummy" (case sensitive)
+- 401B => 00 00 00 00 (reserved)
+- 401F => 03 = 128KB RAM (bit-mask)
+          (values 01 and 02 are currently not supported)
+          01 = 64KB RAM as in original SCC+
+          02 = 64KB RAM as in SD Snatcher cartridge
+- 4020 => 00 ... (entire remaining ROM should be filled with 0)
+
+The image is handled as following:
+- The header indicates a valid ROM for every emulation
+- The header "SCC+ dummy" indicates that it's an "SCC+ memory"
+- The emulation loads the image and maps it as described in
+  the binary flags (128KB must be specified for RuMSX)
+- After the emulation has recognized the ROM image
+  (at least) contents from 0x0000 to 0x001F are cleared
+  to keep a clean non-ROM image in memory
+Note: number of cleared bytes is not specified yet and may be
+changed in future versions. This depends on later enhancements
+of this "SCC+ dummy" specification!

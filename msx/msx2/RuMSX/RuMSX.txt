@@ -1,0 +1,60 @@
+RuMSX - MSX-Emulator, V0.84:
+============================
+
+The correct functionality of this software is not guaranteed by
+MSX Association nor Microsoft.
+Both parties do not accept any responsibility concerning the results
+of using this software. Please use this software at your own risk.
+
+
+C-BIOS:
+-------
+If using C-BIOS please read the license agreement in
+SYSTEM\cbios.txt.
+C-BIOS is a free BIOS compatible to the MSX BIOS. The
+homepage of C-BIOS is on http://cbios.sourceforge.net/
+
+
+Known bugs & problems:
+----------------------
+For a list of known bugs, problems and possible workarounds refer to
+the RuMSX help (topic: "Known Problems").
+
+
+Trouble shooting:
+-----------------
+If some Windows-drivers are not compatible with DirectX or
+other devices used by RuMSX cause problems during the
+startup of RuMSX these problems can be located/fixed by
+starting RuMSX with the "/SOS" command-line parameter.
+For more information refer to the MSX-Help
+(topics: Trouble-shooting, Command-line arguments)
+
+
+Developers:
+-----------
+Normally system-files are located in the correspondig subdirectories
+of the started emulator. Developers can use SET RUMSX_DIR= to
+specify another base-directory to test debug-, nodebug- and other
+modified binaries.
+
+
+Directories:
+------------
+.          contains MSX.EXE, SETUP.EXE and language resources
+.\Config   contains configurations and memory-layouts
+.\Help     contains the help-files
+.\Locale   contains fonts to patch system-ROM's for other countrys
+.\Patch    contains image-informations (ROM-types, ...)
+.\SRAM     contains SRAM-images (alternative: SET RUMSX_SRAMDIR)
+.\System   contains the MSX ROM-images
+.\Util     useful utilities for RuMSX
+.\ROM      ROM-images (optional: XBasic, MSX-DOS 2.20, ...)
+.\DSK      Disk-images (MSX-DOS, ...)
+.\CAS      for tape-images
+Since RuMSX V0.29 also a "My MSX" folder is supported, even if it need
+to be activated explicitly. For information about the "My MSX" folder
+structure refer to the RuMSX help manual (MSX.CHM).
+
+
+************ END OF FILE *********** http://www.lexlechz.at ************

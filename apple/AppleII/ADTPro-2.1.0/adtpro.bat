@@ -5,9 +5,6 @@ REM
 REM Note:
 REM   Invoke with the name of the communications button to push
 REM   in order to start with that mode active (i.e. 'adtpro ethernet')
-
-SET ADTPRO_HOME=%CD%\
-
 REM You can set two variables here:
 REM   1. %JAVA_HOME% - to pick a particular java to run under
 REM   2. %ADTPRO_HOME% - to say where you installed ADTPro
@@ -16,7 +13,7 @@ REM e.g. uncomment (remove the "REM" from in front of) and
 REM      customize the following SET statements.  
 REM Note: They must have a trailing backslash as in the examples!
 REM 
-SET ADTPRO_HOME=C:\Users\conta\git-CVC\Retro\gitarcade\AppleII\ADTPro-2.1.0\
+SET ADTPRO_HOME=D:\Git\Retro\git-retro\apple\AppleII\ADTPro-2.1.0\
 SET MY_JAVA_HOME=C:\Progra~1\Java\jdk-18.0.2.1\bin\
 
 
