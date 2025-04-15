@@ -1,0 +1,1 @@
+altair.exe -oD000 wozmon.bin
