@@ -1,0 +1,2 @@
+https://www.hackster.io/david-hansel/arduino-altair-8800-simulator-3594a6
+/!\ Dans config.h #define STANDALONE 1 => mettre à 0 avec un panel
