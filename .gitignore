@@ -1,5 +1,6 @@
 *.sym
 side*.psd
+front*.psd
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

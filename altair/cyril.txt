@@ -3,7 +3,8 @@
 STOP + AUX1 UP en même temps = configuration
 
 Eteindre puis 00000001 puis ALLUMER + DEPOSIT up = VGA
-SW12 up + other down + AUX2 down = DIR sd card
+J'ai modifier la config : par défaut VGA
+Pour switcher sur USB Prog c'est un peu complexe
+USB Prog = config 0001 => Putty > > 0001 + Deposite UP > double cliquer sur Altair dans putty
+Dans 16k basic lineprinter=O faire aux2 down pour charger un .bas
 
-TODO https://adwaterandstir.com/2019/08/31/how-to-use-vt100-emulator-video/
-On peut passer le VGA en défaut au lieu de USB : https://adwaterandstir.com/2018/02/01/easily-switch-between-serial-devices/

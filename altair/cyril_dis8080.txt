@@ -1,0 +1,3 @@
+Prendre un .asm
+python tools\asm.py double.asm double.bin
+Ouvrir le bin dans pycharm file/open icone 0101010

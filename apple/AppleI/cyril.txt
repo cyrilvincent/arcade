@@ -1,0 +1,6 @@
+E000R : Basic
+CTRL+Q = quit
+CTRL+L = load file
+	apple30.txt, hello.txt, lunar.txt, matrix.txt, pasart.txt
+startx puis CTRL+F : pas de blink => CTRL+L /home/pi/Desktop/apple30.txt
+
