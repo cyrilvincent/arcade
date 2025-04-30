@@ -9,6 +9,8 @@
 #define ESP32_R             6
 #define PERSONAL_COMPUTER   8
 
+#define CYRIL_REMOVE_CPU_SEROUT FALSE
+
 
 //-----------------------------------
 // ------ Choose your target --------
@@ -52,7 +54,7 @@
 //-----------------------------------
 // enable to use OLED; **has** to be disabled if OLED is not connected!
 // untested for quite a long time by now, 'should work' on Arduino/STM32
-//#define OLED
+// #define OLED
 
 
 //-----------------------------------

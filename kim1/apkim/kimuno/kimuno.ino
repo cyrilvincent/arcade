@@ -126,6 +126,11 @@ byte dig[19] = {
           0b00000001, //g printed as -
           0b00001000, //h printed as _
           0b00000000  //i printed as <space>
+          //0b0000110, //l
+          //0b00110111, // h
+          //0b01110110, // m
+          // Ajouter LHM on pourrait écrire C4A1L pour Cyril HIM1 pour KIM1
+          // Ajouter un scroliing d'intro
 };
 
 
@@ -200,6 +205,7 @@ void setup ()
 
   SerialX.begin(9600);
   SerialX.println();
+  SerialX.println("Starting Kim Uno");
 
   setupUno();         // initialise GPIO pins for keypad/LEDs
   reset6502();
@@ -209,16 +215,23 @@ void setup ()
 
 
 void loop () {
+  //SerialX.println("exec6502");
   exec6502(100);                                //do 100 6502 instructions
                                                 // varying the number 100 varies keyboard debounce/responsivity ;)                                                
 
   if (SerialX.available()) {                    // read input from serial 'emulated' keypad
+    //SerialX.println("Available");
     curkey = SerialX.read() & 0x7F;             // this is normal serial input *and* simulated keypad keypresse
+    SerialX.println(curkey);
     interpretkeys();
   }
 
+  //SerialX.println("ScanKeys");
   scanKeys();                                   // ... and read input from physical keypad
                                                 // this too calls interpretkeys, but inside the function. Hmm.
+  // Cyril
+  //SerialX.println("Loop");
+  //delay(1000);
 }
 
 
@@ -488,11 +501,11 @@ void scanKeys()
       if (digitalRead(aCols[col])==LOW)  // key is pressed
       { keyCode = col+row*8+1;
         if (keyCode!=prevKey)
-        {   //SerialX.println();
-            //SerialX.print(" col: ");  SerialX.print(col, DEC); 
-            //SerialX.print(" row: ");  SerialX.print(row, DEC); 
-            //SerialX.print(" prevKey: ");  SerialX.print(prevKey, DEC); 
-            //SerialX.print(" KeyCode: ");  SerialX.println(keyCode, DEC); 
+        {   SerialX.println();
+            SerialX.print(" col: ");  SerialX.print(col, DEC); 
+            SerialX.print(" row: ");  SerialX.print(row, DEC); 
+            SerialX.print(" prevKey: ");  SerialX.print(prevKey, DEC); 
+            SerialX.print(" KeyCode: ");  SerialX.println(keyCode, DEC); 
            prevKey = keyCode;
            curkey = parseChar(keyCode);
             //SerialX.print(" curkey: ");  SerialX.print(curkey, DEC); 
@@ -584,8 +597,8 @@ void oledRefresh(int newOledMode)
 {
 //  oled.clear();
   oled.paintscreen();
-//  oled.setCursor(3,3);
-//  oled.print("HELLO");
+  oled.setCursor(3,3);
+  oled.print("HELLO");
   oled.println();
 }
 #endif

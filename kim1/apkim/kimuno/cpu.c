@@ -274,7 +274,8 @@ uint8_t read6502(uint16_t address)
 		threeHex[2][1]= RAM[0x00F9] & 0xF;
                         
 	//#ifdef AVRX      // remove this block to get led digits on serial for AVR too
-  #if _TARGET != PERSONAL_COMPUTER
+  #if !CYRIL_REMOVE_CPU_SEROUT
+	#if _TARGET != PERSONAL_COMPUTER
 		serout(13); serout('>');
 		for (iii=0;iii<3;iii++)
 		{ serouthex(threeHex[iii][0]); serouthex(threeHex[iii][1]); serout(' ');
@@ -285,6 +286,7 @@ uint8_t read6502(uint16_t address)
 
 	#else          // ------------------ end of block for serial-port led digits
 		serouthex(0);  // the PC version does things differently elsewhere...
+	#endif
 	#endif
 
 //		pc = 0x1F45;    // skip subroutine part that deals with LEDs (used with driveLEDs above)
