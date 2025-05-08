@@ -130,7 +130,7 @@ byte dig[19] = {
           //0b00110111, // h
           //0b01110110, // m
           // Ajouter LHM on pourrait écrire C4A1L pour Cyril HIM1 pour KIM1
-          // Ajouter un scroliing d'intro
+          // Ajouter un scrolling d'intro
 };
 
 
@@ -508,7 +508,7 @@ void scanKeys()
             SerialX.print(" KeyCode: ");  SerialX.println(keyCode, DEC); 
            prevKey = keyCode;
            curkey = parseChar(keyCode);
-            //SerialX.print(" curkey: ");  SerialX.print(curkey, DEC); 
+            SerialX.print(" curkey: ");  SerialX.print(curkey, DEC); 
            timeFirstPressed=millis();  // 
         }
         else // if pressed for >1sec, it's a ModeShift key

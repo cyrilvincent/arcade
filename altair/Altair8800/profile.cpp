@@ -66,7 +66,7 @@ void prof_print_details()
           Serial.print(F("% = "));
           Serial.print(totalpct * 100.0);
           Serial.print(F("% : "));
-          disassemble(dummymem, 0);
+          disassemble(dummymem, 0, true);
           Serial.print('\n');
           prof_opcode_count[maxIdx] = 0;
         }

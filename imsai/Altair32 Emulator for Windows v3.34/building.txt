@@ -1,0 +1,89 @@
+12:59 PM 11/8/2006
+
+DISCLAIMERS:
+
+	To start off, I'm not a professional programmer; my real job is
+	being a banker. Before this project I never programmed directly
+	for the Win32 platform (although I developed a few small Visual
+	BASIC apps), and I never used C. So, not only did I have to learn
+	the C language, but I've had to learn Win32 programming. I have
+	always been a fan of the "Inside..." and "Undocumented..." books
+	in the Andrew Schulman Programming Series so before this project,
+	I was able to read and understand programs written in C for the Windows
+	platform, but as anyone who has studied a foreign language knows, it's
+	one thing being able to read a language and it's another to speak it.
+
+	Often times I'd implement a feature knowing nothing about the
+	"correct" way to do it. Typically I'd peruse one of the Win32 books
+	I have, do some web searches, check out the MSDN site and sometimes
+	look at source code from other Windows apps. Often it was enough to
+	see a key function or message listed in the WinAPI section of MSDN
+	to enable me to get on with the solution. In other instances I'd take
+	it as "black magic" and just rip a snippet of code from elsewhere and
+	trust that it would work for me until I could really understand what
+	was going on. I've got to believe that a lot of Windows programmers
+	work this way too.
+
+	Also, the Altair32 project is a bit different from your run of the
+	mill development project in that I didn't write it from scratch.
+	I adopted this project from Claus Giloi, a programmer at Microsoft
+	who in his spare time cobbled together the Altair and IMSAI emulator
+	programs (which differ only in appearance) from nothing but the Intel
+	data sheets and some random information on the Web.
+
+	So, if you look through the code, you'll see ample evidence of its
+	lineage. With each revision of the code, I've attempted to clean-up
+	the code, add some structure to it and add plenty of comments to make
+	it more readable to the casual programmer. Code formatting is a small
+	project unto itself.
+
+	The code was developed by a long series of slight improvements and
+	a few large undertakings. The large undertakings included verifying
+	and re-engineering the 8080 processor code, integrating the Solace
+	debugger into the Altair, integrating the disk image support and
+	developing working console code.
+
+	
+BUILDING THE PROGRAM:
+
+	Altair32 was built using Microsoft Visual Studio .NET 2003, and was
+	developed under Windows XP SP2.  It has been tested on Windows NT 4.0
+	SP6a, Windows 2000 and Windows XP and seems to work on those platforms
+	well. Some of the Windows API functions used require an NT-based OS
+	to work. Therefore, the minimum supported OS is Windows NT4.
+
+	Note that a few files are loaded from the emulator assuming a certain
+	directory hierarchy (namely, the help files and the program files).
+	If you execute Altair32 from MSVS, the notion of "current directory" 
+	at program startup is from the build directory, and those files won't 
+	be found.  Either copy the resulting binary up a level or edit the source
+	to access whatever directory you desire.
+
+	In order to successfully compile the emulator, you need to install the
+	Html Help Compiler package from Microsoft. This package contains a
+	linker library that you have to put in a directory your linker can find.
+
+SUPPORT:
+
+	A support bulletin board has been established at http://www.altair32.com.
+	Follow the link found on that page to the Support BBS.
+
+MISCELLANEOUS:
+
+	Should you feel motivated to improve the emulator in a major way, or 
+	even a minor way, that you think would be of interest to other Altair32
+	users, please let me know and I'll integrate your change (if I also think
+	it is useful to a larger audience) to the "official" source code base.
+
+	I should also mention that I tried to build a faithful emulation of a
+	real machine, not an emulation of a souped-up one that could have never
+	existed "in the day."
+
+	Ultimately I took-on this project because I have no realistic hope of ever
+	owning a real Altair and the opportunity to contribute something to the
+	hobby of "classic computing" presented itself.
+
+	Thanks for trying the Altair32 Emulator. Enjoy.
+
+Rich Cini
+altair32@verizon.net

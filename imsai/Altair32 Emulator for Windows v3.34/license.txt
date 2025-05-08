@@ -1,0 +1,67 @@
+License.txt -- Altair32
+Release date:  2006/05/01
+Document date: 9:04 PM 4/19/2006
+e-mail: altair32@optonline.net
+Web Site:	http://highgate.comm.sfu.ca/~rcini/classiccmp/Altair32.htm
+		http://www.altair32.com/
+
+
+License
+=======
+
+The Altair32 Emulator Public License
+  Version 1.0, 31 January 2005
+
+Copyright notices accompany this license document identifying the copyright
+holders is contained within each source file.
+
+Permission to copy, modify, and distribute this software and its documentation
+("Software") on a non-commercial basis, with or without modification, and
+without fee or royalty is hereby granted, provided that the following
+conditions are met:
+
+1. Redistributions in source form must retain copyright statements
+   and notices, and
+
+2. Redistributions in binary form must reproduce applicable copyright
+   statements and notices, this list of conditions, and the following
+   disclaimer in the documentation and/or other materials provided
+   with the distribution, and
+
+3. Redistributions must contain a verbatim copy of this document, and
+
+4. Modifications may be distributed by either distributing the
+   modified Software in its entirety or by distributing patches to
+   the original Software, and
+
+5. Modifications made by a contributor shall be identified in the comment
+   block in each modified source file, shall identify the date of the
+   change, the author's initials and a description of the modifications.
+   Responsibility for any wrong behavior of the modified software shall
+   remain with the contributor of the modifications.
+
+The Author may revise this license from time to time. Each revision
+is distinguished by a version number. You may use this Software under
+terms of this license revision or under the terms of any subsequent
+revision of the license.
+
+THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND OTHER CONTRIBUTORS "AS IS"
+AND ANY EXPRESSED OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHOR(S) OR OWNER(S) OF
+THE SOFTWARE BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY
+OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+The names of the authors and copyright holders must not be used in
+advertising or otherwise to promote the sale, use or other dealing
+in this Software without specific, written prior permission. Title
+to copyright in this Software shall at all times remain with copyright
+holders.
+
+Permission to copy and distribute verbatim copies of this document is
+granted.
