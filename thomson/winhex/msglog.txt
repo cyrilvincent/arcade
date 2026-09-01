@@ -5,3 +5,7 @@
 Solution: Redémarrer winhex.exe maintenant ? | Non
 08/10/2023  21:15:39  Voulez-vous vraiment abandonner l'action? | Oui
 08/10/2023  21:16:01  WinHex | Only with admin rights you can see process names and loaded modules. Only with the 64-bit edition you can see 64-bit processes.
+WinHex 20.9 x86, Utilisateur: conta
+21/08/2026  19:02:15  Lecteur E: | Vous n'avez pas les droits administrateur. Il faut lancer le programme en tant qu'administrateur p. e. to have sector-level access to storage devices. (p.e. clic droit sur le fichier .exe) | OK
+21/08/2026  19:02:18  Pas de succès pendant l'accès à «E:\». Le chemin d’accès spécifié est introuvable.
+21/08/2026  19:02:23  Erreur #10 | Pas de succès pendant l'accès à «E:\». Le chemin d’accès spécifié est introuvable.
