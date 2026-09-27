@@ -1,0 +1,13 @@
+IDC_MENU MENU 
+BEGIN
+    POPUP "File"
+    BEGIN
+        MENUITEM "Convert Basic .phc to TXT",  ID_CONVERT2TXT
+        MENUITEM "Convert Basic TXT to PHC",   ID_CONVERT2PHC
+        MENUITEM "Exit (&X)",         IDM_EXIT
+    END
+    POPUP "Help"
+    BEGIN
+        MENUITEM "About",         IDM_ABOUT
+    END
+END

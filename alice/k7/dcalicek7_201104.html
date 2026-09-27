@@ -1,0 +1,181 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+ <title>DCALICEK7 - Notice</title>
+ <style type="text/css">
+  body {font-family: sans-serif; font-size: 80%; color: #000; background-color: #fff;}
+  h1,h2,h3 {font-family: sans-serif; color: #000; margin-top: 1em; margin-bottom: 0.5em;}
+  h1 {font-size: 180%; background-color: #4cf; padding-left: 0.2em;}
+  h2 {font-size: 140%; background-color: #cff; padding-left: 0.2em; margin-top: 3em;}
+  h3 {font-size: 100%; border-style: none; border-bottom: solid 1px #ccc; margin-left: 0.8em;}
+  p  {margin-left: 1em; margin-top: 0em;}
+  ul {margin-left: 2em; margin-top: 0em;}
+  pre{margin-left: 3em; font-size: 120%;}
+ </style>
+ <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+ <meta name="description" content="Notice de dcalicek7">
+ <meta name="author" content="Daniel Coulom">
+ <meta name="keywords" content="dcalice, cassette, emulateur, alice, matra">
+</head>
+
+<body>
+<h1>DCALICEK7 - Notice</h1>
+<p>
+DCALICEK7 est un programme pour Windows permettant de convertir les cassettes Alice :<br>
+- Du format Windows PCM (.wav) vers le format image de cassette (.k7) sp&eacute;cifique &agrave; l'&eacute;mulateur DCAlice<br>
+- Du format image de cassette (.k7) sp&eacute;cifique &agrave; l'&eacute;mulateur DCAlice vers le format Windows PCM (.wav)<br>
+<br>
+Version : <b>2011.04</b><br>
+Auteur : Daniel Coulom<br>
+Site web : <a href="http://alice32.free.fr">alice32.free.fr</a>
+</p>
+
+<h3>Avertissement</h3>  
+<p>
+Chaque nouvelle version apporte th&eacute;oriquement des améliorations et des corrections d'erreurs.<br>
+Elle peut aussi provoquer de nouvelles anomalies.<br>
+Le signalement de tout comportement anormal est important pour permettre les corrections.<br>
+En cas de probl&egrave;me majeur, vous pouvez toujours utiliser les versions pr&eacute;c&eacute;dentes.<br>
+</p>
+
+<h3>Anti-virus</h3>  
+<p>
+Certains anti-virus voient parfois des menaces dans des programmes parfaitement inoffensifs, en<br>
+particulier lorsque les ex&eacute;cutables sont compact&eacute;s avec UPX. Dans le cas de dcalicek7 il n'y a strictement<br>
+rien &agrave; craindre : ni virus, ni cheval de Troie, ni logiciel espion, ni publicit&eacute;, ni appel de site internet.<br>
+Si votre anti-virus trouve le programme suspect, c'est un "faux positif". Dans ce cas, vous devez signaler<br>
+l'anomalie à votre fournisseur, pour qu'il puisse corriger ses r&egrave;gles de d&eacute;tection.
+</p>
+
+<h2>Installation et utilisation de dcalicek7</h2>
+
+<h3>Proc&eacute;dure d'installation</h3>
+<p>
+D&eacute;compressez le fichier .zip dans un r&eacute;pertoire. DCALICEK7 ne modifie pas la base de registre, ni aucun<br>
+fichier de votre ordinateur. C'est un programme portable, pouvant &ecirc;tre install&eacute; sur un support amovible, tel<br>
+un disque externe ou une cl&eacute; USB, et d&eacute;plac&eacute; d'un ordinateur &agrave; un autre sans aucune difficulté.
+</p>
+
+<h3>Utilisation</h3>
+<p>
+- Lancer le programme par un double-clic sur le nom de l'ex&eacute;cutable : dcalicek7.exe.<br>
+- S&eacute;lectionner le fichier &agrave; convertir en utilisant le bouton "Parcourir...".<br>
+- S&eacute;lectionner le type de conversion k7>wav ou wav>k7, au moyen des boutons radio.<br>
+- Lancer la conversion en cliquant sur le bouton en bas &agrave; droite de la fen&ecirc;tre.<br>
+- Lire attentivement les messages et r&eacute;pondre si n&eacute;cessaire aux bo&icirc;tes de dialogue.<br>
+Dans la plupart des cas les param&egrave;tres par d&eacute;faut conviennent.<br>
+Sinon consultez les paragraphes ci-dessous pour comprendre leur signification.
+</p>
+
+<h2>Param&egrave;tres modifiables par l'utilisateur pour la conversion de .wav vers .k7</h2>
+
+<h3>Seuil initial</h3>
+<p>
+La distinction entre les bits 0 et les bits 1 est r&eacute;alis&eacute;e par comparaison de leur p&eacute;riode &agrave; un seuil, exprim&eacute; en<br>
+nombre d'&eacute;chantillons &agrave; 44100 Hz. Par exemple, un seuil de 30 correspond &agrave; une p&eacute;riode de 680 microsecondes.<br>
+Le seuil est ajust&eacute; automatiquement en fonction de la p&eacute;riode des octets de synchronisation qui pr&eacute;c&egrave;dent chaque<br>
+bloc. Le seuil initial permet la d&eacute;tection de ces octets de synchronisation. S'il est trop &eacute;loign&eacute; de la valeur optimale,<br>
+le risque est de ne pas pouvoir reconna&icirc;tre les octets de synchronisation, et donc de ne pas pouvoir lire le bloc.  
+</p>
+
+<h3>Niveau z&eacute;ro</h3>
+<p>
+Chaque &eacute;chantillon a une valeur dans l'intervalle 0-255. Le niveau z&eacute;ro est la valeur de l'échantillon en l'absence<br>
+de signal (par d&eacute;faut : 128). La p&eacute;riode des bits est mesur&eacute;e entre deux passages par le niveau z&eacute;ro. Si le signal<br>
+n'est pas sym&eacute;trique, en particulier si une composante continue est ajout&eacute;e, la modification du niveau z&eacute;ro peut<br>
+am&eacute;liorer les chances de d&eacute;coder le fichier .wav sans erreur.  
+</p>
+
+<h3>Amplitude du bruit</h3>
+<p>
+Le bruit de fond, ou "souffle", est une composante in&eacute;vitable d'un enregistrement sur bande magn&eacute;tique. S'il est<br>
+pris en compte pour le d&eacute;codage il peut, dans certains cas heureusement tr&egrave;s rares, &ecirc;tre interpr&eacute;t&eacute; comme des<br>
+bits valides. Pour &eacute;viter cet inconv&eacute;nient, on peut d&eacute;finir le niveau du bruit : c'est l'amplitude minimum des signaux<br>
+qui seront d&eacute;cod&eacute;s. En dessous de cette amplitude, mesur&eacute;e sur une &eacute;chelle de 0 &agrave; 255, le signal est consid&eacute;r&eacute;<br>
+comme du bruit de fond et est ignor&eacute;. Le niveau de bruit est directement proportionnel au niveau d'enregistrement,<br>
+il convient donc de l'ajuster en cons&eacute;quence.
+</p>
+
+<h3>Inversion de phase</h3>
+<p>
+Dans un enregistrement sur cassette, un bit est cod&eacute; par une p&eacute;riode, compos&eacute;e d'une alternance positive suivie<br>
+d'une alternance n&eacute;gative. Si le signal est invers&eacute;, par exemple &agrave; cause d'un mauvais c&acirc;blage, l'alternance positive<br>
+va devenir la deuxi&egrave;me alternance d'un bit et l'alternance n&eacute;gative sera la premi&egrave;re alternance du bit suivant. Ce<br>
+m&eacute;lange de deux bits successifs va consid&eacute;rablement perturber le d&eacute;codage. On peut le voir dans l'histogramme<br>
+des p&eacute;riodes des signaux, quand il appara&icirc;t un pic de moindre hauteur entre les deux pics correspondant aux bits<br>
+1 et 0. Dans ce cas, il faut cocher la case "Inversion de phase" pour r&eacute;tablir le sens habituel des alternances. 
+</p>
+
+<h3>Am&eacute;lioration des transitions</h3>
+<p>
+Dans certaines conditions d'enregistrement, d&eacute;pendant essentiellement du mat&eacute;riel utilis&eacute;, on observe un changement<br>
+de fr&eacute;quence progressif entre deux bits de valeurs diff&eacute;rentes. Par exemple, quand un bit long est suivi d'un bit court,<br>
+la deuxi&egrave;me alternance du bit long va &ecirc;tre l&eacute;g&egrave;rement raccourcie. Inversement, quand un bit court est suivi d'un bit<br>
+long, la deuxi&egrave;me alternance du bit court va &ecirc;tre l&eacute;g&egrave;rement allong&eacute;e. Si la case "Am&eacute;lioration des transitions" est<br>
+coch&eacute;e, le programme corrige automatiquement ce d&eacute;faut.
+</p>
+
+
+<h2>Param&egrave;tres modifiables par l'utilisateur pour la conversion de .k7 vers .wav</h2>
+
+<h3>Niveau z&eacute;ro</h3>
+<p>
+C'est le seul param&egrave;tre utilis&eacute; pour la conversion dans ce sens. Il fixe la valeur des &eacute;chantillons pendant les p&eacute;riodes<br>
+de silence avant chaque bloc et en fin d'enregistrement.
+</p>
+
+<h2>Structure des fichiers en entr&eacute;e et en sortie de dcalicek7</h2>
+
+<h3>Structure des fichiers .wav</h3>
+<p>
+En entr&eacute;e les fichiers .wav PCM peuvent avoir n'importe quel format valide : mono ou st&eacute;r&eacute;o, 8 ou 16 bits par &eacute;chantillon,<br>
+fr&eacute;quence 22050 kHz ou plus. Dans le cas d'un fichier st&eacute;r&eacute;o, seul le canal droit est d&eacute;cod&eacute;. Le meilleur compromis est<br>
+44100 Hz 8 bits monophonique. En sortie les fichiers cr&eacute;&eacute;s sont exclusivement dans ce dernier format. Un fichier .wav<br>
+est composé d'une en-t&ecirc;te (voir la description ci-dessous), suivie des &eacute;chantillons sur un ou plusieurs octets en fonction<br>
+du format choisi.
+</p>
+<pre>
+// WAV header structure. See ftp://ftp.isi.edu/in-notes/rfc2361.txt
+// for information regarding format codes.
+struct wavhdr {
+  char riff[4];           // "RIFF"
+  SINT32 file_size;       // in bytes
+  char wave[4];           // "WAVE"
+  char fmt[4];            // "fmt "
+  SINT32 chunk_size;      // in bytes (16 for PCM)
+  SINT16 format_tag;      // 1=PCM, 2=ADPCM, 3=IEEE float, 6=A-Law, 7=Mu-Law
+  SINT16 num_chans;       // 1=mono, 2=stereo
+  SINT32 sample_rate;
+  SINT32 bytes_per_sec;
+  SINT16 bytes_per_samp;  // 2=16-bit mono, 4=16-bit stereo
+  SINT16 bits_per_samp;
+  char data[4];           // "data"
+  SINT32 data_length;     // in bytes
+};
+</pre>
+
+<h3>Structure des fichiers .k7</h3>
+<p>
+Un fichier .k7 est compos&eacute; de blocs successifs. Chaque bloc est pr&eacute;c&eacute;d&eacute; d'un octet de synchronisation, de valeur $55.<br>
+A la fin du bloc, il y a un autre octet $55. En outre, les fichiers .k7 g&eacute;n&eacute;r&eacute;s par dcalicek7 contiennent, avant l'octet de<br>
+synchronisation, une en-t&ecirc;te de 8 octets, identifi&eacute;e par un premier octet contenant la valeur hexad&eacute;cimale $dc. Le<br>
+deuxi&egrave;me octet, toujours &agrave; z&eacute;ro, est la nature du bloc (0 = bloc standard Alice). Les octets 3 et 4 contiennent le nombre<br>
+d'octets de synchronisation : pour simplifier, un seul octet de synchronisation est pr&eacute;sent dans le fichier .k7, mais en<br>
+r&eacute;alit&eacute; leur nombre peut varier. Les octets 5 à 8 contiennent le nombre d'&eacute;chantillons du silence avant le bloc.<br>
+En l'absence de cette en-t&ecirc;te de 8 octets, par exemple lorsque le fichier .k7 a &eacute;t&eacute; cr&eacute;&eacute; par un autre programme, la longueur<br>
+du silence et le nombre d'octets de synchronisation ne sont pas connus. Les valeurs suivantes sont prises par d&eacute;faut :<br>
+- Silence : 882000 &eacute;chantillons pour le bloc $00, 16000 &eacute;chantillons pour le premier bloc $01, 128 pour les blocs suivants.<br>
+- Synchronisation : 128 octets pour le bloc $00, 128 octets pour le premier bloc $01, 1 octet pour les blocs suivants.<br>    
+</p>
+ 
+<h2>Historique</h2>
+
+<h3>Version 2011.04</h3>
+<ul>
+<li>Premi&egrave;re version de dcalicek7, d&eacute;riv&eacute;e de l'ancien programme de conversion dctoolbox.</li>
+</ul>
+
+<hr><center>&copy; 2011 - Daniel Coulom</center>
+
+</body>
+</html>

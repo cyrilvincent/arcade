@@ -1,0 +1,16 @@
+simple petit memo... pour pouvoir me rappeler plus tard de la méthode employée... 
+Pour transferer des WAV de K7 PHC 25. 
+Il faut 
+resampler en 11025 Hz 8 bits 
+se munir du programme P6DatRec. 
+Ne toucher à rien dans la config, de toute facon c'est illisible (en japonais avec une mauvaise police de caracteres). 
+
+Effectuer un drag and drop du fichier .wav 
+Il devrait y avoir en sortie un fichier .P6 a renommer en .phc. 
+
+Pour le moment l'émulateur trouve qqs erreurs mais le process semble OK. L'émulateur lui meme pourrait etre buggé. 
+
+[edit] 
+
+en fait seule la version P6DatRec2 donne de bons résultats. 
+Il est préférable d'utiliser un filtre performant lors de la diminution de fréquence (ex: bicubique). Il faut également supprimer tout ce qui précede la fréquence porteuse stabilisée pour éviter l'ajout d'octets incorrects.
