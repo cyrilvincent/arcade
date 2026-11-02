@@ -1,0 +1,41 @@
+Le sketch pcw_ps2.ino est prêt : il lit le clavier PS/2 (set 2) et envoie au PCW l’état complet des touches, en 17 mots de 12 bits en boucle. Je l’ai écrit d’après la doc de John Elliott et les mesures de James Ots, mais je n’ai pas pu le tester et certains détails du bus sont à valider.
+
+Schéma (Arduino Uno/Nano)
+
+ Prise PCW (DIN 4)              Arduino                 Clavier PS/2
+ ─────────────────              ───────                 ────────────
+ GND  ────────────────────────── GND  ───────────────── GND
+ CLK  ──────[100 Ω]───────────── D6
+ DATA ──────[100 Ω]───────────── D7
+ (+5 V : voir note)              5V ──┬──[10k]──┬─────── +5 V
+                                      │         │
+                                 D3 ──┴─────────┼─────── CLK  (pull-up 10k vers 5V)
+                                 D4 ────────────┴─────── DATA (pull-up 10k vers 5V)
+
+Ce que je n’ai pas pu vérifier
+
+Le brochage de la prise DIN 4 : il est dans une image de la page de Seasip que je ne peux pas lire. Repère GND et +5 V au multimètre sur la prise du PCW (allumé, clavier débranché). CLK et DATA se repèrent en branchant un vrai clavier PCW et en regardant les deux autres broches à l’oscilloscope.
+Les timings et les polarités du bus : j’ai pris les valeurs de Ots, soit repos à 0, DATA lue sur le front descendant de CLK, 21 µs entre impulsions et 48 µs après la 4e. Restent inconnus la polarité exacte de DATA, l’espacement entre mots et le sens « touche appuyée = 1 ». Pour le savoir, capture un vrai clavier PCW avec un analyseur logique à 8 voies (une dizaine d’euros) et ajuste les #define « A VALIDER » en tête du fichier.
+L’alimentation : Ots mesure environ 65 mA pour un clavier PCW. Un Arduino plus un clavier PS/2 peuvent dépasser ce que prévoit le PCW. Pour les premiers essais, alimente l’Arduino en USB et ne relie que GND, CLK et DATA au PCW, sans le +5 V.
+
+Limites du code actuel
+
+La LED Shift Lock est suivie en interne, mais je ne sais pas si le PCW attend la touche brute ou l’état latché.
+Les octets 0xC à 0xF (touches « joystick ») ne sont pas calculés.
+Le mapping est basé sur la position physique des touches : sur un clavier AZERTY, le A tapé donne la touche Q du PCW, donc la disposition dépend du clavier PCW et du keymap CP/M.
+Les symboles (', \, <>) sont approximatifs, à ajuster dans les tables.
+La touche 49 est marquée « S » dans la doc alors que c’est le « 5 », je l’ai corrigé dans le code.
+
+Le pullup ca veut dire que je dois mettre une resistance 10kohm entre d3 et 5v puis d4 et 5v
+
+Oui : une résistance de 10 kΩ entre D3 et +5 V, une autre entre D4 et +5 V. Le but est de maintenir les lignes à 5 V quand personne ne les tire à 0 (le clavier PS/2 les met à 0 pour envoyer ses bits, et les relâche ensuite).
+
+Mon schéma ASCII était un peu confus sur ce point. C’est plus simple comme ça :
+
+        5V ──[10k]──┬── D3 ──── CLK du PS/2
+        5V ──[10k]──┬── D4 ──── DATA du PS/2
+Chaque résistance a un côté au 5 V et l’autre côté sur la ligne (là où le fil D3 / D4 rejoint le clavier PS/2).
+
+Ce n’est pas bloquant : le sketch active déjà les pull-ups internes de l’Arduino (INPUT_PULLUP, environ 30-50 kΩ), et la plupart des claviers PS/2 ont les leurs. Ça marchera souvent sans résistances externes. Les 10 kΩ rendent juste le signal plus propre, surtout avec des fils un peu longs.
+
+Les 100 Ω côté PCW (D6 et D7) sont différents : ils se mettent en série entre la broche de l’Arduino et la prise du PCW, pour protéger en cas d’erreur de câblage.
