@@ -1,0 +1,109 @@
+Copyright and Trademark Information
+
+ADSCSI.CPX and this documentation are copyright 1991 by ICD, 
+Inc.  All rights reserved.  These files are authorized for 
+distribution only to owners of ICD's STHA, Advantage, and 
+AdSCSI host adapters directly on disk from ICD, Inc. or 
+electronically from our BBS, GEnie, or CompuServe.  No other 
+distribution is authorized.  AdSCSI is a trademark of ICD, 
+Inc.  Other product names mentioned may be registered 
+trademarks or trademarks of their holders.
+
+Introduction
+
+Atari's new extensible control panel XCONTROL offers a new 
+level of flexibility to ST owners.  It is no longer 
+necessary to have a separate desk accessory for each 
+hardware or software feature.  With ADSCSI.CPX, ICD adds 
+several host adapter control and information features to 
+XCONTROL.
+
+ADSCSI.CPX and ADSPEED.CPX (for ICD's AdSpeed ST 
+accelerator) are the first, to our knowledge, third party 
+extensions to Atari's new XCONTROL extensible control panel.  
+At this time, this control panel is included with Mega STe and 
+TT computers and available on GEnie and CompuServe.  The new 
+control panel does not require the new versions of TOS in these
+computers to operate and will work fine on existing ST systems.
+
+Installation
+
+Simply copy the file ADSCSI.CPX to the directory containing 
+the rest of your *.CPX files.  For details on XCONTROL and 
+CPX installation, consult Atari's documentation.
+
+Use
+
+To access ADSCSI.CPX, open your control panel and scroll if 
+necessary until you see the AdSCSI Options entry.  Double 
+click on this entry to bring up the ADSCSI.CPX main window.
+
+The main window for ADSCSI.CPX contains four sections: 
+Options, Information, Sense Codes, and Relog HDs.
+
+The Options section allows you to enable or disable the 
+AdSCSI Hard Disk Handler write cache and enable and disable 
+write verify.  The buttons beside these options display the 
+current status (On or Off).  To change the status of either 
+of these features, click on the button, then click on your 
+choice.  Any changes made will not take effect until you 
+close the window or click on OK.
+
+Clicking on OK or the window's close button or hitting the 
+RETURN key will put into effect any changes made in the 
+Options section.  Clicking on Cancel will quit ADSCSI.CPX 
+without making any changes.
+
+Clicking on the Information box will bring up another window 
+giving information about the hard disk driver.  There is 
+more information available than will fit in the window.  To 
+see more, use the slider bar or click on the up or down 
+arrows.
+
+The following information is available in the Information 
+window:
+
+ICDBOOT Version.  This is the version of the ICD Hard Disk 
+Handler currently running in the system.
+
+Folders Allocated.  This is the number of extra folders 
+allocated by the hard disk handler.  This number is set with 
+HDUTIL.PRG.
+
+Max Sector Size.  This is the maximum sector size the driver 
+is configured for.  This is either the value saved in the 
+hard disk driver by HDUTIL.PRG or the largest sector size of 
+any partition in the system at boot, whichever is greater.
+
+Cache Read Hits.  This number is the percentage of sector 
+reads attempted by the operating system that were read from 
+the cache rather than from the drive.  This number will 
+always be less than 100%, since some reads must come from 
+the drive.
+
+Cache Write Hits.  This number is the percentage of sector 
+writes attempted by the operating system where the sector 
+was in the cache.  Unlike Cache Read Hits, this number is 
+not a clear indication of write cache effectiveness.  
+Further improvement of system performance is provided by the 
+write cache saving writes until periods of disk inactivity.  
+But any number seems to be better than none.
+
+To exit the Information display, click on OK or the window's 
+close button.
+
+The Sense Codes section shows a list of common sense codes 
+and their definitions.  Since there is no sense code 
+standard, and these numbers do come from the drive's 
+controller, it is possible that these definitions will not 
+hold for your system.  As with the information display, 
+there is more information available than will fit in the 
+window.  Click on the up and down arrows or use the scroll 
+bar to see the whole display.
+
+Clicking on Relog HDs will cause the driver to check all 
+enabled IDs for hard drives.  This button is useful if you 
+have a removable media drive that was not ready (no 
+cartridge installed) when the computer booted.  Just insert 
+a cartridge, wait until the drive is ready, then click on 
+Relog HDs.

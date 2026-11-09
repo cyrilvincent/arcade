@@ -1,0 +1,883 @@
+ICD AdSCSI ST host adapter software update
+------------------------------------------
+
+IMPORTANT: READ THE "WHATS.NEW" FILE!!!
+
+This file documents the ICD AdSCSI ST host adapter software.
+These utilities are packaged with all ICD ST Hard Drive Systems
+and ICD ST host adapters and WILL ONLY WORK WITH AN ICD HOST
+ADAPTER in your system (except the PRO level, which will work
+with or without an ICD host adapter).  They are all Copyright 
+1987-1994 by ICD,Inc.
+
+Companies using this software with their products must include an
+ICD ST host adapter as part of that product, or have licensed the
+PRO level of ICD software, or they will be in violation of United 
+States and/or International Copyright Laws!
+
+If you have any questions:
+
+     ICD, Inc.
+     1220 Rock Street
+     Rockford, IL  61101-1437
+
+     Voice:  (815) 968-2228
+     BBS:    (815) 968-2229
+     FAX:    (815) 968-6888
+
+The ICD BBS always has the latest revisions of the ICD ST host
+adapter software (regular version only), as well as various 
+handy utilities, etc., all yours for the downloading.  Our BBS 
+has a US Robotics 9600 baud HST modem and is usually up 24 hours 
+a day.  Support and updated files are also available on GEnie 
+(ICD or M1220) and CompuServe (76004,1600).
+
+Suggestion: make a printed copy of this file for future 
+reference.
+
++---------------------------------------------------------------+
+
+MANUAL UPGRADES:
+
+This documentation only includes changes made to the ICD AdSCSI
+ST host adapter software since the latest manual was printed.  
+The latest manual has the number 36-90 in the lower-right corner
+of the back cover.  If you would like to receive the latest 
+manual, send $15 to ICD.  Funds MUST be in US dollars drawn on a
+US bank.
+
+SOFTWARE UPGRADES:
+
+There are 3 levels of ICD ST software now in distribution 
+(effective with version 6.0.0 and later of ICDBOOT):  
+
+   (1) The PRO level, which installs on all ST, TT, and Falcon
+       computers regardless of whether an ICD host adapter is 
+       found.  The PRO level supports Floptical¾ drives.  This 
+       level is available ONLY for purchase.  To obtain updates, 
+       original disk must be returned to ICD with a $15 fee. 
+       Funds MUST be in US dollars drawn on a US bank.  The 
+       PRO level software is NOT AVAILABLE as an upgrade to any
+       other level of ICD software.
+
+   (2) The LINK level, which supports Floptical¾ drives.  This
+       level is shipped only with the Link host adapter.  To
+       obtain updates, original disk must be returned to ICD with
+       a $15 fee.  Funds MUST be in US dollars drawn on a US bank.
+
+   (3) The regular level.  Floptical¾ drives are not supported.  
+       Updates are available from ICD on disk for $15 (original disk
+       not required), or are downloadable on the ICD BBS, GEnie, 
+       or CompuServe.  Funds MUST be in US dollars drawn on a US
+       bank.
++---------------------------------------------------------------+
+
+Changes to the ICD AdSCSI ST host adapter software since the
+latest manual was printed:
+
+-    3 levels of ICD software are now in distribution.  These are:
+     PRO, LINK, and STHA (or regular) levels.  See notes on ICDBOOT 
+     below.
+
+-    The PRO and LINK levels of ICD software support Floptical¾ drives.
+
+-    CHANGE IN FLOPTICAL¾ DRIVE SUPPORT: (Link and Pro level only)
+     Previous versions of ICDFMT and ICDBOOT only allowed you to
+     set up the 21 Mb diskettes according to the Insite Peripherals
+     standard for information exchange between different computer
+     systems.  These disks would not auto-boot and were not useable
+     under TOS 1.0 - 1.2.  Because of popular demand, you are now
+     given the choice in ICDFMT and INSTALL to set up the 21Mb
+     diskettes either with the Standard (Insite Peripherals) or Atari
+     format.  If you choose Atari format, the diskettes are useable
+     with all TOS versions.  They can also be made to auto-boot if
+     the the drive is the lowest ID in the system.   
+ 
+-    A new hard disk installation program is included.  INSTALL.PRG is
+     intended for the user who is totally unfamiliar with hard disks
+     and wants an easy installation.  The program will automatically
+     format the disk if necessary.  It will verify sectors, partition 
+     the disk, sets up the auto-boot, and create a DESKTOP.INF file 
+     and AUTO folder on partition C.  There are no user-selectable
+     parameters.  Several warnings are given allowing the user to quit.
+     After that, all data on the disk is destroyed.
+     
+     This program is also ideal for dealers to set up hard disks for
+     their customers.  If more than one hard disk is connected, the user
+     must choose which one to install.  After that, this disk is set
+     up AS IF it is the only disk in the system.  In other words, the
+     installed disk may then be taken to another system and plugged in.
+     It will auto-boot and show a desktop with the correct icons for
+     the number of partitions on the disk.
+
+-    ICDFMT now optionally allows 100% Atari AHDI compatibility.
+     See notes on ICDFMT for this and other changes.
+
+-    You do not always need to run HDUTIL to install a new ICDBOOT
+     on your hard drive.  If the drive is already set up to auto-boot
+     all you need to do is to copy ICDBOOT.PRG to the root or main
+     directory of drive C:, rename your old ICDBOOT.SYS (to .SYX) or 
+     trash it, then rename ICDBOOT.PRG to ICDBOOT.SYS and reboot.
+
+-    All programs have been tested and modified as necessary to 
+     present a proper display in the Atari TT and Falcon graphics 
+     modes.  Be advised, though, that any programs which didn't 
+     work in the ST's low-resolution also will not work in TT 
+     low-res (256 color mode) or Falcon 40-column modes.
+
+-    Several minor bugs have been fixed.  Because of this, it is 
+     advisable that you always use the latest version of the ICD 
+     AdSCSI ST host adapter software.  Updates to all programs
+     (except the PRO and LINK levels of ICDBOOT) are available on
+     the ICD BBS, GEnie, or CompuServe.
+
+-    STacy users, using ICD PRO software and ICDFMT, see special
+     note below about determining drive size.
+
+-    New user options on configuring ICDBOOT: (a) you can set a
+     variable delay in the flush of the write cache, up to 30
+     seconds.  (b) you can skip logical drives at bootup.  (c)
+     you can set the software to do "retries" in case of command
+     phase timeouts. 
+
+-    In keeping with the variable write delay, FLUSH.PRG, which
+     flushes the write cache to disk, is included.
+     
+-    STARTHD.PRG and RELOG.PRG are included for those who have
+     hard disks that do not spin up automatically.
+
++---------------------------------------------------------------+
+ 
+Changes to files on the distribution diskette: 
+ 
+ADSCSI.CPX
+     This is an extension for Atari's Extensible Control Panel
+     (XCONTROL).  See the file ADSCSI.TXT for additional
+     information.
+     
+BOOTFIX.TOS
+     This has been updated to support drives attached to the TT
+     SCSI port as well as the ACSI\DMA port.
+
+     This version also disables Parity checking on Quantum ELS
+     series 3 1/2" hard drives.  Of course, to do this, the drive
+     must be connected to an AdSCSI or Advantage series host adapter.
+
+CACHEHIT.TOS
+     This program displays the effectiveness of the caches.  It 
+     displays the percentage of reads which were satisfied by 
+     the cache, and the percentage of writes which updated 
+     entries already in the cache.  This can be used to 
+     determine what cache settings are the most efficient for 
+     your system.
+
+     It's important to note that this only gives statistics for 
+     the cache buffers, and not the TOS buffers.  The TOS 
+     buffers are maintained by the operating system and can't be 
+     checked.  The ICD AdSCSI ST host adapter manual explains 
+     the TOS buffers in more detail.
+
+CACHEOFF.PRG
+CACHEON.PRG
+     These programs are used to enable and disable the write
+     cache function of ICDBOOT.  Users of the Supercharger PC
+     emulator must turn off the write cache before running the
+     Supercharger intialization program or the Supercharger will 
+     NOT be able to write to the hard disk.
+
+     Turning the cache off this way does not reduce memory usage.
+
+CFGCBOOT.PRG
+     This program configures COLDBOOT.PRG to skip selected 
+     ACSI/DMA devices.  You can also add a delay to COLDBOOT so
+     that it will wait up to 999 seconds to begin execution.
+     See section on COLDBOOT.PRG (below) for additional documentation.
+
+CLEANUP.PRG
+     Detects and corrects structural and logical errors on GEM/BGM
+     partitions.
+
+     This is included only on the PRO level version, and is also
+     available for separate purchase.
+
+COLDBOOT.PRG
+     This has been updated to support devices attached to the TT
+     SCSI port as well as the ACSI/DMA port.
+
+     Versions 1.30 and later of ICD COLDBOOT.PRG are 
+     configurable to allow skipping of the ACSI/DMA ID of the
+     Supercharger from Talon Technologies.  To configure COLDBOOT
+     run CFGCBOOT and specify the ID(s) you wish to skip when
+     doing a coldboot.  The Supercharger is normally shipped as
+     ID 3.  This should only be necessary for those users who do 
+     not have Quantum, Seagate, or other drives which autoboot
+     upon power-up, and who are also using the Supercharger.
+     
+     This program now accepts a command line argument and will permanently
+     change the boot partition on an auto-booting hard disk.  To use this
+     feature, use "Show Info" from the File Menu to rename the file as
+     COLDBOOT.TTP.  Double click on COLDBOOT.TTP, and when the dialog box
+     appears asking for the Command Line, enter the letter of your desired
+     boot partition.  Normally this is C through P.  Then press return,
+     and the boot partition will be permanently changed; then the computer
+     will be rebooted.
+
+     To use COLDBOOT to reboot the computer, but not change the boot partition,
+     just press return.
+
+     Note that it is possible to completely suppress the loading of all
+     AUTO/ACC/INF files by using COLDBOOT.TTP and choosing drive A.  Normally
+     you would never want to do this, but you'll have the option.  
+
+     Versions 2.09 and later have a user-selectable delay added.
+     To see what the delay is or change it run CFGCBOOT.PRG.
+
+COPYFIX.PRG
+     This has been updated to fix a bug which caused 
+     compatibility problems with several applications.  There 
+     should no longer be any problems with it.
+
+DESKTOP.PRG
+     This program (formerly a desk accessory) has been updated 
+     to be compatible the Atari TT and all TOS versions.  See 
+     DESKTOP.DOC for a more complete explanation of changes since
+     previous versions.  DO NOT RENAME DESKTOP.PRG TO DESKTOP.ACC;
+     attempting to do this and installing the file as an accessory
+     will give you grief.  This program is NOT designed to be 
+     renamed to .ACC.
+
+EJECT.TOS
+     A program to eject diskettes from the Macintosh versions of 
+     Floptical¾ drives.  This may be renamed as EJECT.TTP to run
+     from a command line, or you can create a file EJECT.LST for
+     it to run from.  For more information, run the program with
+     no parameters, see example file EJECT.LSX, or read HDPARK.DOC.
+     This program is included only with the Link and Pro levels of
+     ICD software.
+
+FLUSH.PRG
+     Flushes the write cache to disk immediately.
+
+HDPARK.TOS 
+     This has been updated to support the TT SCSI port.
+     This program replaces MAKEPARK.PRG.  See HDPARK.DOC for 
+     complete documentation.
+
+HDPARTS.TOS
+     This program displays various statistics about each hard 
+     drive partition on the system.  For the most part, this 
+     information will only be of use to people who have some 
+     understanding of disk structures.
+
+HDUTIL.PRG
+     New features of "Config":
+
+     -    You can set ICDBOOT and other ICD programs to do retries
+          in case of a command/select phase timeout.  (This would
+          be indicated by a "Sense: $FE" or "MSense: $FE" in the
+          upper right corner of your screen).  If you get this, 
+          change the Retries from 0 to 1 or a higher value.  This may
+          make the drive in question behave.
+
+     -    You can skip logical drives at bootup.  This allows you
+          to always have a RAM disk at drive G regardless of how
+          many hard disk patitions are found.
+
+     -    All Falcon screen resolutions are available on that
+          machine.  If ICDBOOT is now configured to set a particular
+          resolution, the "ST", "TT", or "FALCON" button will have
+          a check mark.  You can click on the button to display a
+          secondary dialog box which shows the available options 
+          to change this.  If set to skip setting screen resolution
+          then the "SKIP" button will have a check mark.
+
+     -    The delay in flushing the write cache is now adjustable up
+          to 30 seconds.  Bear in mind that if the computer is rebooted
+          or power is lost, the unflushed data is gone!
+
+     HDUTIL has been updated to support the TT SCSI port.  This
+     affects several functions:
+
+     -    Setting a hard disk for auto-booting will result in 
+          either TT-SCSI boot sectors or ACSI/DMA boot sectors
+          being written to the drive based on which port the
+          drive is connected to.  If you ever move the drive to 
+          the other port, you will have to reinstall the boot 
+          sector with HDUTIL.
+
+     -    If run on a Falcon 030, the auto-boot code will be
+          written on the internal IDE drive.
+
+     -    It is possible to disable scanning of any of the 16
+          devices.  The device number of the TT itself will 
+          never be scanned, regardless of the button settings.
+
+     It is now easier to bypass the hard disk auto-boot and force
+     bootup from floppy disk drive A.  Just hold down ALTERNATE
+     only.  It is no longer necessary to hold down SHIFT-CONTROL-
+     ALTERNATE.  You must use HDUTIL to reinstall the "Boot" to
+     take advantage of this.
+
+     HDUTIL now has a new feature, called "Wipe".  Previously the
+     only partition-blanking feature was "Zero", which blanked
+     the directories and File Allocation Tables.  The data was
+     still present and a talented snoop could possibly recover
+     it.  "Wipe" will zero out every sector of the partition, so
+     that you do not have to be concerned about any of your 
+     confidential data falling into the wrong hands.
+
+HOST.TOS
+     This is a utility to tell you what kind of host adapter you 
+     have connected to each hard drive on line.   Note that it is
+     not always possible to differentiate between Link, AdSCSI Plus ST,
+     AdSCSI ST, and AdSCSI Micro ST host adapters.  This is
+     particularly true when multiple host adapters are connected.
+
+     It is also not possible to differentiate between one of 
+     ICD's original STHA boards and one of those made by another
+     manufacturer.  These items do NOT have signatures.  We are 
+     merely seeing which ones do full SCSI commands and which
+     ones have ICD real time clocks.
+
+ICDBOOT.PRG
+     The names of SCSI hard disk devices are now displayed as they
+     are found, followed by the partitions logged from these devices
+     (if any).
+
+     The ID and LUN of a drive are displayed following a "Sense", 
+     "MSense", or "Write Fail" message.  The screen under a "Disk 
+     Change" message is saved and restored after the message.
+
+     If you wish to pause ICDBOOT to read the information it prints,
+     press <control-S>; press <control-Q> to restart the program.
+
+     There are 3 levels of ICDBOOT now in distribution:
+ 
+     (1) The PRO level, which installs on all ST and TT computers 
+         regardless of whether an ICD host adapter is found.  The
+         PRO level supports Floptical¾ drives.  
+
+     (2) The LINK level, which supports Floptical¾ drives.  This
+         level is shipped only with the Link host adapter.  
+
+     (3) The regular level.  Floptical¾ drives are not supported.  
+
+     ICDBOOT now recognizes hard disks formatted and partitioned
+     with MS-DOS and FDISK on a PC.  This should simplify the transfer
+     of files between PCs and STs using removable media (SyQuest, 
+     etc.) much easier.  NOTE: (a) although reading and writing 
+     MS-DOS partitions is supported, most of the ICD utilities 
+     will not work with MS-DOS partitions. (b) very large DOS partitions
+     have too many data clusters, which confuses TOS, so some DOS
+     partitions will not be entered into the drive tables and will
+     not be useable.
+
+     The TIMESET function is now incorporated in ICDBOOT.  This means
+     that the hard drive clock will automatically be read and the
+     system clock be set upon bootup, when using a host adapter with
+     real-time clock.  This option may be disabled in the "Config" 
+     option of HDUTIL for those choosing to use their Mega internal 
+     clock or other clock device.  It is no longer necessary to have
+     ICDTIME or TIMESET in your AUTO folder to set the system clock.
+     You must still run ICDTIME to install the clock handler in memory
+     before using the Control Panel or other software to reset the
+     clock in the ICD host adapter.
+
+     Previous versions of ICDBOOT would always change the screen 
+     to medium resolution when booting with a color monitor.  
+     The resolution is now configurable with HDUTIL, allowing 
+     you to boot in any ST/TT/Falcon graphics mode available on your 
+     system.  As of ICDBOOT 5.5.0, you can also choose to completely
+     skip any resolution change; this will be useful for those with
+     1024x768 color monitors which require special driver software
+     to load before any other program.
+
+     Can now be used without an ICD host adapter present.  An 
+     ICD host adapter is still required to install the booter 
+     and to use the various other utilities.  The caching will 
+     be disabled when running without an ICD host adapter, except
+     for the PRO level of ICDBOOT.  This features does not work
+     on the STacy and there is nothing to do except get the PRO
+     software.
+
+     This release now fully supports the Atari TT SCSI port as
+     well as the ACSI port.  For the most part, hard drives 
+     connected to the SCSI port of the TT can be treated just
+     like drives connected to the ICD AdSCSI host adapter.  The
+     primary difference is that the devices connected to the ICD
+     AdSCSI are numbered 0-7 and the devices connected to the TT
+     SCSI port are devices 8-15.  Since the TT itself is a SCSI
+     device, it uses one of the device numbers.  The ICD software
+     sets the TT to SCSI ID #7 (device 15), so that number is not
+     available for any other devices.  Full SCSI arbitration is 
+     supported on the SCSI port, which offers great potential.
+
+     This release now fully supports the IDE drive on the Falcon.
+     ICD has emulated SCSI commands for the IDE drive, which is
+     treated as if it was SCSI ID 16.
+
+     Drive letters are assigned to IDE drives, then to devices 
+     attached to the SCSI port, then to the ACSI/DMA port.  This
+     version allows you to skip logical drives (except drive C).
+     This is configured in the "Config" option of HDUTIL.  For
+     example, it would allow you to always have a RAM disk at
+     drive G: regardless of how many hard drive partitions were
+     on line.
+
+     When using the ESC key to disable the booter options, only
+     the caching gets disabled.  The TOS buffers are still 
+     allocated so that BGM partitions can be accessed.  If you
+     need the additional memory, use HDUTIL to disable the
+     buffers and reboot.
+
+     This version allows you to set the write cache flush delay
+     up to 30 seconds.  Bear in mind that if a power failure
+     occurs, or the computer is reset or rebooted before the
+     cache is flushed, DATA WILL BE LOST.  See the "Config"
+     option of HDUTIL.
+
+     This version allows you to set DMA retries.  A few drives
+     tested have exhibited the peculiarity that if they are
+     not accessed for a while, the first access receives a
+     Sense $FE (selection or command phase timeout).  Upon an
+     immediate retry, the drive worked fine.  If you have a drive
+     that gives you a lot of Sense $FE returns, or a drive that
+     is not always detected, increase the DMA retries by 1.
+     See the "Config" option of HDUTIL.
+
+     A few other minor bugs were fixed, so it is advisable to 
+     use this version even if you don't own a TT.
+
+ICDFMT.PRG
+     This program now allows 100% Atari AHDI-compatibility.  This
+     means that you could use AHDI as your hard disk driver.  Previously
+     AHDI would only pick up the first 4 partitions on the hard disk.
+     Now, when you run ICDFMT, if the disk is not Atari-partitioned, then
+     AHDI Compatibility is set to "on" by default.  If the disk was 
+     Atari-partitioned, the program attempts to determine whether or not
+     the present partitioning scheme was AHDI-compatible.  You can
+     change the status of this option by clicking on the appropriate
+     line of the Main Menu dialog box or by clicking on the "PARAMETERS"
+     button of the Partition dialog box.  Note: if you change this option
+     on a previously-partitioned disk, the only thing you will be able to
+     do is to "PARTITION ENTIRE HARD DISK".  The "OLD" button will not work
+     until you change the AHDI compatibility option back to its original 
+     value.  The same is true of "WRITE PARTITION INFO ONLY" and "REBUILD 
+     ONE PARTITION ONLY".
+
+     Other changes:  SCSI/FAT bad sector mapping and the number of
+     Verify Passes can be changed from within the Partition dialog box
+     by clicking on the "PARAMETERS" button.  When going to the Partition
+     dialog for the first time, you will be told if the partitions shown
+     were read from disk or were calculated default values.
+
+     Fixed:  bug in previous versions when going from 12 to 13 partitions
+     on the disk (i.e. using "WRITE PARTITION INFO ONLY" and "REBUILD
+     ONE PARTITION ONLY" to split one of the 12 partitions into two
+     partitions.  The partition table would previously overwrite the
+     boot sector of partition #1.  This now has been fixed.
+
+     Sometimes ICDFMT will have to adjust the starting sector of a
+     partition.  An alert box will tell you of this.
+
+     This program can now format/partition IDE drives on the Falcon and 
+     drives connected to the TT/Falcon SCSI port as well as the ACSI/DMA 
+     port.  As with the other software, the devices attached to the SCSI 
+     port are numbered 8-15 and IDE drives are numbered as if they were
+     SCSI ID 16.  IDE drives cannot be low-level formatted, only partitioned.
+     Other drives can be low-level formatted.
+
+     Calculation of DEFAULT and SPLIT partitions now make one 5.00
+     meg drive followed by equally-sized partitions.  This is to
+     encourage you to use a small drive C.  In case your first drive
+     gets destroyed (which seems to happen randomly on Atari computers,
+     although it is VERY rare), you do not lose a lot of data.  This
+     feature may be disabled by holding down the Alternate key while
+     clicking on DEFAULT or SPLIT, or while clicking on OK in the
+     dialog headed "Split into several partitions...".   However, you
+     are VERY STRONGLY encouraged to use a small drive C.
+
+     STacy users with Conner drives:  because of a severe bug in Conner
+     drive firmware, it is necessary to avoid the standard methods of
+     determining drive size.  You must use any ordinary ASCII text
+     editor to create a file called INTERNAL.HD in the same folder as
+     ICDFMT.  The first line of this file must match EXACTLY what the
+     Conner drive returns when you run IDCHECK.  Spaces are important.
+     The second line is the number of the LAST SECTOR on the Conner
+     drive.  Here is an example of INTERNAL.HD:
+
+     CONNER  CP3020
+     41117
+
+     If your drive is not a CP3020, you will have to determine the
+     last sector through trial and error.  Start with a value large
+     enough for your drive (i.e. 45000 for a 20 meg, 90000 for a 40
+     meg).  Run ICDFMT and select Partition, then Partition Entire Hard
+     Disk.  The program will verify the sectors and will stop when the
+     Conner bug kicks in.  If the sector the program is at is a multiple
+     of 32, add 31 to that value, use that value as the second line of
+     INTERNAL.HD, and repeat the test.  Note that the drive will have to
+     be turned off and back on again to rerun ICDFMT.  This time subtract 
+     1 from the sector showing and that should be the correct value.
+
+ICDFMT.DAT
+     This file is updated from time to time to include more hard drive 
+     models.  (See additional documentation below).  This file is used
+     for and necessary for ST506/412 type drives only.  It is not used
+     for SCSI drives; information about these drives is needed by
+     asking the drive for it.  If ICDFMT.DAT is needed and not found,
+     you will be able to fill in the heads and cylinders and proceed.
+
+     To add a drive, enter the following information about your drive 
+     in the EXACT same format (position sensitive) as the others 
+     listed as follows:  a. The letter 'd' to indicate a drive b. The
+     name of the drive c. The number of heads on the drive d. The
+     number of cylinders on the drive e. The cylinder number at which
+     to start using reduced write current (if not sure, then just put
+     same number as # of cylinders) f. The cylinder number at which to
+     start using write precomp (if not sure, then just put same number
+     as # of cylinders) g. The parking cylinder (usually 40-50
+     cylinders beyond the last cylinder).  h. The step rate; normally 
+     2 (unless very old).  0 = 3ms non-buffered step for older drives
+     (ST506) 1 = 28us buffered step rate (ST412 and maybe others) 2 =
+     15us buffered step rate (Almost all new drives)
+
+     Presently we support 98% of all hard drives and SCSI controllers
+     that can be used on the Atari ST.  Some may not work on the ST at
+     all.  If in doubt, try it, or you can call or write our technical
+     support department.
+
+ICDTIME.PRG
+     Must be installed in memory before attempting to permanently set
+     the clock in the ICD host adapter.
+
+ICDTRAPS.PRG
+     ICDBOOT 6.2.0 (and newer) has a new feature.  It now installs trap 
+     handlers which allow the loading of AUTO folder programs, desktop 
+     ACCessories, and DESKTOP.INF/NEWDESK.INF only from the selected boot 
+     partition.  It allows the creation of DESKTOP.INF/NEWDESK.INF only on 
+     the selected boot partition.
+
+     The boot partition is the partition selected in HDUTIL when setting
+     the hard disk auto-boot.  It was always our INTENT to allow you to
+     run the AUTO folder and load ACCessories from this boot partition.
+     However, in practice, all this meant was that the AUTO folder was run 
+     from that particular partition.  ACCessories and desk INF files were 
+     always loaded from drive C.  This "feature/bug" of TOS meant that, if 
+     an ACCessory bombed during its loading, that the computer would go into 
+     an endless auto-booting loop.  Also if the desk INF file was corrupted, 
+     a blank desktop might result, or possibly an auto-boot loop, or one might
+     not be able to execute PRG files, or some other weirdness.  Often some 
+     tricks were necessary to sneak past some of these problems.
+
+     Now, since ICDBOOT's trap handlers are installed whenever auto-booting 
+     from any hard drive partition (except C) or when running from an AUTO
+     folder (except on C), the loading of drive C files is no longer a
+     problem.  Files will be loaded ONLY from the boot partition; and if
+     there are no AUTO folder programs, ACCessories, or desk INF files, 
+     NONE will be loaded.
+
+     If auto-booting, ICDBOOT also allows you to select a boot partition "on 
+     the fly" by pressing any key from A to P when you see the ICD logo 
+     displayed on the screen.  Thus, you could have a different set of AUTO 
+     folder programs, ACCessories, and a desk INF file on each partition, and
+     these are loaded according to the boot partition you select.
+
+     As before, the "normal" or "default" boot partition is set in HDUTIL
+     under the "Boot" option.  (This is the partition which is loaded from
+     if no key is pressed during ICDBOOT execution).  It is now possible to 
+     permanently change the default boot partition through COLDBOOT.PRG;
+     see notes below.
+
+     When you do a "Save Desktop" from the Options Menu, the desk INF file
+     is now saved to the current boot partition.  (Formerly it was always
+     saved to drive C or drive A only).  
+ 
+     The current Autoboot Partition or Auto Folder Partition is displayed 
+     by ICDBOOT as part of its "Current driver settings" configuration data:
+
+        1. If you auto-boot from the hard disk without pressing any key the
+           "default" boot partition is shown.
+
+        2. If you auto-boot from the hard disk and press a key to indicate 
+           a valid hard drive partition then your chosen boot partition is 
+           shown.
+
+        3. If you auto-boot from the hard disk, and if you press a key to 
+           choose a boot partition, and the key pressed is NOT a valid 
+           partition (example: you have 4 hard disk partitions, C through F,
+           and you press M) then the Autoboot Partition will be shown as 
+           "n/a" and boot will proceed as though drive C was your boot 
+           partition.  
+
+        4. If you auto-boot from the hard disk, and if you press a key to 
+           choose a boot partition, and the key pressed is A (or B, if you 
+           have two floppy disk drives, then the Autoboot Partition will be
+           shown as "n/a" but the trap handlers will install and force 3
+           loading from drive A (or B).
+
+        5. If you have used COLDBOOT.TTP and entered A as your command line
+           parameter then the Autoboot Partition will be shown as "Suppressed".
+           See notes on COLDBOOT below.
+
+     There is now a 3 second delay to allow you to read the ICDBOOT "Current
+     driver settings" configuration data.  The delay may be cancelled by 
+     pressing any key.  If control-S is pressed execution halts until any
+     other key is pressed.  This allows more time to read the configuration.
+
+     The ICDBOOT trap handlers may be permanently disabled or re-enabled
+     through the use of ICDTRAPS.PRG, now included on the distribution disk.         disk.
+
+     Constraints and possible problems with the ICD trap handlers:
+
+       1.  If you have chosen a partition other than C for your boot partition,
+           and you then attempt to copy a desk INF file from one partition to
+           another through the GEM desktop, the copy will fail.  The file
+           create is automatically forced to the current boot partition.  To
+           copy a desk INF file, do a "Show Info" from the File Menu, change
+           the INF to INX, then copy the file as before, and finally  rename
+           it from INX to INF.  Or you can load it into a text editor  and do 
+           a "Save As" to the new drive.  Or you can use a program such as 
+           MaxiFile from Codehead to do the copy.  Or you can reboot choosing
+           drive C for the new boot partition, and as trap handlers are not
+           installed the copy will succeed.  This problem should seldom be a 
+           hindrance.
+
+       2.  MinT does not get along with ICDBOOT's trap handlers; it appears
+           to detect a problem in TOS.  Thus, you must install MinT only
+           on drive C.  Since the ICDBOOT trap handlers are not installed
+           when using drive C for the boot partition, MinT does not detect
+           any problems and will install normally.
+         
+       3.  ICDBOOT's trap handlers force the loading of all files from the
+           boot partition.  The ONLY exception is AUTO folder programs.  The
+           programs themselves are forced to load from the boot partition.
+           However, if these programs load data, configuration, etc., files,
+           these are not forced to be from the boot partition.  All ACCessories
+           and the desk INF file and any ACCessory's data, resource, configuration,
+           etc. files are forced to load from the boot partition.  So if you
+           have an ACCessory that reads a configuration file, a resource file, 
+           a data file etc., this file MUST be present on the current boot 
+           partition or it will not be found.
+
+           This "forced" loading stops when the desktop is displayed, or
+           when an auto-booting application runs.
+
+       4.  This feature may not work with TOS 1.0 and 1.2; it may also not
+           work correctly with some applications and accessories.
+
+    Advantages of the ICDBOOT trap handlers:
+
+       1.  You can have a separate set of AUTO folder programs, ACCessories,
+           and DESKTOP.INF/NEWDESK.INF on each partition of your hard drive.
+           You can reboot selecting a different setup for different tasks.
+
+       2.  If you have a booting problem (such as: endless reboot loop, blank 
+           desktop, unable to run certain types of programs, etc., just use
+           the key option described above to choose a different partition
+           to boot from.  This is far simpler than some of the procedures
+           needed in the past (boot with hard drive off, run IDCHECK, turn
+           hard drive on, rescan until drive found, run ICDBOOT, install icon,
+           remove offending file, etc.)
+
+    ICDTRAPS allows you to enable or disable the trap handlers in ICDBOOT.
+    Just double click on ICDTRAPS; the file selector will appear, allowing
+    you to select any ICDBOOT; if the version is 6.2.0 or greater, the status
+    of the trap handler installation flag is shown.  You can change it, then
+    click on "Save" to permanently configure the selected ICDBOOT.
+
+IDCHECK.PRG
+     This has been updated to check IDE devices on the Falcon, devices 
+     connected to the TT/Falcon SCSI port as well as the ACSI/DMA port.  
+     When running on a TT, the left-hand column shows the devices attached 
+     to the SCSI port (including the TT itself) and the right-hand 
+     column shows the devices attached to the ACSI port.  
+
+INSTALL.PRG
+     Automated setup of a hard disk.  Formats (if necessary), verifies,
+     partitions, sets up auto-boot, and creates a desktop.  Ideal for
+     the novice user who wants a quick setup, and for dealers setting
+     up hard disks for customers.  When done, the disk should boot up
+     when connected to any ST or TT with any TOS version and display a
+     desktop containing all the icons necessary for the number of 
+     partitions.
+
+RATEHD.PRG 
+     This has been updated to test IDE drives and drives connected to 
+     the TT/Falcon SCSI port as well as the ACSI/DMA port. 
+
+RELOG.PRG
+     This program forces ICDBOOT to relog all hard drive partitions.
+     Usually put in your AUTO folder after STARTHD.PRG when needed.
+     Make sure ICDBOOT is configured for the largest possible logical
+     sector size.  You can determine this with HDPARTS.TOS.
+
+SCSI.PRG
+     This is a SCSI Command tester which can also be used as a sector
+     editor.  This is included only on the PRO level of ICD software.
+
+STARTHD.PRG
+     Looks for non-running hard disks, then issues a "Start Unit" command
+     to them.  Some disks do not start when power is supplied.  This
+     program will start them.  This program should go in your AUTO folder
+     and should be followed by RELOG.PRG.  Make sure ICDBOOT is configured 
+     for the largest possible logical sector size.  You can determine this 
+     with HDPARTS.TOS.
+     
+TIMESET.PRG
+     Sets computer clock from the hard disk clock (clock models only) and
+     exits.
+     
+WHEREIS.TOS
+     Find files on your hard disk.
+     
++---------------------------------------------------------------+
+
+Miscellaneous Notes
+------------------- 
+
+Connecting Supra/Atari Drives:
+     Supra drives are initially set to SCSI=0, LUN=0, so if you 
+     want to boot off your ICD drive, you may wish to change the
+     ID of the Supra drive.  Alternatively, you could set the
+     SCSI ID of the controller or drive in your ICD drive to a
+     different value and boot off the Supra drive.  Contact ICD
+     Technical Support for assistance if necessary.
+ 
+     Atari SH204 drives are also set to SCSI=0, LUN=0, BUT they 
+     have a bug in their hardware.  They respond to ALL LUN
+     numbers causing havoc to the system.  A provision in the
+     drive handler has been made to only see LUN=0 with a SCSI ID
+     of 7.  Therefore you will need to set the 3 position dip
+     switch in your SH204 to ID 7 (flip all three switches to the
+     other position).
+
+     Atari Megafile (SH205) drives are set as SCSI=0, LUN=0.  The
+     SCSI ID # is changeable inside the box.  It uses a 
+     combination host adapter/controller board but can be
+     formatted with our software as an Adaptec 4000 for their 20
+     Meg and Adaptec 4070 for the 30 and 60 Meg drives.
+
+Clock Battery:
+     If the clock is way off or seems to return crazy times, the
+     battery may be low. For a replacement battery, send $5.00, 
+     unless your host adapter is in warranty.  If it is in
+     warranty, call us and we will send a batter at no charge.  A
+     new battery socket is available for an additional $3.00.
+     Soldering is usually required with older original ICD ST
+     Host Adapters.  The newer units already have the socket
+     installed and replacing the battery is a very simple
+     operation.  We will install battery and/or socket for $20 
+     when unit is out of warranty.  
+
+     If your clock seems to run fast or slow it is probably 
+     adjustable.  Look for a variable capacitor labled VC1 near
+     the clock battery.  Use a subminiature flat-bladed screwdriver.
+     Insert the blade into the opening and turn clockwise to speed
+     the clock up, counter-clockwise to slow it down.  Start with
+     1/2 turn, let it go for a day and recheck and go from there.
+     It is possible with a little patience to calibrate these
+     clocks very accurately.  If your host adapter does not have
+     VC1 about the only recourse is to try changing the clock chip.
+
+Host Adapter Mounting:
+     There are four mounting holes on the board; mount it as you
+     see fit.  ICD makes a mounting bracket kit for the host 
+     adapter which you can probably use in your application.  It
+     is called the ST/MK and is US $8.95 plus S & H (contact us to 
+     order, or for more information).
+
+Using Multiple SCSI ID's and Host Adapters:
+     When using multiple SCSI ID's and/or host adapters a few rules
+     apply:
+
+     -    Power up the device closest to the computer first
+          (plugged in). Then power up the next out in the chain 
+          and continue in this fashion until all devices are
+          powered.  Now BOOT the computer.  If the computer has
+          an internal drive, there will be an additional delay
+          while this device comes up to speed.  In this case, all
+          devices might be powered from a single switch.
+ 
+     -    On a Falcon, the order of scan is: IDE drive, then SCSI
+          drives from 8 to 15 (physically 0 to 7).
+
+     -    On a TT, the order of scan is: SCSI drives from 8 to 15
+          (physically 0 to 7), then ACSI/DMA drives from 0 to 7.
+
+     -    On an ST, the order of scan is ACSI/DMA drives from 0
+          to 7.
+
+     -    The first drive found provides the booter and (usually)
+          the AUTO folder and accessories for the system.  Partitions
+          will be assigned as C, D, E, etc.  The next SCSI ID found
+          will provide the next partitions and so on.  It does not 
+          matter physically where these drives are in the daisy chain 
+          except for power up procedures.  The SCSI ID #s also do not 
+          need to be consecutive (though that may be needed by the
+          software provided by other companies).
+ 
+Setting Up Your AUTO Folder For Programs Which Use GDOS:
+     It is usually necessary to have GDOS be the last file in the
+     AUTO folder.  Since the ST displays files in sorted order, 
+     the only way to insure this is to create a JUNK folder, copy
+     all files except GDOS to it, delete the AUTO folder, and
+     recreate it.  Then copy all files back to the AUTO folder
+     from JUNK, delete JUNK, and finally copy GDOS to the AUTO
+     folder. 
+
+     To avoid these problems try G+PLUS from Codehead Software.
+ 
+Setting Up Your Hard Drive To Boot pc-ditto From A Partition:
+     First, set up the partition to boot with the HDUTIL 
+     program. Create a JUNK folder on another drive and copy
+     ICDBOOT.SYS to it. Now run the pc-ditto program's formatter
+     which sets MS-DOS to boot.  Finally copy ICDBOOT.SYS back to
+     the root directory of your boot drive.  Now when you boot,
+     the ICD Boot Program will run...then pc-ditto will boot.
+ 
+     CAUTION: If you disable autobooting with HDUTIL, you will
+     probably destroy your pc-ditto boot information as well.
+
+     NOTE: pc-ditto just simply will NOT load PC-DOS from some
+     makes of hard drive.  The reason for this is not known.
+     Please do not call ICD for pc-ditto support.
+
+What To Do When You Get "Locked Out" Of Your Hard Disk:
+     Installation of certain .ACC files may cause you to bomb
+     every time you boot and you can't access your hard drive to
+     remove or rename the offending file!
+
+     To cure this: turn off the hard drive, place a copy of the ICD 
+     ST host adapter disk in Drive A, and boot.  Double click on 
+     IDCHECK.PRG and let it scan through drives.  At the end it will 
+     be blank.  Now, turn on your hard drive.  Let it come up to 
+     speed.  Click on Rescan and repeat until your drive is shown.  
+     Then Exit.  Now locate ICDBOOT.PRG and double click on it.  
+     Install an icon for Drive C: (click on one icon to make it dark, 
+     then go to the menu bar under options for Install Disk Drive; 
+     use a capital C!) and double-click on it.  Now you can rename 
+     the offending .ACC file to some other extension, and then you 
+     should be able once again to boot from your hard drive.
+
+     This procedure may not work with internal drives such as on the
+     TT, Falcon, Mega STE, or Mega 2/4 with ICD AdSCSI Micro adapters.
+
+     If this doesn't work, call ICD, and we will try to help you regain
+     access to the hard drive.
+
+Suddenly your hard drive won't auto-boot:
+     Something has trashed partition information or corrupted the
+     ICDBOOT.SYS file.  First try re-running HDUTIL and resetting the
+     boot drive.  If this doesn't help, or if the Boot dialog shows no 
+     hard drives, something has wiped out your partition sector.  Try 
+     running Cleanup ST ("Hard Disk" - "Fix" options) to try to save the 
+     partition.  Alternatively, you you can rewrite partition info using 
+     the ICDFMT.PRG.  To do this, run ICDFMT and select PARTITION.  
+     Re-enter your partition information (of course you have kept a record 
+     of this).  Make sure all partitions are enabled (check mark under
+     "On").  Select REWRITE PARTITION INFO ONLY at the bottom left side 
+     of the dialog box.  Be careful here!  This is one place you want to 
+     be ABSOLUTELY SURE that your information is 100% correct.
+
++---------------------------------------------------------------+

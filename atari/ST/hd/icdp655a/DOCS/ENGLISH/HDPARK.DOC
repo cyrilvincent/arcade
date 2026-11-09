@@ -1,0 +1,25 @@
+HDPARK.PRG & HDPARK.DOC
+Copyright 1990-1991  ICD, Inc.
+
+HDPARK.TOS allows parking of hard drive units by specifying ID
+and LUN.  This is useful in situations where multiple ST506
+compatible drives are connected to a single disk controller and
+one of the drives is auto-parking, and the other is not.
+
+To use HDPARK, create a text file called HDPARK.LST with any
+ordinary ASCII text editor or word processor.  Each line of the
+file should contain the ID and LUN of one drive to park.  
+Example:
+
+1,0
+2,2
+3,1
+
+parks ID 1 LUN 0, ID 2 LUN 2, and ID 3 LUN 1.  See the file 
+HDPARK.LSX which is provided as an example.
+
+Alternatively, you can rename the program to HDPARK.TTP and 
+enter a command line from GEM dialog box when prompted, i.e. 1,0
+2,2 3,1 will park ID 1 LUN 0, ID 2 LUN 2, and ID 3 LUN 1.
+
+Note: the Atari TT SCSI IDs 0-7 should be entered as IDs 8-15.

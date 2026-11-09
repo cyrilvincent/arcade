@@ -1,0 +1,114 @@
+DESKTOP.PRG & DESKTOP.DOC
+Copyright 1990-1991  ICD, Inc.
+
++--------------------------------------------------------------+ 
+
+NOTE: This file is a SUPPLEMENT to the AdSCSI ST manual which 
+contains more extensive documentation on DESKTOP.
+
++--------------------------------------------------------------+ 
+
+DESKTOP.PRG was previously a desk accessory (DESKTOP.ACC).  It 
+is now a program so it only uses memory when you actually run 
+it.
+
+Note that you must have version 5.0.0 or greater of ICDBOOT 
+installed in order to install and run this version of 
+DESKTOP.PRG.
+
+When running DESKTOP.PRG from NEODESK, you need to be aware of 
+the fact that it will not put the partition names in the icons,
+or change paths in open windows.  Maybe we can do this later.
+Otherwise, it works fine with NEODESK.
+
+A check mark under the Boot column in the Available partitions 
+window indicates that this partition's boot sector contains
+bootable code and that ICDBOOT.SYS can be loaded from this
+partition when it is the first GEM partition enabled in the
+system.  This does NOT necessarily mean that the AUTO folder and 
+the ACCessories will be loaded from this drive.
+
+An asterisk ('*') next to a drive partition's name in the 
+Logical drives window indicates that the drive is the current
+Autoboot drive.  This is the drive you selected in HDUTIL when
+you set up your hard disk to Autoboot.  This is the drive where
+the AUTO folder and ACCessories are loaded from.
+
+To revert to "pristine" logical drive order, click on Unswap.  
+This makes your first partition C, next D, etc.
+
+To save your swap order permanently, click on Save.  This will 
+write the swap order into ICDBOOT.SYS.  Next time you boot, you
+will be using the new swap order.  If you swap your Autoboot
+drive (the drive where the system looks for the AUTO folder and
+ACCessories), you will be asked if you want to save a copy of
+your DESKTOP.INF file on the new Autoboot drive.  This is usually
+a good idea.  If you have swapped any drives corresponding to
+open windows in your DESKTOP.INF file, you will be asked to
+update the DESKTOP.INF.  This is also a good idea; otherwise, you
+will come up without your windows open.
+
+When DESKTOP.PRG terminates, the new swap order will be 
+reflected in the drive icons; also any open windows affected by
+the new swap order will be changed.
+
+A check mark under the On column in the Available partitions 
+window means that that partition is currently enabled (or
+'visible' to ICDBOOT).
+
+To enable or disable active partitions, click on the appropriate 
+line under the On column.  Up to 14 GEM partitions may be enabled
+at any given time.  You can have a total of 64 partitions for a
+physical hard drive (LUN) with a maximum of 128 partitions in the
+system.  Actually more than 14 partitions can be enabled, but
+ICDBOOT and TOS will only see the first 14 GEM/BGM partitions.
+
+To name or rename a partition, click on any GEM or BGM partition 
+name in the Available Partitions window.  To get out of rename
+mode, click anywhere else.  You can only edit (name/rename) GEM
+and BGM volume names.  DESKTOP.PRG has no way of knowing how 
+non-GEM partitions keep their volume names, hence you can't edit
+these.
+
+Bear in mind, your volume names may be upper or lower case, with 
+spaces.  If you do a Show Info on the partition, the volume name
+is truncated at the first space.  In the DESKTOP.PRG dialog, 
+volume names are shown with periods at the ninth character.  This
+is strictly in keeping with the GEM convention of showing a
+volume name as a file name.  The period will NOT show up in the
+icon.  Be advised that it is NOT a good idea to use the pound
+sign ('#') character as part of a volume name.  This confuses 
+TOS.
+
+To turn on the write verify TEMPORARILY click on the On or Off 
+button as desired.  This is the same function provided by our old
+VERIFY.ACC, and does not affect the Write Verify configuration in
+ICDBOOT.  It DOES affect the verify on your floppy disk drives,
+so you should probably leave it On most of the time.  The verify
+does slow down file transfers, however it is usually worth the
+extra time to insure good data.
+
+To toggle the write cache function, click on the appropriate On 
+or Off as desired.  When turning write cache off, all buffers
+will be flushed if needed, and write caching is then disabled
+until rebooting or until you explicitly turn it back on.  This is
+done for those using the Supercharger PC emulator.  The
+Supercharger MUST have write caching disabled, otherwise it will
+NOT write to the hard disk.  Once again, this is TEMPORARY.  It
+does not make any permanent changes to your ICDBOOT file.  It
+only changes the booter in memory.
+
+While in DESKTOP.PRG, you can force a rescan of all hard drives 
+by clicking on the Rescan button.  This is equivalent to running
+DESKTOP.PRG from the beginning.
+
+You MUST finalize any actions undertaken here by clicking on OK 
+or Reboot.  If you click on Cancel, we will undo what we can.
+
+                                      ICD, Inc.
+
+
+Note:  We have tested this program thoroughly and believe it 
+to be free from problems.  However under no circumstances will
+ICD, Inc. be held responsible for any damage to information on
+your hard drives.
