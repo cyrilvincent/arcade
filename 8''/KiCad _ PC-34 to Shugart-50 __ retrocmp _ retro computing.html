@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)https://retrocmp.de/kicad/pc34-to-sh50/pc34-to-s50.htm -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+     <title>KiCad / PC-34 to Shugart-50 // retrocmp / retro computing</title>
+     
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="expires" content="0">
+     <meta name="author" content="Thomas Brase, www.retrocmp.de">
+     <meta name="description" content="KiCad">
+     <meta name="keywords" content="KiCad">
+     <meta name="language" content="en">
+     <meta name="robots" content="index, follow">
+
+     <link href="./KiCad _ PC-34 to Shugart-50 __ retrocmp _ retro computing_files/layout.css" type="text/css" rel="stylesheet">
+     <link href="./KiCad _ PC-34 to Shugart-50 __ retrocmp _ retro computing_files/bootstrap.min.css" type="text/css" rel="stylesheet">
+
+ </head>
+
+ <!-- einzeiliger Kommentar -->
+
+ <body>
+
+     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+         <symbol id="bootstrap" viewBox="0 0 118 94">
+             <title>Bootstrap</title>
+             <path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"></path>
+         </symbol>
+     </svg>
+
+     <div id="top" class="container">
+
+         <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+             <a href="https://retrocmp.de/kicad/pc34-to-sh50/pc34-to-s50.htm" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                 <img src="./KiCad _ PC-34 to Shugart-50 __ retrocmp _ retro computing_files/retrocmp-logo-350x350.png" alt="logo" width="35" class="rounded-circle">
+                 <span class="fs-4">KiCad</span>
+             </a>
+
+             <ul class="nav nav-pills">
+                 <li class="nav-item"><a href="https://retrocmp.de/index.htm" class="nav-link active" aria-current="page">Home</a></li>
+                 <li class="nav-item"><a href="https://retrocmp.de/abbr.htm" class="nav-link">Acronyms</a></li>
+                 <li class="nav-item"><a href="https://retrocmp.de/literat.htm" class="nav-link">Literature</a></li>
+                 <li class="nav-item"><a href="https://retrocmp.de/links.htm" class="nav-link">Links</a></li>
+             </ul>
+         </header>
+
+         <div class="content">
+
+             <div class="alert alert-danger" role="alert">!!! WARNING !!!<br><br>I EXPLICITLY WARN YOU THAT YOU MAY PERMANENTLY DESTROY YOUR HARDWARE IF YOU MAKE ANY TECHNICAL CHANGES TO IT. I DO NOT ACCEPT ANY RESPONSIBILITY OR LIABILITY WHATSOEVER IF YOU CARRY OUT MODIFICATIONS TO YOUR HARDWARE ON THE BASIS OF MY PERSONAL TECHNICAL DOCUMENTATION. IF YOU MAKE ANY MODIFICATIONS TO YOUR HARDWARE, YOU DO SO AT YOUR OWN RISK. ALWAYS ENSURE THAT THE PLUG CONNECTIONS ARE CORRECTLY SEATED. EVEN TOUCHING SENSITIVE COMPONENTS SUCH AS CPU, RAM, ... CAN CAUSE THEM TO BE IRREVOCABLY DESTROYED (ELECTROSTATIC DISCHARGE - ESD).<br>WITH MANY OLD COMPUTER POWER SUPPLIES, VOLTAGE IS STILL APPLIED TO COMPONENTS EVEN WHEN THE SWITCH IS IN THE OFF POSITION.<br><br>!!! WARNING !!!</div>
+
+             <hr noshade="">
+
+             <h2>PC-34 to Shugart-50 Adapter</h2>
+
+             <blockquote>With the adapters presented here you can connect an old 8" drive with Shugart 50 pin interface to a "modern" IBM compatible floppy controller with PC 34 pin interface.</blockquote>
+
+             <p>Important: <em>However, there is also another type of adapter that looks the same at first glance but has a fundamentally different internal wiring. You need this type if you want to connect a "modern" floppy disk drive (5.25" or 3.5") to an „old“ 50 pin floppy disk controller (like Tandy/Radio Shack; not IBM compatible).<br>Mark J. Blair: <a target="_blank" href="https://gitlab.com/NF6X_Retrocomputing/fd50to34/" title="fd50to34: Adapt 34 Pin Floppy Drives to 50 Pin Controllers">Adapt 34 Pin Floppy Drives to 50 Pin Controllers</a></em><br><em>Frank Durda IV: <a target="_blank" href="https://web.archive.org/web/20200207024733/http://nemesis.lonestar.org/computers/tandy/hardware/model16_6000/floppyfix.html" title="fd50to34: Adapt 34 Pin Floppy Drives to 50 Pin Controllers">Utilizing 5.25" or 3.5" media on your Tandy/Radio Shack computer system</a>. Wayback machine; the original website is down, Frank Durda IV died in 2018.</em></p>
+
+             <blockquote>My adapters are based on the following assignment of signals.</blockquote>
+
+             <figure>
+                 <img src="./KiCad _ PC-34 to Shugart-50 __ retrocmp _ retro computing_files/pc34-to-s50.png" alt="Interface PC-34 to Shugart-50">
+                 <figcaption>Interface PC-34 to Shugart-50</figcaption>
+             </figure>
+
+             <hr noshade="">
+
+        <h2>Version 1.2</h2>
+             <div class="top"><a href="https://retrocmp.de/kicad/pc34-to-sh50/pc34-to-s50.htm#top">top</a></div>
+
+             <blockquote>Status: Tested, 08.03.2021 (<a href="https://retrocmp.de/testsys/testsys.htm#p2">80286-12 VLSI</a>, CompatiCard I, Y-E DATA YD-180-1601)</blockquote>
+
+             <h3>JLCPCB</h3>
+
+             <p>Currently in production. Let's see if the PCB really works! The PCBs are scheduled for delivery on 08.03.2021. I will report later.</p>
+
+             <figure>
+                 <img src="./KiCad _ PC-34 to Shugart-50 __ retrocmp _ retro computing_files/pc34-to-s50_kicad.png" alt="Interface PC-34 to Shugart-50">
+                 <figcaption>Fig. 1: KiCad - Interface PC-34 to Shugart-50, V1.2</figcaption>
+             </figure>
+
+             <p>Arrived today, 08.03.2021 as announced. Unpacked, soldered on both plugs, tested and ... the adapter works. Hooray!</p>
+
+             <p>Here, however, without the logo. I added this again after the order. ¯\_(ツ)_/¯</p>
+
+             <p>And what can I say. The price is extremely good. I paid only 2 EUR for five PCBs; shipping 10 EUR. Customs duties were not incurred for this small invoice amount. The PCB is easy to solder. What more could you want.</p>
+
+             <figure>
+                 <img src="./KiCad _ PC-34 to Shugart-50 __ retrocmp _ retro computing_files/pc34-to-s50_jlcbcb_02.jpg" alt="Interface PC-34 to Shugart-50">
+                 <figcaption>Fig: 2: Interface PC-34 to Shugart-50</figcaption>
+             </figure>
+
+             <figure>
+                 <img src="./KiCad _ PC-34 to Shugart-50 __ retrocmp _ retro computing_files/pc34-to-s50_jlcbcb_12.jpg" alt="Interface PC-34 to Shugart-50">
+                 <figcaption>Fig. 3: Interface PC-34 to Shugart-50<br>with „Low Profile Header"</figcaption>
+             </figure>
+
+             <h4>Usage</h4>
+
+             <ul>
+                 <li>Use a standard twisted PC floppy cable (ie. drive A: connected AFTER the twist and drive B: BEFORE the twist).</li>
+                 <li>Jumper the 8" drive as the 1st drive (DRIVE SELECT 1, SH 50 pin 26), see figure 4. All other DS signals are not routed by this interface, so DS1 must always be jumpered on the 8" drive; DS2-4 are a dead end.</li>
+                 <li>Connect the interface (Shugart-50) to the 8" drive using a suitable 50-pin cable and the appropriate adapters.</li>
+                 <li>Connect the interface (PC-34) with the PC floppy cable header ...</li>
+                 <ol type="A">
+                     <li>.... AFTER the twist. Then the 8" drive will be assigned as DOS drive -&gt; A:</li>
+                     <li>... BEFORE the twist. Then the 8" drive will be assigned as DOS drive -&gt; B:</li>
+                 </ol>
+             </ul>
+
+             <blockquote>IMPORTANT NOTE: Do not be confused by the label „DRIVE B:“ on the circuit boards. The label „DRIVE B:“ has nothing to do with the later drive assignment under DOS! The label „DRIVE B:“ refers solely to the two signals DRIVE_SELECT_B and MOTOR_ENABLE_B, see figure 4. Yes, I know this is a bit confusing!</blockquote>
+
+             <figure>
+                 <img src="./KiCad _ PC-34 to Shugart-50 __ retrocmp _ retro computing_files/pc34-to-s50_kicad(1).png" alt="Interface PC-34 to Shugart-50">
+                 <figcaption>Fig. 4: Circuit diagram - Interface PC-34 to Shugart-50</figcaption>
+             </figure>
+
+             <hr noshade="">
+
+        <h2>Version 2.0</h2>
+             <div class="top"><a href="https://retrocmp.de/kicad/pc34-to-sh50/pc34-to-s50.htm#top">top</a></div>
+
+             <blockquote>Status: Ordered at JLCPCB, 11.03.2021 (RED); tested: 26.03.2021 (<a href="https://retrocmp.de/testsys/testsys.htm#p2">80286-12 VLSI</a>, CompatiCard I, Y-E DATA YD-180-1601)</blockquote>
+
+             <figure>
+                 <img src="./KiCad _ PC-34 to Shugart-50 __ retrocmp _ retro computing_files/pc34-to-s50_kicad_v2-0.png" alt="Interface PC-34 to Shugart-50">
+                 <figcaption>Fig. 5: KiCad - Interface PC-34 to Shugart-50, V2.0</figcaption>
+             </figure>
+
+             <p>The interface works perfectly. The two jumpers give you the choice of placing the 8" drive either on A: or on B:. The 8" drive ALWAYS remains jumpered to DS1!</p>
+
+             <figure>
+                 <img src="./KiCad _ PC-34 to Shugart-50 __ retrocmp _ retro computing_files/pc34-to-s50_gerber_v2-0.png" alt="Interface PC-34 to Shugart-50">
+                 <figcaption>Fig. 6: Gerber view - Interface PC-34 to Shugart-50, V2.0</figcaption>
+             </figure>
+
+             <figure>
+                 <img src="./KiCad _ PC-34 to Shugart-50 __ retrocmp _ retro computing_files/pc34-to-s50_jlcbcb_13.jpg" alt="Interface PC-34 to Shugart-50">
+                 <figcaption>Fig. 6a: Interface PC-34 to Shugart-50<br>with „Low Profile Header"</figcaption>
+             </figure>
+
+             <h4>Usage</h4>
+
+             <ul>
+                 <li>Use a standard twisted PC floppy cable (ie. drive A: connected AFTER the twist and drive B: BEFORE the twist).</li>
+                 <li>Jumper the 8" drive as the 1st drive (DRIVE SELECT 1, SH 50 pin 26), see figure 4 &amp; 7. All other DS signals are not routed by this interface, so DS1 must ALWAYS be jumpered on the 8" drive; DS2-4 are a dead end.</li>
+                 <li>Connect the interface (Shugart-50) to the 8" drive using a suitable 50-pin cable and the appropriate adapters.</li>
+                 <li>Option 1: according to V1.2<br>B: JP1 (2-3), JP2 (2-3)<br>Connect the interface (PC-34) with the PC floppy cable header ...</li>
+                 <ol>
+                     <li>.... AFTER the twist. Then the 8" drive will be assigned as DOS drive -&gt; A:</li>
+                     <li>... BEFORE the twist. Then the 8" drive will be assigned as DOS drive -&gt; B:</li>
+                 </ol>
+                 <li>Option 2:<br>A: JP1 (1-2), JP2 (1-2)<br>Connect the interface (PC-34) with the PC floppy cable header ...</li>
+                 <ol>
+                     <li>.... AFTER the twist. Then the 8" drive will be assigned as DOS drive -&gt; B:</li>
+                     <li>... BEFORE the twist. Then the 8" drive will be assigned as DOS drive -&gt; A:</li>
+                 </ol>
+             </ul>
+
+             <p>With these two jumper options, you are very flexible with your floppy cable and your drive assignment.</p>
+
+             <figure>
+                 <img src="./KiCad _ PC-34 to Shugart-50 __ retrocmp _ retro computing_files/pc34-to-s50_eeschema_v2-0.png" alt="Interface PC-34 to Shugart-50">
+                 <figcaption>Fig. 7: Circuit diagram - Interface PC-34 to Shugart-50, V2.0</figcaption>
+             </figure>
+
+             <hr noshade="">
+
+        <h2>Version 2.1</h2>
+             <div class="top"><a href="https://retrocmp.de/kicad/pc34-to-sh50/pc34-to-s50.htm#top">top</a></div>
+
+             <blockquote>Status: Ordered at JLCPCB, 12.03.2021 (BLUE); tested: 26.03.2021 (<a href="https://retrocmp.de/testsys/testsys.htm#p2">80286-12 VLSI</a>, CompatiCard I, Y-E DATA YD-180-1601) Note: This interface may not fit every 8" drive! This has to do with the arrangement and position of the 8" FDD card edge.</blockquote>
+
+             <blockquote>
+                 Special note: Unfortunately, I made a small "design" error here. The card edge connector should actually be on the other side. But this is not possible, of course, because otherwise the connection to the 8" drive is wrong. The attentive observer will see this immediately in figure 8. The footprint is wrong! Remedy: Simply solder on the edge connector from the front (as shown in fig. 8a) and everything is fine again. Line (1) is correct shown in fig. 8.
+             </blockquote>
+
+             <figure>
+                 <img src="./KiCad _ PC-34 to Shugart-50 __ retrocmp _ retro computing_files/pc34-to-s50_kicad_v2-1_c.png" alt="Interface PC-34 to Shugart-50">
+                 <figcaption>Fig. 8: Gerber view - Interface PC-34 to Shugart-50, V2.1</figcaption>
+             </figure>
+
+             <figure>
+                 <img src="./KiCad _ PC-34 to Shugart-50 __ retrocmp _ retro computing_files/pc34-to-s50_jlcbcb_11.jpg" alt="Interface PC-34 to Shugart-50">
+                 <figcaption>Fig. 8a: Interface PC-34 to Shugart-50<br>with „Low Profile Header" and „Card Edge Connector“</figcaption>
+             </figure>
+
+             <py>I personally find this version the best because it is very compact. You do not need an additional 50p cable. You can connect the interface directly to the 8" drive.</py>
+
+             <h4>Usage</h4>
+
+             <ul>
+                 <li>Use a standard twisted PC floppy cable (with drive A: connected AFTER the twist and drive B: BEFORE the twist).</li>
+                 <li>Jumper the 8" drive as the 1st drive (DRIVE SELECT 1, SH 50 pin 26), see figure 4 &amp; 7. All other DS signals are not routed by this interface, so DS1 must ALWAYS be jumpered on the 8" drive; DS2-4 are a dead end.</li>
+                 <li>Connect the interface (Shugart-50) to the 8".</li>
+                 <li>Option 1: according to V1.2<br>JP1 (2-3), JP2 (2-3)<br>Connect the interface (PC-34) with the PC floppy cable header ...</li>
+                 <ol>
+                     <li>.... AFTER the twist. Then the 8" drive will be assigned as DOS drive -&gt; A:</li>
+                     <li>... BEFORE the twist. Then the 8" drive will be assigned as DOS drive -&gt; B:</li>
+                 </ol>
+                 <li>Option 2:<br>JP1 (1-2), JP2 (1-2)<br>Connect the interface (PC-34) with the PC floppy cable header ...</li>
+                 <ol>
+                     <li>.... AFTER the twist. Then the 8" drive will be assigned as DOS drive -&gt; B:</li>
+                     <li>... BEFORE the twist. Then the 8" drive will be assigned as DOS drive -&gt; A:</li>
+                 </ol>
+             </ul>
+
+             <p>With these two jumper options, you are very flexible with your floppy cable and drive assignment.</p>
+
+             <!--
+        <figure>
+            <img src="pc34-to-s50_kicad_v2-1_d.png" alt="Interface PC-34 to Shugart-50">
+            <figcaption>Fig. 11: Gerber view - Interface PC-34 to Shugart-50, V2.1</figcaption>
+        </figure>
+        -->
+
+             <hr noshade="">
+
+        <h2>Gerber Files, BOM, and Ordering</h2>
+             <div class="top"><a href="https://retrocmp.de/kicad/pc34-to-sh50/pc34-to-s50.htm#top">top</a></div>
+
+             <h3>Version 1.2</h3>
+
+             <ul>
+                 <li>Gerber files: .... <a href="https://retrocmp.de/dwnld/pc34-to-sh50_v1-2.zip" download="pc34-to-sh50_v1-2.zip">Download</a></li>
+                 <li>Ordering PCBs: ... <a target="_blank" href="https://jlcpcb.com/" title="JLCPCP">JLCPCB</a></li>
+                 <li>Ordering PCBs: ... <a target="_blank" href="https://oshpark.com/shared_projects/3dS7LVke" title="OSHPARK">OSHPark (shared project)</a></li>
+                 <li>BOM: ............. <a target="_blank" href="https://retrocmp.de/kicad/pc34-to-sh50/pc34-to-sh50_bom.pdf" title="BOM V1.2" type="application/pdf">Mouser</a> (PDF)</li>
+             </ul>
+
+             <h3>Version 2.0</h3>
+
+             <ul>
+                 <li>Gerber files: .... <a href="https://retrocmp.de/dwnld/pc34-to-sh50_v2-0.zip" download="pc34-to-sh50_v2-0.zip">Download</a></li>
+                 <li>Ordering PCBs: ... <a target="_blank" href="https://jlcpcb.com/" title="JLCPCP">JLCPCB</a></li>
+                 <li>Ordering PCBs: ... <a target="_blank" href="https://oshpark.com/shared_projects/FsCngw6n" title="OSHPARK">OSHPark (shared project)</a></li>
+                 <li>BOM: ............. <a target="_blank" href="https://retrocmp.de/kicad/pc34-to-sh50/pc34-to-sh50_bom.pdf" title="BOM V2.0" type="application/pdf">Mouser</a> (PDF)</li>
+             </ul>
+
+             <h3>Version 2.1</h3>
+
+             <em>See special note above!</em>
+
+             <ul>
+                 <li>Gerber files: .... <a href="https://retrocmp.de/dwnld/pc34-to-sh50_v2-1.zip" download="pc34-to-sh50_v2-1.zip">Download</a></li>
+                 <li>Ordering PCBs: ... <a target="_blank" href="https://jlcpcb.com/" title="JLCPCP">JLCPCB</a></li>
+                 <li>Ordering PCBs: ... <a target="_blank" href="https://oshpark.com/shared_projects/1ybgEx4E" title="OSHPARK">OSHPark (shared project)</a></li>
+                 <li>BOM: ............. <a target="_blank" href="https://retrocmp.de/kicad/pc34-to-sh50/pc34-to-sh50_bom.pdf" title="BOM V2.1" type="application/pdf">Mouser</a> (PDF)</li>
+             </ul>
+
+             <hr noshade="">
+
+        <h2>External Links</h2>
+             <div class="top"><a href="https://retrocmp.de/kicad/pc34-to-sh50/pc34-to-s50.htm#top">top</a></div>
+
+             <ul>
+                 <li>Information and download: <a target="_blank" href="https://kicad.org/" title="KiCad">KiCad</a></li>
+             </ul>
+             
+             <hr noshade="">
+
+        <h2>Information</h2>
+             <div class="top"><a href="https://retrocmp.de/kicad/pc34-to-sh50/pc34-to-s50.htm#top">top</a></div>
+
+             <ul>
+                 <li><a target="_blank" href="https://retrocmp.de/kicad/general/2021-02-22_getting_started_in_kicad.pdf" title="KiCad" type="application/pdf">Getting started in KiCad</a> (22.02.2021, PDF)</li>
+             </ul>
+
+         </div>
+
+         <footer class="py-3 my-4">
+             <ul class="nav justify-content-center border-top pb-3 mb-3">
+                 <li class="nav-item"><a href="https://retrocmp.de/index.htm" class="nav-link px-2 text-muted">Home</a></li>
+                 <li class="nav-item"><a href="https://retrocmp.de/kicad/pc34-to-sh50/pc34-to-s50.htm#top" class="nav-link px-2 text-muted">Top</a></li>
+                 <li class="nav-item"><a href="https://retrocmp.de/abbr.htm" class="nav-link px-2 text-muted">Acronyms</a></li>
+                 <li class="nav-item"><a href="https://retrocmp.de/literat.htm" class="nav-link px-2 text-muted">Literature</a></li>
+                 <li class="nav-item"><a href="https://retrocmp.de/links.htm" class="nav-link px-2 text-muted">Links</a></li>
+                 <li class="nav-item"><a href="https://retrocmp.de/imprint.htm" class="nav-link px-2 text-muted">Impressum</a></li>
+                 <li class="nav-item"><a href="https://retrocmp.de/datenschutz.htm" class="nav-link px-2 text-muted">Datenschutz</a></li>
+             </ul>
+
+             <div class="nav justify-content-center border-bottom pb-3 mb-3"><a href="https://getbootstrap.com/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1"><svg class="bi" width="30" height="24">
+                         <use xlink:href="#bootstrap"></use>
+                     </svg></a><span class="mb-3 mb-md-0 text-muted">© 2023 Thomas Brase</span></div>
+         </footer>
+
+     </div>
+     <script src="./KiCad _ PC-34 to Shugart-50 __ retrocmp _ retro computing_files/bootstrap.bundle.min.js.téléchargement"></script>
+ 
+
+ 
+</body></html>

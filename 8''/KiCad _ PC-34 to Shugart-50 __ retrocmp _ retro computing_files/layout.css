@@ -1,0 +1,55 @@
+/* Dies sind noch wenige der alten CSS Einstellungen */
+
+:root{
+    --img-s: 540px;
+    --img-m: 720px;
+    --img-l: 940px;
+    --img-x: 1140px;
+    --max_width: 1320px
+}
+
+.content {
+    /* darf nicht geändert werden */
+    max-width: var(--max_width)
+}
+
+/* wird teilweise noch verwendet
+ * nachfolgend der neue TOP Pfeil als Button:
+ * bei src="..." auf den korrekten Pfad achten!
+ *
+ * <div class="d-grid d-md-flex justify-content-end"><a href="#top" class="btn btn-outline-primary btn-sm mb-2" role="button"><img src="bootstrap/icons/arrow-up.svg"></a></div>
+*/
+
+.top {
+    font-size: 0.9rem;
+    margin: 0 1.0rem 1.0rem 0;
+    text-align: right
+}
+
+/* wird überall verwendet */
+blockquote {
+    background-color: var(--bs-gray-200);
+    border: thin solid var(--bs-gray-500);
+    border-radius: var(--bs-border-radius);
+    border-width: thin;
+    font-style: italic;
+    padding: .5rem
+}
+
+cite {
+    font-size: 0.9rem;
+    font-style: italic
+}
+
+/* wird überall verwendet */
+figcaption {
+    color: var(--bs-gray-500);
+    font-size: 0.9rem;
+    font-style: normal;
+    text-align: left
+}
+
+/* not used yet */
+.done {
+    text-decoration: line-through
+}
